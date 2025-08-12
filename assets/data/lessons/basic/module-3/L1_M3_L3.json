@@ -1,45 +1,63 @@
 {
   "level": "Beginner",
-  "module": "GRAMMAR BASICS",
+  "module": "Grammar Basics",
   "lesson_number": 3,
-  "lesson_title": "Articles: A, An, The - Small Words, Big Meaning",
+  "lesson_title": "Degrees of Comparison",
   "objectives": [
-    "Understand when to use 'a', 'an', and 'the' before naming words (nouns).",
-    "Learn the difference between talking about something general (using 'a' or 'an') and something specific (using 'the').",
-    "Practice choosing the correct article for different sentences and situations."
+    "Understand the three degrees of comparison for adjectives: Positive, Comparative, and Superlative",
+    "Learn the rules for forming comparative and superlative degrees for regular adjectives",
+    "Memorize the forms for common irregular adjectives",
+    "Use degrees of comparison correctly to compare people, places, and things in sentences"
   ],
   "topics": [
     {
-      "title": "1. What are Articles?",
+      "title": "Introduction to Degrees of Comparison",
       "subtopics": [
         {
-          "title": "1.1. Small Words Before Nouns",
+          "title": "What are the Three Degrees?",
           "sections": [
             {
-              "text": "Articles are small words: 'a', 'an', and 'the'. We put them just before a naming word (noun) to tell us more about that noun. They help us know if we are talking about any general thing or a specific thing.",
+              "text": "Degrees of comparison are used with adjectives to compare one person or thing with another. There are three degrees of comparison: the Positive, the Comparative, and the Superlative. Each one serves a different purpose in making a comparison.",
               "examples": [
                 {
-                  "label": "General (any one)",
-                  "value": "**a** pen, **an** apple"
+                  "label": "Positive Degree",
+                  "value": "This is used to describe a quality of one person or thing without comparing it to another. It is the base form of the adjective. Ex: The mango is sweet."
                 },
                 {
-                  "label": "Specific (that one)",
-                  "value": "**the** sun, **the** teacher"
+                  "label": "Comparative Degree",
+                  "value": "This is used to compare two people or things. It shows which one has more of a quality. Ex: This mango is sweeter than that one."
                 },
                 {
-                  "label": "Before Noun",
-                  "value": "I have **a** book. (Here 'a' is an article before the noun 'book'.)"
+                  "label": "Superlative Degree",
+                  "value": "This is used to compare three or more people or things. It shows which one has the highest degree of the quality. Ex: This is the sweetest mango in the basket."
+                },
+                {
+                  "label": "Example: 'tall'",
+                  "value": "Ram is a tall boy. (Positive) | Shyam is taller than Ram. (Comparative) | Mohan is the tallest boy in the class. (Superlative)"
+                },
+                {
+                  "label": "Example: 'big'",
+                  "value": "My house is big. (Positive) | Your house is bigger than mine. (Comparative) | His house is the biggest in the village. (Superlative)"
+                },
+                {
+                  "label": "Example: 'beautiful'",
+                  "value": "The flower is beautiful. (Positive) | The rose is more beautiful than the jasmine. (Comparative) | The lotus is the most beautiful flower in the pond. (Superlative)"
+                },
+                {
+                  "label": "Example: 'cold'",
+                  "value": "The water is cold. (Positive) | The water in the well is colder than the water in the river. (Comparative) | The ice is the coldest thing in the house. (Superlative)"
+                },
+                {
+                  "label": "Example: 'fast'",
+                  "value": "The bullock cart is fast. (Positive) | The horse is faster than the bullock cart. (Comparative) | The train is the fastest vehicle. (Superlative)"
+                },
+                {
+                  "label": "Example: 'interesting'",
+                  "value": "This book is interesting. (Positive) | That movie is more interesting than this book. (Comparative) | The story my grandfather told was the most interesting of all. (Superlative)"
                 }
               ],
-              "usage_examples": [
-                "I saw **a** bird.",
-                "My mother is **a** kind woman.",
-                "**The** moon is bright tonight.",
-                "We need **an** umbrella for the rain.",
-                "Did you see **the** farmer in the field?"
-              ],
               "media": {
-                "image": "images/basic/module-3/lesson-3/p"
+                "image": "images/basic/module-3/lesson-3/Degree 1.jpg"
               }
             }
           ]
@@ -47,90 +65,206 @@
       ]
     },
     {
-      "title": "2. Indefinite Articles: 'A' and 'An'",
+      "title": "Forming Comparative and Superlative Degrees",
       "subtopics": [
         {
-          "title": "2.1. Using 'A' (For Consonant Sounds)",
+          "title": "Regular Adjectives",
           "sections": [
             {
-              "text": "We use 'a' when the word (noun) that comes after it starts with a consonant sound. Consonant sounds are made by letters like b, c, d, f, g, h, j, k, l, m, n, p, q, r, s, t, v, w, x, y, z. Think of a word beginning with a sound that is not A, E, I, O, U.",
+              "text": "Most adjectives are regular and follow simple rules to form their comparative and superlative degrees. The rule depends on the length of the adjective (the number of syllables).",
               "examples": [
                 {
-                  "label": "a farmer",
-                  "value": "The word 'farmer' starts with the 'f' sound, which is a consonant sound."
+                  "label": "One-Syllable Adjectives (Add -er, -est)",
+                  "value": "For short adjectives, we usually add '-er' for the comparative and '-est' for the superlative. (e.g., long -> longer -> longest)"
                 },
                 {
-                  "label": "a village",
-                  "value": "The word 'village' starts with the 'v' sound, which is a consonant sound."
+                  "label": "Example: 'high'",
+                  "value": "The hill is high. The mountain is higher than the hill. Mount Everest is the highest mountain."
                 },
                 {
-                  "label": "a cow",
-                  "value": "The word 'cow' starts with the 'c' sound, which is a consonant sound."
+                  "label": "Example: 'strong'",
+                  "value": "He is a strong man. His brother is stronger than him. The wrestler is the strongest man in the competition."
                 },
                 {
-                  "label": "a school",
-                  "value": "The word 'school' starts with the 's' sound, which is a consonant sound."
+                  "label": "Example: 'small'",
+                  "value": "My village is small. Your village is smaller than mine. His village is the smallest in the district."
+                },
+                {
+                  "label": "Example: 'cold'",
+                  "value": "Today is a cold day. Yesterday was colder than today. January is the coldest month of the year."
+                },
+                {
+                  "label": "Two-Syllable Adjectives ending in -y (Change y to i, add -er, -est)",
+                  "value": "For adjectives like 'happy', we change the 'y' to 'i' before adding '-er' and '-est'. (e.g., happy -> happier -> happiest)"
+                },
+                {
+                  "label": "Example: 'easy'",
+                  "value": "This question is easy. The second question is easier than the first. The last question is the easiest of all."
+                },
+                {
+                  "label": "Example: 'heavy'",
+                  "value": "This bag is heavy. That bag is heavier than this one. The sack of rice is the heaviest of all."
+                },
+                {
+                  "label": "Example: 'pretty'",
+                  "value": "She has a pretty dress. Her sister's dress is prettier. The bride had the prettiest dress at the wedding."
+                },
+                {
+                  "label": "Example: 'lazy'",
+                  "value": "The boy is lazy. His friend is lazier than him. He is the laziest boy in the entire school."
+                },
+                {
+                  "label": "Long Adjectives (Use 'more' and 'most')",
+                  "value": "For longer adjectives (usually with two or more syllables), we use 'more' for the comparative and 'most' for the superlative before the adjective. (e.g., beautiful -> more beautiful -> most beautiful)"
+                },
+                {
+                  "label": "Example: 'important'",
+                  "value": "Education is important. Health is more important than wealth. Honesty is the most important quality."
+                },
+                {
+                  "label": "Example: 'difficult'",
+                  "value": "This sum is difficult. The next sum is more difficult than this one. The last sum is the most difficult in the book."
+                },
+                {
+                  "label": "Example: 'expensive'",
+                  "value": "This saree is expensive. The silk saree is more expensive than the cotton one. The wedding saree was the most expensive of all."
+                },
+                {
+                  "label": "Example: 'courageous'",
+                  "value": "The soldier was courageous. His leader was more courageous. The king was the most courageous of them all."
                 }
               ],
-              "usage_examples": [
-                "My father is **a** farmer.",
-                "I have **a** new book.",
-                "There is **a** well near our house.",
-                "We saw **a** small hut in the field.",
-                "She drew **a** beautiful flower.",
-                "Give me **a** pen, please.",
-                "He eats **a** mango every day."
-              ],
               "media": {
-                "image": "images/basic/module-3/lesson-3/p"
+                "image": "images/basic/module-3/lesson-3/Degrees 2.jpg"
               }
             }
           ]
         },
         {
-          "title": "2.2. Using 'An' (For Vowel Sounds)",
+          "title": "Spelling Rules for Regular Adjectives",
           "sections": [
             {
-              "text": "We use 'an' when the word (noun) that comes after it starts with a vowel sound. Vowel sounds are made by letters A, E, I, O, U. Sometimes, a word starting with 'H' can also have a vowel sound if 'H' is silent.",
+              "text": "When adding '-er' or '-est', sometimes the spelling of the base adjective changes slightly.",
+              "table": {
+                "title": "Spelling Rules",
+                "headers": ["Rule", "Adjective", "Comparative", "Superlative"],
+                "rows": [
+                  [
+                    "Adjectives ending in '-e'. Just add '-r' and '-st'.",
+                    "large",
+                    "larger",
+                    "largest"
+                  ],
+                  [
+                    "Adjectives ending in '-e'. Just add '-r' and '-st'.",
+                    "wise",
+                    "wiser",
+                    "wisest"
+                  ],
+                  [
+                    "Adjectives ending in a consonant + 'y'. Change 'y' to 'i'.",
+                    "happy",
+                    "happier",
+                    "happiest"
+                  ],
+                  [
+                    "Adjectives ending in a consonant + 'y'. Change 'y' to 'i'.",
+                    "busy",
+                    "busier",
+                    "busiest"
+                  ],
+                  [
+                    "Adjectives ending in a single vowel + a single consonant. Double the final consonant.",
+                    "big",
+                    "bigger",
+                    "biggest"
+                  ],
+                  [
+                    "Adjectives ending in a single vowel + a single consonant. Double the final consonant.",
+                    "hot",
+                    "hotter",
+                    "hottest"
+                  ],
+                  [
+                    "Adjectives ending in a single vowel + a single consonant. Double the final consonant.",
+                    "thin",
+                    "thinner",
+                    "thinnest"
+                  ]
+                ]
+              },
+              "media": {
+                "image": "images/basic/module-3/lesson-3/Degree 3 g.jpg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Irregular Comparisons",
+      "subtopics": [
+        {
+          "title": "Common Irregular Adjectives",
+          "sections": [
+            {
+              "text": "Some common adjectives do not follow any of the rules. Their comparative and superlative forms are completely different and must be memorized.",
               "examples": [
                 {
-                  "label": "an apple",
-                  "value": "The word 'apple' starts with the 'a' sound, which is a vowel sound."
+                  "label": "Good -> Better -> Best",
+                  "value": "This is a good story. Your story is better than mine. This is the best story in the book."
                 },
                 {
-                  "label": "an elephant",
-                  "value": "The word 'elephant' starts with the 'e' sound, which is a vowel sound."
+                  "label": "Good -> Better -> Best (Sentence 2)",
+                  "value": "He is a good farmer. His neighbour is a better farmer. Mr. Sharma is the best farmer in our village."
                 },
                 {
-                  "label": "an orange",
-                  "value": "The word 'orange' starts with the 'o' sound, which is a vowel sound."
+                  "label": "Bad -> Worse -> Worst",
+                  "value": "The weather was bad yesterday. Today, the weather is worse. This is the worst storm of the year."
                 },
                 {
-                  "label": "an hour",
-                  "value": "The 'h' in 'hour' is silent, so it sounds like 'our', starting with a vowel sound."
+                  "label": "Bad -> Worse -> Worst (Sentence 2)",
+                  "value": "His handwriting is bad. My handwriting is worse than his. Her handwriting is the worst in the class."
+                },
+                {
+                  "label": "Little -> Less -> Least",
+                  "value": "I have little water. You have less water than me. He has the least water of all."
+                },
+                {
+                  "label": "Little -> Less -> Least (Sentence 2)",
+                  "value": "There is little hope of rain. There is less hope now than yesterday. This is the least of my worries."
+                },
+                {
+                  "label": "Much / Many -> More -> Most",
+                  "value": "He has many books. She has more books than him. The library has the most books."
+                },
+                {
+                  "label": "Much / Many -> More -> Most (Sentence 2)",
+                  "value": "This work needs much effort. The next task will need more effort. The final project needs the most effort."
+                },
+                {
+                  "label": "Far -> Farther / Further -> Farthest / Furthest",
+                  "value": "My village is far. The city is farther than my village. The capital is the farthest city from here."
+                },
+                {
+                  "label": "Far -> Farther / Further -> Farthest / Furthest (Sentence 2)",
+                  "value": "We need to discuss this further. (further for metaphorical distance) | The farthest I have ever traveled is to Delhi."
                 }
               ],
-              "usage_examples": [
-                "I ate **an** apple this morning.",
-                "She wants **an** egg for breakfast.",
-                "My uncle owns **an** old bicycle.",
-                "It takes **an** hour to walk to the next village.",
-                "There is **an** ant on the sugar.",
-                "He needs **an** answer quickly.",
-                "Give me **an** umbrella for the rain."
-              ],
               "media": {
-                "image": "images/basic/module-3/lesson-3/p"
+                "image": "images/basic/module-3/lesson-3/Comparative forms.jpg"
               },
               "table": {
-                "title": "When to Use 'A' vs. 'An'",
-                "headers": ["Starts with Consonant Sound (Use 'A')", "Starts with Vowel Sound (Use 'An')"],
+                "title": "List of Irregular Adjectives",
+                "headers": ["Positive (V1)", "Comparative (V2)", "Superlative (V3)"],
                 "rows": [
-                  ["a book", "an apple"],
-                  ["a cow", "an elephant"],
-                  ["a chair", "an orange"],
-                  ["a house", "an hour (silent 'h')"],
-                  ["a uniform (sounds like 'yoo')", "an honest person (silent 'h')"]
+                  ["good", "better", "best"],
+                  ["bad", "worse", "worst"],
+                  ["little", "less", "least"],
+                  ["much", "more", "most"],
+                  ["many", "more", "most"],
+                  ["far", "farther / further", "farthest / furthest"],
+                  ["old", "older / elder", "oldest / eldest"]
                 ]
               }
             }
@@ -139,155 +273,23 @@
       ]
     },
     {
-      "title": "3. Definite Article: 'The'",
+      "title": "Tips for Usage",
       "subtopics": [
         {
-          "title": "3.1. Using 'The' (For Specific Things)",
+          "title": "Helpful Tips",
           "sections": [
             {
-              "text": "We use 'the' when we are talking about a specific person, place, animal, or thing. Both the person speaking and the person listening know exactly which one is being talked about. 'The' can be used with both singular and plural nouns.",
-              "examples": [
-                {
-                  "label": "The sun",
-                  "value": "There is only one sun, so it is specific."
-                },
-                {
-                  "label": "The village",
-                  "value": "Refers to our specific village, not just any village."
-                },
-                {
-                  "label": "The teacher",
-                  "value": "Refers to a specific teacher that both people know."
-                },
-                {
-                  "label": "The water",
-                  "value": "If you are talking about the water in a particular well, it's specific."
-                }
-              ],
+              "text": "Here are some important tips to remember when using degrees of comparison in your sentences.",
               "usage_examples": [
-                "Please close **the** door. (We know which door).",
-                "**The** sun rises in the east.",
-                "He works in **the** field near our house. (His specific field).",
-                "I gave **the** book to **the** teacher. (Specific book, specific teacher).",
-                "**The** children are playing in **the** playground. (Specific children, specific playground).",
-                "Pass me **the** salt, please.",
-                "**The** Ganga River is very long."
+                "Tip 1: Use 'than' with the Comparative Degree. When you compare two things, the word 'than' is used after the comparative adjective. Example: 'He is stronger than his brother.'",
+                "Tip 2: Use 'the' before the Superlative Degree. The superlative degree is almost always preceded by the article 'the'. Example: 'She is the smartest student in the class.'",
+                "Tip 3: Never use a double comparative or superlative. Do not say 'more taller' or 'most tallest'. This is a common mistake. Just say 'taller' and 'tallest'. Similarly, don't say 'more better'; 'better' is already a comparative.",
+                "Tip 4: Counting syllables can help. A syllable is a unit of pronunciation having one vowel sound. 'Big' has one syllable. 'Ha-ppy' has two. 'Beau-ti-ful' has three. This helps you decide whether to use '-er/-est' or 'more/most'.",
+                "Tip 5: Practice by comparing things around you. Look at two trees and say, 'This tree is taller than that tree.' Look at all the students in your class and think, 'Who is the tallest student?'",
+                "Tip 6: Using 'Elder' and 'Eldest'. 'Elder' and 'eldest' are used only for people (usually within a family), and they cannot be followed by 'than'. 'Older' and 'oldest' can be used for both people and things. Example: 'My elder brother is a doctor.' (Correct) 'He is elder than me.' (Incorrect - use 'older than me')."
               ],
               "media": {
-                "image": "images/basic/module-3/lesson-3/p"
-              }
-            }
-          ]
-        },
-        {
-          "title": "3.2. 'The' for Already Mentioned Things",
-          "sections": [
-            {
-              "text": "If you talk about something for the first time, you might use 'a' or 'an'. But if you talk about it again, and now it's specific because you already mentioned it, you use 'the'.",
-              "examples": [
-                {
-                  "label": "First time",
-                  "value": "I saw **a** dog."
-                },
-                {
-                  "label": "Second time (now specific)",
-                  "value": "**The** dog was barking loudly."
-                },
-                {
-                  "label": "First time",
-                  "value": "My father bought **a** new bullock."
-                },
-                {
-                  "label": "Second time",
-                  "value": "**The** bullock is very strong."
-                }
-              ],
-              "usage_examples": [
-                "There was **a** cat under the tree. **The** cat was sleeping.",
-                "I bought **an** orange from the market. **The** orange was sweet.",
-                "My friend told me **a** story. **The** story was very interesting.",
-                "We visited **a** new temple. **The** temple was very beautiful.",
-                "He found **a** coin on the road. **The** coin was very old."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-3/p"
-              }
-            }
-          ]
-        },
-        {
-          "title": "3.3. 'The' for Unique Things",
-          "sections": [
-            {
-              "text": "We use 'the' for things that are unique, meaning there is only one of them in the world or in that specific context.",
-              "examples": [
-                {
-                  "label": "The Earth",
-                  "value": "There is only one Earth."
-                },
-                {
-                  "label": "The sky",
-                  "value": "There is only one sky above us."
-                },
-                {
-                  "label": "The principal",
-                  "value": "There is only one principal in our school at a time."
-                }
-              ],
-              "usage_examples": [
-                "**The** Earth revolves around **the** sun.",
-                "Look at **the** stars in **the** sky at night.",
-                "**The** principal gave a speech in the morning assembly.",
-                "He crossed **the** largest river in the area.",
-                "**The** head of our village is very wise."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-3/p"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "4. When NOT to Use Articles",
-      "subtopics": [
-        {
-          "title": "4.1. Common Cases with No Article",
-          "sections": [
-            {
-              "text": "Sometimes, we do not use 'a', 'an', or 'the' before nouns. It's important to know these situations so your sentences sound natural.",
-              "examples": [
-                {
-                  "label": "Names of People (Proper Nouns)",
-                  "value": "**Ram** is a good boy. (Not 'The Ram')."
-                },
-                {
-                  "label": "Names of Countries/Cities/Villages (Proper Nouns)",
-                  "value": "I live in **India**. My village is **Shantipur**. (Not 'The India')."
-                },
-                {
-                  "label": "Names of Subjects",
-                  "value": "I study **English** and **Maths**. (Not 'The English')."
-                },
-                {
-                  "label": "General Plural Nouns",
-                  "value": "**Birds** fly. (**Children** love sweets.) (Talking about birds/children in general, not specific ones)."
-                },
-                {
-                  "label": "Abstract Nouns (General)",
-                  "value": "**Happiness** is important. (**Knowledge** is power.)"
-                }
-              ],
-              "usage_examples": [
-                "**Sita** went to **Delhi**.",
-                "We learn **Science** at school.",
-                "**Farmers** work hard in the fields. (Talking about farmers in general).",
-                "I like to drink **milk**.",
-                "We wish for **peace** in the world."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-3/p"
+                "image": "images/basic/module-3/lesson-3/Superlative Form.jpg"
               }
             }
           ]
@@ -296,3 +298,4 @@
     }
   ]
 }
+

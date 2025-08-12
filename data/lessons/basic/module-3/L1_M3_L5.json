@@ -1,270 +1,423 @@
 {
   "level": "Beginner",
-  "module": "GRAMMAR BASICS",
+  "module": "Grammar Basics",
   "lesson_number": 5,
-  "lesson_title": "Subject and Predicate: Who or What + What They Do",
+  "lesson_title": "Homophones, Homographs, and Homonyms",
   "objectives": [
-    "Understand the two main parts of every sentence: the Subject and the Predicate.",
-    "Learn to identify the Subject (who or what the sentence is about) and the Predicate (what the subject does or is).",
-    "Practice building complete and meaningful sentences by combining subjects and predicates."
+    "Define and differentiate between homophones, homographs, and homonyms",
+    "Identify these types of words in sentences",
+    "Use context to understand the correct meaning and spelling of these words",
+    "Avoid common errors in writing and speaking related to these words"
   ],
   "topics": [
     {
-      "title": "1. What is a Sentence?",
+      "title": "Homophones: Same Sound",
       "subtopics": [
         {
-          "title": "1.1. Sentences Need Two Main Parts",
+          "title": "What are Homophones?",
           "sections": [
             {
-              "text": "A sentence is a group of words that makes complete sense. Every complete sentence has two main parts: the Subject and the Predicate. These two parts work together to tell us who or what the sentence is about, and what that person or thing does or is. Without both, a group of words is not a full sentence.",
+              "text": "Homophones are words that sound the same when you say them, but they have different meanings and different spellings. The word 'homophone' comes from Greek words: 'homo' (meaning same) and 'phone' (meaning sound). Remembering 'phone' can help you remember that these words sound the same.",
               "examples": [
                 {
-                  "label": "Example 1",
-                  "value": "Birds fly."
+                  "label": "to / too / two",
+                  "value": "I am going to the village. My brother is coming too. We will see two temples there."
                 },
                 {
-                  "label": "Example 2",
-                  "value": "Ram eats."
+                  "label": "their / there / they're",
+                  "value": "They're going to their house over there."
                 },
                 {
-                  "label": "Example 3",
-                  "value": "The sun shines."
+                  "label": "see / sea",
+                  "value": "From the hill, you can see the deep blue sea."
                 },
                 {
-                  "label": "Example 4",
-                  "value": "My mother cooks."
+                  "label": "write / right",
+                  "value": "Please write the right answer in your notebook."
+                },
+                {
+                  "label": "son / sun",
+                  "value": "The farmer and his son worked in the fields under the hot sun."
+                },
+                {
+                  "label": "ate / eight",
+                  "value": "He ate eight mangoes from the basket."
+                },
+                {
+                  "label": "buy / by / bye",
+                  "value": "I will go by the shop to buy some milk, then I'll say bye."
+                },
+                {
+                  "label": "know / no",
+                  "value": "I know there is no water left in the pot."
+                },
+                {
+                  "label": "weak / week",
+                  "value": "After being sick for a week, he felt very weak."
+                },
+                {
+                  "label": "hear / here",
+                  "value": "Please come here; I can't hear you."
+                },
+                {
+                  "label": "flour / flower",
+                  "value": "My mother used flour to make bread and put a flower in the vase."
+                },
+                {
+                  "label": "bare / bear",
+                  "value": "It is not safe to walk with bare feet in a forest where a bear might live."
+                },
+                {
+                  "label": "cell / sell",
+                  "value": "The prisoner was in a dark cell. The farmer wants to sell his crops."
+                },
+                {
+                  "label": "our / hour",
+                  "value": "We waited for an hour for our bus to arrive."
+                },
+                {
+                  "label": "pair / pear",
+                  "value": "She bought a pair of shoes and a juicy pear from the market."
+                },
+                {
+                  "label": "which / witch",
+                  "value": "Which road leads to the haunted house where the witch lives?"
+                },
+                {
+                  "label": "wait / weight",
+                  "value": "You will have to wait your turn. / The weight of this sack is too much for me."
+                },
+                {
+                  "label": "peace / piece",
+                  "value": "Everyone hopes for peace in the world. / Can I have another piece of cake?"
+                },
+                {
+                  "label": "for / four",
+                  "value": "This gift is for you. / There are four people in my family."
+                },
+                {
+                  "label": "road / rode",
+                  "value": "The main road is very busy. / He rode his bicycle to school yesterday."
+                },
+                {
+                  "label": "tale / tail",
+                  "value": "My grandfather tells a wonderful tale about the king. / A monkey has a long tail."
+                },
+                {
+                  "label": "stair / stare",
+                  "value": "Be careful on that broken stair. / It is not polite to stare at people."
+                },
+                {
+                  "label": "plain / plane",
+                  "value": "The message was written in plain language. / The plane flew high above the clouds."
+                },
+                {
+                  "label": "mail / male",
+                  "value": "Did you receive any mail today? / The male lion has a large mane."
+                },
+                {
+                  "label": "waist / waste",
+                  "value": "He tied a belt around his waist. / We should not waste food or water."
+                },
+                {
+                  "label": "meat / meet",
+                  "value": "Many people do not eat meat on Tuesdays. / Let's meet at the temple in the evening."
+                },
+                {
+                  "label": "allowed / aloud",
+                  "value": "You are not allowed to talk in the library. / Please read the poem aloud."
+                },
+                {
+                  "label": "some / sum",
+                  "value": "I need some help with this difficult math sum."
+                },
+                {
+                  "label": "weather / whether",
+                  "value": "I don't know whether the weather will be good for the match."
+                },
+                {
+                  "label": "dear / deer",
+                  "value": "My dear friend, I saw a beautiful deer in the forest today."
                 }
-              ],
-              "usage_examples": [
-                "We learn English every day.",
-                "My father works hard in the field.",
-                "The cow gives us milk.",
-                "Children play games.",
-                "The teacher explains the lesson.",
-                "The river flows to the sea.",
-                "Farmers grow crops.",
-                "The dog is barking.",
-                "She reads a book.",
-                "He climbs a tree."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-5/p"
-              }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "title": "2. The Subject: Who or What the Sentence is About",
+      "title": "Homographs: Same Spelling",
       "subtopics": [
         {
-          "title": "2.1. Finding the Subject",
+          "title": "What are Homographs?",
           "sections": [
             {
-              "text": "The subject is the part of the sentence that tells us who or what the sentence is about. It is usually a naming word (noun) or a word that takes the place of a noun (pronoun). To find the subject, always ask: 'Who or what is doing the action?' or 'Who or what is the sentence talking about?'",
+              "text": "Homographs are words that are spelled the same, but they have different meanings and may have different pronunciations. The word 'homograph' comes from Greek words: 'homo' (meaning same) and 'graph' (meaning writing). Remembering 'graph' can help you remember that these words have the same spelling.",
               "examples": [
                 {
-                  "label": "Example 1 (Person)",
-                  "value": "**The farmer** works in the field. (Who works? The farmer.)"
+                  "label": "lead (leed) / lead (led)",
+                  "value": "He will lead the team. / The pipe is made of lead, which is a heavy metal."
                 },
                 {
-                  "label": "Example 2 (Animal)",
-                  "value": "**Birds** fly in the sky. (What flies? Birds.)"
+                  "label": "wind (wɪnd) / wind (waɪnd)",
+                  "value": "The wind is blowing strongly. / You need to wind the clock."
                 },
                 {
-                  "label": "Example 3 (Thing)",
-                  "value": "**The well** provides water. (What provides water? The well.)"
+                  "label": "bow (baʊ) / bow (boʊ)",
+                  "value": "You should bow to the king. / He used a bow and arrow to hunt."
                 },
                 {
-                  "label": "Example 4 (Pronoun)",
-                  "value": "**She** is happy. (Who is happy? She.)"
+                  "label": "minute (mɪnɪt) / minute (maɪˈnjuːt)",
+                  "value": "Please wait for one minute. / The details were so minute, they were hard to see."
+                },
+                {
+                  "label": "tear (teer) / tear (tair)",
+                  "value": "A tear rolled down her cheek. / Be careful not to tear the page."
+                },
+                {
+                  "label": "desert (dɪˈzɜːrt) / desert (ˈdɛzərt)",
+                  "value": "He decided to desert his old village. / The camel is a useful animal in the desert."
+                },
+                {
+                  "label": "live (lɪv) / live (laɪv)",
+                  "value": "We live in a small village. / The cricket match was a live broadcast."
+                },
+                {
+                  "label": "bat / bat",
+                  "value": "A bat is a mammal that can fly. / He hit the ball with a cricket bat."
+                },
+                {
+                  "label": "well / well",
+                  "value": "She does not feel well today. / We get water from the village well."
+                },
+                {
+                  "label": "ring / ring",
+                  "value": "The phone started to ring. / She wore a beautiful gold ring on her finger."
+                },
+                {
+                  "label": "watch / watch",
+                  "value": "I like to watch the stars at night. / My father gave me a new watch for my birthday."
+                },
+                {
+                  "label": "fly / fly",
+                  "value": "A fly was buzzing near the food. / The birds fly high in the sky."
+                },
+                {
+                  "label": "left / left",
+                  "value": "Turn left at the next corner. / He left the house early in the morning."
+                },
+                {
+                  "label": "rose / rose",
+                  "value": "The rose is a beautiful flower. / The sun rose at 6 AM."
+                },
+                {
+                  "label": "light / light",
+                  "value": "The bag was very light. / Please turn on the light; it's dark in here."
+                },
+                {
+                  "label": "close (klos) / close (kloz)",
+                  "value": "My house is close to the school. / Please close the door when you leave."
+                },
+                {
+                  "label": "object (əbˈdʒɛkt) / object (ˈɒbdʒɪkt)",
+                  "value": "I object to your decision. / The police found a strange object at the scene."
+                },
+                {
+                  "label": "present (prɪˈzɛnt) / present (ˈprɛzənt)",
+                  "value": "The teacher will present the award. / I received a lovely present for my birthday."
+                },
+                {
+                  "label": "row (roʊ) / row (raʊ)",
+                  "value": "We sat in the front row. / The two brothers had a loud row (argument)."
+                },
+                {
+                  "label": "produce (prəˈdjuːs) / produce (ˈprɒdjuːs)",
+                  "value": "Our farm can produce many vegetables. / We sell fresh produce at the market."
+                },
+                {
+                  "label": "subject (səbˈdʒɛkt) / subject (ˈsʌbdʒɪkt)",
+                  "value": "The king can subject his people to new laws. / My favorite subject is Science."
+                },
+                {
+                  "label": "contract (kənˈtrækt) / contract (ˈkɒntrækt)",
+                  "value": "When you get cold, your muscles contract. / He signed a five-year contract for the job."
+                },
+                {
+                  "label": "content (kənˈtɛnt) / content (ˈkɒntɛnt)",
+                  "value": "He was content with his simple life in the village. / What is the content of this box?"
+                },
+                {
+                  "label": "sewer (so-er) / sewer (soo-er)",
+                  "value": "A sewer is a person who sews. / The city's sewer system needs to be cleaned."
+                },
+                {
+                  "label": "entrance (ɪnˈtrɑːns) / entrance (ˈɛntrəns)",
+                  "value": "The beautiful music will entrance the audience. / Please use the main entrance to the building."
                 }
-              ],
-              "usage_examples": [
-                "**My mother** cooks delicious food. (Who cooks? My mother.)",
-                "**The dog** barked loudly at night. (What barked? The dog.)",
-                "**We** learn new things every day. (Who learns? We.)",
-                "**The trees** give us shade. (What gives shade? The trees.)",
-                "**Rahul** reads a book. (Who reads? Rahul.)",
-                "**The tractor** plows the field. (What plows? The tractor.)",
-                "**Students** listen to the teacher. (Who listens? Students.)",
-                "**The moon** shines at night. (What shines? The moon.)",
-                "**He** goes to the market. (Who goes? He.)",
-                "**The village** has a small school."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-5/p"
-              }
-            }
-          ]
-        },
-        {
-          "title": "2.2. Simple Subject vs. Compound Subject",
-          "sections": [
-            {
-              "text": "A **simple subject** is just one main noun or pronoun. A **compound subject** has two or more subjects joined by words like 'and' or 'or'. This means more than one person, animal, or thing is doing the action.",
-              "examples": [
-                {
-                  "label": "Simple Subject",
-                  "value": "**Ram** plays cricket."
-                },
-                {
-                  "label": "Compound Subject",
-                  "value": "**Ram and Sita** play cricket. (Ram and Sita are both playing.)"
-                },
-                {
-                  "label": "Simple Subject",
-                  "value": "**The cow** gives milk."
-                },
-                {
-                  "label": "Compound Subject",
-                  "value": "**The cow and the buffalo** give milk. (Both the cow and buffalo give milk.)"
-                }
-              ],
-              "usage_examples": [
-                "**My brother and I** go to school together.",
-                "**Cows, goats, and chickens** are farm animals.",
-                "**Chairs and tables** are in the classroom.",
-                "**The teacher or the principal** will make the announcement.",
-                "**Rice and wheat** are staple foods.",
-                "**Sun and rain** are important for crops.",
-                "**My friend and his brother** are coming to the village.",
-                "**Fruits and vegetables** are good for health.",
-                "**The man and the woman** built a house.",
-                "**You or I** can help with the work."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-5/p"
-              }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "title": "3. The Predicate: What the Subject Does or Is",
+      "title": "Homonyms: Same Sound and Spelling",
       "subtopics": [
         {
-          "title": "3.1. Finding the Predicate",
+          "title": "What are Homonyms?",
           "sections": [
             {
-              "text": "The predicate is the part of the sentence that tells us what the subject does, what happens to the subject, or what the subject is. The predicate always includes a verb (action word or 'being' word). To find the predicate, after finding the subject, ask: 'What about the subject?'",
+              "text": "Homonyms are words that are spelled the same AND sound the same, but have different meanings. These are the trickiest of the three. A homonym is both a homophone (same sound) and a homograph (same spelling). The word 'homonym' comes from 'homo' (same) and 'nym' (name).",
               "examples": [
                 {
-                  "label": "Example 1 (Action)",
-                  "value": "The farmer **works in the field**. (What about the farmer? Works in the field.)"
+                  "label": "bat / bat",
+                  "value": "The cricket bat broke during the match. / At night, a bat flew into our house."
                 },
                 {
-                  "label": "Example 2 (Action)",
-                  "value": "Birds **fly in the sky**. (What about birds? Fly in the sky.)"
+                  "label": "address / address",
+                  "value": "What is your home address? / The village head will address the crowd."
                 },
                 {
-                  "label": "Example 3 (State of Being)",
-                  "value": "Sita **is happy**. (What about Sita? Is happy.)"
+                  "label": "ring / ring",
+                  "value": "The school bell will ring soon. / My mother lost her wedding ring."
                 },
                 {
-                  "label": "Example 4 (Action)",
-                  "value": "The children **are playing loudly**. (What about the children? Are playing loudly.)"
+                  "label": "right / right",
+                  "value": "You are right; we should take the right turn."
+                },
+                {
+                  "label": "well / well",
+                  "value": "I hope you are feeling well. / The old well has very sweet water."
+                },
+                {
+                  "label": "match / match",
+                  "value": "He lit a match to start the fire. / Our village team won the kabaddi match."
+                },
+                {
+                  "label": "rock / rock",
+                  "value": "He sat on a large rock by the river. / My brother loves to listen to rock music."
+                },
+                {
+                  "label": "fly / fly",
+                  "value": "Let's fly a kite. / Don't let that fly sit on your food."
+                },
+                {
+                  "label": "trip / trip",
+                  "value": "Our school planned a trip to the city. / Be careful not to trip over that stone."
+                },
+                {
+                  "label": "letter / letter",
+                  "value": "I wrote a letter to my friend. / 'A' is the first letter of the alphabet."
+                },
+                {
+                  "label": "can / can",
+                  "value": "I can lift this box. / Please give me a can of juice."
+                },
+                {
+                  "label": "bank / bank",
+                  "value": "We sat on the bank of the river. / I need to go to the bank to get some money."
+                },
+                {
+                  "label": "watch / watch",
+                  "value": "He wears a new watch. / Did you watch the movie yesterday?"
+                },
+                {
+                  "label": "mean / mean",
+                  "value": "What does this word mean? / The cruel man was very mean to the animals."
+                },
+                {
+                  "label": "pen / pen",
+                  "value": "I need a new pen to write my exam. / The farmer kept the sheep in a pen."
+                },
+                {
+                  "label": "bark / bark",
+                  "value": "The dog's bark woke me up. / The bark of the neem tree is used in medicine."
+                },
+                {
+                  "label": "fair / fair",
+                  "value": "We all went to the village fair. / A good leader must be fair to everyone."
+                },
+                {
+                  "label": "leaves / leaves",
+                  "value": "The tree sheds its leaves in autumn. / My father leaves for work at 8 AM."
+                },
+                {
+                  "label": "park / park",
+                  "value": "The children are playing in the park. / You cannot park your tractor here."
+                },
+                {
+                  "label": "spring / spring",
+                  "value": "Flowers bloom in the spring season. / The old mattress has a broken spring."
+                },
+                {
+                  "label": "ruler / ruler",
+                  "value": "Ashoka was a great ruler. / Use a ruler to draw a straight line."
+                },
+                {
+                  "label": "tire / tire",
+                  "value": "The long walk will tire you. / The cycle has a flat tire."
+                },
+                {
+                  "label": "crane / crane",
+                  "value": "A crane is a tall bird. / A large crane was used to lift the fallen tree."
+                },
+                {
+                  "label": "pound / pound",
+                  "value": "You need one pound of sugar for this cake. / Please don't pound on the table."
+                },
+                {
+                  "label": "wave / wave",
+                  "value": "She gave a friendly wave as the bus left. / A huge wave crashed on the shore."
+                },
+                {
+                  "label": "lie / lie",
+                  "value": "You should not tell a lie. / I need to lie down because I am tired."
+                },
+                {
+                  "label": "bright / bright",
+                  "value": "The sun is very bright today. / She is a very bright student."
+                },
+                {
+                  "label": "cool / cool",
+                  "value": "The weather is nice and cool today. / He thinks he is very cool."
+                },
+                {
+                  "label": "kind / kind",
+                  "value": "He is a very kind man. / What kind of fruit is this?"
+                },
+                {
+                  "label": "saw / saw",
+                  "value": "I saw a big snake yesterday. / The carpenter used a saw to cut the wood."
                 }
-              ],
-              "usage_examples": [
-                "My mother **cooks delicious food for our family**.",
-                "The dog **barked loudly at the stranger**.",
-                "The well **provides clean water for the village**.",
-                "Students **study English grammar lessons**.",
-                "My elder brother **helps me with my homework**.",
-                "The sun **shines brightly during the day**.",
-                "The river **flows calmly towards the city**.",
-                "The old man **was sitting under a tree**.",
-                "The birds **are chirping in the morning**.",
-                "He **is reading a very interesting book**."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-5/p"
-              }
-            }
-          ]
-        },
-        {
-          "title": "3.2. Simple Predicate vs. Compound Predicate",
-          "sections": [
-            {
-              "text": "A **simple predicate** has one main verb and its related words. A **compound predicate** has two or more verbs (actions) for the same subject, joined by words like 'and' or 'or'. This means the subject is doing more than one thing.",
-              "examples": [
-                {
-                  "label": "Simple Predicate",
-                  "value": "The children **play cricket**."
-                },
-                {
-                  "label": "Compound Predicate",
-                  "value": "The children **play cricket and laugh loudly**. (They are doing two things: playing and laughing.)"
-                },
-                {
-                  "label": "Simple Predicate",
-                  "value": "My mother **cooks dinner**."
-                },
-                {
-                  "label": "Compound Predicate",
-                  "value": "My mother **cooks dinner and cleans the kitchen**. (She does two actions: cooks and cleans.)"
-                }
-              ],
-              "usage_examples": [
-                "The farmer **plows the field and sows seeds**.",
-                "Students **study hard and write notes in their books**.",
-                "The bird **sings sweetly and flies away**.",
-                "My sister **reads stories and watches TV**.",
-                "The doctor **examines patients and gives medicine**.",
-                "We **wake up early and go to school**.",
-                "The cat **chased the mouse and caught it**.",
-                "He **went to the shop and bought some sweets**.",
-                "She **finished her work and went home**.",
-                "The children **sang songs and danced happily**."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-5/p"
-              }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "title": "4. How Subject and Predicate Work Together",
+      "title": "Summary and Tips",
       "subtopics": [
         {
-          "title": "4.1. Making Complete Sentences",
+          "title": "How to Remember the Difference",
           "sections": [
             {
-              "text": "For a sentence to make complete sense, it must always have both a subject and a predicate. The subject tells us WHO or WHAT, and the predicate tells us WHAT HAPPENS or WHAT IT IS. They are like two sides of a coin; you need both for a complete picture.",
-              "examples": [
-                {
-                  "label": "Sentence with Subject and Predicate",
-                  "value": "The sun | shines brightly. (Subject: The sun, Predicate: shines brightly)"
-                },
-                {
-                  "label": "Sentence with Subject and Predicate",
-                  "value": "Village children | play in the evening. (Subject: Village children, Predicate: play in the evening)"
-                },
-                {
-                  "label": "Sentence with Subject and Predicate",
-                  "value": "Our school | has many teachers. (Subject: Our school, Predicate: has many teachers)"
-                }
-              ],
+              "text": "It can be confusing to remember the difference between these three types of words. Here are some simple tips to help you.",
               "usage_examples": [
-                "My father | works hard in the fields every day.",
-                "The river | flows near our village silently.",
-                "We | learn English grammar every day in class.",
-                "Birds | build nests in trees during spring.",
-                "The Sarpanch | helps the villagers with their problems.",
-                "Fresh vegetables | grow in our garden.",
-                "Our old well | provides clean drinking water.",
-                "The students | are listening carefully.",
-                "The big tractor | is plowing the field.",
-                "The old grandmother | tells interesting stories."
+                "Tip 1: Break down the words. Remember the Greek roots: 'phone' means sound, 'graph' means writing, and 'nym' means name.",
+                "Tip 2: Homo-PHONE = Same SOUND. They sound the same, but spelling is different (e.g., hear/here).",
+                "Tip 3: Homo-GRAPH = Same WRITING (spelling). They are spelled the same, but the meaning is different. Pronunciation can be the same or different (e.g., bat/bat, lead/lead).",
+                "Tip 4: Homo-NYM = Same NAME. They have the same spelling AND the same sound, but different meanings (e.g., bank/bank). All homonyms are also homographs and homophones.",
+                "Tip 5: Context is King! The only way to know the correct meaning and spelling of these words is to look at the other words in the sentence. The context will tell you if 'right' means a direction or the correct answer."
               ],
-              "media": {
-                "image": "images/basic/module-3/lesson-5/p"
+              "table": {
+                "title": "Quick Comparison",
+                "headers": ["Type", "Same Spelling?", "Same Sound?", "Different Meaning?"],
+                "rows": [
+                  ["Homophone", "No", "Yes", "Yes"],
+                  ["Homograph", "Yes", "Maybe", "Yes"],
+                  ["Homonym", "Yes", "Yes", "Yes"]
+                ]
               }
             }
           ]
@@ -273,4 +426,4 @@
     }
   ]
 }
-       
+

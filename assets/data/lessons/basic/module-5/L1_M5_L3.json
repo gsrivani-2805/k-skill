@@ -1,163 +1,45 @@
 {
   "level": "Beginner",
-  "module": "EVERYDAY ENGLISH",
+  "module": "SPEAKING & LISTENING",
   "lesson_number": 3,
-  "lesson_title": "At Home: Daily Life and Family Talk",
+  "lesson_title": "Listening to Instructions: Understanding What to Do",
   "objectives": [
-    "Learn words and phrases to talk about people and things at home.",
-    "Practice simple conversations with family members about daily routines.",
-    "Understand and use vocabulary related to household chores and activities."
+    "Learn to listen carefully and understand spoken words and instructions.",
+    "Practice following simple and multi-step instructions from teachers or elders.",
+    "Improve understanding of common commands used in the classroom and at home."
   ],
   "topics": [
     {
-      "title": "1. Our Family at Home",
+      "title": "1. Why is Listening Important?",
       "subtopics": [
         {
-          "title": "1.1. Naming Family Members",
+          "title": "1.1. Listening to Understand",
           "sections": [
             {
-              "text": "Our family is the most important group of people in our life. They live together in our home. Here are the names of common family members.",
+              "text": "Listening is one of the most important skills in learning. When you listen carefully, you understand what the teacher wants you to do, what your parents tell you, or what your friends are saying. Good listening helps you learn better, avoid mistakes, and do things correctly.",
               "examples": [
                 {
-                  "label": "Father",
-                  "value": "Your male parent. He works to support the family."
+                  "label": "In Class",
+                  "value": "Your teacher explains a new lesson. If you listen carefully, you will understand it better."
                 },
                 {
-                  "label": "Mother",
-                  "value": "Your female parent. She cares for the home and family."
+                  "label": "At Home",
+                  "value": "Your mother tells you to bring water. If you listen, you will bring water quickly and correctly."
                 },
                 {
-                  "label": "Brother",
-                  "value": "A male sibling. He can be elder or younger."
-                },
-                {
-                  "label": "Sister",
-                  "value": "A female sibling. She can be elder or younger."
-                },
-                {
-                  "label": "Grandfather",
-                  "value": "Your father's or mother's father. An elder in the family."
-                },
-                {
-                  "label": "Grandmother",
-                  "value": "Your father's or mother's mother. An elder in the family."
-                },
-                {
-                  "label": "Uncle",
-                  "value": "The brother of your father or mother."
-                },
-                {
-                  "label": "Aunt",
-                  "value": "The sister of your father or mother."
-                },
-                {
-                  "label": "Cousin",
-                  "value": "The child of your uncle or aunt."
-                },
-                {
-                  "label": "Parents",
-                  "value": "Your father and mother together."
+                  "label": "Playing Games",
+                  "value": "In a game, your friend tells you the rules. If you listen, you will play correctly."
                 }
               ],
               "usage_examples": [
-                "My **father** is a hardworking farmer.",
-                "My **mother** cooks delicious food for us.",
-                "My **elder brother** helps me with my studies.",
-                "My **younger sister** loves to draw pictures.",
-                "My **grandfather** tells us many old stories.",
-                "My **grandmother** makes tasty sweets for festivals.",
-                "We are a happy **family** living in one **house**.",
-                "My **uncle** and **aunt** often visit our home.",
-                "My **cousins** come to play with me.",
-                "Every **child** loves their **parents**.",
-                "We live with our extended **family** in a joint **household**.",
-                "My **father's** name is Ramesh.",
-                "My **mother's** sister is my **aunt**.",
-                "I have two **brothers** and one **sister**.",
-                "Our **grandparents** live with us."
+                "Always **listen carefully** to your teacher's instructions.",
+                "Good **listening** helps you finish your work correctly.",
+                "When you listen, you learn new things easily.",
+                "My father said, 'Listen to me when I talk.'",
+                "Listening is the first step to speaking good English."
               ],
               "media": {
-                "image": "images/basic/module-5/lesson-3/p"
-              },
-              "table": {
-                "title": "Family Members",
-                "headers": ["Relationship", "Description", "Example Use"],
-                "rows": [
-                  ["Father", "Male parent", "My father works in the field."],
-                  ["Mother", "Female parent", "My mother manages the home."],
-                  ["Brother", "Male sibling", "I play with my brother."],
-                  ["Sister", "Female sibling", "My sister helps me."],
-                  ["Grandfather", "Parent's father", "Grandfather tells stories."],
-                  ["Grandmother", "Parent's mother", "Grandmother sings songs."],
-                  ["Uncle", "Parent's brother", "My uncle owns a shop."],
-                  ["Aunt", "Parent's sister", "My aunt visits often."],
-                  ["Cousin", "Uncle/Aunt's child", "My cousin is my friend."],
-                  ["Parents", "Father and mother", "My parents love me."],
-                  ["Son", "A male child", "I am my father's son."],
-                  ["Daughter", "A female child", "She is her mother's daughter."]
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "title": "1.2. Talking About Roles and Relations at Home",
-          "sections": [
-            {
-              "text": "In our homes, different people have different roles and relationships. We can describe them using these words.",
-              "examples": [
-                {
-                  "label": "Spouse",
-                  "value": "Your partner in marriage (husband or wife)."
-                },
-                {
-                  "label": "Parent",
-                  "value": "A father or a mother."
-                },
-                {
-                  "label": "Child",
-                  "value": "A young boy or girl, a son or a daughter."
-                },
-                {
-                  "label": "Neighbor",
-                  "value": "A person who lives next door or very close to your house in the village."
-                },
-                {
-                  "label": "Guest",
-                  "value": "A person invited to visit your home."
-                },
-                {
-                  "label": "Elder",
-                  "value": "An older person in the family or community."
-                },
-                {
-                  "label": "Friend",
-                  "value": "A person you know well and like."
-                },
-                {
-                  "label": "Sibling",
-                  "value": "A brother or a sister."
-                }
-              ],
-              "usage_examples": [
-                "My **parents** take care of our family well.",
-                "The **children** of our **neighbor** play with us.",
-                "We had a **guest** visit us yesterday from the city.",
-                "My aunt and uncle are a happily **married** couple.",
-                "It is important to **respect** our **elders** at home and in the village.",
-                "My **friend** often comes to our **house** to study.",
-                "We always welcome **visitors** to our **dwelling**.",
-                "Our **household** is always busy with activities.",
-                "My **mother** is a **caring** person.",
-                "My **father** is very **responsible** for the family.",
-                "I have two **siblings**: one brother and one sister.",
-                "Good **neighbors** help each other in times of need.",
-                "A **husband** and **wife** are called **spouses**.",
-                "The **head of the family** is usually the eldest member.",
-                "We have a strong **bond** in our family."
-              ],
-              "media": {
-                "image": "images/basic/module-5/lesson-3/p"
+                "image": "images/basic/module-5/lesson-3/Listening to Understand.png"
               }
             }
           ]
@@ -165,134 +47,135 @@
       ]
     },
     {
-      "title": "2. Daily Routines at Home",
+      "title": "2. Common Classroom Instructions",
       "subtopics": [
         {
-          "title": "2.1. Talking About Morning Activities",
+          "title": "2.1. Instructions for Books and Papers",
           "sections": [
             {
-              "text": "Every morning, we do certain things. These are part of our daily routine. We use verbs (action words) to describe these activities.",
+              "text": "These are common things your teacher might ask you to do with your books, notebooks, and papers.",
               "examples": [
                 {
-                  "label": "Wake up",
-                  "value": "To stop sleeping."
+                  "label": "Open your books.",
+                  "value": "To open your textbook or notebook to a certain page."
                 },
                 {
-                  "label": "Brush teeth",
-                  "value": "To clean your teeth with a brush."
+                  "label": "Close your books.",
+                  "value": "To shut your textbook or notebook."
                 },
                 {
-                  "label": "Take a bath",
-                  "value": "To wash your body with water and soap."
+                  "label": "Turn to page...",
+                  "value": "To find a specific page number in your book. Example: 'Turn to page 15.'"
                 },
                 {
-                  "label": "Eat breakfast",
-                  "value": "To have the first meal of the day."
+                  "label": "Write your name.",
+                  "value": "To put your name on your paper or notebook."
                 },
                 {
-                  "label": "Get ready",
-                  "value": "To prepare yourself, often by wearing clothes."
-                },
-                {
-                  "label": "Pray",
-                  "value": "To speak to God."
+                  "label": "Read aloud.",
+                  "value": "To read the text loudly so everyone can hear."
                 }
               ],
               "usage_examples": [
-                "I **wake up** early in the morning.",
-                "First, I **brush my teeth**.",
-                "Then, I **take a bath** with fresh well water.",
-                "After that, I **eat breakfast** with my family.",
-                "My mother **prepares** tea and roti for breakfast.",
-                "We all **gather** for breakfast at 7 AM.",
-                "My father **drinks** milk in the morning.",
-                "My brother **gets ready** for school.",
-                "My grandmother **prays** to God every morning.",
-                "I **comb my hair** after my bath.",
-                "We **wear** our school uniform to get ready.",
-                "I **pack my school bag** before leaving.",
-                "My mother **wakes me up** at 6 o'clock.",
-                "I **wash my face** with cold water.",
-                "We **greet** our elders in the morning."
+                "Teacher: '**Open your books** to page number ten.'",
+                "Class is over. '**Close your books**, please.'",
+                "She asked me to '**turn to page 25**'.",
+                "Before submitting, '**write your name** on the paper.'",
+                "The teacher asked Ram to '**read aloud** the story.'",
+                "**Look at the picture** on page seven.",
+                "**Underline the important words**."
               ],
               "media": {
-                "image": "images/basic/module-5/lesson-3/p"
+                "image": "images/basic/module-5/lesson-3/Instructions for Books and Papers.png"
               }
             }
           ]
         },
         {
-          "title": "2.2. Talking About Afternoon and Evening Activities",
+          "title": "2.2. Instructions for Movement and Actions",
           "sections": [
             {
-              "text": "After school, we come home and do other activities. In the evening, families usually spend time together.",
+              "text": "These are common instructions about moving around or doing actions in the classroom or elsewhere.",
               "examples": [
                 {
-                  "label": "Eat lunch",
-                  "value": "To have the midday meal."
+                  "label": "Stand up.",
+                  "value": "To rise from a sitting position to a standing position."
                 },
                 {
-                  "label": "Do homework",
-                  "value": "To complete school assignments given for home."
+                  "label": "Sit down.",
+                  "value": "To move from a standing position to a sitting position."
                 },
                 {
-                  "label": "Play",
-                  "value": "To engage in games or fun activities."
+                  "label": "Come here.",
+                  "value": "To ask someone to move closer to you."
                 },
                 {
-                  "label": "Eat dinner",
-                  "value": "To have the last meal of the day."
+                  "label": "Go there.",
+                  "value": "To ask someone to move to a specific place away from you."
                 },
                 {
-                  "label": "Sleep",
-                  "value": "To rest your body and mind at night."
+                  "label": "Look at the board.",
+                  "value": "To direct your eyes towards the blackboard."
                 },
                 {
-                  "label": "Watch TV",
-                  "value": "To watch programs on the television."
-                },
-                {
-                  "label": "Rest",
-                  "value": "To relax or stop working for some time."
+                  "label": "Listen carefully.",
+                  "value": "To pay close attention with your ears."
                 }
               ],
               "usage_examples": [
-                "After school, I **eat lunch** at home.",
-                "Then, I **do my homework**.",
-                "In the evening, I **play** with my friends in the field.",
-                "We **eat dinner** together as a family.",
-                "Before sleeping, I **read** a storybook.",
-                "My mother **prepares** dinner after the field work.",
-                "We all **sit** together and **talk** in the evening.",
-                "My **parents** **rest** after a long day.",
-                "I **learn** new things from my grandparents every evening.",
-                "Sometimes we **watch TV** after dinner.",
-                "My sister **helps** mother in the kitchen.",
-                "My father **reads the newspaper** in the evening.",
-                "I **go to bed** at 9 PM.",
-                "We **chat** about our day during dinner.",
-                "My grandfather likes to **take a walk** after dinner."
+                "When the teacher enters, '**stand up**', please.",
+                "After the assembly, '**sit down** in your seats.'",
+                "Teacher: '**Come here**, Rahul, and show me your book.'",
+                "He told me to '**go there** and get the chalk.'",
+                "Everyone, **look at the board**; I am writing something.",
+                "Please **listen carefully** to my instructions.",
+                "**Raise your hand** if you have a question.",
+                "**Don't talk** during the class."
               ],
               "media": {
-                "image": "images/basic/module-5/lesson-3/p"
-              },
-              "table": {
-                "title": "Daily Routine Actions",
-                "headers": ["Time", "Action", "Example Phrase"],
-                "rows": [
-                  ["Morning", "Wake up", "I wake up early."],
-                  ["Morning", "Brush teeth", "I brush my teeth."],
-                  ["Morning", "Take a bath", "I take a bath daily."],
-                  ["Morning", "Eat breakfast", "We eat breakfast at home."],
-                  ["Afternoon", "Eat lunch", "I eat lunch after school."],
-                  ["Afternoon", "Do homework", "I do my homework."],
-                  ["Evening", "Play", "I play with friends."],
-                  ["Evening", "Study", "I study for two hours."],
-                  ["Evening", "Watch TV", "We watch TV together."],
-                  ["Evening", "Eat dinner", "We eat dinner together."],
-                  ["Night", "Read a book", "I read a book before bed."],
-                  ["Night", "Sleep", "I sleep at 9 PM."]
-                ]
+                "image": "images/basic/module-5/lesson-3/Instructions for Movement and Actions.png"
+              }
+            }
+          ]
+        },
+        {
+          "title": "2.3. General Classroom Commands",
+          "sections": [
+            {
+              "text": "These are general commands used by teachers to manage the class and ensure smooth learning.",
+              "examples": [
+                {
+                  "label": "Be quiet.",
+                  "value": "To stop making noise or talking."
+                },
+                {
+                  "label": "Pay attention.",
+                  "value": "To focus your mind and eyes on what is being taught or said."
+                },
+                {
+                  "label": "Repeat after me.",
+                  "value": "To say the same words or phrase that the teacher just said."
+                },
+                {
+                  "label": "Work in groups.",
+                  "value": "To work together with a few classmates."
+                },
+                {
+                  "label": "Don't touch that.",
+                  "value": "To warn someone not to touch something."
+                }
+              ],
+              "usage_examples": [
+                "Class, **be quiet**, please! I am going to start.",
+                "Everyone, **pay attention** to the new lesson.",
+                "Teacher: 'Apple.' Students: '**Repeat after me**: Apple.'",
+                "For this activity, you will **work in groups**.",
+                "**Don't touch that** hot pot!",
+                "**Share your ideas** with your partner.",
+                "**Come to the front** of the class."
+              ],
+              "media": {
+                "image": "images/basic/module-5/lesson-3/General Classroom Commands.png"
               }
             }
           ]
@@ -300,124 +183,73 @@
       ]
     },
     {
-      "title": "3. Household Chores and Responsibilities",
+      "title": "3. Following Instructions (One and Many Steps)",
       "subtopics": [
         {
-          "title": "3.1. Common Chores Around the House",
+          "title": "3.1. One-Step Instructions",
           "sections": [
             {
-              "text": "Chores are tasks or duties that need to be done regularly at home to keep it clean and organized. Everyone in the family helps with these.",
+              "text": "One-step instructions are simple commands that ask you to do only one thing.",
               "examples": [
                 {
-                  "label": "Clean the house",
-                  "value": "To make the house neat and free from dirt, often by sweeping or wiping."
+                  "label": "Instruction",
+                  "value": "Drink water."
                 },
                 {
-                  "label": "Wash dishes",
-                  "value": "To clean plates, bowls, and other utensils after eating."
+                  "label": "Instruction",
+                  "value": "Open the window."
                 },
                 {
-                  "label": "Cook food",
-                  "value": "To prepare meals using various ingredients."
+                  "label": "Instruction",
+                  "value": "Close the door."
                 },
                 {
-                  "label": "Fetch water",
-                  "value": "To go and bring water, often from a well or common tap."
-                },
-                {
-                  "label": "Feed animals",
-                  "value": "To give food to cows, goats, chickens, or pets."
-                },
-                {
-                  "label": "Wash clothes",
-                  "value": "To clean dirty clothes with soap and water."
-                },
-                {
-                  "label": "Water the plants",
-                  "value": "To give water to plants in the garden."
-                },
-                {
-                  "label": "Go shopping",
-                  "value": "To buy things from the market or a shop."
+                  "label": "Instruction",
+                  "value": "Give me the book."
                 }
               ],
               "usage_examples": [
-                "My sister helps to **clean the house** every morning.",
-                "I **wash the dishes** after dinner.",
-                "My mother **cooks food** for the whole family.",
-                "We **fetch water** from the village well.",
-                "My father **feeds the animals** before going to the field.",
-                "I help my mother **collect firewood**.",
-                "My elder brother **waters the plants** in our garden.",
-                "My grandmother **cares** for the younger **children**.",
-                "We **support** each other in all **household** tasks.",
-                "Everyone needs to **cooperate** to keep our **home** clean.",
-                "On Sundays, my mother **washes clothes**.",
-                "My father **goes shopping** for groceries once a week.",
-                "I help **sweep the floor** with a broom.",
-                "My sister **makes the beds** in the morning.",
-                "We all help to **look after** our home."
+                "Teacher: '**Stand up**.' (Student stands up)",
+                "Mother: '**Bring water**.' (Child brings water)",
+                "Friend: '**Pass the ball**.' (You pass the ball)",
+                "**Sit down**, please.",
+                "**Eat your food**."
               ],
               "media": {
-                "image": "images/basic/module-5/lesson-3/p"
+                "image": "images/basic/module-5/lesson-3/One-Step Instructions.png"
               }
             }
           ]
         },
         {
-          "title": "3.2. Describing People's Help at Home",
+          "title": "3.2. Multi-Step Instructions (More Than One Step)",
           "sections": [
             {
-              "text": "We can use descriptive words (adjectives) to talk about how people help or their qualities at home.",
+              "text": "Multi-step instructions ask you to do two or more things in order. It's important to listen to all parts of the instruction before you start.",
               "examples": [
                 {
-                  "label": "Helpful",
-                  "value": "Likes to give assistance and make things easier."
+                  "label": "Two Steps",
+                  "value": "**Stand up** and **come to the board**."
                 },
                 {
-                  "label": "Hardworking",
-                  "value": "Puts a lot of effort and energy into work."
+                  "label": "Three Steps",
+                  "value": "**Open your books**, **turn to page 15**, and **read the first paragraph**."
                 },
                 {
-                  "label": "Caring",
-                  "value": "Shows kindness and concern for others."
-                },
-                {
-                  "label": "Responsible",
-                  "value": "Has duties and takes good care of them."
-                },
-                {
-                  "label": "Kind",
-                  "value": "Being friendly, generous, and considerate."
-                },
-                {
-                  "label": "Supportive",
-                  "value": "Giving encouragement and emotional help."
-                },
-                {
-                  "label": "Patient",
-                  "value": "Able to accept delays or problems without becoming angry."
+                  "label": "Daily Life Example",
+                  "value": "**Go to the well**, **fill the bucket**, and **bring it home**."
                 }
               ],
               "usage_examples": [
-                "My mother is very **helpful** in everything.",
-                "My father is a **hardworking** farmer.",
-                "My grandmother is a **caring** person; she always worries about us.",
-                "My elder brother is very **responsible**; he always finishes his chores.",
-                "Be **kind** to your younger **siblings**.",
-                "Our **family** is very **supportive** of each other.",
-                "My **neighbor** is a **friendly** person.",
-                "Being **patient** helps us in many situations at home.",
-                "My sister is **loving** and always shares her toys.",
-                "My grandfather is a **wise** man.",
-                "Our parents are **understanding**.",
-                "A **cooperative** family is a happy family.",
-                "My teacher says I am a **disciplined** student.",
-                "It is important to be **honest** at home.",
-                "My aunt is very **generous**."
+                "Teacher: '**Take out your notebooks** and **write today's date**.'",
+                "Mother: '**Go to the market**, **buy vegetables**, and **come back soon**.'",
+                "Friend: '**Pick up the ball** and **throw it to me**.'",
+                "Listen to all the steps carefully, then start the work.",
+                "First, do this, then do that.",
+                "**Clean your room** and **then play outside**."
               ],
               "media": {
-                "image": "images/basic/module-5/lesson-3/p"
+                "image": "images/basic/module-5/lesson-3/Multi-Step Instructions (More Than One Step).png"
               }
             }
           ]
@@ -425,104 +257,41 @@
       ]
     },
     {
-      "title": "4. Conversations at Home",
+      "title": "4. Tips for Good Listening",
       "subtopics": [
         {
-          "title": "4.1. Morning and Evening Conversations",
+          "title": "4.1. Being an Active Listener",
           "sections": [
             {
-              "text": "Here are examples of simple conversations you might have with your family members in the morning and evening.",
+              "text": "To be a good listener, you need to do more than just hear the sounds. You need to actively understand. \n1. **Look at the person who is speaking**. \n2. **Don't talk when others are talking**. \n3. **Think about what they are saying**. \n4. **Ask questions if you don't understand**.",
               "examples": [
                 {
-                  "label": "Morning Dialogue",
-                  "value": "Child: 'Good morning, Mother!' Mother: 'Good morning, my child. Did you sleep well?' Child: 'Yes, I slept well.'"
+                  "label": "Look at the Speaker",
+                  "value": "When your teacher speaks, look at her face. This helps you focus."
                 },
                 {
-                  "label": "Evening Dialogue",
-                  "value": "Father: 'What are you doing, children?' Children: 'We are playing a game, Father.' Father: 'Okay, it's time for dinner soon.'"
+                  "label": "Don't Interrupt",
+                  "value": "Wait for the person to finish talking before you speak."
                 },
                 {
-                  "label": "Asking about Food",
-                  "value": "Child: 'Mother, what is for dinner today?' Mother: 'Today, I have cooked dal and rice.'"
+                  "label": "Think and Understand",
+                  "value": "As they speak, try to make a picture in your mind of what they are saying."
                 },
                 {
-                  "label": "Asking About School",
-                  "value": "Parent: 'How was school today?' Child: 'It was good. I learned a new poem.'"
-                },
-                {
-                  "label": "Offering to Help",
-                  "value": "Child: 'You look tired, Mother. Can I help you?' Mother: 'Yes, please fetch me a glass of water.'"
+                  "label": "Ask Questions",
+                  "value": "If you are confused, politely ask: 'Can you repeat that, please?' or 'I don't understand.'"
                 }
               ],
               "usage_examples": [
-                "Child: '**It's time for dinner**!' Mother: 'Yes, come and eat.'",
-                "Father: '**Did you finish your homework**?' Son: 'Yes, Father, I finished it.'",
-                "Grandmother: '**How was your day** at school?' Grandchild: 'It was good, Grandmother.'",
-                "Mother: 'Please **help me with this work**.' Daughter: 'Yes, Mother, I will help you.'",
-                "We often have a **discussion** about our day during dinner.",
-                "Our family likes to **chat** about village news in the evening.",
-                "My parents **teach** me good manners.",
-                "Mother: '**Get ready for school**, it's getting late.'",
-                "Father: '**What did you learn today**?' Child: 'We learned about plants.'",
-                "Child: '**Good night, Father**.' Father: '**Good night, son. Sleep well**.'",
-                "Sister: '**Where is my book**?' Brother: 'It is on the table.'",
-                "Mother: '**What would you like for breakfast**?' Child: 'I would like roti and sabzi.'",
-                "We **tell each other** about our problems.",
-                "Father: '**Let's go to the market**.' Family: 'Okay, let's go!'",
-                "It is important to **communicate** with your family."
+                "Always **look at the teacher** when she gives instructions.",
+                "It's polite not to **interrupt** when someone is talking.",
+                "Try to **understand the meaning** of every instruction.",
+                "If you don't know, **ask questions**.",
+                "Good listeners always pay **attention**.",
+                "Listening carefully helps you to learn English faster."
               ],
               "media": {
-                "image": "images/basic/module-5/lesson-3/p"
-              }
-            }
-          ]
-        },
-        {
-          "title": "4.2. Offering and Asking for Help at Home",
-          "sections": [
-            {
-              "text": "In a family, we always help each other. Use these phrases to offer help or ask for it politely.",
-              "examples": [
-                {
-                  "label": "Offering Help 1",
-                  "value": "Mother: 'This pot is heavy.' Child: 'Can I help you, Mother?'"
-                },
-                {
-                  "label": "Offering Help 2",
-                  "value": "Father: 'I need to repair the fence.' Son: 'Let me help you, Father.'"
-                },
-                {
-                  "label": "Asking for Help 1",
-                  "value": "Child: 'I cannot open this jar.' Father: 'Father, please help me with this jar.'"
-                },
-                {
-                  "label": "Asking for Help 2",
-                  "value": "Sister: 'I can't reach the top shelf.' Brother: 'Could you please get that box for me?'"
-                },
-                {
-                  "label": "Asking for an Item",
-                  "value": "Child: 'Mother, can you give me some water?' Mother: 'Here, drink this.'"
-                }
-              ],
-              "usage_examples": [
-                "Father: 'I am going to the farm.' Son: '**Can I help you**, Father?'",
-                "Brother: 'I can't lift this.' Sister: '**Help me with this work**, please.'",
-                "Mother: 'Please bring the vegetables.' Child: '**Okay, Mother**.'",
-                "We always **share** our food with each other.",
-                "It's good to **cooperate** in **household** duties.",
-                "My family always **supports** me.",
-                "Daughter: 'Mother, **shall I wash the dishes**?'",
-                "Son: 'I can't solve this math problem. **Can you help me**?'",
-                "When you see someone working, you can ask: '**Do you need any help**?'",
-                "Mother: '**Please pass me the salt**.'",
-                "Child: 'Grandfather, I will carry your bag. **Let me take that**.'",
-                "It feels good to **assist** others in the family.",
-                "We **work together** to finish the chores quickly.",
-                "Asking '**What can I do to help**?' is a good way to offer help.",
-                "Being **helpful** makes everyone happy at home."
-              ],
-              "media": {
-                "image": "images/basic/module-5/lesson-3/p"
+                "image": "images/basic/module-5/lesson-3/Being an Active Listener.png"
               }
             }
           ]
@@ -531,4 +300,3 @@
     }
   ]
 }
-

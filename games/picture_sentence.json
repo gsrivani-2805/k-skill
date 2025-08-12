@@ -1,0 +1,55 @@
+{
+  "picture_sentence": [
+    {
+      "image": "images/games/cat_sleeping_sun.png",
+      "keywords": ["the", "cat", "is", "sleeping", "in", "the", "sun"],
+      "sentence": "The cat is sleeping in the sun"
+    },
+    {
+      "image": "images/games/man_reading_book.jpg",
+      "keywords": ["a", "man", "is", "reading", "a", "book"],
+      "sentence": "A man is reading a book"
+    },
+    {
+      "image": "images/games/birds_singing_tree.png",
+      "keywords": ["the", "birds", "are", "singing", "on", "the", "tree"],
+      "sentence": "The birds are singing on the tree"
+    },
+    {
+      "image": "images/games/children_playing_beach.jpg",
+      "keywords": ["children", "are", "playing", "on", "the", "beach"],
+      "sentence": "Children are playing on the beach"
+    },
+    {
+      "image": "images/games/car_driving_road.png",
+      "keywords": ["the", "car", "is", "driving", "down", "the", "road"],
+      "sentence": "The car is driving down the road"
+    },
+    {
+      "image": "images/games/boy_flying_kite.jpg",
+      "keywords": ["a", "boy", "is", "flying", "a", "kite"],
+      "sentence": "A boy is flying a kite"
+    },
+    {
+      "image": "images/games/girl_painting_picture.png",
+      "keywords": ["the", "girl", "is", "painting", "a", "picture"],
+      "sentence": "The girl is painting a picture"
+    },
+    {
+      "image": "images/games/baby_crying_loudly.png",
+      "keywords": ["the", "baby", "is", "crying", "loudly"],
+      "sentence": "The baby is crying loudly"
+    },
+    {
+      "image": "images/games/friends_laughing_together.png",
+      "keywords": ["friends", "are", "laughing", "together"],
+      "sentence": "Friends are laughing together"
+    },
+    {
+      "image": "images/games/teacher_writing_board.png",
+      "keywords": ["the", "teacher", "is", "writing", "on", "the", "board"],
+      "sentence": "The teacher is writing on the board"
+    }
+  ]
+}
+

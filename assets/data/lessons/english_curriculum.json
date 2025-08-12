@@ -54,97 +54,132 @@
                 }
             },
             "L1_M3": {
-                "title": "Grammar Basics",
+                "title": "Grammar Basics - 1",
                 "lessons": {
                     "L1_M3_L1": {
-                        "title": "Nouns: Naming Words Around Us",
+                        "title": "Synonyms",
                         "file_path": "lessons/basic/module-3/L1_M3_L1.json",
                         "quiz_path": "quizzes/basic/module-3/L1_M3_Q1.json"
                     },
                     "L1_M3_L2": {
-                        "title": "Pronouns (I, you, he, she, etc.)",
+                        "title": "Antonyms",
                         "file_path": "lessons/basic/module-3/L1_M3_L2.json",
                         "quiz_path": "quizzes/basic/module-3/L1_M3_Q2.json"
                     },
                     "L1_M3_L3": {
-                        "title": "Articles (a, an, the)",
+                        "title": "Degree of Comparision",
                         "file_path": "lessons/basic/module-3/L1_M3_L3.json",
                         "quiz_path": "quizzes/basic/module-3/L1_M3_Q3.json"
                     },
                     "L1_M3_L4": {
-                        "title": "Verbs (action words)",
+                        "title": "Rhyming Words",
                         "file_path": "lessons/basic/module-3/L1_M3_L4.json",
                         "quiz_path": "quizzes/basic/module-3/L1_M3_Q4.json"
                     },
                     "L1_M3_L5": {
-                        "title": "Subject and Predicate",
+                        "title": "Homophones and Homographs",
                         "file_path": "lessons/basic/module-3/L1_M3_L5.json",
                         "quiz_path": "quizzes/basic/module-3/L1_M3_Q5.json"
                     },
                     "L1_M3_L6": {
-                        "title": "Sentence Structure (S+V+O)",
+                        "title": "Verb Forms",
                         "file_path": "lessons/basic/module-3/L1_M3_L6.json",
                         "quiz_path": "quizzes/basic/module-3/L1_M3_Q6.json"
-                    },
-                    "L1_M3_L7": {
-                        "title": "Compound Words",
-                        "file_path": "lessons/basic/module-3/L1_M3_L7.json",
-                        "quiz_path": "quizzes/basic/module-3/L1_M3_Q7.json"
-                    },
-                    "L1_M3_L8": {
-                        "title": "Genders",
-                        "file_path": "lessons/basic/module-3/L1_M3_L8.json",
-                        "quiz_path": "quizzes/basic/module-3/L1_M3_Q8.json"
                     }
                 }
             },
             "L1_M4": {
-                "title": "Speaking & Listening",
+                "title": "Grammar Basics - 2",
                 "lessons": {
                     "L1_M4_L1": {
-                        "title": "Introducing Yourself",
+                        "title": "Nouns: Naming Words Around Us",
                         "file_path": "lessons/basic/module-4/L1_M4_L1.json",
                         "quiz_path": "quizzes/basic/module-4/L1_M4_Q1.json"
                     },
                     "L1_M4_L2": {
-                        "title": "Greetings & Daily Phrases",
+                        "title": "Pronouns (I, you, he, she, etc.)",
                         "file_path": "lessons/basic/module-4/L1_M4_L2.json",
                         "quiz_path": "quizzes/basic/module-4/L1_M4_Q2.json"
                     },
                     "L1_M4_L3": {
-                        "title": "Listening to Instructions",
+                        "title": "Articles (a, an, the)",
                         "file_path": "lessons/basic/module-4/L1_M4_L3.json",
                         "quiz_path": "quizzes/basic/module-4/L1_M4_Q3.json"
+                    },
+                    "L1_M4_L4": {
+                        "title": "Verbs (action words)",
+                        "file_path": "lessons/basic/module-4/L1_M4_L4.json",
+                        "quiz_path": "quizzes/basic/module-4/L1_M4_Q4.json"
+                    },
+                    "L1_M4_L5": {
+                        "title": "Subject and Predicate",
+                        "file_path": "lessons/basic/module-4/L1_M4_L5.json",
+                        "quiz_path": "quizzes/basic/module-4/L1_M4_Q5.json"
+                    },
+                    "L1_M4_L6": {
+                        "title": "Sentence Structure (S+V+O)",
+                        "file_path": "lessons/basic/module-4/L1_M4_L6.json",
+                        "quiz_path": "quizzes/basic/module-4/L1_M4_Q6.json"
+                    },
+                    "L1_M4_L7": {
+                        "title": "Compound Words",
+                        "file_path": "lessons/basic/module-4/L1_M4_L7.json",
+                        "quiz_path": "quizzes/basic/module-4/L1_M4_Q7.json"
+                    },
+                    "L1_M4_L8": {
+                        "title": "Genders",
+                        "file_path": "lessons/basic/module-4/L1_M4_L8.json",
+                        "quiz_path": "quizzes/basic/module-4/L1_M4_Q8.json"
                     }
                 }
             },
             "L1_M5": {
-                "title": "Everyday English",
+                "title": "Speaking & Listening",
                 "lessons": {
                     "L1_M5_L1": {
-                        "title": "In the Classroom",
+                        "title": "Introducing Yourself",
                         "file_path": "lessons/basic/module-5/L1_M5_L1.json",
                         "quiz_path": "quizzes/basic/module-5/L1_M5_Q1.json"
                     },
                     "L1_M5_L2": {
-                        "title": "At the Market",
+                        "title": "Greetings & Daily Phrases",
                         "file_path": "lessons/basic/module-5/L1_M5_L2.json",
                         "quiz_path": "quizzes/basic/module-5/L1_M5_Q2.json"
                     },
                     "L1_M5_L3": {
-                        "title": "At Home",
+                        "title": "Listening to Instructions",
                         "file_path": "lessons/basic/module-5/L1_M5_L3.json",
                         "quiz_path": "quizzes/basic/module-5/L1_M5_Q3.json"
+                    }
+                }
+            },
+            "L1_M6": {
+                "title": "Everyday English",
+                "lessons": {
+                    "L1_M6_L1": {
+                        "title": "In the Classroom",
+                        "file_path": "lessons/basic/module-6/L1_M6_L1.json",
+                        "quiz_path": "quizzes/basic/module-6/L1_M6_Q1.json"
                     },
-                    "L1_M5_L4": {
+                    "L1_M6_L2": {
+                        "title": "At the Market",
+                        "file_path": "lessons/basic/module-6/L1_M6_L2.json",
+                        "quiz_path": "quizzes/basic/module-6/L1_M6_Q2.json"
+                    },
+                    "L1_M6_L3": {
+                        "title": "At Home",
+                        "file_path": "lessons/basic/module-6/L1_M6_L3.json",
+                        "quiz_path": "quizzes/basic/module-6/L1_M6_Q3.json"
+                    },
+                    "L1_M6_L4": {
                         "title": "Celebrations and Festivals",
-                        "file_path": "lessons/basic/module-5/L1_M5_L4.json",
-                        "quiz_path": "quizzes/basic/module-5/L1_M5_Q4.json"
+                        "file_path": "lessons/basic/module-6/L1_M6_L4.json",
+                        "quiz_path": "quizzes/basic/module-6/L1_M6_Q4.json"
                     },
-                    "L1_M5_L5": {
+                    "L1_M6_L5": {
                         "title": "Daily Routine Conversations",
-                        "file_path": "lessons/basic/module-5/L1_M5_L5.json",
-                        "quiz_path": "quizzes/basic/module-5/L1_M5_Q5.json"
+                        "file_path": "lessons/basic/module-6/L1_M6_L5.json",
+                        "quiz_path": "quizzes/basic/module-6/L1_M6_Q5.json"
                     }
                 }
             }

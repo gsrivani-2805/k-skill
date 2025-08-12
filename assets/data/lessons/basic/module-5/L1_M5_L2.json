@@ -1,416 +1,355 @@
 {
   "level": "Beginner",
-  "module": "EVERYDAY ENGLISH",
+  "module": "SPEAKING & LISTENING",
   "lesson_number": 2,
-  "lesson_title": "At the Market: Buying and Selling",
+  "lesson_title": "Greetings & Daily Phrases: Talking Nicely Every Day",
   "objectives": [
-    "Learn words for common things we buy and sell in the market.",
-    "Practice talking to shopkeepers and asking about prices.",
-    "Understand how to buy things and use polite words when shopping."
+    "Learn different ways to say hello and goodbye at different times of the day.",
+    "Understand and use polite words like 'please', 'thank you', and 'sorry'.",
+    "Practice common English phrases used in daily talks at home and school."
   ],
   "topics": [
     {
-      "title": "1. What to Buy: Naming Things",
+      "title": "1. How to Greet Others (Saying Hello)",
       "subtopics": [
         {
-          "title": "1.1. Common Vegetables and Fruits",
+          "title": "1.1. Greetings for Different Times",
           "sections": [
             {
-              "text": "In the market, we buy many fresh vegetables and fruits. Knowing their English names helps us ask for them easily.",
+              "text": "We greet people differently based on the time of day. This shows respect and kindness.",
               "examples": [
                 {
-                  "label": "Potato",
-                  "value": "A common vegetable, brown outside, white inside. We use it in many curries."
+                  "label": "Good Morning",
+                  "value": "Use from early morning until noon (around 12:00 PM). You say this when you first see someone in the morning."
                 },
                 {
-                  "label": "Onion",
-                  "value": "A vegetable with many layers, used in almost all cooking for flavor."
+                  "label": "Good Afternoon",
+                  "value": "Use from noon (12:00 PM) until late afternoon (around 5:00 PM)."
                 },
                 {
-                  "label": "Tomato",
-                  "value": "A red, juicy fruit used as a vegetable in curries and salads."
+                  "label": "Good Evening",
+                  "value": "Use from late afternoon (around 5:00 PM) until night (before sleeping)."
                 },
                 {
-                  "label": "Spinach",
-                  "value": "Green leafy vegetable, very healthy. We grow a lot of it in our fields."
-                },
-                {
-                  "label": "Mango",
-                  "value": "A very sweet and juicy fruit, popular in summer. Our village has many mango trees."
-                },
-                {
-                  "label": "Banana",
-                  "value": "A long yellow fruit, easy to peel and eat. Monkeys also love bananas!"
+                  "label": "Hello / Hi",
+                  "value": "You can use 'Hello' or 'Hi' at any time of the day. 'Hi' is more informal, good for friends. 'Hello' is for everyone."
                 }
               ],
               "usage_examples": [
-                "I want to buy some fresh **potatoes** for dinner.",
-                "How much are these **onions**?",
-                "My mother needs three **tomatoes** for the curry.",
-                "This **spinach** is very fresh from the farm.",
-                "I love eating sweet **mangoes** in summer.",
-                "Please give me a bunch of **bananas**.",
-                "Are there any fresh **carrots** today?",
-                "We use **chilies** to make food spicy."
+                "**Good morning**, teacher! I am ready for class.",
+                "**Good afternoon**, Uncle. Are you going to the field?",
+                "**Good evening**, Grandmother. How was your day?",
+                "**Hello**, Ram! How are you?",
+                "**Hi**, Sita! Let's play.",
+                "Every morning, I say **Good morning** to my parents."
               ],
               "media": {
-                "image": "images/basic/module-5/lesson-2/p"
+                "image": "images/basic/module-5/lesson-2/Greetings for Different Times.png"
               }
             }
           ]
         },
         {
-          "title": "1.2. Grains and Other Food Items",
+          "title": "1.2. Asking How Someone Is",
           "sections": [
             {
-              "text": "Besides vegetables and fruits, we also buy grains, pulses (dal), and other food items from the market or shop.",
+              "text": "After greeting, it's nice to ask about the other person's well-being. This shows you care.",
               "examples": [
                 {
-                  "label": "Rice",
-                  "value": "The main food grain, cooked and eaten daily. Our farmers grow a lot of rice."
+                  "label": "How are you?",
+                  "value": "A common way to ask about someone's health and feelings."
                 },
                 {
-                  "label": "Wheat",
-                  "value": "A grain used to make flour for roti or bread."
+                  "label": "How are you today?",
+                  "value": "Asks specifically about their condition on the current day."
                 },
                 {
-                  "label": "Dal (Lentils)",
-                  "value": "Dried pulses like Toor Dal, Moong Dal, cooked as a curry. They are very healthy."
-                },
-                {
-                  "label": "Sugar",
-                  "value": "Sweet crystals used to make tea, sweets, and other dishes."
-                },
-                {
-                  "label": "Salt",
-                  "value": "A white powder that adds taste to food. Food tastes bland without salt."
-                },
-                {
-                  "label": "Oil",
-                  "value": "Used for cooking food. We often use groundnut oil or mustard oil."
+                  "label": "How are you doing?",
+                  "value": "Another friendly way to ask about their general well-being."
                 }
               ],
               "usage_examples": [
-                "I need five kilograms of **rice** for my home.",
-                "My mother buys **wheat** flour to make chapatis.",
-                "Please give me one kilogram of **dal**.",
-                "Do you have some **sugar** for my tea?",
-                "Don't forget to add **salt** to the curry.",
-                "We need a bottle of cooking **oil**.",
-                "The shopkeeper sells fresh **jaggery**.",
-                "I want to buy some **biscuits** and **tea powder**."
+                "Hello, friend! **How are you**?",
+                "Good morning, sir. **How are you today**?",
+                "Hi, cousin! **How are you doing**?",
+                "My teacher asked me, '**How are you**, Rahul?'",
+                "It's good to ask, '**How are you**?' to your elders."
               ],
               "media": {
-                "image": "images/basic/module-5/lesson-2/p"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "2. Asking About Price: How Much?",
-      "subtopics": [
-        {
-          "title": "2.1. Simple Questions for Price",
-          "sections": [
-            {
-              "text": "When you want to know the cost of something, these are the basic questions you can ask. Always remember to be polite.",
-              "examples": [
-                {
-                  "label": "How much is this?",
-                  "value": "Use this when you are holding one item or pointing to one item."
-                },
-                {
-                  "label": "How much are these?",
-                  "value": "Use this when you are holding or pointing to many items (plural)."
-                },
-                {
-                  "label": "What is the price of this?",
-                  "value": "Another way to ask for the cost of one item."
-                },
-                {
-                  "label": "How much per kilo?",
-                  "value": "Used when asking the price of items sold by weight (kilogram)."
-                }
-              ],
-              "usage_examples": [
-                "Excuse me, **how much is this** mango?",
-                "Sir, **how much are these** potatoes?",
-                "Shopkeeper: '**What is the price of this** shirt?'",
-                "How much is the rice **per kilo**?",
-                "**How much is this** toy car?",
-                "Are these chilies expensive? **How much per kilo**?",
-                "Excuse me, **what is the price of this** new broom?"
-              ],
-              "media": {
-                "image": "images/basic/module-5/lesson-2/p"
+                "image": "images/basic/module-5/lesson-2/Your Asking How Someone Is and Interests.png"
               }
             }
           ]
         },
         {
-          "title": "2.2. Understanding Prices",
+          "title": "1.3. Saying Goodbye",
           "sections": [
             {
-              "text": "When the shopkeeper tells you the price, you need to understand the numbers. Prices are usually given in rupees. Sometimes, they may say 'per kilo', 'per dozen', or 'per piece'.",
+              "text": "When you leave someone, you say goodbye. This means 'I am leaving now'.",
               "examples": [
                 {
-                  "label": "10 Rupees",
-                  "value": "Means the item costs 10 Indian Rupees. Example: 'This apple is 10 rupees.'"
+                  "label": "Goodbye",
+                  "value": "A general way to say farewell."
                 },
                 {
-                  "label": "50 Rupees per kilo",
-                  "value": "Means one kilogram of the item costs 50 rupees. Example: 'Potatoes are 50 rupees per kilo.'"
+                  "label": "Bye",
+                  "value": "A shorter, informal way to say goodbye, often used with friends."
                 },
                 {
-                  "label": "20 Rupees per dozen",
-                  "value": "Means 12 pieces of the item cost 20 rupees. Example: 'Bananas are 20 rupees per dozen.'"
+                  "label": "See you later / See you tomorrow",
+                  "value": "Used when you expect to meet the person again soon."
                 },
                 {
-                  "label": "5 Rupees a piece",
-                  "value": "Means one piece of the item costs 5 rupees. Example: 'This cookie is 5 rupees a piece.'"
+                  "label": "Good night",
+                  "value": "Used when you are leaving someone in the evening or going to sleep."
                 }
               ],
               "usage_examples": [
-                "Shopkeeper: 'The tomatoes are **40 rupees per kilo**.'",
-                "Customer: 'I bought this pen for **10 rupees**.'",
-                "Bananas are **30 rupees per dozen** at this stall.",
-                "How many eggs are in a dozen? Twelve.",
-                "The small clay pot is **25 rupees**.",
-                "Rice is usually sold **per kilo**.",
-                "A small pack of biscuits is **5 rupees**."
+                "It's time to go home. **Goodbye**, everyone!",
+                "Class is over. **Bye**, friends!",
+                "I will **see you tomorrow** in school.",
+                "My mother says **Good night** before I sleep.",
+                "We said **goodbye** to the villagers and left.",
+                "**See you later** at the playground."
               ],
               "media": {
-                "image": "images/basic/module-5/lesson-2/p"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "3. Bargaining and Payment",
-      "subtopics": [
-        {
-          "title": "3.1. Asking for a Better Price (Bargaining)",
-          "sections": [
-            {
-              "text": "In many village markets, you can try to get a lower price. This is called bargaining. Use these polite phrases.",
-              "examples": [
-                {
-                  "label": "Is there any discount?",
-                  "value": "Asking if the price can be made a little lower."
-                },
-                {
-                  "label": "Can you reduce the price?",
-                  "value": "Politely asking the shopkeeper to make the item cheaper."
-                },
-                {
-                  "label": "It's a bit expensive.",
-                  "value": "Saying that the price is high to suggest a lower price."
-                },
-                {
-                  "label": "Can you give it for...?",
-                  "value": "Suggesting a lower price you are willing to pay. Example: 'Can you give it for 40 rupees?'"
-                }
-              ],
-              "usage_examples": [
-                "Shopkeeper: 'This cloth is 200 rupees.' Customer: 'Sir, **is there any discount** on this?'",
-                "This mango basket is 150 rupees. **Can you reduce the price** a little?",
-                "The new shirt looks good, but **it's a bit expensive** for me.",
-                "Can you give these vegetables for **50 rupees**?",
-                "My mother always tries to **bargain** for vegetables.",
-                "Shopkeeper: 'No bargaining.' Customer: 'Okay, I will pay the full price.'"
-              ],
-              "media": {
-                "image": "images/basic/module-5/lesson-2/p"
-              }
-            }
-          ]
-        },
-        {
-          "title": "3.2. Paying and Taking Change",
-          "sections": [
-            {
-              "text": "After agreeing on the price, you pay the money. Remember to check your change!",
-              "examples": [
-                {
-                  "label": "Here is the money.",
-                  "value": "Used when you hand over the payment."
-                },
-                {
-                  "label": "Do you have change?",
-                  "value": "Asking if the shopkeeper can give you back smaller money."
-                },
-                {
-                  "label": "Where is my change?",
-                  "value": "Asking for the money that should be returned to you."
-                },
-                {
-                  "label": "Keep the change.",
-                  "value": "Used if the amount of change is very small and you don't want it back (optional)."
-                }
-              ],
-              "usage_examples": [
-                "Shopkeeper: 'That will be 70 rupees.' Customer: '**Here is the money**, sir.'",
-                "I gave a 100-rupee note. 'Do you have **change** for 100?'",
-                "After paying, I asked, '**Where is my change**?'",
-                "The total was 98 rupees. I said, 'Here is 100, **keep the change**.'",
-                "Always count your **change** carefully.",
-                "The shopkeeper returned the exact **change**."
-              ],
-              "media": {
-                "image": "images/basic/module-5/lesson-2/p"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "4. Different Stalls and People at the Market",
-      "subtopics": [
-        {
-          "title": "4.1. Types of Stalls and Shops",
-          "sections": [
-            {
-              "text": "A market has different sections or small shops (stalls) where different types of things are sold.",
-              "examples": [
-                {
-                  "label": "Vegetable Stall",
-                  "value": "A place where fresh vegetables are sold by a vendor."
-                },
-                {
-                  "label": "Fruit Stall",
-                  "value": "A place where fresh fruits are sold."
-                },
-                {
-                  "label": "Grocery Shop",
-                  "value": "A shop selling food items like rice, dal, sugar, oil, biscuits, etc."
-                },
-                {
-                  "label": "Clothes Shop",
-                  "value": "A shop selling shirts, saris, dhoti, and other clothing."
-                },
-                {
-                  "label": "General Store",
-                  "value": "A shop selling a variety of daily use items, not just food."
-                }
-              ],
-              "usage_examples": [
-                "My mother buys fresh vegetables from the **vegetable stall**.",
-                "We bought sweet mangoes from the **fruit stall**.",
-                "The **grocery shop** in our village sells everything we need.",
-                "I need a new shirt from the **clothes shop**.",
-                "We visit the market's **sweet shop** for laddus.",
-                "The **fish market** smells strong but has fresh fish."
-              ],
-              "media": {
-                "image": "images/basic/module-5/lesson-2/p"
-              }
-            }
-          ]
-        },
-        {
-          "title": "4.2. People at the Market",
-          "sections": [
-            {
-              "text": "Many different people work or visit the market every day. Knowing their roles helps you understand the market better.",
-              "examples": [
-                {
-                  "label": "Shopkeeper",
-                  "value": "A person who owns or works in a shop and sells things."
-                },
-                {
-                  "label": "Vendor",
-                  "value": "A person who sells things, often from a small stall or cart in the market."
-                },
-                {
-                  "label": "Customer / Buyer",
-                  "value": "A person who goes to the market to buy things."
-                },
-                {
-                  "label": "Seller",
-                  "value": "A person who offers goods for sale."
-                }
-              ],
-              "usage_examples": [
-                "The **shopkeeper** gave me a good price.",
-                "The **vegetable vendor** was calling out loudly.",
-                "I am a **customer** at this market today.",
-                "Many **buyers** come to our village market on Sundays.",
-                "The **seller** showed me many different saris.",
-                "The **shopkeeper** weighed the rice for me."
-              ],
-              "media": {
-                "image": "images/basic/module-5/lesson-2/p"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "5. Useful Phrases for Shopping",
-      "subtopics": [
-        {
-          "title": "5.1. General Shopping Conversation",
-          "sections": [
-            {
-              "text": "These are some general phrases you can use when you are shopping in a market or shop.",
-              "examples": [
-                {
-                  "label": "I want to buy...",
-                  "value": "State what you wish to purchase. Example: 'I want to buy some fruits.'"
-                },
-                {
-                  "label": "Do you have...?",
-                  "value": "Ask if the shop sells a particular item. Example: 'Do you have fresh milk?'"
-                },
-                {
-                  "label": "Show me...",
-                  "value": "Ask the seller to show you a specific item. Example: 'Show me those red apples.'"
-                },
-                {
-                  "label": "That's all, thank you.",
-                  "value": "Used when you have finished buying and are ready to pay."
-                },
-                {
-                  "label": "Have a good day!",
-                  "value": "A polite way to say goodbye to the shopkeeper."
-                }
-              ],
-              "usage_examples": [
-                "Excuse me, sir, **I want to buy** some sugar.",
-                "**Do you have** any fresh vegetables today?",
-                "Please **show me** the new shirts.",
-                "Okay, **that's all, thank you**.",
-                "After shopping, I said, '**Have a good day**!' to the shopkeeper.",
-                "What can I help you with today?",
-                "I am just looking, thank you.",
-                "Is this vegetable fresh?",
-                "I like this color."
-              ],
-              "media": {
-                "image": "images/basic/module-5/lesson-2/p"
+                "image": "images/basic/module-5/lesson-2/Saying Goodbye.png"
               },
               "table": {
-                "title": "Common Market Phrases",
-                "headers": ["Purpose", "Phrase to Use"],
+                "title": "Summary of Greetings",
+                "headers": ["Time of Day", "Greeting", "Purpose"],
                 "rows": [
-                  ["Asking for an item", "I want to buy [item]."],
-                  ["Checking availability", "Do you have [item]?"],
-                  ["Asking price (single)", "How much is this?"],
-                  ["Asking price (multiple)", "How much are these?"],
-                  ["Asking price (weight)", "How much per kilo?"],
-                  ["Asking for discount", "Is there any discount?"],
-                  ["Asking for discount", "Can you reduce the price?"],
-                  ["Agreeing to price", "Okay, I will take it."],
-                  ["Giving money", "Here is the money."],
-                  ["Asking for change", "Where is my change?"],
-                  ["Ending shopping", "That's all, thank you."],
-                  ["Polite goodbye", "Have a good day!"]
+                  ["Morning (sunrise-12 PM)", "Good Morning", "Starting the day"],
+                  ["Afternoon (12 PM-5 PM)", "Good Afternoon", "Midday greeting"],
+                  ["Evening (5 PM-night)", "Good Evening", "Late day greeting"],
+                  ["Any time", "Hello / Hi", "General greeting"],
+                  ["Leaving / Before Sleep", "Goodbye / Good night", "Saying farewell / Before rest"]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Polite Words to Use (Being Kind)",
+      "subtopics": [
+        {
+          "title": "2.1. Using 'Please' and 'Thank You'",
+          "sections": [
+            {
+              "text": "'Please' and 'Thank you' are magic words! Using 'please' when you ask for something shows politeness. Using 'thank you' shows you are grateful when someone helps you or gives you something.",
+              "examples": [
+                {
+                  "label": "Please",
+                  "value": "Used to make a request polite. Example: 'May I have a pen, **please**?'"
+                },
+                {
+                  "label": "Thank you",
+                  "value": "Used to show gratitude or appreciation. Example: 'Here's your pen.' '**Thank you**!'"
+                },
+                {
+                  "label": "Thank you very much",
+                  "value": "A stronger way to show a lot of thanks."
+                }
+              ],
+              "usage_examples": [
+                "Teacher, may I come in, **please**?",
+                "Can you help me, **please**?",
+                "Here is the book. **Thank you**!",
+                "My friend shared his food. I said, '**Thank you very much**.'",
+                "**Please** pass the water bottle.",
+                "Always say **thank you** when someone helps you."
+              ],
+              "media": {
+                "image": "images/basic/module-5/lesson-2/Using _Please_ and _Thank You.png"
+              }
+            }
+          ]
+        },
+        {
+          "title": "2.2. Using 'Sorry' and 'Excuse Me'",
+          "sections": [
+            {
+              "text": "These words are important for showing good manners. \n'Sorry' is used when you make a mistake or cause a small problem. \n'Excuse me' is used to get someone's attention politely, or to pass by someone in a crowded place.",
+              "examples": [
+                {
+                  "label": "Sorry",
+                  "value": "Used to apologize for a mistake. Example: 'Oh, **sorry**! I broke your pencil.'"
+                },
+                {
+                  "label": "I am sorry",
+                  "value": "A more complete way to apologize. Example: '**I am sorry** for being late.'"
+                },
+                {
+                  "label": "Excuse me",
+                  "value": "Used to politely ask someone to move, or to get their attention before speaking. Example: '**Excuse me**, teacher, I have a question.'"
+                }
+              ],
+              "usage_examples": [
+                "Oh, **sorry**! I stepped on your foot.",
+                "**I am sorry** for not completing my homework.",
+                "**Excuse me**, sir, can you tell me the time?",
+                "**Excuse me**, may I pass?",
+                "If you make a mistake, always say **sorry**.",
+                "When you want to ask a question, say **excuse me** first."
+              ],
+              "media": {
+                "image": "images/basic/module-5/lesson-2/Using _Sorry_ and _Excuse Me.png"
+              }
+            }
+          ]
+        },
+        {
+          "title": "2.3. Responding to 'Thank You'",
+          "sections": [
+            {
+              "text": "When someone says 'Thank you' to you, it's polite to respond. This shows you are happy to help.",
+              "examples": [
+                {
+                  "label": "You're welcome",
+                  "value": "A common and polite response to 'Thank you'. It means 'I was happy to help you'."
+                },
+                {
+                  "label": "No problem",
+                  "value": "A more informal way to say 'You're welcome', especially among friends."
+                }
+              ],
+              "usage_examples": [
+                "Student: 'Thank you for the pen.' Teacher: '**You're welcome**.'",
+                "Friend 1: 'Thanks for helping.' Friend 2: '**No problem**!'",
+                "When my father thanked me for bringing water, I said, '**You're welcome**.'",
+                "It's good manners to say **you're welcome**."
+              ],
+              "media": {
+                "image": "images/basic/module-5/lesson-2/Responding to _Thank You.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Common Phrases for Daily Conversation",
+      "subtopics": [
+        {
+          "title": "3.1. Asking Permission and Help",
+          "sections": [
+            {
+              "text": "These phrases help you ask for things politely or offer your help to others.",
+              "examples": [
+                {
+                  "label": "May I come in?",
+                  "value": "Used to ask for permission to enter a room. Example: 'Teacher, **may I come in**?'"
+                },
+                {
+                  "label": "Can I help you?",
+                  "value": "Used to offer help to someone. Example: 'You look busy. **Can I help you**?'"
+                },
+                {
+                  "label": "Please give me...",
+                  "value": "A direct but polite way to ask for something. Example: '**Please give me** my book.'"
+                }
+              ],
+              "usage_examples": [
+                "Teacher, **may I go out** to drink water?",
+                "Friend, **can I help you** with that heavy bag?",
+                "Mother, **please give me** some rice.",
+                "**May I use** your pencil for a moment?",
+                "When someone drops something, you can ask, '**Can I help you**?'",
+                "**Please give me** a glass of water."
+              ],
+              "media": {
+                "image": "images/basic/module-5/lesson-2/Asking Permission and Help.png"
+              }
+            }
+          ]
+        },
+        {
+          "title": "3.2. Understanding and Responding",
+          "sections": [
+            {
+              "text": "These phrases help you communicate when you don't understand something or to respond simply.",
+              "examples": [
+                {
+                  "label": "I don't understand.",
+                  "value": "Used when you don't get the meaning of something. Example: 'Sir, **I don't understand** this sum.'"
+                },
+                {
+                  "label": "Can you repeat, please?",
+                  "value": "Used to ask someone to say something again because you didn't hear or understand."
+                },
+                {
+                  "label": "Yes / No",
+                  "value": "Simple answers for agreement or disagreement."
+                },
+                {
+                  "label": "Okay",
+                  "value": "Means 'all right' or 'agreed'. A very common and useful word."
+                }
+              ],
+              "usage_examples": [
+                "The teacher spoke fast. I said, '**I don't understand**.'",
+                "Friend: 'Did you finish?' Me: '**Yes**.'",
+                "Teacher: 'Can you hear me?' Student: '**Yes, sir**.'",
+                "**Can you repeat, please**? I didn't hear clearly.",
+                "Is it raining? **No**, it's not.",
+                "Let's meet at the well. **Okay**!",
+                "Teacher: 'Is this correct?' Student: '**I don't know, sir**.'"
+              ],
+              "media": {
+                "image": "images/basic/module-5/lesson-2/Understanding and Responding.png"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Formal vs. Informal Language",
+      "subtopics": [
+        {
+          "title": "4.1. When to Be Formal or Informal",
+          "sections": [
+            {
+              "text": "The way we speak English changes based on who we are talking to. \n**Formal language** is used when talking to elders, teachers, or important people. It is more respectful. \n**Informal language** is used with friends and family members. It is more relaxed.",
+              "examples": [
+                {
+                  "label": "Formal Setting",
+                  "value": "Talking to your principal, a new government officer, or a guest teacher."
+                },
+                {
+                  "label": "Informal Setting",
+                  "value": "Talking to your best friend, your younger brother, or your cousin."
+                },
+                {
+                  "label": "Formal Greeting",
+                  "value": "Good morning, Sir/Madam."
+                },
+                {
+                  "label": "Informal Greeting",
+                  "value": "Hi, Rahul!"
+                }
+              ],
+              "usage_examples": [
+                "When talking to your teacher, use **formal language**.",
+                "You can use **informal language** with your classmates.",
+                "Saying 'May I come in?' is **formal**.",
+                "Saying 'Come in!' to a friend is **informal**.",
+                "Always be respectful, especially when using **formal language**.",
+                "In the village, we often use **informal language** with neighbors we know well."
+              ],
+              "media": {
+                "image": "images/basic/module-5/lesson-2/Formal vs. Informal Examples.png"
+              },
+              "table": {
+                "title": "Formal vs. Informal Examples",
+                "headers": ["Situation", "Formal Example", "Informal Example"],
+                "rows": [
+                  ["Greeting", "Good morning, Sir.", "Hi, Rohan!"],
+                  ["Asking permission", "May I leave now, Ma'am?", "Can I go now?"],
+                  ["Saying goodbye", "Goodbye, Mr. Sharma.", "Bye, see ya!"],
+                  ["Asking for help", "Could you please assist me?", "Help me out!"]
                 ]
               }
             }

@@ -5,353 +5,353 @@
       "questions": [
         {
           "id": 1,
-          "question": "In which room do you sleep?",
-          "options": ["Kitchen", "Bathroom", "Bedroom", "Living room"],
-          "correct_answer": "Bedroom",
-          "grammar_type": "At Home"
+          "question": "____ is your name?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 2,
-          "question": "What do you sit on at a dining table?",
-          "options": ["Bed", "Sofa", "Chair", "Stool"],
-          "correct_answer": "Chair",
-          "grammar_type": "At Home"
+          "question": "____ is the library?",
+          "options": ["Who", "Where", "What", "Are"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 3,
-          "question": "Where is food cooked in a house?",
-          "options": ["Bedroom", "Kitchen", "Garden", "Bathroom"],
-          "correct_answer": "Kitchen",
-          "grammar_type": "At Home"
+          "question": "____ is your best friend?",
+          "options": ["Who", "Where", "What", "Am"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 4,
-          "question": "What do you open to enter or leave a room?",
-          "options": ["Window", "Wall", "Door", "Roof"],
-          "correct_answer": "Door",
-          "grammar_type": "At Home"
+          "question": "The question word 'What' asks about a thing or a/an ____.",
+          "options": ["person", "place", "action", "time"],
+          "correct_answer": "action",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 5,
-          "question": "What is the main piece of furniture in a bedroom for sleeping?",
-          "options": ["Table", "Chair", "Bed", "Sofa"],
-          "correct_answer": "Bed",
-          "grammar_type": "At the Home"
+          "question": "____ is in your school bag?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 6,
-          "question": "What do you use to watch shows and movies?",
-          "options": ["Radio", "Television", "Computer", "Book"],
-          "correct_answer": "Television",
-          "grammar_type": "At Home"
+          "question": "The question word 'Where' asks about a ____.",
+          "options": ["person", "place", "thing", "reason"],
+          "correct_answer": "place",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 7,
-          "question": "In which room do you take a bath?",
-          "options": ["Kitchen", "Bedroom", "Hall", "Bathroom"],
-          "correct_answer": "Bathroom",
-          "grammar_type": "At Home"
+          "question": "____ are you going?",
+          "options": ["Who", "Where", "What", "Am"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 8,
-          "question": "What gives light in a room at night?",
-          "options": ["Fan", "Window", "Bulb", "Door"],
-          "correct_answer": "Bulb",
-          "grammar_type": "At Home"
+          "question": "The question word 'Who' asks about a ____.",
+          "options": ["person", "place", "thing", "time"],
+          "correct_answer": "person",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 9,
-          "question": "What do you look through to see outside?",
-          "options": ["Wall", "Door", "Window", "Floor"],
-          "correct_answer": "Window",
-          "grammar_type": "At Home"
+          "question": "____ is your teacher?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 10,
-          "question": "Where do you wash your hands in the bathroom?",
-          "options": ["Tub", "Shower", "Sink", "Toilet"],
-          "correct_answer": "Sink",
-          "grammar_type": "At Home"
+          "question": "Choose the correct question for the answer: 'My name is Priya.'",
+          "options": ["Who is your name?", "Where is your name?", "What is your name?", "Is your name?"],
+          "correct_answer": "What is your name?",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 11,
-          "question": "Your father and mother are your ____.",
-          "options": ["Siblings", "Parents", "Cousins", "Grandparents"],
-          "correct_answer": "Parents",
-          "grammar_type": "At Home"
+          "question": "____ is that animal?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 12,
-          "question": "What do you use to keep a room cool?",
-          "options": ["Heater", "Light", "Fan", "Stove"],
-          "correct_answer": "Fan",
-          "grammar_type": "At Home"
+          "question": "____ do you live?",
+          "options": ["Who", "Where", "What", "Do"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 13,
-          "question": "What is the top covering of a house called?",
-          "options": ["Floor", "Wall", "Roof", "Ceiling"],
-          "correct_answer": "Roof",
-          "grammar_type": "At Home"
+          "question": "____ is knocking at the door?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 14,
-          "question": "Where do you usually eat your meals?",
-          "options": ["Bedroom", "Dining room", "Bathroom", "Garden"],
-          "correct_answer": "Dining room",
-          "grammar_type": "At Home"
+          "question": "Choose the correct question: 'The book is on the table.'",
+          "options": ["Who is the book?", "Where is the book?", "What is the book?", "Is the book?"],
+          "correct_answer": "Where is the book?",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 15,
-          "question": "Your brother and sister are your ____.",
-          "options": ["Parents", "Cousins", "Siblings", "Friends"],
-          "correct_answer": "Siblings",
-          "grammar_type": "At Home"
+          "question": "____ is the colour of the sky?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 16,
-          "question": "What do you use to clean the floor?",
-          "options": ["Cloth", "Broom", "Brush", "Sponge"],
-          "correct_answer": "Broom",
-          "grammar_type": "At Home"
+          "question": "____ is your home?",
+          "options": ["Who", "Where", "What", "Am"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 17,
-          "question": "What do you keep your clothes in?",
-          "options": ["Cupboard", "Table", "Shelf", "Box"],
-          "correct_answer": "Cupboard",
-          "grammar_type": "At Home"
+          "question": "____ is the boy standing near the tree?",
+          "options": ["Who", "Where", "What", "Are"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 18,
-          "question": "The room where guests sit is the ____.",
-          "options": ["Bedroom", "Living room", "Kitchen", "Storeroom"],
-          "correct_answer": "Living room",
-          "grammar_type": "At Home"
+          "question": "Choose the correct question: 'That is my father.'",
+          "options": ["Who is that?", "Where is that?", "What is that?", "Is that?"],
+          "correct_answer": "Who is that?",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 19,
-          "question": "What do you use to cover the floor?",
-          "options": ["Curtain", "Carpet", "Bed sheet", "Towel"],
-          "correct_answer": "Carpet",
-          "grammar_type": "At Home"
+          "question": "____ are you doing?",
+          "options": ["Who", "Where", "What", "Do"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 20,
-          "question": "Where do you grow flowers and plants?",
-          "options": ["Terrace", "Balcony", "Garden", "Verandah"],
-          "correct_answer": "Garden",
-          "grammar_type": "At Home"
+          "question": "____ is the nearest hospital?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 21,
-          "question": "You sleep on a bed with a pillow under your ____.",
-          "options": ["feet", "back", "hand", "head"],
-          "correct_answer": "head",
-          "grammar_type": "At Home"
+          "question": "____ is sitting on the chair?",
+          "options": ["Who", "Where", "What", "Are"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 22,
-          "question": "What do you use to boil water for tea?",
-          "options": ["Pan", "Kettle", "Plate", "Bowl"],
-          "correct_answer": "Kettle",
-          "grammar_type": "At Home"
+          "question": "A: ____ is this? B: It is a pen.",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 23,
-          "question": "You hang ____ on the windows.",
-          "options": ["Carpets", "Photos", "Curtains", "Clocks"],
-          "correct_answer": "Curtains",
-          "grammar_type": "At Home"
+          "question": "____ are my shoes?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 24,
-          "question": "What do you use to lock a door?",
-          "options": ["Handle", "Hinge", "Key", "Bell"],
-          "correct_answer": "Key",
-          "grammar_type": "At Home"
+          "question": "____ is your mother?",
+          "options": ["Who", "Where", "What", "Am"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 25,
-          "question": "The main meal of the day eaten at night is ____.",
-          "options": ["Breakfast", "Lunch", "Snack", "Dinner"],
-          "correct_answer": "Dinner",
-          "grammar_type": "At Home"
+          "question": "____ is your favorite food?",
+          "options": ["Who", "Where", "What", "Do"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 26,
-          "question": "What is the floor you walk on inside the house?",
-          "options": ["Roof", "Ceiling", "Floor", "Ground"],
-          "correct_answer": "Floor",
-          "grammar_type": "At Home"
+          "question": "____ did you put my bag?",
+          "options": ["Who", "Where", "What", "Did"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 27,
-          "question": "The room where you study is the ____.",
-          "options": ["Study room", "Dining room", "Drawing room", "Bedroom"],
-          "correct_answer": "Study room",
-          "grammar_type": "At Home"
+          "question": "____ is the girl with the long hair?",
+          "options": ["Who", "Where", "What", "Are"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 28,
-          "question": "What do you use to eat food?",
-          "options": ["Pan", "Spoon", "Knife", "Plate"],
-          "correct_answer": "Plate",
-          "grammar_type": "At Home"
+          "question": "A: ____ are you from? B: I am from Mumbai.",
+          "options": ["Who", "Where", "What", "Am"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 29,
-          "question": "The child of your uncle or aunt is your ____.",
-          "options": ["Sibling", "Niece", "Cousin", "Nephew"],
-          "correct_answer": "Cousin",
-          "grammar_type": "At Home"
+          "question": "____ is your father's name?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 30,
-          "question": "A comfortable long seat for more than one person is a ____.",
-          "options": ["Chair", "Stool", "Sofa", "Bench"],
-          "correct_answer": "Sofa",
-          "grammar_type": "At Home"
+          "question": "____ took my pencil?",
+          "options": ["Who", "Where", "What", "Did"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 31,
-          "question": "What is the flat surface on top of the room called?",
-          "options": ["Floor", "Ceiling", "Roof", "Wall"],
-          "correct_answer": "Ceiling",
-          "grammar_type": "At Home"
+          "question": "____ is the capital of India?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 32,
-          "question": "What do you drink water from?",
-          "options": ["Plate", "Bowl", "Glass", "Spoon"],
-          "correct_answer": "Glass",
-          "grammar_type": "At Home"
+          "question": "____ is the playground?",
+          "options": ["Who", "Where", "What", "Are"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 33,
-          "question": "Your father's father is your ____.",
-          "options": ["Uncle", "Father", "Grandfather", "Brother"],
-          "correct_answer": "Grandfather",
-          "grammar_type": "At Home"
+          "question": "____ broke the window?",
+          "options": ["Who", "Where", "What", "Did"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 34,
-          "question": "We keep our food cold in a ____.",
-          "options": ["Stove", "Oven", "Refrigerator", "Cupboard"],
-          "correct_answer": "Refrigerator",
-          "grammar_type": "At Home"
+          "question": "A: ____ are they? B: They are my friends.",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 35,
-          "question": "You see your reflection in a ____.",
-          "options": ["Window", "Picture", "Mirror", "Wall"],
-          "correct_answer": "Mirror",
-          "grammar_type": "At Home"
+          "question": "____ are you reading?",
+          "options": ["Who", "Where", "What", "Do"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 36,
-          "question": "We wash dirty clothes in a ____.",
-          "options": ["Dishwasher", "Washing machine", "Sink", "Bucket"],
-          "correct_answer": "Washing machine",
-          "grammar_type": "At Home"
+          "question": "____ is the post office?",
+          "options": ["Who", "Where", "What", "Am"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 37,
-          "question": "A set of stairs helps you go ____.",
-          "options": ["outside", "inside", "upstairs or downstairs", "around"],
-          "correct_answer": "upstairs or downstairs",
-          "grammar_type": "At Home"
+          "question": "____ wants to play?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 38,
-          "question": "Your mother's sister is your ____.",
-          "options": ["Grandmother", "Cousin", "Aunt", "Niece"],
-          "correct_answer": "Aunt",
-          "grammar_type": "At Home"
+          "question": "____ did you eat for breakfast?",
+          "options": ["Who", "Where", "What", "Did"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 39,
-          "question": "What is another name for a living room?",
-          "options": ["Guest room", "Drawing room", "Study room", "Storeroom"],
-          "correct_answer": "Drawing room",
-          "grammar_type": "At Home"
+          "question": "A: ____ is the party? B: It is at my house.",
+          "options": ["Who", "Where", "What", "Are"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 40,
-          "question": "You use a ____ to clean your teeth.",
-          "options": ["Soap", "Towel", "Toothbrush", "Comb"],
-          "correct_answer": "Toothbrush",
-          "grammar_type": "At Home"
+          "question": "____ is the Prime Minister of your country?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 41,
-          "question": "The area just outside the front door of a house is the ____.",
-          "options": ["Garden", "Porch", "Balcony", "Terrace"],
-          "correct_answer": "Porch",
-          "grammar_type": "At Home"
+          "question": "____ is your hobby?",
+          "options": ["Who", "Where", "What", "Am"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 42,
-          "question": "What is a daily task of keeping the house clean called?",
-          "options": ["Hobby", "Work", "Chore", "Job"],
-          "correct_answer": "Chore",
-          "grammar_type": "At Home"
+          "question": "____ is the bus stop?",
+          "options": ["Who", "Where", "What", "Are"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 43,
-          "question": "You put books on a book____.",
-          "options": ["case", "shelf", "rack", "All of the above"],
-          "correct_answer": "All of the above",
-          "grammar_type": "At Home"
+          "question": "____ is the captain of your team?",
+          "options": ["Who", "Where", "What", "Do"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 44,
-          "question": "Where do you park your car at home?",
-          "options": ["Garden", "Garage", "Kitchen", "Living room"],
-          "correct_answer": "Garage",
-          "grammar_type": "At Home"
+          "question": "Choose the question: 'She is my sister.'",
+          "options": ["Who is she?", "Where is she?", "What is she?", "Is she?"],
+          "correct_answer": "Who is she?",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 45,
-          "question": "Your family lives together in a ____.",
-          "options": ["School", "Market", "Home", "Office"],
-          "correct_answer": "Home",
-          "grammar_type": "At Home"
+          "question": "____ is in the box?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 46,
-          "question": "We use a ____ to cut vegetables.",
-          "options": ["Spoon", "Fork", "Knife", "Plate"],
-          "correct_answer": "Knife",
-          "grammar_type": "At Home"
+          "question": "____ do birds live?",
+          "options": ["Who", "Where", "What", "Do"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 47,
-          "question": "What is the main door of the house called?",
-          "options": ["Back door", "Front door", "Room door", "Gate"],
-          "correct_answer": "Front door",
-          "grammar_type": "At Home"
+          "question": "____ can help me?",
+          "options": ["Who", "Where", "What", "Can"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 48,
-          "question": "You throw waste into a ____.",
-          "options": ["Bucket", "Bag", "Dustbin", "Box"],
-          "correct_answer": "Dustbin",
-          "grammar_type": "At Home"
+          "question": "____ is the time?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 49,
-          "question": "Your father's brother is your ____.",
-          "options": ["Grandfather", "Cousin", "Nephew", "Uncle"],
-          "correct_answer": "Uncle",
-          "grammar_type": "At Home"
+          "question": "____ are the children playing?",
+          "options": ["Who", "Where", "What", "Are"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 50,
-          "question": "An outdoor area on an upper floor of a house is a ____.",
-          "options": ["Garden", "Balcony", "Porch", "Yard"],
-          "correct_answer": "Balcony",
-          "grammar_type": "At Home"
+          "question": "____ is your favorite actor?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         }
       ]
     },
@@ -360,353 +360,353 @@
       "questions": [
         {
           "id": 51,
-          "question": "What is a 'household'?",
-          "options": ["A type of house", "A person who owns a house", "The people living in a house collectively", "The furniture in a house"],
-          "correct_answer": "The people living in a house collectively",
-          "grammar_type": "At Home"
+          "question": "Choose the correct question for the answer: 'The meeting is in the conference room.'",
+          "options": ["Who is the meeting?", "What is the meeting?", "Where is the meeting?", "Is the meeting?"],
+          "correct_answer": "Where is the meeting?",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 52,
-          "question": "A piece of furniture with drawers for storing clothes is a ____.",
-          "options": ["Wardrobe", "Chest of drawers", "Bookshelf", "Cabinet"],
-          "correct_answer": "Chest of drawers",
-          "grammar_type": "At Home"
+          "question": "____ did you meet at the party?",
+          "options": ["Who", "What", "Where", "Did"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 53,
-          "question": "What is the room in the roof of a house called?",
-          "options": ["Basement", "Attic", "Cellar", "Loft"],
-          "correct_answer": "Attic",
-          "grammar_type": "At Home"
+          "question": "____ is the reason for your success?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 54,
-          "question": "An appliance that washes plates and spoons automatically is a ____.",
-          "options": ["Washing machine", "Dishwasher", "Mixer", "Oven"],
-          "correct_answer": "Dishwasher",
-          "grammar_type": "At Home"
+          "question": "In the question 'Who is singing?', the word 'Who' is the ____.",
+          "options": ["Verb", "Object", "Subject", "Adjective"],
+          "correct_answer": "Subject",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 55,
-          "question": "The son of your brother or sister is your ____.",
-          "options": ["Cousin", "Sibling", "Nephew", "Son-in-law"],
-          "correct_answer": "Nephew",
-          "grammar_type": "At Home"
+          "question": "____ do you think will win the game?",
+          "options": ["Who", "Where", "What", "Do"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 56,
-          "question": "What is a 'chore'?",
-          "options": ["A fun activity", "A routine task, especially a household one", "A type of game", "A school subject"],
-          "correct_answer": "A routine task, especially a household one",
-          "grammar_type": "At Home"
+          "question": "The boy ____ sits next to me is my cousin.",
+          "options": ["who", "where", "what", "is"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 57,
-          "question": "A small carpet for a particular area is called a ____.",
-          "options": ["Mat", "Rug", "Runner", "All of the above"],
-          "correct_answer": "All of the above",
-          "grammar_type": "At Home"
+          "question": "This is the village ____ I was born.",
+          "options": ["who", "where", "what", "was"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 58,
-          "question": "What is the appliance used for baking or roasting food?",
-          "options": ["Microwave", "Stove", "Oven", "Toaster"],
-          "correct_answer": "Oven",
-          "grammar_type": "At Home"
+          "question": "I don't know ____ to say.",
+          "options": ["who", "where", "what", "I"],
+          "correct_answer": "what",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 59,
-          "question": "The daughter of your brother or sister is your ____.",
-          "options": ["Niece", "Cousin", "Daughter-in-law", "Aunt"],
-          "correct_answer": "Niece",
-          "grammar_type": "At Home"
+          "question": "____ are the main ingredients of this dish?",
+          "options": ["Who", "Where", "What", "Are"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 60,
-          "question": "The path leading from the gate to the front door is the ____.",
-          "options": ["Road", "Driveway", "Pavement", "Corridor"],
-          "correct_answer": "Driveway",
-          "grammar_type": "At Home"
+          "question": "____ are you looking for?",
+          "options": ["Who", "What", "Whom", "Either Who or Whom"],
+          "correct_answer": "Either Who or Whom",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 61,
-          "question": "What is the room below the ground floor of a house called?",
-          "options": ["Attic", "Loft", "Basement", "Garage"],
-          "correct_answer": "Basement",
-          "grammar_type": "At Home"
+          "question": "Can you tell me ____ the principal's office is?",
+          "options": ["who", "where", "what", "is"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 62,
-          "question": "The part of the stove that produces a flame for cooking is a ____.",
-          "options": ["Burner", "Knob", "Grill", "Hotplate"],
-          "correct_answer": "Burner",
-          "grammar_type": "At Home"
+          "question": "____ gave you this gift?",
+          "options": ["Who", "Where", "What", "Did"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 63,
-          "question": "A tall cupboard in which you hang clothes is a ____.",
-          "options": ["Cabinet", "Wardrobe", "Locker", "Dresser"],
-          "correct_answer": "Wardrobe",
-          "grammar_type": "At Home"
+          "question": "I wonder ____ he is.",
+          "options": ["who", "where", "what", "wonder"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 64,
-          "question": "The husband of your sister is your ____.",
-          "options": ["Brother-in-law", "Son-in-law", "Step-brother", "Cousin"],
-          "correct_answer": "Brother-in-law",
-          "grammar_type": "At Home"
+          "question": "The city ____ my uncle lives is very big.",
+          "options": ["who", "where", "what", "is"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 65,
-          "question": "What is a 'pantry'?",
-          "options": ["A room for washing clothes", "A small room for storing food", "A room for guests", "A study room"],
-          "correct_answer": "A small room for storing food",
-          "grammar_type": "At Home"
+          "question": "____ is the difference between these two pictures?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 66,
-          "question": "The frame of a door or window is called the ____.",
-          "options": ["Sill", "Frame", "Lintel", "Jamb"],
-          "correct_answer": "Frame",
-          "grammar_type": "At Home"
+          "question": "____ did the teacher praise?",
+          "options": ["Who", "Whom", "What", "Where"],
+          "correct_answer": "Whom",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 67,
-          "question": "What is the daily task of washing plates and spoons called?",
-          "options": ["Washing up", "Doing the dishes", "Cleaning the kitchen", "Both A and B"],
-          "correct_answer": "Both A and B",
-          "grammar_type": "At Home"
+          "question": "He asked me ____ I was doing.",
+          "options": ["who", "where", "what", "was"],
+          "correct_answer": "what",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 68,
-          "question": "A piece of absorbent cloth used for drying is a ____.",
-          "options": ["Napkin", "Towel", "Bed sheet", "Handkerchief"],
-          "correct_answer": "Towel",
-          "grammar_type": "At Home"
+          "question": "This is the hospital ____ I was treated.",
+          "options": ["who", "where", "what", "that"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 69,
-          "question": "The wife of your brother is your ____.",
-          "options": ["Sister-in-law", "Cousin", "Niece", "Aunt"],
-          "correct_answer": "Sister-in-law",
-          "grammar_type": "At Home"
+          "question": "The girl ____ won the race is my friend.",
+          "options": ["who", "where", "what", "is"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 70,
-          "question": "What is the chore of removing dust from furniture?",
-          "options": ["Sweeping", "Mopping", "Dusting", "Wiping"],
-          "correct_answer": "Dusting",
-          "grammar_type": "At Home"
+          "question": "____ do you mean?",
+          "options": ["Who", "Where", "What", "Do"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 71,
-          "question": "A small table beside a bed is called a ____.",
-          "options": ["Coffee table", "Dining table", "Bedside table", "Study table"],
-          "correct_answer": "Bedside table",
-          "grammar_type": "At Home"
+          "question": "To ____ did you speak?",
+          "options": ["Who", "Whom", "What", "Where"],
+          "correct_answer": "Whom",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 72,
-          "question": "What is an 'appliance' in a home?",
-          "options": ["A piece of furniture", "A decoration", "A device or piece of equipment designed for a specific task", "A type of chore"],
-          "correct_answer": "A device or piece of equipment designed for a specific task",
-          "grammar_type": "At Home"
+          "question": "Please show me ____ you bought.",
+          "options": ["who", "where", "what", "show"],
+          "correct_answer": "what",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 73,
-          "question": "A soft covering for a pillow is a ____.",
-          "options": ["Bed sheet", "Blanket", "Pillowcase", "Quilt"],
-          "correct_answer": "Pillowcase",
-          "grammar_type": "At Home"
+          "question": "I need to find someone ____ can fix my computer.",
+          "options": ["who", "where", "what", "can"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 74,
-          "question": "The parents of your parents are your ____.",
-          "options": ["Ancestors", "Grandparents", "Elders", "Relatives"],
-          "correct_answer": "Grandparents",
-          "grammar_type": "At Home"
+          "question": "____ would you like to go for the holidays?",
+          "options": ["Who", "Where", "What", "Would"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 75,
-          "question": "The pipe or tube that carries away smoke from a fireplace is the ____.",
-          "options": ["Vent", "Duct", "Chimney", "Exhaust"],
-          "correct_answer": "Chimney",
-          "grammar_type": "At Home"
+          "question": "____ kind of music do you like?",
+          "options": ["Who", "Where", "What", "Do"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 76,
-          "question": "What is the chore of cleaning the floor with water and a cloth?",
-          "options": ["Sweeping", "Mopping", "Dusting", "Scrubbing"],
-          "correct_answer": "Mopping",
-          "grammar_type": "At Home"
+          "question": "The police asked ____ saw the accident.",
+          "options": ["who", "where", "what", "did"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 77,
-          "question": "The set of all your relatives is your ____.",
-          "options": ["family tree", "kinship", "extended family", "All of the above"],
-          "correct_answer": "All of the above",
-          "grammar_type": "At Home"
+          "question": "I have forgotten ____ I kept my keys.",
+          "options": ["who", "where", "what", "have"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 78,
-          "question": "The tap that controls the flow of water is also called a ____.",
-          "options": ["Spout", "Nozzle", "Faucet", "Pipe"],
-          "correct_answer": "Faucet",
-          "grammar_type": "At Home"
+          "question": "In the question 'What did you buy?', what is the object of the verb 'buy'?",
+          "options": ["you", "did", "buy", "What"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 79,
-          "question": "What is a 'lullaby'?",
-          "options": ["A story told to children", "A soft song to make a baby sleep", "A game played by children", "A type of food for babies"],
-          "correct_answer": "A soft song to make a baby sleep",
-          "grammar_type": "At Home"
+          "question": "____ is the person you admire the most?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 80,
-          "question": "The small items you use to eat with, like spoons and forks, are called ____.",
-          "options": ["Utensils", "Tools", "Cutlery", "Crockery"],
-          "correct_answer": "Cutlery",
-          "grammar_type": "At Home"
+          "question": "A question like 'What is he like?' asks about someone's ____.",
+          "options": ["location", "name", "job", "character"],
+          "correct_answer": "character",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 81,
-          "question": "The mother of your spouse is your ____.",
-          "options": ["Grandmother", "Mother", "Aunt", "Mother-in-law"],
-          "correct_answer": "Mother-in-law",
-          "grammar_type": "At Home"
+          "question": "This is the place ____ we first met.",
+          "options": ["who", "where", "what", "that"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 82,
-          "question": "What do you call a meal cooked and eaten outdoors?",
-          "options": ["Picnic", "Barbecue", "Feast", "Buffet"],
-          "correct_answer": "Barbecue",
-          "grammar_type": "At Home"
+          "question": "____ is responsible for this project?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "Who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 83,
-          "question": "The machine that cleans carpets and floors by suction is a ____.",
-          "options": ["Broom", "Mop", "Vacuum cleaner", "Sweeper"],
-          "correct_answer": "Vacuum cleaner",
-          "grammar_type": "At Home"
+          "question": "Do you remember ____ she said?",
+          "options": ["who", "where", "what", "did"],
+          "correct_answer": "what",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 84,
-          "question": "A long passage inside a house with doors leading to rooms is a ____.",
-          "options": ["Hallway", "Corridor", "Lobby", "Both A and B"],
-          "correct_answer": "Both A and B",
-          "grammar_type": "At Home"
+          "question": "A: 'The exam is tomorrow.' B: '____?! I didn't know!'",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 85,
-          "question": "Your family's history can be shown on a family ____.",
-          "options": ["chart", "list", "tree", "graph"],
-          "correct_answer": "tree",
-          "grammar_type": "At Home"
+          "question": "Tell me about the people ____ you met on your trip.",
+          "options": ["who", "where", "what", "did"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 86,
-          "question": "What are plates, cups, and bowls collectively called?",
-          "options": ["Cutlery", "Utensils", "Crockery", "Glassware"],
-          "correct_answer": "Crockery",
-          "grammar_type": "At Home"
+          "question": "____ on earth did you find that?",
+          "options": ["Who", "Where", "What", "Did"],
+          "correct_answer": "Where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 87,
-          "question": "The task of putting clothes on a line to dry is called ____.",
-          "options": ["washing clothes", "doing the laundry", "hanging out the laundry", "ironing clothes"],
-          "correct_answer": "hanging out the laundry",
-          "grammar_type": "At Home"
+          "question": "The reason ____ he left is still a mystery.",
+          "options": ["who", "where", "what", "why"],
+          "correct_answer": "why",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 88,
-          "question": "A room for storing things you don't use often is a ____.",
-          "options": ["Storeroom", "Pantry", "Attic", "All of the above"],
-          "correct_answer": "All of the above",
-          "grammar_type": "At Home"
+          "question": "A question starting with 'Where' can be answered with:",
+          "options": ["a person's name", "a description", "a location", "a reason"],
+          "correct_answer": "a location",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 89,
-          "question": "The father of your spouse is your ____.",
-          "options": ["Grandfather", "Father", "Uncle", "Father-in-law"],
-          "correct_answer": "Father-in-law",
-          "grammar_type": "At Home"
+          "question": "____ is the name of the book you are reading?",
+          "options": ["Who", "Where", "What", "Is"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 90,
-          "question": "An appliance that toasts slices of bread is a ____.",
-          "options": ["Oven", "Grill", "Toaster", "Microwave"],
-          "correct_answer": "Toaster",
-          "grammar_type": "At Home"
+          "question": "He is the only one ____ knows the truth.",
+          "options": ["who", "where", "what", "is"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 91,
-          "question": "A soft chair for one person with supports for the arms is an ____.",
-          "options": ["Armchair", "Sofa", "Couch", "Stool"],
-          "correct_answer": "Armchair",
-          "grammar_type": "At Home"
+          "question": "I can't decide ____ to wear.",
+          "options": ["who", "where", "what", "am"],
+          "correct_answer": "what",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 92,
-          "question": "What is a 'heirloom'?",
-          "options": ["A tool for weaving", "A valuable object passed down through a family", "A type of vegetable", "The eldest heir of a family"],
-          "correct_answer": "A valuable object passed down through a family",
-          "grammar_type": "At Home"
+          "question": "____ is the school ____ you study?",
+          "options": ["What, who", "Where, where", "What, where", "Where, what"],
+          "correct_answer": "Where, where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 93,
-          "question": "The task of using an iron to remove wrinkles from clothes is ____.",
-          "options": ["Washing", "Drying", "Pressing", "Ironing"],
-          "correct_answer": "Ironing",
-          "grammar_type": "At Home"
+          "question": "In the question 'Whom did you see?', the word 'Whom' is the ____.",
+          "options": ["Subject", "Object", "Verb", "Preposition"],
+          "correct_answer": "Object",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 94,
-          "question": "The small table in the middle of the living room is a ____.",
-          "options": ["Dining table", "Coffee table", "Study table", "Side table"],
-          "correct_answer": "Coffee table",
-          "grammar_type": "At Home"
+          "question": "This is exactly ____ I was looking for.",
+          "options": ["who", "where", "what", "was"],
+          "correct_answer": "what",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 95,
-          "question": "A person you rent a house from is the ____.",
-          "options": ["Owner", "Landlord", "Tenant", "Resident"],
-          "correct_answer": "Landlord",
-          "grammar_type": "At Home"
+          "question": "Can you describe the place ____ you grew up?",
+          "options": ["who", "where", "what", "did"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 96,
-          "question": "The kitchen counter where you prepare food is the ____.",
-          "options": ["Tabletop", "Worktop", "Shelf", "Platform"],
-          "correct_answer": "Worktop",
-          "grammar_type": "At Home"
+          "question": "____ do you want for your birthday?",
+          "options": ["Who", "Where", "What", "Do"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 97,
-          "question": "A person who pays rent to live in a house is the ____.",
-          "options": ["Owner", "Landlord", "Tenant", "Buyer"],
-          "correct_answer": "Tenant",
-          "grammar_type": "At Home"
+          "question": "A question starting with 'Who' expects an answer about a ____.",
+          "options": ["place", "thing", "person", "time"],
+          "correct_answer": "person",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 98,
-          "question": "The small house at the entrance of a large property for a guard is a ____.",
-          "options": ["Gatehouse", "Outhouse", "Shed", "Cabin"],
-          "correct_answer": "Gatehouse",
-          "grammar_type": "At Home"
+          "question": "The police officer ____ helped us was very kind.",
+          "options": ["who", "where", "what", "was"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 99,
-          "question": "A thick, warm bed covering is a ____.",
-          "options": ["Bed sheet", "Pillowcase", "Duvet", "Mat"],
-          "correct_answer": "Duvet",
-          "grammar_type": "At Home"
+          "question": "This is the spot ____ the accident happened.",
+          "options": ["who", "where", "what", "that"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 100,
-          "question": "What is the chore of taking the rubbish outside called?",
-          "options": ["Throwing the garbage", "Taking out the trash", "Emptying the bin", "All of the above"],
-          "correct_answer": "All of the above",
-          "grammar_type": "At Home"
+          "question": "____ was that noise?",
+          "options": ["Who", "Where", "What", "Was"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         }
       ]
     },
@@ -715,353 +715,283 @@
       "questions": [
         {
           "id": 101,
-          "question": "A decorative cloth spread over a bed is a ____.",
-          "options": ["Duvet", "Quilt", "Bedspread", "Blanket"],
-          "correct_answer": "Bedspread",
-          "grammar_type": "At Home"
+          "question": "The prize will be given to ____ solves the puzzle first.",
+          "options": ["who", "whoever", "whom", "whomever"],
+          "correct_answer": "whoever",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 102,
-          "question": "The structure of rails and posts that supports a staircase is a ____.",
-          "options": ["Railing", "Balustrade", "Handrail", "Banister"],
-          "correct_answer": "Banister",
-          "grammar_type": "At Home"
+          "question": "This is the author ____ book won the award.",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "whose",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 103,
-          "question": "A room that is partly or wholly below ground level is a ____.",
-          "options": ["Basement", "Cellar", "Attic", "Both A and B"],
-          "correct_answer": "Both A and B",
-          "grammar_type": "At Home"
+          "question": "Can you tell me ____ I can find a good restaurant?",
+          "options": ["who", "what", "that", "where"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 104,
-          "question": "What is a 'scullery'?",
-          "options": ["A small kitchen or room at the back of a house used for washing dishes.", "A room for storing sculptures.", "A type of bedroom.", "A small study room."],
-          "correct_answer": "A small kitchen or room at the back of a house used for washing dishes.",
-          "grammar_type": "At Home"
+          "question": "The manager, ____ I spoke to this morning, was very helpful.",
+          "options": ["who", "whom", "whose", "that"],
+          "correct_answer": "whom",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 105,
-          "question": "A soft, padded seat without a back or arms is a/an ____.",
-          "options": ["Stool", "Bench", "Ottoman", "Pouf"],
-          "correct_answer": "Ottoman",
-          "grammar_type": "At Home"
+          "question": "____ he said was shocking, but it turned out to be true.",
+          "options": ["Who", "Where", "What", "That"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 106,
-          "question": "A person's 'lineage' refers to their ____.",
-          "options": ["address", "occupation", "ancestral descent", "hobbies"],
-          "correct_answer": "ancestral descent",
-          "grammar_type": "At Home"
+          "question": "I will give the message to ____ I see first.",
+          "options": ["whoever", "whomever", "who", "whom"],
+          "correct_answer": "whomever",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 107,
-          "question": "A small room or large cupboard for storing food is a ____ or pantry.",
-          "options": ["Larder", "Cellar", "Storeroom", "Cabinet"],
-          "correct_answer": "Larder",
-          "grammar_type": "At Home"
+          "question": "The issue is not ____ said it, but whether it is true.",
+          "options": ["what", "where", "who", "whom"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 108,
-          "question": "A 'patriarch' is the ____ head of a family.",
-          "options": ["female", "youngest", "male", "joint"],
-          "correct_answer": "male",
-          "grammar_type": "At Home"
+          "question": "A place ____ people can study in silence is a library.",
+          "options": ["who", "which", "that", "where"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 109,
-          "question": "The ledge at the bottom of a window is the ____.",
-          "options": ["Windowsill", "Frame", "Pane", "Sash"],
-          "correct_answer": "Windowsill",
-          "grammar_type": "At Home"
+          "question": "He is the man for ____ we have been waiting.",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "whom",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 110,
-          "question": "An electrical appliance that blends or emulsifies food is a ____.",
-          "options": ["Mixer", "Grinder", "Blender", "Food processor"],
-          "correct_answer": "Blender",
-          "grammar_type": "At Home"
+          "question": "____ you decide to do, I will support you.",
+          "options": ["Whoever", "Wherever", "Whatever", "Whomever"],
+          "correct_answer": "Whatever",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 111,
-          "question": "A family that extends beyond the nuclear family is an ____ family.",
-          "options": ["Extended", "Joint", "Large", "Both A and B"],
-          "correct_answer": "Both A and B",
-          "grammar_type": "At Home"
+          "question": "Do you know ____ car this is?",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "whose",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 112,
-          "question": "The panel of wood below a window is known as ____.",
-          "options": ["Wainscoting", "Skirting board", "Dado rail", "Cornice"],
-          "correct_answer": "Wainscoting",
-          "grammar_type": "At Home"
+          "question": "We need to decide ____ is the best course of action.",
+          "options": ["who", "where", "what", "which"],
+          "correct_answer": "what",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 113,
-          "question": "A 'matriarch' is the ____ head of a family.",
-          "options": ["male", "joint", "female", "elected"],
-          "correct_answer": "female",
-          "grammar_type": "At Home"
+          "question": "The question of ____ should be the next leader is being discussed.",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 114,
-          "question": "What is a 'bidet' found in some bathrooms used for?",
-          "options": ["Washing hands", "Storing towels", "Washing the lower part of the body", "A type of toilet"],
-          "correct_answer": "Washing the lower part of the body",
-          "grammar_type": "At Home"
+          "question": "She lives in a house ____ windows overlook the sea.",
+          "options": ["who", "whom", "whose", "where"],
+          "correct_answer": "whose",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 115,
-          "question": "A 'hearth' is the floor of a ____.",
-          "options": ["Kitchen", "Fireplace", "Bathroom", "Balcony"],
-          "correct_answer": "Fireplace",
-          "grammar_type": "At Home"
+          "question": "I'm not sure ____ to go from here.",
+          "options": ["who", "where", "what", "to"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 116,
-          "question": "The term 'kin' refers to your ____.",
-          "options": ["friends and neighbours", "family and relations", "parents only", "children only"],
-          "correct_answer": "family and relations",
-          "grammar_type": "At Home"
+          "question": "The committee will choose ____ they believe is the best candidate.",
+          "options": ["whoever", "whomever", "who", "whom"],
+          "correct_answer": "whoever",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 117,
-          "question": "An 'alcove' is a small ____ in the wall of a room.",
-          "options": ["window", "door", "recess", "shelf"],
-          "correct_answer": "recess",
-          "grammar_type": "At Home"
+          "question": "This theory explains ____ the universe began.",
+          "options": ["who", "where", "what", "how"],
+          "correct_answer": "how",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 118,
-          "question": "The activity of maintaining and repairing a house is called ____.",
-          "options": ["Housework", "Chores", "Upkeep", "Renovation"],
-          "correct_answer": "Upkeep",
-          "grammar_type": "At Home"
+          "question": "The word 'where' can be used to refer to a place or a ____.",
+          "options": ["person", "situation", "thing", "reason"],
+          "correct_answer": "situation",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 119,
-          "question": "A 'verandah' is a ____.",
-          "options": ["roofed platform along the outside of a house", "room in the attic", "basement used for storage", "small garden shed"],
-          "correct_answer": "roofed platform along the outside of a house",
-          "grammar_type": "At Home"
+          "question": "The artist, ____ work is world-famous, is visiting our town.",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "whose",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 120,
-          "question": "Your 'progeny' refers to your ____.",
-          "options": ["Ancestors", "Parents", "Siblings", "Descendants or children"],
-          "correct_answer": "Descendants or children",
-          "grammar_type": "At Home"
+          "question": "____ you see is ____ you get.",
+          "options": ["Who, who", "Where, where", "What, what", "What, who"],
+          "correct_answer": "What, what",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 121,
-          "question": "What is a 'chaise lounge'?",
-          "options": ["A type of dining chair", "A sofa in the shape of a chair that is long enough to support the legs", "A chair used in a lounge", "A small, decorative table"],
-          "correct_answer": "A sofa in the shape of a chair that is long enough to support the legs",
-          "grammar_type": "At Home"
+          "question": "She is the person with ____ I share my secrets.",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "whom",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 122,
-          "question": "The 'threshold' is the strip of wood or stone at the bottom of a ____.",
-          "options": ["window", "doorway", "staircase", "roof"],
-          "correct_answer": "doorway",
-          "grammar_type": "At Home"
+          "question": "He didn't know ____ to turn to for help.",
+          "options": ["who", "whom", "what", "where"],
+          "correct_answer": "whom",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 123,
-          "question": "A 'dormer' is a window that projects vertically from a ____ roof.",
-          "options": ["flat", "sloping", "thatched", "terrace"],
-          "correct_answer": "sloping",
-          "grammar_type": "At Home"
+          "question": "____ happens next is anyone's guess.",
+          "options": ["Who", "Where", "What", "That"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 124,
-          "question": "What is a 'spatula' used for in the kitchen?",
-          "options": ["Cutting vegetables", "Boiling water", "Lifting, spreading, or mixing", "Grinding spices"],
-          "correct_answer": "Lifting, spreading, or mixing",
-          "grammar_type": "At Home"
+          "question": "Choose the grammatically correct sentence.",
+          "options": ["Who did you give the book to?", "Whom did you give the book to?", "To who did you give the book?", "Both A and B are acceptable in informal English."],
+          "correct_answer": "Both A and B are acceptable in informal English.",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 125,
-          "question": "Your 'next of kin' is your ____.",
-          "options": ["closest living relative", "eldest family member", "youngest family member", "entire extended family"],
-          "correct_answer": "closest living relative",
-          "grammar_type": "At Home"
+          "question": "You can go ____ you please.",
+          "options": ["whoever", "wherever", "whatever", "whomever"],
+          "correct_answer": "wherever",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 126,
-          "question": "A 'parapet' is a low protective ____ along the edge of a roof or balcony.",
-          "options": ["wall", "fence", "railing", "hedge"],
-          "correct_answer": "wall",
-          "grammar_type": "At Home"
+          "question": "The problem is ____ we are going to get the money from.",
+          "options": ["who", "where", "what", "that"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 127,
-          "question": "The chore of 'decluttering' involves:",
-          "options": ["Deep cleaning the house", "Removing unnecessary items from an untidy space", "Organizing clothes in a wardrobe", "Doing the laundry"],
-          "correct_answer": "Removing unnecessary items from an untidy space",
-          "grammar_type": "At Home"
+          "question": "I met a man ____ said he knew you.",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 128,
-          "question": "A 'conservatory' or 'sunroom' is a room with ____.",
-          "options": ["no windows", "a glass roof and walls", "very thick walls", "underground access"],
-          "correct_answer": "a glass roof and walls",
-          "grammar_type": "At Home"
+          "question": "The noun clause 'what you said' acts as the ____ of the verb 'believe'. 'I believe what you said.'",
+          "options": ["subject", "object", "adjective", "adverb"],
+          "correct_answer": "object",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 129,
-          "question": "What is a 'colander' used for?",
-          "options": ["Serving soup", "Straining food such as pasta or vegetables", "Baking cakes", "Frying eggs"],
-          "correct_answer": "Straining food such as pasta or vegetables",
-          "grammar_type": "At Home"
+          "question": "From ____ did you receive this information?",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "whom",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 130,
-          "question": "A family that consists of a couple and their children from previous marriages is a ____ family.",
-          "options": ["Joint", "Nuclear", "Blended", "Extended"],
-          "correct_answer": "Blended",
-          "grammar_type": "At Home"
+          "question": "This is a situation ____ nobody knows the answer.",
+          "options": ["in which", "where", "that", "Both A and B are correct."],
+          "correct_answer": "Both A and B are correct.",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 131,
-          "question": "The 'eaves' are the part of the roof that ____.",
-          "options": ["is at the very top", "has the chimney", "meets or overhangs the walls", "is made of tiles"],
-          "correct_answer": "meets or overhangs the walls",
-          "grammar_type": "At Home"
+          "question": "We are looking for someone ____ has experience in teaching.",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 132,
-          "question": "A 'food processor' is an appliance that can...",
-          "options": ["only blend liquids.", "only grind dry spices.", "perform various tasks like chopping, grinding, and mixing.", "only bake food."],
-          "correct_answer": "perform various tasks like chopping, grinding, and mixing.",
-          "grammar_type": "At Home"
+          "question": "The reason ____ the project failed was a lack of funding.",
+          "options": ["what", "where", "why", "who"],
+          "correct_answer": "why",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 133,
-          "question": "What is a 'foyer' or 'entrance hall'?",
-          "options": ["The main living area", "The room immediately inside the front door", "The kitchen", "A corridor between rooms"],
-          "correct_answer": "The room immediately inside the front door",
-          "grammar_type": "At Home"
+          "question": "____ I admire most about him is his honesty.",
+          "options": ["Who", "Where", "What", "That"],
+          "correct_answer": "What",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 134,
-          "question": "The brother of your grandparent is your ____.",
-          "options": ["Great-uncle", "Grand-uncle", "Second uncle", "Both A and B"],
-          "correct_answer": "Both A and B",
-          "grammar_type": "At Home"
+          "question": "He is the person to ____ you should address your complaint.",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "whom",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 135,
-          "question": "A 'mantelpiece' is a structure of wood or stone above and around a ____.",
-          "options": ["Doorway", "Window", "Fireplace", "Bed"],
-          "correct_answer": "Fireplace",
-          "grammar_type": "At Home"
+          "question": "A: 'The team needs a new captain.' B: '____ do you have in mind?'",
+          "options": ["Who", "Whom", "What", "Where"],
+          "correct_answer": "Whom",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 136,
-          "question": "What does it mean to do 'menial' chores?",
-          "options": ["Difficult and challenging tasks", "Tasks that require a lot of skill", "Tasks that do not require much skill", "Tasks that are done only by men"],
-          "correct_answer": "Tasks that do not require much skill",
-          "grammar_type": "At Home"
+          "question": "The lady ____ son won the scholarship was very proud.",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "whose",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 137,
-          "question": "A 'utility room' is a room equipped for ____.",
-          "options": ["studying and reading", "entertaining guests", "sleeping", "washing and ironing clothes"],
-          "correct_answer": "washing and ironing clothes",
-          "grammar_type": "At Home"
+          "question": "I don't understand the process by ____ this works.",
+          "options": ["what", "which", "where", "who"],
+          "correct_answer": "which",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 138,
-          "question": "A 'whisk' is a kitchen utensil used for ____.",
-          "options": ["cutting", "peeling", "beating or stirring", "serving"],
-          "correct_answer": "beating or stirring",
-          "grammar_type": "At Home"
+          "question": "Please vote for ____ you think is the best candidate.",
+          "options": ["whoever", "whomever", "who", "whom"],
+          "correct_answer": "whoever",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 139,
-          "question": "The term 'household chores' refers to the ____.",
-          "options": ["work of maintaining a house", "money spent on the house", "people living in the house", "rules of the house"],
-          "correct_answer": "work of maintaining a house",
-          "grammar_type": "At Home"
+          "question": "A classroom is a place ____ students learn.",
+          "options": ["who", "where", "what", "which"],
+          "correct_answer": "where",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         },
         {
           "id": 140,
-          "question": "What is a 'mortgage'?",
-          "options": ["The monthly rent for a house", "A legal agreement to borrow money to buy a house", "The insurance for a house", "The tax paid on a house"],
-          "correct_answer": "A legal agreement to borrow money to buy a house",
-          "grammar_type": "At Home"
-        },
-        {
-          "id": 141,
-          "question": "A 'dumbwaiter' is a small ____.",
-          "options": ["lift for carrying food and dishes", "kitchen appliance for chopping", "table for serving drinks", "person who serves food"],
-          "correct_answer": "lift for carrying food and dishes",
-          "grammar_type": "At Home"
-        },
-        {
-          "id": 142,
-          "question": "What is a 'housewarming' party?",
-          "options": ["A party to celebrate winter", "A party to warm up a cold house", "A party to celebrate moving into a new home", "A family get-together"],
-          "correct_answer": "A party to celebrate moving into a new home",
-          "grammar_type": "At Home"
-        },
-        {
-          "id": 143,
-          "question": "The term 'abode' is a more formal or literary word for one's ____.",
-          "options": ["family", "room", "home", "village"],
-          "correct_answer": "home",
-          "grammar_type": "At Home"
-        },
-        {
-          "id": 144,
-          "question": "A 'turret' is a small ____ that projects from the wall of a building, such as a castle.",
-          "options": ["window", "door", "tower", "balcony"],
-          "correct_answer": "tower",
-          "grammar_type": "At Home"
-        },
-        {
-          "id": 145,
-          "question": "The chore of 'spring cleaning' refers to ____.",
-          "options": ["cleaning the garden in spring", "a thorough cleaning of the whole house", "washing winter clothes", "cleaning only the springs of a bed"],
-          "correct_answer": "a thorough cleaning of the whole house",
-          "grammar_type": "At Home"
-        },
-        {
-          "id": 146,
-          "question": "A 'mezzanine' is an intermediate floor in a building which is partly open to the ____.",
-          "options": ["floor below", "roof", "outside", "next room"],
-          "correct_answer": "floor below",
-          "grammar_type": "At Home"
-        },
-        {
-          "id": 147,
-          "question": "Your 'sibling-in-law' refers to ____.",
-          "options": ["your spouse's sibling", "your sibling's spouse", "the spouse of your spouse's sibling", "All of the above"],
-          "correct_answer": "All of the above",
-          "grammar_type": "At Home"
-        },
-        {
-          "id": 148,
-          "question": "A 'skirting board' or 'baseboard' is a wooden board running along the bottom of an interior ____.",
-          "options": ["ceiling", "window", "door", "wall"],
-          "correct_answer": "wall",
-          "grammar_type": "At Home"
-        },
-        {
-          "id": 149,
-          "question": "What is 'filial piety'?",
-          "options": ["A type of pie made by children", "The love between siblings", "The virtue of respect for one's parents and ancestors", "A family celebration"],
-          "correct_answer": "The virtue of respect for one's parents and ancestors",
-          "grammar_type": "At Home"
-        },
-        {
-          "id": 150,
-          "question": "A 'cupola' is a small, dome-like structure on top of a ____.",
-          "options": ["door", "window", "wall", "roof"],
-          "correct_answer": "roof",
-          "grammar_type": "At Home"
+          "question": "The choice of ____ will lead the team is crucial.",
+          "options": ["who", "whom", "whose", "what"],
+          "correct_answer": "who",
+          "grammar_type": "Basic Q&A (What, Where, Who)"
         }
       ]
     }

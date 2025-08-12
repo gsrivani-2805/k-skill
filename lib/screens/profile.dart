@@ -1,4 +1,5 @@
 import 'package:K_Skill/assessment/assessment_screen.dart';
+import 'package:K_Skill/screens/levels.dart';
 import 'package:flutter/material.dart';
 import 'package:K_Skill/config/api_config.dart';
 import 'dart:convert';
@@ -190,22 +191,6 @@ class _ProfileScreenState extends State<ProfileScreen>
         ),
       ),
 
-      // appBar: AppBar(
-      //   title: const Text('Your Profile'),
-      //   backgroundColor: Colors.orangeAccent,
-      //   foregroundColor: Colors.white,
-      //   elevation: 0,
-      //   leading: IconButton(
-      //     icon: const Icon(Icons.arrow_back),
-      //     onPressed: () {
-      //       Navigator.pushNamedAndRemoveUntil(
-      //         context,
-      //         '/dashboard',
-      //         (route) => false,
-      //       );
-      //     },
-      //   ),
-      // ),
       body: SafeArea(
         child: FutureBuilder<List<dynamic>>(
           future: profileFuture,
@@ -248,7 +233,12 @@ class _ProfileScreenState extends State<ProfileScreen>
                   child: TabBarView(
                     controller: _tabController,
                     children: [
-                      _buildOverview(profile, lessonTitles, totalLessons),
+                      _buildOverview(
+                        profile,
+                        lessonTitles,
+                        totalLessons,
+                        allLessonsJson,
+                      ),
                       _buildAssessment(profile),
                       _buildProgress(profile, progressPercent, levelProgress),
                     ],
@@ -330,6 +320,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     UserProfile profile,
     Map<String, String> lessonTitles,
     int totalLessons,
+    Map<String, dynamic> allLessonsData,
   ) {
     final sortedLessons = profile.recentLessons.reversed.toList();
 
@@ -366,15 +357,153 @@ class _ProfileScreenState extends State<ProfileScreen>
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10),
-        ...sortedLessons.map(
-          (id) => Card(
+        ...sortedLessons.map((lessonId) {
+          // Find the lesson info from all lessons data
+          final lessonSearchResult = _findLessonInfo(lessonId, allLessonsData);
+          final lessonInfo = lessonSearchResult['lessonInfo'];
+          final moduleKey = lessonSearchResult['moduleKey'];
+          final levelKey = lessonSearchResult['levelKey'];
+
+          return Card(
+            elevation: 2,
+            margin: EdgeInsets.only(bottom: 8),
             child: ListTile(
-              leading: Icon(Icons.book, color: primaryBlue),
-              title: Text(lessonTitles[id] ?? id),
+              leading: Container(
+                padding: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: primaryBlue.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Icon(
+                  lessonInfo != null ? Icons.check_circle : Icons.error_outline,
+                  color: lessonInfo != null ? primaryGreen : Colors.red,
+                  size: 20,
+                ),
+              ),
+              title: Text(
+                lessonTitles[lessonId] ?? lessonId,
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+              ),
+              subtitle: Text(
+                lessonInfo != null
+                    ? 'Completed - Tap to view lesson'
+                    : 'Lesson data not found',
+                style: TextStyle(
+                  color: lessonInfo != null ? primaryGreen : Colors.red,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                size: 16,
+                color: lessonInfo != null ? Colors.grey[400] : Colors.red[300],
+              ),
+              onTap: lessonInfo != null
+                  ? () => _openLessonDetail(lessonId, lessonInfo)
+                  : () => _showLessonNotFoundDialog(lessonId),
+            ),
+          );
+        }),
+        if (sortedLessons.isEmpty)
+          Card(
+            child: Padding(
+              padding: EdgeInsets.all(16),
+              child: Center(
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.book_outlined,
+                      size: 48,
+                      color: Colors.grey[400],
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'No lessons completed yet',
+                      style: TextStyle(color: Colors.grey[600], fontSize: 16),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      'Start learning to see your progress here',
+                      style: TextStyle(color: Colors.grey[500], fontSize: 12),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
-        ),
       ],
+    );
+  }
+
+  // Updated helper method to find lesson info with proper structure navigation
+  Map<String, dynamic> _findLessonInfo(
+    String lessonId,
+    Map<String, dynamic> curriculumData,
+  ) {
+    // Navigate through the curriculum structure: levels -> modules -> lessons
+    for (String levelKey in curriculumData.keys) {
+      final levelData = curriculumData[levelKey];
+      
+      if (levelData is Map<String, dynamic> && levelData.containsKey('modules')) {
+        final modules = levelData['modules'] as Map<String, dynamic>;
+        
+        for (String moduleKey in modules.keys) {
+          final moduleData = modules[moduleKey];
+          
+          if (moduleData is Map<String, dynamic> && moduleData.containsKey('lessons')) {
+            final lessons = moduleData['lessons'] as Map<String, dynamic>;
+            
+            if (lessons.containsKey(lessonId)) {
+              return {
+                'lessonInfo': lessons[lessonId] as Map<String, dynamic>,
+                'moduleKey': moduleKey,
+                'levelKey': levelKey,
+              };
+            }
+          }
+        }
+      }
+    }
+
+    return {
+      'lessonInfo': null, 
+      'moduleKey': null, 
+      'levelKey': null,
+    };
+  }
+
+  // Updated method to open lesson detail - same as in LessonsScreen
+  void _openLessonDetail(String lessonKey, Map<String, dynamic> lessonInfo) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => LessonDetailScreen(
+          lessonKey: lessonKey, 
+          lessonInfo: lessonInfo,
+        ),
+      ),
+    );
+  }
+
+  // Show dialog when lesson is not found
+  void _showLessonNotFoundDialog(String lessonId) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Lesson Not Found'),
+          content: Text(
+            'Could not find lesson data for "$lessonId". This might be due to outdated data.',
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text('OK'),
+            ),
+          ],
+        );
+      },
     );
   }
 

@@ -5,423 +5,353 @@
       "questions": [
         {
           "id": 1,
-          "question": "Which of these is a noun?",
-          "options": ["run", "happy", "book", "quickly"],
-          "correct_answer": "book",
-          "grammar_type": "Nouns"
+          "question": "Which word is a synonym for 'happy'?",
+          "options": ["sad", "angry", "joyful", "tired"],
+          "correct_answer": "joyful",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 2,
-          "question": "A noun is a name of a person, place, animal, or ___.",
-          "options": ["action", "thing", "color", "feeling"],
-          "correct_answer": "thing",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'big'.",
+          "options": ["small", "tiny", "large", "short"],
+          "correct_answer": "large",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 3,
-          "question": "Find the noun in this sentence: The dog is barking.",
-          "options": ["The", "dog", "is", "barking"],
-          "correct_answer": "dog",
-          "grammar_type": "Nouns"
+          "question": "The little girl was very glad. 'Glad' is a synonym for...",
+          "options": ["unhappy", "happy", "upset", "afraid"],
+          "correct_answer": "happy",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 4,
-          "question": "Which word is the name of a place?",
-          "options": ["teacher", "school", "student", "study"],
-          "correct_answer": "school",
-          "grammar_type": "Nouns"
+          "question": "Which word means the same as 'fast'?",
+          "options": ["slow", "quick", "still", "calm"],
+          "correct_answer": "quick",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 5,
-          "question": "Which word is the name of a person?",
-          "options": ["sing", "boy", "tall", "play"],
-          "correct_answer": "boy",
-          "grammar_type": "Nouns"
+          "question": "The boy was scared of the dog. A synonym for 'scared' is...",
+          "options": ["brave", "bold", "afraid", "happy"],
+          "correct_answer": "afraid",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 6,
-          "question": "Identify the noun: The cat is on the mat.",
-          "options": ["cat", "on", "the", "is"],
-          "correct_answer": "cat",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'good'.",
+          "options": ["bad", "awful", "nice", "poor"],
+          "correct_answer": "nice",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 7,
-          "question": "What is the plural of 'boy'?",
-          "options": ["boyes", "boys", "boies", "boy's"],
-          "correct_answer": "boys",
-          "grammar_type": "Nouns"
+          "question": "Which word means the same as 'small'?",
+          "options": ["huge", "massive", "little", "wide"],
+          "correct_answer": "little",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 8,
-          "question": "Which of the following is a 'thing'?",
-          "options": ["jump", "chair", "eat", "sad"],
-          "correct_answer": "chair",
-          "grammar_type": "Nouns"
+          "question": "The teacher told a funny story. 'Funny' is a synonym for...",
+          "options": ["serious", "sad", "humorous", "boring"],
+          "correct_answer": "humorous",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 9,
-          "question": "Find the noun: I have a new pen.",
-          "options": ["I", "have", "new", "pen"],
-          "correct_answer": "pen",
-          "grammar_type": "Nouns"
+          "question": "Which word is a synonym for 'sad'?",
+          "options": ["happy", "cheerful", "unhappy", "excited"],
+          "correct_answer": "unhappy",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 10,
-          "question": "Which word is the name of an animal?",
-          "options": ["tiger", "run", "fast", "jungle"],
-          "correct_answer": "tiger",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'begin'.",
+          "options": ["end", "finish", "start", "stop"],
+          "correct_answer": "start",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 11,
-          "question": "What is the plural of 'girl'?",
-          "options": ["girl's", "girles", "girls", "girlies"],
-          "correct_answer": "girls",
-          "grammar_type": "Nouns"
+          "question": "It is important to be kind to animals. 'Kind' means...",
+          "options": ["mean", "cruel", "caring", "angry"],
+          "correct_answer": "caring",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 12,
-          "question": "Select the noun from the list.",
-          "options": ["beautiful", "flower", "smell", "sweet"],
-          "correct_answer": "flower",
-          "grammar_type": "Nouns"
+          "question": "Which word means the same as 'look'?",
+          "options": ["ignore", "see", "hide", "close"],
+          "correct_answer": "see",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 13,
-          "question": "My 'father' is a doctor. What is 'father'?",
-          "options": ["Verb", "Adjective", "Noun", "Adverb"],
-          "correct_answer": "Noun",
-          "grammar_type": "Nouns"
+          "question": "He lives in a big house. Another word for 'house' is...",
+          "options": ["school", "home", "park", "shop"],
+          "correct_answer": "home",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 14,
-          "question": "The 'sun' is shining. 'Sun' is a:",
-          "options": ["person", "place", "animal", "thing"],
-          "correct_answer": "thing",
-          "grammar_type": "Nouns"
+          "question": "Which word is a synonym for 'beautiful'?",
+          "options": ["ugly", "plain", "pretty", "dull"],
+          "correct_answer": "pretty",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 15,
-          "question": "Which of these is NOT a noun?",
-          "options": ["table", "walk", "house", "water"],
-          "correct_answer": "walk",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'quiet'.",
+          "options": ["loud", "noisy", "silent", "shouting"],
+          "correct_answer": "silent",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 16,
-          "question": "Find the noun: The bird sings a sweet song.",
-          "options": ["sings", "sweet", "bird", "The"],
-          "correct_answer": "bird",
-          "grammar_type": "Nouns"
+          "question": "I have to finish my work. 'Finish' means...",
+          "options": ["start", "begin", "complete", "leave"],
+          "correct_answer": "complete",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 17,
-          "question": "What is the plural of 'car'?",
-          "options": ["car's", "cares", "cars", "caries"],
-          "correct_answer": "cars",
-          "grammar_type": "Nouns"
+          "question": "Which word means the same as 'present'?",
+          "options": ["absent", "past", "gift", "future"],
+          "correct_answer": "gift",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 18,
-          "question": "Which word is a noun?",
-          "options": ["read", "book", "interesting", "very"],
-          "correct_answer": "book",
-          "grammar_type": "Nouns"
+          "question": "The car is very old. A synonym for 'old' is...",
+          "options": ["new", "modern", "ancient", "young"],
+          "correct_answer": "ancient",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 19,
-          "question": "She drinks 'water'. What is 'water'?",
-          "options": ["Person", "Place", "Thing", "Action"],
-          "correct_answer": "Thing",
-          "grammar_type": "Nouns"
+          "question": "Which word is a synonym for 'correct'?",
+          "options": ["wrong", "right", "false", "incorrect"],
+          "correct_answer": "right",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 20,
-          "question": "Identify the noun: A 'monkey' eats bananas.",
-          "options": ["A", "eats", "bananas", "monkey"],
-          "correct_answer": "monkey",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'rich'.",
+          "options": ["poor", "needy", "wealthy", "broke"],
+          "correct_answer": "wealthy",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 21,
-          "question": "What is the plural of 'house'?",
-          "options": ["hice", "houses", "house", "housen"],
-          "correct_answer": "houses",
-          "grammar_type": "Nouns"
+          "question": "She wore a lovely dress. 'Lovely' means...",
+          "options": ["ugly", "horrible", "beautiful", "plain"],
+          "correct_answer": "beautiful",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 22,
-          "question": "Which of these is a place?",
-          "options": ["doctor", "hospital", "patient", "medicine"],
-          "correct_answer": "hospital",
-          "grammar_type": "Nouns"
+          "question": "Which word means the same as 'shut'?",
+          "options": ["open", "start", "close", "begin"],
+          "correct_answer": "close",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 23,
-          "question": "Find the noun: I see a big 'tree'.",
-          "options": ["see", "big", "tree", "a"],
-          "correct_answer": "tree",
-          "grammar_type": "Nouns"
+          "question": "He gave me a good idea. 'Idea' is a synonym for...",
+          "options": ["fact", "thought", "question", "story"],
+          "correct_answer": "thought",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 24,
-          "question": "A 'farmer' works on a farm. 'Farmer' is the name of a:",
-          "options": ["place", "animal", "thing", "person"],
-          "correct_answer": "person",
-          "grammar_type": "Nouns"
+          "question": "Which word is a synonym for 'ill'?",
+          "options": ["healthy", "well", "sick", "fit"],
+          "correct_answer": "sick",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 25,
-          "question": "Which word is a noun in 'The apple is red'?",
-          "options": ["The", "apple", "is", "red"],
-          "correct_answer": "apple",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'speak'.",
+          "options": ["listen", "shout", "talk", "whisper"],
+          "correct_answer": "talk",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 26,
-          "question": "What is the plural of 'box'?",
-          "options": ["boxs", "boxen", "box's", "boxes"],
-          "correct_answer": "boxes",
-          "grammar_type": "Nouns"
+          "question": "The boy is very smart. 'Smart' means...",
+          "options": ["foolish", "silly", "intelligent", "dull"],
+          "correct_answer": "intelligent",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 27,
-          "question": "Which is a noun?",
-          "options": ["slow", "slowly", "snail", "is"],
-          "correct_answer": "snail",
-          "grammar_type": "Nouns"
+          "question": "Which word means the same as 'tired'?",
+          "options": ["energetic", "sleepy", "active", "fresh"],
+          "correct_answer": "sleepy",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 28,
-          "question": "The 'baby' is crying. 'Baby' is a:",
-          "options": ["Noun", "Verb", "Adjective", "Pronoun"],
-          "correct_answer": "Noun",
-          "grammar_type": "Nouns"
+          "question": "The path was narrow. A synonym for 'narrow' is...",
+          "options": ["wide", "broad", "thin", "large"],
+          "correct_answer": "thin",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 29,
-          "question": "What is the singular of 'pencils'?",
-          "options": ["pencils", "pencil", "pencile", "pencil's"],
-          "correct_answer": "pencil",
-          "grammar_type": "Nouns"
+          "question": "Which word is a synonym for 'brave'?",
+          "options": ["afraid", "fearful", "courageous", "timid"],
+          "correct_answer": "courageous",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 30,
-          "question": "He kicked the 'ball'. 'Ball' is a name of a:",
-          "options": ["person", "place", "thing", "animal"],
-          "correct_answer": "thing",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'story'.",
+          "options": ["fact", "news", "tale", "poem"],
+          "correct_answer": "tale",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 31,
-          "question": "Which word is NOT a noun?",
-          "options": ["city", "man", "sleep", "lion"],
-          "correct_answer": "sleep",
-          "grammar_type": "Nouns"
+          "question": "She is a good writer. 'Writer' is another word for...",
+          "options": ["author", "reader", "speaker", "singer"],
+          "correct_answer": "author",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 32,
-          "question": "My 'sister' is a student. 'Sister' is a:",
-          "options": ["place", "person", "thing", "animal"],
-          "correct_answer": "person",
-          "grammar_type": "Nouns"
+          "question": "Which word means the same as 'clean'?",
+          "options": ["dirty", "messy", "tidy", "filthy"],
+          "correct_answer": "tidy",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 33,
-          "question": "What is the plural of 'bus'?",
-          "options": ["buss", "buses", "bus's", "busses"],
-          "correct_answer": "buses",
-          "grammar_type": "Nouns"
+          "question": "This is a simple question. A synonym for 'simple' is...",
+          "options": ["hard", "difficult", "easy", "complex"],
+          "correct_answer": "easy",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 34,
-          "question": "I love my 'country'. 'Country' is a:",
-          "options": ["person", "place", "thing", "idea"],
-          "correct_answer": "place",
-          "grammar_type": "Nouns"
+          "question": "Which word is a synonym for 'strong'?",
+          "options": ["weak", "feeble", "powerful", "delicate"],
+          "correct_answer": "powerful",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 35,
-          "question": "Find the noun: The 'star' shines brightly.",
-          "options": ["shines", "brightly", "The", "star"],
-          "correct_answer": "star",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'shout'.",
+          "options": ["whisper", "murmur", "yell", "mumble"],
+          "correct_answer": "yell",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 36,
-          "question": "Which of these is an animal?",
-          "options": ["chair", "park", "goat", "girl"],
-          "correct_answer": "goat",
-          "grammar_type": "Nouns"
+          "question": "The weather is chilly today. 'Chilly' means...",
+          "options": ["hot", "warm", "cold", "burning"],
+          "correct_answer": "cold",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 37,
-          "question": "What is the plural of 'egg'?",
-          "options": ["eggen", "eggs", "egges", "egg's"],
-          "correct_answer": "eggs",
-          "grammar_type": "Nouns"
+          "question": "Which word means the same as 'jump'?",
+          "options": ["sit", "stand", "leap", "walk"],
+          "correct_answer": "leap",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 38,
-          "question": "Select the noun: He has a 'bicycle'.",
-          "options": ["He", "has", "a", "bicycle"],
-          "correct_answer": "bicycle",
-          "grammar_type": "Nouns"
+          "question": "The water is clear. A synonym for 'clear' is...",
+          "options": ["muddy", "dark", "transparent", "dirty"],
+          "correct_answer": "transparent",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 39,
-          "question": "The 'moon' is bright tonight. 'Moon' is a:",
-          "options": ["person", "place", "thing", "animal"],
-          "correct_answer": "thing",
-          "grammar_type": "Nouns"
+          "question": "Which word is a synonym for 'ask'?",
+          "options": ["tell", "answer", "inquire", "shout"],
+          "correct_answer": "inquire",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 40,
-          "question": "What is the singular of 'dogs'?",
-          "options": ["doge", "dog's", "dogs", "dog"],
-          "correct_answer": "dog",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'mistake'.",
+          "options": ["correct", "right", "error", "truth"],
+          "correct_answer": "error",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 41,
-          "question": "Identify the noun: I read a 'story'.",
-          "options": ["I", "read", "a", "story"],
-          "correct_answer": "story",
-          "grammar_type": "Nouns"
+          "question": "He has a great idea. 'Great' means...",
+          "options": ["bad", "small", "wonderful", "awful"],
+          "correct_answer": "wonderful",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 42,
-          "question": "Which word is a person?",
-          "options": ["garden", "gardener", "gardening", "green"],
-          "correct_answer": "gardener",
-          "grammar_type": "Nouns"
+          "question": "Which word means the same as 'get'?",
+          "options": ["give", "lose", "obtain", "throw"],
+          "correct_answer": "obtain",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 43,
-          "question": "What is the plural of 'watch'?",
-          "options": ["watchs", "watches", "watch's", "watchies"],
-          "correct_answer": "watches",
-          "grammar_type": "Nouns"
+          "question": "She ran quickly to the store. A synonym for 'quickly' is...",
+          "options": ["slowly", "fast", "lazily", "calmly"],
+          "correct_answer": "fast",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 44,
-          "question": "Find the noun: 'Mumbai' is a big city.",
-          "options": ["is", "a", "big", "Mumbai"],
-          "correct_answer": "Mumbai",
-          "grammar_type": "Nouns"
+          "question": "Which word is a synonym for 'help'?",
+          "options": ["hinder", "harm", "assist", "stop"],
+          "correct_answer": "assist",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 45,
-          "question": "Which of these is a thing you wear?",
-          "options": ["run", "shirt", "eat", "hot"],
-          "correct_answer": "shirt",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'pretty'.",
+          "options": ["ugly", "plain", "attractive", "dull"],
+          "correct_answer": "attractive",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 46,
-          "question": "What is the singular of 'tables'?",
-          "options": ["table", "tabl", "table's", "tabes"],
-          "correct_answer": "table",
-          "grammar_type": "Nouns"
+          "question": "The boy is very shy. 'Shy' means...",
+          "options": ["confident", "bold", "timid", "outgoing"],
+          "correct_answer": "timid",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 47,
-          "question": "The 'train' is late. 'Train' is a:",
-          "options": ["person", "place", "thing", "animal"],
-          "correct_answer": "thing",
-          "grammar_type": "Nouns"
+          "question": "Which word means the same as 'always'?",
+          "options": ["never", "sometimes", "forever", "rarely"],
+          "correct_answer": "forever",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 48,
-          "question": "Select the noun: The 'cow' gives us milk.",
-          "options": ["The", "gives", "us", "cow"],
-          "correct_answer": "cow",
-          "grammar_type": "Nouns"
+          "question": "This is the main point of the story. 'Main' means...",
+          "options": ["minor", "extra", "chief", "secondary"],
+          "correct_answer": "chief",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 49,
-          "question": "What is the plural of 'friend'?",
-          "options": ["friendes", "friend's", "friends", "frienden"],
-          "correct_answer": "friends",
-          "grammar_type": "Nouns"
+          "question": "Which word is a synonym for 'angry'?",
+          "options": ["calm", "happy", "furious", "peaceful"],
+          "correct_answer": "furious",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 50,
-          "question": "Which one is a noun?",
-          "options": ["play", "player", "playful", "playing"],
-          "correct_answer": "player",
-          "grammar_type": "Nouns"
-        },
-        {
-          "id": 51,
-          "question": "Identify the noun: The 'lion' is the king of the jungle.",
-          "options": ["The", "is", "king", "of"],
-          "correct_answer": "king",
-          "grammar_type": "Nouns"
-        },
-        {
-          "id": 52,
-          "question": "The sky is blue. Which word is the noun?",
-          "options": ["The", "sky", "is", "blue"],
-          "correct_answer": "sky",
-          "grammar_type": "Nouns"
-        },
-        {
-          "id": 53,
-          "question": "What is the plural of 'potato'?",
-          "options": ["potatos", "potatoes", "potato's", "potatoe"],
-          "correct_answer": "potatoes",
-          "grammar_type": "Nouns"
-        },
-        {
-          "id": 54,
-          "question": "Which word is a person?",
-          "options": ["teach", "teacher", "teaching", "taught"],
-          "correct_answer": "teacher",
-          "grammar_type": "Nouns"
-        },
-        {
-          "id": 55,
-          "question": "Find the noun: I use a 'computer' for my work.",
-          "options": ["use", "for", "my", "computer"],
-          "correct_answer": "computer",
-          "grammar_type": "Nouns"
-        },
-        {
-          "id": 56,
-          "question": "Which of these is a place?",
-          "options": ["road", "walk", "slow", "driver"],
-          "correct_answer": "road",
-          "grammar_type": "Nouns"
-        },
-        {
-          "id": 57,
-          "question": "What is the singular of 'chairs'?",
-          "options": ["chair", "chairen", "chair's", "chaires"],
-          "correct_answer": "chair",
-          "grammar_type": "Nouns"
-        },
-        {
-          "id": 58,
-          "question": "The 'fish' swims in the water. 'Fish' is a:",
-          "options": ["person", "place", "thing", "animal"],
-          "correct_answer": "animal",
-          "grammar_type": "Nouns"
-        },
-        {
-          "id": 59,
-          "question": "Identify the noun: My 'mother' cooks delicious food.",
-          "options": ["My", "mother", "cooks", "delicious"],
-          "correct_answer": "mother",
-          "grammar_type": "Nouns"
-        },
-        {
-          "id": 60,
-          "question": "What is the plural of 'teacher'?",
-          "options": ["teacher's", "teachers", "teaches", "teacheren"],
-          "correct_answer": "teachers",
-          "grammar_type": "Nouns"
+          "question": "Find the synonym for 'keep'.",
+          "options": ["discard", "lose", "hold", "give"],
+          "correct_answer": "hold",
+          "grammar_type": "Synonyms"
         }
       ]
     },
@@ -429,354 +359,354 @@
       "level": "Medium",
       "questions": [
         {
+          "id": 51,
+          "question": "The lecture was very tedious. 'Tedious' is a synonym for...",
+          "options": ["exciting", "interesting", "boring", "fun"],
+          "correct_answer": "boring",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 52,
+          "question": "Which word is a synonym for 'significant'?",
+          "options": ["trivial", "minor", "important", "small"],
+          "correct_answer": "important",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 53,
+          "question": "He gave a concise summary of the event. 'Concise' means...",
+          "options": ["long", "detailed", "brief", "confusing"],
+          "correct_answer": "brief",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 54,
+          "question": "Find the synonym for 'generous'.",
+          "options": ["stingy", "greedy", "charitable", "selfish"],
+          "correct_answer": "charitable",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 55,
+          "question": "She has a very amiable personality. 'Amiable' means...",
+          "options": ["hostile", "unfriendly", "friendly", "angry"],
+          "correct_answer": "friendly",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 56,
+          "question": "Which word is a synonym for 'brave'?",
+          "options": ["timid", "fearful", "valiant", "cowardly"],
+          "correct_answer": "valiant",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 57,
+          "question": "The room was vacant. 'Vacant' means...",
+          "options": ["full", "occupied", "empty", "crammed"],
+          "correct_answer": "empty",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 58,
+          "question": "Find the synonym for 'famous'.",
+          "options": ["unknown", "obscure", "renowned", "hidden"],
+          "correct_answer": "renowned",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 59,
+          "question": "He tried to clarify his position. 'Clarify' means...",
+          "options": ["confuse", "muddle", "explain", "hide"],
+          "correct_answer": "explain",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 60,
+          "question": "Which word is a synonym for 'difficult'?",
+          "options": ["simple", "easy", "arduous", "effortless"],
+          "correct_answer": "arduous",
+          "grammar_type": "Synonyms"
+        },
+        {
           "id": 61,
-          "question": "Which of the following is a proper noun?",
-          "options": ["city", "country", "India", "continent"],
-          "correct_answer": "India",
-          "grammar_type": "Types of Noun"
+          "question": "The journey was perilous. 'Perilous' means...",
+          "options": ["safe", "secure", "dangerous", "easy"],
+          "correct_answer": "dangerous",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 62,
-          "question": "A 'common noun' is a name for:",
-          "options": ["a specific person", "any person, place, or thing of a class", "a quality", "a group"],
-          "correct_answer": "any person, place, or thing of a class",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'huge'.",
+          "options": ["minuscule", "tiny", "colossal", "small"],
+          "correct_answer": "colossal",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 63,
-          "question": "'Honesty' is the best policy. What type of noun is 'honesty'?",
-          "options": ["Proper Noun", "Common Noun", "Collective Noun", "Abstract Noun"],
-          "correct_answer": "Abstract Noun",
-          "grammar_type": "Types of Noun"
+          "question": "She gave a candid answer. 'Candid' means...",
+          "options": ["dishonest", "secretive", "frank", "deceptive"],
+          "correct_answer": "frank",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 64,
-          "question": "A 'team' of players. 'Team' is a:",
-          "options": ["Proper Noun", "Collective Noun", "Abstract Noun", "Common Noun"],
-          "correct_answer": "Collective Noun",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'lazy'?",
+          "options": ["diligent", "energetic", "indolent", "active"],
+          "correct_answer": "indolent",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 65,
-          "question": "Which of these is a countable noun?",
-          "options": ["water", "sugar", "apple", "rice"],
-          "correct_answer": "apple",
-          "grammar_type": "Types of Noun"
+          "question": "The company decided to terminate the project. 'Terminate' means...",
+          "options": ["begin", "start", "end", "continue"],
+          "correct_answer": "end",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 66,
-          "question": "Which of these is an uncountable noun?",
-          "options": ["book", "chair", "milk", "pen"],
-          "correct_answer": "milk",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'praise'.",
+          "options": ["criticize", "blame", "commend", "scold"],
+          "correct_answer": "commend",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 67,
-          "question": "Identify the proper noun in the sentence: I met Rohan in Delhi.",
-          "options": ["met", "I", "Rohan", "in"],
-          "correct_answer": "Rohan",
-          "grammar_type": "Types of Noun"
+          "question": "He has a serene expression on his face. 'Serene' means...",
+          "options": ["agitated", "worried", "calm", "chaotic"],
+          "correct_answer": "calm",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 68,
-          "question": "What is the plural of 'mouse'?",
-          "options": ["mouses", "mice", "mouse", "meece"],
-          "correct_answer": "mice",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'change'?",
+          "options": ["remain", "stay", "modify", "keep"],
+          "correct_answer": "modify",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 69,
-          "question": "A 'bunch' of keys. What type of noun is 'bunch'?",
-          "options": ["Abstract", "Proper", "Common", "Collective"],
-          "correct_answer": "Collective",
-          "grammar_type": "Types of Noun"
+          "question": "The student was very diligent. 'Diligent' means...",
+          "options": ["lazy", "idle", "hardworking", "indolent"],
+          "correct_answer": "hardworking",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 70,
-          "question": "'Childhood' is a time of joy. 'Childhood' is an example of:",
-          "options": ["Abstract Noun", "Concrete Noun", "Proper Noun", "Collective Noun"],
-          "correct_answer": "Abstract Noun",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'abundant'.",
+          "options": ["scarce", "lacking", "plentiful", "rare"],
+          "correct_answer": "plentiful",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 71,
-          "question": "Which sentence has the correct capitalization for a proper noun?",
-          "options": ["I live in a city.", "I live in mumbai.", "I live in Mumbai.", "i live in Mumbai."],
-          "correct_answer": "I live in Mumbai.",
-          "grammar_type": "Types of Noun"
+          "question": "The room was illuminated by a single lamp. 'Illuminated' means...",
+          "options": ["darkened", "hidden", "lit up", "emptied"],
+          "correct_answer": "lit up",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 72,
-          "question": "A noun that you cannot touch is called:",
-          "options": ["A concrete noun", "A proper noun", "An abstract noun", "A common noun"],
-          "correct_answer": "An abstract noun",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'honest'?",
+          "options": ["deceitful", "dishonest", "sincere", "corrupt"],
+          "correct_answer": "sincere",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 73,
-          "question": "What is the singular form of 'leaves'?",
-          "options": ["leafe", "leafs", "leaf", "leave"],
-          "correct_answer": "leaf",
-          "grammar_type": "Types of Noun"
+          "question": "The ancient ruins were fascinating. 'Fascinating' means...",
+          "options": ["boring", "dull", "captivating", "plain"],
+          "correct_answer": "captivating",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 74,
-          "question": "Which is a material noun?",
-          "options": ["love", "gold", "army", "boy"],
-          "correct_answer": "gold",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'show'.",
+          "options": ["hide", "conceal", "display", "watch"],
+          "correct_answer": "display",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 75,
-          "question": "'River' is a common noun. Which of these is a proper noun for a river?",
-          "options": ["water", "Ganga", "flow", "boat"],
-          "correct_answer": "Ganga",
-          "grammar_type": "Types of Noun"
+          "question": "He tried to conceal his excitement. 'Conceal' means...",
+          "options": ["show", "reveal", "hide", "express"],
+          "correct_answer": "hide",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 76,
-          "question": "Identify the abstract noun: We must always speak the 'truth'.",
-          "options": ["We", "speak", "truth", "always"],
-          "correct_answer": "truth",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'powerful'?",
+          "options": ["feeble", "weak", "mighty", "fragile"],
+          "correct_answer": "mighty",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 77,
-          "question": "What is the plural of 'man'?",
-          "options": ["mans", "menes", "men", "man's"],
-          "correct_answer": "men",
-          "grammar_type": "Types of Noun"
+          "question": "The soldier showed great valor. 'Valor' means...",
+          "options": ["fear", "cowardice", "courage", "weakness"],
+          "correct_answer": "courage",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 78,
-          "question": "A 'flock' of sheep. 'Flock' is a:",
-          "options": ["Common Noun", "Proper Noun", "Collective Noun", "Abstract Noun"],
-          "correct_answer": "Collective Noun",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'friend'.",
+          "options": ["enemy", "foe", "ally", "rival"],
+          "correct_answer": "ally",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 79,
-          "question": "Which is the common noun in: 'The boy threw the ball.'?",
-          "options": ["The", "boy", "threw", "There is no common noun"],
-          "correct_answer": "boy",
-          "grammar_type": "Types of Noun"
+          "question": "She gave a brief presentation. 'Brief' means...",
+          "options": ["long", "extended", "short", "detailed"],
+          "correct_answer": "short",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 80,
-          "question": "'Air' is an example of an:",
-          "options": ["Countable Noun", "Uncountable Noun", "Proper Noun", "Collective Noun"],
-          "correct_answer": "Uncountable Noun",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'ask'?",
+          "options": ["reply", "demand", "query", "state"],
+          "correct_answer": "query",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 81,
-          "question": "What is the singular of 'women'?",
-          "options": ["womans", "womun", "woman", "wimen"],
-          "correct_answer": "woman",
-          "grammar_type": "Types of Noun"
+          "question": "It is essential to follow the rules. 'Essential' means...",
+          "options": ["optional", "unimportant", "necessary", "extra"],
+          "correct_answer": "necessary",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 82,
-          "question": "'Friendship' is a precious gift. 'Friendship' is:",
-          "options": ["a concrete noun", "an abstract noun", "a collective noun", "a proper noun"],
-          "correct_answer": "an abstract noun",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'beautiful'.",
+          "options": ["unattractive", "hideous", "exquisite", "plain"],
+          "correct_answer": "exquisite",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 83,
-          "question": "A 'herd' of cattle is grazing. 'Herd' is what type of noun?",
-          "options": ["Material", "Abstract", "Collective", "Proper"],
-          "correct_answer": "Collective",
-          "grammar_type": "Types of Noun"
+          "question": "The problem was very complex. 'Complex' means...",
+          "options": ["simple", "easy", "complicated", "basic"],
+          "correct_answer": "complicated",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 84,
-          "question": "Which of these must always begin with a capital letter?",
-          "options": ["Common Noun", "Proper Noun", "Abstract Noun", "Collective Noun"],
-          "correct_answer": "Proper Noun",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'stop'?",
+          "options": ["continue", "proceed", "cease", "begin"],
+          "correct_answer": "cease",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 85,
-          "question": "What is the plural of 'child'?",
-          "options": ["childs", "childes", "children", "child's"],
-          "correct_answer": "children",
-          "grammar_type": "Types of Noun"
+          "question": "He has a cheerful disposition. 'Disposition' means...",
+          "options": ["attitude", "appearance", "problem", "idea"],
+          "correct_answer": "attitude",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 86,
-          "question": "A noun that can be seen or touched is a:",
-          "options": ["Abstract Noun", "Concrete Noun", "Proper Noun", "Collective Noun"],
-          "correct_answer": "Concrete Noun",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'error'.",
+          "options": ["accuracy", "precision", "blunder", "correctness"],
+          "correct_answer": "blunder",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 87,
-          "question": "The ring is made of 'silver'. 'Silver' is a:",
-          "options": ["Common Noun", "Proper Noun", "Material Noun", "Abstract Noun"],
-          "correct_answer": "Material Noun",
-          "grammar_type": "Types of Noun"
+          "question": "The crowd was jubilant after the victory. 'Jubilant' means...",
+          "options": ["sad", "angry", "overjoyed", "disappointed"],
+          "correct_answer": "overjoyed",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 88,
-          "question": "Which of these is a common noun?",
-          "options": ["Sunday", "January", "Month", "Diwali"],
-          "correct_answer": "Month",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'idea'?",
+          "options": ["fact", "reality", "concept", "truth"],
+          "correct_answer": "concept",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 89,
-          "question": "What is the plural of 'foot'?",
-          "options": ["foots", "feets", "foot", "feet"],
-          "correct_answer": "feet",
-          "grammar_type": "Types of Noun"
+          "question": "She had a luminous smile. 'Luminous' means...",
+          "options": ["dim", "dark", "dull", "shining"],
+          "correct_answer": "shining",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 90,
-          "question": "He showed great 'courage'. What type of noun is 'courage'?",
-          "options": ["Concrete", "Collective", "Proper", "Abstract"],
-          "correct_answer": "Abstract",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'prohibit'.",
+          "options": ["permit", "allow", "ban", "authorize"],
+          "correct_answer": "ban",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 91,
-          "question": "An 'army' of soldiers marched past. 'Army' is a:",
-          "options": ["Common noun", "Proper noun", "Collective noun", "Abstract noun"],
-          "correct_answer": "Collective noun",
-          "grammar_type": "Types of Noun"
+          "question": "The speaker's message was profound. 'Profound' means...",
+          "options": ["superficial", "shallow", "deep", "simple"],
+          "correct_answer": "deep",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 92,
-          "question": "Which is an uncountable noun?",
-          "options": ["coin", "note", "money", "rupee"],
-          "correct_answer": "money",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'part'?",
+          "options": ["whole", "entirety", "segment", "total"],
+          "correct_answer": "segment",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 93,
-          "question": "What is the singular of 'geese'?",
-          "options": ["goose", "geese", "gouse", "gooses"],
-          "correct_answer": "goose",
-          "grammar_type": "Types of Noun"
+          "question": "His knowledge of the subject is comprehensive. 'Comprehensive' means...",
+          "options": ["limited", "partial", "thorough", "basic"],
+          "correct_answer": "thorough",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 94,
-          "question": "The 'Ganges' is a holy river. 'Ganges' is a:",
-          "options": ["Common Noun", "Proper Noun", "Collective Noun", "Material Noun"],
-          "correct_answer": "Proper Noun",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'cautious'.",
+          "options": ["careless", "reckless", "prudent", "rash"],
+          "correct_answer": "prudent",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 95,
-          "question": "Which of the following is an abstract noun?",
-          "options": ["happy", "happiness", "happily", "unhappy"],
-          "correct_answer": "happiness",
-          "grammar_type": "Types of Noun"
+          "question": "The movie had a predictable ending. 'Predictable' means...",
+          "options": ["surprising", "unexpected", "foreseeable", "novel"],
+          "correct_answer": "foreseeable",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 96,
-          "question": "A 'library' of books. 'Library' here refers to a collection, so it is a:",
-          "options": ["Proper Noun", "Abstract Noun", "Material Noun", "Collective Noun"],
-          "correct_answer": "Collective Noun",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'enough'?",
+          "options": ["lacking", "insufficient", "adequate", "scarce"],
+          "correct_answer": "adequate",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 97,
-          "question": "What is the plural of 'fish'?",
-          "options": ["fishes", "fish", "Both are correct", "Neither is correct"],
-          "correct_answer": "Both are correct",
-          "grammar_type": "Types of Noun"
+          "question": "The antique vase is very fragile. 'Fragile' means...",
+          "options": ["strong", "sturdy", "delicate", "tough"],
+          "correct_answer": "delicate",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 98,
-          "question": "We get 'wool' from sheep. 'Wool' is a:",
-          "options": ["Material Noun", "Common Noun", "Abstract Noun", "Proper Noun"],
-          "correct_answer": "Material Noun",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'help'.",
+          "options": ["obstruct", "hinder", "aid", "impede"],
+          "correct_answer": "aid",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 99,
-          "question": "Which noun can be counted?",
-          "options": ["advice", "suggestion", "information", "news"],
-          "correct_answer": "suggestion",
-          "grammar_type": "Types of Noun"
+          "question": "She is a competent worker. 'Competent' means...",
+          "options": ["incompetent", "unskilled", "capable", "inept"],
+          "correct_answer": "capable",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 100,
-          "question": "'Wisdom' is better than strength. 'Wisdom' is:",
-          "options": ["An abstract noun", "A concrete noun", "A proper noun", "A material noun"],
-          "correct_answer": "An abstract noun",
-          "grammar_type": "Types of Noun"
-        },
-        {
-          "id": 101,
-          "question": "What is the plural of 'person'?",
-          "options": ["persons", "people", "Both are correct", "persones"],
-          "correct_answer": "Both are correct",
-          "grammar_type": "Types of Noun"
-        },
-        {
-          "id": 102,
-          "question": "A 'pride' of lions. What type of noun is 'pride'?",
-          "options": ["Abstract", "Collective", "Common", "Proper"],
-          "correct_answer": "Collective",
-          "grammar_type": "Types of Noun"
-        },
-        {
-          "id": 103,
-          "question": "Which of these is a material noun?",
-          "options": ["ring", "jewellery", "platinum", "shop"],
-          "correct_answer": "platinum",
-          "grammar_type": "Types of Noun"
-        },
-        {
-          "id": 104,
-          "question": "I have no 'time' for games. Here, 'time' is:",
-          "options": ["Countable", "Uncountable", "Proper", "Collective"],
-          "correct_answer": "Uncountable",
-          "grammar_type": "Types of Noun"
-        },
-        {
-          "id": 105,
-          "question": "What is the plural of 'wife'?",
-          "options": ["wifes", "wives", "wife's", "wive"],
-          "correct_answer": "wives",
-          "grammar_type": "Types of Noun"
-        },
-        {
-          "id": 106,
-          "question": "'English' is a proper noun, but 'subject' is a:",
-          "options": ["Proper Noun", "Abstract Noun", "Common Noun", "Collective Noun"],
-          "correct_answer": "Common Noun",
-          "grammar_type": "Types of Noun"
-        },
-        {
-          "id": 107,
-          "question": "The 'police' have been called. Here, 'police' is treated as:",
-          "options": ["Singular", "Plural", "Uncountable", "Proper"],
-          "correct_answer": "Plural",
-          "grammar_type": "Types of Noun"
-        },
-        {
-          "id": 108,
-          "question": "Laughter is the best 'medicine'. 'Medicine' is a:",
-          "options": ["Proper noun", "Abstract noun", "Common noun", "Collective noun"],
-          "correct_answer": "Common noun",
-          "grammar_type": "Types of Noun"
-        },
-        {
-          "id": 109,
-          "question": "What is the singular of 'bacteria'?",
-          "options": ["bacterium", "bacterias", "bactery", "bacta"],
-          "correct_answer": "bacterium",
-          "grammar_type": "Types of Noun"
-        },
-        {
-          "id": 110,
-          "question": "Which of the following is a concrete noun?",
-          "options": ["love", "hate", "anger", "letter"],
-          "correct_answer": "letter",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'tell'?",
+          "options": ["conceal", "listen", "narrate", "ask"],
+          "correct_answer": "narrate",
+          "grammar_type": "Synonyms"
         }
       ]
     },
@@ -784,214 +714,354 @@
       "level": "Hard",
       "questions": [
         {
+          "id": 101,
+          "question": "The politician's speech was full of platitudes. 'Platitude' is a synonym for...",
+          "options": ["a novel idea", "an insightful comment", "a cliché or trite remark", "a profound statement"],
+          "correct_answer": "a cliché or trite remark",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 102,
+          "question": "Which word is a synonym for 'stubborn'?",
+          "options": ["flexible", "compliant", "obstinate", "agreeable"],
+          "correct_answer": "obstinate",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 103,
+          "question": "The evidence was incontrovertible. 'Incontrovertible' means...",
+          "options": ["debatable", "questionable", "undeniable", "doubtful"],
+          "correct_answer": "undeniable",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 104,
+          "question": "Find the synonym for 'talkative'.",
+          "options": ["quiet", "silent", "garrulous", "taciturn"],
+          "correct_answer": "garrulous",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 105,
+          "question": "She has a predilection for classical music. 'Predilection' means...",
+          "options": ["dislike", "aversion", "preference", "hatred"],
+          "correct_answer": "preference",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 106,
+          "question": "Which word is a synonym for 'short-lived'?",
+          "options": ["permanent", "eternal", "ephemeral", "lasting"],
+          "correct_answer": "ephemeral",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 107,
+          "question": "His laudatory remarks were appreciated by everyone. 'Laudatory' means expressing...",
+          "options": ["criticism", "blame", "praise", "sadness"],
+          "correct_answer": "praise",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 108,
+          "question": "Find the synonym for 'secret'.",
+          "options": ["overt", "obvious", "clandestine", "public"],
+          "correct_answer": "clandestine",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 109,
+          "question": "The new law was a draconian measure. 'Draconian' means...",
+          "options": ["lenient", "mild", "harsh", "merciful"],
+          "correct_answer": "harsh",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 110,
+          "question": "Which word is a synonym for 'harmful'?",
+          "options": ["beneficial", "harmless", "deleterious", "helpful"],
+          "correct_answer": "deleterious",
+          "grammar_type": "Synonyms"
+        },
+        {
           "id": 111,
-          "question": "Which of the following is a compound noun?",
-          "options": ["friendship", "happiness", "blackboard", "teacher"],
-          "correct_answer": "blackboard",
-          "grammar_type": "Types of Noun"
+          "question": "The politician's speech was an egregious lie. 'Egregious' means...",
+          "options": ["minor", "slight", "shockingly bad", "harmless"],
+          "correct_answer": "shockingly bad",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 112,
-          "question": "This is my 'mother-in-law's' house. 'Mother-in-law' is a:",
-          "options": ["Closed compound noun", "Open compound noun", "Hyphenated compound noun", "Collective noun"],
-          "correct_answer": "Hyphenated compound noun",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'puzzling'.",
+          "options": ["clear", "obvious", "enigmatic", "simple"],
+          "correct_answer": "enigmatic",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 113,
-          "question": "What is the plural of 'phenomenon'?",
-          "options": ["phenomenons", "phenomenae", "phenomenas", "phenomena"],
-          "correct_answer": "phenomena",
-          "grammar_type": "Types of Noun"
+          "question": "He is a virtuoso on the piano. 'Virtuoso' means...",
+          "options": ["beginner", "amateur", "an expert or master", "novice"],
+          "correct_answer": "an expert or master",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 114,
-          "question": "Choose the sentence with the correct plural possessive noun:",
-          "options": ["The babies toys are on the floor.", "The babie's toys are on the floor.", "The babies's toys are on the floor.", "The babies' toys are on the floor."],
-          "correct_answer": "The babies' toys are on the floor.",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'praise'?",
+          "options": ["berate", "vilify", "extol", "censure"],
+          "correct_answer": "extol",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 115,
-          "question": "Which noun can be both countable and uncountable depending on the context?",
-          "options": ["book", "water", "paper", "car"],
-          "correct_answer": "paper",
-          "grammar_type": "Types of Noun"
+          "question": "The book was full of esoteric knowledge. 'Esoteric' means...",
+          "options": ["well-known", "common", "understood by only a few", "simple"],
+          "correct_answer": "understood by only a few",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 116,
-          "question": "What is the feminine gender of 'stallion'?",
-          "options": ["doe", "mare", "vixen", "hen"],
-          "correct_answer": "mare",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'disaster'.",
+          "options": ["triumph", "success", "catastrophe", "blessing"],
+          "correct_answer": "catastrophe",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 117,
-          "question": "The committee 'is' unanimous in its decision. Here, the collective noun 'committee' is treated as:",
-          "options": ["Singular", "Plural", "Possessive", "Abstract"],
-          "correct_answer": "Singular",
-          "grammar_type": "Types of Noun"
+          "question": "She has a very perfunctory way of working. 'Perfunctory' means...",
+          "options": ["thorough", "careful", "done with minimum effort or reflection", "diligent"],
+          "correct_answer": "done with minimum effort or reflection",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 118,
-          "question": "A lot of 'advice' was given. The noun 'advice' is:",
-          "options": ["Countable singular", "Countable plural", "Uncountable", "Collective"],
-          "correct_answer": "Uncountable",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'calm'?",
+          "options": ["agitated", "turbulent", "placid", "frenzied"],
+          "correct_answer": "placid",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 119,
-          "question": "What is the correct plural of 'son-in-law'?",
-          "options": ["son-in-laws", "sons-in-law", "sons-in-laws", "son's-in-law"],
-          "correct_answer": "sons-in-law",
-          "grammar_type": "Types of Noun"
+          "question": "His speech was a tirade against the government. 'Tirade' means...",
+          "options": ["a short, happy song", "a compliment", "a long, angry speech of criticism", "a calm discussion"],
+          "correct_answer": "a long, angry speech of criticism",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 120,
-          "question": "Which word is a gerund (a verb form acting as a noun)?",
-          "options": ["He is swimming.", "Swimming is my favorite hobby.", "Look at the swimming fish.", "He went for a swim."],
-          "correct_answer": "Swimming is my favorite hobby.",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'generous'.",
+          "options": ["miserly", "stingy", "munificent", "selfish"],
+          "correct_answer": "munificent",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 121,
-          "question": "The nouns 'scissors', 'trousers', and 'spectacles' are always:",
-          "options": ["Singular", "Plural", "Uncountable", "Abstract"],
-          "correct_answer": "Plural",
-          "grammar_type": "Types of Noun"
+          "question": "He is known for his sagacious advice. 'Sagacious' means...",
+          "options": ["foolish", "unwise", "wise or shrewd", "bad"],
+          "correct_answer": "wise or shrewd",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 122,
-          "question": "What is the plural of 'analysis'?",
-          "options": ["analysises", "analyses", "analysae", "analysis"],
-          "correct_answer": "analyses",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'cowardly'?",
+          "options": ["brave", "courageous", "pusillanimous", "valiant"],
+          "correct_answer": "pusillanimous",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 123,
-          "question": "Choose the correct form: We need to buy some new ____.",
-          "options": ["furnitures", "furniture", "furnituring", "a furniture"],
-          "correct_answer": "furniture",
-          "grammar_type": "Types of Noun"
+          "question": "The artist's work was a paradigm of modernism. 'Paradigm' means...",
+          "options": ["a minor work", "a perfect example or model", "a failure", "a copy"],
+          "correct_answer": "a perfect example or model",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 124,
-          "question": "Which of these is an 'open' compound noun?",
-          "options": ["football", "ice cream", "mother-in-law", "sunflower"],
-          "correct_answer": "ice cream",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'shy'.",
+          "options": ["confident", "assertive", "diffident", "bold"],
+          "correct_answer": "diffident",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 125,
-          "question": "The noun 'mathematics' is treated as:",
-          "options": ["Singular", "Plural", "Sometimes singular, sometimes plural", "Collective"],
-          "correct_answer": "Singular",
-          "grammar_type": "Types of Noun"
+          "question": "The new phone has a plethora of features. 'Plethora' means...",
+          "options": ["a lack of", "a shortage of", "an excess of", "a few"],
+          "correct_answer": "an excess of",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 126,
-          "question": "What is the plural of 'cactus'?",
-          "options": ["cactuses", "cacti", "Both are correct", "cactus"],
-          "correct_answer": "Both are correct",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'perfect example'?",
+          "options": ["anomaly", "aberration", "epitome", "flaw"],
+          "correct_answer": "epitome",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 127,
-          "question": "What is the abstract noun form of the adjective 'strong'?",
-          "options": ["strongness", "strength", "stronger", "strongly"],
-          "correct_answer": "strength",
-          "grammar_type": "Types of Noun"
+          "question": "The politician was censured for his remarks. 'Censure' means...",
+          "options": ["praised", "rewarded", "formally criticized", "ignored"],
+          "correct_answer": "formally criticized",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 128,
-          "question": "Identify the gerund in: 'I enjoy reading novels.'",
-          "options": ["enjoy", "reading", "novels", "I"],
-          "correct_answer": "reading",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'clear'.",
+          "options": ["ambiguous", "vague", "lucid", "confusing"],
+          "correct_answer": "lucid",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 129,
-          "question": "Choose the correct possessive form: These are the ____ books.",
-          "options": ["childrens'", "children's", "child's", "childrens"],
-          "correct_answer": "children's",
-          "grammar_type": "Types of Noun"
+          "question": "He has a penchant for spicy food. 'Penchant' means...",
+          "options": ["a strong liking", "a strong dislike", "an allergy", "an indifference"],
+          "correct_answer": "a strong liking",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 130,
-          "question": "Which of these nouns is always considered plural?",
-          "options": ["news", "ethics", "goods", "physics"],
-          "correct_answer": "goods",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'friendly'?",
+          "options": ["hostile", "aloof", "gregarious", "unfriendly"],
+          "correct_answer": "gregarious",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 131,
-          "question": "What is the plural of 'crisis'?",
-          "options": ["crisises", "crisi", "crises", "crisis's"],
-          "correct_answer": "crises",
-          "grammar_type": "Types of Noun"
+          "question": "The results of the experiment were anomalous. 'Anomalous' means...",
+          "options": ["normal", "typical", "deviating from the standard", "expected"],
+          "correct_answer": "deviating from the standard",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 132,
-          "question": "The abstract noun for the verb 'to know' is:",
-          "options": ["known", "knowing", "knowable", "knowledge"],
-          "correct_answer": "knowledge",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for ' beginner'.",
+          "options": ["veteran", "expert", "neophyte", "master"],
+          "correct_answer": "neophyte",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 133,
-          "question": "The team, after winning the match, ____ celebrating.",
-          "options": ["is", "are", "was", "has"],
-          "correct_answer": "is",
-          "grammar_type": "Types of Noun"
+          "question": "His speech was full of bombastic language. 'Bombastic' means...",
+          "options": ["simple and plain", "high-sounding but with little meaning", "quiet and reserved", "logical and clear"],
+          "correct_answer": "high-sounding but with little meaning",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 134,
-          "question": "What is the plural of 'attorney general'?",
-          "options": ["attorney generals", "attorneys general", "attorneys generals", "attorney general's"],
-          "correct_answer": "attorneys general",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'eager'?",
+          "options": ["apathetic", "indifferent", "avid", "reluctant"],
+          "correct_answer": "avid",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 135,
-          "question": "Which sentence is correct?",
-          "options": ["I have many works to do.", "I have much work to do.", "I have many work to do.", "I have much works to do."],
-          "correct_answer": "I have much work to do.",
-          "grammar_type": "Types of Noun"
+          "question": "The decision was made by a consensus. 'Consensus' means...",
+          "options": ["a disagreement", "a vote", "a general agreement", "a single person's decision"],
+          "correct_answer": "a general agreement",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 136,
-          "question": "The noun form of 'beautiful' is:",
-          "options": ["beautify", "beauty", "beautifulness", "beautihood"],
-          "correct_answer": "beauty",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'to calm'.",
+          "options": ["agitate", "excite", "mollify", "provoke"],
+          "correct_answer": "mollify",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 137,
-          "question": "What is the correct possessive form for 'Mr. Das'?",
-          "options": ["Mr. Das's car", "Mr. Das' car", "Both are correct", "Mr. Dases' car"],
-          "correct_answer": "Both are correct",
-          "grammar_type": "Types of Noun"
+          "question": "She had an esoteric taste in music. 'Esoteric' means...",
+          "options": ["popular", "mainstream", "understood by a small, specialized group", "simple"],
+          "correct_answer": "understood by a small, specialized group",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 138,
-          "question": "Which noun is a 'closed' compound noun?",
-          "options": ["living room", "full moon", "swimming pool", "classroom"],
-          "correct_answer": "classroom",
-          "grammar_type": "Types of Noun"
+          "question": "Which word is a synonym for 'very old'?",
+          "options": ["contemporary", "newfangled", "archaic", "modern"],
+          "correct_answer": "archaic",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 139,
-          "question": "What is the plural of 'datum'?",
-          "options": ["datums", "datae", "data", "datum's"],
-          "correct_answer": "data",
-          "grammar_type": "Types of Noun"
+          "question": "The novel was a paean to the countryside. 'Paean' means...",
+          "options": ["a critique", "a sad story", "a song of praise or triumph", "a mystery"],
+          "correct_answer": "a song of praise or triumph",
+          "grammar_type": "Synonyms"
         },
         {
           "id": 140,
-          "question": "The noun 'news' is always treated as:",
-          "options": ["Singular", "Plural", "Countable", "Collective"],
-          "correct_answer": "Singular",
-          "grammar_type": "Types of Noun"
+          "question": "Find the synonym for 'to weaken'.",
+          "options": ["strengthen", "fortify", "enervate", "empower"],
+          "correct_answer": "enervate",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 141,
+          "question": "He gave a laconic reply. 'Laconic' means...",
+          "options": ["long-winded", "verbose", "using very few words", "confusing"],
+          "correct_answer": "using very few words",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 142,
+          "question": "Which word is a synonym for 'clever'?",
+          "options": ["naive", "ignorant", "astute", "foolish"],
+          "correct_answer": "astute",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 143,
+          "question": "His obsequious behavior was annoying. 'Obsequious' means...",
+          "options": ["domineering", "assertive", "overly obedient or servile", "rude"],
+          "correct_answer": "overly obedient or servile",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 144,
+          "question": "Find the synonym for 'stubborn'.",
+          "options": ["pliable", "flexible", "intractable", "yielding"],
+          "correct_answer": "intractable",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 145,
+          "question": "The politician was a demagogue. 'Demagogue' is a leader who...",
+          "options": ["unites people", "appeals to reason and logic", "seeks support by appealing to popular desires and prejudices", "is quiet and reserved"],
+          "correct_answer": "seeks support by appealing to popular desires and prejudices",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 146,
+          "question": "Which word is a synonym for 'temporary'?",
+          "options": ["enduring", "permanent", "provisional", "eternal"],
+          "correct_answer": "provisional",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 147,
+          "question": "The problem was exacerbated by the bad weather. 'Exacerbate' means...",
+          "options": ["to improve", "to solve", "to make worse", "to alleviate"],
+          "correct_answer": "to make worse",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 148,
+          "question": "Find the synonym for 'hardworking'.",
+          "options": ["indolent", "lazy", "assiduous", "lethargic"],
+          "correct_answer": "assiduous",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 149,
+          "question": "She had a querulous tone of voice. 'Querulous' means...",
+          "options": ["happy and cheerful", "complaining in a whining manner", "loud and confident", "calm and peaceful"],
+          "correct_answer": "complaining in a whining manner",
+          "grammar_type": "Synonyms"
+        },
+        {
+          "id": 150,
+          "question": "Which word is a synonym for 'praiseworthy'?",
+          "options": ["culpable", "blameworthy", "laudable", "reprehensible"],
+          "correct_answer": "laudable",
+          "grammar_type": "Synonyms"
         }
       ]
     }

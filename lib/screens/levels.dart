@@ -504,12 +504,57 @@ class LessonsScreen extends StatefulWidget {
 
 class _LessonsScreenState extends State<LessonsScreen> {
   Set<String> completedLessons = <String>{};
+  Map<String, int> quizScores = <String, int>{}; // Store quiz scores
+  Map<String, int> totalQuestions =
+      <String, int>{}; // Store total questions count
   static const String baseUrl = ApiConfig.baseUrl;
 
   @override
   void initState() {
     super.initState();
-    fetchCompletedLessons();
+    // Load data in the correct order
+    _loadData();
+  }
+
+  Future<void> _loadData() async {
+    // First load local quiz scores (for offline support)
+    await loadQuizScores();
+
+    // Then fetch from backend (this will override local data with server data)
+    await fetchCompletedLessons();
+
+    // Trigger a rebuild to ensure UI updates
+    setState(() {});
+  }
+
+  // Load quiz scores from local storage
+  Future<void> loadQuizScores() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    Map<String, dynamic> lessons = widget.moduleData['lessons'];
+
+    for (String lessonKey in lessons.keys) {
+      int? score = prefs.getInt('quiz_score_$lessonKey');
+      int? total = prefs.getInt('quiz_total_$lessonKey');
+
+      if (score != null && total != null) {
+        setState(() {
+          quizScores[lessonKey] = score;
+          totalQuestions[lessonKey] = total;
+        });
+      }
+    }
+  }
+
+  // Save quiz score to local storage
+  Future<void> saveQuizScore(String lessonKey, int score, int total) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('quiz_score_$lessonKey', score);
+    await prefs.setInt('quiz_total_$lessonKey', total);
+
+    setState(() {
+      quizScores[lessonKey] = score;
+      totalQuestions[lessonKey] = total;
+    });
   }
 
   Future<void> fetchCompletedLessons() async {
@@ -541,52 +586,10 @@ class _LessonsScreenState extends State<LessonsScreen> {
     }
   }
 
-  void markAsCompleted(String lessonKey) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? userId = prefs.getString('userId');
-
-    if (userId == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('User not found. Please log in again.'),
-          backgroundColor: Colors.red,
-        ),
-      );
-      return;
-    }
-
-    final url = Uri.parse('$baseUrl/$userId/mark-complete');
-    final response = await http.post(
-      url,
-      headers: {'Content-Type': 'application/json'},
-      body: json.encode({'lessonId': lessonKey}),
-    );
-
-    if (response.statusCode == 200) {
-      setState(() {
-        completedLessons.add(lessonKey);
-      });
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Lesson marked as completed!'),
-          backgroundColor: Colors.green,
-          duration: Duration(seconds: 2),
-        ),
-      );
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Failed to mark lesson complete'),
-          backgroundColor: Colors.red,
-        ),
-      );
-    }
-  }
-
-  void takeQuiz(String lessonKey, Map<String, dynamic> lessonInfo) {
+  void takeQuiz(String lessonKey, Map<String, dynamic> lessonInfo) async {
     final quizPath = lessonInfo['quiz_path'];
     if (quizPath != null && quizPath.toString().isNotEmpty) {
-      Navigator.push(
+      final result = await Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => LessonQuiz(
@@ -595,6 +598,31 @@ class _LessonsScreenState extends State<LessonsScreen> {
           ),
         ),
       );
+
+      // Handle the returned quiz score
+      if (result != null && result is int) {
+        // Assuming the quiz always has 10 questions (4 Easy + 4 Medium + 2 Hard)
+        // You might want to modify this based on your actual quiz structure
+        int totalQuestions = 10;
+
+        // Save quiz score locally first
+        await saveQuizScore(lessonKey, result, totalQuestions);
+
+        // Send quiz score to backend
+        await submitQuizScoreToBackend(lessonKey, result, totalQuestions);
+
+        // Show success message
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Quiz completed! Score: $result/$totalQuestions'),
+            backgroundColor: Colors.blue,
+            duration: Duration(seconds: 3),
+          ),
+        );
+
+        // Force rebuild to update the UI with new quiz status
+        setState(() {});
+      }
     } else {
       showDialog(
         context: context,
@@ -614,6 +642,107 @@ class _LessonsScreenState extends State<LessonsScreen> {
     }
   }
 
+  // New method to submit quiz score to backend
+  Future<void> submitQuizScoreToBackend(
+    String lessonKey,
+    int score,
+    int totalQuestions,
+  ) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? userId = prefs.getString('userId');
+
+    if (userId == null) {
+      print('User ID not found for quiz score submission');
+      return;
+    }
+
+    final url = Uri.parse('$baseUrl/$userId/submit-quiz');
+
+    try {
+      final response = await http.post(
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({
+          'lessonId': lessonKey,
+          'quizScore': score,
+          'totalQuestions': totalQuestions,
+          'percentage': (score / totalQuestions * 100).round(),
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        print('Quiz score submitted successfully');
+      } else {
+        print('Failed to submit quiz score: ${response.statusCode}');
+        // You might want to show a warning to the user here
+      }
+    } catch (e) {
+      print('Error submitting quiz score: $e');
+      // Handle network errors gracefully
+    }
+  }
+
+  // Updated markAsCompleted method to include quiz score
+  void markAsCompleted(String lessonKey, {int? quizScore}) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? userId = prefs.getString('userId');
+
+    if (userId == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('User not found. Please log in again.'),
+          backgroundColor: Colors.red,
+        ),
+      );
+      return;
+    }
+
+    final url = Uri.parse('$baseUrl/$userId/mark-complete');
+
+    // Prepare request body with optional quiz score
+    Map<String, dynamic> requestBody = {'lessonId': lessonKey};
+
+    // Include quiz score if provided or if quiz was attempted
+    int? scoreToSend = quizScore ?? quizScores[lessonKey];
+    if (scoreToSend != null) {
+      requestBody['quizScore'] = scoreToSend;
+      requestBody['totalQuestions'] = totalQuestions[lessonKey] ?? 10;
+      requestBody['percentage'] =
+          ((scoreToSend / (totalQuestions[lessonKey] ?? 10)) * 100).round();
+    }
+
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode(requestBody),
+    );
+
+    if (response.statusCode == 200) {
+      setState(() {
+        completedLessons.add(lessonKey);
+      });
+
+      String message = scoreToSend != null
+          ? 'Lesson completed! Quiz score: $scoreToSend/${totalQuestions[lessonKey] ?? 10}'
+          : 'Lesson marked as completed!';
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(message),
+          backgroundColor: Colors.green,
+          duration: Duration(seconds: 2),
+        ),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Failed to mark lesson complete'),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
+  }
+
   void openLesson(String lessonKey, Map<String, dynamic> lessonInfo) {
     Navigator.push(
       context,
@@ -624,15 +753,67 @@ class _LessonsScreenState extends State<LessonsScreen> {
     );
   }
 
+  // Check if quiz has been attempted
+  bool hasAttemptedQuiz(String lessonKey) {
+    return quizScores.containsKey(lessonKey);
+  }
+
+  // Get quiz score display text
+  String getQuizButtonText(String lessonKey, bool isCompact) {
+    if (hasAttemptedQuiz(lessonKey)) {
+      return isCompact ? 'Retake Quiz' : 'Retake Quiz';
+    } else {
+      return isCompact ? 'Take Quiz' : 'Take Quiz';
+    }
+  }
+
+  // Get quiz button color based on score
+  Color getQuizButtonColor(String lessonKey) {
+    if (hasAttemptedQuiz(lessonKey)) {
+      int score = quizScores[lessonKey]!;
+      int total = totalQuestions[lessonKey]!;
+      double percentage = (score / total) * 100;
+
+      if (percentage >= 80) {
+        return Colors.green[600]!; // Excellent
+      } else if (percentage >= 60) {
+        return Colors.orange[600]!; // Good
+      } else {
+        return Colors.red[600]!; // Needs improvement
+      }
+    } else {
+      return Colors.blue[600]!; // Default
+    }
+  }
+
+  // Get completion button text
+  String getCompletionButtonText(
+    String lessonKey,
+    bool isCompleted,
+    bool isCompact,
+  ) {
+    if (isCompleted) {
+      return 'Completed';
+    } else {
+      return isCompact ? 'Attempt Quiz' : 'Attempt Quiz to Mark Complete';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     Map<String, dynamic> lessons = widget.moduleData['lessons'];
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.moduleData['title'] ?? 'Lessons'),
+        title: Text(
+          widget.moduleData['title'] ?? 'Lessons',
+          style: TextStyle(
+            fontSize: MediaQuery.of(context).size.width < 360 ? 18 : 20,
+          ),
+        ),
         backgroundColor: Colors.blue[700],
         foregroundColor: Colors.white,
+        elevation: 2,
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -642,158 +823,342 @@ class _LessonsScreenState extends State<LessonsScreen> {
             colors: [Colors.blue[50]!, Colors.white],
           ),
         ),
-        child: ListView.builder(
-          padding: EdgeInsets.all(16.0),
-          itemCount: lessons.length,
-          itemBuilder: (context, index) {
-            String lessonKey = lessons.keys.elementAt(index);
-            Map<String, dynamic> lessonInfo = lessons[lessonKey];
-            bool isCompleted = completedLessons.contains(lessonKey);
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final isTablet = constraints.maxWidth > 600;
+            final isSmallScreen = constraints.maxWidth < 400;
+            final padding = isSmallScreen ? 12.0 : (isTablet ? 24.0 : 16.0);
 
-            print(lessonKey);
+            return ListView.builder(
+              padding: EdgeInsets.all(padding),
+              itemCount: lessons.length,
+              itemBuilder: (context, index) {
+                String lessonKey = lessons.keys.elementAt(index);
+                Map<String, dynamic> lessonInfo = lessons[lessonKey];
+                bool isCompleted = completedLessons.contains(lessonKey);
+                bool quizAttempted = hasAttemptedQuiz(lessonKey);
 
-            return Card(
-              margin: EdgeInsets.only(bottom: 16.0),
-              elevation: 4,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: InkWell(
-                borderRadius: BorderRadius.circular(12),
-                onTap: () => openLesson(lessonKey, lessonInfo),
-                child: Container(
-                  padding: EdgeInsets.all(20.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: isCompleted
-                                  ? Colors.green[100]
-                                  : Colors.orange[100],
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Icon(
-                              isCompleted
-                                  ? Icons.check_circle
-                                  : Icons.play_circle_outline,
-                              color: isCompleted
-                                  ? Colors.green[700]
-                                  : Colors.orange[700],
-                              size: 24,
-                            ),
-                          ),
-                          SizedBox(width: 12),
-                          Expanded(
-                            child: Column(
+                return Container(
+                  margin: EdgeInsets.only(bottom: isSmallScreen ? 12.0 : 16.0),
+                  constraints: BoxConstraints(
+                    maxWidth: isTablet ? 800 : double.infinity,
+                  ),
+                  child: Card(
+                    elevation: isSmallScreen ? 2 : 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                        isSmallScreen ? 8 : 12,
+                      ),
+                    ),
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(
+                        isSmallScreen ? 8 : 12,
+                      ),
+                      onTap: () => openLesson(lessonKey, lessonInfo),
+                      child: Container(
+                        padding: EdgeInsets.all(
+                          isSmallScreen ? 12.0 : (isTablet ? 24.0 : 16.0),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Header Row
+                            Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  lessonInfo['title'] ?? 'Lesson',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.grey[800],
+                                // Status Icon
+                                Container(
+                                  padding: EdgeInsets.all(
+                                    isSmallScreen ? 6 : 8,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: isCompleted
+                                        ? Colors.green[100]
+                                        : Colors.orange[100],
+                                    borderRadius: BorderRadius.circular(
+                                      isSmallScreen ? 6 : 8,
+                                    ),
+                                  ),
+                                  child: Icon(
+                                    isCompleted
+                                        ? Icons.check_circle
+                                        : Icons.play_circle_outline,
+                                    color: isCompleted
+                                        ? Colors.green[700]
+                                        : Colors.orange[700],
+                                    size: isSmallScreen ? 20 : 24,
                                   ),
                                 ),
-                                SizedBox(height: 4),
-                                Text(
-                                  'Lesson ${index + 1}',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.grey[600],
+                                SizedBox(width: isSmallScreen ? 8 : 12),
+
+                                // Lesson Info
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        lessonInfo['title'] ?? 'Lesson',
+                                        style: TextStyle(
+                                          fontSize: isSmallScreen
+                                              ? 14
+                                              : (isTablet ? 18 : 16),
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey[800],
+                                        ),
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      SizedBox(height: 4),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            'Lesson ${index + 1}',
+                                            style: TextStyle(
+                                              fontSize: isSmallScreen ? 12 : 14,
+                                              color: Colors.grey[600],
+                                            ),
+                                          ),
+                                          if (quizAttempted) ...[
+                                            SizedBox(width: 8),
+                                            Container(
+                                              padding: EdgeInsets.symmetric(
+                                                horizontal: isSmallScreen
+                                                    ? 4
+                                                    : 6,
+                                                vertical: 2,
+                                              ),
+                                              decoration: BoxDecoration(
+                                                color: getQuizButtonColor(
+                                                  lessonKey,
+                                                ).withOpacity(0.1),
+                                                borderRadius:
+                                                    BorderRadius.circular(6),
+                                                border: Border.all(
+                                                  color: getQuizButtonColor(
+                                                    lessonKey,
+                                                  ),
+                                                  width: 1,
+                                                ),
+                                              ),
+                                              child: Text(
+                                                'Score: ${quizScores[lessonKey]}/${totalQuestions[lessonKey]}',
+                                                style: TextStyle(
+                                                  color: getQuizButtonColor(
+                                                    lessonKey,
+                                                  ),
+                                                  fontSize: isSmallScreen
+                                                      ? 10
+                                                      : 12,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+
+                                // Completion Badge & Arrow
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    if (isCompleted)
+                                      Container(
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: isSmallScreen ? 6 : 8,
+                                          vertical: isSmallScreen ? 2 : 4,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: Colors.green,
+                                          borderRadius: BorderRadius.circular(
+                                            isSmallScreen ? 8 : 12,
+                                          ),
+                                        ),
+                                        child: Text(
+                                          'Done',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: isSmallScreen ? 10 : 12,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    SizedBox(width: 8),
+                                    Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: Colors.grey[400],
+                                      size: isSmallScreen ? 14 : 16,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+
+                            SizedBox(height: isSmallScreen ? 12 : 16),
+
+                            // Action Buttons Row
+                            Row(
+                              children: [
+                                // Quiz Button
+                                Expanded(
+                                  child: ElevatedButton.icon(
+                                    onPressed: () =>
+                                        takeQuiz(lessonKey, lessonInfo),
+                                    icon: Icon(
+                                      quizAttempted
+                                          ? Icons.refresh
+                                          : Icons.quiz,
+                                      size: isSmallScreen ? 16 : 18,
+                                    ),
+                                    label: Text(
+                                      getQuizButtonText(
+                                        lessonKey,
+                                        isSmallScreen,
+                                      ),
+                                      style: TextStyle(
+                                        fontSize: isSmallScreen ? 12 : 14,
+                                      ),
+                                    ),
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: getQuizButtonColor(
+                                        lessonKey,
+                                      ),
+                                      foregroundColor: Colors.white,
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: isSmallScreen ? 8 : 12,
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      elevation: 2,
+                                    ),
+                                  ),
+                                ),
+
+                                SizedBox(width: 12),
+
+                                // Mark Complete Button
+                                Expanded(
+                                  child: ElevatedButton.icon(
+                                    onPressed: (isCompleted || !quizAttempted)
+                                        ? null
+                                        : () => markAsCompleted(lessonKey),
+                                    icon: Icon(
+                                      isCompleted
+                                          ? Icons.check_circle
+                                          : Icons.check_circle_outline,
+                                      size: isSmallScreen ? 16 : 18,
+                                    ),
+                                    label: Text(
+                                      getCompletionButtonText(
+                                        lessonKey,
+                                        isCompleted,
+                                        isSmallScreen,
+                                      ),
+                                      style: TextStyle(
+                                        fontSize: isSmallScreen ? 12 : 14,
+                                      ),
+                                    ),
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: isCompleted
+                                          ? Colors.green[300]
+                                          : quizAttempted
+                                          ? Colors.green[600]
+                                          : Colors.grey[400],
+                                      foregroundColor: Colors.white,
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: isSmallScreen ? 8 : 12,
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      elevation: 2,
+                                    ),
                                   ),
                                 ),
                               ],
                             ),
-                          ),
-                          if (isCompleted)
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 8,
-                                vertical: 4,
-                              ),
-                              decoration: BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Text(
-                                'Completed',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          SizedBox(width: 8),
-                          Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.grey[400],
-                            size: 16,
-                          ),
-                        ],
+
+                            // Quiz Score Display (if attempted)
+                            // if (quizAttempted) ...[
+                            //   SizedBox(height: 8),
+                            //   Container(
+                            //     width: double.infinity,
+                            //     padding: EdgeInsets.symmetric(
+                            //       horizontal: 12,
+                            //       vertical: 6,
+                            //     ),
+                            //     decoration: BoxDecoration(
+                            //       color: getQuizButtonColor(lessonKey)
+                            //           .withOpacity(0.1),
+                            //       borderRadius: BorderRadius.circular(6),
+                            //       border: Border.all(
+                            //         color: getQuizButtonColor(lessonKey),
+                            //         width: 1,
+                            //       ),
+                            //     ),
+                            //     child: Text(
+                            //       'Quiz Score: ${quizScores[lessonKey]}/${totalQuestions[lessonKey]} (${((quizScores[lessonKey]! / totalQuestions[lessonKey]!) * 100).toStringAsFixed(0)}%)',
+                            //       style: TextStyle(
+                            //         color: getQuizButtonColor(lessonKey),
+                            //         fontSize: isSmallScreen ? 11 : 12,
+                            //         fontWeight: FontWeight.w600,
+                            //       ),
+                            //       textAlign: TextAlign.center,
+                            //     ),
+                            //   ),
+                            // ],
+
+                            // Info Message for non-attempted quizzes
+                            //   if (!quizAttempted && !isCompleted) ...[
+                            //     SizedBox(height: 8),
+                            //     Container(
+                            //       padding: EdgeInsets.all(8),
+                            //       decoration: BoxDecoration(
+                            //         color: Colors.amber[50],
+                            //         borderRadius: BorderRadius.circular(6),
+                            //         border: Border.all(
+                            //           color: Colors.amber[200]!,
+                            //           width: 1,
+                            //         ),
+                            //       ),
+                            //       child: Row(
+                            //         children: [
+                            //           Icon(
+                            //             Icons.info_outline,
+                            //             color: Colors.amber[700],
+                            //             size: 14,
+                            //           ),
+                            //           SizedBox(width: 8),
+                            //           Expanded(
+                            //             child: Text(
+                            //               'Complete the quiz to mark this lesson as finished',
+                            //               style: TextStyle(
+                            //                 color: Colors.amber[700],
+                            //                 fontSize: 11,
+                            //               ),
+                            //             ),
+                            //           ),
+                            //         ],
+                            //       ),
+                            //     ),
+                            //   ],
+                          ],
+                        ),
                       ),
-                      SizedBox(height: 16),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButton.icon(
-                              onPressed: () => takeQuiz(lessonKey, lessonInfo),
-                              icon: Icon(Icons.quiz),
-                              label: Text('Take Quiz'),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.blue[600],
-                                foregroundColor: Colors.white,
-                                padding: EdgeInsets.symmetric(vertical: 12),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 12),
-                          Expanded(
-                            child: ElevatedButton.icon(
-                              onPressed: isCompleted
-                                  ? null
-                                  : () => markAsCompleted(lessonKey),
-                              icon: Icon(
-                                isCompleted
-                                    ? Icons.check_circle
-                                    : Icons.check_circle_outline,
-                              ),
-                              label: Text(
-                                isCompleted ? 'Completed' : 'Mark Complete',
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: isCompleted
-                                    ? Colors.green[300]
-                                    : Colors.green[600],
-                                foregroundColor: Colors.white,
-                                padding: EdgeInsets.symmetric(vertical: 12),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ),
+                );
+              },
             );
           },
         ),
       ),
     );
   }
-  
 }
 
 class LessonDetailScreen extends StatefulWidget {
@@ -1711,11 +2076,12 @@ class _LessonQuizState extends State<LessonQuiz> {
   int score = 0;
   bool isQuizCompleted = false;
   bool isLoading = true;
+  bool isReviewMode = false;
   String? errorMessage;
-  String? selectedOption;
+  List<String?> selectedOptions = [];
 
   // Question distribution
-  final Map<String, int> questionCounts = {'Easy': 4, 'Medium': 4, 'Hard': 2};
+  final Map<String, int> questionCounts = {'Easy': 8, 'Medium': 7, 'Hard': 5};
 
   @override
   void initState() {
@@ -1750,16 +2116,21 @@ class _LessonQuizState extends State<LessonQuiz> {
             if (questionsByLevel.containsKey(level)) {
               for (var question in questions) {
                 if (question is Map<String, dynamic>) {
-                  // Normalize the question format
+                  // Normalize the question format - FIXED: Use consistent key naming
                   Map<String, dynamic> normalizedQuestion = {
                     'id': question['id'],
                     'question': question['question'],
                     'options': question['options'],
                     'correctAnswer':
-                        question['correct_answer'], // Note: using correct_answer from JSON
+                        question['correct_answer'] ??
+                        question['correctAnswer'], // Handle both formats
                     'level': level,
                     'grammar_type': question['grammar_type'] ?? '',
                   };
+
+                  // Debug print to check if correct answer is being loaded
+                  //print('Loading question ${question['id']}: correctAnswer = ${normalizedQuestion['correctAnswer']}');
+
                   questionsByLevel[level]!.add(normalizedQuestion);
                 }
               }
@@ -1811,23 +2182,38 @@ class _LessonQuizState extends State<LessonQuiz> {
 
     // Initialize user answers list
     userAnswers = List.filled(selectedQuestions.length, null);
+    selectedOptions = List.filled(selectedQuestions.length, null);
   }
 
   void handleAnswerSelected(String selectedAnswer) {
-    // Store user's answer
+    setState(() {
+      selectedOptions[currentQuestionIndex] = selectedAnswer;
+    });
+  }
+
+  void handleNextPressed() {
+    final selectedAnswer = selectedOptions[currentQuestionIndex];
+    final correctAnswer =
+        selectedQuestions[currentQuestionIndex]['correctAnswer'];
+
+    // Store the user's answer
     userAnswers[currentQuestionIndex] = selectedAnswer;
 
-    // Check if answer is correct
-    final correct = selectedQuestions[currentQuestionIndex]['correctAnswer'];
-    if (selectedAnswer == correct) {
+    // Debug print to check answers
+    //print('Question ${currentQuestionIndex + 1}: Selected = $selectedAnswer, Correct = $correctAnswer');
+
+    if (selectedAnswer == correctAnswer) {
       score++;
     }
 
-    // Move to next question or complete quiz
     if (currentQuestionIndex < selectedQuestions.length - 1) {
-      setState(() => currentQuestionIndex++);
+      setState(() {
+        currentQuestionIndex++;
+      });
     } else {
-      setState(() => isQuizCompleted = true);
+      setState(() {
+        isQuizCompleted = true;
+      });
     }
   }
 
@@ -1840,6 +2226,7 @@ class _LessonQuizState extends State<LessonQuiz> {
       currentQuestionIndex = 0;
       score = 0;
       isQuizCompleted = false;
+      isReviewMode = false; // Reset review mode
     });
     _selectRandomQuestions();
   }
@@ -1850,9 +2237,11 @@ class _LessonQuizState extends State<LessonQuiz> {
     if (errorMessage != null || selectedQuestions.isEmpty) {
       return _buildErrorScreen();
     }
+    if (isReviewMode) return _buildReviewScreen();
     if (isQuizCompleted) return _buildResultScreen();
 
     final current = selectedQuestions[currentQuestionIndex];
+    final selected = selectedOptions[currentQuestionIndex];
 
     return Scaffold(
       appBar: AppBar(
@@ -1864,14 +2253,14 @@ class _LessonQuizState extends State<LessonQuiz> {
       ),
       body: Column(
         children: [
-          // Progress indicator
+          // Progress bar
           LinearProgressIndicator(
             value: (currentQuestionIndex + 1) / selectedQuestions.length,
             backgroundColor: Colors.grey[300],
             valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF8A2BE2)),
           ),
 
-          // Level indicator
+          // Level + Grammar Type
           Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -1915,6 +2304,7 @@ class _LessonQuizState extends State<LessonQuiz> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      // Question text
                       Text(
                         current['question'] ?? 'Question not available',
                         style: const TextStyle(
@@ -1923,20 +2313,18 @@ class _LessonQuizState extends State<LessonQuiz> {
                         ),
                       ),
                       const SizedBox(height: 20),
+
+                      // Options
                       Expanded(
                         child: ListView.builder(
-                          itemCount:
-                              (current['options'] as List<dynamic>?)?.length ??
-                              0,
+                          itemCount: current['options'].length,
                           itemBuilder: (context, index) {
-                            final options = current['options'] as List<dynamic>;
-                            final option = options[index].toString();
+                            final option = current['options'][index];
+                            final isSelected = selected == option;
 
-                            final isSelected = selectedOption == option;
                             return Container(
                               margin: const EdgeInsets.only(bottom: 12),
                               child: Card(
-                                elevation: 2,
                                 color: isSelected
                                     ? const Color(0xFF8A2BE2).withOpacity(0.2)
                                     : Colors.white,
@@ -1977,7 +2365,6 @@ class _LessonQuizState extends State<LessonQuiz> {
                                                     ? Colors.white
                                                     : const Color(0xFF8A2BE2),
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 16,
                                               ),
                                             ),
                                           ),
@@ -2006,6 +2393,38 @@ class _LessonQuizState extends State<LessonQuiz> {
                           },
                         ),
                       ),
+
+                      // Show "Next" button only when an option is selected
+                      if (selected != null)
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 10,
+                          ),
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: ElevatedButton(
+                              onPressed: handleNextPressed,
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xFF8A2BE2),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 24,
+                                  vertical: 12,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                              child: const Text(
+                                'Next',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                     ],
                   ),
                 ),
@@ -2013,6 +2432,239 @@ class _LessonQuizState extends State<LessonQuiz> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildReviewScreen() {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Review Your Answers',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: const Color(0xFF8A2BE2),
+        iconTheme: const IconThemeData(color: Colors.white),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            setState(() {
+              isReviewMode = false; // Go back to result screen
+            });
+          },
+        ),
+      ),
+      body: ListView.builder(
+        padding: const EdgeInsets.all(16),
+        itemCount: selectedQuestions.length,
+        itemBuilder: (context, index) {
+          final question = selectedQuestions[index];
+          final userSelected =
+              userAnswers[index]; // Use userAnswers instead of selectedOptions
+          final correctAnswer = question['correctAnswer'];
+          final isCorrect = userSelected == correctAnswer;
+
+          // Debug print for each question
+          print(
+            'Review Q${index + 1} → User: $userSelected | Correct: $correctAnswer | IsCorrect: $isCorrect',
+          );
+
+          return Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            elevation: 5,
+            margin: const EdgeInsets.only(bottom: 24),
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Question header with result indicator
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Q${index + 1}: ${question['question']}',
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 6,
+                        ),
+                        decoration: BoxDecoration(
+                          color: isCorrect
+                              ? Colors.green.withOpacity(0.1)
+                              : Colors.red.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: isCorrect ? Colors.green : Colors.red,
+                            width: 1,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              isCorrect ? Icons.check_circle : Icons.cancel,
+                              color: isCorrect ? Colors.green : Colors.red,
+                              size: 16,
+                            ),
+                            const SizedBox(width: 4),
+                            Text(
+                              isCorrect ? 'Correct' : 'Wrong',
+                              style: TextStyle(
+                                color: isCorrect ? Colors.green : Colors.red,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+
+                  // Options list
+                  ListView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: question['options'].length,
+                    itemBuilder: (context, optIndex) {
+                      final option = question['options'][optIndex];
+                      final isUserSelected = userSelected == option;
+                      final isCorrectAnswer = correctAnswer == option;
+
+                      Color bgColor = Colors.white;
+                      Color borderColor = Colors.grey.shade300;
+                      Color textColor = Colors.black;
+                      IconData? icon;
+
+                      // Determine colors and icons based on answer status
+                      if (isCorrectAnswer) {
+                        // This is the correct answer
+                        bgColor = Colors.green[50]!;
+                        borderColor = Colors.green;
+                        textColor = Colors.green[800]!;
+                        icon = Icons.check_circle;
+                      } else if (isUserSelected && !isCorrectAnswer) {
+                        // User selected this wrong answer
+                        bgColor = Colors.red[50]!;
+                        borderColor = Colors.red;
+                        textColor = Colors.red[800]!;
+                        icon = Icons.cancel;
+                      }
+
+                      return Container(
+                        margin: const EdgeInsets.only(bottom: 12),
+                        child: Card(
+                          color: bgColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            side: BorderSide(color: borderColor, width: 2),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(16),
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 32,
+                                  height: 32,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                      color: const Color(0xFF8A2BE2),
+                                      width: 2,
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      String.fromCharCode(65 + optIndex),
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(0xFF8A2BE2),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(width: 16),
+                                Expanded(
+                                  child: Text(
+                                    option,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight:
+                                          (isUserSelected || isCorrectAnswer)
+                                          ? FontWeight.bold
+                                          : FontWeight.normal,
+                                      color: textColor,
+                                    ),
+                                  ),
+                                ),
+                                if (icon != null) ...[
+                                  const SizedBox(width: 8),
+                                  Icon(
+                                    icon,
+                                    color: isCorrectAnswer
+                                        ? Colors.green
+                                        : Colors.red,
+                                    size: 20,
+                                  ),
+                                ],
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+
+                  // Show user's answer if it was wrong
+                  if (!isCorrect && userSelected != null) ...[
+                    const SizedBox(height: 12),
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.blue[50],
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.blue[200]!),
+                      ),
+                      child: Row(
+                        children: [
+                          Icon(Icons.person, color: Colors.blue[600], size: 16),
+                          const SizedBox(width: 8),
+                          Text(
+                            'Your answer: ',
+                            style: TextStyle(
+                              color: Colors.blue[600],
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                            ),
+                          ),
+                          Expanded(
+                            child: Text(
+                              userSelected,
+                              style: TextStyle(
+                                color: Colors.blue[800],
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          );
+        },
       ),
     );
   }
@@ -2111,15 +2763,6 @@ class _LessonQuizState extends State<LessonQuiz> {
                       ),
                       child: Column(
                         children: [
-                          // Icon
-                          // Icon(
-                          //   icon, // fallback icon
-                          //   size:
-                          //       isVerySmallScreen ? 80 : (isSmallScreen ? 90 : 100),
-                          //   color: color,
-                          // ),
-                          // SizedBox(height: isVerySmallScreen ? 8 : 12),
-
                           // Feedback Text
                           Text(
                             feedback,
@@ -2249,6 +2892,39 @@ class _LessonQuizState extends State<LessonQuiz> {
                           SizedBox(
                             width: double.infinity,
                             child: ElevatedButton.icon(
+                              onPressed: () {
+                                setState(() {
+                                  isReviewMode = true;
+                                });
+                              },
+                              icon: const Icon(
+                                Icons.visibility,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                              label: const Text(
+                                "Review Answers",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue,
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 16,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                elevation: 3,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 16),
+                          SizedBox(
+                            width: double.infinity,
+                            child: ElevatedButton.icon(
                               onPressed: _restartQuiz,
                               icon: const Icon(
                                 Icons.refresh,
@@ -2313,6 +2989,43 @@ class _LessonQuizState extends State<LessonQuiz> {
                             child: Padding(
                               padding: const EdgeInsets.only(right: 8),
                               child: ElevatedButton.icon(
+                                onPressed: () {
+                                  setState(() {
+                                    isReviewMode = true;
+                                  });
+                                },
+                                icon: Icon(
+                                  Icons.visibility,
+                                  color: Colors.white,
+                                  size: isSmallScreen ? 20 : 24,
+                                ),
+                                label: Text(
+                                  "Review",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: isSmallScreen ? 14 : 16,
+                                  ),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.blue,
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: isSmallScreen ? 16 : 24,
+                                    vertical: isSmallScreen ? 12 : 16,
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  elevation: 3,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 4,
+                              ),
+                              child: ElevatedButton.icon(
                                 onPressed: _restartQuiz,
                                 icon: Icon(
                                   Icons.refresh,
@@ -2351,7 +3064,7 @@ class _LessonQuizState extends State<LessonQuiz> {
                                   size: isSmallScreen ? 20 : 24,
                                 ),
                                 label: Text(
-                                  "Back to Lesson",
+                                  "Back",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: isSmallScreen ? 14 : 16,

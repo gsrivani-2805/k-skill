@@ -1,4 +1,3 @@
-
 {
   "grammar_quiz": [
     {
@@ -6,423 +5,353 @@
       "questions": [
         {
           "id": 1,
-          "question": "A pronoun is a word that replaces a ____.",
-          "options": ["verb", "noun", "adjective", "preposition"],
-          "correct_answer": "noun",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'happy'?",
+          "options": ["joyful", "glad", "sad", "content"],
+          "correct_answer": "sad",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 2,
-          "question": "Which word is a pronoun in the sentence: 'She is a good student.'?",
-          "options": ["good", "student", "is", "She"],
-          "correct_answer": "She",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'hot'?",
+          "options": ["warm", "sunny", "cold", "burning"],
+          "correct_answer": "cold",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 3,
-          "question": "Choose the correct pronoun: ____ am going to school.",
-          "options": ["He", "She", "I", "It"],
-          "correct_answer": "I",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'big'?",
+          "options": ["large", "huge", "small", "giant"],
+          "correct_answer": "small",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 4,
-          "question": "Ravi is a good boy. ____ respects his elders.",
-          "options": ["She", "He", "They", "We"],
-          "correct_answer": "He",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'fast'?",
+          "options": ["quick", "rapid", "swift", "slow"],
+          "correct_answer": "slow",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 5,
-          "question": "The teacher gave the book to ____.",
-          "options": ["I", "he", "me", "she"],
-          "correct_answer": "me",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'day'?",
+          "options": ["morning", "light", "night", "sun"],
+          "correct_answer": "night",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 6,
-          "question": "Which pronoun would you use for 'the students'?",
-          "options": ["He", "She", "It", "They"],
-          "correct_answer": "They",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'up'?",
+          "options": ["down", "over", "above", "on"],
+          "correct_answer": "down",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 7,
-          "question": "The dog is sleeping. ____ is tired.",
-          "options": ["It", "She", "He", "They"],
-          "correct_answer": "It",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'good'?",
+          "options": ["great", "nice", "bad", "fine"],
+          "correct_answer": "bad",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 8,
-          "question": "My friends and I are playing. ____ are having fun.",
-          "options": ["You", "They", "We", "He"],
-          "correct_answer": "We",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'black'?",
+          "options": ["dark", "white", "grey", "blue"],
+          "correct_answer": "white",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 9,
-          "question": "Please give the pen to ____.",
-          "options": ["he", "she", "him", "they"],
-          "correct_answer": "him",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'tall'?",
+          "options": ["high", "long", "short", "big"],
+          "correct_answer": "short",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 10,
-          "question": "Sita is my sister. I love ____ very much.",
-          "options": ["her", "she", "him", "he"],
-          "correct_answer": "her",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'clean'?",
+          "options": ["tidy", "neat", "dirty", "fresh"],
+          "correct_answer": "dirty",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 11,
-          "question": "Identify the pronoun: 'We saw them at the park.'",
-          "options": ["saw", "park", "We", "at"],
-          "correct_answer": "We",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'in'?",
+          "options": ["on", "under", "out", "inside"],
+          "correct_answer": "out",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 12,
-          "question": "Choose the correct pronoun: ____ are my best friend.",
-          "options": ["He", "She", "They", "You"],
-          "correct_answer": "You",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'on'?",
+          "options": ["in", "off", "over", "at"],
+          "correct_answer": "off",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 13,
-          "question": "The children are playing outside. The teacher is watching ____.",
-          "options": ["they", "them", "we", "us"],
-          "correct_answer": "them",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'empty'?",
+          "options": ["full", "vacant", "bare", "clear"],
+          "correct_answer": "full",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 14,
-          "question": "My father is a doctor. ____ works in a hospital.",
-          "options": ["He", "Him", "She", "Her"],
-          "correct_answer": "He",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'right' (correct)?",
+          "options": ["left", "wrong", "true", "good"],
+          "correct_answer": "wrong",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 15,
-          "question": "This is a new car. ____ is red.",
-          "options": ["She", "He", "It", "They"],
-          "correct_answer": "It",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'old' (not new)?",
+          "options": ["ancient", "aged", "new", "senior"],
+          "correct_answer": "new",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 16,
-          "question": "My family and I live here. This is our house. ____ live here.",
-          "options": ["They", "You", "We", "It"],
-          "correct_answer": "We",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'young'?",
+          "options": ["new", "fresh", "child", "old"],
+          "correct_answer": "old",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 17,
-          "question": "The cat drank the milk. ____ was thirsty.",
-          "options": ["He", "She", "They", "It"],
-          "correct_answer": "It",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'hard'?",
+          "options": ["difficult", "firm", "soft", "solid"],
+          "correct_answer": "soft",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 18,
-          "question": "My mother is cooking. ____ is in the kitchen.",
-          "options": ["He", "She", "It", "They"],
-          "correct_answer": "She",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'wet'?",
+          "options": ["damp", "moist", "dry", "soaked"],
+          "correct_answer": "dry",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 19,
-          "question": "The boys are shouting. Can you ask ____ to be quiet?",
-          "options": ["they", "them", "he", "him"],
-          "correct_answer": "them",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'rich'?",
+          "options": ["wealthy", "affluent", "poor", "loaded"],
+          "correct_answer": "poor",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 20,
-          "question": "I have a brother. ____ is older than me.",
-          "options": ["He", "Him", "She", "Her"],
-          "correct_answer": "He",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'strong'?",
+          "options": ["powerful", "mighty", "weak", "sturdy"],
+          "correct_answer": "weak",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 21,
-          "question": "This is for ____. Please take it.",
-          "options": ["I", "we", "you", "he"],
-          "correct_answer": "you",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'love'?",
+          "options": ["like", "adore", "hate", "care"],
+          "correct_answer": "hate",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 22,
-          "question": "I can see you. Can you see ____?",
-          "options": ["I", "me", "my", "mine"],
-          "correct_answer": "me",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'friend'?",
+          "options": ["pal", "buddy", "companion", "enemy"],
+          "correct_answer": "enemy",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 23,
-          "question": "Which word is a pronoun?",
-          "options": ["run", "sad", "they", "and"],
-          "correct_answer": "they",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'start'?",
+          "options": ["begin", "commence", "finish", "launch"],
+          "correct_answer": "finish",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 24,
-          "question": "Replace the underlined noun with a pronoun: <u>The flowers</u> are beautiful.",
-          "options": ["He", "She", "It", "They"],
-          "correct_answer": "They",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'win'?",
+          "options": ["succeed", "triumph", "lose", "conquer"],
+          "correct_answer": "lose",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 25,
-          "question": "We are a team. The victory is for ____.",
-          "options": ["we", "our", "ours", "us"],
-          "correct_answer": "us",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'give'?",
+          "options": ["offer", "provide", "receive", "donate"],
+          "correct_answer": "receive",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 26,
-          "question": "My name is Priya. ____ am a student.",
-          "options": ["You", "She", "I", "He"],
-          "correct_answer": "I",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'buy'?",
+          "options": ["purchase", "sell", "get", "obtain"],
+          "correct_answer": "sell",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 27,
-          "question": "My parents are not home. ____ went to the market.",
-          "options": ["He", "She", "They", "We"],
-          "correct_answer": "They",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'come'?",
+          "options": ["arrive", "appear", "go", "enter"],
+          "correct_answer": "go",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 28,
-          "question": "This is my book. Give ____ to me.",
-          "options": ["it", "he", "she", "they"],
-          "correct_answer": "it",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'laugh'?",
+          "options": ["smile", "giggle", "cry", "chuckle"],
+          "correct_answer": "cry",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 29,
-          "question": "I told ____ a secret.",
-          "options": ["she", "her", "he", "they"],
-          "correct_answer": "her",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'light' (not heavy)?",
+          "options": ["dark", "bright", "heavy", "soft"],
+          "correct_answer": "heavy",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 30,
-          "question": "Which of these is a pronoun?",
-          "options": ["John", "walks", "him", "happy"],
-          "correct_answer": "him",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'light' (not dark)?",
+          "options": ["heavy", "dark", "bright", "soft"],
+          "correct_answer": "dark",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 31,
-          "question": "____ is a rainy day.",
-          "options": ["He", "She", "It", "They"],
-          "correct_answer": "It",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'easy'?",
+          "options": ["simple", "effortless", "difficult", "plain"],
+          "correct_answer": "difficult",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 32,
-          "question": "Raju and I are brothers. ____ play cricket together.",
-          "options": ["They", "He", "You", "We"],
-          "correct_answer": "We",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'push'?",
+          "options": ["shove", "press", "pull", "drag"],
+          "correct_answer": "pull",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 33,
-          "question": "The girl is crying. What happened to ____?",
-          "options": ["she", "her", "he", "him"],
-          "correct_answer": "her",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'open'?",
+          "options": ["shut", "begin", "start", "unseal"],
+          "correct_answer": "shut",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 34,
-          "question": "I have two pencils. ____ are new.",
-          "options": ["It", "Them", "They", "This"],
-          "correct_answer": "They",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'true'?",
+          "options": ["correct", "right", "false", "real"],
+          "correct_answer": "false",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 35,
-          "question": "My father bought a gift for ____.",
-          "options": ["I", "me", "my", "mine"],
-          "correct_answer": "me",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'quiet'?",
+          "options": ["silent", "calm", "loud", "peaceful"],
+          "correct_answer": "loud",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 36,
-          "question": "____ are listening to music.",
-          "options": ["Them", "They", "Him", "Her"],
-          "correct_answer": "They",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'beautiful'?",
+          "options": ["pretty", "lovely", "gorgeous", "ugly"],
+          "correct_answer": "ugly",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 37,
-          "question": "I have a pet cat. ____ is very playful.",
-          "options": ["He", "She", "It", "Any of the above"],
-          "correct_answer": "Any of the above",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'early'?",
+          "options": ["soon", "late", "prompt", "quick"],
+          "correct_answer": "late",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 38,
-          "question": "The teacher praised ____ for our hard work.",
-          "options": ["we", "our", "us", "ours"],
-          "correct_answer": "us",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'first'?",
+          "options": ["last", "start", "one", "initial"],
+          "correct_answer": "last",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 39,
-          "question": "He fell down, so I helped ____.",
-          "options": ["he", "his", "him", "I"],
-          "correct_answer": "him",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'front'?",
+          "options": ["face", "back", "top", "side"],
+          "correct_answer": "back",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 40,
-          "question": "What is the pronoun in: 'You are very kind.'?",
-          "options": ["are", "very", "kind", "You"],
-          "correct_answer": "You",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'boy'?",
+          "options": ["man", "girl", "son", "male"],
+          "correct_answer": "girl",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 41,
-          "question": "Replace the underlined noun: 'Can you see <u>Ram</u>?'",
-          "options": ["he", "him", "his", "she"],
-          "correct_answer": "him",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'king'?",
+          "options": ["ruler", "prince", "queen", "emperor"],
+          "correct_answer": "queen",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 42,
-          "question": "____ is my grandmother.",
-          "options": ["He", "She", "They", "We"],
-          "correct_answer": "She",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'smooth'?",
+          "options": ["even", "flat", "rough", "polished"],
+          "correct_answer": "rough",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 43,
-          "question": "Our teacher told ____ a story.",
-          "options": ["we", "us", "our", "ours"],
-          "correct_answer": "us",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'sweet'?",
+          "options": ["sugary", "tasty", "sour", "delicious"],
+          "correct_answer": "sour",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 44,
-          "question": "The birds are flying. Look at ____.",
-          "options": ["they", "them", "it", "us"],
-          "correct_answer": "them",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'top'?",
+          "options": ["peak", "summit", "bottom", "head"],
+          "correct_answer": "bottom",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 45,
-          "question": "My name is Aman and your name is Rohit. ____ are friends.",
-          "options": ["They", "You", "We", "He"],
-          "correct_answer": "We",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'above'?",
+          "options": ["over", "below", "on", "up"],
+          "correct_answer": "below",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 46,
-          "question": "Which of these is a subject pronoun?",
-          "options": ["me", "him", "us", "I"],
-          "correct_answer": "I",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'after'?",
+          "options": ["next", "later", "before", "then"],
+          "correct_answer": "before",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 47,
-          "question": "Which of these is an object pronoun?",
-          "options": ["he", "she", "they", "her"],
-          "correct_answer": "her",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'brave'?",
+          "options": ["courageous", "bold", "afraid", "daring"],
+          "correct_answer": "afraid",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 48,
-          "question": "____ are from the same village.",
-          "options": ["Them", "They", "Us", "Him"],
-          "correct_answer": "They",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'polite'?",
+          "options": ["courteous", "rude", "nice", "kind"],
+          "correct_answer": "rude",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 49,
-          "question": "She invited ____ to her party.",
-          "options": ["I", "we", "he", "us"],
-          "correct_answer": "us",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'awake'?",
+          "options": ["asleep", "alert", "conscious", "active"],
+          "correct_answer": "asleep",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 50,
-          "question": "The chair is broken. ____ needs to be fixed.",
-          "options": ["He", "She", "It", "They"],
-          "correct_answer": "It",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 51,
-          "question": "____ like to play football.",
-          "options": ["Him", "Her", "Me", "He"],
-          "correct_answer": "He",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 52,
-          "question": "Can ____ help me?",
-          "options": ["you", "your", "yours", "I"],
-          "correct_answer": "you",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 53,
-          "question": "Riya is not well. I will visit ____ today.",
-          "options": ["she", "her", "hers", "he"],
-          "correct_answer": "her",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 54,
-          "question": "My friends are waiting for ____.",
-          "options": ["I", "me", "my", "mine"],
-          "correct_answer": "me",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 55,
-          "question": "The sun gives ____ light and heat.",
-          "options": ["we", "our", "ours", "us"],
-          "correct_answer": "us",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 56,
-          "question": "The puppy is lost. Can you find ____?",
-          "options": ["he", "she", "they", "it"],
-          "correct_answer": "it",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 57,
-          "question": "____ want to be a scientist.",
-          "options": ["Me", "My", "I", "Mine"],
-          "correct_answer": "I",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 58,
-          "question": "I saw Anil and Sunil. I spoke to ____.",
-          "options": ["they", "them", "their", "theirs"],
-          "correct_answer": "them",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 59,
-          "question": "Is that your mother? Yes, that is ____.",
-          "options": ["her", "she", "hers", "he"],
-          "correct_answer": "she",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 60,
-          "question": "The story was very interesting. ____ read it twice.",
-          "options": ["Me", "I", "My", "Mine"],
-          "correct_answer": "I",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'answer'?",
+          "options": ["reply", "respond", "question", "solution"],
+          "correct_answer": "question",
+          "grammar_type": "Antonyms"
         }
       ]
     },
@@ -430,354 +359,354 @@
       "level": "Medium",
       "questions": [
         {
+          "id": 51,
+          "question": "What is the antonym of 'ancient'?",
+          "options": ["old", "aged", "modern", "historic"],
+          "correct_answer": "modern",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 52,
+          "question": "What is the antonym of 'accept'?",
+          "options": ["receive", "agree", "refuse", "take"],
+          "correct_answer": "refuse",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 53,
+          "question": "What is the antonym of 'victory'?",
+          "options": ["triumph", "success", "defeat", "win"],
+          "correct_answer": "defeat",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 54,
+          "question": "What is the antonym of 'joy'?",
+          "options": ["happiness", "delight", "sorrow", "glee"],
+          "correct_answer": "sorrow",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 55,
+          "question": "What is the antonym of 'remember'?",
+          "options": ["recall", "remind", "forget", "memorize"],
+          "correct_answer": "forget",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 56,
+          "question": "What is the antonym of 'presence'?",
+          "options": ["attendance", "company", "absence", "being"],
+          "correct_answer": "absence",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 57,
+          "question": "What is the antonym of 'difficult'?",
+          "options": ["hard", "challenging", "tough", "simple"],
+          "correct_answer": "simple",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 58,
+          "question": "What is the antonym of 'generous'?",
+          "options": ["kind", "giving", "selfish", "charitable"],
+          "correct_answer": "selfish",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 59,
+          "question": "What is the antonym of 'wise'?",
+          "options": ["intelligent", "smart", "foolish", "clever"],
+          "correct_answer": "foolish",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 60,
+          "question": "What is the antonym of 'success'?",
+          "options": ["achievement", "failure", "triumph", "progress"],
+          "correct_answer": "failure",
+          "grammar_type": "Antonyms"
+        },
+        {
           "id": 61,
-          "question": "This book is not yours, it is ____.",
-          "options": ["my", "me", "I", "mine"],
-          "correct_answer": "mine",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'peace'?",
+          "options": ["calm", "harmony", "war", "tranquility"],
+          "correct_answer": "war",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 62,
-          "question": "The boy hurt ____ while playing.",
-          "options": ["him", "he", "himself", "his"],
-          "correct_answer": "himself",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'create'?",
+          "options": ["make", "build", "form", "destroy"],
+          "correct_answer": "destroy",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 63,
-          "question": "____ is the captain of the team?",
-          "options": ["What", "Which", "Who", "Whom"],
-          "correct_answer": "Who",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'arrive'?",
+          "options": ["come", "reach", "depart", "show up"],
+          "correct_answer": "depart",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 64,
-          "question": "____ is that building over there?",
-          "options": ["This", "That", "These", "Those"],
-          "correct_answer": "That",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'admit'?",
+          "options": ["confess", "deny", "acknowledge", "accept"],
+          "correct_answer": "deny",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 65,
-          "question": "We decorated the house all by ____.",
-          "options": ["us", "our", "ours", "ourselves"],
-          "correct_answer": "ourselves",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'courage'?",
+          "options": ["bravery", "valor", "fear", "boldness"],
+          "correct_answer": "fear",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 66,
-          "question": "I have a blue pen and a red pen. ____ one do you want?",
-          "options": ["Which", "Who", "What", "Whose"],
-          "correct_answer": "Which",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'expand'?",
+          "options": ["grow", "enlarge", "increase", "contract"],
+          "correct_answer": "contract",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 67,
-          "question": "The house is ____. They bought it last year.",
-          "options": ["their", "them", "theirs", "they"],
-          "correct_answer": "theirs",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'wise'?",
+          "options": ["intelligent", "knowledgeable", "ignorant", "sensible"],
+          "correct_answer": "ignorant",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 68,
-          "question": "The students must complete the homework ____.",
-          "options": ["themselves", "themself", "them", "their"],
-          "correct_answer": "themselves",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'praise'?",
+          "options": ["applaud", "compliment", "criticize", "commend"],
+          "correct_answer": "criticize",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 69,
-          "question": "____ are the keys I was looking for.",
-          "options": ["This", "That", "These", "Those"],
-          "correct_answer": "These",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'permit'?",
+          "options": ["allow", "let", "forbid", "authorize"],
+          "correct_answer": "forbid",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 70,
-          "question": "To ____ did you give the letter?",
-          "options": ["who", "whom", "whose", "what"],
-          "correct_answer": "whom",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'kind'?",
+          "options": ["caring", "gentle", "cruel", "thoughtful"],
+          "correct_answer": "cruel",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 71,
-          "question": "The cat is washing ____.",
-          "options": ["it", "its", "itself", "it's"],
-          "correct_answer": "itself",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'temporary'?",
+          "options": ["short-term", "brief", "permanent", "passing"],
+          "correct_answer": "permanent",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 72,
-          "question": "That scooter is not his, it is ____.",
-          "options": ["she", "her", "hers", "herself"],
-          "correct_answer": "hers",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'common'?",
+          "options": ["usual", "ordinary", "rare", "frequent"],
+          "correct_answer": "rare",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 73,
-          "question": "Priya, you should do your work ____.",
-          "options": ["you", "your", "yours", "yourself"],
-          "correct_answer": "yourself",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'major'?",
+          "options": ["big", "significant", "main", "minor"],
+          "correct_answer": "minor",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 74,
-          "question": "____ book is this on the table?",
-          "options": ["Who", "Whom", "Whose", "Which"],
-          "correct_answer": "Whose",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'sharp'?",
+          "options": ["pointed", "keen", "blunt", "acute"],
+          "correct_answer": "blunt",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 75,
-          "question": "He told my sister and ____ to wait.",
-          "options": ["I", "me", "myself", "mine"],
-          "correct_answer": "me",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'lead'?",
+          "options": ["guide", "direct", "follow", "command"],
+          "correct_answer": "follow",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 76,
-          "question": "The credit for this success is all ____.",
-          "options": ["your", "you", "yours", "yourself"],
-          "correct_answer": "yours",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'include'?",
+          "options": ["contain", "involve", "exclude", "comprise"],
+          "correct_answer": "exclude",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 77,
-          "question": "I made this cake ____.",
-          "options": ["me", "my", "mine", "myself"],
-          "correct_answer": "myself",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'humble'?",
+          "options": ["modest", "meek", "proud", "simple"],
+          "correct_answer": "proud",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 78,
-          "question": "____ of these colours do you like the most?",
-          "options": ["Who", "What", "Which", "Whom"],
-          "correct_answer": "Which",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'innocent'?",
+          "options": ["guilty", "blameless", "pure", "sinless"],
+          "correct_answer": "guilty",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 79,
-          "question": "____ was the best movie you have ever seen?",
-          "options": ["Who", "What", "Which", "Whose"],
-          "correct_answer": "What",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'demand'?",
+          "options": ["request", "require", "supply", "claim"],
+          "correct_answer": "supply",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 80,
-          "question": "She looked at ____ in the mirror.",
-          "options": ["her", "she", "hers", "herself"],
-          "correct_answer": "herself",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'famous'?",
+          "options": ["renowned", "well-known", "unknown", "celebrated"],
+          "correct_answer": "unknown",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 81,
-          "question": "Is this your bag or ____?",
-          "options": ["him", "he", "his", "himself"],
-          "correct_answer": "his",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'boring'?",
+          "options": ["dull", "tedious", "interesting", "tiresome"],
+          "correct_answer": "interesting",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 82,
-          "question": "____ are the mountains I climbed last year.",
-          "options": ["This", "That", "These", "Those"],
-          "correct_answer": "Those",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'maximum'?",
+          "options": ["most", "greatest", "highest", "minimum"],
+          "correct_answer": "minimum",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 83,
-          "question": "The students cleaned the classroom ____.",
-          "options": ["themself", "themselves", "theirselves", "them"],
-          "correct_answer": "themselves",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'entrance'?",
+          "options": ["entry", "door", "exit", "gate"],
+          "correct_answer": "exit",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 84,
-          "question": "The decision is ____, not mine.",
-          "options": ["their", "them", "they", "theirs"],
-          "correct_answer": "theirs",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'voluntary'?",
+          "options": ["willing", "optional", "compulsory", "unpaid"],
+          "correct_answer": "compulsory",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 85,
-          "question": "He ____ said that he was wrong.",
-          "options": ["him", "himself", "he", "his"],
-          "correct_answer": "himself",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'hope'?",
+          "options": ["wish", "desire", "despair", "optimism"],
+          "correct_answer": "despair",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 86,
-          "question": "This is our car. The car is ____.",
-          "options": ["we", "us", "our", "ours"],
-          "correct_answer": "ours",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'bravery'?",
+          "options": ["courage", "valor", "cowardice", "heroism"],
+          "correct_answer": "cowardice",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 87,
-          "question": "____ is responsible for this project?",
-          "options": ["Who", "Whom", "Whose", "What"],
-          "correct_answer": "Who",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'knowledge'?",
+          "options": ["wisdom", "learning", "ignorance", "understanding"],
+          "correct_answer": "ignorance",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 88,
-          "question": "She bought a gift for ____.",
-          "options": ["hisself", "himself", "him", "he"],
-          "correct_answer": "himself",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'friendship'?",
+          "options": ["companionship", "enmity", "amity", "harmony"],
+          "correct_answer": "enmity",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 89,
-          "question": "All the books on this shelf are ____.",
-          "options": ["my", "me", "I", "mine"],
-          "correct_answer": "mine",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'lazy'?",
+          "options": ["idle", "inactive", "diligent", "sluggish"],
+          "correct_answer": "diligent",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 90,
-          "question": "My little sister can dress ____ now.",
-          "options": ["her", "herself", "she", "hers"],
-          "correct_answer": "herself",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'noisy'?",
+          "options": ["loud", "boisterous", "silent", "clamorous"],
+          "correct_answer": "silent",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 91,
-          "question": "____ is the matter?",
-          "options": ["Who", "Which", "Whose", "What"],
-          "correct_answer": "What",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'victory'?",
+          "options": ["triumph", "success", "conquest", "failure"],
+          "correct_answer": "failure",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 92,
-          "question": "Which sentence is correct?",
-          "options": ["She gave the book to I.", "She gave the book to me.", "She gave the book to myself.", "She gave the book to mine."],
-          "correct_answer": "She gave the book to me.",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'careful'?",
+          "options": ["cautious", "watchful", "careless", "prudent"],
+          "correct_answer": "careless",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 93,
-          "question": "The victory is ____.",
-          "options": ["our", "ours", "us", "we"],
-          "correct_answer": "ours",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'honest'?",
+          "options": ["truthful", "sincere", "dishonest", "frank"],
+          "correct_answer": "dishonest",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 94,
-          "question": "He saw a reflection of ____ in the water.",
-          "options": ["him", "he", "himself", "his"],
-          "correct_answer": "himself",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'visible'?",
+          "options": ["seen", "clear", "invisible", "apparent"],
+          "correct_answer": "invisible",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 95,
-          "question": "The prize will be given to ____ finishes first.",
-          "options": ["whoever", "whomever", "whichever", "whatever"],
-          "correct_answer": "whoever",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'bless'?",
+          "options": ["praise", "curse", "honor", "thank"],
+          "correct_answer": "curse",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 96,
-          "question": "____ of the two roads should we take?",
-          "options": ["What", "Which", "Who", "Whose"],
-          "correct_answer": "Which",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'attack'?",
+          "options": ["assault", "invade", "defend", "charge"],
+          "correct_answer": "defend",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 97,
-          "question": "He has his opinion and I have ____.",
-          "options": ["me", "my", "I", "mine"],
-          "correct_answer": "mine",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'agree'?",
+          "options": ["concur", "accept", "disagree", "assent"],
+          "correct_answer": "disagree",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 98,
-          "question": "The team members congratulated one ____ after the win.",
-          "options": ["another", "other", "others", "themselves"],
-          "correct_answer": "another",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'build'?",
+          "options": ["construct", "erect", "demolish", "create"],
+          "correct_answer": "demolish",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 99,
-          "question": "The boy, ____ parents work abroad, lives with his grandmother.",
-          "options": ["who", "whom", "which", "whose"],
-          "correct_answer": "whose",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'interior'?",
+          "options": ["inside", "inner", "exterior", "central"],
+          "correct_answer": "exterior",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 100,
-          "question": "We must not deceive ____.",
-          "options": ["ourself", "us", "ourselves", "we"],
-          "correct_answer": "ourselves",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 101,
-          "question": "____ do you think will win the match?",
-          "options": ["Who", "Whom", "Which", "What"],
-          "correct_answer": "Who",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 102,
-          "question": "The fault is ____, not mine.",
-          "options": ["your", "yours", "you", "yourself"],
-          "correct_answer": "yours",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 103,
-          "question": "Please don't hurt ____.",
-          "options": ["yourselves", "yourself", "yours", "you"],
-          "correct_answer": "yourself",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 104,
-          "question": "He is the artist ____ painting won the first prize.",
-          "options": ["who", "whom", "whose", "which"],
-          "correct_answer": "whose",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 105,
-          "question": "The players blamed ____ for the loss.",
-          "options": ["themself", "themselves", "them", "their"],
-          "correct_answer": "themselves",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 106,
-          "question": "This is a great idea of ____.",
-          "options": ["her", "she", "herself", "hers"],
-          "correct_answer": "hers",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 107,
-          "question": "____ is my favourite colour.",
-          "options": ["This", "These", "That", "Those"],
-          "correct_answer": "This",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 108,
-          "question": "She taught ____ how to speak French.",
-          "options": ["my", "me", "myself", "mine"],
-          "correct_answer": "me",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 109,
-          "question": "Between you and ____, I think she is right.",
-          "options": ["I", "me", "myself", "my"],
-          "correct_answer": "me",
-          "grammar_type": "Pronouns"
-        },
-        {
-          "id": 110,
-          "question": "The choice is ____.",
-          "options": ["your", "yours", "you", "yourselves"],
-          "correct_answer": "yours",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'superior'?",
+          "options": ["better", "higher", "inferior", "greater"],
+          "correct_answer": "inferior",
+          "grammar_type": "Antonyms"
         }
       ]
     },
@@ -785,284 +714,354 @@
       "level": "Hard",
       "questions": [
         {
+          "id": 101,
+          "question": "What is the antonym of 'abundant'?",
+          "options": ["plentiful", "ample", "scarce", "bountiful"],
+          "correct_answer": "scarce",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 102,
+          "question": "What is the antonym of 'benevolent'?",
+          "options": ["kind", "generous", "malevolent", "caring"],
+          "correct_answer": "malevolent",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 103,
+          "question": "What is the antonym of 'concise'?",
+          "options": ["brief", "short", "terse", "verbose"],
+          "correct_answer": "verbose",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 104,
+          "question": "What is the antonym of 'ephemeral'?",
+          "options": ["transient", "fleeting", "permanent", "momentary"],
+          "correct_answer": "permanent",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 105,
+          "question": "What is the antonym of 'gregarious'?",
+          "options": ["sociable", "outgoing", "reclusive", "convivial"],
+          "correct_answer": "reclusive",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 106,
+          "question": "What is the antonym of 'lucid'?",
+          "options": ["clear", "transparent", "murky", "understandable"],
+          "correct_answer": "murky",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 107,
+          "question": "What is the antonym of 'mitigate'?",
+          "options": ["alleviate", "lessen", "aggravate", "soothe"],
+          "correct_answer": "aggravate",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 108,
+          "question": "What is the antonym of 'ostentatious'?",
+          "options": ["showy", "flamboyant", "modest", "pretentious"],
+          "correct_answer": "modest",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 109,
+          "question": "What is the antonym of 'pragmatic'?",
+          "options": ["practical", "realistic", "idealistic", "sensible"],
+          "correct_answer": "idealistic",
+          "grammar_type": "Antonyms"
+        },
+        {
+          "id": 110,
+          "question": "What is the antonym of 'taciturn'?",
+          "options": ["reserved", "silent", "quiet", "loquacious"],
+          "correct_answer": "loquacious",
+          "grammar_type": "Antonyms"
+        },
+        {
           "id": 111,
-          "question": "This is the man ____ I met yesterday.",
-          "options": ["who", "whom", "which", "whose"],
-          "correct_answer": "whom",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'alleviate'?",
+          "options": ["relieve", "lessen", "worsen", "ease"],
+          "correct_answer": "worsen",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 112,
-          "question": "Everybody should do ____ best.",
-          "options": ["his", "her", "their", "his or her"],
-          "correct_answer": "his or her",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'chaos'?",
+          "options": ["disorder", "confusion", "turmoil", "order"],
+          "correct_answer": "order",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 113,
-          "question": "He is taller than ____.",
-          "options": ["me", "I am", "I", "myself"],
-          "correct_answer": "I",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'condemn'?",
+          "options": ["censure", "denounce", "praise", "criticize"],
+          "correct_answer": "praise",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 114,
-          "question": "The company, ____ is located in Mumbai, is very successful.",
-          "options": ["that", "which", "who", "whom"],
-          "correct_answer": "which",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'dearth'?",
+          "options": ["lack", "scarcity", "shortage", "abundance"],
+          "correct_answer": "abundance",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 115,
-          "question": "One must not boast of ____ own success.",
-          "options": ["his", "her", "one's", "their"],
-          "correct_answer": "one's",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'exonerate'?",
+          "options": ["absolve", "acquit", "accuse", "clear"],
+          "correct_answer": "accuse",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 116,
-          "question": "I don't appreciate ____ leaving without saying goodbye.",
-          "options": ["you", "your", "yours", "yourself"],
-          "correct_answer": "your",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'frugal'?",
+          "options": ["thrifty", "economical", "extravagant", "prudent"],
+          "correct_answer": "extravagant",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 117,
-          "question": "Neither of the boys has submitted ____ project.",
-          "options": ["their", "his", "her", "theirs"],
-          "correct_answer": "his",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'homogeneous'?",
+          "options": ["uniform", "similar", "alike", "heterogeneous"],
+          "correct_answer": "heterogeneous",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 118,
-          "question": "She is one of the students ____ always scores well.",
-          "options": ["who", "whom", "which", "that"],
-          "correct_answer": "who",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'indolent'?",
+          "options": ["lazy", "slothful", "lethargic", "diligent"],
+          "correct_answer": "diligent",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 119,
-          "question": "Let you and ____ solve this problem.",
-          "options": ["I", "me", "myself", "my"],
-          "correct_answer": "me",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'lethargic'?",
+          "options": ["sluggish", "listless", "energetic", "torpid"],
+          "correct_answer": "energetic",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 120,
-          "question": "Each of the girls was given a prize for ____ performance.",
-          "options": ["her", "their", "hers", "theirs"],
-          "correct_answer": "her",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'nebulous'?",
+          "options": ["vague", "hazy", "unclear", "clear"],
+          "correct_answer": "clear",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 121,
-          "question": "He gave the prize to ____ he thought was the best.",
-          "options": ["whoever", "whomever", "who", "whom"],
-          "correct_answer": "whoever",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'obsequious'?",
+          "options": ["servile", "sycophantic", "domineering", "fawning"],
+          "correct_answer": "domineering",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 122,
-          "question": "The two brothers love ____ very much.",
-          "options": ["one another", "each other", "themselves", "each"],
-          "correct_answer": "each other",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'paucity'?",
+          "options": ["scarcity", "dearth", "surplus", "lack"],
+          "correct_answer": "surplus",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 123,
-          "question": "My views are different from ____.",
-          "options": ["your", "yours", "you", "yourself"],
-          "correct_answer": "yours",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'quiescent'?",
+          "options": ["inactive", "dormant", "latent", "active"],
+          "correct_answer": "active",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 124,
-          "question": "Everyone must bring ____ own lunch.",
-          "options": ["their", "his or her", "our", "one's"],
-          "correct_answer": "his or her",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'reticent'?",
+          "options": ["reserved", "taciturn", "communicative", "uncommunicative"],
+          "correct_answer": "communicative",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 125,
-          "question": "I would like to speak to ____ is in charge.",
-          "options": ["whoever", "whomever", "who", "whom"],
-          "correct_answer": "whoever",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'sanguine'?",
+          "options": ["optimistic", "hopeful", "pessimistic", "cheerful"],
+          "correct_answer": "pessimistic",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 126,
-          "question": "The manager, as well as the players, did ____ best.",
-          "options": ["his", "their", "his or her", "our"],
-          "correct_answer": "his",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'transient'?",
+          "options": ["fleeting", "temporary", "lasting", "ephemeral"],
+          "correct_answer": "lasting",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 127,
-          "question": "Is this the person ____ you were talking about?",
-          "options": ["who", "whom", "that", "which"],
-          "correct_answer": "whom",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'ubiquitous'?",
+          "options": ["omnipresent", "everywhere", "rare", "pervasive"],
+          "correct_answer": "rare",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 128,
-          "question": "Such was not ____ intention.",
-          "options": ["my", "mine", "me", "I"],
-          "correct_answer": "my",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'vacillate'?",
+          "options": ["waver", "hesitate", "decide", "fluctuate"],
+          "correct_answer": "decide",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 129,
-          "question": "There is no doubt about ____ winning the race.",
-          "options": ["him", "his", "he", "himself"],
-          "correct_answer": "his",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'wane'?",
+          "options": ["diminish", "decrease", "decline", "wax"],
+          "correct_answer": "wax",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 130,
-          "question": "The committee could not agree on ____ final decision.",
-          "options": ["its", "their", "it's", "theirs"],
-          "correct_answer": "its",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'zenith'?",
+          "options": ["peak", "summit", "acme", "nadir"],
+          "correct_answer": "nadir",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 131,
-          "question": "Many of the students have not done ____ homework.",
-          "options": ["his", "her", "his or her", "their"],
-          "correct_answer": "their",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'amicable'?",
+          "options": ["friendly", "peaceable", "hostile", "agreeable"],
+          "correct_answer": "hostile",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 132,
-          "question": "This is the best movie ____ I have ever seen.",
-          "options": ["who", "which", "that", "whom"],
-          "correct_answer": "that",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'chastise'?",
+          "options": ["punish", "scold", "praise", "berate"],
+          "correct_answer": "praise",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 133,
-          "question": "The teacher gave the books to Ram and ____.",
-          "options": ["I", "me", "myself", "my"],
-          "correct_answer": "me",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'dogmatic'?",
+          "options": ["opinionated", "assertive", "flexible", "doctrinaire"],
+          "correct_answer": "flexible",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 134,
-          "question": "A person should know how to behave ____ in public.",
-          "options": ["oneself", "himself", "themselves", "himself or herself"],
-          "correct_answer": "oneself",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'enervate'?",
+          "options": ["weaken", "debilitate", "exhaust", "strengthen"],
+          "correct_answer": "strengthen",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 135,
-          "question": "You are as smart as ____.",
-          "options": ["him", "he is", "he", "himself"],
-          "correct_answer": "he",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'fallacious'?",
+          "options": ["false", "misleading", "deceptive", "truthful"],
+          "correct_answer": "truthful",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 136,
-          "question": "None of the students knew the answer, did ____?",
-          "options": ["he", "she", "they", "it"],
-          "correct_answer": "they",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'garrulous'?",
+          "options": ["talkative", "loquacious", "chatty", "taciturn"],
+          "correct_answer": "taciturn",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 137,
-          "question": "All the members of the family help ____.",
-          "options": ["each other", "one another", "themselves", "themself"],
-          "correct_answer": "one another",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'iconoclastic'?",
+          "options": ["rebellious", "nonconformist", "conventional", "maverick"],
+          "correct_answer": "conventional",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 138,
-          "question": "I will give the responsibility to ____ you recommend.",
-          "options": ["who", "whoever", "whomever", "whichever"],
-          "correct_answer": "whomever",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'jejune'?",
+          "options": ["dull", "boring", "insipid", "interesting"],
+          "correct_answer": "interesting",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 139,
-          "question": "The dog wagged ____ tail happily.",
-          "options": ["it's", "its", "it", "its'"],
-          "correct_answer": "its",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'ken'?",
+          "options": ["knowledge", "understanding", "awareness", "ignorance"],
+          "correct_answer": "ignorance",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 140,
-          "question": "The jury were divided in ____ opinions.",
-          "options": ["its", "it's", "their", "theirs"],
-          "correct_answer": "their",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'laud'?",
+          "options": ["praise", "extol", "applaud", "criticize"],
+          "correct_answer": "criticize",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 141,
-          "question": "Every boy and every girl has to bring ____ own water bottle.",
-          "options": ["their", "his or her", "his", "her"],
-          "correct_answer": "his or her",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'maverick'?",
+          "options": ["nonconformist", "individualist", "rebel", "conformist"],
+          "correct_answer": "conformist",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 142,
-          "question": "This is the only one of his books ____ is worth reading.",
-          "options": ["that", "which", "who", "whom"],
-          "correct_answer": "that",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'nascent'?",
+          "options": ["beginning", "budding", "developing", "mature"],
+          "correct_answer": "mature",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 143,
-          "question": "What is the reason for ____ being so late?",
-          "options": ["him", "his", "he", "himself"],
-          "correct_answer": "his",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'obfuscate'?",
+          "options": ["confuse", "complicate", "muddle", "clarify"],
+          "correct_answer": "clarify",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 144,
-          "question": "The man ____ you were speaking to is my uncle.",
-          "options": ["who", "whom", "whose", "which"],
-          "correct_answer": "whom",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'prosaic'?",
+          "options": ["dull", "commonplace", "ordinary", "imaginative"],
+          "correct_answer": "imaginative",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 145,
-          "question": "Nobody but ____ was present.",
-          "options": ["he", "him", "himself", "his"],
-          "correct_answer": "him",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'rancor'?",
+          "options": ["bitterness", "animosity", "hatred", "goodwill"],
+          "correct_answer": "goodwill",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 146,
-          "question": "It was ____ who started the argument.",
-          "options": ["me", "I", "myself", "my"],
-          "correct_answer": "I",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'salubrious'?",
+          "options": ["healthy", "beneficial", "wholesome", "unhealthy"],
+          "correct_answer": "unhealthy",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 147,
-          "question": "A student must be respectful to ____ teachers.",
-          "options": ["their", "his or her", "one's", "our"],
-          "correct_answer": "his or her",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'truculent'?",
+          "options": ["aggressive", "fierce", "savage", "peaceful"],
+          "correct_answer": "peaceful",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 148,
-          "question": "We are not as rich as ____.",
-          "options": ["them", "they are", "they", "themselves"],
-          "correct_answer": "they",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'veracity'?",
+          "options": ["truthfulness", "accuracy", "honesty", "falsehood"],
+          "correct_answer": "falsehood",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 149,
-          "question": "Everything depends on ____ passing the examination.",
-          "options": ["him", "his", "he", "he's"],
-          "correct_answer": "his",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'vilify'?",
+          "options": ["slander", "defame", "malign", "praise"],
+          "correct_answer": "praise",
+          "grammar_type": "Antonyms"
         },
         {
           "id": 150,
-          "question": "The dog which bit my son has been caught. I saw ____ myself.",
-          "options": ["it", "him", "her", "which"],
-          "correct_answer": "it",
-          "grammar_type": "Pronouns"
+          "question": "What is the antonym of 'zealous'?",
+          "options": ["enthusiastic", "passionate", "eager", "apathetic"],
+          "correct_answer": "apathetic",
+          "grammar_type": "Antonyms"
         }
       ]
     }

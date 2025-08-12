@@ -1,3 +1,4 @@
+import 'package:K_Skill/screens/games.dart';
 import 'package:flutter/material.dart';
 import 'package:K_Skill/screens/home.dart';
 import 'package:K_Skill/screens/levels.dart';
@@ -20,6 +21,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     //LessonScreen(),
     LevelsScreen(),
     PracticeScreen(),
+    GameScreen(),
     ProfileScreen(),
   ];
 
@@ -41,6 +43,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Learn'),
           BottomNavigationBarItem(icon: Icon(Icons.mic), label: 'Practice'),
+          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Games'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),

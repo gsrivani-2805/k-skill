@@ -5,423 +5,353 @@
       "questions": [
         {
           "id": 1,
-          "question": "Choose the correct article: I saw ____ big elephant.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "My house is ______ than yours.",
+          "options": ["big", "bigger", "biggest", "more big"],
+          "correct_answer": "bigger",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 2,
-          "question": "She wants to eat ____ apple.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "This is the ______ building in the city.",
+          "options": ["tall", "taller", "tallest", "more tall"],
+          "correct_answer": "tallest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 3,
-          "question": "____ sun is shining brightly.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "She is ______ than her sister.",
+          "options": ["old", "older", "oldest", "more old"],
+          "correct_answer": "older",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 4,
-          "question": "He is ____ doctor.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "What is the comparative form of 'good'?",
+          "options": ["gooder", "better", "best", "more good"],
+          "correct_answer": "better",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 5,
-          "question": "My father is ____ honest man.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "What is the superlative form of 'good'?",
+          "options": ["gooder", "better", "best", "most good"],
+          "correct_answer": "best",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 6,
-          "question": "I have ____ new book. ____ book is very interesting.",
-          "options": ["a, The", "an, The", "the, A", "a, A"],
-          "correct_answer": "a, The",
-          "grammar_type": "Articles"
+          "question": "An elephant is ______ than a mouse.",
+          "options": ["large", "larger", "largest", "more large"],
+          "correct_answer": "larger",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 7,
-          "question": "Can you give me ____ pen?",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "Mount Everest is the ______ peak in the world.",
+          "options": ["high", "higher", "highest", "most high"],
+          "correct_answer": "highest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 8,
-          "question": "____ sky is blue.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "He runs ______ than me.",
+          "options": ["fast", "faster", "fastest", "more fast"],
+          "correct_answer": "faster",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 9,
-          "question": "She bought ____ umbrella yesterday.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "This is the ______ book I have ever read.",
+          "options": ["interesting", "more interesting", "most interesting", "interestinger"],
+          "correct_answer": "most interesting",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 10,
-          "question": "What is ____ capital of France?",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "The cheetah is the ______ land animal.",
+          "options": ["fast", "faster", "fastest", "more fast"],
+          "correct_answer": "fastest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 11,
-          "question": "My brother is ____ engineer.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "The comparative degree compares ______ things.",
+          "options": ["one", "two", "three or more", "no"],
+          "correct_answer": "two",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 12,
-          "question": "I need ____ glass of water.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "The superlative degree compares ______ things.",
+          "options": ["one", "two", "three or more", "no"],
+          "correct_answer": "three or more",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 13,
-          "question": "We live in ____ small house.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "This flower is ______ than that one.",
+          "options": ["pretty", "prettier", "prettiest", "more pretty"],
+          "correct_answer": "prettier",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 14,
-          "question": "____ Earth revolves around the Sun.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "She is the ______ girl in the class.",
+          "options": ["smart", "smarter", "smartest", "more smart"],
+          "correct_answer": "smartest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 15,
-          "question": "That is ____ interesting story.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "A turtle is ______ than a rabbit.",
+          "options": ["slow", "slower", "slowest", "more slow"],
+          "correct_answer": "slower",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 16,
-          "question": "He saw ____ old man walking on the road.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "This is the ______ task of all.",
+          "options": ["easy", "easier", "easiest", "most easy"],
+          "correct_answer": "easiest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 17,
-          "question": "Please close ____ door.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "What is the comparative form of 'bad'?",
+          "options": ["badder", "worse", "worst", "more bad"],
+          "correct_answer": "worse",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 18,
-          "question": "I have ____ pet dog.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "What is the superlative form of 'bad'?",
+          "options": ["badder", "worse", "worst", "most bad"],
+          "correct_answer": "worst",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 19,
-          "question": "She is wearing ____ beautiful dress.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "Iron is ______ than cotton.",
+          "options": ["heavy", "heavier", "heaviest", "more heavy"],
+          "correct_answer": "heavier",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 20,
-          "question": "Which article do we use before a word starting with a vowel sound?",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "She is the ______ of the two sisters.",
+          "options": ["young", "younger", "youngest", "more young"],
+          "correct_answer": "younger",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 21,
-          "question": "I would like ____ cup of tea.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "This is the ______ dress in the shop.",
+          "options": ["expensive", "more expensive", "most expensive", "expensivest"],
+          "correct_answer": "most expensive",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 22,
-          "question": "It took me ____ hour to finish my homework.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "My handwriting is ______ than yours.",
+          "options": ["bad", "badder", "worse", "worst"],
+          "correct_answer": "worse",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 23,
-          "question": "____ moon looks beautiful tonight.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "He is the ______ man I know.",
+          "options": ["kind", "kinder", "kindest", "most kind"],
+          "correct_answer": "kindest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 24,
-          "question": "He gave me ____ one-rupee coin.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "The positive degree of an adjective is the ______ form.",
+          "options": ["basic", "comparative", "superlative", "possessive"],
+          "correct_answer": "basic",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 25,
-          "question": "My sister wants to be ____ astronaut.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "The word 'than' is often used with the ______ degree.",
+          "options": ["positive", "comparative", "superlative", "basic"],
+          "correct_answer": "comparative",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 26,
-          "question": "____ boy standing over there is my brother.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "The word 'the' is often used before the ______ degree.",
+          "options": ["positive", "comparative", "superlative", "possessive"],
+          "correct_answer": "superlative",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 27,
-          "question": "I have ____ idea.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "This summer is ______ than last summer.",
+          "options": ["hot", "hotter", "hottest", "more hot"],
+          "correct_answer": "hotter",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 28,
-          "question": "She is ____ university student.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "She is the ______ singer in the choir.",
+          "options": ["good", "better", "best", "most good"],
+          "correct_answer": "best",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 29,
-          "question": "He is ____ tallest boy in the class.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "This problem is ______ than the last one.",
+          "options": ["difficult", "more difficult", "most difficult", "difficulter"],
+          "correct_answer": "more difficult",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 30,
-          "question": "We saw ____ lions at the zoo.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "He is the ______ boy in his family.",
+          "options": ["old", "older", "eldest", "most old"],
+          "correct_answer": "eldest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 31,
-          "question": "She is ____ intelligent girl.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "What is the comparative form of 'little'?",
+          "options": ["littler", "less", "least", "more little"],
+          "correct_answer": "less",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 32,
-          "question": "My friend has ____ cute puppy.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "What is the superlative form of 'little'?",
+          "options": ["littler", "less", "least", "most little"],
+          "correct_answer": "least",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 33,
-          "question": "____ teacher who taught us English was very good.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "My score is ______ than his.",
+          "options": ["high", "higher", "highest", "most high"],
+          "correct_answer": "higher",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 34,
-          "question": "I need to buy ____ new pair of shoes.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "This is the ______ story I've ever heard.",
+          "options": ["sad", "sadder", "saddest", "more sad"],
+          "correct_answer": "saddest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 35,
-          "question": "It is ____ useful tool.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "A plane is ______ than a car.",
+          "options": ["fast", "faster", "fastest", "more fast"],
+          "correct_answer": "faster",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 36,
-          "question": "Which article is used for something specific?",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "This is the ______ part of the movie.",
+          "options": ["funny", "funnier", "funniest", "most funny"],
+          "correct_answer": "funniest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 37,
-          "question": "He wrote ____ letter to his friend.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "What is the comparative form of 'many'?",
+          "options": ["manier", "more", "most", "many"],
+          "correct_answer": "more",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 38,
-          "question": "There is ____ bird on the tree.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "What is the superlative form of 'many'?",
+          "options": ["maniest", "more", "most", "many"],
+          "correct_answer": "most",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 39,
-          "question": "She is ____ amazing singer.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "She is ______ than I am.",
+          "options": ["strong", "stronger", "strongest", "more strong"],
+          "correct_answer": "stronger",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 40,
-          "question": "Can I ask you ____ question?",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "He is the ______ student in our school.",
+          "options": ["intelligent", "more intelligent", "most intelligent", "intelligenter"],
+          "correct_answer": "most intelligent",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 41,
-          "question": "____ girl with the red dress is my cousin.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "The weather is ______ today than it was yesterday.",
+          "options": ["good", "better", "best", "gooder"],
+          "correct_answer": "better",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 42,
-          "question": "I saw ____ eagle flying high.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "This is the ______ meal I have had all week.",
+          "options": ["bad", "badder", "worse", "worst"],
+          "correct_answer": "worst",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 43,
-          "question": "My grandfather is ____ old farmer.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "My bag is ______ than yours.",
+          "options": ["heavy", "heavier", "heaviest", "more heavy"],
+          "correct_answer": "heavier",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 44,
-          "question": "We are going to ____ library.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "She has the ______ handwriting in the class.",
+          "options": ["neat", "neater", "neatest", "most neat"],
+          "correct_answer": "neatest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 45,
-          "question": "He has ____ unique talent.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "A train is ______ than a bicycle.",
+          "options": ["long", "longer", "longest", "more long"],
+          "correct_answer": "longer",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 46,
-          "question": "I need ____ information about the project.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "Who is the ______ person in your family?",
+          "options": ["tall", "taller", "tallest", "more tall"],
+          "correct_answer": "tallest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 47,
-          "question": "What ____ beautiful painting!",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "This chair is ______ than the other one.",
+          "options": ["comfortable", "more comfortable", "most comfortable", "comfortabler"],
+          "correct_answer": "more comfortable",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 48,
-          "question": "He returned after ____ long time.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "This is the ______ painting in the museum.",
+          "options": ["valuable", "more valuable", "most valuable", "valuabler"],
+          "correct_answer": "most valuable",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 49,
-          "question": "I bought ____ orange and two bananas.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "He has ______ money than I do.",
+          "options": ["little", "less", "least", "more little"],
+          "correct_answer": "less",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 50,
-          "question": "Which article is a definite article?",
-          "options": ["a", "an", "the", "a and an"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 51,
-          "question": "He is ____ very clever boy.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 52,
-          "question": "____ Himalayas are the highest mountains.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 53,
-          "question": "I drink ____ milk every morning.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 54,
-          "question": "Can you play ____ guitar?",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 55,
-          "question": "She is studying at ____ European university.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 56,
-          "question": "The children found ____ egg in the nest.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 57,
-          "question": "Please turn off ____ lights when you leave.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 58,
-          "question": "I need ____ new uniform for school.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 59,
-          "question": "He is ____ heir to a large fortune.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 60,
-          "question": "I like to read ____ books.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "She chose the ______ of the two prizes.",
+          "options": ["small", "smaller", "smallest", "more small"],
+          "correct_answer": "smaller",
+          "grammar_type": "Degrees of Comparison"
         }
       ]
     },
@@ -429,354 +359,354 @@
       "level": "Medium",
       "questions": [
         {
+          "id": 51,
+          "question": "Of the three brothers, he is the ______.",
+          "options": ["older", "oldest", "elder", "eldest"],
+          "correct_answer": "eldest",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 52,
+          "question": "The second half of the movie was ______ than the first half.",
+          "options": ["less interesting", "least interesting", "little interesting", "not interesting"],
+          "correct_answer": "less interesting",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 53,
+          "question": "This is by far the ______ book he has ever written.",
+          "options": ["good", "better", "best", "most good"],
+          "correct_answer": "best",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 54,
+          "question": "She is ______ of the two sisters.",
+          "options": ["the tall", "the taller", "the tallest", "tallest"],
+          "correct_answer": "the taller",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 55,
+          "question": "He is not as ______ as his brother.",
+          "options": ["intelligent", "more intelligent", "most intelligent", "intelligenter"],
+          "correct_answer": "intelligent",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 56,
+          "question": "The situation is getting ______ and ______.",
+          "options": ["bad, bad", "worse, worse", "bad, worse", "worse, worst"],
+          "correct_answer": "worse, worse",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 57,
+          "question": "What is the comparative form of 'far' (for distance)?",
+          "options": ["farrer", "further", "farther", "more far"],
+          "correct_answer": "farther",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 58,
+          "question": "What is the superlative form of 'far' (for distance)?",
+          "options": ["farrest", "furthest", "farthest", "most far"],
+          "correct_answer": "farthest",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 59,
+          "question": "Your house is ______ from the school than mine.",
+          "options": ["far", "further", "farther", "farthest"],
+          "correct_answer": "farther",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 60,
+          "question": "The ______ you study, the ______ your grades will be.",
+          "options": ["harder, better", "hard, good", "hardest, best", "more hard, more good"],
+          "correct_answer": "harder, better",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
           "id": 61,
-          "question": "____ honesty is the best policy.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "Which sentence is correct? 'He is senior ______ me.'",
+          "options": ["than", "from", "to", "of"],
+          "correct_answer": "to",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 62,
-          "question": "She is from ____ United Kingdom.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "This cloth is inferior ______ that one.",
+          "options": ["than", "from", "to", "of"],
+          "correct_answer": "to",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 63,
-          "question": "My uncle is ____ MLA.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "She is much ______ than I expected.",
+          "options": ["pretty", "prettier", "prettiest", "more pretty"],
+          "correct_answer": "prettier",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 64,
-          "question": "I saw ____ one-eyed man on the street.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "This is one of the ______ buildings in the world.",
+          "options": ["tall", "taller", "tallest", "most tall"],
+          "correct_answer": "tallest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 65,
-          "question": "____ rich should help the poor.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "He has the ______ money of all the brothers.",
+          "options": ["little", "less", "least", "littlest"],
+          "correct_answer": "least",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 66,
-          "question": "He speaks ____ German fluently.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "The ______ you go, the ______ it gets.",
+          "options": ["higher, colder", "high, cold", "highest, coldest", "more high, more cold"],
+          "correct_answer": "higher, colder",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 67,
-          "question": "____ River Nile is the longest river in the world.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "She can run ______ than anyone else in her class.",
+          "options": ["fast", "faster", "fastest", "more faster"],
+          "correct_answer": "faster",
+          "grammar_type": "Degrees of Comparison"
         },
         {
-          "id": 8,
-          "question": "I have ____ breakfast at 8 a.m. every day.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "id": 68,
+          "question": "This is the ______ delicious meal I've ever had.",
+          "options": ["delicious", "more delicious", "most delicious", "deliciousest"],
+          "correct_answer": "most delicious",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 69,
-          "question": "She was ____ first woman to climb Mount Everest.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "He is as ______ as a lion.",
+          "options": ["brave", "braver", "bravest", "more brave"],
+          "correct_answer": "brave",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 70,
-          "question": "We visited ____ Lake Superior last summer.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "The patient is feeling ______ better today.",
+          "options": ["much", "many", "more", "most"],
+          "correct_answer": "much",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 71,
-          "question": "____ more you study, the more you learn.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "Of all the players, he is the ______ experienced.",
+          "options": ["little", "less", "least", "lesser"],
+          "correct_answer": "least",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 72,
-          "question": "____ President of India is the head of state.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "Her performance was ______ than her previous one.",
+          "options": ["good", "better", "best", "more good"],
+          "correct_answer": "better",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 73,
-          "question": "I am allergic to ____ cats.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "This is the very ______ hotel in the city.",
+          "options": ["good", "better", "best", "most good"],
+          "correct_answer": "best",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 74,
-          "question": "He is studying ____ history of ancient Rome.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "What is the comparative form of 'handsome'?",
+          "options": ["handsomer", "more handsome", "handsomest", "Both A and B are acceptable"],
+          "correct_answer": "Both A and B are acceptable",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 75,
-          "question": "My father goes to ____ temple every morning.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "She is junior ______ me by two years.",
+          "options": ["than", "from", "to", "of"],
+          "correct_answer": "to",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 76,
-          "question": "It is ____ quarter past ten.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "The population of this city is ______ than that of my village.",
+          "options": ["great", "greater", "greatest", "more great"],
+          "correct_answer": "greater",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 77,
-          "question": "____ water in that bottle is not clean.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "This is the ______ story I have ever read. (boring)",
+          "options": ["boring", "boringer", "more boring", "most boring"],
+          "correct_answer": "most boring",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 78,
-          "question": "He was injured in ____ accident.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "He has ______ friends than I do.",
+          "options": ["many", "more", "most", "manier"],
+          "correct_answer": "more",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 79,
-          "question": "She is ____ most beautiful girl I have ever seen.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "She is the ______ of all the participants.",
+          "options": ["talented", "more talented", "most talented", "talentedest"],
+          "correct_answer": "most talented",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 80,
-          "question": "I don't like ____ winter.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "Your car is ______ expensive than mine.",
+          "options": ["far more", "far", "far most", "more far"],
+          "correct_answer": "far more",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 81,
-          "question": "____ Pacific Ocean is the largest ocean on Earth.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "Which of these adjectives has an irregular comparative form?",
+          "options": ["happy", "sad", "bad", "big"],
+          "correct_answer": "bad",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 82,
-          "question": "Can you pass me ____ sugar, please?",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "I prefer tea ______ coffee.",
+          "options": ["than", "from", "to", "of"],
+          "correct_answer": "to",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 83,
-          "question": "He is learning to play ____ violin.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "The weather is getting ______.",
+          "options": ["colder and colder", "cold and cold", "coldest and coldest", "more and more cold"],
+          "correct_answer": "colder and colder",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 84,
-          "question": "I met ____ boy who helped me yesterday.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "This is the ______ point I want to make. (far)",
+          "options": ["farther", "farthest", "further", "furthest"],
+          "correct_answer": "furthest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 85,
-          "question": "____ happiness is important for good health.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "He is the ______ person to solve the puzzle.",
+          "options": ["last", "later", "latter", "latest"],
+          "correct_answer": "last",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 86,
-          "question": "She is ____ expert in her field.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "Of the two plans, the ______ is better.",
+          "options": ["last", "later", "latter", "latest"],
+          "correct_answer": "latter",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 87,
-          "question": "He has ____ good knowledge of mathematics.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "This is the ______ news from the capital.",
+          "options": ["last", "later", "latter", "latest"],
+          "correct_answer": "latest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 88,
-          "question": "____ French are known for their cuisine.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "The ______ part of the film was not very good. (latter/later)",
+          "options": ["latter", "later"],
+          "correct_answer": "latter",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 89,
-          "question": "I go to ____ school by bus.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "His ______ brother lives in London.",
+          "options": ["older", "elder"],
+          "correct_answer": "elder",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 90,
-          "question": "My father went to ____ school to meet my teacher.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "My car is ______ than my brother's.",
+          "options": ["older", "elder"],
+          "correct_answer": "older",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 91,
-          "question": "____ English is a global language.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "The ______ temple is near my house.",
+          "options": ["next", "nearest"],
+          "correct_answer": "nearest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 92,
-          "question": "This is ____ same car I saw yesterday.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "What is the ______ point on your agenda?",
+          "options": ["next", "nearest"],
+          "correct_answer": "next",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 93,
-          "question": "He is ____ honorable person.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "He is the ______ famous of all the actors in the film.",
+          "options": ["little", "less", "least", "lesser"],
+          "correct_answer": "least",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 94,
-          "question": "____ harder you work, the luckier you get.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "She is ______ about her results than he is.",
+          "options": ["anxious", "more anxious", "most anxious", "anxiouser"],
+          "correct_answer": "more anxious",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 95,
-          "question": "____ dinner we had at the hotel was delicious.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "Which of these sentences is correct?",
+          "options": ["He is more stronger than his brother.", "He is stronger than his brother.", "He is more strong than his brother.", "He is strong than his brother."],
+          "correct_answer": "He is stronger than his brother.",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 96,
-          "question": "He looks as stupid as ____ owl.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "The ______ he waited, the ______ he became.",
+          "options": ["longer, impatient", "long, more impatient", "longer, more impatient", "longest, most impatient"],
+          "correct_answer": "longer, more impatient",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 97,
-          "question": "Let's go to ____ beach.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "The situation is no ______ than it was before.",
+          "options": ["good", "better", "best", "gooder"],
+          "correct_answer": "better",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 98,
-          "question": "Which article is used with superlatives?",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "He works ______ than he used to.",
+          "options": ["less hard", "least hard", "little hard", "less hardly"],
+          "correct_answer": "less hard",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 99,
-          "question": "She is ____ N.R.I.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "This is ______ a difficult problem, but not the most difficult one.",
+          "options": ["more", "a more", "the more", "most"],
+          "correct_answer": "a more",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 100,
-          "question": "____ information you gave me was very helpful.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 101,
-          "question": "I live in ____ India.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 102,
-          "question": "He is ____ only son of his parents.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 103,
-          "question": "What kind of ____ bird is that?",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 104,
-          "question": "____ man is a social animal.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 105,
-          "question": "He was elected ____ chairman of the committee.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 106,
-          "question": "I have never seen such ____ mess.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 107,
-          "question": "This is made of ____ wood.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 108,
-          "question": "The Taj Mahal is ____ historical monument.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 109,
-          "question": "He drives his car at 80 km ____ hour.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
-        },
-        {
-          "id": 110,
-          "question": "____ virtue is its own reward.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "She is one of the ______ people I know.",
+          "options": ["kind", "kinder", "kindest", "most kind"],
+          "correct_answer": "kindest",
+          "grammar_type": "Degrees of Comparison"
         }
       ]
     },
@@ -784,284 +714,354 @@
       "level": "Hard",
       "questions": [
         {
+          "id": 101,
+          "question": "Which of these adjectives is 'absolute' or 'non-gradable' and generally cannot be compared?",
+          "options": ["hot", "cold", "unique", "big"],
+          "correct_answer": "unique",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 102,
+          "question": "He is ______ his brother, but not as tall.",
+          "options": ["older than", "elder than", "the elder of", "older of"],
+          "correct_answer": "older than",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 103,
+          "question": "The ______ of the two evils is to be chosen.",
+          "options": ["less", "lesser", "least", "little"],
+          "correct_answer": "lesser",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 104,
+          "question": "This is the ______ book of the two.",
+          "options": ["better", "best", "good", "more good"],
+          "correct_answer": "better",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 105,
+          "question": "His performance was ______ than I had anticipated.",
+          "options": ["far better", "more better", "much best", "far best"],
+          "correct_answer": "far better",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 106,
+          "question": "The word 'preferable' is followed by...",
+          "options": ["than", "from", "to", "of"],
+          "correct_answer": "to",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 107,
+          "question": "Which sentence is correct? 'He is more wise than intelligent.'",
+          "options": ["This sentence is correct.", "It should be 'wiser than intelligent'.", "It should be 'wiser than more intelligent'.", "This sentence is incorrect as you cannot compare two qualities of the same person."],
+          "correct_answer": "This sentence is correct.",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 108,
+          "question": "The use of double comparatives like 'more better' is...",
+          "options": ["always correct", "always incorrect", "correct for emphasis", "correct in informal speech"],
+          "correct_answer": "always incorrect",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 109,
+          "question": "No other boy in the class is as ______ as Ram.",
+          "options": ["tall", "taller", "tallest", "more tall"],
+          "correct_answer": "tall",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
+          "id": 110,
+          "question": "Ram is taller than ______ boy in the class.",
+          "options": ["any", "any other", "all", "all the"],
+          "correct_answer": "any other",
+          "grammar_type": "Degrees of Comparison"
+        },
+        {
           "id": 111,
-          "question": "He is in ____ hurry.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "Which sentence correctly uses a superlative?",
+          "options": ["He is the most perfect person.", "He is more perfect than anyone.", "His work is perfect.", "His work is the perfectest."],
+          "correct_answer": "His work is perfect.",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 112,
-          "question": "Don't make ____ noise.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "The city is ______ from the airport than the village.",
+          "options": ["farther", "further", "farthest", "furthest"],
+          "correct_answer": "farther",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 113,
-          "question": "____ patient was taken to ____ hospital after the accident.",
-          "options": ["A, the", "The, the", "The, No article", "A, No article"],
-          "correct_answer": "The, No article",
-          "grammar_type": "Articles"
+          "question": "We need to have a ______ discussion on this matter.",
+          "options": ["farther", "further", "farthest", "furthest"],
+          "correct_answer": "further",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 114,
-          "question": "I know ____ little about this subject.",
-          "options": ["a", "an", "the", "little"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "Which of these is NOT a gradable adjective?",
+          "options": ["big", "small", "dead", "long"],
+          "correct_answer": "dead",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 115,
-          "question": "He is considered ____ Shakespeare of our age.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "The adverb 'well' has the comparative form ______ and the superlative form ______.",
+          "options": ["weller, wellest", "better, best", "more well, most well", "good, best"],
+          "correct_answer": "better, best",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 116,
-          "question": "____ man you met yesterday is my uncle.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "Of all the options, this one is ______ preferable.",
+          "options": ["more", "most", "the most", "much"],
+          "correct_answer": "much",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 117,
-          "question": "Few people knew ____ answer.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "She is ______ of all the sisters.",
+          "options": ["the most beautiful", "the more beautiful", "beautifulest", "most beautiful"],
+          "correct_answer": "the most beautiful",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 118,
-          "question": "It is ____ pity that he failed.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "The sentence 'He is as clever, if not cleverer than, his brother' is a complex comparative structure.",
+          "options": ["True", "False"],
+          "correct_answer": "True",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 119,
-          "question": "The criminal was sent to ____ prison.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "This painting is ______ than any I have ever seen before.",
+          "options": ["unique", "more unique", "most unique", "far unique"],
+          "correct_answer": "unique",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 120,
-          "question": "His father went to ____ prison to meet him.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "His argument is ______ to mine.",
+          "options": ["superior than", "superior from", "superior to", "superior of"],
+          "correct_answer": "superior to",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 121,
-          "question": "By ____ train is a convenient way to travel.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "The phrase 'as...as' is used to show that two things are...",
+          "options": ["unequal", "different", "equal", "opposite"],
+          "correct_answer": "equal",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 122,
-          "question": "____ Mr. Sharma I know is a doctor, not a teacher.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "Which adjective describes the utmost or highest degree of a quality?",
+          "options": ["Positive", "Comparative", "Superlative", "Absolute"],
+          "correct_answer": "Superlative",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 123,
-          "question": "She has ____ good understanding of the subject.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "The ______ of the two plans is the one that costs less.",
+          "options": ["good", "better", "best", "more good"],
+          "correct_answer": "better",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 124,
-          "question": "He is not ____ man to be trifled with.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "The word 'prior' is followed by...",
+          "options": ["than", "from", "to", "of"],
+          "correct_answer": "to",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 125,
-          "question": "The horse is ____ useful animal.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "Very few cities in India are as ______ as Mumbai.",
+          "options": ["big", "bigger", "biggest", "more big"],
+          "correct_answer": "big",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 126,
-          "question": "____ English defeated the French in this battle.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "Mumbai is bigger than ______ cities in India.",
+          "options": ["most", "most other", "any", "all"],
+          "correct_answer": "most other",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 127,
-          "question": "He plays tennis twice ____ week.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "Mumbai is one of the ______ cities in India.",
+          "options": ["big", "bigger", "biggest", "most big"],
+          "correct_answer": "biggest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 128,
-          "question": "It's ____ high time you started working hard.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "The construction 'the + comparative, the + comparative' is used to show...",
+          "options": ["two things are unrelated", "one thing depends on another", "two things are equal", "a simple fact"],
+          "correct_answer": "one thing depends on another",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 129,
-          "question": "He caught me by ____ arm.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "The ______ the merrier.",
+          "options": ["many", "more", "most", "much"],
+          "correct_answer": "more",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 130,
-          "question": "Which is ____ longest river in India?",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "Which of these is a latent comparative (an adjective with a comparative meaning)?",
+          "options": ["big", "small", "former", "good"],
+          "correct_answer": "former",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 131,
-          "question": "Man, thou art ____ wonderful animal.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "He has ______ experience than all of us.",
+          "options": ["many", "more", "most", "much"],
+          "correct_answer": "more",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 132,
-          "question": "He has come without ____ umbrella.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "an",
-          "grammar_type": "Articles"
+          "question": "The sentence 'He is more happy than sad' compares...",
+          "options": ["two different people", "two different things", "two qualities in the same person", "a person and a thing"],
+          "correct_answer": "two qualities in the same person",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 133,
-          "question": "A dozen costs ten rupees. It should be: Ten rupees ____ dozen.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "The quality of this product is ______ superior to that one.",
+          "options": ["more", "most", "much", "very"],
+          "correct_answer": "much",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 134,
-          "question": "____ wisdom of Solomon is famous.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "Some adverbs also have comparative and superlative forms. He works ______ than me.",
+          "options": ["hard", "harder", "hardest", "more hard"],
+          "correct_answer": "harder",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 135,
-          "question": "He is not so big ____ fool as you think.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "She drives ______ of all.",
+          "options": ["carefully", "more carefully", "most carefully", "carefullest"],
+          "correct_answer": "most carefully",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 136,
-          "question": "The boy was punished for being in ____ bed after 10 p.m.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "Of the two candidates, she is ______ likely to win.",
+          "options": ["more", "most", "the more", "the most"],
+          "correct_answer": "the more",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 137,
-          "question": "He has ____ great respect for his elders.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "What is the correct form? 'He is the most unique artist.'",
+          "options": ["This is correct.", "It should be 'He is a unique artist.'", "It should be 'He is the more unique artist.'", "It should be 'He is the uniquest artist.'"],
+          "correct_answer": "It should be 'He is a unique artist.'",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 138,
-          "question": "This is ____ best book of elementary chemistry.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "The word 'foremost' in 'He is the foremost expert' is a type of...",
+          "options": ["Positive degree", "Comparative degree", "Superlative degree", "Adverb"],
+          "correct_answer": "Superlative degree",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 139,
-          "question": "What ____ beautiful scene this is!",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "She is ______ to succeed.",
+          "options": ["certainer", "more certain", "most certain", "certain"],
+          "correct_answer": "certain",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 140,
-          "question": "____ more one has, ____ more one wants.",
-          "options": ["The, the", "A, a", "The, a", "A, the"],
-          "correct_answer": "The, the",
-          "grammar_type": "Articles"
+          "question": "Which of these words is often NOT compared?",
+          "options": ["round", "sweet", "long", "short"],
+          "correct_answer": "round",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 141,
-          "question": "I have never taken ____ fancy to that kind of work.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "He has ______ interest in the matter than she does.",
+          "options": ["less", "lesser", "least", "little"],
+          "correct_answer": "less",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 142,
-          "question": "He can speak ____ English language very well.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "This is the ______ thing I wanted to happen.",
+          "options": ["later", "last", "latter", "latest"],
+          "correct_answer": "last",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 143,
-          "question": "I don't usually have ____ lunch, but I was hungry today.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "The comparative degree is often used to show a ______ between two things.",
+          "options": ["relationship", "difference", "similarity", "connection"],
+          "correct_answer": "difference",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 144,
-          "question": "____ gold is a precious metal.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "The superlative degree is used to single out one thing from a group as having the ______ degree of a quality.",
+          "options": ["lowest", "highest", "same", "different"],
+          "correct_answer": "highest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 145,
-          "question": "____ gold of this ring is very pure.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "The",
-          "grammar_type": "Articles"
+          "question": "This diamond is ______ than any other diamond in the world.",
+          "options": ["precious", "more precious", "most precious", "preciouser"],
+          "correct_answer": "more precious",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 146,
-          "question": "He made ____ mistake of thinking I was his friend.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "What is the superlative form of 'shy'?",
+          "options": ["shyer", "shiest", "more shy", "most shy"],
+          "correct_answer": "shiest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 147,
-          "question": "She went to ____ sea for a holiday.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "the",
-          "grammar_type": "Articles"
+          "question": "This film is ______ to the one we saw last week.",
+          "options": ["inferior than", "inferior from", "inferior to", "inferior of"],
+          "correct_answer": "inferior to",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 148,
-          "question": "I am in ____ trouble.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "No article",
-          "grammar_type": "Articles"
+          "question": "The grammar in this book is the ______ of all.",
+          "options": ["simple", "simpler", "simplest", "most simple"],
+          "correct_answer": "simplest",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 149,
-          "question": "She is suffering from ____ bad cold.",
-          "options": ["a", "an", "the", "No article"],
-          "correct_answer": "a",
-          "grammar_type": "Articles"
+          "question": "He has to make a choice between two evils, and he must choose the______.",
+          "options": ["less", "lesser", "least", "little"],
+          "correct_answer": "lesser",
+          "grammar_type": "Degrees of Comparison"
         },
         {
           "id": 150,
-          "question": "____ little knowledge is a dangerous thing.",
-          "options": ["A", "An", "The", "No article"],
-          "correct_answer": "A",
-          "grammar_type": "Articles"
+          "question": "He speaks English ______ than he writes it.",
+          "options": ["fluent", "more fluently", "most fluently", "fluently"],
+          "correct_answer": "more fluently",
+          "grammar_type": "Degrees of Comparison"
         }
       ]
     }

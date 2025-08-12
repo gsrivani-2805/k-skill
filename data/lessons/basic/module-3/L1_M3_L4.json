@@ -1,167 +1,172 @@
-
 {
   "level": "Beginner",
-  "module": "GRAMMAR BASICS",
+  "module": "Grammar Basics",
   "lesson_number": 4,
-  "lesson_title": "Verbs: Action Words and What We Do",
+  "lesson_title": "Understanding Rhyming Words",
   "objectives": [
-    "Understand that verbs are words that show actions or states of being.",
-    "Learn to identify action verbs and helping verbs in sentences.",
-    "Practice using verbs in their present, past, and future forms correctly."
+    "Define what rhyming words are",
+    "Identify rhyming words in pairs and in simple poems",
+    "Understand the concept of word families based on rhymes",
+    "Practice finding and creating rhymes to improve pronunciation and vocabulary"
   ],
   "topics": [
     {
-      "title": "1. What are Verbs (Action Words)?",
+      "title": "Introduction to Rhyming Words",
       "subtopics": [
         {
-          "title": "1.1. Verbs: Showing What Someone or Something Does",
+          "title": "What are Rhymes?",
           "sections": [
             {
-              "text": "A verb is a word that shows an action (what someone or something does) or a state (how someone or something is). Verbs are the 'doing' words in a sentence. Every sentence must have a verb.",
+              "text": "Rhyming words are two or more words that have the same or similar ending sound. When we talk about rhymes, we are focusing on how the words sound, not how they are spelled. Rhymes are very common in songs, poems, and stories for children because they make language fun, musical, and easy to remember.",
               "examples": [
                 {
-                  "label": "Action Example 1",
-                  "value": "The farmer **plows** the field. ('plows' shows action)"
+                  "label": "cat / hat",
+                  "value": "The cat sat on the hat."
                 },
                 {
-                  "label": "Action Example 2",
-                  "value": "I **eat** rice every day. ('eat' shows action)"
+                  "label": "sun / fun",
+                  "value": "Playing in the sun is a lot of fun."
                 },
                 {
-                  "label": "State Example 1",
-                  "value": "She **is** happy. ('is' shows state of being)"
+                  "label": "pen / ten",
+                  "value": "I have ten pens."
                 },
                 {
-                  "label": "Action Example 3",
-                  "value": "Birds **fly** in the sky. ('fly' shows action)"
+                  "label": "ball / tall",
+                  "value": "The tall boy threw the ball."
                 },
                 {
-                  "label": "Action Example 4",
-                  "value": "Children **play** in the playground. ('play' shows action)"
+                  "label": "see / tree",
+                  "value": "I see a bird in the tree."
+                },
+                {
+                  "label": "day / play",
+                  "value": "It is a good day to play outside."
+                },
+                {
+                  "label": "book / look",
+                  "value": "Look at this new book."
+                },
+                {
+                  "label": "car / star",
+                  "value": "The star shines brighter than a car's light."
+                },
+                {
+                  "label": "house / mouse",
+                  "value": "A little mouse lives in our house."
+                },
+                {
+                  "label": "boat / coat",
+                  "value": "He wore a coat on the boat."
+                },
+                {
+                  "label": "king / sing",
+                  "value": "The king loves to sing a song."
+                },
+                {
+                  "label": "frog / log",
+                  "value": "A frog sat on a log."
+                },
+                {
+                  "label": "bed / red",
+                  "value": "My bed has a red sheet."
+                },
+                {
+                  "label": "light / night",
+                  "value": "The moon gives light at night."
+                },
+                {
+                  "label": "well / bell",
+                  "value": "I heard the temple bell near the well."
                 }
-              ],
-              "usage_examples": [
-                "My mother **cooks** food for us.",
-                "The dog **barks** at strangers.",
-                "We **study** English at school.",
-                "The sun **shines** brightly.",
-                "I **sleep** for eight hours every night.",
-                "Our well **provides** water for the village.",
-                "Students **learn** new things daily.",
-                "The wind **blows** gently.",
-                "A spider **spins** a web.",
-                "The carpenter **builds** a house."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-4/p"
-              }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "title": "2. Types of Verbs",
+      "title": "Word Families and Rhyme Patterns",
       "subtopics": [
         {
-          "title": "2.1. Action Verbs: What We Do",
+          "title": "Exploring Word Families",
           "sections": [
             {
-              "text": "Action verbs describe an action, either physical (like running) or mental (like thinking). Most verbs you use will be action verbs.",
+              "text": "A word family is a group of words that share the same ending part, which is called a 'rime'. The beginning sound of the word changes, but the rime stays the same. Learning word families is a great way to learn many rhyming words at once.",
               "examples": [
                 {
-                  "label": "Physical Action 1",
-                  "value": "Ram **runs** fast."
+                  "label": "The '-at' Family",
+                  "value": "bat, cat, fat, hat, mat, pat, rat, sat"
                 },
                 {
-                  "label": "Physical Action 2",
-                  "value": "They **sow** seeds in the field."
+                  "label": "The '-an' Family",
+                  "value": "can, fan, man, pan, ran, tan, van"
                 },
                 {
-                  "label": "Mental Action 1",
-                  "value": "I **think** about my lesson."
+                  "label": "The '-et' Family",
+                  "value": "get, jet, let, met, net, pet, set, wet"
                 },
                 {
-                  "label": "Physical Action 3",
-                  "value": "Sita **draws** a picture."
+                  "label": "The '-in' Family",
+                  "value": "bin, fin, pin, sin, tin, win, chin"
                 },
                 {
-                  "label": "Physical Action 4",
-                  "value": "The peon **rings** the bell."
+                  "label": "The '-og' Family",
+                  "value": "dog, fog, hog, jog, log, frog"
+                },
+                {
+                  "label": "The '-ug' Family",
+                  "value": "bug, dug, hug, jug, mug, rug, tug"
+                },
+                {
+                  "label": "The '-ake' Family",
+                  "value": "bake, cake, fake, lake, make, rake, take, snake"
+                },
+                {
+                  "label": "The '-ight' Family",
+                  "value": "bright, fight, light, might, night, right, sight, tight"
+                },
+                {
+                  "label": "The '-all' Family",
+                  "value": "ball, call, fall, hall, mall, tall, wall"
+                },
+                {
+                  "label": "The '-ain' Family",
+                  "value": "brain, chain, gain, main, pain, rain, train"
+                },
+                {
+                  "label": "The '-ay' Family",
+                  "value": "bay, day, hay, lay, may, pay, ray, say, way"
+                },
+                {
+                  "label": "The '-ell' Family",
+                  "value": "bell, cell, fell, sell, tell, well, shell"
+                },
+                {
+                  "label": "The '-ing' Family",
+                  "value": "bring, king, ring, sing, spring, swing, thing"
+                },
+                {
+                  "label": "The '-ock' Family",
+                  "value": "block, clock, flock, knock, lock, rock, sock"
+                },
+                {
+                  "label": "The '-ill' Family",
+                  "value": "bill, fill, hill, mill, pill, still, will"
                 }
               ],
-              "usage_examples": [
-                "We **walk** to school every day.",
-                "My grandmother **tells** stories.",
-                "The farmers **harvest** their crops in spring.",
-                "I **read** a book before sleeping.",
-                "He **drinks** milk every morning.",
-                "Children **jump** with joy.",
-                "The teacher **explains** the lesson.",
-                "We **share** our food with friends.",
-                "The well **gives** us water.",
-                "The tailor **stitches** clothes.",
-                "We **celebrate** festivals together."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-4/p"
-              }
-            }
-          ]
-        },
-        {
-          "title": "2.2. Helping Verbs (Auxiliary Verbs): Helping Other Verbs",
-          "sections": [
-            {
-              "text": "Helping verbs work with main verbs to show when an action happened (time or tense) or to add other meanings. The most common helping verbs are forms of 'be' (am, is, are, was, were), 'do' (do, does, did), and 'have' (has, have, had).",
-              "examples": [
-                {
-                  "label": "Using 'be'",
-                  "value": "I **am** studying. (am helps 'studying' show present time)"
-                },
-                {
-                  "label": "Using 'do'",
-                  "value": "She **does** not sing. (does helps 'sing' show negative meaning)"
-                },
-                {
-                  "label": "Using 'have'",
-                  "value": "We **have** eaten. (have helps 'eaten' show finished action)"
-                },
-                {
-                  "label": "Using 'be' (past)",
-                  "value": "They **were** playing. (were helps 'playing' show past time)"
-                },
-                {
-                  "label": "Using 'do' (past)",
-                  "value": "Did you **go**? (did helps 'go' form a question)"
-                }
-              ],
-              "usage_examples": [
-                "He **is** going to the market.",
-                "They **are** learning English.",
-                "I **was** sleeping when you called.",
-                "We **were** helping the farmer yesterday.",
-                "Do you **like** mangoes?",
-                "She **does** her homework neatly.",
-                "I **did** not see him.",
-                "He **has** finished his work.",
-                "They **have** built a new house.",
-                "You **will** succeed.",
-                "We **have** seen that movie.",
-                "What **did** you do yesterday?"
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-4/p"
-              },
               "table": {
-                "title": "Common Helping Verbs",
-                "headers": ["Helping Verb Family", "Forms", "Example with Main Verb"],
+                "title": "Common Word Families",
+                "headers": ["Family Ending", "Example Words"],
                 "rows": [
-                  ["Be", "am, is, are", "I am reading; He is going; They are playing"],
-                  ["Be (Past)", "was, were", "I was cooking; They were running"],
-                  ["Do", "do, does, did", "I do not know; She does not eat; We did not go"],
-                  ["Have", "has, have, had", "He has seen; I have studied; They had finished"],
-                  ["Modals", "will, should, can", "She will come; You should rest; I can help"]
+                  ["-at", "cat, hat, mat, sat"],
+                  ["-an", "man, fan, pan, can"],
+                  ["-et", "jet, net, pet, wet"],
+                  ["-in", "pin, tin, win, bin"],
+                  ["-og", "dog, log, fog, jog"],
+                  ["-ake", "cake, lake, make, bake"],
+                  ["-ight", "light, night, right, fight"],
+                  ["-all", "ball, call, fall, tall"]
                 ]
               }
             }
@@ -170,193 +175,137 @@
       ]
     },
     {
-      "title": "3. More Verb Types",
+      "title": "Rhymes in Poems and Songs",
       "subtopics": [
         {
-          "title": "3.1. Linking Verbs",
+          "title": "Finding Rhymes in Couplets",
           "sections": [
             {
-              "text": "A linking verb connects the subject of a sentence to a word or phrase that describes or renames it. [3, 7] These verbs don't show action; they show a state of being. [1] The most common linking verbs are forms of the verb 'to be' (am, is, are, was, were). [2, 6]",
+              "text": "Rhymes are very important in poems and songs, often appearing at the end of lines. A 'couplet' is a pair of lines in a poem that usually rhyme. Identifying these rhyming pairs helps us appreciate the music and rhythm of the poem.",
               "examples": [
                 {
-                  "label": "Example 1",
-                  "value": "The sky **is** blue. ('is' links 'sky' to its description 'blue')"
+                  "label": "Twinkle, Twinkle",
+                  "value": "Twinkle, twinkle, little star,\nHow I wonder what you are."
                 },
                 {
-                  "label": "Example 2",
-                  "value": "He **seems** tired. ('seems' links 'he' to his state 'tired')"
+                  "label": "The Sun",
+                  "value": "The sun is shining so bright,\nFilling the whole world with light."
                 },
                 {
-                  "label": "Example 3",
-                  "value": "She **became** a doctor. ('became' links 'she' to her new identity 'a doctor')"
+                  "label": "The Cow",
+                  "value": "I see a big brown cow,\nEating grass right now."
                 },
                 {
-                    "label": "Example 4",
-                    "value": "The food **tastes** delicious. ('tastes' links 'food' to its quality 'delicious')"
+                  "label": "The Rain",
+                  "value": "I hear the falling rain,\nTapping on my window pane."
+                },
+                {
+                  "label": "The Night",
+                  "value": "The moon is in the sky so high,\nWatching the quiet world go by."
+                },
+                {
+                  "label": "The Tree",
+                  "value": "The tree is very tall,\nIt stands there through fall."
+                },
+                {
+                  "label": "The Well",
+                  "value": "Down inside the well,\nA secret I can't tell."
+                },
+                {
+                  "label": "The Farmer",
+                  "value": "The farmer works all day,\nCome what may."
+                },
+                {
+                  "label": "The School Bell",
+                  "value": "I hear the school bell ring,\nHappy songs the children sing."
+                },
+                {
+                  "label": "A Little Mouse",
+                  "value": "I saw a little mouse,\nRunning in my house."
+                },
+                {
+                  "label": "The River",
+                  "value": "The river flows so deep,\nWhile the little fishes sleep."
+                },
+                {
+                  "label": "A Good Book",
+                  "value": "I love to sit and look,\nInside a brand new book."
+                },
+                {
+                  "label": "The Busy Bee",
+                  "value": "A busy little bee,\nIs what I want to be."
+                },
+                {
+                  "label": "The Road",
+                  "value": "The road is long and wide,\nWith fields on every side."
+                },
+                {
+                  "label": "My Friend",
+                  "value": "You are my friend to the end,\nOn you I can depend."
+                },
+                {
+                  "label": "A Little Seed",
+                  "value": "I planted a small seed,\nIt's all the plant will need."
+                },
+                {
+                  "label": "The Cool Pool",
+                  "value": "The water is so cool,\nHere in the village pool."
+                },
+                {
+                  "label": "My Red Ball",
+                  "value": "I have a big red ball,\nI play with it in the hall."
+                },
+                {
+                  "label": "The Fat Cat",
+                  "value": "My cat is very fat,\nHe loves to sleep on the mat."
+                },
+                {
+                  "label": "The Moon",
+                  "value": "The moon is round,\nIt makes no sound."
+                },
+                {
+                  "label": "The Fire",
+                  "value": "The fire is so hot,\nInside the cooking pot."
+                },
+                {
+                  "label": "A Happy Run",
+                  "value": "I like to go and run,\nIt is a lot of fun."
+                },
+                {
+                  "label": "My Mother's Cake",
+                  "value": "I love the tasty cake,\nThat my dear mother did bake."
+                },
+                {
+                  "label": "The King",
+                  "value": "The king wears a golden crown,\nAnd rules over the town."
+                },
+                {
+                  "label": "The Small Boat",
+                  "value": "My little toy boat can float,\nAcross the watery moat."
                 }
-              ],
-              "usage_examples": [
-                "I **am** a student.",
-                "The milk **tastes** sour.",
-                "They **were** happy to see us.",
-                "The flowers **smell** wonderful.",
-                "You **look** great today.",
-                "He **feels** sick today.",
-                "The students **appear** ready for the test.",
-                "He **remained** silent."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-4/p"
-              }
+              ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "Tips for Learning and Using Rhymes",
+      "subtopics": [
         {
-          "title": "3.2. Transitive and Intransitive Verbs",
+          "title": "Helpful Tips",
           "sections": [
             {
-              "text": "A transitive verb is an action verb that needs a direct object to complete its meaning. [14, 15] The object is the person or thing that receives the action of the verb. An intransitive verb is an action verb that does not need a direct object to make sense. [15, 17]",
-              "examples": [
-                {
-                  "label": "Transitive Example 1",
-                  "value": "The farmer **planted** a tree. (The object 'a tree' receives the action of 'planted')"
-                },
-                {
-                  "label": "Intransitive Example 1",
-                  "value": "The birds **flew**. (The verb 'flew' does not need an object)"
-                },
-                {
-                  "label": "Transitive Example 2",
-                  "value": "She **kicked** the ball. (The object 'the ball' receives the action of 'kicked')"
-                },
-                {
-                  "label": "Intransitive Example 2",
-                  "value": "The baby **cried** loudly. (The verb 'cried' is complete without an object)"
-                }
-              ],
+              "text": "Here are some tips to help you get better at recognizing and using rhyming words.",
               "usage_examples": [
-                "He **reads** a book. (Transitive)",
-                "The sun **shines**. (Intransitive)",
-                "I **wrote** a letter. (Transitive)",
-                "They **arrived** early. (Intransitive)",
-                "We **ate** our dinner. (Transitive)",
-                "The old man **laughed**. (Intransitive)",
-                "The girl **sings** a song. (Transitive)",
-                "The bell **rang**. (Intransitive)"
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-4/p"
-              }
-            }
-          ]
-        },
-        {
-          "title": "3.3. Regular and Irregular Verbs",
-          "sections": [
-            {
-              "text": "When we talk about the past, verbs can be regular or irregular. Regular verbs form their past tense by adding '-ed' or '-d'. [18, 19] Irregular verbs do not follow this rule and change in different ways. [19, 20]",
-              "examples": [
-                {
-                  "label": "Regular Verb Example",
-                  "value": "walk -> **walked**"
-                },
-                {
-                  "label": "Irregular Verb Example",
-                  "value": "go -> **went**"
-                },
-                {
-                  "label": "Regular Verb Example",
-                  "value": "play -> **played**"
-                },
-                {
-                  "label": "Irregular Verb Example",
-                  "value": "eat -> **ate**"
-                },
-                {
-                    "label": "Regular Verb Example",
-                    "value": "talk -> **talked**"
-                  },
-                  {
-                    "label": "Irregular Verb Example",
-                    "value": "begin -> **began**"
-                  }
-              ],
-              "usage_examples": [
-                "Yesterday, we **played** in the park. (Regular)",
-                "Last week, I **saw** my friend. (Irregular)",
-                "She **cooked** a delicious meal. (Regular)",
-                "He **took** the book from the table. (Irregular)",
-                "They **cleaned** the classroom. (Regular)",
-                "I **made** a card for my mother. (Irregular)",
-                "He **broke** the glass. (Irregular)",
-                "We **waited** for the bus. (Regular)"
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-4/p"
-              },
-              "table": {
-                "title": "Common Irregular Verbs (Present vs. Past)",
-                "headers": ["Present Form", "Past Form", "Example Sentence (Past)"],
-                "rows": [
-                  ["go", "went", "I **went** to school."],
-                  ["eat", "ate", "We **ate** lunch."],
-                  ["see", "saw", "I **saw** a bird."],
-                  ["make", "made", "My mother **made** a sweet."],
-                  ["give", "gave", "I **gave** him a book."],
-                  ["take", "took", "He **took** my pen."],
-                  ["run", "ran", "We **ran** in the field."],
-                  ["sing", "sang", "She **sang** a song."],
-                  ["buy", "bought", "I **bought** a new pen."],
-                  ["think", "thought", "He **thought** about the problem."]
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "title": "3.4. Modal Verbs",
-          "sections": [
-            {
-              "text": "Modal verbs are a special kind of helping verb. [3] They are used with a main verb to express ideas like ability, possibility, necessity, or permission. [5, 6] Common modal verbs include can, could, may, might, will, would, should, and must. [3]",
-              "examples": [
-                {
-                  "label": "Ability",
-                  "value": "I **can** swim."
-                },
-                {
-                  "label": "Possibility",
-                  "value": "It **might** rain today."
-                },
-                {
-                  "label": "Necessity",
-                  "value": "You **must** finish your homework."
-                },
-                {
-                  "label": "Permission",
-                  "value": "**May** I borrow your pen?"
-                },
-                {
-                  "label": "Advice",
-                  "value": "You **should** rest."
-                },
-                {
-                  "label": "Offer",
-                  "value": "**Would** you like some tea?"
-                }
-              ],
-              "usage_examples": [
-                "She **can** speak three languages.",
-                "We **will** go to the village fair tomorrow.",
-                "He **should** wear a coat.",
-                "You **must** not be late.",
-                "**Could** you please help me?",
-                "They **might** come to the party.",
-                "It **may** be sunny later.",
-                "I **would** prefer to stay home."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-4/p"
-              }
+                "Tip 1: Listen, Don't Look. Rhyme is about sound, not spelling. The words 'blue' and 'flew' rhyme, but are spelled differently. The words 'rough' and 'through' are spelled similarly at the end, but they do not rhyme.",
+                "Tip 2: Say the words out loud. Hearing the words is the best way to check if they rhyme. If the ending sounds are the same, they rhyme.",
+                "Tip 3: Think in word families. If you need a word that rhymes with 'cat', think of other words in the '-at' family like 'bat', 'hat', 'mat'.",
+                "Tip 4: Read simple poems and listen to songs in English. Pay attention to the words at the end of the lines to find the rhyming pairs.",
+                "Tip 5: Play rhyming games. Say a word like 'sun' and have a friend say a word that rhymes with it, like 'fun' or 'run'.",
+                "Tip 6: Make your own simple two-line poems. This is a fun way to practice. For example: 'The sky is blue, / I like it, do you?'",
+                "Tip 7: Use a rhyming dictionary. If you are writing a poem and get stuck, you can look up a word in an online rhyming dictionary to find many words that rhyme with it."
+              ]
             }
           ]
         }

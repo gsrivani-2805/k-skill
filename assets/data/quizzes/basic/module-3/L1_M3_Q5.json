@@ -5,423 +5,353 @@
       "questions": [
         {
           "id": 1,
-          "question": "Every sentence has two parts: a subject and a ____.",
-          "options": ["verb", "noun", "predicate", "pronoun"],
-          "correct_answer": "predicate",
-          "grammar_type": "Subject and Predicate"
+          "question": "Please put the book over ______.",
+          "options": ["their", "there", "they're", "thar"],
+          "correct_answer": "there",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 2,
-          "question": "What is the subject in the sentence: 'The dog barks.'?",
-          "options": ["The dog", "barks", "The", "dog barks"],
-          "correct_answer": "The dog",
-          "grammar_type": "Subject and Predicate"
+          "question": "I have ______ apples.",
+          "options": ["to", "two", "too", "tew"],
+          "correct_answer": "two",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 3,
-          "question": "What is the predicate in the sentence: 'The dog barks.'?",
-          "options": ["The dog", "barks", "The", "dog"],
-          "correct_answer": "barks",
-          "grammar_type": "Subject and Predicate"
+          "question": "This is ______ house.",
+          "options": ["there", "their", "they're", "theyr"],
+          "correct_answer": "their",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 4,
-          "question": "The subject of a sentence tells ____ or what the sentence is about.",
-          "options": ["when", "where", "why", "who"],
-          "correct_answer": "who",
-          "grammar_type": "Subject and Predicate"
+          "question": "______ going to the park.",
+          "options": ["Their", "There", "They're", "Thare"],
+          "correct_answer": "They're",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 5,
-          "question": "Identify the subject: 'She is reading a book.'",
-          "options": ["She", "is reading", "a book", "reading a book"],
-          "correct_answer": "She",
-          "grammar_type": "Subject and Predicate"
+          "question": "The dog wagged ______ tail.",
+          "options": ["it's", "its", "its'", "it"],
+          "correct_answer": "its",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 6,
-          "question": "Identify the predicate: 'He plays football.'",
-          "options": ["He", "plays", "football", "plays football"],
-          "correct_answer": "plays football",
-          "grammar_type": "Subject and Predicate"
+          "question": "______ a beautiful day outside.",
+          "options": ["Its", "It's", "Its'", "It"],
+          "correct_answer": "It's",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 7,
-          "question": "What is the subject in 'Birds fly.'?",
-          "options": ["fly", "Birds", "Birds fly", "The birds"],
-          "correct_answer": "Birds",
-          "grammar_type": "Subject and Predicate"
+          "question": "Did you ______ the beautiful bird?",
+          "options": ["sea", "see", "si", "c"],
+          "correct_answer": "see",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 8,
-          "question": "What is the predicate in 'The sun shines.'?",
-          "options": ["The sun", "sun", "shines", "The"],
-          "correct_answer": "shines",
-          "grammar_type": "Subject and Predicate"
+          "question": "I love to swim in the ______.",
+          "options": ["see", "sea", "si", "c"],
+          "correct_answer": "sea",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 9,
-          "question": "Find the subject: 'My father drives a car.'",
-          "options": ["drives a car", "a car", "drives", "My father"],
-          "correct_answer": "My father",
-          "grammar_type": "Subject and Predicate"
+          "question": "The ______ shines brightly.",
+          "options": ["son", "sun", "soon", "sin"],
+          "correct_answer": "sun",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 10,
-          "question": "Find the predicate: 'The baby is sleeping.'",
-          "options": ["The baby", "is sleeping", "baby", "The"],
-          "correct_answer": "is sleeping",
-          "grammar_type": "Subject and Predicate"
+          "question": "My aunt's ______ is a doctor.",
+          "options": ["sun", "son", "soon", "sin"],
+          "correct_answer": "son",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 11,
-          "question": "Which part of the sentence is the subject in 'We love our country.'?",
-          "options": ["We", "love", "our country", "love our country"],
-          "correct_answer": "We",
-          "grammar_type": "Subject and Predicate"
+          "question": "Please ______ me your name.",
+          "options": ["write", "right", "rite", "wright"],
+          "correct_answer": "write",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 12,
-          "question": "Which part of the sentence is the predicate in 'They are playing in the park.'?",
-          "options": ["They", "are playing", "in the park", "are playing in the park"],
-          "correct_answer": "are playing in the park",
-          "grammar_type": "Subject and Predicate"
+          "question": "Turn ______ at the next corner.",
+          "options": ["write", "right", "rite", "wright"],
+          "correct_answer": "right",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 13,
-          "question": "What is the subject? 'The girl sings a song.'",
-          "options": ["sings a song", "a song", "The girl", "sings"],
-          "correct_answer": "The girl",
-          "grammar_type": "Subject and Predicate"
+          "question": "I can ______ the music from my room.",
+          "options": ["hear", "here", "her", "hair"],
+          "correct_answer": "hear",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 14,
-          "question": "What is the predicate? 'I eat an apple daily.'",
-          "options": ["I", "eat an apple daily", "an apple", "daily"],
-          "correct_answer": "eat an apple daily",
-          "grammar_type": "Subject and Predicate"
+          "question": "Please put the bag right ______.",
+          "options": ["hear", "here", "her", "hair"],
+          "correct_answer": "here",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 15,
-          "question": "The predicate always contains the ____.",
-          "options": ["noun", "pronoun", "verb", "adjective"],
-          "correct_answer": "verb",
-          "grammar_type": "Subject and Predicate"
+          "question": "I have a ______ pair of shoes.",
+          "options": ["knew", "new", "nu", "gnu"],
+          "correct_answer": "new",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 16,
-          "question": "Identify the subject: 'The teacher is kind.'",
-          "options": ["The teacher", "is kind", "is", "kind"],
-          "correct_answer": "The teacher",
-          "grammar_type": "Subject and Predicate"
+          "question": "He ______ the answer to the question.",
+          "options": ["new", "knew", "nu", "gnu"],
+          "correct_answer": "knew",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 17,
-          "question": "Identify the predicate: 'The cat ran away.'",
-          "options": ["The cat", "cat", "ran away", "ran"],
-          "correct_answer": "ran away",
-          "grammar_type": "Subject and Predicate"
+          "question": "I ate ______ cookies for breakfast.",
+          "options": ["ate", "eight", "ait", "eat"],
+          "correct_answer": "eight",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 18,
-          "question": "Subject: 'The children'. Predicate: ?",
-          "options": ["are happy", "The", "happy", "children"],
-          "correct_answer": "are happy",
-          "grammar_type": "Subject and Predicate"
+          "question": "She ______ the whole cake by herself.",
+          "options": ["eight", "ate", "ait", "eat"],
+          "correct_answer": "ate",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 19,
-          "question": "Predicate: 'is blue'. Subject: ?",
-          "options": ["The sky", "blue", "is", "The"],
-          "correct_answer": "The sky",
-          "grammar_type": "Subject and Predicate"
+          "question": "We need to ______ some vegetables.",
+          "options": ["by", "bye", "buy", "bai"],
+          "correct_answer": "buy",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 20,
-          "question": "What is the subject in 'He is my friend.'?",
-          "options": ["He", "is", "my friend", "friend"],
-          "correct_answer": "He",
-          "grammar_type": "Subject and Predicate"
+          "question": "The shop is ______ the river.",
+          "options": ["buy", "bye", "by", "bi"],
+          "correct_answer": "by",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 21,
-          "question": "What is the predicate in 'Monkeys eat bananas.'?",
-          "options": ["Monkeys", "eat", "bananas", "eat bananas"],
-          "correct_answer": "eat bananas",
-          "grammar_type": "Subject and Predicate"
+          "question": "I need some ______ to bake a cake.",
+          "options": ["flower", "floor", "flour", "flaw"],
+          "correct_answer": "flour",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 22,
-          "question": "Find the subject: 'My book is on the table.'",
-          "options": ["My book", "is on the table", "on the table", "is"],
-          "correct_answer": "My book",
-          "grammar_type": "Subject and Predicate"
+          "question": "The rose is a beautiful ______.",
+          "options": ["flour", "flower", "floor", "flaw"],
+          "correct_answer": "flower",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 23,
-          "question": "Find the predicate: 'The old man walked slowly.'",
-          "options": ["The old man", "walked", "slowly", "walked slowly"],
-          "correct_answer": "walked slowly",
-          "grammar_type": "Subject and Predicate"
+          "question": "What are you going to ______ today?",
+          "options": ["wear", "where", "ware", "were"],
+          "correct_answer": "wear",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 24,
-          "question": "The subject is the ____ of the action in a sentence.",
-          "options": ["receiver", "doer", "place", "time"],
-          "correct_answer": "doer",
-          "grammar_type": "Subject and Predicate"
+          "question": "______ is the library?",
+          "options": ["Wear", "Where", "Ware", "Were"],
+          "correct_answer": "Where",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 25,
-          "question": "Identify the subject: 'The train arrived late.'",
-          "options": ["arrived late", "late", "The train", "arrived"],
-          "correct_answer": "The train",
-          "grammar_type": "Subject and Predicate"
+          "question": "A story about a brave knight is a ______.",
+          "options": ["tail", "tale", "tall", "tell"],
+          "correct_answer": "tale",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 26,
-          "question": "Identify the predicate: 'A big spider made a web.'",
-          "options": ["A big spider", "made a web", "a web", "made"],
-          "correct_answer": "made a web",
-          "grammar_type": "Subject and Predicate"
+          "question": "A dog has a long ______.",
+          "options": ["tale", "tail", "tall", "tell"],
+          "correct_answer": "tail",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 27,
-          "question": "What is the subject in 'You are a good singer.'?",
-          "options": ["You", "are", "a good singer", "singer"],
-          "correct_answer": "You",
-          "grammar_type": "Subject and Predicate"
+          "question": "The opposite of strong is ______.",
+          "options": ["weak", "week", "wick", "walk"],
+          "correct_answer": "weak",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 28,
-          "question": "What is the predicate in 'The lion roared loudly.'?",
-          "options": ["The lion", "roared", "loudly", "roared loudly"],
-          "correct_answer": "roared loudly",
-          "grammar_type": "Subject and Predicate"
+          "question": "There are seven days in a ______.",
+          "options": ["weak", "week", "wick", "walk"],
+          "correct_answer": "week",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 29,
-          "question": "Find the subject: 'The house is beautiful.'",
-          "options": ["The house", "is", "beautiful", "is beautiful"],
-          "correct_answer": "The house",
-          "grammar_type": "Subject and Predicate"
+          "question": "The ship will ______ tomorrow.",
+          "options": ["sale", "sail", "sell", "cell"],
+          "correct_answer": "sail",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 30,
-          "question": "Find the predicate: 'The fish swims in the pond.'",
-          "options": ["The fish", "swims", "in the pond", "swims in the pond"],
-          "correct_answer": "swims in the pond",
-          "grammar_type": "Subject and Predicate"
+          "question": "The shop has a big ______ on clothes.",
+          "options": ["sail", "sale", "sell", "cell"],
+          "correct_answer": "sale",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 31,
-          "question": "Which part is the subject? 'A little boy sat in a corner.'",
-          "options": ["A little boy", "sat in a corner", "in a corner", "sat"],
-          "correct_answer": "A little boy",
-          "grammar_type": "Subject and Predicate"
+          "question": "I need a ______ of socks.",
+          "options": ["pear", "pair", "pare", "pier"],
+          "correct_answer": "pair",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 32,
-          "question": "Which part is the predicate? 'The clever fox told a lie.'",
-          "options": ["The clever fox", "told a lie", "a lie", "told"],
-          "correct_answer": "told a lie",
-          "grammar_type": "Subject and Predicate"
+          "question": "A ______ is a sweet fruit.",
+          "options": ["pair", "pear", "pare", "pier"],
+          "correct_answer": "pear",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 33,
-          "question": "Subject: 'It'. Predicate: ?",
-          "options": ["is raining", "It", "raining", "is"],
-          "correct_answer": "is raining",
-          "grammar_type": "Subject and Predicate"
+          "question": "The opposite of female is ______.",
+          "options": ["mail", "male", "meal", "mall"],
+          "correct_answer": "male",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 34,
-          "question": "Predicate: 'are playing chess'. Subject: ?",
-          "options": ["The boys", "chess", "are playing", "The"],
-          "correct_answer": "The boys",
-          "grammar_type": "Subject and Predicate"
+          "question": "I received a letter in the ______.",
+          "options": ["male", "mail", "meal", "mall"],
+          "correct_answer": "mail",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 35,
-          "question": "What is the subject in 'My mother cooks food.'?",
-          "options": ["My mother", "cooks", "food", "cooks food"],
-          "correct_answer": "My mother",
-          "grammar_type": "Subject and Predicate"
+          "question": "______ you like to come with us?",
+          "options": ["Wood", "Would", "Wide", "Weed"],
+          "correct_answer": "Would",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 36,
-          "question": "What is the predicate in 'He is a brave soldier.'?",
-          "options": ["He", "is a brave soldier", "a brave soldier", "is"],
-          "correct_answer": "is a brave soldier",
-          "grammar_type": "Subject and Predicate"
+          "question": "The table is made of ______.",
+          "options": ["would", "wood", "wide", "weed"],
+          "correct_answer": "wood",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 37,
-          "question": "Find the subject: 'The moon shines at night.'",
-          "options": ["The moon", "shines", "at night", "shines at night"],
-          "correct_answer": "The moon",
-          "grammar_type": "Subject and Predicate"
+          "question": "The witch in the story was very evil. Which word is a homophone of 'witch'?",
+          "options": ["which", "with", "wash", "watch"],
+          "correct_answer": "which",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 38,
-          "question": "Find the predicate: 'The cow eats grass.'",
-          "options": ["The cow", "eats grass", "eats", "grass"],
-          "correct_answer": "eats grass",
-          "grammar_type": "Subject and Predicate"
+          "question": "There are ______ seasons in a year.",
+          "options": ["for", "four", "fore", "fur"],
+          "correct_answer": "four",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 39,
-          "question": "The predicate tells what the subject ____ or is.",
-          "options": ["sees", "has", "does", "wants"],
-          "correct_answer": "does",
-          "grammar_type": "Subject and Predicate"
+          "question": "This gift is ______ you.",
+          "options": ["four", "for", "fore", "fur"],
+          "correct_answer": "for",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 40,
-          "question": "Identify the subject: 'The tall tree fell down.'",
-          "options": ["The tall tree", "fell down", "fell", "down"],
-          "correct_answer": "The tall tree",
-          "grammar_type": "Subject and Predicate"
+          "question": "My ______ mother, I miss you.",
+          "options": ["dear", "deer", "dare", "dark"],
+          "correct_answer": "dear",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 41,
-          "question": "Identify the predicate: 'The birds are chirping.'",
-          "options": ["The birds", "are", "chirping", "are chirping"],
-          "correct_answer": "are chirping",
-          "grammar_type": "Subject and Predicate"
+          "question": "A ______ is a gentle animal found in the forest.",
+          "options": ["dear", "deer", "dare", "dark"],
+          "correct_answer": "deer",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 42,
-          "question": "What is the subject in 'She wrote a letter.'?",
-          "options": ["She", "wrote", "a letter", "wrote a letter"],
-          "correct_answer": "She",
-          "grammar_type": "Subject and Predicate"
+          "question": "Please wait ______ minute.",
+          "options": ["one", "won", "wan", "own"],
+          "correct_answer": "one",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 43,
-          "question": "What is the predicate in 'I can solve this puzzle.'?",
-          "options": ["I", "can solve this puzzle", "this puzzle", "can solve"],
-          "correct_answer": "can solve this puzzle",
-          "grammar_type": "Subject and Predicate"
+          "question": "Our team ______ the match.",
+          "options": ["one", "won", "wan", "own"],
+          "correct_answer": "won",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 44,
-          "question": "Find the subject: 'That beautiful house is ours.'",
-          "options": ["That beautiful house", "is ours", "ours", "is"],
-          "correct_answer": "That beautiful house",
-          "grammar_type": "Subject and Predicate"
+          "question": "I can't ______ to hear the good news.",
+          "options": ["wait", "weight", "wet", "what"],
+          "correct_answer": "wait",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 45,
-          "question": "Find the predicate: 'He speaks English fluently.'",
-          "options": ["He", "speaks", "English", "speaks English fluently"],
-          "correct_answer": "speaks English fluently",
-          "grammar_type": "Subject and Predicate"
+          "question": "The ______ of the box is 5 kilograms.",
+          "options": ["wait", "weight", "wet", "what"],
+          "correct_answer": "weight",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 46,
-          "question": "The subject is usually a noun or a ____.",
-          "options": ["verb", "pronoun", "adverb", "preposition"],
-          "correct_answer": "pronoun",
-          "grammar_type": "Subject and Predicate"
+          "question": "The road is straight and ______.",
+          "options": ["plane", "plain", "plan", "pain"],
+          "correct_answer": "plain",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 47,
-          "question": "Identify the subject: 'The stars are shining brightly.'",
-          "options": ["The stars", "are shining", "brightly", "are shining brightly"],
-          "correct_answer": "The stars",
-          "grammar_type": "Subject and Predicate"
+          "question": "We will travel by ______ to Delhi.",
+          "options": ["plain", "plane", "plan", "pain"],
+          "correct_answer": "plane",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 48,
-          "question": "Identify the predicate: 'The farmer works in the field.'",
-          "options": ["The farmer", "works", "in the field", "works in the field"],
-          "correct_answer": "works in the field",
-          "grammar_type": "Subject and Predicate"
+          "question": "Please get me a ______ of paper.",
+          "options": ["peace", "piece", "piss", "peas"],
+          "correct_answer": "piece",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 49,
-          "question": "What is the subject in 'It is a sunny day.'?",
-          "options": ["It", "is", "a sunny day", "day"],
-          "correct_answer": "It",
-          "grammar_type": "Subject and Predicate"
+          "question": "We all want to live in ______.",
+          "options": ["piece", "peace", "piss", "peas"],
+          "correct_answer": "peace",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 50,
-          "question": "What is the predicate in 'You should work hard.'?",
-          "options": ["You", "should work hard", "work hard", "should work"],
-          "correct_answer": "should work hard",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 51,
-          "question": "Find the subject: 'Her new dress is very nice.'",
-          "options": ["Her new dress", "is very nice", "is", "very nice"],
-          "correct_answer": "Her new dress",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 52,
-          "question": "Find the predicate: 'The players were tired.'",
-          "options": ["The players", "were tired", "were", "tired"],
-          "correct_answer": "were tired",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 53,
-          "question": "Which is the subject? 'My younger brother lives in Delhi.'",
-          "options": ["My younger brother", "lives in Delhi", "in Delhi", "lives"],
-          "correct_answer": "My younger brother",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 54,
-          "question": "Which is the predicate? 'She bought a new phone.'",
-          "options": ["She", "bought a new phone", "a new phone", "bought"],
-          "correct_answer": "bought a new phone",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 55,
-          "question": "The subject can be one word or ____ words.",
-          "options": ["never", "always", "many", "two"],
-          "correct_answer": "many",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 56,
-          "question": "Identify the subject: 'A barking dog seldom bites.'",
-          "options": ["A barking dog", "seldom bites", "bites", "A dog"],
-          "correct_answer": "A barking dog",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 57,
-          "question": "Identify the predicate: 'The child cried for milk.'",
-          "options": ["The child", "cried", "for milk", "cried for milk"],
-          "correct_answer": "cried for milk",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 58,
-          "question": "What is the subject in 'He has a good memory.'?",
-          "options": ["He", "has", "a good memory", "memory"],
-          "correct_answer": "He",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 59,
-          "question": "What is the predicate in 'The earth revolves around the sun.'?",
-          "options": ["The earth", "revolves around the sun", "around the sun", "revolves"],
-          "correct_answer": "revolves around the sun",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 60,
-          "question": "Find the subject: 'The class is very noisy.'",
-          "options": ["The class", "is", "very noisy", "is very noisy"],
-          "correct_answer": "The class",
-          "grammar_type": "Subject and Predicate"
+          "question": "Words that sound the same but have different spellings and meanings are called...",
+          "options": ["Homographs", "Homonyms", "Homophones", "Antonyms"],
+          "correct_answer": "Homophones",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         }
       ]
     },
@@ -429,354 +359,354 @@
       "level": "Medium",
       "questions": [
         {
+          "id": 51,
+          "question": "The school ______ is a very wise person.",
+          "options": ["principle", "principal", "prince", "print"],
+          "correct_answer": "principal",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 52,
+          "question": "It is against my ______ to lie.",
+          "options": ["principal", "principle", "prince", "print"],
+          "correct_answer": "principle",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 53,
+          "question": "I don't know ______ to choose the red shirt or the blue one.",
+          "options": ["weather", "whether", "wether", "whither"],
+          "correct_answer": "whether",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 54,
+          "question": "The ______ forecast for tomorrow is sunny.",
+          "options": ["whether", "weather", "wether", "whither"],
+          "correct_answer": "weather",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 55,
+          "question": "Please ______ my apology.",
+          "options": ["except", "accept", "expect", "aspect"],
+          "correct_answer": "accept",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 56,
+          "question": "Everyone is here ______ for Ram.",
+          "options": ["accept", "except", "expect", "aspect"],
+          "correct_answer": "except",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 57,
+          "question": "The strong wind will ______ the trees.",
+          "options": ["effect", "affect", "afflict", "afford"],
+          "correct_answer": "affect",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 58,
+          "question": "The new law will take ______ from tomorrow.",
+          "options": ["affect", "effect", "afflict", "afford"],
+          "correct_answer": "effect",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 59,
+          "question": "A 'bat' can be a flying mammal or a piece of sports equipment. This makes 'bat' a...",
+          "options": ["Homophone", "Homograph", "Homonym", "Synonym"],
+          "correct_answer": "Homonym",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 60,
+          "question": "You should not ______ the animals in the zoo.",
+          "options": ["tease", "tees", "teas", "ties"],
+          "correct_answer": "tease",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
           "id": 61,
-          "question": "What is the complete subject in 'The little boy from the village won the prize.'?",
-          "options": ["The little boy", "The boy", "boy", "The little boy from the village"],
-          "correct_answer": "The little boy from the village",
-          "grammar_type": "Subject and Predicate"
+          "question": "The teacher is reading the story ______ to the class.",
+          "options": ["allowed", "aloud", "allow", "a loud"],
+          "correct_answer": "aloud",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 62,
-          "question": "What is the simple subject in 'The little boy from the village won the prize.'?",
-          "options": ["The little boy", "boy", "The boy", "village"],
-          "correct_answer": "boy",
-          "grammar_type": "Subject and Predicate"
+          "question": "You are not ______ to enter this room.",
+          "options": ["aloud", "allowed", "allow", "a loud"],
+          "correct_answer": "allowed",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 63,
-          "question": "What is the complete predicate in 'The cat slowly crept towards the mouse.'?",
-          "options": ["crept towards the mouse", "slowly crept towards the mouse", "crept", "towards the mouse"],
-          "correct_answer": "slowly crept towards the mouse",
-          "grammar_type": "Subject and Predicate"
+          "question": "The wind will ______ the boat to the shore.",
+          "options": ["led", "lead", "lid", "lad"],
+          "correct_answer": "lead",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 64,
-          "question": "What is the simple predicate (verb) in 'The cat slowly crept towards the mouse.'?",
-          "options": ["crept", "slowly crept", "crept towards", "crept towards the mouse"],
-          "correct_answer": "crept",
-          "grammar_type": "Subject and Predicate"
+          "question": "The old pipes were made of ______, which is a heavy metal.",
+          "options": ["lead", "led", "lid", "lad"],
+          "correct_answer": "led",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 65,
-          "question": "What is the subject of the command: 'Open the door.'?",
-          "options": ["The door", "Open", "(You)", "There is no subject"],
-          "correct_answer": "(You)",
-          "grammar_type": "Subject and Predicate"
+          "question": "Words spelled the same but with different meanings and sometimes different pronunciations are...",
+          "options": ["Homophones", "Homographs", "Homonyms", "Antonyms"],
+          "correct_answer": "Homographs",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 66,
-          "question": "Identify the compound subject: 'Ram and Shyam are brothers.'",
-          "options": ["Ram", "Shyam", "brothers", "Ram and Shyam"],
-          "correct_answer": "Ram and Shyam",
-          "grammar_type": "Subject and Predicate"
+          "question": "I ______ you should apologize.",
+          "options": ["advice", "advise", "add vice", "ad vice"],
+          "correct_answer": "advise",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 67,
-          "question": "Identify the compound predicate: 'She sang and danced at the party.'",
-          "options": ["sang", "danced", "sang and danced", "at the party"],
-          "correct_answer": "sang and danced",
-          "grammar_type": "Subject and Predicate"
+          "question": "Thank you for your helpful ______.",
+          "options": ["advise", "advice", "add vice", "ad vice"],
+          "correct_answer": "advice",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
-          "id": 68,
-          "question": "What is the subject in 'Here comes the bus.'?",
-          "options": ["Here", "comes", "the bus", "bus"],
-          "correct_answer": "the bus",
-          "grammar_type": "Subject and Predicate"
+          "id": 8,
+          "question": "The bride walked down the ______.",
+          "options": ["isle", "aisle", "I'll", "island"],
+          "correct_answer": "aisle",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 69,
-          "question": "What is the subject in 'There are many students in the class.'?",
-          "options": ["There", "are", "many students", "class"],
-          "correct_answer": "many students",
-          "grammar_type": "Subject and Predicate"
+          "question": "They went on a holiday to a beautiful ______.",
+          "options": ["aisle", "isle", "I'll", "island"],
+          "correct_answer": "isle",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 70,
-          "question": "What is the simple subject in 'My favourite blue shirt is in the cupboard.'?",
-          "options": ["My favourite blue shirt", "shirt", "blue shirt", "cupboard"],
-          "correct_answer": "shirt",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'read' can be pronounced in two ways. This makes it a...",
+          "options": ["Homophone", "Homograph", "Synonym", "Antonym"],
+          "correct_answer": "Homograph",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 71,
-          "question": "What is the simple predicate in 'The team will play the final match tomorrow.'?",
-          "options": ["will play", "play", "will play the final match", "will play tomorrow"],
-          "correct_answer": "will play",
-          "grammar_type": "Subject and Predicate"
+          "question": "The patient doctor has a lot of ______.",
+          "options": ["patience", "patients", "patents", "patterns"],
+          "correct_answer": "patience",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 72,
-          "question": "Identify the subject: 'On the table lay a beautiful book.'",
-          "options": ["On the table", "table", "a beautiful book", "lay"],
-          "correct_answer": "a beautiful book",
-          "grammar_type": "Subject and Predicate"
+          "question": "The doctor is checking on his ______.",
+          "options": ["patience", "patients", "patents", "patterns"],
+          "correct_answer": "patients",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 73,
-          "question": "Identify the predicate: 'The man with the red hat smiled at me.'",
-          "options": ["The man", "The man with the red hat", "smiled", "smiled at me"],
-          "correct_answer": "smiled at me",
-          "grammar_type": "Subject and Predicate"
+          "question": "The blue curtains ______ the white walls perfectly.",
+          "options": ["compliment", "complement", "complete", "complain"],
+          "correct_answer": "complement",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 74,
-          "question": "What is the subject in the command: 'Please be quiet.'?",
-          "options": ["Please", "be quiet", "(You)", "There is no subject"],
-          "correct_answer": "(You)",
-          "grammar_type": "Subject and Predicate"
+          "question": "She gave me a nice ______ on my new dress.",
+          "options": ["complement", "compliment", "complete", "complain"],
+          "correct_answer": "compliment",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 75,
-          "question": "Find the compound subject: 'The teacher and the students went on a trip.'",
-          "options": ["The teacher", "the students", "The teacher and the students", "a trip"],
-          "correct_answer": "The teacher and the students",
-          "grammar_type": "Subject and Predicate"
+          "question": "Words that are spelled the same and sound the same but have different meanings are...",
+          "options": ["Homophones", "Homographs", "Homonyms", "All of the above"],
+          "correct_answer": "Homonyms",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 76,
-          "question": "Find the compound predicate: 'He tripped and fell down.'",
-          "options": ["tripped", "fell down", "tripped and fell", "tripped and fell down"],
-          "correct_answer": "tripped and fell down",
-          "grammar_type": "Subject and Predicate"
+          "question": "The camel can survive in the hot ______.",
+          "options": ["dessert", "desert", "deserve", "design"],
+          "correct_answer": "desert",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 77,
-          "question": "What is the subject? 'Out of the jungle came a tiger.'",
-          "options": ["Out of the jungle", "jungle", "came", "a tiger"],
-          "correct_answer": "a tiger",
-          "grammar_type": "Subject and Predicate"
+          "question": "We had ice cream for ______.",
+          "options": ["desert", "dessert", "deserve", "design"],
+          "correct_answer": "dessert",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 78,
-          "question": "What is the complete subject in 'All the students in my class are hard-working.'?",
-          "options": ["All the students", "students", "All the students in my class", "my class"],
-          "correct_answer": "All the students in my class",
-          "grammar_type": "Subject and Predicate"
+          "question": "I would like to ______ my friend to the party.",
+          "options": ["invite", "invent", "in vent", "in vent"],
+          "correct_answer": "invite",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 79,
-          "question": "What is the complete predicate in 'My younger sister likes to draw pictures.'?",
-          "options": ["likes to draw pictures", "likes", "likes to draw", "draw pictures"],
-          "correct_answer": "likes to draw pictures",
-          "grammar_type": "Subject and Predicate"
+          "question": "The school ______ was closed for repairs.",
+          "options": ["gate", "gait", "get", "got"],
+          "correct_answer": "gate",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 80,
-          "question": "Identify the subject: 'Into the room ran the little child.'",
-          "options": ["Into the room", "ran", "the little child", "room"],
-          "correct_answer": "the little child",
-          "grammar_type": "Subject and Predicate"
+          "question": "The horse has a steady ______. (manner of walking)",
+          "options": ["gate", "gait", "get", "got"],
+          "correct_answer": "gait",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 81,
-          "question": "My father and mother ____ doctors.",
-          "options": ["is", "am", "are", "be"],
-          "correct_answer": "are",
-          "grammar_type": "Subject and Predicate"
+          "question": "A 'bow' can be a knot or a weapon. This is a...",
+          "options": ["Homophone", "Homograph", "Synonym", "Antonym"],
+          "correct_answer": "Homograph",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 82,
-          "question": "The horse and carriage ____ at the door.",
-          "options": ["is", "am", "are", "be"],
-          "correct_answer": "is",
-          "grammar_type": "Subject and Predicate"
+          "question": "He had to ______ himself in front of the king.",
+          "options": ["bow", "bough", "baw", "boo"],
+          "correct_answer": "bow",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 83,
-          "question": "What is the simple subject in 'The hungry, grey cat jumped on the wall.'?",
-          "options": ["The hungry, grey cat", "cat", "The cat", "wall"],
-          "correct_answer": "cat",
-          "grammar_type": "Subject and Predicate"
+          "question": "The car brakes made a loud ______ sound.",
+          "options": ["screech", "scream", "shout", "cry"],
+          "correct_answer": "screech",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 84,
-          "question": "What is the simple predicate (verb) in 'She has been working since morning.'?",
-          "options": ["has been working", "working", "has been", "been working"],
-          "correct_answer": "has been working",
-          "grammar_type": "Subject and Predicate"
+          "question": "The book was lying on the top ______.",
+          "options": ["shelf", "shelf", "shale", "shell"],
+          "correct_answer": "shelf",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 85,
-          "question": "Find the subject: 'Behind the tree was hiding a small rabbit.'",
-          "options": ["Behind the tree", "tree", "was hiding", "a small rabbit"],
-          "correct_answer": "a small rabbit",
-          "grammar_type": "Subject and Predicate"
+          "question": "I am not feeling ______. I think I have a fever.",
+          "options": ["good", "well", "wheel", "will"],
+          "correct_answer": "well",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 86,
-          "question": "The subject of a command sentence is always ____.",
-          "options": ["I", "He", "She", "You"],
-          "correct_answer": "You",
-          "grammar_type": "Subject and Predicate"
+          "question": "The water from the ______ is used for irrigation.",
+          "options": ["well", "wheel", "will", "wall"],
+          "correct_answer": "well",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 87,
-          "question": "Find the compound predicate: 'The dog wagged its tail and barked happily.'",
-          "options": ["wagged its tail", "barked happily", "wagged its tail and barked happily", "wagged and barked"],
-          "correct_answer": "wagged its tail and barked happily",
-          "grammar_type": "Subject and Predicate"
+          "question": "Don't ______ your time on useless things.",
+          "options": ["waste", "waist", "west", "vast"],
+          "correct_answer": "waste",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 88,
-          "question": "What is the subject? 'There goes my hero.'",
-          "options": ["There", "goes", "my hero", "hero"],
-          "correct_answer": "my hero",
-          "grammar_type": "Subject and Predicate"
+          "question": "He tied the belt around his ______.",
+          "options": ["waist", "waste", "west", "vast"],
+          "correct_answer": "waist",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 89,
-          "question": "What is the complete subject? 'The book on the top shelf belongs to me.'",
-          "options": ["The book", "The book on the top shelf", "book", "shelf"],
-          "correct_answer": "The book on the top shelf",
-          "grammar_type": "Subject and Predicate"
+          "question": "The teacher told the students to be ______ in the library.",
+          "options": ["quite", "quiet", "quit", "quilt"],
+          "correct_answer": "quiet",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 90,
-          "question": "What is the complete predicate? 'The players of our team tried very hard.'",
-          "options": ["tried very hard", "tried", "very hard", "The players"],
-          "correct_answer": "tried very hard",
-          "grammar_type": "Subject and Predicate"
+          "question": "The movie was ______ interesting.",
+          "options": ["quiet", "quite", "quit", "quilt"],
+          "correct_answer": "quite",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 91,
-          "question": "In the sentence 'Stop talking!', what is the subject?",
-          "options": ["Stop", "talking", "(You)", "No subject"],
-          "correct_answer": "(You)",
-          "grammar_type": "Subject and Predicate"
+          "question": "The wind ______ so hard that the tree fell down.",
+          "options": ["blue", "blew", "below", "blow"],
+          "correct_answer": "blew",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 92,
-          "question": "The birds and the bees ____ flying around.",
-          "options": ["is", "am", "are", "be"],
-          "correct_answer": "are",
-          "grammar_type": "Subject and Predicate"
+          "question": "The sky is a beautiful shade of ______.",
+          "options": ["blew", "blue", "below", "blow"],
+          "correct_answer": "blue",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 93,
-          "question": "What is the subject? 'Under the bridge lived an old man.'",
-          "options": ["Under the bridge", "bridge", "an old man", "lived"],
-          "correct_answer": "an old man",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'fly' (an insect) and 'fly' (to move through the air) is a...",
+          "options": ["Homophone", "Homograph", "Homonym", "Antonym"],
+          "correct_answer": "Homonym",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 94,
-          "question": "What is the simple subject? 'Several of the paintings were missing.'",
-          "options": ["Several", "paintings", "Several of the paintings", "missing"],
-          "correct_answer": "Several",
-          "grammar_type": "Subject and Predicate"
+          "question": "I need to ______ my shirt because it is wrinkled.",
+          "options": ["iron", "ion", "earn", "urn"],
+          "correct_answer": "iron",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 95,
-          "question": "What is the simple predicate? 'The children have been playing for hours.'",
-          "options": ["have been playing", "playing", "have been", "for hours"],
-          "correct_answer": "have been playing",
-          "grammar_type": "Subject and Predicate"
+          "question": "The knight in shining ______ saved the princess.",
+          "options": ["armor", "armer", "aroma", "amour"],
+          "correct_answer": "armor",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 96,
-          "question": "Identify the compound subject: 'Either the students or the teacher has the book.'",
-          "options": ["students", "teacher", "the students or the teacher", "the book"],
-          "correct_answer": "the students or the teacher",
-          "grammar_type": "Subject and Predicate"
+          "question": "She needs to see the doctor ______ away.",
+          "options": ["strait", "straight", "stray", "street"],
+          "correct_answer": "straight",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 97,
-          "question": "Identify the compound predicate: 'He will either go to the market or stay at home.'",
-          "options": ["go to the market", "stay at home", "will either go or stay", "either go to the market or stay at home"],
-          "correct_answer": "either go to the market or stay at home",
-          "grammar_type": "Subject and Predicate"
+          "question": "The ship sailed through the narrow ______.",
+          "options": ["straight", "strait", "stray", "street"],
+          "correct_answer": "strait",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 98,
-          "question": "What is the subject? 'Across the river is a small village.'",
-          "options": ["Across the river", "river", "is", "a small village"],
-          "correct_answer": "a small village",
-          "grammar_type": "Subject and Predicate"
+          "question": "He has a very weak ______ system.",
+          "options": ["immune", "imune", "immoon", "emune"],
+          "correct_answer": "immune",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 99,
-          "question": "The complete subject includes the simple subject and all the words that ____ it.",
-          "options": ["come after", "describe", "replace", "are verbs for"],
-          "correct_answer": "describe",
-          "grammar_type": "Subject and Predicate"
+          "question": "The king sat on his ______.",
+          "options": ["thrown", "throne", "thorn", "throw"],
+          "correct_answer": "throne",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 100,
-          "question": "The complete predicate includes the verb and all the words that ____ the verb.",
-          "options": ["come before", "modify", "are nouns for", "describe the subject of"],
-          "correct_answer": "modify",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 101,
-          "question": "Find the subject: 'Around the corner came the police car.'",
-          "options": ["Around the corner", "came", "the police car", "police car"],
-          "correct_answer": "the police car",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 102,
-          "question": "Identify the simple subject in 'The high-speed train from Mumbai has arrived.'",
-          "options": ["The high-speed train", "train", "Mumbai", "The train"],
-          "correct_answer": "train",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 103,
-          "question": "What is the subject of the sentence: 'Don't make a noise.'?",
-          "options": ["noise", "make", "(You)", "Don't"],
-          "correct_answer": "(You)",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 104,
-          "question": "Slow and steady ____ the race.",
-          "options": ["win", "wins", "are winning", "have won"],
-          "correct_answer": "wins",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 105,
-          "question": "Find the compound predicate: 'We studied for the test and passed with good marks.'",
-          "options": ["studied and passed", "studied for the test", "passed with good marks", "studied for the test and passed with good marks"],
-          "correct_answer": "studied for the test and passed with good marks",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 106,
-          "question": "What is the subject in 'There is a book on the desk.'?",
-          "options": ["There", "is", "a book", "desk"],
-          "correct_answer": "a book",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 107,
-          "question": "The complete subject is the who or what part of the sentence, including all ____.",
-          "options": ["verbs", "modifiers", "predicates", "conjunctions"],
-          "correct_answer": "modifiers",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 108,
-          "question": "What is the simple predicate in 'The dog should not have chewed the shoe.'?",
-          "options": ["should not have chewed", "chewed", "should have chewed", "have chewed"],
-          "correct_answer": "should not have chewed",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 109,
-          "question": "Find the subject: 'Down the street lived the doctor.'",
-          "options": ["Down the street", "street", "lived", "the doctor"],
-          "correct_answer": "the doctor",
-          "grammar_type": "Subject and Predicate"
-        },
-        {
-          "id": 110,
-          "question": "Identify the compound subject: 'Lions and tigers are wild animals.'",
-          "options": ["Lions", "tigers", "Lions and tigers", "wild animals"],
-          "correct_answer": "Lions and tigers",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'bark' (of a dog) and 'bark' (of a tree) is a...",
+          "options": ["Homophone", "Homograph", "Homonym", "Synonym"],
+          "correct_answer": "Homonym",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         }
       ]
     },
@@ -784,284 +714,354 @@
       "level": "Hard",
       "questions": [
         {
+          "id": 101,
+          "question": "The politician tried to ______ support for his new bill.",
+          "options": ["canvas", "canvass", "cannon", "canon"],
+          "correct_answer": "canvass",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 102,
+          "question": "The painting was done on a large ______.",
+          "options": ["canvass", "canvas", "cannon", "canon"],
+          "correct_answer": "canvas",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 103,
+          "question": "The movie was banned by the ______ board.",
+          "options": ["censor", "censure", "sensor", "censer"],
+          "correct_answer": "censor",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 104,
+          "question": "The committee decided to ______ the member for his misconduct.",
+          "options": ["censor", "censure", "sensor", "censer"],
+          "correct_answer": "censure",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 105,
+          "question": "He made a subtle ______ to his past achievements.",
+          "options": ["illusion", "allusion", "elusion", "delusion"],
+          "correct_answer": "allusion",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 106,
+          "question": "The magician created an optical ______.",
+          "options": ["allusion", "illusion", "elusion", "delusion"],
+          "correct_answer": "illusion",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 107,
+          "question": "The word 'minute' (a unit of time) and 'minute' (very small) is a classic example of a...",
+          "options": ["Homophone", "Homograph", "Homonym", "Synonym"],
+          "correct_answer": "Homograph",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 108,
+          "question": "The climbers began their ______ up the mountain.",
+          "options": ["assent", "ascent", "accent", "absent"],
+          "correct_answer": "ascent",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 109,
+          "question": "The manager gave her ______ to the proposal.",
+          "options": ["ascent", "assent", "accent", "absent"],
+          "correct_answer": "assent",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
+          "id": 110,
+          "question": "The rebel fighters were a ______ group hiding in the jungle.",
+          "options": ["gorilla", "guerilla", "griller", "gravel"],
+          "correct_answer": "guerilla",
+          "grammar_type": "Homophones, Homographs, Homonyms"
+        },
+        {
           "id": 111,
-          "question": "What is the subject in the question: 'Are you coming to the party?'",
-          "options": ["Are", "you", "coming", "the party"],
-          "correct_answer": "you",
-          "grammar_type": "Subject and Predicate"
+          "question": "A ______ is a large ape found in Africa.",
+          "options": ["guerilla", "gorilla", "griller", "gravel"],
+          "correct_answer": "gorilla",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 112,
-          "question": "Identify the subject of the sentence: 'To swim in the ocean is his greatest joy.'",
-          "options": ["To swim", "To swim in the ocean", "ocean", "his greatest joy"],
-          "correct_answer": "To swim in the ocean",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'tear' (water from the eye) and 'tear' (to rip) is a...",
+          "options": ["Homophone", "Homograph", "Synonym", "Antonym"],
+          "correct_answer": "Homograph",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 113,
-          "question": "Identify the subject of the sentence: 'Reading books makes you knowledgeable.'",
-          "options": ["Reading", "Reading books", "books", "You"],
-          "correct_answer": "Reading books",
-          "grammar_type": "Subject and Predicate"
+          "question": "We need to handle this situation with ______.",
+          "options": ["discrete", "discreet", "deceit", "discredit"],
+          "correct_answer": "discreet",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 114,
-          "question": "What is the simple subject in 'The man whom you met yesterday is my uncle.'?",
-          "options": ["The man", "man", "whom", "uncle"],
-          "correct_answer": "man",
-          "grammar_type": "Subject and Predicate"
+          "question": "The project was broken down into several ______ tasks.",
+          "options": ["discreet", "discrete", "deceit", "discredit"],
+          "correct_answer": "discrete",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 115,
-          "question": "What is the complete predicate in 'The car that he bought last week broke down.'?",
-          "options": ["that he bought last week broke down", "broke down", "the car that he bought last week", "bought last week broke down"],
-          "correct_answer": "broke down",
-          "grammar_type": "Subject and Predicate"
+          "question": "The investigation tried to ______ a confession from the suspect.",
+          "options": ["illicit", "elicit", "elite", "elegit"],
+          "correct_answer": "elicit",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 116,
-          "question": "What is the subject in the question: 'Where did he go?'",
-          "options": ["Where", "did go", "he", "go"],
-          "correct_answer": "he",
-          "grammar_type": "Subject and Predicate"
+          "question": "The police cracked down on the ______ sale of goods.",
+          "options": ["elicit", "illicit", "elite", "elegit"],
+          "correct_answer": "illicit",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 117,
-          "question": "Neither the players nor the coach ____ happy with the result.",
-          "options": ["was", "were", "are", "be"],
-          "correct_answer": "was",
-          "grammar_type": "Subject and Predicate"
+          "question": "A 'quarry' can be a place where stone is dug or an animal that is hunted. This makes it a...",
+          "options": ["Homophone", "Homograph", "Homonym", "Synonym"],
+          "correct_answer": "Homonym",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 118,
-          "question": "Identify the subject: 'What he said is not true.'",
-          "options": ["he", "What he said", "What", "true"],
-          "correct_answer": "What he said",
-          "grammar_type": "Subject and Predicate"
+          "question": "The storm was ______, so we all went inside.",
+          "options": ["eminent", "immanent", "imminent", "emanate"],
+          "correct_answer": "imminent",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 119,
-          "question": "The jury ____ given its verdict.",
-          "options": ["has", "have", "are", "were"],
-          "correct_answer": "has",
-          "grammar_type": "Subject and Predicate"
+          "question": "He is an ______ scientist in his field.",
+          "options": ["imminent", "immanent", "eminent", "emanate"],
+          "correct_answer": "eminent",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 120,
-          "question": "What is the subject in 'When will the train arrive?'",
-          "options": ["When", "will arrive", "the train", "arrive"],
-          "correct_answer": "the train",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'rose' (a flower) and 'rose' (past tense of rise) is a...",
+          "options": ["Homophone", "Homograph", "Homonym", "Antonym"],
+          "correct_answer": "Homonym",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 121,
-          "question": "Identify the subject: 'That he will win is certain.'",
-          "options": ["he", "That", "That he will win", "certain"],
-          "correct_answer": "That he will win",
-          "grammar_type": "Subject and Predicate"
+          "question": "The soldier decided to ______ the army and go home.",
+          "options": ["dessert", "desert", "deserve", "design"],
+          "correct_answer": "desert",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 122,
-          "question": "The man who is wearing a blue shirt ____ my brother.",
-          "options": ["is", "am", "are", "be"],
-          "correct_answer": "is",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'desert' (a dry place) and 'desert' (to abandon) is a...",
+          "options": ["Homophone", "Homograph", "Synonym", "Antonym"],
+          "correct_answer": "Homograph",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 123,
-          "question": "Identify the subject: 'Never have I seen such a mess.'",
-          "options": ["Never", "I", "seen", "a mess"],
-          "correct_answer": "I",
-          "grammar_type": "Subject and Predicate"
+          "question": "The king's ______ lasted for forty years.",
+          "options": ["rain", "rein", "reign", "rein in"],
+          "correct_answer": "reign",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 124,
-          "question": "The poet and philosopher ____ dead.",
-          "options": ["is", "am", "are", "be"],
-          "correct_answer": "is",
-          "grammar_type": "Subject and Predicate"
+          "question": "You need to pull on the ______ to control the horse.",
+          "options": ["rain", "rein", "reign", "rein in"],
+          "correct_answer": "rein",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 125,
-          "question": "What is the subject in 'Why are they shouting?'",
-          "options": ["Why", "are shouting", "they", "shouting"],
-          "correct_answer": "they",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'lie' (to recline) and 'lie' (to tell an untruth) is a...",
+          "options": ["Homophone", "Homograph", "Homonym", "Antonym"],
+          "correct_answer": "Homonym",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 126,
-          "question": "Each of the boys ____ given a prize.",
-          "options": ["was", "were", "are", "have been"],
-          "correct_answer": "was",
-          "grammar_type": "Subject and Predicate"
+          "question": "He was the ______ heir to the fortune.",
+          "options": ["soul", "sole", "soil", "sold"],
+          "correct_answer": "sole",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 127,
-          "question": "Identify the subject: 'Helping others gives me joy.'",
-          "options": ["Helping", "Helping others", "others", "me"],
-          "correct_answer": "Helping others",
-          "grammar_type": "Subject and Predicate"
+          "question": "The ______ of his shoe had a hole in it.",
+          "options": ["soul", "sole", "soil", "sold"],
+          "correct_answer": "sole",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 128,
-          "question": "The quality of these mangoes ____ not good.",
-          "options": ["is", "am", "are", "be"],
-          "correct_answer": "is",
-          "grammar_type": "Subject and Predicate"
+          "question": "The lawyer gave good ______ to his client.",
+          "options": ["council", "counsel", "cancel", "consul"],
+          "correct_answer": "counsel",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 129,
-          "question": "What is the subject in 'Did she finish her homework?'",
-          "options": ["Did", "she", "finish", "her homework"],
-          "correct_answer": "she",
-          "grammar_type": "Subject and Predicate"
+          "question": "The village ______ decided to build a new road.",
+          "options": ["counsel", "council", "cancel", "consul"],
+          "correct_answer": "council",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 130,
-          "question": "To forgive is divine. What is the subject?",
-          "options": ["To forgive", "forgive", "is", "divine"],
-          "correct_answer": "To forgive",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'stalk' (part of a plant) and 'stalk' (to follow secretly) is a...",
+          "options": ["Homophone", "Homograph", "Homonym", "Synonym"],
+          "correct_answer": "Homonym",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 131,
-          "question": "One of my friends ____ gone to Canada.",
-          "options": ["has", "have", "are", "were"],
-          "correct_answer": "has",
-          "grammar_type": "Subject and Predicate"
+          "question": "The bride looked beautiful as she walked down the ______.",
+          "options": ["aisle", "isle", "I'll", "ale"],
+          "correct_answer": "aisle",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 132,
-          "question": "Identify the subject: 'Hardly had I reached the station when the train left.'",
-          "options": ["Hardly", "I", "the station", "the train"],
-          "correct_answer": "I",
-          "grammar_type": "Subject and Predicate"
+          "question": "The ship was wrecked on a deserted ______.",
+          "options": ["aisle", "isle", "I'll", "ale"],
+          "correct_answer": "isle",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 133,
-          "question": "The committee ____ divided in their opinions.",
-          "options": ["is", "was", "are", "has"],
-          "correct_answer": "are",
-          "grammar_type": "Subject and Predicate"
+          "question": "A large rock is also called a ______.",
+          "options": ["bolder", "boulder", "bowlder", "bowler"],
+          "correct_answer": "boulder",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 134,
-          "question": "What is the subject in 'How did you solve the problem?'",
-          "options": ["How", "you", "solve", "the problem"],
-          "correct_answer": "you",
-          "grammar_type": "Subject and Predicate"
+          "question": "The knight was ______ than his opponent.",
+          "options": ["boulder", "bolder", "bowlder", "bowler"],
+          "correct_answer": "bolder",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 135,
-          "question": "The subject of this sentence is a gerund phrase: 'Running every morning keeps him fit.' What is it?",
-          "options": ["Running", "Running every morning", "morning", "him"],
-          "correct_answer": "Running every morning",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'crane' (a bird) and 'crane' (a machine) is a...",
+          "options": ["Homophone", "Homograph", "Homonym", "Synonym"],
+          "correct_answer": "Homonym",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 136,
-          "question": "The number of students in the class ____ forty.",
-          "options": ["is", "am", "are", "be"],
-          "correct_answer": "is",
-          "grammar_type": "Subject and Predicate"
+          "question": "The politician tried to ______ the voters about his real intentions.",
+          "options": ["delude", "dilute", "delete", "daylight"],
+          "correct_answer": "delude",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 137,
-          "question": "Identify the subject: 'Seldom does he visit his parents.'",
-          "options": ["Seldom", "does visit", "he", "his parents"],
-          "correct_answer": "he",
-          "grammar_type": "Subject and Predicate"
+          "question": "The government promised to punish the ______.",
+          "options": ["culprit", "sculpture", "culture", "culvert"],
+          "correct_answer": "culprit",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 138,
-          "question": "A number of students ____ waiting outside.",
-          "options": ["is", "was", "are", "has been"],
-          "correct_answer": "are",
-          "grammar_type": "Subject and Predicate"
+          "question": "It is important to ______ your sources when writing a research paper.",
+          "options": ["sight", "site", "cite", "side"],
+          "correct_answer": "cite",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 139,
-          "question": "What is the subject in 'May I come in?'",
-          "options": ["May", "I", "come", "in"],
-          "correct_answer": "I",
-          "grammar_type": "Subject and Predicate"
+          "question": "The construction ______ is very noisy.",
+          "options": ["sight", "site", "cite", "side"],
+          "correct_answer": "site",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 140,
-          "question": "The subject of this sentence is an infinitive phrase: 'To see is to believe.' What is it?",
-          "options": ["To see", "see", "is", "to believe"],
-          "correct_answer": "To see",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'object' (a thing) and 'object' (to protest) is a...",
+          "options": ["Homophone", "Homograph", "Synonym", "Antonym"],
+          "correct_answer": "Homograph",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 141,
-          "question": "The manager, along with the team members, ____ attending the meeting.",
-          "options": ["is", "am", "are", "were"],
-          "correct_answer": "is",
-          "grammar_type": "Subject and Predicate"
+          "question": "A ______ of soldiers marched past the fort.",
+          "options": ["regiment", "regimen", "regent", "region"],
+          "correct_answer": "regiment",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 142,
-          "question": "Identify the subject: 'Not only the students but also the teacher was happy.'",
-          "options": ["Not only the students", "the teacher", "Not only the students but also the teacher", "happy"],
-          "correct_answer": "Not only the students but also the teacher",
-          "grammar_type": "Subject and Predicate"
+          "question": "The doctor prescribed a strict ______ of diet and exercise.",
+          "options": ["regiment", "regimen", "regent", "region"],
+          "correct_answer": "regimen",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 143,
-          "question": "What is the subject in the question 'Whom did you meet?'",
-          "options": ["Whom", "did meet", "you", "meet"],
-          "correct_answer": "you",
-          "grammar_type": "Subject and Predicate"
+          "question": "He was famous for his ______ wit and intelligence.",
+          "options": ["shear", "sheer", "share", "shire"],
+          "correct_answer": "sheer",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 144,
-          "question": "Many a student ____ tried to solve this problem.",
-          "options": ["has", "have", "are", "were"],
-          "correct_answer": "has",
-          "grammar_type": "Subject and Predicate"
+          "question": "The farmer used big scissors to ______ the sheep's wool.",
+          "options": ["sheer", "shear", "share", "shire"],
+          "correct_answer": "shear",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 145,
-          "question": "Identify the subject: 'That we cannot go out today is a pity.'",
-          "options": ["That", "we", "That we cannot go out today", "a pity"],
-          "correct_answer": "That we cannot go out today",
-          "grammar_type": "Subject and Predicate"
+          "question": "The word 'sewer' (a drain) and 'sewer' (a person who sews) is a...",
+          "options": ["Homophone", "Homograph", "Synonym", "Antonym"],
+          "correct_answer": "Homograph",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 146,
-          "question": "More than one person ____ injured in the accident.",
-          "options": ["was", "were", "are", "have been"],
-          "correct_answer": "was",
-          "grammar_type": "Subject and Predicate"
+          "question": "The country's ______ is in New Delhi.",
+          "options": ["capital", "capitol", "captain", "caption"],
+          "correct_answer": "capital",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 147,
-          "question": "Identify the simple subject: 'The dog that was chasing the cat is a stray.'",
-          "options": ["The dog", "dog", "The dog that was chasing the cat", "cat"],
-          "correct_answer": "dog",
-          "grammar_type": "Subject and Predicate"
+          "question": "The government leaders meet in the ______ building.",
+          "options": ["capital", "capitol", "captain", "caption"],
+          "correct_answer": "capitol",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 148,
-          "question": "What is the subject in 'Is there any sugar left?'",
-          "options": ["Is there", "any sugar", "sugar", "there"],
-          "correct_answer": "any sugar",
-          "grammar_type": "Subject and Predicate"
+          "question": "The teacher tried to maintain ______ in the classroom.",
+          "options": ["decorum", "decorate", "dedicate", "deduce"],
+          "correct_answer": "decorum",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 149,
-          "question": "The captain, with all his players, ____ praised by the coach.",
-          "options": ["was", "were", "are", "have been"],
-          "correct_answer": "was",
-          "grammar_type": "Subject and Predicate"
+          "question": "The prisoner was kept in a dark ______.",
+          "options": ["sell", "cell", "sale", "sail"],
+          "correct_answer": "cell",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         },
         {
           "id": 150,
-          "question": "Identify the subject: 'No sooner did he see the police than he ran away.'",
-          "options": ["No sooner", "he", "the police", "he ran away"],
-          "correct_answer": "he",
-          "grammar_type": "Subject and Predicate"
+          "question": "Which term best describes the pair 'ate' and 'eight'?",
+          "options": ["Homograph", "Homophone", "Homonym", "Synonym"],
+          "correct_answer": "Homophone",
+          "grammar_type": "Homophones, Homographs, Homonyms"
         }
       ]
     }

@@ -1,0 +1,19 @@
+{
+  "sentence_formation": [
+    {
+      "gridSize": 3,
+      "words": ["I", "love", "Flutter", "to", "learn", "coding", "daily", "very", "much"],
+      "sentence": "I love to learn Flutter very much daily"
+    },
+    {
+      "gridSize": 4,
+      "words": ["She", "is", "playing", "in", "the", "park", "with", "her", "friends", "and", "having", "a", "lot", "of", "fun", "today"],
+      "sentence": "She is playing in the park with her friends and having a lot of fun today"
+    },
+    {
+      "gridSize": 5,
+      "words": ["We", "should", "always", "help", "others", "in", "need", "and", "be", "kind", "to", "everyone", "around", "us", "every", "day", "to", "make", "the", "world", "a", "better", "place", "for", "all"],
+      "sentence": "We should always help others in need and be kind to everyone around us every day to make the world a better place for all"
+    }
+  ]
+}

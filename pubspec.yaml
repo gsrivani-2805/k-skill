@@ -55,6 +55,18 @@ flutter:
   - images/children.jpg
   - images/login_side_image.png
 
+  - assets/games/word_match.json
+  - assets/games/sentence_formation.json
+  - assets/games/grammar_mistakes.json
+  - assets/games/picture_sentence.json
+  - assets/games/listening_puzzle.json
+  - assets/games/story_completion.json
+
+  #game images - picture senctences
+  - images/games/dog_park.jpg
+  - images/games/family_dinner.jpg
+  - images/games/kids_school.jpg
+
   #lessons
   - data/lessons/english_curriculum.json
 
@@ -72,24 +84,32 @@ flutter:
   - data/lessons/basic/module-2/L1_M2_L4.json
   - data/lessons/basic/module-2/L1_M2_L5.json
 
+  
   - data/lessons/basic/module-3/L1_M3_L1.json
   - data/lessons/basic/module-3/L1_M3_L2.json 
   - data/lessons/basic/module-3/L1_M3_L3.json 
   - data/lessons/basic/module-3/L1_M3_L4.json 
   - data/lessons/basic/module-3/L1_M3_L5.json 
   - data/lessons/basic/module-3/L1_M3_L6.json 
-  - data/lessons/basic/module-3/L1_M3_L7.json 
-  - data/lessons/basic/module-3/L1_M3_L8.json
 
   - data/lessons/basic/module-4/L1_M4_L1.json
-  - data/lessons/basic/module-4/L1_M4_L2.json
-  - data/lessons/basic/module-4/L1_M4_L3.json
+  - data/lessons/basic/module-4/L1_M4_L2.json 
+  - data/lessons/basic/module-4/L1_M4_L3.json 
+  - data/lessons/basic/module-4/L1_M4_L4.json 
+  - data/lessons/basic/module-4/L1_M4_L5.json 
+  - data/lessons/basic/module-4/L1_M4_L6.json 
+  - data/lessons/basic/module-4/L1_M4_L7.json 
+  - data/lessons/basic/module-4/L1_M4_L8.json
 
   - data/lessons/basic/module-5/L1_M5_L1.json
   - data/lessons/basic/module-5/L1_M5_L2.json
   - data/lessons/basic/module-5/L1_M5_L3.json
-  - data/lessons/basic/module-5/L1_M5_L4.json
-  - data/lessons/basic/module-5/L1_M5_L5.json
+
+  - data/lessons/basic/module-6/L1_M6_L1.json
+  - data/lessons/basic/module-6/L1_M6_L2.json
+  - data/lessons/basic/module-6/L1_M6_L3.json
+  - data/lessons/basic/module-6/L1_M6_L4.json
+  - data/lessons/basic/module-6/L1_M6_L5.json
 
   - data/lessons/intermediate/module-1/L2_M1_L1.json
   - data/lessons/intermediate/module-1/L2_M1_L2.json
@@ -159,24 +179,32 @@ flutter:
   - data/quizzes/basic/module-2/L1_M2_Q4.json
   - data/quizzes/basic/module-2/L1_M2_Q5.json
 
+  
   - data/quizzes/basic/module-3/L1_M3_Q1.json
   - data/quizzes/basic/module-3/L1_M3_Q2.json 
   - data/quizzes/basic/module-3/L1_M3_Q3.json 
   - data/quizzes/basic/module-3/L1_M3_Q4.json 
   - data/quizzes/basic/module-3/L1_M3_Q5.json 
   - data/quizzes/basic/module-3/L1_M3_Q6.json 
-  - data/quizzes/basic/module-3/L1_M3_Q7.json 
-  - data/quizzes/basic/module-3/L1_M3_Q8.json
 
   - data/quizzes/basic/module-4/L1_M4_Q1.json
-  - data/quizzes/basic/module-4/L1_M4_Q2.json
-  - data/quizzes/basic/module-4/L1_M4_Q3.json
+  - data/quizzes/basic/module-4/L1_M4_Q2.json 
+  - data/quizzes/basic/module-4/L1_M4_Q3.json 
+  - data/quizzes/basic/module-4/L1_M4_Q4.json 
+  - data/quizzes/basic/module-4/L1_M4_Q5.json 
+  - data/quizzes/basic/module-4/L1_M4_Q6.json 
+  - data/quizzes/basic/module-4/L1_M4_Q7.json 
+  - data/quizzes/basic/module-4/L1_M4_Q8.json
 
   - data/quizzes/basic/module-5/L1_M5_Q1.json
   - data/quizzes/basic/module-5/L1_M5_Q2.json
   - data/quizzes/basic/module-5/L1_M5_Q3.json
-  - data/quizzes/basic/module-5/L1_M5_Q4.json
-  - data/quizzes/basic/module-5/L1_M5_Q5.json
+
+  - data/quizzes/basic/module-6/L1_M6_Q1.json
+  - data/quizzes/basic/module-6/L1_M6_Q2.json
+  - data/quizzes/basic/module-6/L1_M6_Q3.json
+  - data/quizzes/basic/module-6/L1_M6_Q4.json
+  - data/quizzes/basic/module-6/L1_M6_Q5.json
 
   - data/quizzes/intermediate/module-1/L2_M1_Q1.json
   - data/quizzes/intermediate/module-1/L2_M1_Q2.json
@@ -254,18 +282,25 @@ flutter:
   - images/basic/module-3/lesson-4/
   - images/basic/module-3/lesson-5/
   - images/basic/module-3/lesson-6/
-  - images/basic/module-3/lesson-7/
-  - images/basic/module-3/lesson-8/
 
   - images/basic/module-4/lesson-1/
   - images/basic/module-4/lesson-2/
   - images/basic/module-4/lesson-3/
+  - images/basic/module-4/lesson-4/
+  - images/basic/module-4/lesson-5/
+  - images/basic/module-4/lesson-6/
+  - images/basic/module-4/lesson-7/
+  - images/basic/module-4/lesson-8/
 
   - images/basic/module-5/lesson-1/
   - images/basic/module-5/lesson-2/
   - images/basic/module-5/lesson-3/
-  - images/basic/module-5/lesson-4/
-  - images/basic/module-5/lesson-5/
+
+  - images/basic/module-6/lesson-1/
+  - images/basic/module-6/lesson-2/
+  - images/basic/module-6/lesson-3/
+  - images/basic/module-6/lesson-4/
+  - images/basic/module-6/lesson-5/
 
   - images/intermediate/module-1/lesson-1/
   - images/intermediate/module-1/lesson-2/

@@ -1,552 +1,368 @@
 {
   "level": "Beginner",
-  "module": "GRAMMAR BASICS",
+  "module": "Grammar Basics",
   "lesson_number": 2,
-  "lesson_title": "Pronouns: Words That Replace Nouns",
+  "lesson_title": "Understanding Antonyms (Opposites)",
   "objectives": [
-    "Understand what pronouns are and why we use them.",
-    "Learn to use different types of pronouns like 'I', 'you', 'he', 'she', 'it', 'we', 'they'.",
-    "Practice replacing nouns with the correct pronouns in sentences."
+    "Define what antonyms are",
+    "Identify common antonym pairs for adjectives, verbs, and nouns",
+    "Use antonyms to create contrast and make sentences more descriptive",
+    "Expand vocabulary by learning opposite words"
   ],
   "topics": [
     {
-      "title": "1. What is a Pronoun?",
+      "title": "Introduction to Antonyms",
       "subtopics": [
         {
-          "title": "1.1. Pronouns: Replacing Naming Words",
+          "title": "What are Antonyms?",
           "sections": [
             {
-              "text": "A pronoun is a small word that takes the place of a noun. We use pronouns so we don't have to repeat the same noun again and again in our sentences. This makes our sentences sound better and more natural.",
+              "text": "Antonyms are words that have opposite meanings. Learning antonyms is a great way to build your vocabulary because when you learn one word, you can often learn its opposite at the same time. Using antonyms can also make your speaking and writing more interesting and precise by showing clear contrasts.",
               "examples": [
                 {
-                  "label": "Without Pronoun",
-                  "value": "**Ram** is a farmer. **Ram** works in the field."
+                  "label": "happy / sad",
+                  "value": "The good news made him happy, but the bad news made him sad."
                 },
                 {
-                  "label": "With Pronoun",
-                  "value": "**Ram** is a farmer. **He** works in the field."
+                  "label": "big / small",
+                  "value": "An elephant is a big animal, while a mouse is a small animal."
                 },
                 {
-                  "label": "Without Pronoun",
-                  "value": "**Sita** is a student. **Sita** reads a book."
+                  "label": "hot / cold",
+                  "value": "Tea is usually hot, but ice cream is cold."
                 },
                 {
-                  "label": "With Pronoun",
-                  "value": "**Sita** is a student. **She** reads a book."
+                  "label": "fast / slow",
+                  "value": "A rabbit is fast, but a tortoise is slow."
+                },
+                {
+                  "label": "good / bad",
+                  "value": "Helping others is a good habit; telling lies is a bad habit."
+                },
+                {
+                  "label": "day / night",
+                  "value": "The sun shines during the day, and the moon shines at night."
+                },
+                {
+                  "label": "rich / poor",
+                  "value": "The king was very rich, but the farmer was poor."
+                },
+                {
+                  "label": "clean / dirty",
+                  "value": "Please wear a clean shirt, not the dirty one."
+                },
+                {
+                  "label": "empty / full",
+                  "value": "The water pot was empty, so he went to the well to make it full."
+                },
+                {
+                  "label": "easy / difficult",
+                  "value": "The first question was easy, but the last one was very difficult."
+                },
+                {
+                  "label": "long / short",
+                  "value": "The train journey is long, but the bus journey is short."
+                },
+                {
+                  "label": "wet / dry",
+                  "value": "My clothes are wet from the rain; I need some dry clothes."
+                },
+                {
+                  "label": "light / dark",
+                  "value": "It is light when the sun is out, and it becomes dark after sunset."
+                },
+                {
+                  "label": "new / old",
+                  "value": "He sold his old bicycle to buy a new one."
+                },
+                {
+                  "label": "up / down",
+                  "value": "We walked up the hill and then ran down."
+                },
+                {
+                  "label": "on / off",
+                  "value": "Please turn on the light; don't turn it off."
+                },
+                {
+                  "label": "in / out",
+                  "value": "He went in the house and then came out."
+                },
+                {
+                  "label": "tall / short",
+                  "value": "The coconut tree is tall, but the mango tree is short."
+                },
+                {
+                  "label": "heavy / light",
+                  "value": "The sack of rice is heavy, but this bag of cotton is light."
+                },
+                {
+                  "label": "give / take",
+                  "value": "You should give respect to take respect."
                 }
-              ],
-              "usage_examples": [
-                "My **mother** cooks food. **She** is very kind.",
-                "The **dog** barked loudly. **It** was hungry.",
-                "**Rahul and I** went to the market. **We** bought vegetables.",
-                "The **students** are playing. **They** are happy.",
-                "Give the **book** to **Ravi**. Give **it** to **him**.",
-                "My **father** is strong. **He** works in the field.",
-                "The **well** is deep. **It** provides water.",
-                "The **flowers** are beautiful. **They** smell sweet."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/p"
-              }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "title": "2. Personal Pronouns (Subject and Object)",
+      "title": "Common Antonym Pairs",
       "subtopics": [
         {
-          "title": "2.1. Subject Pronouns: Who Does the Action?",
+          "title": "Antonyms for Adjectives (Describing Words)",
           "sections": [
             {
-              "text": "Subject pronouns tell us who or what is doing the action in a sentence. They usually come at the beginning of the sentence or before the action word (verb).",
+              "text": "Adjectives are words used to describe nouns. Many adjectives have clear opposites that can be used to show contrast.",
               "examples": [
                 {
-                  "label": "I",
-                  "value": "used for yourself. Example: **I** am a student."
+                  "label": "beautiful / ugly",
+                  "value": "The peacock is a beautiful bird, but the vulture is considered ugly."
                 },
                 {
-                  "label": "You",
-                  "value": "used for the person you are talking to. Example: **You** are my friend."
+                  "label": "brave / cowardly",
+                  "value": "The brave soldier fought for his country, while the cowardly one ran away."
                 },
                 {
-                  "label": "He",
-                  "value": "used for one boy or man. Example: **He** is a farmer."
+                  "label": "cheap / expensive",
+                  "value": "Vegetables in the village market are cheap, but they are expensive in the city mall."
                 },
                 {
-                  "label": "She",
-                  "value": "used for one girl or woman. Example: **She** is my teacher."
+                  "label": "deep / shallow",
+                  "value": "The river is deep here, but it is shallow near the bank."
                 },
                 {
-                  "label": "It",
-                  "value": "used for one animal or one thing. Example: **It** is a book. (The cow gives milk. **It** is black.)"
+                  "label": "early / late",
+                  "value": "The farmer wakes up early in the morning and sleeps late at night."
                 },
                 {
-                  "label": "We",
-                  "value": "used for yourself and others. Example: **We** play together."
+                  "label": "hard / soft",
+                  "value": "The rock is hard, but the cotton is soft."
                 },
                 {
-                  "label": "They",
-                  "value": "used for many people, animals, or things. Example: **They** are my classmates. (The birds are flying. **They** are high.)"
+                  "label": "high / low",
+                  "value": "The mountain peak is very high, but the valley is low."
+                },
+                {
+                  "label": "interesting / boring",
+                  "value": "The story was very interesting, but the lecture was boring."
+                },
+                {
+                  "label": "kind / cruel",
+                  "value": "The kind man fed the stray dog, but the cruel boy threw stones at it."
+                },
+                {
+                  "label": "narrow / wide",
+                  "value": "The lane to his house is narrow, but the main road is wide."
+                },
+                {
+                  "label": "polite / rude",
+                  "value": "A polite person is liked by everyone, while a rude person is disliked."
+                },
+                {
+                  "label": "strong / weak",
+                  "value": "The young man is strong, but the old man is weak."
+                },
+                {
+                  "label": "true / false",
+                  "value": "Always tell a true story, not a false one."
+                },
+                {
+                  "label": "wise / foolish",
+                  "value": "The wise king made a good decision, but his foolish minister gave bad advice."
+                },
+                {
+                  "label": "right / wrong",
+                  "value": "It is right to help others and wrong to harm them."
+                },
+                {
+                  "label": "calm / stormy",
+                  "value": "The sea was calm in the morning but became stormy by evening."
+                },
+                {
+                  "label": "fat / thin",
+                  "value": "The shopkeeper was fat, but his son was very thin."
+                },
+                {
+                  "label": "generous / selfish",
+                  "value": "A generous person shares with others, but a selfish person keeps everything for themselves."
+                },
+                {
+                  "label": "honest / dishonest",
+                  "value": "We should always be honest and never do any dishonest work."
+                },
+                {
+                  "label": "lazy / active",
+                  "value": "My brother is very lazy on Sundays, but he is active on weekdays."
+                },
+                {
+                  "label": "modern / ancient",
+                  "value": "We use modern farming tools now, not the ancient ones."
+                },
+                {
+                  "label": "patient / impatient",
+                  "value": "You must be patient when you are fishing; an impatient person will catch nothing."
+                },
+                {
+                  "label": "quiet / noisy",
+                  "value": "The library is a quiet place, whereas the market is a noisy place."
+                },
+                {
+                  "label": "smooth / rough",
+                  "value": "The new road is smooth, but the old village path is very rough."
+                },
+                {
+                  "label": "sweet / sour",
+                  "value": "Ripe mangoes are sweet, but raw mangoes are sour."
                 }
-              ],
-              "usage_examples": [
-                "**I** like to read stories.",
-                "**You** are learning English well.",
-                "**He** goes to the market every morning.",
-                "**She** helps her mother in the kitchen.",
-                "The school bell rang. **It** was time for lunch.",
-                "**We** live in a small village.",
-                "The farmers are happy. **They** had a good harvest.",
-                "**It** is a beautiful flower.",
-                "My sister and I are going. **We** are excited.",
-                "The students are studying. **They** want to pass the exam."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/p"
-              }
+              ]
             }
           ]
         },
         {
-          "title": "2.2. Object Pronouns: Who Receives the Action?",
+          "title": "Antonyms for Verbs (Action Words)",
           "sections": [
             {
-              "text": "Object pronouns tell us who or what receives the action of the verb or comes after a preposition (like 'to', 'for', 'with'). They usually come after the action word (verb).",
+              "text": "Verbs are action words, and many actions have an opposite action or concept.",
               "examples": [
                 {
-                  "label": "Me",
-                  "value": "Example: Give the book to **me**."
+                  "label": "arrive / depart",
+                  "value": "The train will arrive at 10 AM and depart at 10:15 AM."
                 },
                 {
-                  "label": "You",
-                  "value": "Example: I will help **you**."
+                  "label": "open / close",
+                  "value": "Please open the window to let in fresh air and close the door."
                 },
                 {
-                  "label": "Him",
-                  "value": "Example: Tell **him** to come here."
+                  "label": "push / pull",
+                  "value": "You have to push the door to enter and pull it to exit."
                 },
                 {
-                  "label": "Her",
-                  "value": "Example: We saw **her** at the fair."
+                  "label": "laugh / cry",
+                  "value": "The funny story made us laugh, but the sad ending made us cry."
                 },
                 {
-                  "label": "It",
-                  "value": "Example: I picked **it** up. (referring to a fallen fruit)"
+                  "label": "love / hate",
+                  "value": "Children love stories, but they often hate doing homework."
                 },
                 {
-                  "label": "Us",
-                  "value": "Example: The teacher called **us**."
+                  "label": "remember / forget",
+                  "value": "I always remember his birthday, but I often forget the date."
                 },
                 {
-                  "label": "Them",
-                  "value": "Example: I played with **them**."
+                  "label": "start / finish",
+                  "value": "We will start the work in the morning and finish it by evening."
+                },
+                {
+                  "label": "win / lose",
+                  "value": "In a game, one team will win and the other will lose."
+                },
+                {
+                  "label": "build / destroy",
+                  "value": "It takes years to build a good reputation, but only a moment to destroy it."
+                },
+                {
+                  "label": "accept / refuse",
+                  "value": "He decided to accept the job offer and refuse the other one."
+                },
+                {
+                  "label": "pass / fail",
+                  "value": "If you study hard, you will pass the exam; otherwise, you might fail."
+                },
+                {
+                  "label": "buy / sell",
+                  "value": "Farmers come to the market to sell their crops, and people come to buy them."
+                },
+                {
+                  "label": "find / lose",
+                  "value": "I was sad to lose my pen, but happy to find it again."
+                },
+                {
+                  "label": "give / receive",
+                  "value": "It is always better to give than to receive."
+                },
+                {
+                  "label": "work / rest",
+                  "value": "It is important to work hard, but it is also important to rest."
+                },
+                {
+                  "label": "ask / answer",
+                  "value": "The teacher will ask a question, and the students will try to answer it."
+                },
+                {
+                  "label": "attack / defend",
+                  "value": "The soldiers had to defend their post when the enemy tried to attack."
+                },
+                {
+                  "label": "begin / end",
+                  "value": "The story will begin with a king and end with a lesson."
+                },
+                {
+                  "label": "borrow / lend",
+                  "value": "Can I borrow your pen? I will lend you my book in return."
+                },
+                {
+                  "label": "break / fix (or repair)",
+                  "value": "It is easy to break a toy, but difficult to fix it."
+                },
+                {
+                  "label": "catch / miss",
+                  "value": "Run fast, or you will miss the bus; I hope you can catch it."
+                },
+                {
+                  "label": "increase / decrease",
+                  "value": "The government decided to increase the price of fuel and decrease the subsidy."
+                },
+                {
+                  "label": "lead / follow",
+                  "value": "A good leader shows the way for others to follow."
+                },
+                {
+                  "label": "live / die",
+                  "value": "All things that live must one day die."
+                },
+                {
+                  "label": "teach / learn",
+                  "value": "A good teacher is always willing to learn new things."
                 }
-              ],
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tips for Learning and Using Antonyms",
+      "subtopics": [
+        {
+          "title": "Helpful Tips",
+          "sections": [
+            {
+              "text": "Learning antonyms can greatly expand your vocabulary. Here are some effective ways to learn and remember them.",
               "usage_examples": [
-                "My mother gave **me** a sweet.",
-                "The teacher will teach **you** a new lesson.",
-                "I saw Ram. I talked to **him**.",
-                "My sister is crying. Console **her**.",
-                "The ball fell. Pick **it** up.",
-                "Our friends are waiting for **us**.",
-                "Give the books to **them**.",
-                "Come with **me** to the market.",
-                "Can you help **him** carry the water?"
+                "Tip 1: Learn in Pairs. When you learn a new word like 'brave', make an effort to find and learn its antonym, 'cowardly', at the same time.",
+                "Tip 2: Use Them in Sentences. The best way to remember antonyms is to use them together in a sentence that shows contrast, like: 'The test was not easy; it was quite difficult.'",
+                "Tip 3: Look for Prefixes. Many antonyms are formed by adding a prefix like 'un-', 'in-', 'im-', 'ir-', or 'dis-'. For example: happy/unhappy, possible/impossible, agree/disagree, regular/irregular.",
+                "Tip 4: Create Flashcards. Write a word on one side of a small card and its antonym on the other. This is a great way to test yourself.",
+                "Tip 5: Read Actively. While reading, notice how authors use opposite words to make their writing more powerful and clear. When you see a word, try to think of its antonym.",
+                "Tip 6: Play Word Games. Games like crosswords, word association, or online quizzes can be a fun and engaging way to practice your knowledge of antonyms."
               ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/p"
-              },
               "table": {
-                "title": "Subject vs. Object Pronouns",
-                "headers": ["Subject Pronoun", "Object Pronoun", "Example Sentence"],
+                "title": "Antonyms with Prefixes",
+                "headers": ["Prefix", "Base Word", "Antonym"],
                 "rows": [
-                  ["I", "Me", "**I** saw **him**."],
-                  ["You", "You", "**You** help **me**."],
-                  ["He", "Him", "**He** gave **her** a gift."],
-                  ["She", "Her", "**She** met **him**."],
-                  ["It", "It", "**It** hit **it** (the ball)."],
-                  ["We", "Us", "**We** saw **them**."],
-                  ["They", "Them", "**They** are waiting for **us**."]
+                  ["un-", "happy", "unhappy"],
+                  ["un-", "able", "unable"],
+                  ["un-", "kind", "unkind"],
+                  ["im-", "possible", "impossible"],
+                  ["im-", "polite", "impolite"],
+                  ["in-", "correct", "incorrect"],
+                  ["in-", "complete", "incomplete"],
+                  ["dis-", "agree", "disagree"],
+                  ["dis-", "like", "dislike"],
+                  ["dis-", "honest", "dishonest"],
+                  ["ir-", "regular", "irregular"],
+                  ["ir-", "responsible", "irresponsible"]
                 ]
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "3. Possessive Pronouns: Showing Ownership",
-      "subtopics": [
-        {
-          "title": "3.1. Showing Whose It Is",
-          "sections": [
-            {
-              "text": "Possessive pronouns tell us who owns something or to whom something belongs. They show 'possession'. Note: These are often called possessive adjectives because they come before a noun.",
-              "examples": [
-                {
-                  "label": "My",
-                  "value": "Belonging to me. Example: This is **my** book."
-                },
-                {
-                  "label": "Your",
-                  "value": "Belonging to you. Example: Is this **your** pencil?"
-                },
-                {
-                  "label": "His",
-                  "value": "Belonging to him (a boy/man). Example: That is **his** bag."
-                },
-                {
-                  "label": "Her",
-                  "value": "Belonging to her (a girl/woman). Example: **Her** sari is new."
-                },
-                {
-                  "label": "Its",
-                  "value": "Belonging to it (an animal/thing). Example: The dog wagged **its** tail."
-                },
-                {
-                  "label": "Our",
-                  "value": "Belonging to us. Example: This is **our** village."
-                },
-                {
-                  "label": "Their",
-                  "value": "Belonging to them. Example: **Their** house is big."
-                }
-              ],
-              "usage_examples": [
-                "This is **my** school bag.",
-                "Is that **your** bicycle?",
-                "Ravi shared **his** lunch with me.",
-                "Maya loves **her** pet cat.",
-                "The bird built **its** nest on the tree.",
-                "This is **our** classroom.",
-                "The children put away **their** toys.",
-                "**My** father is a farmer.",
-                "Please give **your** notebook to the teacher.",
-                "The cow gives **its** milk to us.",
-                "We are proud of **our** village.",
-                "The students completed **their** homework."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/p"
-              },
-              "table": {
-                "title": "Personal Pronouns and Possessive Adjectives",
-                "headers": ["Personal Pronoun (Subject)", "Possessive Adjective"],
-                "rows": [
-                  ["I", "My"],
-                  ["You", "Your"],
-                  ["He", "His"],
-                  ["She", "Her"],
-                  ["It", "Its"],
-                  ["We", "Our"],
-                  ["They", "Their"]
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "4. Reflexive and Intensive Pronouns",
-      "subtopics": [
-        {
-          "title": "4.1. Reflexive Pronouns: Action Back to the Subject",
-          "sections": [
-            {
-              "text": "Reflexive pronouns are used when the subject and the object of a sentence are the same person or thing. The action 'reflects' back on the doer. They end in '-self' (for one person/thing) or '-selves' (for many).",
-              "examples": [
-                {
-                  "label": "Myself",
-                  "value": "I saw **myself** in the mirror."
-                },
-                {
-                  "label": "Himself",
-                  "value": "He taught **himself** to read."
-                },
-                {
-                  "label": "Herself",
-                  "value": "She hurt **herself** while playing."
-                },
-                {
-                  "label": "Themselves",
-                  "value": "The children cleaned the room **themselves**."
-                }
-              ],
-              "usage_examples": [
-                "I prepared the food **myself**.",
-                "You should take care of **yourself**.",
-                "He fell down and hurt **himself**.",
-                "The cat is cleaning **itself**.",
-                "We built this house **ourselves**.",
-                "They have to cook for **themselves**."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/p"
-              },
-              "table": {
-                "title": "Subject and Reflexive Pronouns",
-                "headers": ["Singular", "Plural"],
-                "rows": [
-                  ["I -> myself", "We -> ourselves"],
-                  ["You -> yourself", "You -> yourselves"],
-                  ["He -> himself", "They -> themselves"],
-                  ["She -> herself", ""],
-                  ["It -> itself", ""]
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "title": "4.2. Intensive Pronouns: For Emphasis",
-          "sections": [
-            {
-              "text": "Intensive pronouns look exactly the same as reflexive pronouns, but their job is to add emphasis to the subject. They show that the subject did the action personally. If you remove an intensive pronoun, the sentence still makes sense.",
-              "examples": [
-                {
-                  "label": "Myself for emphasis",
-                  "value": "I **myself** saw the farmer plow the field. (Meaning: I saw it with my own eyes.)"
-                },
-                {
-                  "label": "Herself for emphasis",
-                  "value": "The teacher **herself** told us the story. (Meaning: Not someone else, but the teacher.)"
-                },
-                {
-                  "label": "Themselves for emphasis",
-                  "value": "The students **themselves** decorated the classroom."
-                }
-              ],
-              "usage_examples": [
-                "The village headman **himself** came to the meeting.",
-                "I will go to the market **myself**.",
-                "She **herself** cooked the entire meal.",
-                "We **ourselves** repaired the broken fence.",
-                "The children **themselves** planned the game."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/pimages/baimages/basic/module-3/lesson-2/psic/module-3/lesson-1/p1"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "5. Demonstrative Pronouns: Pointing Out",
-      "subtopics": [
-        {
-          "title": "5.1. Pointing to Things Near and Far",
-          "sections": [
-            {
-              "text": "Demonstrative pronouns are used to point to specific things or people. They tell us if something is near or far, and if it is singular (one) or plural (more than one).",
-              "examples": [
-                {
-                  "label": "This",
-                  "value": "Used for one thing that is near. Example: **This** is my pen."
-                },
-                {
-                  "label": "That",
-                  "value": "Used for one thing that is far. Example: **That** is my house (pointing far away)."
-                },
-                {
-                  "label": "These",
-                  "value": "Used for many things that are near. Example: **These** are my books."
-                },
-                {
-                  "label": "Those",
-                  "value": "Used for many things that are far. Example: **Those** are our cows (pointing to cows in a distant field)."
-                }
-              ],
-              "usage_examples": [
-                "**This** is a red apple.",
-                "Look at **that** bird flying high.",
-                "**These** are fresh vegetables from our farm.",
-                "Who are **those** children playing there?",
-                "Is **this** your ruler?",
-                "What is **that** noise?",
-                "Take **these** flowers to your mother.",
-                "Can you see **those** mountains in the distance?",
-                "**This** is my favorite story.",
-                "**That** well is very old."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/p"
-              },
-              "table": {
-                "title": "Demonstrative Pronouns: Near vs. Far",
-                "headers": ["Near", "Far"],
-                "rows": [
-                  ["This (one)", "That (one)"],
-                  ["These (many)", "Those (many)"]
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "6. Interrogative Pronouns: Asking Questions",
-      "subtopics": [
-        {
-          "title": "6.1. The Question Words",
-          "sections": [
-            {
-              "text": "Interrogative pronouns are used to ask questions. They stand for the thing or person that the question is about.",
-              "examples": [
-                {
-                  "label": "Who",
-                  "value": "Used to ask about a person. Example: **Who** is your teacher?"
-                },
-                {
-                  "label": "Whom",
-                  "value": "Used to ask about a person (as an object). Example: **Whom** did you see?"
-                },
-                {
-                  "label": "What",
-                  "value": "Used to ask about a thing or action. Example: **What** is in your bag?"
-                },
-                {
-                  "label": "Which",
-                  "value": "Used to ask about a choice. Example: **Which** is your house?"
-                },
-                {
-                  "label": "Whose",
-                  "value": "Used to ask about ownership. Example: **Whose** book is this?"
-                }
-              ],
-              "usage_examples": [
-                "**Who** is coming to the village fair?",
-                "**What** did the farmer grow in his field?",
-                "**Which** of these cows is yours?",
-                "**Whose** tractor is that?",
-                "**Whom** should I give this letter to?",
-                "**What** is your name?",
-                "**Who** told you that story?"
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/pimages/baimages/basic/module-3/lesson-2/psic/module-3/lesson-1/p1"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "7. Relative Pronouns: Connecting Ideas",
-      "subtopics": [
-        {
-          "title": "7.1. Joining Sentences",
-          "sections": [
-            {
-              "text": "Relative pronouns connect a clause (a part of a sentence) to a noun. They introduce extra information about that noun. The most common ones are who, whom, whose, which, and that.",
-              "examples": [
-                {
-                  "label": "Who (for people)",
-                  "value": "The farmer **who** works hard is successful."
-                },
-                {
-                  "label": "Which (for things/animals)",
-                  "value": "The cow **which** is black gives a lot of milk."
-                },
-                {
-                  "label": "That (for people or things)",
-                  "value": "This is the book **that** I lost."
-                },
-                {
-                  "label": "Whose (for possession)",
-                  "value": "He is the boy **whose** father is the village headman."
-                }
-              ],
-              "usage_examples": [
-                "I met the man **who** lives next door.",
-                "This is the school **that** my father built.",
-                "The dog, **which** was barking, is friendly.",
-                "I know the girl **whose** mother is a teacher.",
-                "The stories **that** my grandmother tells are very interesting."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/pimages/baimages/basic/module-3/lesson-2/psic/module-3/lesson-1/p1"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "8. Indefinite Pronouns: Not Specific",
-      "subtopics": [
-        {
-          "title": "8.1. Referring to General People or Things",
-          "sections": [
-            {
-              "text": "Indefinite pronouns do not refer to any specific person, thing, or amount. They are vague and 'indefinite'.",
-              "examples": [
-                {
-                  "label": "Referring to People",
-                  "value": "anyone, everyone, someone, nobody, somebody"
-                },
-                {
-                  "label": "Referring to Things",
-                  "value": "anything, everything, something, nothing"
-                },
-                {
-                  "label": "Example Sentence 1",
-                  "value": "**Everyone** is present today."
-                },
-                {
-                  "label": "Example Sentence 2",
-                  "value": "I want to eat **something**."
-                },
-                {
-                  "label": "Example Sentence 3",
-                  "value": "**Nobody** was in the classroom."
-                }
-              ],
-              "usage_examples": [
-                "**Someone** is at the door.",
-                "Did **anyone** see my cow?",
-                "**Everybody** in the village helped to clean the well.",
-                "I have **nothing** to do.",
-                "Please give me **something** to drink.",
-                "Is **anybody** home?",
-                "She knows **everything** about farming."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/pimages/baimages/basic/module-3/lesson-2/psic/module-3/lesson-1/p1"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "9. Reciprocal Pronouns: Mutual Action",
-      "subtopics": [
-        {
-          "title": "9.1. Each Other, One Another",
-          "sections": [
-            {
-              "text": "Reciprocal pronouns express a mutual relationship or action. We use them when two or more people do the same thing to each other.",
-              "examples": [
-                {
-                  "label": "Each other (usually for two people)",
-                  "value": "The two brothers help **each other**."
-                },
-                {
-                  "label": "One another (usually for more than two people)",
-                  "value": "The villagers greet **one another** during the festival."
-                }
-              ],
-              "usage_examples": [
-                "My friend and I share our books with **each other**.",
-                "The players in the team support **one another** during the match."
-              ],
-              "media": {
-                "image": "images/basic/module-3/lesson-2/pimages/baimages/basic/module-3/lesson-2/psic/module-3/lesson-1/p1"
               }
             }
           ]
@@ -555,3 +371,4 @@
     }
   ]
 }
+
