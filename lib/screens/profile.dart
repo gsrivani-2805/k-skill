@@ -361,8 +361,6 @@ class _ProfileScreenState extends State<ProfileScreen>
           // Find the lesson info from all lessons data
           final lessonSearchResult = _findLessonInfo(lessonId, allLessonsData);
           final lessonInfo = lessonSearchResult['lessonInfo'];
-          final moduleKey = lessonSearchResult['moduleKey'];
-          final levelKey = lessonSearchResult['levelKey'];
 
           return Card(
             elevation: 2,

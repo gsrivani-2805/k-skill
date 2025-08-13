@@ -139,7 +139,10 @@
                   "label": "dear / deer",
                   "value": "My dear friend, I saw a beautiful deer in the forest today."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-5/Homophones 3.jpg"
+              }
             }
           ]
         }
@@ -254,7 +257,10 @@
                   "label": "entrance (ɪnˈtrɑːns) / entrance (ˈɛntrəns)",
                   "value": "The beautiful music will entrance the audience. / Please use the main entrance to the building."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-5/Homographs.png"
+              }
             }
           ]
         }
@@ -389,7 +395,10 @@
                   "label": "saw / saw",
                   "value": "I saw a big snake yesterday. / The carpenter used a saw to cut the wood."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-5/Homonyms 3.jpg"
+              }
             }
           ]
         }
@@ -410,6 +419,9 @@
                 "Tip 4: Homo-NYM = Same NAME. They have the same spelling AND the same sound, but different meanings (e.g., bank/bank). All homonyms are also homographs and homophones.",
                 "Tip 5: Context is King! The only way to know the correct meaning and spelling of these words is to look at the other words in the sentence. The context will tell you if 'right' means a direction or the correct answer."
               ],
+              "media": {
+                "image": "images/basic/module-3/lesson-5/summary.png"
+              },
               "table": {
                 "title": "Quick Comparison",
                 "headers": ["Type", "Same Spelling?", "Same Sound?", "Different Meaning?"],

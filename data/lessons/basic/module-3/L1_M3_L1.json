@@ -79,7 +79,10 @@
                   "label": "talk / speak / chat",
                   "value": "I need to talk to you. / Please speak clearly. / We can chat for a while."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-1/182.png"
+              }
             }
           ]
         }
@@ -194,7 +197,10 @@
                   "label": "shiny / glossy / gleaming",
                   "value": "The new car was gleaming in the sun."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-1/185.png"
+              }
             }
           ]
         },
@@ -304,7 +310,10 @@
                   "label": "walk / stroll / wander",
                   "value": "We decided to stroll through the village in the evening."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-1/181.png"
+              }
             }
           ]
         }

@@ -79,7 +79,10 @@
                   "label": "well / bell",
                   "value": "I heard the temple bell near the well."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-4/177.png"
+              }
             }
           ]
         }
@@ -155,6 +158,9 @@
                   "value": "bill, fill, hill, mill, pill, still, will"
                 }
               ],
+              "media": {
+                "image": "images/basic/module-3/lesson-4/179.png"
+              },
               "table": {
                 "title": "Common Word Families",
                 "headers": ["Family Ending", "Example Words"],
@@ -283,7 +289,10 @@
                   "label": "The Small Boat",
                   "value": "My little toy boat can float,\nAcross the watery moat."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-4/178.png"
+              }
             }
           ]
         }

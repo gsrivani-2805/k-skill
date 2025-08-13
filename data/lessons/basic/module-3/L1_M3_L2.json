@@ -99,7 +99,10 @@
                   "label": "give / take",
                   "value": "You should give respect to take respect."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-2/163.png"
+              }
             }
           ]
         }
@@ -214,7 +217,10 @@
                   "label": "sweet / sour",
                   "value": "Ripe mangoes are sweet, but raw mangoes are sour."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-2/164.png"
+              }
             }
           ]
         },
@@ -346,6 +352,9 @@
                 "Tip 5: Read Actively. While reading, notice how authors use opposite words to make their writing more powerful and clear. When you see a word, try to think of its antonym.",
                 "Tip 6: Play Word Games. Games like crosswords, word association, or online quizzes can be a fun and engaging way to practice your knowledge of antonyms."
               ],
+              "media": {
+                "image": "images/basic/module-3/lesson-2/165.png"
+              },
               "table": {
                 "title": "Antonyms with Prefixes",
                 "headers": ["Prefix", "Base Word", "Antonym"],

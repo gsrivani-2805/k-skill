@@ -55,7 +55,10 @@
                   "label": "Example: 'interesting'",
                   "value": "This book is interesting. (Positive) | That movie is more interesting than this book. (Comparative) | The story my grandfather told was the most interesting of all. (Superlative)"
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-3/Degree 1.jpg"
+              }
             }
           ]
         }
@@ -130,7 +133,10 @@
                   "label": "Example: 'courageous'",
                   "value": "The soldier was courageous. His leader was more courageous. The king was the most courageous of them all."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-3/Degrees 2.jpg"
+              }
             }
           ]
         },
@@ -186,6 +192,9 @@
                     "thinnest"
                   ]
                 ]
+              },
+              "media": {
+                "image": "images/basic/module-3/lesson-3/Degree 3 g.jpg"
               }
             }
           ]
@@ -242,6 +251,9 @@
                   "value": "We need to discuss this further. (further for metaphorical distance) | The farthest I have ever traveled is to Delhi."
                 }
               ],
+              "media": {
+                "image": "images/basic/module-3/lesson-3/Comparative forms.jpg"
+              },
               "table": {
                 "title": "List of Irregular Adjectives",
                 "headers": ["Positive (V1)", "Comparative (V2)", "Superlative (V3)"],
@@ -275,7 +287,10 @@
                 "Tip 4: Counting syllables can help. A syllable is a unit of pronunciation having one vowel sound. 'Big' has one syllable. 'Ha-ppy' has two. 'Beau-ti-ful' has three. This helps you decide whether to use '-er/-est' or 'more/most'.",
                 "Tip 5: Practice by comparing things around you. Look at two trees and say, 'This tree is taller than that tree.' Look at all the students in your class and think, 'Who is the tallest student?'",
                 "Tip 6: Using 'Elder' and 'Eldest'. 'Elder' and 'eldest' are used only for people (usually within a family), and they cannot be followed by 'than'. 'Older' and 'oldest' can be used for both people and things. Example: 'My elder brother is a doctor.' (Correct) 'He is elder than me.' (Incorrect - use 'older than me')."
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-3/Superlative Form.jpg"
+              }
             }
           ]
         }

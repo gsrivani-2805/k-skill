@@ -51,7 +51,10 @@
                   "label": "Example: 'Drive'",
                   "value": "V1: I drive a tractor. | V2: My father drove to the city. | V3: He has driven for five hours."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-6/102.png"
+              }
             }
           ]
         }
@@ -150,7 +153,10 @@
                   "label": "Wait -> Waited -> Waited",
                   "value": "We waited for the bus. We have waited for a long time."
                 }
-              ]
+              ],
+              "media": {
+                "image": "images/basic/module-3/lesson-6/103.png"
+              }
             }
           ]
         }
@@ -250,6 +256,9 @@
                   "value": "A tree fell in the storm. The old wall has fallen."
                 }
               ],
+              "media": {
+                "image": "images/basic/module-3/lesson-6/104.png"
+              },
               "table": {
                 "title": "Common Irregular Verbs",
                 "headers": ["V1 (Base)", "V2 (Past Simple)", "V3 (Past Participle)"],
