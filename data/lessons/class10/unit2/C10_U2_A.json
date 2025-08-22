@@ -1,0 +1,490 @@
+[
+  {
+    "lesson_title": "2.Wit and Humour",
+    "content": [
+      "Look at the picture and answer the questions that follow.",
+      {
+        "image": {
+          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:22:15.908Z/page-1-img-1.jpeg",
+          "description": "A cartoon cat looks startled as a small mouse points a green toy gun at it. In the background, there is a bookshelf and a doorway."
+        }
+      },
+      "1. What do you understand from the picture?",
+      "2. Can you recall anything comic associated with these animals?",
+      "3. Can you imagine, what may be the conversation between the rat and the cat?",
+      "4. How do people differ in enjoying humour: young and old; rural and urban; literates and illiterates?",
+      "Oral Discourse: Role play - (based on the scene depicted in the picture).",
+      "Now let's read a play in which the characters behave in a humorous way."
+    ],
+    "author": "T.S. Government 2021-22"
+  },
+  {
+    "lesson_title": "The Dear Departed - I",
+    "content": [
+      "A Reading",
+      "(One-act Play)",
+      "CHARACTERS",
+      "Mrs. Amelia Slater\nMrs. Elizabeth Jordan\n} (Sisters)",
+      "Henry Slater\nBen Jordan\n} (Husbands of Amelia and Elizabeth)",
+      "Victoria Slater - a girl of ten (Amelia's daughter)",
+      "Abel Merryweather - (father of Amelia and Elizabeth)",
+      "(When the curtain rises Mrs. Slater is seen laying the table. She is a vigorous, plump, red-faced, vulgar woman prepared to do any amount of straight talking to get her own way. She is in black. She goes to the window, opens it and calls into the street)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": (sharply) Victoria, Victoria! D'ye hear? Come in, will you?"
+          }
+        ]
+      },
+      "(Victoria a precocious girl often dressed in colours, enters.)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": I'm amazed at you, Victoria. I really am. Be off now, and change your dress before your Aunt Elizabeth and your Uncle Ben come. It would never do for them to find you in colours with grandfather lying dead, upstairs."
+          },
+          {
+            "role": "Victoria",
+            "dialogue": "What are they coming for? They haven't been here for ages."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": They're coming to talk over poor grandpa's affairs. Your father sent them a telegram as soon as we found he was dead. (A noise is heard)"
+          }
+        ]
+      },
+      "(Henry Slater, a stooping, heavy man with a drooping moustache, enters. He is wearing a black tailcoat, grey trousers, a black tie and a bowler hat.)",
+      {
+        "role_play": [
+          {
+            "role": "Henry",
+            "dialogue": "I'm wondering if they'll come at all. When you and Elizabeth quarrelled, she said she'd never set foot in your house again."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": She'll come fast enough after her share of what our father's left. You know how hard she can be when she likes. Where she gets it from I can't tell."
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": I suppose it's in the family. (pause) Where are my slippers?"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": In the kitchen; but you want a new pair, those old ones are nearly worn out. (Nearly breaking down) You don't seem to realize what it's costing me to bear up like I am doing. My heart's fit to break when I see the little trifles that belonged to father lying around, and think he'll never use them again. (Briskly) Here! You'd better wear these slippers of my father's now. It's lucky he'd just got a new pair."
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": They'll be very small for me, my dear."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": They'll stretch, won't they? I'm not going to have them wasted. (She has finished laying the table.) Henry, I've been thinking about that bureau of my father's that's in his bedroom. You know I always wanted to have it after he died."
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": You must arrange with Elizabeth when you're dividing things up."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Elizabeth's that sharp she'll see I'm after it, and we'll drive a hard bargain over it."
+          }
+        ]
+      },
+      {
+        "image": {
+          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:22:15.908Z/page-3-img-1.jpeg",
+          "description": "A man, a woman, and a young girl are on the staircase of a house."
+        }
+      },
+      {
+        "role_play": [
+          {
+            "role": "Henry",
+            "dialogue": ": Perhaps she's got her eye on the bureau as well."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": She's got her eye on the bureau as well."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": She's never been here since father bought it. If it was only down here instead of in his room, she'd never guess it wasn't our own."
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": (startled): Amelia! (He rises)"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Henry, why shouldn't we bring that bureau down here now? We can do it before they come."
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": (stupefied) I wouldn't care to."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Don't look so daft. Why not?"
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": It doesn't seem delicate, somehow."
+          }
+        ]
+      },
+      {
+        "image": {
+          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:22:15.908Z/page-4-img-1.png",
+          "description": "bureau"
+        }
+      },
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": We could put that shabby old chest of drawers upstairs where the bureau is now. Elizabeth could have that and welcome. I've always wanted to get rid of it. (She points to the drawers.)"
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": Suppose they come when we're doing it."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": I'll fasten the front door. Get your coat off, Henry. We'll change it."
+          }
+        ]
+      },
+      "(Mrs. Slater goes out to fasten the front door. Henry takes his coat off. Mrs. Slater reappears.)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": I'll run up and move the chairs out of the way."
+          }
+        ]
+      },
+      "(Victoria appears, dressed according to her mother's instructions)",
+      {
+        "role_play": [
+          {
+            "role": "Victoria",
+            "dialogue": ": What have you got your coat off for, father?"
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": Mother and I are going to bring grandfather's bureau down here."
+          },
+          {
+            "role": "Victoria",
+            "dialogue": ": Are you planning to pinch it?"
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": (Shocked) No, my child. Grandpa gave it to your mother before he died."
+          },
+          {
+            "role": "Victoria",
+            "dialogue": ": This morning?"
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": Yes."
+          },
+          {
+            "role": "Victoria",
+            "dialogue": ": Ah! He was drunk this morning."
+          }
+        ]
+      },
+      {
+        "image": {
+          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:22:15.908Z/page-4-img-2.jpeg",
+          "description": "clock"
+        }
+      },
+      "(Mrs. Slater appears carrying a handsome clock under her arm.)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": I thought I'd fetch this down as well. (She puts it on the mantelpiece.) Our clock's worth nothing and this always appealed to me."
+          },
+          {
+            "role": "Victoria",
+            "dialogue": ": That's grandpa's clock."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Be quiet! It's ours now. Come, Henry, lift your end."
+          }
+        ]
+      },
+      "(Henry and Mrs. Slater, very hot and flushed, stagger in with a pretty old-fashioned bureau containing a locked desk. They put it where the chest of drawers was, and straighten the ornaments, etc. There is a knock at the door. The knocking is repeated.)",
+      "(Victoria ushers in Ben and Mrs. Jordan. The latter is a stout, complacent woman with an irritating air of being always right. She is wearing an outfit of new mourning. Ben is also in complete new mourning. He is rather a jolly little man, but at present trying to adapt himself to the regrettable occasion. Mrs. Jordan sails into the room and solemnly goes straight to Mrs. Slater and kisses her. The men shake hands.)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": Well, Amelia, and so he's gone at last."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Yes, he's gone. He was seventy-two a fortnight last Sunday. (She sniffs back a tear.)"
+          },
+          {
+            "role": "Ben",
+            "dialogue": "(chirpily) : Now, Amelia, you mustn't give way. We've all got to die some time or other."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": And now perhaps you'll tell us all about it."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Father had been merry this morning. He went out soon after breakfast to pay his insurance."
+          },
+          {
+            "role": "Ben",
+            "dialogue": ": My word, it's a good thing he did."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": He always was thoughtful in that way. He was too honourable to have 'gone' without paying his premium."
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": And when I came in I found him undressed sure enough and snug in bed."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": And when we'd finished dinner I thought I'd take up a bit of something on a tray. He was lying there for all the world as if he was asleep, so I put the tray down on the bureau-(correcting herself) on the chest of drawers - and went to waken him. (A pause) He was quite cold."
+          }
+        ]
+      },
+      "(A pause. They wipe their eyes and sniff back tears.)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": (Rising briskly at length; in a business-like tone) Well, will you go up and look at him now, or shall we have tea?"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": What do you say, Ben?"
+          },
+          {
+            "role": "Ben",
+            "dialogue": ": I'm not particular."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": (surveying the table) Well, then, if the kettle's ready, we may as well have tea first."
+          }
+        ]
+      },
+      "(Mrs. Slater puts the kettle on the fire and gets tea ready.)",
+      {
+        "role_play": [
+          {
+            "role": "Henry",
+            "dialogue": ": One thing we may as well decide now is the announcement in the papers."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": I was thinking of that. What would you put?"
+          }
+        ]
+      },
+      "(A pause)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": Well, we'll think about it after tea, and then we'll look through his bits of things and make a list of them. There's all the furniture in his room."
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": There's no jewellery or valuables of that sort."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": Except his gold watch. He promised that to our Jimmy."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Promised your Jimmy! I never heard of that."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": Oh, but he did, Amelia, when he was living with us. He was very fond of Jimmy."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Well, (Amazed) I don't know!"
+          },
+          {
+            "role": "Ben",
+            "dialogue": ": Anyhow, there's his insurance money. Have you got the receipt for the premium he paid this morning?"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": I've not seen it."
+          }
+        ]
+      },
+      "(Victoria jumps up from the sofa and comes behind the table.)",
+      {
+        "role_play": [
+          {
+            "role": "Victoria",
+            "dialogue": ": Mother, I don't think Grandpa went to pay his insurance this morning."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": He went out."
+          },
+          {
+            "role": "Victoria",
+            "dialogue": ": Yes, but he didn't go into the town. He met old Mr. Tattersall down the street, and they went off past St. Philip's Church."
+          },
+          {
+            "role": "Ben",
+            "dialogue": ": Do you think he hasn't paid it? Was it overdue?"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": I should think it was overdue."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": Something tells me he's not paid it."
+          },
+          {
+            "role": "Ben",
+            "dialogue": ": The drunken old beggar!"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": He's done it on purpose, just to annoy us."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": After all I've done for him, having to put up with him in the house these three years. It's nothing short of swindling."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": I had to put up with him for five years."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": And you were trying to turn him over to us all the time."
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": But we don't know for certain that he's not paid the premium."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Victoria, run upstairs and fetch that bunch of keys that's on your Grandpa's dressing-table."
+          },
+          {
+            "role": "Victoria",
+            "dialogue": ":(timidly) In Grandpa's room?"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Yes."
+          },
+          {
+            "role": "Victoria",
+            "dialogue": ": I - I don't like to."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Don't talk so silly. There's no one who can hurt you. (Victoria goes out reluctantly) We'll see if he's locked the receipt up in the bureau."
+          }
+        ]
+      },
+      {
+        "image": {
+          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:22:15.908Z/page-7-img-1.jpeg",
+          "description": "An elderly man is coming down the stairs, surprising a group of two men, two women, and a young girl who are looking up at him in shock."
+        }
+      },
+      {
+        "role_play": [
+          {
+            "role": "Ben",
+            "dialogue": ": In where? In this thing? (He rises and examines it.)"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": (also rising) Where did you pick that up, Amelia? It's new since last I was here."
+          }
+        ]
+      },
+      "(They examine it closely.)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Oh - Henry picked it up one day."
+          }
+        ]
+      },
+      "(Victoria returns, very scared. She closes the door after her.)",
+      {
+        "role_play": [
+          {
+            "role": "Victoria",
+            "dialogue": ": Mother! Mother!"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": What is it, child?"
+          },
+          {
+            "role": "Victoria",
+            "dialogue": ": Grandpa's getting up."
+          },
+          {
+            "role": "Ben",
+            "dialogue": ": What?"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": What do you say?"
+          },
+          {
+            "role": "Victoria",
+            "dialogue": ": Grandpa's getting up."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": The child's crazy."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Don't talk so silly. Don't you know your grandpa's dead?"
+          },
+          {
+            "role": "Victoria",
+            "dialogue": ": No, no; he's getting up. I saw him."
+          }
+        ]
+      },
+      "(They are transfixed with amazement; Victoria clings to Mrs. Slater.)",
+      {
+        "role_play": [
+          {
+            "role": "Ben",
+            "dialogue": ": (Suddenly) Hist! Listen."
+          }
+        ]
+      },
+      "(They look at the door. A slight chuckling is heard from upstairs. The door opens, revealing an old man clad in a faded but gay dressing-gown. He is in his stockinged feet. Although over seventy, he is vigorous and well coloured. His bright, malicious eyes twinkle under his heavy, reddish-gray eye brows. He is obviously either the old man ABEL MERRYWEATHER or else his ghost.)",
+      "(Continued in B. Reading.....)"
+    ]
+  }
+]

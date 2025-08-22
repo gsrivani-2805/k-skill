@@ -256,8 +256,8 @@ class TopicCard extends StatelessWidget {
   }
 }
 
-// Words List Page
-class WordsListPage extends StatelessWidget {
+// Words List Page - ENHANCED WITH SEARCH AND ALPHABETICAL ORDERING
+class WordsListPage extends StatefulWidget {
   final VocabularyTopic topic;
   final String topicKey;
 
@@ -265,7 +265,61 @@ class WordsListPage extends StatelessWidget {
     : super(key: key);
 
   @override
+  _WordsListPageState createState() => _WordsListPageState();
+}
+
+class _WordsListPageState extends State<WordsListPage> {
+  TextEditingController _searchController = TextEditingController();
+  List<VocabularyWord> _filteredWords = [];
+  List<VocabularyWord> _sortedWords = [];
+  bool _isSearching = false;
+
+  @override
+  void initState() {
+    super.initState();
+    // Sort words alphabetically
+    _sortedWords = List.from(widget.topic.words);
+    _sortedWords.sort(
+      (a, b) => a.word.toLowerCase().compareTo(b.word.toLowerCase()),
+    );
+    _filteredWords = _sortedWords;
+
+    _searchController.addListener(_filterWords);
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  void _filterWords() {
+    String query = _searchController.text.toLowerCase().trim();
+    setState(() {
+      if (query.isEmpty) {
+        _filteredWords = _sortedWords;
+      } else {
+        _filteredWords = _sortedWords.where((word) {
+          return word.word.toLowerCase().contains(query) ||
+              word.definition.toLowerCase().contains(query);
+        }).toList();
+      }
+    });
+  }
+
+  void _toggleSearch() {
+    setState(() {
+      _isSearching = !_isSearching;
+      if (!_isSearching) {
+        _searchController.clear();
+        _filteredWords = _sortedWords;
+      }
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -298,53 +352,145 @@ class WordsListPage extends StatelessWidget {
                           onPressed: () => Navigator.pop(context),
                         ),
                         Spacer(),
+                        IconButton(
+                          icon: Icon(
+                            _isSearching ? Icons.close : Icons.search,
+                            color: Colors.indigo.shade600,
+                          ),
+                          onPressed: _toggleSearch,
+                        ),
                       ],
                     ),
-                    Text(topic.icon, style: TextStyle(fontSize: 48)),
-                    SizedBox(height: 6),
-                    Text(
-                      topic.title,
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade800,
+
+                    // Show search bar when searching
+                    if (_isSearching) ...[
+                      SizedBox(height: 8),
+                      Container(
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 4,
+                              offset: Offset(0, 2),
+                            ),
+                          ],
+                        ),
+                        child: TextField(
+                          controller: _searchController,
+                          autofocus: true,
+                          decoration: InputDecoration(
+                            hintText: 'Search words...',
+                            border: InputBorder.none,
+                            icon: Icon(
+                              Icons.search,
+                              color: Colors.grey.shade600,
+                            ),
+                          ),
+                          style: TextStyle(fontSize: 16),
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 4),
-                    Text(
-                      'Click on any word to learn more',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.grey.shade600,
+                    ] else ...[
+                      Text(widget.topic.icon, style: TextStyle(fontSize: 48)),
+                      SizedBox(height: 6),
+                      Text(
+                        widget.topic.title,
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.shade800,
+                        ),
                       ),
-                    ),
+                      SizedBox(height: 4),
+                      Text(
+                        'Click on any word to learn more',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey.shade600,
+                        ),
+                      ),
+                    ],
                   ],
                 ),
               ),
 
+              // Results count
+              if (_isSearching && _searchController.text.isNotEmpty)
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Found ${_filteredWords.length} word${_filteredWords.length != 1 ? 's' : ''}',
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.grey.shade600,
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                  ),
+                ),
+
               // Words List
               Expanded(
-                child: ListView.builder(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  itemCount: topic.words.length,
-                  itemBuilder: (context, index) {
-                    final word = topic.words[index];
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 4.0),
-                      child: WordCard(
-                        word: word,
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => WordDetailPage(word: word),
+                child:
+                    _filteredWords.isEmpty && _searchController.text.isNotEmpty
+                    ? Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.search_off,
+                              size: 64,
+                              color: Colors.grey.shade400,
+                            ),
+                            SizedBox(height: 16),
+                            Text(
+                              'No words found',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.grey.shade600,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            SizedBox(height: 8),
+                            Text(
+                              'Try a different search term',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.grey.shade500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    : ListView.builder(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 4,
+                        ),
+                        itemCount: _filteredWords.length,
+                        itemBuilder: (context, index) {
+                          final word = _filteredWords[index];
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 4.0),
+                            child: WordCard(
+                              word: word,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        WordDetailPage(word: word),
+                                  ),
+                                );
+                              },
                             ),
                           );
                         },
                       ),
-                    );
-                  },
-                ),
               ),
             ],
           ),

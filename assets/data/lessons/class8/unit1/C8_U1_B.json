@@ -1,0 +1,44 @@
+{
+  "poem_title": "My Mother",
+  "poem_text": [
+    {
+      "image": {
+        "description": "An illustration of a woman in a green sari rocking a baby in a hanging cradle."
+      }
+    },
+    {
+      "stanza": [
+        "I cannot remember my mother,",
+        "only sometime in the midst of my play",
+        "a tune seems to hover over my playthings,",
+        "the tune of some song that she used",
+        "to hum while rocking my cradle."
+      ]
+    },
+    {
+      "stanza": [
+        "I cannot remember my mother,",
+        "but when in the early autumn morning",
+        "the smell of the shiuli flowers floats in the air,",
+        "the scent of the morning service in the temple",
+        "comes to me as the scent of my mother."
+      ]
+    },
+    {
+      "image": {
+        "description": "An illustration of a man in his bedroom looking out a barred window at a woman looking in."
+      }
+    },
+    {
+      "stanza": [
+        "I cannot remember my mother,",
+        "only when from my bedroom window I send my",
+        "eyes into the blue of the distant sky,",
+        "I feel that the stillness of my mother's gaze",
+        "on my face has spread all over the sky."
+      ]
+    }
+  ],
+  "author": "Rabindranath Tagore"
+}
+

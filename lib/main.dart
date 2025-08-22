@@ -1,3 +1,6 @@
+import 'package:K_Skill/auth/signup_page.dart';
+import 'package:K_Skill/screens/academics.dart';
+import 'package:K_Skill/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:K_Skill/assessment/assessment_screen.dart';
 import 'package:K_Skill/assessment/listening_screen.dart';
@@ -14,10 +17,12 @@ void main() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
 
-  // Always start from login when launching
+  // Check if user is logged in, if yes go to dashboard, else show welcome page
+  String initialRoute = isLoggedIn ? '/dashboard' : '/welcome';
+
   runApp(MyKSkillApp(
     isLoggedIn: isLoggedIn,
-    initialRoute: '/login',
+    initialRoute: initialRoute,
   ));
 }
 
@@ -69,6 +74,7 @@ class _MyKSkillAppState extends State<MyKSkillApp>
       initialRoute: widget.initialRoute,
       onGenerateRoute: _generateRoute,
       routes: {
+        '/welcome': (context) => const WelcomePage(),
         '/login': (context) => LoginPage(),
         '/dashboard': (context) => const RouteAwareWrapper(
               routeName: '/dashboard',
@@ -106,6 +112,16 @@ class _MyKSkillAppState extends State<MyKSkillApp>
     final String routeName = settings.name ?? '/';
 
     switch (routeName) {
+      case '/welcome': // Add welcome case
+        return MaterialPageRoute(
+          builder: (_) => const WelcomePage(),
+          settings: settings,
+        );
+      case '/signup':
+        return MaterialPageRoute(
+          builder: (_) => SignupPage(),
+          settings: settings,
+        );
       case '/login':
         return MaterialPageRoute(
           builder: (_) => LoginPage(),
@@ -164,6 +180,14 @@ class _MyKSkillAppState extends State<MyKSkillApp>
           builder: (_) => const RouteAwareWrapper(
             routeName: '/listening',
             child: ListeningScreen(),
+          ),
+          settings: settings,
+        );
+        case '/academic':
+        return MaterialPageRoute(
+          builder: (_) => RouteAwareWrapper(
+            routeName: '/academic',
+            child: AcademicsScreen(),
           ),
           settings: settings,
         );

@@ -82,7 +82,21 @@ class _LevelsScreenState extends State<LevelsScreen> {
         'borderColor': const Color(0xFF81C784),
         'icon': Icons.headphones,
       },
+      {
+        'color': const Color(0xFF9C27B0), // Purple for Academics
+        'borderColor': const Color(0xFFBA68C8),
+        'icon': Icons.school,
+      },
     ];
+  }
+
+  // Get Academic card data
+  Map<String, dynamic> getAcademicCardData() {
+    return {
+      'title': 'ACADEMICS',
+      'focus': 'Comprehensive English curriculum for Classes 8, 9, and 10 with structured units and reading lessons.',
+      'classes': 3, // Number of classes (8, 9, 10)
+    };
   }
 
   @override
@@ -166,26 +180,40 @@ class _LevelsScreenState extends State<LevelsScreen> {
 
   Widget _buildMobileLayout() {
     final levelConfigs = getLevelConfigs();
+    final academicData = getAcademicCardData();
 
     return ListView.builder(
       padding: const EdgeInsets.all(24.0),
-      itemCount: curriculumData.length,
+      itemCount: curriculumData.length + 1, // +1 for Academics card
       itemBuilder: (context, index) {
-        String levelKey = curriculumData.keys.elementAt(index);
-        Map<String, dynamic> level = curriculumData[levelKey];
-        int moduleCount = (level['modules'] as Map<String, dynamic>).length;
+        if (index == curriculumData.length) {
+          // Academics card (last item)
+          final config = levelConfigs[3]; // Purple config for academics
+          return _buildAcademicCard(
+            academicData: academicData,
+            color: config['color'],
+            borderColor: config['borderColor'],
+            icon: config['icon'],
+            isDesktop: false,
+          );
+        } else {
+          // Regular curriculum cards
+          String levelKey = curriculumData.keys.elementAt(index);
+          Map<String, dynamic> level = curriculumData[levelKey];
+          int moduleCount = (level['modules'] as Map<String, dynamic>).length;
 
-        final config = levelConfigs[index % levelConfigs.length];
+          final config = levelConfigs[index % 3]; // Use first 3 configs for curriculum
 
-        return _buildLevelCard(
-          level: level,
-          levelKey: levelKey,
-          moduleCount: moduleCount,
-          color: config['color'],
-          borderColor: config['borderColor'],
-          icon: config['icon'],
-          isDesktop: false,
-        );
+          return _buildLevelCard(
+            level: level,
+            levelKey: levelKey,
+            moduleCount: moduleCount,
+            color: config['color'],
+            borderColor: config['borderColor'],
+            icon: config['icon'],
+            isDesktop: false,
+          );
+        }
       },
     );
   }
@@ -193,44 +221,60 @@ class _LevelsScreenState extends State<LevelsScreen> {
   Widget _buildDesktopLayout() {
     final levelConfigs = getLevelConfigs();
     final levels = curriculumData.entries.toList();
+    final academicData = getAcademicCardData();
+    
+    // Create a combined list with curriculum levels and academics
+    List<Widget> allCards = [];
+    
+    // Add curriculum cards
+    for (int i = 0; i < levels.length; i++) {
+      final entry = levels[i];
+      final level = entry.value;
+      final levelKey = entry.key;
+      int moduleCount = (level['modules'] as Map<String, dynamic>).length;
+      final config = levelConfigs[i % 3];
+
+      allCards.add(_buildLevelCard(
+        level: level,
+        levelKey: levelKey,
+        moduleCount: moduleCount,
+        color: config['color'],
+        borderColor: config['borderColor'],
+        icon: config['icon'],
+        isDesktop: true,
+      ));
+    }
+
+    // Add academics card
+    final academicConfig = levelConfigs[3];
+    allCards.add(_buildAcademicCard(
+      academicData: academicData,
+      color: academicConfig['color'],
+      borderColor: academicConfig['borderColor'],
+      icon: academicConfig['icon'],
+      isDesktop: true,
+    ));
 
     return SingleChildScrollView(
       padding: const EdgeInsets.all(32.0),
       child: Column(
         children: [
-          for (int i = 0; i < levels.length; i += 3)
+          for (int i = 0; i < allCards.length; i += 3)
             Padding(
               padding: const EdgeInsets.only(bottom: 24.0),
               child: Row(
                 children: [
-                  for (int j = i; j < i + 3 && j < levels.length; j++)
+                  for (int j = i; j < i + 3 && j < allCards.length; j++)
                     Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(
-                          right: j < i + 2 && j < levels.length - 1 ? 16.0 : 0,
+                          right: j < i + 2 && j < allCards.length - 1 ? 16.0 : 0,
                         ),
-                        child: () {
-                          final entry = levels[j];
-                          final level = entry.value;
-                          final levelKey = entry.key;
-                          int moduleCount =
-                              (level['modules'] as Map<String, dynamic>).length;
-                          final config = levelConfigs[j % levelConfigs.length];
-
-                          return _buildLevelCard(
-                            level: level,
-                            levelKey: levelKey,
-                            moduleCount: moduleCount,
-                            color: config['color'],
-                            borderColor: config['borderColor'],
-                            icon: config['icon'],
-                            isDesktop: true,
-                          );
-                        }(),
+                        child: allCards[j],
                       ),
                     ),
                   // Add empty expanded widgets to fill the row if needed
-                  for (int k = i + 3; k < i + 3 && levels.length < i + 3; k++)
+                  for (int k = allCards.length; k < i + 3; k++)
                     const Expanded(child: SizedBox()),
                 ],
               ),
@@ -283,19 +327,6 @@ class _LevelsScreenState extends State<LevelsScreen> {
                 // Icon and title row
                 Row(
                   children: [
-                    // Container(
-                    //   padding: const EdgeInsets.all(12),
-                    //   decoration: BoxDecoration(
-                    //     color: color.withOpacity(0.15),
-                    //     borderRadius: BorderRadius.circular(12),
-                    //   ),
-                    //   child: Icon(
-                    //     icon,
-                    //     color: color,
-                    //     size: 28,
-                    //   ),
-                    // ),
-                    // const SizedBox(width: 16),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -367,6 +398,132 @@ class _LevelsScreenState extends State<LevelsScreen> {
                   child: FractionallySizedBox(
                     widthFactor:
                         0.6, // You can replace this with actual progress
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: color,
+                        borderRadius: BorderRadius.circular(2),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildAcademicCard({
+    required Map<String, dynamic> academicData,
+    required Color color,
+    required Color borderColor,
+    required IconData icon,
+    required bool isDesktop,
+  }) {
+    return Container(
+      margin: EdgeInsets.only(bottom: isDesktop ? 0 : 16.0),
+      child: Card(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+          side: BorderSide(color: borderColor.withOpacity(0.3), width: 1.5),
+        ),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () {
+            // Navigate to Academic Screen
+            Navigator.pushNamed(context, '/academic');
+            // Alternative: Navigator.push(context, MaterialPageRoute(builder: (_) => AcademicScreen()));
+          },
+          child: Container(
+            padding: const EdgeInsets.all(24.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Colors.white, color.withOpacity(0.05)],
+              ),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Icon and title row
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            academicData['title'],
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF2C2C2C),
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 4,
+                            ),
+                            decoration: BoxDecoration(
+                              color: color.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Text(
+                              '${academicData['classes']} classes',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: color.withOpacity(0.8),
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: color.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Icon(Icons.arrow_forward, color: color, size: 16),
+                    ),
+                  ],
+                ),
+
+                const SizedBox(height: 16),
+
+                // Description
+                Text(
+                  academicData['focus'],
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: Color(0xFF666666),
+                    height: 1.5,
+                  ),
+                  maxLines: isDesktop ? 3 : 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+
+                const SizedBox(height: 16),
+
+                // Progress indicator (placeholder)
+                Container(
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: color.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                  child: FractionallySizedBox(
+                    widthFactor: 0.6, 
                     alignment: Alignment.centerLeft,
                     child: Container(
                       decoration: BoxDecoration(
@@ -1081,71 +1238,6 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                 ),
                               ],
                             ),
-
-                            // Quiz Score Display (if attempted)
-                            // if (quizAttempted) ...[
-                            //   SizedBox(height: 8),
-                            //   Container(
-                            //     width: double.infinity,
-                            //     padding: EdgeInsets.symmetric(
-                            //       horizontal: 12,
-                            //       vertical: 6,
-                            //     ),
-                            //     decoration: BoxDecoration(
-                            //       color: getQuizButtonColor(lessonKey)
-                            //           .withOpacity(0.1),
-                            //       borderRadius: BorderRadius.circular(6),
-                            //       border: Border.all(
-                            //         color: getQuizButtonColor(lessonKey),
-                            //         width: 1,
-                            //       ),
-                            //     ),
-                            //     child: Text(
-                            //       'Quiz Score: ${quizScores[lessonKey]}/${totalQuestions[lessonKey]} (${((quizScores[lessonKey]! / totalQuestions[lessonKey]!) * 100).toStringAsFixed(0)}%)',
-                            //       style: TextStyle(
-                            //         color: getQuizButtonColor(lessonKey),
-                            //         fontSize: isSmallScreen ? 11 : 12,
-                            //         fontWeight: FontWeight.w600,
-                            //       ),
-                            //       textAlign: TextAlign.center,
-                            //     ),
-                            //   ),
-                            // ],
-
-                            // Info Message for non-attempted quizzes
-                            //   if (!quizAttempted && !isCompleted) ...[
-                            //     SizedBox(height: 8),
-                            //     Container(
-                            //       padding: EdgeInsets.all(8),
-                            //       decoration: BoxDecoration(
-                            //         color: Colors.amber[50],
-                            //         borderRadius: BorderRadius.circular(6),
-                            //         border: Border.all(
-                            //           color: Colors.amber[200]!,
-                            //           width: 1,
-                            //         ),
-                            //       ),
-                            //       child: Row(
-                            //         children: [
-                            //           Icon(
-                            //             Icons.info_outline,
-                            //             color: Colors.amber[700],
-                            //             size: 14,
-                            //           ),
-                            //           SizedBox(width: 8),
-                            //           Expanded(
-                            //             child: Text(
-                            //               'Complete the quiz to mark this lesson as finished',
-                            //               style: TextStyle(
-                            //                 color: Colors.amber[700],
-                            //                 fontSize: 11,
-                            //               ),
-                            //             ),
-                            //           ),
-                            //         ],
-                            //       ),
-                            //     ),
-                            //   ],
                           ],
                         ),
                       ),

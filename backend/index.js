@@ -19,6 +19,9 @@ app.use(express.json());
 const authRoutes = require("./routes/auth.route");
 app.use("/api/auth", authRoutes);
 
+const translateRoutes = require("./routes/translation.route");
+app.use("/", translateRoutes);
+
 const profileRoutes = require("./routes/profile.route");
 app.use("/", profileRoutes);
 

@@ -29,7 +29,7 @@ router.post("/api/dictionary", async (req, res) => {
   "phonetic": "<phonetic representation of the word, e.g., /ˈwɜːd/>",
   "definition": "<short definition in English>",
   "example": "<example sentence>",
-  "telugu": "<telugu translation>",
+  "telugu": "<telugu translation",
   "hindi": "<hindi translation>",
   "type": "<part of speech>",
   "example_sentence_usage": "<example sentence usage>",

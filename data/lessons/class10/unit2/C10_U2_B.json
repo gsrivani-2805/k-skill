@@ -1,0 +1,380 @@
+[
+  {
+    "lesson_title": "The Dear Departed - II",
+    "content": [
+      "B Reading",
+      {
+        "role_play": [
+          {
+            "role": "Abel",
+            "dialogue": ": What's the matter with little Vicky?"
+          }
+        ]
+      },
+      "(He sees Ben and Mrs. Jordan) Hello! What brings you here? How's yourself, Ben?",
+      "(Abel thrusts his hand at Ben who skips back smartly and retreats with Mrs. Jordan to a safe distance below the sofa.)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": (approaching Abel gingerly)Father, is that you? (She pokes him with her hand to see if he is solid.)"
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Of course it's me. Don't do that, Amelia. What the devil do you mean by this tomfoolery?"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": You took us by surprise, father. Are you keeping quite well?"
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": (trying to catch the words) Eh? What?"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": Are you quite well?"
+          }
+        ]
+      },
+      {
+        "image": {
+          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:23:08.572Z/page-1-img-1.jpeg",
+          "description": "An illustration depicts a family gathered around an elderly man sitting in an armchair. A young girl is at his feet, while two women and another man look on with expressions of surprise and concern. The scene is set in a living room with a staircase in the background."
+        }
+      },
+      {
+        "role_play": [
+          {
+            "role": "Abel",
+            "dialogue": ": Aye, I'm right enough but for a bit of a headache. (Looking at Amelia) Amelia, what the dickens did I do with my new slippers?"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": (confused) Aren't they by the hearth, father?"
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": I don't see them. (Observing Henry trying to remove the slippers) Why, you've got 'em on, Henry."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": (promptly) I told him to put them on to stretch them; they were that new and hard. Now, Henry."
+          }
+        ]
+      },
+      "(Mrs. Slater snatches the slippers from Henry and gives them to Abel, who puts them on and sits in the armchair.)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": (to Ben) Well, I don't call that delicate, stepping into a dead man's shoes in such haste."
+          }
+        ]
+      },
+      "(Victoria runs across to Abel and sits on the floor at his feet.)",
+      {
+        "role_play": [
+          {
+            "role": "Victoria",
+            "dialogue": ": Oh, Grandpa, I'm so glad you're not dead."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": (in a vindictive whisper) Hold your tongue, Victoria."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Eh? What's that? Who's gone dead?"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": (loudly) Victoria says she's sorry about your head."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Ah, thank you, Vicky, but I'm feeling better."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Why, Ben, you are in mourning! And Lizzie too. And Amelia, and Henry and little Vicky! Who's gone dead? It's someone in the family."
+          }
+        ]
+      },
+      "(He chuckles.)",
+      {
+        "role_play": [
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": No one you know, father. A relation of Ben's."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": And what relation of Ben's?"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": His brother."
+          },
+          {
+            "role": "Ben",
+            "dialogue": ":(to Mrs. Slater) Damn it, I never had one."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Dear, dear. And what was his name, Ben?"
+          },
+          {
+            "role": "Ben",
+            "dialogue": ": (at a loss) Er-er. (He crosses to front of table.)"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": (Right side of table, prompting) Frederick."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": (Left side of table, prompting) Albert."
+          },
+          {
+            "role": "Ben",
+            "dialogue": ": Er-Fred-Alb-Isaac."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Isaac? And where did your brother Isaac die?"
+          },
+          {
+            "role": "Ben",
+            "dialogue": ": In-er-in Australia."
+          },
+          {
+            "role": "Abel (rising)",
+            "dialogue": ": Well, I suppose you've only been waiting for me to begin tea. I'm feeling hungry."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": (taking up the kettle) I'll make tea."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Come along, now, sit you down and let's be jolly."
+          }
+        ]
+      },
+      "(Abel sits at the head of the table, facing spectators.)",
+      {
+        "image": {
+          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:23:08.572Z/page-3-img-1.jpeg",
+          "description": "An illustration shows a family of six sitting around a dining table, sharing a meal in a cozy room with a fireplace and a staircase in the background."
+        }
+      },
+      {
+        "role_play": [
+          {
+            "role": "Abel",
+            "dialogue": ": (suddenly recollecting) Ay, Amelia and Henry, what the devil did you mean by shifting my bureau out of my bedroom? (Henry and Mrs. Slater are speechless.) D'you hear me? Henry! Amelia!"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": What bureau was that, father?"
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Why, my bureau, the one I bought -"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": (pointing to the bureau) Was it the one, father?"
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Ah, that's it. What's it doing there? Eh?"
+          }
+        ]
+      },
+      "(A pause. The clock on the mantelpiece strikes six. Everyone looks at it.)",
+      "Drat me if that isn't my clock, too. What the devil's been going on in this house?",
+      "(A slight pause)",
+      {
+        "role_play": [
+          {
+            "role": "Ben",
+            "dialogue": ": Well, I'll be hanged."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": (rising) I'll tell you what's been going on in this house, father. Nothing short of robbery."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Be quiet, Elizabeth."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": I'll not be quiet. Oh, I call it double-faced."
+          },
+          {
+            "role": "Henry",
+            "dialogue": ": Now, now, Elizabeth."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": And you, too. Are you such a poor creature that you must do every dirty thing she tells you?"
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": (rising; thumping the table) Damn it all, will someone tell me what's been going on?"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": Yes, I will. I'll not see you robbed."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Who's been robbing me?"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": Amelia and Henry. They've stolen your clock and bureau."
+          }
+        ]
+      },
+      "(Working herself up)",
+      "They sneaked into your room like thieves in the night and stole them after you were dead.",
+      {
+        "role_play": [
+          {
+            "role": "Henry and Mrs. Slater",
+            "dialogue": ": Hush! Quiet, Elizabeth!"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": I'll not be stopped. After you were dead, I say."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": After who was dead?"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": You."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": But I'm not dead!"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": No, but they thought you were. (A pause. Abel gazes round at them.)"
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Oho! So that's why you're all in black to-day. You thought I was dead. (He chuckles.) That was a big mistake. (He sits and resumes his tea.)"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": (sobbing)Father."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": It didn't take you long to start dividing my things between you. I'll tell you what I'm going to do. Since your mother died, I've lived part of the time with you, Amelia, and part with you, Lizzie. Well, I shall make a new will, leaving all my bits of things to whoever I'm living with when I die. How does that strike you?"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": You know, father, it's quite time you came to live with us again. We'd make you very comfortable."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": No, he's not been with us as long as he was with you."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": I may be wrong, but I don't think father will fancy living on with you after what's happened today."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": It seems to me that neither of you has any cause to feel proud about the way you've treated me."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": If I've done anything wrong, I'm sure I'm sorry for it."
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": And I can't say more than that, too."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": It's a bit late to say it, now. Neither of you cared to put up with me."
+          },
+          {
+            "role": "Mrs. Slater and Mrs. Jordan",
+            "dialogue": ": No, no, father."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": Aye, you both say that because of what I've told you about leaving my money. Well, since you don't want me, I'll go to someone that does."
+          },
+          {
+            "role": "Ben",
+            "dialogue": ": Come, Mr. Merryweather, you've got to live with one of your daughters."
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": I'll tell you what I've got to do. On Monday next I've got to do three things. I've got to go to the lawyer and alter my will; and I've got to go to the insurance office and pay my premium and I've got to go to St Philip's Church and get married."
+          }
+        ]
+      },
+      {
+        "image": {
+          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:23:08.572Z/page-6-img-1.jpeg",
+          "description": "Ring-o-Bells"
+        }
+      },
+      {
+        "role_play": [
+          {
+            "role": "Ben and Henry",
+            "dialogue": ": What!"
+          },
+          {
+            "role": "Mrs. Jordan",
+            "dialogue": ": Get married!"
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": He's out of his senses."
+          }
+        ]
+      },
+      "(General consternation)",
+      {
+        "role_play": [
+          {
+            "role": "Abel",
+            "dialogue": ": I say I'm going to get married."
+          },
+          {
+            "role": "Mrs. Slater",
+            "dialogue": ": Who to?"
+          },
+          {
+            "role": "Abel",
+            "dialogue": ": To Mrs. John Shorrocks who keeps the ‘Ring-o-Bells'. We've had it fixed up a good while now, but I was keeping it for a pleasant surprise. (He rises.) I felt I was a bit of a burden to you, so I found someone who'd think it a pleasure to look after me. We shall be very glad to see you at the ceremony. (He gets to the door.) Till Monday, then. Twelve o' clock at St. Philip's Church. (opening the door) It's a good thing you brought that bureau downstairs, Amelia. It'll be handier to carry it across to the ‘Ring-o-Bells' on Monday. (He goes out.)"
+          }
+        ]
+      },
+      "THE CURTAIN FALLS",
+      "By William Stanley Houghton",
+      "About the author",
+      {
+        "image": {
+          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:23:08.572Z/page-6-img-2.jpeg",
+          "description": "A black and white portrait of William Stanley Houghton."
+        }
+      },
+      "William Stanley Houghton (1881 - 1913) was a famous English dramatist. He was one of the best of a group of realistic playwrights often called the Manchester School. In every play he sought to present an idea. He had a remarkable gift for dialogue that is evident in 'The Dear Departed'. The Dear Departed was first produced in Manchester in 1908. Here Houghton satirizes the degradation of moral values in the British middle-class."
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+
+{
+  "poem_title": "The River",
+  "poem_text": [
+    {
+      "image": {
+        "description": "An illustration depicting a river flowing through a lush landscape with trees and foliage on its banks. The poem's text is overlaid on this image."
+      }
+    },
+    {
+      "stanza": [
+        "River, river, little river!",
+        "Bright you sparkle on your way;",
+        "O'er the yellow pebbles dancing,",
+        "Through the flowers and foliage glancing,",
+        "Like a child at play."
+      ]
+    },
+    {
+      "stanza": [
+        "River, river! swelling river!",
+        "On you rush through rough and smooth;",
+        "Louder, faster, brawling, leaping,",
+        "Over rocks, by rose-banks, sweeping",
+        "Like impetuous youth."
+      ]
+    },
+    {
+      "stanza": [
+        "River, river! brimming river!",
+        "Broad and deep, and still as time;",
+        "Seeming still, yet still in motion,",
+        "Tending onward to the ocean,",
+        "Just like mortal prime."
+      ]
+    },
+    {
+      "stanza": [
+        "River, river! headlong river!",
+        "Down you dash into the sea,",
+        "Sea that line hath never sounded,",
+        "Sea that sail hath never rounded,",
+        "Like eternity."
+      ]
+    }
+  ],
+  "author": "C.A. Bowles"
+}
+

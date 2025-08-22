@@ -3052,3 +3052,1021 @@ assets:
   - assets/vocabulary/psychology.json
   - assets/vocabulary/transportation.json
   - assets/vocabulary/travel.json
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
+
+class AcademicsScreen extends StatefulWidget {
+  @override
+  _AcademicsScreenState createState() => _AcademicsScreenState();
+}
+
+class _AcademicsScreenState extends State<AcademicsScreen> {
+  Map<String, dynamic>? lessonData;
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    loadLessonData();
+  }
+
+  Future<void> loadLessonData() async {
+    try {
+      final String response = await rootBundle.loadString('data/lessons/lessons.json');
+      final data = await json.decode(response);
+      setState(() {
+        lessonData = data;
+        isLoading = false;
+      });
+    } catch (e) {
+      print('Error loading lesson data: $e');
+      setState(() {
+        isLoading = false;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[50],
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          'Lesson',
+          style: TextStyle(
+            color: Colors.black87,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: isLoading
+          ? Center(child: CircularProgressIndicator())
+          : lessonData == null
+              ? Center(child: Text('Error loading lesson data'))
+              : SingleChildScrollView(
+                  child: Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Lesson Title
+                        Center(
+                          child: Container(
+                            padding: EdgeInsets.symmetric(vertical: 20),
+                            child: Text(
+                              lessonData!['lesson_title'] ?? '',
+                              style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue[800],
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 16),
+                        
+                        // Content
+                        ...buildContentWidgets(),
+                        
+                        SizedBox(height: 32),
+                        
+                        // Author
+                        if (lessonData!['author'] != null && lessonData!['author'].toString().trim().isNotEmpty)
+                          Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: Colors.blue[50],
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: Colors.blue[200]!),
+                            ),
+                            child: Text(
+                              'Author: ${lessonData!['author']}',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontStyle: FontStyle.italic,
+                                color: Colors.blue[800],
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+                ),
+    );
+  }
+
+  List<Widget> buildContentWidgets() {
+    List<Widget> widgets = [];
+    
+    if (lessonData!['content'] != null) {
+      for (var item in lessonData!['content']) {
+        if (item is String) {
+          // Text paragraph
+          widgets.add(buildTextParagraph(item));
+          widgets.add(SizedBox(height: 16));
+        } else if (item is Map<String, dynamic> && item.containsKey('image')) {
+          // Image with caption
+          widgets.add(buildImageWidget(item['image']));
+          widgets.add(SizedBox(height: 20));
+        }
+      }
+    }
+    
+    return widgets;
+  }
+
+  Widget buildTextParagraph(String text) {
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.symmetric(horizontal: 4),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 16,
+          height: 1.6,
+          color: Colors.grey[800],
+          fontWeight: FontWeight.w400,
+        ),
+        textAlign: TextAlign.justify,
+      ),
+    );
+  }
+
+  Widget buildImageWidget(Map<String, dynamic> imageData) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 8),
+      child: Column(
+        children: [
+          // Image container
+          Container(
+            // width: double.infinity,
+            constraints: BoxConstraints(
+              maxHeight: 300,
+            ),
+            // decoration: BoxDecoration(
+            //   borderRadius: BorderRadius.circular(12),
+            //   boxShadow: [
+            //     BoxShadow(
+            //       color: Colors.grey.withOpacity(0.3),
+            //       spreadRadius: 2,
+            //       blurRadius: 8,
+            //       offset: Offset(0, 2),
+            //     ),
+            //   ],
+            // ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                imageData['asset_path'] ?? 'images/children.jpg',
+                errorBuilder: (context, error, stackTrace) {
+                  return Container(
+                    height: 200,
+                    color: Colors.grey[300],
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.image_not_supported,
+                            size: 48,
+                            color: Colors.grey[600],
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Image not found',
+                            style: TextStyle(
+                              color: Colors.grey[600],
+                              fontSize: 14,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ),
+          
+          SizedBox(height: 12),
+          
+          // Image caption
+          if (imageData['description'] != null)
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(horizontal: 8),
+              child: Text(
+                imageData['description'],
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey[600],
+                  fontStyle: FontStyle.italic,
+                  height: 1.4,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+import 'package:K_Skill/config/api_config.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+class AcademicsScreen extends StatefulWidget {
+  @override
+  _AcademicsScreenState createState() => _AcademicsScreenState();
+}
+
+class _AcademicsScreenState extends State<AcademicsScreen> {
+  Map<String, dynamic>? lessonData;
+  bool isLoading = true;
+  String? selectedText;
+  OverlayEntry? _overlayEntry;
+  String baseUrl = ApiConfig.baseUrl;
+
+  // Translation cache to avoid repeated API calls
+  Map<String, String> translationCache = {};
+
+  @override
+  void initState() {
+    super.initState();
+    loadLessonData();
+  }
+
+  @override
+  void dispose() {
+    _removeOverlay();
+    super.dispose();
+  }
+
+  Future<void> loadLessonData() async {
+    try {
+      final String response = await rootBundle.loadString(
+        'data/lessons/lessons.json',
+      );
+      final data = await json.decode(response);
+      setState(() {
+        lessonData = data;
+        isLoading = false;
+      });
+    } catch (e) {
+      print('Error loading lesson data: $e');
+      setState(() {
+        isLoading = false;
+      });
+    }
+  }
+
+  /// Enhanced API call with better error handling and caching
+  Future<Map<String, dynamic>> fetchMeaning(String text) async {
+    // Check cache first
+    if (translationCache.containsKey(text.toLowerCase())) {
+      return {
+        'success': true,
+        'meaning': translationCache[text.toLowerCase()],
+        'fromCache': true,
+      };
+    }
+
+    try {
+      final response = await http
+          .post(
+            Uri.parse(
+              '$baseUrl/api/getMeaning',
+            ), // Change to your actual API URL
+            headers: {"Content-Type": "application/json"},
+            body: jsonEncode({
+              "text": text,
+              "targetLanguage": "telugu", // Change to your target language
+              "context": _getContextAroundText(
+                text,
+              ), // Send surrounding context for better translation
+            }),
+          )
+          .timeout(Duration(seconds: 10)); // Add timeout
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        String meaning = data["meaning"] ?? "No meaning found.";
+
+        // Cache the result
+        translationCache[text.toLowerCase()] = meaning;
+
+        return {'success': true, 'meaning': meaning, 'fromCache': false};
+      } else {
+        return {
+          'success': false,
+          'error': 'Server error: ${response.statusCode}',
+        };
+      }
+    } catch (e) {
+      return {'success': false, 'error': 'Network error: ${e.toString()}'};
+    }
+  }
+
+  /// Get surrounding context for better translation
+  String _getContextAroundText(String selectedText) {
+    // This is a simple implementation - you can enhance it based on your JSON structure
+    if (lessonData?['content'] != null) {
+      for (var item in lessonData!['content']) {
+        if (item is String && item.contains(selectedText)) {
+          return item;
+        }
+      }
+    }
+    return selectedText;
+  }
+
+  /// Show selection popup with Search Meaning button
+  void _showSelectionPopup(BuildContext context, String text, Offset position) {
+    _removeOverlay(); // Remove any existing overlay
+    
+    selectedText = text;
+    
+    _overlayEntry = OverlayEntry(
+      builder: (context) => Positioned(
+        left: position.dx - 75, // Center the popup
+        top: position.dy - 60, // Position above selection
+        child: Material(
+          color: Colors.transparent,
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            decoration: BoxDecoration(
+              color: Colors.black87,
+              borderRadius: BorderRadius.circular(8),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 8,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
+            child: InkWell(
+              onTap: () {
+                _removeOverlay();
+                _searchMeaning(text);
+              },
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      Icons.search,
+                      color: Colors.white,
+                      size: 16,
+                    ),
+                    SizedBox(width: 6),
+                    Text(
+                      'Search Meaning',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    Overlay.of(context).insert(_overlayEntry!);
+    
+    // Auto-hide after 3 seconds
+    Future.delayed(Duration(seconds: 3), () {
+      _removeOverlay();
+    });
+  }
+
+  void _removeOverlay() {
+    _overlayEntry?.remove();
+    _overlayEntry = null;
+  }
+
+  /// Search meaning function that calls the API
+  void _searchMeaning(String text) async {
+    // Show loading dialog first
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => AlertDialog(
+        content: Row(
+          children: [
+            CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+            ),
+            SizedBox(width: 20),
+            Expanded(
+              child: Text(
+                'Searching meaning for "${text.length > 30 ? text.substring(0, 30) + "..." : text}"...',
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+
+    // Fetch meaning
+    final result = await fetchMeaning(text);
+
+    // Close loading dialog
+    Navigator.pop(context);
+
+    if (!mounted) return;
+
+    // Show result in bottom sheet
+    _showMeaningBottomSheet(text, result);
+  }
+
+  /// Show meaning result in a bottom sheet
+  void _showMeaningBottomSheet(String text, Map<String, dynamic> result) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      isScrollControlled: true,
+      builder: (context) => DraggableScrollableSheet(
+        initialChildSize: 0.4,
+        minChildSize: 0.3,
+        maxChildSize: 0.7,
+        builder: (context, scrollController) => Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 10,
+                offset: Offset(0, -5),
+              ),
+            ],
+          ),
+          child: Column(
+            children: [
+              // Handle bar
+              Container(
+                margin: EdgeInsets.only(top: 12),
+                width: 40,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+
+              Expanded(
+                child: SingleChildScrollView(
+                  controller: scrollController,
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Header
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.translate,
+                            color: Colors.blue[600],
+                            size: 24,
+                          ),
+                          SizedBox(width: 8),
+                          Text(
+                            'Translation',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue[800],
+                            ),
+                          ),
+                          Spacer(),
+                          if (result['fromCache'] == true)
+                            Container(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 4,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.green[100],
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Text(
+                                'Cached',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.green[700],
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+
+                      SizedBox(height: 16),
+
+                      // Selected text
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: Colors.blue[50],
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: Colors.blue[200]!),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Selected Text:',
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.blue[600],
+                              ),
+                            ),
+                            SizedBox(height: 4),
+                            Text(
+                              text,
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.blue[800],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(height: 16),
+
+                      // Meaning/Translation
+                      if (result['success'] == true) ...[
+                        Text(
+                          'Meaning:',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Container(
+                          width: double.infinity,
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.grey[50],
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: Colors.grey[200]!),
+                          ),
+                          child: Text(
+                            result['meaning'],
+                            style: TextStyle(
+                              fontSize: 16,
+                              height: 1.5,
+                              color: Colors.grey[800],
+                            ),
+                          ),
+                        ),
+                      ] else ...[
+                        // Error state
+                        Container(
+                          width: double.infinity,
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.red[50],
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: Colors.red[200]!),
+                          ),
+                          child: Column(
+                            children: [
+                              Icon(
+                                Icons.error_outline,
+                                color: Colors.red[600],
+                                size: 24,
+                              ),
+                              SizedBox(height: 8),
+                              Text(
+                                result['error'] ?? 'Unknown error occurred',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.red[700],
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+
+                      SizedBox(height: 20),
+
+                      // Action buttons
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(context),
+                            child: Text(
+                              'Close',
+                              style: TextStyle(color: Colors.grey[600]),
+                            ),
+                          ),
+                          if (result['success'] == true) ...[
+                            SizedBox(width: 8),
+                            ElevatedButton.icon(
+                              onPressed: () {
+                                Clipboard.setData(
+                                  ClipboardData(text: result['meaning']),
+                                );
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      'Translation copied to clipboard',
+                                    ),
+                                    duration: Duration(seconds: 2),
+                                  ),
+                                );
+                              },
+                              icon: Icon(Icons.copy, size: 16),
+                              label: Text('Copy'),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue[600],
+                                foregroundColor: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[50],
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          'Lesson',
+          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.w600),
+        ),
+        centerTitle: true,
+        actions: [
+          // Add a help button to explain the translation feature
+          IconButton(
+            icon: Icon(Icons.help_outline, color: Colors.blue[600]),
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Row(
+                    children: [
+                      Icon(Icons.translate, color: Colors.blue[600]),
+                      SizedBox(width: 8),
+                      Text('Translation Help'),
+                    ],
+                  ),
+                  content: Text(
+                    'To get the meaning of any word or phrase:\n\n'
+                    '1. Select the text you want to translate\n'
+                    '2. A popup will appear with "Search Meaning" button\n'
+                    '3. Click the button to get the translation\n'
+                    '4. View the translation in the bottom sheet\n\n'
+                    'Translations are cached for faster access.',
+                    style: TextStyle(height: 1.5),
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: Text('Got it'),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+        ],
+      ),
+      body: GestureDetector(
+        onTap: () {
+          // Remove overlay when tapping outside
+          _removeOverlay();
+        },
+        child: isLoading
+            ? Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircularProgressIndicator(),
+                    SizedBox(height: 16),
+                    Text(
+                      'Loading lesson...',
+                      style: TextStyle(color: Colors.grey[600]),
+                    ),
+                  ],
+                ),
+              )
+            : lessonData == null
+            ? Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.error_outline, size: 64, color: Colors.red[400]),
+                    SizedBox(height: 16),
+                    Text(
+                      'Error loading lesson data',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.red[600],
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          isLoading = true;
+                        });
+                        loadLessonData();
+                      },
+                      child: Text('Retry'),
+                    ),
+                  ],
+                ),
+              )
+            : SingleChildScrollView(
+                child: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Lesson Title
+                      Center(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(vertical: 20),
+                          child: Text(
+                            lessonData!['lesson_title'] ?? '',
+                            style: TextStyle(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue[800],
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+
+                      // Translation tip banner
+                      Container(
+                        margin: EdgeInsets.only(bottom: 16),
+                        padding: EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Colors.blue[50]!, Colors.purple[50]!],
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.blue[200]!),
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.blue[100],
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Icon(
+                                Icons.touch_app,
+                                color: Colors.blue[700],
+                                size: 20,
+                              ),
+                            ),
+                            SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Interactive Translation',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue[800],
+                                    ),
+                                  ),
+                                  Text(
+                                    'Select any text to see a popup with translation option',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.blue[600],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(height: 16),
+
+                      // Content
+                      ...buildContentWidgets(),
+
+                      SizedBox(height: 32),
+
+                      // Author
+                      if (lessonData!['author'] != null &&
+                          lessonData!['author'].toString().trim().isNotEmpty)
+                        Container(
+                          width: double.infinity,
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.blue[50],
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: Colors.blue[200]!),
+                          ),
+                          child: Text(
+                            'Author: ${lessonData!['author']}',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontStyle: FontStyle.italic,
+                              color: Colors.blue[800],
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
+      ),
+    );
+  }
+
+  List<Widget> buildContentWidgets() {
+    List<Widget> widgets = [];
+
+    if (lessonData!['content'] != null) {
+      for (var item in lessonData!['content']) {
+        if (item is String) {
+          widgets.add(buildTextParagraph(item));
+          widgets.add(SizedBox(height: 16));
+        } else if (item is Map<String, dynamic> && item.containsKey('image')) {
+          widgets.add(buildImageWidget(item['image']));
+          widgets.add(SizedBox(height: 20));
+        }
+      }
+    }
+
+    return widgets;
+  }
+
+  Widget buildTextParagraph(String text) {
+    return SelectableText(
+      text,
+      textAlign: TextAlign.justify,
+      style: TextStyle(fontSize: 16, height: 1.6, color: Colors.grey[800]),
+      onSelectionChanged: (selection, cause) {
+        if (selection.isCollapsed) {
+          _removeOverlay();
+          return;
+        }
+
+        final selectedText = text.substring(selection.start, selection.end);
+        if (selectedText.trim().isEmpty) {
+          _removeOverlay();
+          return;
+        }
+
+        // Get the position for the popup
+        final renderObject = context.findRenderObject() as RenderBox?;
+        if (renderObject != null) {
+          // Approximate position - you might want to calculate this more precisely
+          final position = renderObject.localToGlobal(Offset.zero);
+          final screenSize = MediaQuery.of(context).size;
+          
+          // Position the popup in the center-top area of the screen
+          final popupPosition = Offset(
+            screenSize.width / 2,
+            position.dy + 100,
+          );
+          
+          _showSelectionPopup(context, selectedText.trim(), popupPosition);
+        }
+      },
+    );
+  }
+
+  Widget buildImageWidget(Map<String, dynamic> imageData) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 8),
+      child: Column(
+        children: [
+          Container(
+            constraints: BoxConstraints(maxHeight: 300),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                imageData['asset_path'] ?? 'images/children.jpg',
+                errorBuilder: (context, error, stackTrace) {
+                  return Container(
+                    height: 200,
+                    color: Colors.grey[300],
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.image_not_supported,
+                            size: 48,
+                            color: Colors.grey[600],
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Image not found',
+                            style: TextStyle(
+                              color: Colors.grey[600],
+                              fontSize: 14,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ),
+          SizedBox(height: 12),
+          if (imageData['description'] != null)
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(horizontal: 8),
+              child: SelectableText(
+                imageData['description'],
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey[600],
+                  fontStyle: FontStyle.italic,
+                  height: 1.4,
+                ),
+                textAlign: TextAlign.center,
+                onSelectionChanged: (selection, cause) {
+                  if (selection.isCollapsed) {
+                    _removeOverlay();
+                    return;
+                  }
+
+                  final selectedText = imageData['description']
+                      .substring(selection.start, selection.end);
+                  if (selectedText.trim().isEmpty) {
+                    _removeOverlay();
+                    return;
+                  }
+
+                  final renderObject = context.findRenderObject() as RenderBox?;
+                  if (renderObject != null) {
+                    final position = renderObject.localToGlobal(Offset.zero);
+                    final screenSize = MediaQuery.of(context).size;
+                    
+                    final popupPosition = Offset(
+                      screenSize.width / 2,
+                      position.dy + 100,
+                    );
+                    
+                    _showSelectionPopup(context, selectedText.trim(), popupPosition);
+                  }
+                },
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}

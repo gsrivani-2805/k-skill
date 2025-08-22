@@ -22,6 +22,8 @@ dependencies:
   flutter_sound: ^9.28.0
   record: ^6.0.0
   path_provider: ^2.1.5
+  cached_network_image: ^3.4.1
+  connectivity_plus: ^6.1.5
 
 dev_dependencies:
   flutter_test:
@@ -62,10 +64,19 @@ flutter:
   - assets/games/listening_puzzle.json
   - assets/games/story_completion.json
 
-  #game images - picture senctences
-  - images/games/dog_park.jpg
-  - images/games/family_dinner.jpg
-  - images/games/kids_school.jpg
+  #academics
+  - data/lessons/academic_curriculum.json
+
+  - data/lessons/class8/
+  - data/lessons/class9/
+  - data/lessons/class10/
+
+  - data/lessons/class10/unit1/
+
+  - data/lessons/class10/unit1/C10_U1_A.json
+  - data/lessons/class10/unit1/C10_U1_B.json
+  - data/lessons/class10/unit1/C10_U1_C.json
+  - data/lessons/class10/unit3/C10_U3_B.json
 
   #lessons
   - data/lessons/english_curriculum.json

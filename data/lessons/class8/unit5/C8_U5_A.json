@@ -1,0 +1,200 @@
+
+{
+  "lesson_title": "The Computer Game",
+  "content": [
+    "CHARACTERS",
+    "Gary Lopez (Television game host)\nJoan Robinson\nMT2, a computer\nA boy and a girl from the audience\nFirst Noisemaker\nSecond Noisemaker",
+    "(Scene: A television studio)",
+    {
+      "role_play": [
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": Good evening, ladies and gentlemen. Welcome to The Computer Game. Today another human player gets a chance to match wits with our very own computer – MT2!"
+        }
+      ]
+    },
+    "(MT2 blinks its lights and the studio audience claps loudly.)",
+    {
+      "role_play": [
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": Today's player is Joan Robinson from the Oak Street School. Feeling smart, Joan?"
+        },
+        {
+          "role": "Joan",
+          "dialogue": ": Ready!"
+        },
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": I hope so! May I remind you no one has beaten MT2 yet. Now, here's how we play the game. I'll ask a question. The first player to sound a noise maker and give the correct answer scores one point. The first player to earn three points wins the game. Ready, players?"
+        },
+        {
+          "role": "Joan",
+          "dialogue": ": Ready!"
+        },
+        {
+          "role": "MT2",
+          "dialogue": "(in flat voice) : I am prepared to play."
+        },
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": First question. How much is 62,415 times 78,921?"
+        },
+        {
+          "role": "First Noisemaker",
+          "dialogue": ": BLEEP!"
+        },
+        {
+          "role": "MT2",
+          "dialogue": ": The correct answer is 4,925,854,215."
+        },
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": Right! One point for the computer!"
+        }
+      ]
+    },
+    "(The audience claps politely.) Next question. Listen carefully. What date in history did the pilgrims land at Plymouth Rock?",
+    {
+      "role_play": [
+        {
+          "role": "Second Noisemaker",
+          "dialogue": ": BUZZ!"
+        },
+        {
+          "role": "Joan",
+          "dialogue": ": 1620!"
+        },
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": I'm sorry. That's not an exact enough answer."
+        },
+        {
+          "role": "First Noisemaker",
+          "dialogue": ": BLEEP!"
+        },
+        {
+          "role": "MT2",
+          "dialogue": ": The pilgrims landed at Plymouth Rock on December 21 of the"
+        }
+      ]
+    },
+    {
+      "image": {
+        "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:28:02.106Z/page-2-img-1.jpeg",
+        "description": "A cartoon illustration of a television game show. A host stands in the center, a female contestant sits at a desk to the left, and a large computer screen is on the right. An audience of children is in the foreground."
+      }
+    },
+    "year 1620.",
+    {
+      "role_play": [
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": Right! Two points for the computer! If MT2 answers the next question correctly, it's all over, Joan!"
+        },
+        {
+          "role": "Boy in audience",
+          "dialogue": ": Come on, Joan!"
+        },
+        {
+          "role": "Girl in audience",
+          "dialogue": ": You can beat that talking tin can!"
+        },
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": Quiet, please. And here's the next question –"
+        },
+        {
+          "role": "Joan",
+          "dialogue": ": Wait!"
+        },
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": What's the matter?"
+        },
+        {
+          "role": "Joan",
+          "dialogue": ": Could someone else ask the question, please?"
+        },
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": What for?"
+        },
+        {
+          "role": "Joan",
+          "dialogue": ": Maybe I'll have better luck with someone else."
+        },
+        {
+          "role": "Girl",
+          "dialogue": ": (coming up on stage): I'll ask it, Joan!"
+        },
+        {
+          "role": "Joan",
+          "dialogue": ": (whispering to her): Put it in the form of a command. I think the"
+        },
+        {
+          "role": "Girl",
+          "dialogue": "computer's only programmed for questions.\n: (looking at question): Spell the word “chrysanthemum.”"
+        },
+        {
+          "role": "First Noisemaker",
+          "dialogue": ": BLEEP!"
+        },
+        {
+          "role": "MT2",
+          "dialogue": ": Chrysanthemum is spelled ... is spelled ..."
+        },
+        {
+          "role": "Girl",
+          "dialogue": ": Yes?"
+        },
+        {
+          "role": "MT2",
+          "dialogue": ": I do not follow the question. Please repeat in the programmed form."
+        },
+        {
+          "role": "Second Noisemaker",
+          "dialogue": ": BUZZ!"
+        },
+        {
+          "role": "Joan",
+          "dialogue": ": Chrysanthemum. C-H-R-Y-S-A-N-T-H-E-M-U-M."
+        },
+        {
+          "role": "Girl",
+          "dialogue": ": Right! One point for Joan!"
+        },
+        {
+          "role": "Boy",
+          "dialogue": ": Hurrah!"
+        },
+        {
+          "role": "MT2",
+          "dialogue": ": (slowing down): I am MT2, Computer ... I am MT2.. I am MT... MT....M....T....."
+        },
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": The computer's breaking down!"
+        },
+        {
+          "role": "Boy",
+          "dialogue": ": Then Joan's the winner!"
+        }
+      ]
+    },
+    "(Suddenly MT2's lights begin flashing wildly. Smoke pours out of its top.)",
+    {
+      "role_play": [
+        {
+          "role": "Gary Lopez",
+          "dialogue": ": Look what you've done. It's blown a fuse!"
+        },
+        {
+          "role": "Joan",
+          "dialogue": ": Now that's what I call a poor loser!"
+        }
+      ]
+    }
+   ]
+}
+

@@ -1,0 +1,32 @@
+{
+  "poem_title": "The Cry of Children",
+  "poem_text": [
+    {
+      "stanza": [
+        "\"For oh,\" say the children, “we are weary",
+        "And we cannot run or leap;",
+        "If we cared for any meadows, it were merely",
+        "To drop down in them and sleep.",
+        "Our knees tremble sorely in the stooping,",
+        "We fall upon our faces, trying to go;",
+        "And underneath our heavy eyelids drooping",
+        "The reddest flower would look as pale as snow."
+      ]
+    },
+    {
+      "image": {
+        "description": "An illustration of two children, who appear to be child laborers, standing outside a factory or mine."
+      }
+    },
+    {
+      "stanza": [
+        "For, all day, we drag our burden tiring",
+        "Through the coal – dark, underground;",
+        "Or, all day we drive the wheels or iron",
+        "In the factories, round and round.\""
+      ]
+    }
+  ],
+  "author": "Elizabeth Barrett Browning"
+}
+

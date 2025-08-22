@@ -1,0 +1,644 @@
+{
+    "Class8": {
+        "title": "CLASS 8 ENGLISH",
+        "focus": "Developing reading comprehension, critical thinking, and literary appreciation through diverse themes",
+        "units": {
+            "C8_U1": {
+                "title": "Family",
+                "lessons": {
+                    "C8_U1_A": {
+                        "reading_section": "A",
+                        "title": "The Tattered Blanket",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit1/C8_U1_A.json",
+                        "quiz_path": "quizzes/class8/unit1/C8_U1_A_Q.json"
+                    },
+                    "C8_U1_B": {
+                        "reading_section": "B",
+                        "title": "My Mother",
+                        "category": "poem",
+                        "file_path": "data/lessons/class8/unit1/C8_U1_B.json",
+                        "quiz_path": "quizzes/class8/unit1/C8_U1_B_Q.json"
+                    },
+                    "C8_U1_C": {
+                        "reading_section": "C",
+                        "title": "A Letter to a Friend",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit1/C8_U1_C.json",
+                        "quiz_path": "quizzes/class8/unit1/C8_U1_C_Q.json"
+                    }
+                }
+            },
+            "C8_U2": {
+                "title": "Social Issues",
+                "lessons": {
+                    "C8_U2_A": {
+                        "reading_section": "A",
+                        "title": "Oliver Asks for More",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit2/C8_U2_A.json",
+                        "quiz_path": "quizzes/class8/unit2/C8_U2_A_Q.json"
+                    },
+                    "C8_U2_B": {
+                        "reading_section": "B",
+                        "title": "The Cry of Children",
+                        "category": "poem",
+                        "file_path": "data/lessons/class8/unit2/C8_U2_B.json",
+                        "quiz_path": "quizzes/class8/unit2/C8_U2_B_Q.json"
+                    },
+                    "C8_U2_C": {
+                        "reading_section": "C",
+                        "title": "Reaching the Unreached",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit2/C8_U2_C.json",
+                        "quiz_path": "quizzes/class8/unit2/C8_U2_C_Q.json"
+                    }
+                }
+            },
+            "C8_U3": {
+                "title": "Humanity",
+                "lessons": {
+                    "C8_U3_A": {
+                        "reading_section": "A",
+                        "title": "The Selfish Giant I",
+                        "category": "play",
+                        "file_path": "data/lessons/class8/unit3/C8_U3_A.json",
+                        "quiz_path": "quizzes/class8/unit3/C8_U3_A_Q.json"
+                    },
+                    "C8_U3_B": {
+                        "reading_section": "B",
+                        "title": "The Selfish Giant II",
+                        "category": "play",
+                        "file_path": "data/lessons/class8/unit3/C8_U3_B.json",
+                        "quiz_path": "quizzes/class8/unit3/C8_U3_B_Q.json"
+                    },
+                    "C8_U3_C": {
+                        "reading_section": "C",
+                        "title": "The Garden Within",
+                        "category": "poem",
+                        "file_path": "data/lessons/class8/unit3/C8_U3_C.json",
+                        "quiz_path": "quizzes/class8/unit3/C8_U3_C_Q.json"
+                    }
+                }
+            },
+            "C8_U4": {
+                "title": "Science and Technology",
+                "lessons": {
+                    "C8_U4_A": {
+                        "reading_section": "A",
+                        "title": "The Fun They Had",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit4/C8_U4_A.json",
+                        "quiz_path": "quizzes/class8/unit4/C8_U4_A_Q.json"
+                    },
+                    "C8_U4_B": {
+                        "reading_section": "B",
+                        "title": "Preteen Pretext",
+                        "category": "poem",
+                        "file_path": "data/lessons/class8/unit4/C8_U4_B.json",
+                        "quiz_path": "quizzes/class8/unit4/C8_U4_B_Q.json"
+                    },
+                    "C8_U4_C": {
+                        "reading_section": "C",
+                        "title": "The Computer Game",
+                        "category": "play",
+                        "file_path": "data/lessons/class8/unit4/C8_U4_C.json",
+                        "quiz_path": "quizzes/class8/unit4/C8_U4_C_Q.json"
+                    }
+                }
+            },
+            "C8_U5": {
+                "title": "Education and Career",
+                "lessons": {
+                    "C8_U5_A": {
+                        "reading_section": "A",
+                        "title": "The Treasure Within (Part I)",
+                        "category": "play",
+                        "file_path": "data/lessons/class8/unit5/C8_U5_A.json",
+                        "quiz_path": "quizzes/class8/unit5/C8_U5_A_Q.json"
+                    },
+                    "C8_U5_B": {
+                        "reading_section": "B",
+                        "title": "The Treasure Within (Part II)",
+                        "category": "play",
+                        "file_path": "data/lessons/class8/unit5/C8_U5_B.json",
+                        "quiz_path": "quizzes/class8/unit5/C8_U5_B_Q.json"
+                    },
+                    "C8_U5_C": {
+                        "reading_section": "C",
+                        "title": "They Literally Build the Nation",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit5/C8_U5_C.json",
+                        "quiz_path": "quizzes/class8/unit5/C8_U5_C_Q.json"
+                    }
+                }
+            },
+            "C8_U6": {
+                "title": "Art and Culture",
+                "lessons": {
+                    "C8_U6_A": {
+                        "reading_section": "A",
+                        "title": "The Story of Ikat",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit6/C8_U6_A.json",
+                        "quiz_path": "quizzes/class8/unit6/C8_U6_A_Q.json"
+                    },
+                    "C8_U6_B": {
+                        "reading_section": "B",
+                        "title": "The Earthen Goblet",
+                        "category": "poem",
+                        "file_path": "data/lessons/class8/unit6/C8_U6_B.json",
+                        "quiz_path": "quizzes/class8/unit6/C8_U6_B_Q.json"
+                    },
+                    "C8_U6_C": {
+                        "reading_section": "C",
+                        "title": "Maestro with a Mission",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit6/C8_U6_C.json",
+                        "quiz_path": "quizzes/class8/unit6/C8_U6_C_Q.json"
+                    }
+                }
+            },
+            "C8_U7": {
+                "title": "Women Empowerment",
+                "lessons": {
+                    "C8_U7_A": {
+                        "reading_section": "A",
+                        "title": "Bonsai Life (Part I)",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit7/C8_U7_A.json",
+                        "quiz_path": "quizzes/class8/unit7/C8_U7_A_Q.json"
+                    },
+                    "C8_U7_B": {
+                        "reading_section": "B",
+                        "title": "Bonsai Life (Part II)",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit7/C8_U7_B.json",
+                        "quiz_path": "quizzes/class8/unit7/C8_U7_B_Q.json"
+                    },
+                    "C8_U7_C": {
+                        "reading_section": "C",
+                        "title": "I Can Take Care of Myself",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit7/C8_U7_C.json",
+                        "quiz_path": "quizzes/class8/unit7/C8_U7_C_Q.json"
+                    }
+                }
+            },
+            "C8_U8": {
+                "title": "Gratitude",
+                "lessons": {
+                    "C8_U8_A": {
+                        "reading_section": "A",
+                        "title": "Dr. Dwarakanath Kotnis",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit8/C8_U8_A.json",
+                        "quiz_path": "quizzes/class8/unit8/C8_U8_A_Q.json"
+                    },
+                    "C8_U8_B": {
+                        "reading_section": "B",
+                        "title": "Be Thankful",
+                        "category": "poem",
+                        "file_path": "data/lessons/class8/unit8/C8_U8_B.json",
+                        "quiz_path": "quizzes/class8/unit8/C8_U8_B_Q.json"
+                    },
+                    "C8_U8_C": {
+                        "reading_section": "C",
+                        "title": "The Dead Rat",
+                        "category": "prose",
+                        "file_path": "data/lessons/class8/unit8/C8_U8_C.json",
+                        "quiz_path": "quizzes/class8/unit8/C8_U8_C_Q.json"
+                    }
+                }
+            }
+        }
+    },
+    "Class9": {
+        "title": "CLASS 9 ENGLISH",
+        "focus": "Advanced reading skills, literary analysis, and exploring complex themes through diverse texts",
+        "units": {
+            "C9_U1": {
+                "title": "Humour",
+                "lessons": {
+                    "C9_U1_A": {
+                        "reading_section": "A",
+                        "title": "The Snake and the Mirror",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit1/C9_U1_A.json",
+                        "quiz_path": "quizzes/class9/unit1/C9_U1_A_Q.json"
+                    },
+                    "C9_U1_B": {
+                        "reading_section": "B",
+                        "title": "The Duck and the Kangaroo",
+                        "category": "poem",
+                        "file_path": "data/lessons/class9/unit1/C9_U1_B.json",
+                        "quiz_path": "quizzes/class9/unit1/C9_U1_B_Q.json"
+                    },
+                    "C9_U1_C": {
+                        "reading_section": "C",
+                        "title": "Little Bobby",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit1/C9_U1_C.json",
+                        "quiz_path": "quizzes/class9/unit1/C9_U1_C_Q.json"
+                    }
+                }
+            },
+            "C9_U2": {
+                "title": "Games and Sports",
+                "lessons": {
+                    "C9_U2_A": {
+                        "reading_section": "A",
+                        "title": "True Height",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit2/C9_U2_A.json",
+                        "quiz_path": "quizzes/class9/unit2/C9_U2_A_Q.json"
+                    },
+                    "C9_U2_B": {
+                        "reading_section": "B",
+                        "title": "What is a Player?",
+                        "category": "poem",
+                        "file_path": "data/lessons/class9/unit2/C9_U2_B.json",
+                        "quiz_path": "quizzes/class9/unit2/C9_U2_B_Q.json"
+                    },
+                    "C9_U2_C": {
+                        "reading_section": "C",
+                        "title": "V.V.S. Laxman, Very Very Special",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit2/C9_U2_C.json",
+                        "quiz_path": "quizzes/class9/unit2/C9_U2_C_Q.json"
+                    }
+                }
+            },
+            "C9_U3": {
+                "title": "School Life",
+                "lessons": {
+                    "C9_U3_A": {
+                        "reading_section": "A",
+                        "title": "Swami is Expelled from School",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit3/C9_U3_A.json",
+                        "quiz_path": "quizzes/class9/unit3/C9_U3_A_Q.json"
+                    },
+                    "C9_U3_B": {
+                        "reading_section": "B",
+                        "title": "Not Just a Teacher, but a Friend",
+                        "category": "poem",
+                        "file_path": "data/lessons/class9/unit3/C9_U3_B.json",
+                        "quiz_path": "quizzes/class9/unit3/C9_U3_B_Q.json"
+                    },
+                    "C9_U3_C": {
+                        "reading_section": "C",
+                        "title": "Homework",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit3/C9_U3_C.json",
+                        "quiz_path": "quizzes/class9/unit3/C9_U3_C_Q.json"
+                    }
+                }
+            },
+            "C9_U4": {
+                "title": "Environment",
+                "lessons": {
+                    "C9_U4_A": {
+                        "reading_section": "A",
+                        "title": "What is Man Without the Beasts?",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit4/C9_U4_A.json",
+                        "quiz_path": "quizzes/class9/unit4/C9_U4_A_Q.json"
+                    },
+                    "C9_U4_B": {
+                        "reading_section": "B",
+                        "title": "The River",
+                        "category": "poem",
+                        "file_path": "data/lessons/class9/unit4/C9_U4_B.json",
+                        "quiz_path": "quizzes/class9/unit4/C9_U4_B_Q.json"
+                    },
+                    "C9_U4_C": {
+                        "reading_section": "C",
+                        "title": "Can't Climb Trees Any More",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit4/C9_U4_C.json",
+                        "quiz_path": "quizzes/class9/unit4/C9_U4_C_Q.json"
+                    }
+                }
+            },
+            "C9_U5": {
+                "title": "Disasters",
+                "lessons": {
+                    "C9_U5_A": {
+                        "reading_section": "A",
+                        "title": "A Havoc of Flood",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit5/C9_U5_A.json",
+                        "quiz_path": "quizzes/class9/unit5/C9_U5_A_Q.json"
+                    },
+                    "C9_U5_B": {
+                        "reading_section": "B",
+                        "title": "Gathering Everything on the Land",
+                        "category": "poem",
+                        "file_path": "data/lessons/class9/unit5/C9_U5_B.json",
+                        "quiz_path": "quizzes/class9/unit5/C9_U5_B_Q.json"
+                    },
+                    "C9_U5_C": {
+                        "reading_section": "C",
+                        "title": "The Ham Radio",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit5/C9_U5_C.json",
+                        "quiz_path": "quizzes/class9/unit5/C9_U5_C_Q.json"
+                    }
+                }
+            },
+            "C9_U6": {
+                "title": "Freedom",
+                "lessons": {
+                    "C9_U6_A": {
+                        "reading_section": "A",
+                        "title": "A Long Walk to Freedom",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit6/C9_U6_A.json",
+                        "quiz_path": "quizzes/class9/unit6/C9_U6_A_Q.json"
+                    },
+                    "C9_U6_B": {
+                        "reading_section": "B",
+                        "title": "Where the Mind is Without Fear",
+                        "category": "poem",
+                        "file_path": "data/lessons/class9/unit6/C9_U6_B.json",
+                        "quiz_path": "quizzes/class9/unit6/C9_U6_B_Q.json"
+                    },
+                    "C9_U6_C": {
+                        "reading_section": "C",
+                        "title": "An Icon of Civil Rights",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit6/C9_U6_C.json",
+                        "quiz_path": "quizzes/class9/unit6/C9_U6_C_Q.json"
+                    }
+                }
+            },
+            "C9_U7": {
+                "title": "Theatre",
+                "lessons": {
+                    "C9_U7_A": {
+                        "reading_section": "A",
+                        "title": "The Trial",
+                        "category": "play",
+                        "file_path": "data/lessons/class9/unit7/C9_U7_A.json",
+                        "quiz_path": "quizzes/class9/unit7/C9_U7_A_Q.json"
+                    },
+                    "C9_U7_B": {
+                        "reading_section": "B",
+                        "title": "Antony's Speech",
+                        "category": "poem",
+                        "file_path": "data/lessons/class9/unit7/C9_U7_B.json",
+                        "quiz_path": "quizzes/class9/unit7/C9_U7_B_Q.json"
+                    },
+                    "C9_U7_C": {
+                        "reading_section": "C",
+                        "title": "Mahatma Gandhi, Pushed out of Train",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit7/C9_U7_C.json",
+                        "quiz_path": "quizzes/class9/unit7/C9_U7_C_Q.json"
+                    }
+                }
+            },
+            "C9_U8": {
+                "title": "Travel and Tourism",
+                "lessons": {
+                    "C9_U8_A": {
+                        "reading_section": "A",
+                        "title": "The Accidental Tourist",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit8/C9_U8_A.json",
+                        "quiz_path": "quizzes/class9/unit8/C9_U8_A_Q.json"
+                    },
+                    "C9_U8_B": {
+                        "reading_section": "B",
+                        "title": "Father Returning Home",
+                        "category": "poem",
+                        "file_path": "data/lessons/class9/unit8/C9_U8_B.json",
+                        "quiz_path": "quizzes/class9/unit8/C9_U8_B_Q.json"
+                    },
+                    "C9_U8_C": {
+                        "reading_section": "C",
+                        "title": "Kathmandu",
+                        "category": "prose",
+                        "file_path": "data/lessons/class9/unit8/C9_U8_C.json",
+                        "quiz_path": "quizzes/class9/unit8/C9_U8_C_Q.json"
+                    }
+                }
+            }
+        }
+    },
+    "Class10": {
+        "title": "CLASS 10 ENGLISH",
+        "focus": "Mastering advanced literary concepts, critical analysis, and comprehensive understanding of diverse themes",
+        "units": {
+            "C10_U1": {
+                "title": "Personality Development",
+                "lessons": {
+                    "C10_U1_A": {
+                        "reading_section": "A",
+                        "title": "Attitude is Altitude",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit1/C10_U1_A.json",
+                        "quiz_path": "quizzes/class10/unit1/C10_U1_A_Q.json"
+                    },
+                    "C10_U1_B": {
+                        "reading_section": "B",
+                        "title": "Every Success Story is also a Story of Great Failures",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit1/C10_U1_B.json",
+                        "quiz_path": "quizzes/class10/unit1/C10_U1_B_Q.json"
+                    },
+                    "C10_U1_C": {
+                        "reading_section": "C",
+                        "title": "I Will Do It",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit1/C10_U1_C.json",
+                        "quiz_path": "quizzes/class10/unit1/C10_U1_C_Q.json"
+                    }
+                }
+            },
+            "C10_U2": {
+                "title": "Wit and Humour",
+                "lessons": {
+                    "C10_U2_A": {
+                        "reading_section": "A",
+                        "title": "The Dear Departed - I",
+                        "category": "play",
+                        "file_path": "data/lessons/class10/unit2/C10_U2_A.json",
+                        "quiz_path": "quizzes/class10/unit2/C10_U2_A_Q.json"
+                    },
+                    "C10_U2_B": {
+                        "reading_section": "B",
+                        "title": "The Dear Departed - II",
+                        "category": "play",
+                        "file_path": "data/lessons/class10/unit2/C10_U2_B.json",
+                        "quiz_path": "quizzes/class10/unit2/C10_U2_B_Q.json"
+                    },
+                    "C10_U2_C": {
+                        "reading_section": "C",
+                        "title": "The Brave Potter",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit2/C10_U2_C.json",
+                        "quiz_path": "quizzes/class10/unit2/C10_U2_C_Q.json"
+                    }
+                }
+            },
+            "C10_U3": {
+                "title": "Human Relations",
+                "lessons": {
+                    "C10_U3_A": {
+                        "reading_section": "A",
+                        "title": "The Journey",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit3/C10_U3_A.json",
+                        "quiz_path": "quizzes/class10/unit3/C10_U3_A_Q.json"
+                    },
+                    "C10_U3_B": {
+                        "reading_section": "B",
+                        "title": "Another Woman",
+                        "category": "poem",
+                        "file_path": "data/lessons/class10/unit3/C10_U3_B.json",
+                        "quiz_path": "quizzes/class10/unit3/C10_U3_B_Q.json"
+                    },
+                    "C10_U3_C": {
+                        "reading_section": "C",
+                        "title": "The Never-Never Nest",
+                        "category": "play",
+                        "file_path": "data/lessons/class10/unit3/C10_U3_C.json",
+                        "quiz_path": "quizzes/class10/unit3/C10_U3_C_Q.json"
+                    }
+                }
+            },
+            "C10_U4": {
+                "title": "Films and Theatre",
+                "lessons": {
+                    "C10_U4_A": {
+                        "reading_section": "A",
+                        "title": "Rendezvous with Ray",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit4/C10_U4_A.json",
+                        "quiz_path": "quizzes/class10/unit4/C10_U4_A_Q.json"
+                    },
+                    "C10_U4_B": {
+                        "reading_section": "B",
+                        "title": "Maya Bazaar",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit4/C10_U4_B.json",
+                        "quiz_path": "quizzes/class10/unit4/C10_U4_B_Q.json"
+                    },
+                    "C10_U4_C": {
+                        "reading_section": "C",
+                        "title": "A Tribute",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit4/C10_U4_C.json",
+                        "quiz_path": "quizzes/class10/unit4/C10_U4_C_Q.json"
+                    }
+                }
+            },
+            "C10_U5": {
+                "title": "Social Issues",
+                "lessons": {
+                    "C10_U5_A": {
+                        "reading_section": "A",
+                        "title": "The Storeyed House (Part - I)",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit5/C10_U5_A.json",
+                        "quiz_path": "quizzes/class10/unit5/C10_U5_A_Q.json"
+                    },
+                    "C10_U5_B": {
+                        "reading_section": "B",
+                        "title": "The Storeyed House (Part - II)",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit5/C10_U5_B.json",
+                        "quiz_path": "quizzes/class10/unit5/C10_U5_B_Q.json"
+                    },
+                    "C10_U5_C": {
+                        "reading_section": "C",
+                        "title": "Abandoned",
+                        "category": "poem",
+                        "file_path": "data/lessons/class10/unit5/C10_U5_C.json",
+                        "quiz_path": "quizzes/class10/unit5/C10_U5_C_Q.json"
+                    }
+                }
+            },
+            "C10_U6": {
+                "title": "Bio-Diversity",
+                "lessons": {
+                    "C10_U6_A": {
+                        "reading_section": "A",
+                        "title": "Environment",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit6/C10_U6_A.json",
+                        "quiz_path": "quizzes/class10/unit6/C10_U6_B_Q.json"
+                    },
+                    "C10_U6_B": {
+                        "reading_section": "B",
+                        "title": "Or will the Dreamer Wake?",
+                        "category": "poem",
+                        "file_path": "data/lessons/class10/unit6/C10_U6_B.json",
+                        "quiz_path": "quizzes/class10/unit6/C10_U6_B_Q.json"
+                    },
+                    "C10_U6_C": {
+                        "reading_section": "C",
+                        "title": "A Tale of Three Villages",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit6/C10_U6_C.json",
+                        "quiz_path": "quizzes/class10/unit6/C10_U6_C_Q.json"
+                    }
+                }
+            },
+            "C10_U7": {
+                "title": "Nation and Diversity",
+                "lessons": {
+                    "C10_U7_A": {
+                        "reading_section": "A",
+                        "title": "My Childhood",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit7/C10_U7_A.json",
+                        "quiz_path": "quizzes/class10/unit7/C10_U7_A_Q.json"
+                    },
+                    "C10_U7_B": {
+                        "reading_section": "B",
+                        "title": "A Plea for India",
+                        "category": "poem",
+                        "file_path": "data/lessons/class10/unit7/C10_U7_B.json",
+                        "quiz_path": "quizzes/class10/unit7/C10_U7_B_Q.json"
+                    },
+                    "C10_U7_C": {
+                        "reading_section": "C",
+                        "title": "Unity in Diversity in India",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit7/C10_U7_C.json",
+                        "quiz_path": "quizzes/class10/unit7/C10_U7_C_Q.json"
+                    }
+                }
+            },
+            "C10_U8": {
+                "title": "Human Rights",
+                "lessons": {
+                    "C10_U8_A": {
+                        "reading_section": "A",
+                        "title": "Jamaican Fragment",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit8/C10_U8_A.json",
+                        "quiz_path": "quizzes/class10/unit8/C10_U8_A_Q.json"
+                    },
+                    "C10_U8_B": {
+                        "reading_section": "B",
+                        "title": "Once upon a Time",
+                        "category": "poem",
+                        "file_path": "data/lessons/class10/unit8/C10_U8_B.json",
+                        "quiz_path": "quizzes/class10/unit8/C10_U8_B_Q.json"
+                    },
+                    "C10_U8_C": {
+                        "reading_section": "C",
+                        "title": "What is My Name?",
+                        "category": "prose",
+                        "file_path": "data/lessons/class10/unit8/C10_U8_C.json",
+                        "quiz_path": "quizzes/class10/unit8/C10_U8_C_Q.json"
+                    }
+                }
+            }
+        }
+    }
+ } 

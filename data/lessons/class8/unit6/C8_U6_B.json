@@ -1,0 +1,49 @@
+{
+  "poem_title": "The Earthen Goblet",
+  "poem_text": [
+    {
+      "stanza": [
+        "O silent goblet! Red from head to heel,",
+        "How did you feel",
+        "When you were being twirled",
+        "Upon the potter's wheel",
+        "Before the potter gave you to the world?"
+      ]
+    },
+    {
+      "image": {
+        "description": "An illustration of a potter working at his wheel, with a man looking at a sad, personified earthen goblet."
+      }
+    },
+    {
+      "stanza": [
+        "'I felt a conscious impulse in my clay",
+        "To break away",
+        "From the great potter's hand that burned so warm,",
+        "I felt a vast",
+        "Feeling of sorrow to be cast",
+        "Into my present form.'"
+      ]
+    },
+    {
+      "stanza": [
+        "'Before that fatal hour",
+        "That saw me captive on the potter's wheel",
+        "And cast into his crimson goblet-sleep,",
+        "I used to feel",
+        "The fragrant friendship of a little flower",
+        "Whose root was in my bosom buried deep.'"
+      ]
+    },
+    {
+      "stanza": [
+        "'The Potter has drawn out the living breath of me",
+        "And given me a form which is the death of me,",
+        "My past unshapely natural state was best",
+        "With just one flower flaming through my breast.'"
+      ]
+    }
+  ],
+  "author": "Harindranath Chattopadhyaya"
+}
+

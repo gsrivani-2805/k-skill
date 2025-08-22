@@ -385,36 +385,189 @@ class _PracticeScreenState extends State<PracticeScreen> {
         children: [
           Text(
             'Read this aloud:',
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 16),
+
+          // Reading passage container
           Container(
-            padding: const EdgeInsets.all(12),
+            width: double.infinity,
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: Colors.blue[50],
               borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.blue[200]!, width: 1),
             ),
             child: Text(
               selectedPassage ?? 'Loading...',
-              style: TextStyle(fontSize: 16),
-            ),
-          ),
-          const SizedBox(height: 20),
-          Center(
-            child: IconButton(
-              icon: Icon(
-                isListening ? Icons.mic_off : Icons.mic,
-                size: 36,
-                color: Colors.blue,
+              style: TextStyle(
+                fontSize: 16,
+                height: 1.5,
+                color: Colors.black87,
               ),
-              onPressed: () {
-                isListening ? stopListening() : startListening();
-              },
+              textAlign: TextAlign.left,
             ),
           ),
-          const SizedBox(height: 10),
 
+          const SizedBox(height: 24),
+
+          // Listening status indicator
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+            decoration: BoxDecoration(
+              color: isListening ? Colors.red[50] : Colors.green[50],
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                color: isListening ? Colors.red[300]! : Colors.green[300]!,
+                width: 1,
+              ),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  isListening
+                      ? Icons.fiber_manual_record
+                      : Icons.check_circle_outline,
+                  color: isListening ? Colors.red : Colors.green,
+                  size: 16,
+                ),
+                const SizedBox(width: 6),
+                Text(
+                  isListening ? 'Listening...' : 'Ready to listen',
+                  style: TextStyle(
+                    color: isListening ? Colors.red[700] : Colors.green[700],
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 20),
+
+          // Microphone button with clear labeling
+          Column(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  isListening ? stopListening() : startListening();
+                },
+                child: Container(
+                  width: 80,
+                  height: 80,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: isListening ? Colors.red : Colors.blue,
+                    boxShadow: [
+                      BoxShadow(
+                        color: (isListening ? Colors.red : Colors.blue)
+                            .withOpacity(0.3),
+                        spreadRadius: isListening ? 8 : 4,
+                        blurRadius: 15,
+                        offset: Offset(0, 0),
+                      ),
+                    ],
+                  ),
+                  child: Icon(Icons.mic, size: 40, color: Colors.white),
+                ),
+              ),
+              const SizedBox(height: 12),
+              Text(
+                isListening ? 'Tap to Stop' : 'Tap to Start Speaking',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: isListening ? Colors.red[700] : Colors.blue[700],
+                ),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 20),
+
+          // Live transcription while listening
+          if (isListening && spokenText.isNotEmpty)
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.orange[50],
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.orange[200]!, width: 1),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.hearing, color: Colors.orange[700], size: 16),
+                      const SizedBox(width: 6),
+                      Text(
+                        'What I\'m hearing:',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.orange[700],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    spokenText,
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.orange[800],
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+          // Pulsing animation while listening (without text)
+          if (isListening && spokenText.isEmpty)
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.blue[25],
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.blue[100]!, width: 1),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Text(
+                    'Listening for your voice...',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.blue[700],
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+          const SizedBox(height: 20),
+
+          // Reading result card - always visible when there's content and not listening
           if (!isListening && spokenText.isNotEmpty) _buildReadingResultCard(),
+
+          // Extra padding at bottom to ensure submit button is always visible
+          const SizedBox(height: 40),
         ],
       ),
     );
@@ -489,6 +642,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
+                  overlayColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 12),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
@@ -496,7 +650,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                 ),
                 icon: const Icon(Icons.refresh, size: 20),
                 label: const Text(
-                  "Practice Again",
+                  "Next",
                   style: TextStyle(fontSize: 14),
                 ),
               ),
@@ -704,230 +858,3 @@ class ChatMessage {
 
   ChatMessage({required this.text, required this.isUser});
 }
-
-// class TalkTutor extends StatefulWidget {
-//   const TalkTutor({Key? key}) : super(key: key);
-
-//   @override
-//   State<TalkTutor> createState() => _TalkTutorState();
-// }
-
-// class _TalkTutorState extends State<TalkTutor> {
-//   final stt.SpeechToText speech = stt.SpeechToText();
-//   final FlutterTts tts = FlutterTts();
-
-//   bool isListening = false;
-//   bool botSpeaking = false;
-
-//   String conversationContext = "";
-//   List<Map<String, String>> conversation = [];
-//   String currentBotMessage = "";
-//   String currentUserMessage = "";
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     _startSession();
-//   }
-
-//   Future<void> _startSession() async {
-//     conversation.clear();
-//     conversationContext = "";
-//     _sendGreeting();
-//   }
-
-//   Future<void> _sendGreeting() async {
-//     const botGreeting =
-//         "Hi there! I'm your English tutor. What's your name and what do you like to do?";
-
-//     await _speakBot(botGreeting); // Only speak the final greeting
-//     setState(() {
-//       conversation.add({
-//         "role": "bot",
-//         "message": botGreeting, // Show only the greeting message in UI
-//       });
-//     });
-//   }
-
-//   Future<void> _speakBot(String text) async {
-//     setState(() => botSpeaking = true);
-//     await tts.setLanguage("en-US");
-//     await tts.setSpeechRate(0.5);
-//     await tts.speak(text);
-//     await Future.delayed(const Duration(milliseconds: 500));
-//     setState(() => botSpeaking = false);
-//   }
-
-//   Future<void> _startListening() async {
-//     var available = await speech.initialize();
-//     if (available) {
-//       setState(() => isListening = true);
-//       speech.listen(
-//         onResult: (val) {
-//           setState(
-//             () => currentUserMessage = val.recognizedWords,
-//             //currentUserMessage = "Hi my name is Srivani. I like to play cricket and watch movies.",
-//           );
-//         },
-//       );
-//     }
-//   }
-
-//   void _stopListening() {
-//     speech.stop();
-//     setState(() => isListening = false);
-//     if (currentUserMessage.trim().isNotEmpty) {
-//       conversation.add({"role": "user", "message": currentUserMessage});
-//       conversationContext += "Student: $currentUserMessage\n";
-//       _getBotResponse(currentUserMessage);
-//       currentUserMessage = "";
-//     }
-//   }
-
-//   Future<void> _getBotResponse(String userInput) async {
-//     const conversationPrompt = """
-// You are an encouraging English speaking tutor having a natural conversation.
-
-// Conversation so far:
-// "{context}"
-
-// The student just said: "{user_text}"
-
-// Your response should:
-// 1. If there are grammar errors, gently correct them by saying "You could say..." followed by the correct version
-// 2. If the sentence is grammatically correct, acknowledge it positively
-// 3. If there are better word choices, suggest them naturally: "Another way to say this would be..."
-// 4. Ask a follow-up question to keep the conversation flowing naturally
-// 5. Be conversational and supportive, not lecture-like
-// 6. Keep response under 70 words for natural speech
-// 7. Focus on ONE main correction at a time, don't overwhelm
-// """;
-
-//     final prompt = conversationPrompt
-//         .replaceAll("{context}", conversationContext)
-//         .replaceAll("{user_text}", userInput);
-
-//     try {
-//       final response = await http.post(
-//         Uri.parse("http://localhost:8080/correct"),
-//         headers: {"Content-Type": "application/json"},
-//         body: jsonEncode({"prompt": prompt}),
-//       );
-
-//       if (response.statusCode == 200) {
-//         final data = jsonDecode(response.body);
-//         final botReply = data['response'];
-
-//         setState(() {
-//           conversation.add({"role": "bot", "message": botReply});
-//           conversationContext += "Tutor: $botReply\n";
-//         });
-
-//         _speakBot(botReply);
-//       } else {
-//         setState(() {
-//           conversation.add({
-//             "role": "bot",
-//             "message": "Sorry, I couldn't process that right now.",
-//           });
-//         });
-//       }
-//     } catch (e) {
-//       conversation.add({
-//         "role": "bot",
-//         "message": "Error connecting to server: $e",
-//       });
-//     }
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: Colors.grey[100],
-//       body: SafeArea(
-//         child: Column(
-//           children: [
-//             Padding(
-//               padding: const EdgeInsets.all(16),
-//               child: Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                 crossAxisAlignment: CrossAxisAlignment.center,
-//                 children: [
-//                   const Text(
-//                     "TalkTutor 🤖",
-//                     style: TextStyle(
-//                       fontSize: 26,
-//                       fontWeight: FontWeight.bold,
-//                       color: Colors.deepPurple,
-//                     ),
-//                   ),
-//                   ElevatedButton.icon(
-//                     onPressed: () => Navigator.pop(context),
-//                     icon: const Icon(Icons.stop),
-//                     label: const Text("Stop Session"),
-//                     style: ElevatedButton.styleFrom(
-//                       backgroundColor: Colors.redAccent,
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             Expanded(
-//               child: ListView.builder(
-//                 padding: const EdgeInsets.all(16),
-//                 itemCount: conversation.length,
-//                 itemBuilder: (context, index) {
-//                   final msg = conversation[index];
-//                   final isBot = msg['role'] == "bot";
-//                   return Align(
-//                     alignment: isBot
-//                         ? Alignment.centerLeft
-//                         : Alignment.centerRight,
-//                     child: Container(
-//                       padding: const EdgeInsets.all(12),
-//                       margin: const EdgeInsets.symmetric(vertical: 6),
-//                       decoration: BoxDecoration(
-//                         shape: BoxShape.circle,
-//                         color: isBot ? Colors.blue[100] : Colors.green[100],
-//                       ),
-//                       child: Icon(
-//                         isBot ? Icons.smart_toy : Icons.person,
-//                         size: 30,
-//                         color: isBot ? Colors.blue[800] : Colors.green[800],
-//                       ),
-//                     ),
-//                   );
-//                 },
-//               ),
-//             ),
-//             const SizedBox(height: 10),
-
-//             // Bot Speaking Indicator
-//             if (botSpeaking)
-//               Padding(
-//                 padding: const EdgeInsets.only(bottom: 20),
-//                 child: Icon(Icons.volume_up, size: 40, color: Colors.blue),
-//               ),
-
-//             // Mic Button
-//             Padding(
-//               padding: const EdgeInsets.only(bottom: 20),
-//               child: GestureDetector(
-//                 onTap: () => isListening ? _stopListening() : _startListening(),
-//                 child: CircleAvatar(
-//                   radius: 40,
-//                   backgroundColor: isListening ? Colors.red : Colors.blue,
-//                   child: Icon(
-//                     isListening ? Icons.mic_off : Icons.mic,
-//                     size: 30,
-//                     color: Colors.white,
-//                   ),
-//                 ),
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }

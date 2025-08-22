@@ -1,0 +1,44 @@
+{
+  "poem_title": "The Garden Within",
+  "poem_text": [
+    {
+      "image": {
+        "description": "A seedling sprouting from the earth, with the poem's text overlaid."
+      }
+    },
+    {
+      "stanza": [
+        "There is a garden",
+        "in my heart",
+        "where beauty grows",
+        "in fits and starts."
+      ]
+    },
+    {
+      "stanza": [
+        "Where smiles are petals",
+        "from the flowers",
+        "bestowed by others",
+        "from their bowers."
+      ]
+    },
+    {
+      "stanza": [
+        "Nutritious hope",
+        "reaps seeds to feed",
+        "my spirit",
+        "for its every need."
+      ]
+    },
+    {
+      "stanza": [
+        "With gratitude",
+        "I'll reach my goal",
+        "To touch the island",
+        "of my soul."
+      ]
+    }
+  ],
+  "author": "Celia Berrell"
+}
+
