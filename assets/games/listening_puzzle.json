@@ -1,0 +1,228 @@
+{
+  "basic": [
+    {
+      "id": 1,
+      "sentence": "Hello world",
+      "words": ["world", "Hello"]
+    },
+    {
+      "id": 2,
+      "sentence": "Nice to meet you",
+      "words": ["you", "to", "Nice", "meet"]
+    },
+    {
+      "id": 3,
+      "sentence": "How are you",
+      "words": ["are", "you", "How"]
+    },
+    {
+      "id": 7,
+      "sentence": "The profound impact of technology on modern society is undeniable",
+      "words": [
+        "modern",
+        "of",
+        "on",
+        "society",
+        "is",
+        "profound",
+        "impact",
+        "technology",
+        "undeniable",
+        "The"
+      ]
+    },
+    {
+      "id": 8,
+      "sentence": "Asynchronous programming in Flutter requires careful state management",
+      "words": [
+        "management",
+        "Flutter",
+        "programming",
+        "careful",
+        "in",
+        "Asynchronous",
+        "requires",
+        "state"
+      ]
+    },
+    {
+      "id": 9,
+      "sentence": "The pursuit of knowledge is a journey without end",
+      "words": [
+        "end",
+        "without",
+        "journey",
+        "is",
+        "knowledge",
+        "a",
+        "pursuit",
+        "The",
+        "of"
+      ]
+    }
+  ],
+  "medium": [
+    {
+      "id": 4,
+      "sentence": "The quick brown fox jumps over the lazy dog",
+      "words": [
+        "fox",
+        "lazy",
+        "brown",
+        "over",
+        "the",
+        "jumps",
+        "quick",
+        "dog",
+        "The"
+      ]
+    },
+    {
+      "id": 5,
+      "sentence": "Flutter is a portable UI toolkit",
+      "words": ["toolkit", "is", "Flutter", "UI", "portable", "a"]
+    },
+    {
+      "id": 6,
+      "sentence": "Learning to code is fun and rewarding",
+      "words": ["fun", "Learning", "rewarding", "code", "to", "and", "is"]
+    },
+    {
+      "id": 7,
+      "sentence": "The profound impact of technology on modern society is undeniable",
+      "words": [
+        "modern",
+        "of",
+        "on",
+        "society",
+        "is",
+        "profound",
+        "impact",
+        "technology",
+        "undeniable",
+        "The"
+      ]
+    },
+    {
+      "id": 8,
+      "sentence": "Asynchronous programming in Flutter requires careful state management",
+      "words": [
+        "management",
+        "Flutter",
+        "programming",
+        "careful",
+        "in",
+        "Asynchronous",
+        "requires",
+        "state"
+      ]
+    },
+    {
+      "id": 9,
+      "sentence": "The pursuit of knowledge is a journey without end",
+      "words": [
+        "end",
+        "without",
+        "journey",
+        "is",
+        "knowledge",
+        "a",
+        "pursuit",
+        "The",
+        "of"
+      ]
+    }
+  ],
+  "hard": [
+    {
+      "id": 7,
+      "sentence": "The profound impact of technology on modern society is undeniable",
+      "words": [
+        "modern",
+        "of",
+        "on",
+        "society",
+        "is",
+        "profound",
+        "impact",
+        "technology",
+        "undeniable",
+        "The"
+      ]
+    },
+    {
+      "id": 8,
+      "sentence": "Asynchronous programming in Flutter requires careful state management",
+      "words": [
+        "management",
+        "Flutter",
+        "programming",
+        "careful",
+        "in",
+        "Asynchronous",
+        "requires",
+        "state"
+      ]
+    },
+    {
+      "id": 9,
+      "sentence": "The pursuit of knowledge is a journey without end",
+      "words": [
+        "end",
+        "without",
+        "journey",
+        "is",
+        "knowledge",
+        "a",
+        "pursuit",
+        "The",
+        "of"
+      ]
+    },
+    {
+      "id": 7,
+      "sentence": "The profound impact of technology on modern society is undeniable",
+      "words": [
+        "modern",
+        "of",
+        "on",
+        "society",
+        "is",
+        "profound",
+        "impact",
+        "technology",
+        "undeniable",
+        "The"
+      ]
+    },
+    {
+      "id": 8,
+      "sentence": "Asynchronous programming in Flutter requires careful state management",
+      "words": [
+        "management",
+        "Flutter",
+        "programming",
+        "careful",
+        "in",
+        "Asynchronous",
+        "requires",
+        "state"
+      ]
+    },
+    {
+      "id": 9,
+      "sentence": "The pursuit of knowledge is a journey without end",
+      "words": [
+        "end",
+        "without",
+        "journey",
+        "is",
+        "knowledge",
+        "a",
+        "pursuit",
+        "The",
+        "of"
+      ]
+    }
+  ]
+}

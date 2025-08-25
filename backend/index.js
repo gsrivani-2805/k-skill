@@ -5,13 +5,6 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Middlewares
-const corsOptions = {
-  origin: ['http://localhost:52606','https://k-skill-5agsv8g2i-gsrivanis-projects.vercel.app'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-};
 app.use(cors());
 app.use(express.json());
 

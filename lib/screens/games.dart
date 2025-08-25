@@ -4,6 +4,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
 class GameScreen extends StatelessWidget {
   GameScreen({super.key});
@@ -2822,12 +2823,718 @@ class _PictureSentenceScreenState extends State<PictureSentenceScreen> {
   }
 }
 
-class ListeningPuzzleScreen extends StatelessWidget {
-  const ListeningPuzzleScreen({super.key, required String jsonPath});
+class Question {
+  final int id;
+  final String sentence;
+  final List<String> words;
+
+  Question({required this.id, required this.sentence, required this.words});
+
+  factory Question.fromJson(Map<String, dynamic> json) {
+    return Question(
+      id: json['id'],
+      sentence: json['sentence'],
+      words: List<String>.from(json['words']),
+    );
+  }
+}
+
+class ListeningPuzzleScreen extends StatefulWidget {
+  final String jsonPath;
+
+  const ListeningPuzzleScreen({super.key, required this.jsonPath});
+  @override
+  _ListeningPuzzleScreenState createState() => _ListeningPuzzleScreenState();
+}
+
+class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
+    with TickerProviderStateMixin {
+  FlutterTts flutterTts = FlutterTts();
+  Map<String, List<Question>> gameData = {};
+  List<Question> selectedQuestions = [];
+  int currentQuestionIndex = 0;
+  List<String> arrangedWords = [];
+  List<String> availableWords = [];
+  Question? currentQuestion;
+  bool isLoading = true;
+  bool isPlaying = false;
+  int score = 0;
+  bool showResult = false;
+  bool isCorrect = false;
+  bool gameCompleted = false;
+  late AnimationController _pulseController;
+  late AnimationController _slideController;
+  late Animation<double> _pulseAnimation;
+  late Animation<Offset> _slideAnimation;
+
+  final int basicQuestions = 4;
+  final int mediumQuestions = 4;
+  final int hardQuestions = 2;
+  int get totalQuestions => basicQuestions + mediumQuestions + hardQuestions;
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeAnimations();
+    _initializeTts();
+    _loadGameData();
+  }
+
+  void _initializeAnimations() {
+    _pulseController = AnimationController(
+      duration: Duration(milliseconds: 1000),
+      vsync: this,
+    );
+    _slideController = AnimationController(
+      duration: Duration(milliseconds: 500),
+      vsync: this,
+    );
+
+    _pulseAnimation = Tween<double>(begin: 1.0, end: 1.1).animate(
+      CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
+    );
+
+    _slideAnimation = Tween<Offset>(begin: Offset(0, 1), end: Offset.zero)
+        .animate(
+          CurvedAnimation(parent: _slideController, curve: Curves.elasticOut),
+        );
+
+    _pulseController.repeat(reverse: true);
+  }
+
+  void _initializeTts() async {
+    await flutterTts.setLanguage("en-US");
+    await flutterTts.setSpeechRate(0.5);
+    await flutterTts.setVolume(1.0);
+    await flutterTts.setPitch(1.0);
+  }
+
+  void _loadGameData() async {
+    try {
+      // Load JSON data from assets file
+      final String jsonString = await rootBundle.loadString(widget.jsonPath);
+      final Map<String, dynamic> jsonData = json.decode(jsonString);
+
+      gameData = {
+        'basic': (jsonData['basic'] as List)
+            .map((item) => Question.fromJson(item))
+            .toList(),
+        'medium': (jsonData['medium'] as List)
+            .map((item) => Question.fromJson(item))
+            .toList(),
+        'hard': (jsonData['hard'] as List)
+            .map((item) => Question.fromJson(item))
+            .toList(),
+      };
+
+      _selectRandomQuestions();
+      _loadQuestion();
+      setState(() {
+        isLoading = false;
+      });
+      _slideController.forward();
+    } catch (e) {
+      print('Error loading game data: $e');
+      setState(() {
+        isLoading = false;
+      });
+    }
+  }
+
+  void _selectRandomQuestions() {
+    selectedQuestions.clear();
+
+    List<Question> basicList = List.from(gameData['basic']!);
+    List<Question> mediumList = List.from(gameData['medium']!);
+    List<Question> hardList = List.from(gameData['hard']!);
+
+    basicList.shuffle();
+    mediumList.shuffle();
+    hardList.shuffle();
+
+    selectedQuestions.addAll(basicList.take(basicQuestions));
+    selectedQuestions.addAll(mediumList.take(mediumQuestions));
+    selectedQuestions.addAll(hardList.take(hardQuestions));
+
+    currentQuestionIndex = 0;
+  }
+
+  void _loadQuestion() {
+    if (selectedQuestions.isNotEmpty &&
+        currentQuestionIndex < selectedQuestions.length) {
+      currentQuestion = selectedQuestions[currentQuestionIndex];
+      availableWords = List.from(currentQuestion!.words);
+      arrangedWords.clear();
+      showResult = false;
+      gameCompleted = false;
+    }
+  }
+
+  String _getCurrentDifficulty() {
+    if (currentQuestionIndex < basicQuestions) {
+      return 'basic';
+    } else if (currentQuestionIndex < basicQuestions + mediumQuestions) {
+      return 'medium';
+    } else {
+      return 'hard';
+    }
+  }
+
+  void _playAudio() async {
+    if (currentQuestion != null && !isPlaying) {
+      setState(() {
+        isPlaying = true;
+      });
+      await flutterTts.speak(currentQuestion!.sentence);
+      await Future.delayed(Duration(seconds: 2));
+      setState(() {
+        isPlaying = false;
+      });
+    }
+  }
+
+  void _addWord(String word) {
+    setState(() {
+      arrangedWords.add(word);
+      availableWords.remove(word);
+    });
+  }
+
+  void _removeWord(String word) {
+    setState(() {
+      arrangedWords.remove(word);
+      availableWords.add(word);
+    });
+  }
+
+  void _checkAnswer() {
+    String userSentence = arrangedWords.join(' ');
+    isCorrect =
+        userSentence.toLowerCase() == currentQuestion!.sentence.toLowerCase();
+
+    String currentDifficulty = _getCurrentDifficulty();
+    if (isCorrect) {
+      score += currentDifficulty == 'basic'
+          ? 10
+          : currentDifficulty == 'medium'
+          ? 20
+          : 30;
+    }
+
+    setState(() {
+      showResult = true;
+    });
+
+    // Auto advance to next question after 2 seconds
+    Future.delayed(Duration(seconds: 3), () {
+      _nextQuestion();
+    });
+  }
+
+  void _nextQuestion() {
+    setState(() {
+      showResult = false;
+      currentQuestionIndex++;
+
+      if (currentQuestionIndex >= selectedQuestions.length) {
+        gameCompleted = true;
+      } else {
+        _loadQuestion();
+      }
+    });
+  }
+
+  void _resetGame() {
+    setState(() {
+      score = 0;
+      currentQuestionIndex = 0;
+      showResult = false;
+      gameCompleted = false;
+      _selectRandomQuestions();
+      _loadQuestion();
+    });
+  }
+
+  Widget _buildProgressBar() {
+    double progress = (currentQuestionIndex) / totalQuestions;
+
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Progress',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey.shade700,
+                ),
+              ),
+              Text(
+                '${currentQuestionIndex}/${totalQuestions}',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 8),
+          Container(
+            height: 8,
+            decoration: BoxDecoration(
+              color: Colors.grey.shade300,
+              borderRadius: BorderRadius.circular(4),
+            ),
+            child: Stack(
+              children: [
+                // Background segments
+                Row(
+                  children: [
+                    Expanded(
+                      flex: basicQuestions,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.green.shade200,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(4),
+                            bottomLeft: Radius.circular(4),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: mediumQuestions,
+                      child: Container(color: Colors.orange.shade200),
+                    ),
+                    Expanded(
+                      flex: hardQuestions,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.red.shade200,
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(4),
+                            bottomRight: Radius.circular(4),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                // Progress indicator
+                FractionallySizedBox(
+                  widthFactor: progress,
+                  child: Container(
+                    height: 8,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 4),
+          Row(
+            children: [
+              _buildLegendItem(Colors.green, 'Basic (${basicQuestions})'),
+              SizedBox(width: 16),
+              _buildLegendItem(Colors.orange, 'Medium (${mediumQuestions})'),
+              SizedBox(width: 16),
+              _buildLegendItem(Colors.red, 'Hard (${hardQuestions})'),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildLegendItem(Color color, String text) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          width: 12,
+          height: 12,
+          decoration: BoxDecoration(
+            color: Colors.amber,
+            borderRadius: BorderRadius.circular(2),
+          ),
+        ),
+        SizedBox(width: 4),
+        Text(text, style: TextStyle(fontSize: 10, color: Colors.grey.shade600)),
+      ],
+    );
+  }
+
+  Widget _buildAudioButton() {
+    return GestureDetector(
+      onTap: _playAudio,
+      child: AnimatedBuilder(
+        animation: _pulseAnimation,
+        builder: (context, child) {
+          return Transform.scale(
+            scale: isPlaying ? _pulseAnimation.value : 1.0,
+            child: Container(
+              width: 70,
+              height: 70,
+              decoration: BoxDecoration(
+                color: isPlaying ? Colors.orange : Colors.blue,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blue.shade300,
+                    blurRadius: 15,
+                    spreadRadius: isPlaying ? 5 : 2,
+                  ),
+                ],
+              ),
+              child: Icon(
+                isPlaying ? Icons.volume_up : Icons.play_arrow,
+                color: Colors.white,
+                size: 40,
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _buildWordChip(String word, bool isInArranged) {
+    return GestureDetector(
+      onTap: () {
+        if (isInArranged) {
+          _removeWord(word);
+        } else {
+          _addWord(word);
+        }
+      },
+      child: AnimatedContainer(
+        duration: Duration(milliseconds: 200),
+        margin: EdgeInsets.all(4),
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        decoration: BoxDecoration(
+          color: isInArranged ? Colors.green.shade100 : Colors.grey.shade100,
+          border: Border.all(
+            color: isInArranged ? Colors.green : Colors.grey.shade400,
+            width: 2,
+          ),
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 4,
+              offset: Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Text(
+          word,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: isInArranged ? Colors.green.shade800 : Colors.black87,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildArrangedSentence() {
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.all(16),
+      margin: EdgeInsets.symmetric(vertical: 10),
+      decoration: BoxDecoration(
+        color: Colors.blue.shade50,
+        border: Border.all(color: Colors.blue.shade200, width: 2),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: arrangedWords.isEmpty
+          ? Text(
+              'Drag words here to form the sentence...',
+              style: TextStyle(
+                color: Colors.grey.shade600,
+                fontSize: 16,
+                fontStyle: FontStyle.italic,
+              ),
+              textAlign: TextAlign.center,
+            )
+          : Wrap(
+              children: arrangedWords
+                  .map((word) => _buildWordChip(word, true))
+                  .toList(),
+            ),
+    );
+  }
+
+  Widget _buildAvailableWords() {
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.grey.shade50,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.grey.shade300),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Available Words:',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade700,
+            ),
+          ),
+          SizedBox(height: 8),
+          Wrap(
+            children: availableWords
+                .map((word) => _buildWordChip(word, false))
+                .toList(),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildResultOverlay() {
+    if (gameCompleted) {
+      return AnimatedContainer(
+        duration: Duration(milliseconds: 500),
+        color: Colors.black.withOpacity(0.8),
+        child: Center(
+          child: Container(
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(30),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 20,
+                  spreadRadius: 5,
+                ),
+              ],
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.celebration, size: 80, color: Colors.amber),
+                SizedBox(height: 20),
+                Text(
+                  'Game Completed!',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Final Score: $score',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                  ),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: _resetGame,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Text(
+                    'Play Again',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 500),
+      color: showResult ? Colors.black.withOpacity(0.7) : Colors.transparent,
+      child: showResult
+          ? Center(
+              child: Container(
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(30),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 20,
+                      spreadRadius: 5,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      isCorrect ? Icons.check_circle : Icons.cancel,
+                      size: 80,
+                      color: isCorrect ? Colors.green : Colors.red,
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      isCorrect ? 'Excellent!' : 'Try Again!',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: isCorrect ? Colors.green : Colors.red,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Correct Answer:',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.grey.shade600,
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      currentQuestion?.sentence ?? '',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            )
+          : SizedBox.shrink(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    return _buildPlaceholder(context, "Listening Puzzle");
+    if (isLoading) {
+      return Scaffold(body: Center(child: CircularProgressIndicator()));
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Listening Puzzle',
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+        backgroundColor: Colors.green,
+      ),
+      body: Stack(
+        children: [
+          SlideTransition(
+            position: _slideAnimation,
+            child: SingleChildScrollView(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  _buildProgressBar(),
+                  SizedBox(height: 20),
+                  Text(
+                    'Listen to the audio and arrange the words',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey.shade700,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 30),
+                  _buildAudioButton(),
+                  SizedBox(height: 30),
+                  _buildArrangedSentence(),
+                  SizedBox(height: 20),
+                  _buildAvailableWords(),
+                  SizedBox(height: 30),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: arrangedWords.isNotEmpty && !gameCompleted
+                              ? _checkAnswer
+                              : null,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.green,
+                            padding: EdgeInsets.symmetric(vertical: 15),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: Text(
+                            'Check Answer',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      ElevatedButton(
+                        onPressed: _resetGame,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey,
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 15,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        child: Icon(Icons.refresh, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          _buildResultOverlay(),
+        ],
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _pulseController.dispose();
+    _slideController.dispose();
+    flutterTts.stop();
+    super.dispose();
   }
 }
 
@@ -4121,18 +4828,18 @@ class _StoryCompletionScreenState extends State<StoryCompletionScreen> {
 // ===== Helper Function for Placeholder UI =====
 //
 
-Widget _buildPlaceholder(BuildContext context, String gameName) {
-  return Scaffold(
-    appBar: AppBar(
-      title: Text(gameName),
-      backgroundColor: Colors.deepPurple,
-      foregroundColor: Colors.white,
-    ),
-    body: Center(
-      child: Text(
-        "$gameName Coming Soon...",
-        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-      ),
-    ),
-  );
-}
+// Widget _buildPlaceholder(BuildContext context, String gameName) {
+//   return Scaffold(
+//     appBar: AppBar(
+//       title: Text(gameName),
+//       backgroundColor: Colors.deepPurple,
+//       foregroundColor: Colors.white,
+//     ),
+//     body: Center(
+//       child: Text(
+//         "$gameName Coming Soon...",
+//         style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+//       ),
+//     ),
+//   );
+// }

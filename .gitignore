@@ -20,3 +20,5 @@ lib/config/api_config.dart
 Thumbs.db
 *.log
 *.lock
+
+.vercel
