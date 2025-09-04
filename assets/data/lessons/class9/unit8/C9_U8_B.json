@@ -27,20 +27,16 @@
       ]
     },
     {
-      "stanza": [
-        "Home again, I see him drinking weak tea,",
-        "Eating a stale chapati, reading a book.",
-        "He goes into the toilet to contemplate",
-        "Man’s estrangement from a man-made world."
-      ]
-    },
-    {
       "image": {
         "description": "An illustration of an elderly man lying in bed, looking thoughtful, with a radio on the bedside table."
       }
     },
     {
       "stanza": [
+        "Home again, I see him drinking weak tea,",
+        "Eating a stale chapati, reading a book.",
+        "He goes into the toilet to contemplate",
+        "Man’s estrangement from a man-made world.",
         "Coming out he trembles at the sink,",
         "The cold water running over his brown hands,",
         "A few droplets cling to the greying hairs on his wrists.",
@@ -54,4 +50,3 @@
   ],
   "author": "Dilip Chitre"
 }
-

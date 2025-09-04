@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:K_Skill/screens/widgets/play.dart';
 import 'package:K_Skill/screens/widgets/poem.dart';
 import 'package:K_Skill/screens/widgets/prose.dart';
+import 'package:K_Skill/screens/widgets/letter.dart'; // Add this import
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -458,6 +459,8 @@ class _AcademicsScreenState extends State<AcademicsScreen>
         return '🎵';
       case 'play':
         return '🎭';
+      case 'letter':
+        return '✉️';
       case 'prose':
       default:
         return '📝';
@@ -470,6 +473,8 @@ class _AcademicsScreenState extends State<AcademicsScreen>
         return const Color(0xFF8B5CF6);
       case 'play':
         return const Color(0xFFF59E0B);
+      case 'letter':
+        return const Color(0xFF10B981);
       case 'prose':
       default:
         return const Color(0xFF3B82F6);
@@ -858,6 +863,8 @@ class UnitDetailScreen extends StatelessWidget {
         return '🎵';
       case 'play':
         return '🎭';
+      case 'letter':
+        return '✉️';
       case 'prose':
       default:
         return '📝';
@@ -870,6 +877,8 @@ class UnitDetailScreen extends StatelessWidget {
         return const Color(0xFF8B5CF6);
       case 'play':
         return const Color(0xFFF59E0B);
+      case 'letter':
+        return const Color(0xFF10B981);
       case 'prose':
       default:
         return const Color(0xFF3B82F6);
@@ -916,6 +925,18 @@ class UnitDetailScreen extends StatelessWidget {
               filePath: filePath,
               title: title,
               lessonData: lessonData,
+            ),
+          ),
+        );
+        break;
+      case 'letter':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => LetterScreen(
+              filePath: filePath,
+              title: title,
+              letterData: lessonData,
             ),
           ),
         );

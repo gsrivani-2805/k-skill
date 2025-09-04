@@ -1,0 +1,219 @@
+{
+  "reading_comprehensions": [
+    {
+      "id": 1,
+      "title": "The Busy Honeybee",
+      "difficulty": "easy",
+      "category": "science",
+      "paragraph": "Honeybees are important insects that live in colonies. They help plants grow by carrying pollen from one flower to another. Honeybees also make honey, which people use as food. A colony has a queen bee, worker bees, and drones, each with a special role.",
+      "questions": [
+        {
+          "question": "What is the main role of honeybees in nature?",
+          "options": [
+            "To make nests",
+            "To carry pollen between flowers",
+            "To protect the hive",
+            "To produce wax"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "Which type of bee lays eggs?",
+          "options": [
+            "Worker bee",
+            "Drone bee",
+            "Queen bee",
+            "All of them"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "What product do honeybees make that humans eat?",
+          "options": [
+            "Milk",
+            "Honey",
+            "Sugar",
+            "Juice"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Rainforest Adventure",
+      "difficulty": "easy",
+      "category": "nature",
+      "paragraph": "Rainforests are thick forests with many tall trees and lots of rain. They are home to millions of different animals and plants. Many colorful birds like parrots live in the trees. Monkeys swing from branch to branch looking for fruit to eat. The rainforest floor is dark because the thick leaves above block most sunlight.",
+      "questions": [
+        {
+          "question": "What makes the rainforest floor dark?",
+          "options": [
+            "It rains too much",
+            "There are no windows",
+            "Thick leaves block the sunlight",
+            "Animals hide the light"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "What do monkeys in the rainforest look for?",
+          "options": [
+            "Water to drink",
+            "Places to sleep",
+            "Fruit to eat",
+            "Other monkeys"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "Which birds are mentioned as living in rainforest trees?",
+          "options": [
+            "Eagles",
+            "Parrots",
+            "Owls",
+            "Crows"
+          ],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "My Pet Dog Max",
+      "difficulty": "easy",
+      "category": "animals",
+      "paragraph": "Max is my golden retriever dog. He has soft, yellow fur and brown eyes. Every morning, Max wakes me up by licking my face. He loves to play fetch with his red ball in the backyard. Max is very friendly and always wags his tail when he sees visitors. At night, he sleeps on a soft bed next to mine.",
+      "questions": [
+        {
+          "question": "What color is Max's fur?",
+          "options": [
+            "Brown",
+            "Black",
+            "Yellow",
+            "White"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "How does Max wake up his owner?",
+          "options": [
+            "By barking loudly",
+            "By licking their face",
+            "By jumping on the bed",
+            "By bringing toys"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "What does Max do when he sees visitors?",
+          "options": [
+            "Hides under the bed",
+            "Runs away",
+            "Wags his tail",
+            "Goes to sleep"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "The School Library",
+      "difficulty": "medium",
+      "category": "school",
+      "paragraph": "Our school library is a quiet place where students come to read and study. Mrs. Johnson, the librarian, helps us find books we need. The library has different sections: fiction books with made-up stories, non-fiction books with real facts, and a computer section for research. Students must whisper and return books on time. The library also has comfortable reading corners with soft chairs and good lighting.",
+      "questions": [
+        {
+          "question": "Who helps students find books in the library?",
+          "options": [
+            "The principal",
+            "Mrs. Johnson",
+            "The teacher",
+            "Other students"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "What type of books contain real facts?",
+          "options": [
+            "Fiction books",
+            "Story books",
+            "Non-fiction books",
+            "Picture books"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "What must students do with their voices in the library?",
+          "options": [
+            "Speak loudly",
+            "Whisper",
+            "Sing songs",
+            "Stay silent"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "What makes the reading corners comfortable?",
+          "options": [
+            "Loud music",
+            "Bright colors",
+            "Soft chairs and good lighting",
+            "Many windows"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "The Water Cycle",
+      "difficulty": "medium",
+      "category": "science",
+      "paragraph": "The water cycle is how water moves around our planet. First, the sun heats water in oceans, rivers, and lakes, turning it into invisible water vapor that rises into the sky. This process is called evaporation. High in the sky, the water vapor cools down and forms tiny droplets that create clouds. This is called condensation. When the clouds become heavy with water, the droplets fall back to Earth as rain or snow. This is called precipitation. The water then flows back to rivers and oceans, and the cycle starts again.",
+      "questions": [
+        {
+          "question": "What causes water to turn into water vapor?",
+          "options": [
+            "Wind blowing hard",
+            "The sun heating water",
+            "Fish swimming",
+            "Boats moving"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "What is the process called when water vapor turns into clouds?",
+          "options": [
+            "Evaporation",
+            "Precipitation",
+            "Condensation",
+            "Collection"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "What happens when clouds become heavy with water?",
+          "options": [
+            "They disappear",
+            "They turn purple",
+            "Water falls as rain or snow",
+            "They move faster"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "Where does the water go after it falls as rain?",
+          "options": [
+            "It stays in one place",
+            "It flows back to rivers and oceans",
+            "It goes underground forever",
+            "It turns into ice"
+          ],
+          "answer": 1
+        }
+      ]
+    }
+  ]
+}

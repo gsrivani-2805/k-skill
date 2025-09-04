@@ -5,9 +5,10 @@
     {
       "image": {
         "asset_path": "148.jpeg",
-        "description": "A collage of three pictures showing popular tourist destinations: a Hindu temple, a church, and the Charminar. Below the images are the questions: \n1. What are these pictures about?\n2. Have you ever visited such places?\n3. In what way are these places worth visiting?"
+        "description": "A collage of three pictures showing popular tourist destinations: a Hindu temple, a church, and the Charminar."
       }
     },
+    "1. What are these pictures about?\n2. Have you ever visited such places?\n3. In what way are these places worth visiting?",
     "Oral Discourse: Description - Describe a place that you have visited recently.",
     "The Accidental Tourist",
     "They say that the world today is a small place because travel has become easy, but not everybody finds it easy to travel. Here, the author reflects humorously his experience as a traveller.",
@@ -37,11 +38,11 @@
     "Now on planes when the food is delivered, my wife says: “Take the lids off the food for Daddy\" or \"Put your hoods up, children. Daddy's about to cut his meat.\" Of course, this is only when I am flying with my family. When I am on my own, I don't eat, drink or lean over to tie my shoelaces, and never put a pen anywhere near my mouth. I just sit very, very quietly, sometimes on my hands to keep them from flying out unexpectedly and causing liquid mischief. It's not much fun, but it does at least cut down on the laundry bills.",
     "I never did get my frequent flyer miles, by the way. I never do. I couldn't find the card in time. This has become a real frustration for me. Everyone I know – everyone – is forever flying off to Bali first class with their air miles. I never get to collect anything. I must fly 100,000 miles a year, yet I have accumulated only about 212 air miles divided between twenty-three airlines.",
     "This is because either I forget to ask for the air miles when I check in, or I remember to ask for them, but the air line then manages not to record them, or the check-in clerk informs me that I am not entitled to them. In January, on a flight to Australia – a flight for which I was going to get about a million air miles – the clerk shook her head when I presented my card and told me I was not entitled to any.",
-    "“Why?”",
-    "“The ticket is in the name of B. Bryson and the card is in the name of W. Bryson.”",
+    "Why?",
+    "'The ticket is in the name of B. Bryson and the card is in the name of W. Bryson.'",
     "I explained to her the close and venerable relationship between Bill and William, but she wouldn't have it.",
     "So I didn't get my air miles, and I won't be flying to Bali first class just yet. Perhaps just as well, really, I could never go that long without eating.",
-    "- Bill Bryson",
+    "- by Bill Bryson",
     "About the author",
     {
       "image": {
@@ -50,7 +51,5 @@
       }
     },
     "William Mc Guire \"Bill\" Bryson, (born on December 8, 1951) is a best-selling American author of humorous books on travel, as well as books on the English language and on science. Born an American, he was a resident of Britain for most of his adult life before returning to the US in 1995. In 2003 Bryson moved back to Britain. Bryson shot to prominence in the United Kingdom with the publication of Notes From A Small Island (1995), An Exploration of Britain, for which he made an accompanying television series. He received widespread recognition again with the publication of A Short History of Nearly Everything (2003), which popularised scientific questions for a general audience."
-  ],
-  "author": "Free distribution by T.S. Government 2021-22"
+  ]
 }
-

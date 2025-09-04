@@ -1,9 +1,9 @@
 {
   "lesson_title": "A Letter to a Friend",
+  "sender_address": "Hyderabad.",
+  "date": "12-11-2012.",
+  "salutation": "Dear Suresh,",
   "content": [
-    "Hyderabad.",
-    "12-11-2012.",
-    "Dear Suresh,",
     "This is Ramesh. I apologise for not meeting you during your visit to Hyderabad last week. Unfortunately, I had a meeting in my office. I remember how we enjoyed our childhood days in Manikonda village. Every day we played together in our garden. Our family was very big. There were twelve members in our family. I remember how we played in the moonlight. Our grandma used to give us fruits and biscuits. Our grandpa used to tell us fairy tales, about the princes, warriors and the village boys.......",
     "Now I am working at Microsoft, a software company, Hyderabad, as a Computer Programmer. I am married and we have a child. My wife works at Dell, Hyderabad as a System Analyst. You know city life is quite busy. We start in the morning; leave our child at the baby care centre and come back in the evening with faded faces. We hardly find time to sit together. How disgusting! We work with computers, think like computers and live like computers. We have forgotten our family.",
     "I remember how we played gilli-danda, hide and seek and kabaddi. We went for swimming in our local tank every Sunday. Here we live in an apartment where there is no room to play. Our flat is our world, just like a well for a frog! (The world remains unheeded.)",
@@ -12,9 +12,8 @@
     "Sometimes I think of our childhood days. I think of grandparents, uncles, brothers, sisters .......",
     "We missed them. We missed the joy of the family. We missed their company. We are missing many things in this busy life.",
     "Suresh, I don't know where those gardens have gone, those fairy tales, those fruits, those words of love and affection......... We have lost our real life in this unreal world.",
-    "Anyhow I am happy that I have found time to write to you. Please come to me. Let's remember our childhood days of joy.",
-    "Your loving friend,",
-    "Ramesh."
-  ]
+    "Anyhow I am happy that I have found time to write to you. Please come to me. Let's remember our childhood days of joy."
+  ],
+  "complimentary_close": "Your loving friend,",
+  "signature": "Ramesh."
 }
-

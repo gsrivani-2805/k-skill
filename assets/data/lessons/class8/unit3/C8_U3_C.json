@@ -2,11 +2,6 @@
   "poem_title": "The Garden Within",
   "poem_text": [
     {
-      "image": {
-        "description": "A seedling sprouting from the earth, with the poem's text overlaid."
-      }
-    },
-    {
       "stanza": [
         "There is a garden",
         "in my heart",
@@ -21,6 +16,11 @@
         "bestowed by others",
         "from their bowers."
       ]
+    },
+    {
+      "image": {
+        "description": "A seedling sprouting from the earth, with the poem's text overlaid."
+      }
     },
     {
       "stanza": [
@@ -41,4 +41,3 @@
   ],
   "author": "Celia Berrell"
 }
-

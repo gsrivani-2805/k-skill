@@ -142,6 +142,18 @@ class _PoemScreenState extends State<PoemScreen>
     final poemText = poemContent!['poem_text'] as List<dynamic>? ?? [];
     final author = poemContent!['author'] as String? ?? '';
 
+    // Pre-calculate stanza numbers for correct numbering
+    int stanzaCounter = 0;
+    final stanzaNumbers = <int, int>{};
+    
+    for (int i = 0; i < poemText.length; i++) {
+      final item = poemText[i];
+      if (item is Map<String, dynamic> && item.containsKey('stanza')) {
+        stanzaCounter++;
+        stanzaNumbers[i] = stanzaCounter;
+      }
+    }
+
     return FadeTransition(
       opacity: _fadeAnimation,
       child: SingleChildScrollView(
@@ -174,12 +186,6 @@ class _PoemScreenState extends State<PoemScreen>
               ),
               child: Column(
                 children: [
-                  Icon(
-                    Icons.auto_stories,
-                    color: Colors.purple[700],
-                    size: 32,
-                  ),
-                  const SizedBox(height: 12),
                   Text(
                     poemTitle,
                     style: TextStyle(
@@ -216,7 +222,7 @@ class _PoemScreenState extends State<PoemScreen>
                 margin: EdgeInsets.only(
                   bottom: index < poemText.length - 1 ? 20.0 : 0,
                 ),
-                child: _buildPoemItem(item, index),
+                child: _buildPoemItem(item, index, stanzaNumbers),
               );
             }).toList(),
 
@@ -241,10 +247,11 @@ class _PoemScreenState extends State<PoemScreen>
     );
   }
 
-  Widget _buildPoemItem(dynamic item, int index) {
+  Widget _buildPoemItem(dynamic item, int index, Map<int, int> stanzaNumbers) {
     if (item is Map<String, dynamic>) {
       if (item.containsKey('stanza')) {
-        return _buildStanza(item['stanza'] as List<dynamic>, index);
+        final stanzaNumber = stanzaNumbers[index] ?? 1;
+        return _buildStanza(item['stanza'] as List<dynamic>, stanzaNumber);
       } else if (item.containsKey('image')) {
         return _buildPoemImage(item['image']);
       }
@@ -252,7 +259,7 @@ class _PoemScreenState extends State<PoemScreen>
     return const SizedBox.shrink();
   }
 
-  Widget _buildStanza(List<dynamic> stanzaLines, int stanzaIndex) {
+  Widget _buildStanza(List<dynamic> stanzaLines, int stanzaNumber) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(20),
@@ -276,40 +283,39 @@ class _PoemScreenState extends State<PoemScreen>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Stanza number indicator
-          if (stanzaIndex < 7) // Only show for actual stanzas, not single lines
-            Row(
-              children: [
-                Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    color: Colors.purple[100],
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                  child: Center(
-                    child: Text(
-                      '${stanzaIndex + 1}',
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.purple[700],
-                      ),
+          Row(
+            children: [
+              Container(
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(
+                  color: Colors.purple[100],
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: Center(
+                  child: Text(
+                    '$stanzaNumber',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.purple[700],
                     ),
                   ),
                 ),
-                const SizedBox(width: 8),
-                Text(
-                  'Stanza ${stanzaIndex + 1}',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.purple[600],
-                  ),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                'Stanza $stanzaNumber',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.purple[600],
                 ),
-              ],
-            ),
+              ),
+            ],
+          ),
           
-          if (stanzaIndex < 7) const SizedBox(height: 16),
+          const SizedBox(height: 16),
           
           // Poem lines
           ...stanzaLines.asMap().entries.map((lineEntry) {
@@ -550,6 +556,4 @@ class _PoemScreenState extends State<PoemScreen>
       item is Map<String, dynamic> && item.containsKey('stanza')
     ).length;
   }
-
-
 }

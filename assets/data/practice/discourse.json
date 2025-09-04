@@ -1,0 +1,402 @@
+{
+  "discourseTypes": [
+    {
+      "id": "letter",
+      "title": "Letter Writing",
+      "subtitle": "Formal & Informal Letters",
+      "icon": "mail_outline",
+      "color": "0xFF2196F3",
+      "completedCount": 5,
+      "totalCount": 12,
+      "description": "Master the art of formal and informal letter writing with proper structure, tone, and formatting guidelines.",
+      "keyComponents": [
+        "Sender's address and date",
+        "Recipient's address (formal letters)",
+        "Appropriate salutation",
+        "Clear and concise body paragraphs",
+        "Professional closing and signature",
+        "Proper tone and language register"
+      ],
+      "rules": [
+        "Always include your address at the top right",
+        "Date should be written below your address",
+        "Use formal language for business letters",
+        "Keep paragraphs short and focused",
+        "End with appropriate closing (Yours sincerely/faithfully)",
+        "Maintain consistent formatting throughout"
+      ],
+      "practiceItems": [
+        {
+          "id": "letter_1",
+          "title": "Job Application Letter",
+          "difficulty": "Beginner",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a formal letter applying for a part-time job at a local bookstore. Include your qualifications, availability, and enthusiasm for the position.",
+          "guidelines": [
+            "Use formal business letter format",
+            "Address to 'The Manager'",
+            "Mention specific qualifications",
+            "Include your availability",
+            "Show enthusiasm for reading and customer service"
+          ],
+          "template": "Your Address\nCity, State ZIP Code\nDate\n\nThe Manager\nBookstore Name\nAddress\n\nDear Sir/Madam,\n\nI am writing to apply for...\n\nYours faithfully,\n[Your name]"
+        },
+        {
+          "id": "letter_2", 
+          "title": "Complaint Letter to School",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a formal complaint letter to your school principal about inadequate library facilities.",
+          "guidelines": [
+            "State the problem clearly",
+            "Provide specific examples",
+            "Suggest possible solutions",
+            "Maintain respectful tone",
+            "Request specific action"
+          ],
+          "template": "Your Address\nDate\n\nThe Principal\nSchool Name\nAddress\n\nDear Sir/Madam,\n\nI am writing to bring to your attention...\n\nYours faithfully,\n[Your name]"
+        },
+        {
+          "id": "letter_3",
+          "title": "Informal Letter to Friend",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an informal letter to your friend describing your recent school trip to a historical monument.",
+          "guidelines": [
+            "Use casual, friendly tone",
+            "Share personal experiences",
+            "Include descriptive details",
+            "Ask about your friend's activities",
+            "Use contractions and colloquial language"
+          ],
+          "template": "Your Address\nDate\n\nDear [Friend's name],\n\nHow are you? I hope you're doing well...\n\nWith love,\n[Your name]"
+        }
+      ]
+    },
+    {
+      "id": "email",
+      "title": "Email Writing",
+      "subtitle": "Professional & Personal",
+      "icon": "email_outlined",
+      "color": "0xFF4CAF50",
+      "completedCount": 3,
+      "totalCount": 10,
+      "description": "Learn to write effective professional and personal emails with proper etiquette and formatting.",
+      "keyComponents": [
+        "Clear and specific subject line",
+        "Professional greeting",
+        "Concise and organized body",
+        "Clear call to action",
+        "Professional signature",
+        "Appropriate tone for audience"
+      ],
+      "rules": [
+        "Always include a clear subject line",
+        "Use professional greetings (Dear/Hello)",
+        "Keep emails concise and to the point",
+        "Use bullet points for multiple items",
+        "Proofread before sending",
+        "Include a professional email signature"
+      ],
+      "practiceItems": [
+        {
+          "id": "email_1",
+          "title": "Professional Email to Teacher",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to your teacher requesting an extension for your assignment due to illness.",
+          "guidelines": [
+            "Use clear subject line",
+            "Explain the situation honestly",
+            "Provide supporting details",
+            "Request specific extension period",
+            "Show commitment to completing work"
+          ],
+          "template": "Subject: Assignment Extension Request - [Your Name]\n\nDear [Teacher's Name],\n\nI hope this email finds you well...\n\nBest regards,\n[Your Name]"
+        },
+        {
+          "id": "email_2",
+          "title": "Email Inquiry to Company",
+          "difficulty": "Intermediate", 
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write a professional email inquiring about internship opportunities at a technology company.",
+          "guidelines": [
+            "Research the company briefly",
+            "Mention your field of study",
+            "Highlight relevant skills",
+            "Request information about process",
+            "Attach resume (mention in email)"
+          ],
+          "template": "Subject: Internship Inquiry - [Your Field] Student\n\nDear Hiring Manager,\n\nI am writing to inquire about...\n\nSincerely,\n[Your Name]"
+        }
+      ]
+    },
+    {
+      "id": "diary",
+      "title": "Diary Entry",
+      "subtitle": "Personal Reflections",
+      "icon": "book_outlined",
+      "color": "0xFF009688",
+      "completedCount": 4,
+      "totalCount": 8,
+      "description": "Express your thoughts, feelings, and experiences through personal diary writing with authentic voice and reflection.",
+      "keyComponents": [
+        "Date and time notation",
+        "Personal and authentic voice",
+        "Emotional expression and reflection",
+        "Descriptive details of events",
+        "Inner thoughts and feelings",
+        "Personal growth insights"
+      ],
+      "rules": [
+        "Always start with date and sometimes time",
+        "Write in first person narrative",
+        "Be honest about feelings and thoughts",
+        "Include sensory details to make entries vivid",
+        "Reflect on experiences and lessons learned",
+        "Maintain privacy and personal voice"
+      ],
+      "practiceItems": [
+        {
+          "id": "diary_1",
+          "title": "First Day at New School",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write a diary entry about your first day at a new school, including your feelings, observations, and experiences.",
+          "guidelines": [
+            "Describe your emotions before and during the day",
+            "Include details about new environment",
+            "Mention interactions with teachers and students",
+            "Reflect on challenges and positive moments",
+            "Express hopes or concerns for the future"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday was my first day at...\n\nI'm feeling...\n\nUntil tomorrow,\n[Your name]"
+        },
+        {
+          "id": "diary_2",
+          "title": "Achievement and Success",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins", 
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about a recent achievement or success you experienced, reflecting on the journey and what you learned.",
+          "guidelines": [
+            "Describe the achievement in detail",
+            "Explain the effort and process behind it",
+            "Express your emotions about the success",
+            "Reflect on challenges overcome",
+            "Consider what this means for your future goals"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nI can't believe it - I finally...\n\nLooking back on the journey...\n\nWith gratitude,\n[Your name]"
+        },
+        {
+          "id": "diary_3",
+          "title": "Difficult Decision",
+          "difficulty": "Advanced",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about a difficult decision you had to make recently, exploring your thought process and feelings.",
+          "guidelines": [
+            "Explain the situation and options available",
+            "Describe your decision-making process",
+            "Express your doubts, fears, and hopes",
+            "Consider the perspectives of others involved",
+            "Reflect on the values that guided your choice"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nI've been wrestling with a decision...\n\nAfter much thought...\n\nHoping for the best,\n[Your name]"
+        }
+      ]
+    },
+    {
+      "id": "essay",
+      "title": "Essay Writing", 
+      "subtitle": "Academic & Opinion Essays",
+      "icon": "article_outlined",
+      "color": "0xFF9C27B0",
+      "completedCount": 2,
+      "totalCount": 12,
+      "description": "Develop strong essay writing skills with proper structure, argumentation, and evidence-based reasoning.",
+      "keyComponents": [
+        "Clear thesis statement",
+        "Strong introduction with hook",
+        "Well-developed body paragraphs",
+        "Supporting evidence and examples",
+        "Logical flow and transitions",
+        "Compelling conclusion"
+      ],
+      "rules": [
+        "Start with an engaging introduction",
+        "Present a clear thesis statement",
+        "Use topic sentences for each paragraph",
+        "Support arguments with evidence",
+        "Maintain logical flow with transitions",
+        "Conclude by reinforcing main points"
+      ],
+      "practiceItems": [
+        {
+          "id": "essay_1",
+          "title": "Advantages of Online Learning",
+          "difficulty": "Beginner",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write a 300-word essay discussing the advantages of online learning for students.",
+          "guidelines": [
+            "Start with an engaging hook",
+            "Present at least 3 clear advantages",
+            "Use specific examples to support points",
+            "Address potential counterarguments briefly",
+            "End with a strong conclusion"
+          ],
+          "template": "Introduction: Hook + Background + Thesis\nBody Paragraph 1: First advantage + examples\nBody Paragraph 2: Second advantage + examples  \nBody Paragraph 3: Third advantage + examples\nConclusion: Restate thesis + final thoughts"
+        }
+      ]
+    },
+    {
+      "id": "speech",
+      "title": "Speech Writing",
+      "subtitle": "Public Speaking & Presentations", 
+      "icon": "mic_outlined",
+      "color": "0xFF3F51B5",
+      "completedCount": 1,
+      "totalCount": 9,
+      "description": "Craft compelling speeches and presentations with proper structure, rhetorical devices, and audience engagement.",
+      "keyComponents": [
+        "Attention-grabbing opening",
+        "Clear main message or theme",
+        "Logical organization of points",
+        "Rhetorical devices and techniques",
+        "Audience engagement strategies", 
+        "Memorable conclusion with call to action"
+      ],
+      "rules": [
+        "Know your audience and purpose",
+        "Start with a powerful hook",
+        "Use the rule of three for main points",
+        "Include rhetorical questions and repetition",
+        "Practice vocal variety and pacing",
+        "End with a strong call to action"
+      ],
+      "practiceItems": [
+        {
+          "id": "speech_1",
+          "title": "School Environment Day Speech",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "persuasive",
+          "prompt": "Write a 3-minute speech for your school's Environment Day celebration, encouraging students to adopt eco-friendly practices.",
+          "guidelines": [
+            "Start with an environmental fact or question",
+            "Present 3 specific eco-friendly actions",
+            "Use rhetorical devices for impact",
+            "Include a personal story or example",
+            "End with an inspiring call to action"
+          ],
+          "template": "Opening Hook: [Environmental fact/question]\nMain Point 1: [First eco-action]\nMain Point 2: [Second eco-action]\nMain Point 3: [Third eco-action]\nConclusion: [Call to action]"
+        }
+      ]
+    },
+    {
+      "id": "cv",
+      "title": "CV/Resume",
+      "subtitle": "Professional Documents",
+      "icon": "person_outline", 
+      "color": "0xFFFF9800",
+      "completedCount": 1,
+      "totalCount": 6,
+      "description": "Create professional CVs and resumes that effectively showcase your skills, experience, and qualifications.",
+      "keyComponents": [
+        "Contact information header",
+        "Professional summary/objective",
+        "Education section with achievements",
+        "Skills and competencies", 
+        "Experience and projects",
+        "Additional sections (languages, hobbies)"
+      ],
+      "rules": [
+        "Keep it concise (1-2 pages maximum)",
+        "Use consistent formatting throughout",
+        "Start with most recent experience",
+        "Use action verbs to describe achievements",
+        "Tailor content to specific opportunities",
+        "Proofread carefully for errors"
+      ],
+      "practiceItems": [
+        {
+          "id": "cv_1",
+          "title": "Student CV for Part-time Job",
+          "difficulty": "Beginner",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Create a CV for applying to part-time jobs while studying, highlighting your academic achievements and transferable skills.",
+          "guidelines": [
+            "Include complete contact information",
+            "Write a brief personal statement",
+            "List education with relevant grades/achievements",
+            "Highlight transferable skills",
+            "Include any volunteer work or projects"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nPersonal Statement:\n[2-3 sentences]\n\nEducation:\n[School/College details]\n\nSkills:\n[Relevant abilities]\n\nExperience:\n[Any work/volunteer experience]"
+        }
+      ]
+    }
+  ],
+  "writingTips": {
+    "general": [
+      "Always plan before you write",
+      "Read your work aloud to check flow",
+      "Use varied sentence structures",
+      "Be clear and concise",
+      "Proofread carefully for errors"
+    ],
+    "formal": [
+      "Use professional tone throughout",
+      "Avoid contractions and slang", 
+      "Structure paragraphs logically",
+      "Use appropriate salutations and closings",
+      "Maintain consistent formatting"
+    ],
+    "creative": [
+      "Show, don't just tell",
+      "Use vivid, descriptive language",
+      "Vary your sentence beginnings", 
+      "Include dialogue when appropriate",
+      "Create emotional connections"
+    ]
+  },
+  "grammarRules": {
+    "punctuation": [
+      "Use commas to separate items in a list",
+      "Place periods inside quotation marks",
+      "Use semicolons to connect related independent clauses",
+      "Use apostrophes for contractions and possession"
+    ],
+    "capitalization": [
+      "Capitalize the first word of sentences",
+      "Capitalize proper nouns and names",
+      "Capitalize the first word after a colon in formal writing", 
+      "Capitalize titles when they precede names"
+    ],
+    "common_mistakes": [
+      "Its vs. It's - possession vs. contraction",
+      "Their, There, They're - possession, location, contraction",
+      "Your vs. You're - possession vs. contraction", 
+      "Affect vs. Effect - verb vs. noun"
+    ]
+  }
+}

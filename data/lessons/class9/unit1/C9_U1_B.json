@@ -1,4 +1,3 @@
-
 {
   "poem_title": "The Duck and the Kangaroo",
   "poem_text": [
@@ -20,6 +19,11 @@
       ]
     },
     {
+      "image": {
+        "description": "An illustration of a duck standing on a colorful, whimsical boat-like object."
+      }
+    },
+    {
       "stanza": [
         "\"Please give me a ride on your back!\"",
         "Said the Duck to the Kangaroo.",
@@ -30,11 +34,6 @@
         "Please take me a ride! O do!\"",
         "Said the Duck to the Kangaroo."
       ]
-    },
-    {
-      "image": {
-        "description": "An illustration of a duck standing on a colorful, whimsical boat-like object."
-      }
     },
     {
       "image": {
@@ -85,4 +84,3 @@
   ],
   "author": "Edward Lear"
 }
-

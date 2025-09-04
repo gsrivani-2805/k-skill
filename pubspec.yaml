@@ -49,6 +49,7 @@ flutter:
   #practice
   - data/practice/listening_sentences.json
   - data/practice/reading_passages.json
+  - data/practice/discourse.json
   
   #logos
   - images/boy.png
@@ -70,13 +71,122 @@ flutter:
   - data/lessons/class8/
   - data/lessons/class9/
   - data/lessons/class10/
+  
+  - data/lessons/class8/unit1/C8_U1_A.json
+  - data/lessons/class8/unit1/C8_U1_B.json
+  - data/lessons/class8/unit1/C8_U1_C.json
+
+  - data/lessons/class8/unit2/C8_U2_A.json
+  - data/lessons/class8/unit2/C8_U2_B.json
+  - data/lessons/class8/unit2/C8_U2_C.json
+
+  - data/lessons/class8/unit3/C8_U3_A.json
+  - data/lessons/class8/unit3/C8_U3_B.json
+  - data/lessons/class8/unit3/C8_U3_C.json
+
+  - data/lessons/class8/unit4/C8_U4_A.json
+  - data/lessons/class8/unit4/C8_U4_B.json
+  - data/lessons/class8/unit4/C8_U4_C.json
+
+  - data/lessons/class8/unit5/C8_U5_A.json
+  - data/lessons/class8/unit5/C8_U5_B.json
+  - data/lessons/class8/unit5/C8_U5_C.json
+
+  - data/lessons/class8/unit6/C8_U6_A.json
+  - data/lessons/class8/unit6/C8_U6_B.json
+  - data/lessons/class8/unit6/C8_U6_C.json
+
+  - data/lessons/class8/unit7/C8_U7_A.json
+  - data/lessons/class8/unit7/C8_U7_B.json
+  - data/lessons/class8/unit7/C8_U7_C.json
+
+  - data/lessons/class8/unit8/C8_U8_A.json
+  - data/lessons/class8/unit8/C8_U8_B.json
+  - data/lessons/class8/unit8/C8_U8_C.json
+
+  - data/lessons/class9/unit1/
+  - data/lessons/class9/unit2/
+  - data/lessons/class9/unit3/
+  - data/lessons/class9/unit4/
+  - data/lessons/class9/unit5/
+  - data/lessons/class9/unit6/
+  - data/lessons/class9/unit7/
+  - data/lessons/class9/unit8/
 
   - data/lessons/class10/unit1/
+  - data/lessons/class10/unit2/
+  - data/lessons/class10/unit3/
+  - data/lessons/class10/unit4/
+  - data/lessons/class10/unit5/
+  - data/lessons/class10/unit6/
+  - data/lessons/class10/unit7/
+  - data/lessons/class10/unit8/
 
+    
+  - data/lessons/class9/unit1/C9_U1_A.json
+  - data/lessons/class9/unit1/C9_U1_B.json
+  - data/lessons/class9/unit1/C9_U1_C.json
+
+  - data/lessons/class9/unit2/C9_U2_A.json
+  - data/lessons/class9/unit2/C9_U2_B.json
+  - data/lessons/class9/unit2/C9_U2_C.json
+
+  - data/lessons/class9/unit3/C9_U3_A.json
+  - data/lessons/class9/unit3/C9_U3_B.json
+  - data/lessons/class9/unit3/C9_U3_C.json
+
+  - data/lessons/class9/unit4/C9_U4_A.json
+  - data/lessons/class9/unit4/C9_U4_B.json
+  - data/lessons/class9/unit4/C9_U4_C.json
+
+  - data/lessons/class9/unit5/C9_U5_A.json
+  - data/lessons/class9/unit5/C9_U5_B.json
+  - data/lessons/class9/unit5/C9_U5_C.json
+
+  - data/lessons/class9/unit6/C9_U6_A.json
+  - data/lessons/class9/unit6/C9_U6_B.json
+  - data/lessons/class9/unit6/C9_U6_C.json
+
+  - data/lessons/class9/unit7/C9_U7_A.json
+  - data/lessons/class9/unit7/C9_U7_B.json
+  - data/lessons/class9/unit7/C9_U7_C.json
+
+  - data/lessons/class9/unit8/C9_U8_A.json
+  - data/lessons/class9/unit8/C9_U8_B.json
+  - data/lessons/class9/unit8/C9_U8_C.json
+
+    
   - data/lessons/class10/unit1/C10_U1_A.json
   - data/lessons/class10/unit1/C10_U1_B.json
   - data/lessons/class10/unit1/C10_U1_C.json
+
+  - data/lessons/class10/unit2/C10_U2_A.json
+  - data/lessons/class10/unit2/C10_U2_B.json
+  - data/lessons/class10/unit2/C10_U2_C.json
+
+  - data/lessons/class10/unit3/C10_U3_A.json
   - data/lessons/class10/unit3/C10_U3_B.json
+  - data/lessons/class10/unit3/C10_U3_C.json
+
+  - data/lessons/class10/unit4/C10_U4_A.json
+  - data/lessons/class10/unit4/C10_U4_B.json
+  - data/lessons/class10/unit4/C10_U4_C.json
+
+  - data/lessons/class10/unit5/C10_U5_A.json
+  - data/lessons/class10/unit5/C10_U5_B.json
+  - data/lessons/class10/unit5/C10_U5_C.json
+
+  - data/lessons/class10/unit6/C10_U6_A.json
+  - data/lessons/class10/unit6/C10_U6_B.json
+  - data/lessons/class10/unit6/C10_U6_C.json
+
+  - data/lessons/class10/unit7/C10_U7_A.json
+  - data/lessons/class10/unit7/C10_U7_B.json
+  - data/lessons/class10/unit7/C10_U7_C.json
+
+  - data/lessons/class10/unit8/C10_U8_A.json
+  - data/lessons/class10/unit8/C10_U8_B.json
+  - data/lessons/class10/unit8/C10_U8_C.json
 
   #lessons
   - data/lessons/english_curriculum.json
@@ -389,3 +499,6 @@ flutter:
   - vocabulary/psychology.json
   - vocabulary/transportation.json
   - vocabulary/travel.json
+
+
+  - data/practice/reading_comprehension.json

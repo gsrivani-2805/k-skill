@@ -1,6 +1,7 @@
 // server.js or routes/user.js
 const express = require("express");
 const router = express.Router();
+const mongoose = require("mongoose");
 const User = require("../models/user.model");
 
 // GET user profile by ID
@@ -99,6 +100,278 @@ router.post("/:userId/submit-assessment", async (req, res) => {
   } catch (error) {
     console.error("Error submitting assessment:", error);
     res.status(500).json({ message: "Internal server error" });
+  }
+});
+// Fixed backend route
+router.post("/:userId/submissions", async (req, res) => {
+  try {
+    const { userId } = req.params;
+
+    // Enhanced logging for debugging
+    console.log("=== SUBMISSION REQUEST ===");
+    console.log("User ID:", userId);
+    console.log("Request Body:", JSON.stringify(req.body, null, 2));
+
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      console.log("Invalid User ID format:", userId);
+      return res.status(400).json({ error: "Invalid User ID format" });
+    }
+
+    const { discourseType, question, submittedText, feedback } = req.body;
+
+    // Enhanced validation with specific field checks
+    const missingFields = [];
+    if (!discourseType) missingFields.push("discourseType");
+    if (!submittedText) missingFields.push("submittedText");
+    if (!feedback) missingFields.push("feedback");
+
+    if (missingFields.length > 0) {
+      console.log("Missing fields:", missingFields);
+      return res.status(400).json({
+        error: `Missing required fields: ${missingFields.join(", ")}`,
+        receivedFields: Object.keys(req.body),
+      });
+    }
+
+    console.log("All required fields present, finding user...");
+
+    const user = await User.findById(userId);
+    if (!user) {
+      console.log("User not found for ID:", userId);
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    console.log("User found:", user.name || user.email);
+
+    // Enhanced feedback mapping with validation
+    let mappedFeedback;
+    try {
+      mappedFeedback = mapAIResponseToSchema(feedback);
+      console.log("Mapped feedback:", JSON.stringify(mappedFeedback, null, 2));
+    } catch (mappingError) {
+      console.error("Error mapping feedback:", mappingError);
+      // Use raw feedback if mapping fails
+      mappedFeedback = feedback;
+    }
+
+    const newSubmission = {
+      discourseType: discourseType.toString(),
+      question: question || "",
+      submittedText: submittedText.toString(),
+      feedback: mappedFeedback,
+      submissionDate: new Date(),
+    };
+
+    console.log(
+      "Prepared submission for saving:",
+      JSON.stringify(newSubmission, null, 2)
+    );
+
+    // Initialize writingSubmissions array if it doesn't exist
+    if (!user.writingSubmissions) {
+      console.log("Initializing writingSubmissions array");
+      user.writingSubmissions = [];
+    }
+
+    // Add the new submission
+    user.writingSubmissions.push(newSubmission);
+    console.log(
+      "Added submission, total submissions:",
+      user.writingSubmissions.length
+    );
+
+    // Save with error handling
+    const savedUser = await user.save();
+    console.log(
+      "User saved successfully, final submission count:",
+      savedUser.writingSubmissions.length
+    );
+
+    res.status(201).json({
+      message: "Writing submission saved successfully",
+      submission: newSubmission,
+      totalSubmissions: savedUser.writingSubmissions.length,
+    });
+  } catch (error) {
+    console.error("=== ERROR SAVING SUBMISSION ===");
+    console.error("Error details:", error);
+    console.error("Stack trace:", error.stack);
+
+    if (error.name === "CastError") {
+      return res.status(400).json({
+        error: "Invalid User ID format",
+        details: error.message,
+      });
+    }
+
+    if (error.name === "ValidationError") {
+      console.error("Validation errors:", error.errors);
+      const validationErrors = Object.keys(error.errors).map((key) => ({
+        field: key,
+        message: error.errors[key].message,
+        value: error.errors[key].value,
+      }));
+      return res.status(400).json({
+        error: "Validation failed",
+        details: validationErrors,
+      });
+    }
+
+    res.status(500).json({
+      error: "Internal Server Error",
+      details: error.message,
+      stack: process.env.NODE_ENV === "development" ? error.stack : undefined,
+    });
+  }
+});
+
+// Enhanced feedback mapping function
+function mapAIResponseToSchema(feedback) {
+  console.log("Mapping feedback to schema:", typeof feedback, feedback);
+
+  try {
+    // If feedback is already an object, return it
+    if (typeof feedback === "object" && feedback !== null) {
+      return {
+        overallScore: feedback.overallScore || feedback.score || 0,
+        overallFeedback: feedback.overallFeedback || feedback.feedback || "",
+        criteria: feedback.criteria || {},
+        suggestions: feedback.suggestions || [],
+        strengths: feedback.strengths || [],
+        areasForImprovement:
+          feedback.areasForImprovement || feedback.areas_for_improvement || [],
+        ...feedback, // Include any additional fields
+      };
+    }
+
+    // If feedback is a string, wrap it in the expected structure
+    if (typeof feedback === "string") {
+      return {
+        overallScore: 0,
+        overallFeedback: feedback,
+        criteria: {},
+        suggestions: [],
+        strengths: [],
+        areasForImprovement: [],
+      };
+    }
+
+    // Fallback for any other type
+    return {
+      overallScore: 0,
+      overallFeedback: String(feedback),
+      criteria: {},
+      suggestions: [],
+      strengths: [],
+      areasForImprovement: [],
+    };
+  } catch (error) {
+    console.error("Error in mapAIResponseToSchema:", error);
+    // Return a safe default structure
+    return {
+      overallScore: 0,
+      overallFeedback: "Error processing feedback",
+      criteria: {},
+      suggestions: [],
+      strengths: [],
+      areasForImprovement: [],
+    };
+  }
+}
+
+router.get("/:userId/submissions", async (req, res) => {
+  try {
+    const { userId } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(400).json({ error: "Invalid User ID format" });
+    }
+
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    // Get writing submissions with optional filtering and sorting
+    const {
+      limit = 50,
+      offset = 0,
+      discourseType,
+      sortBy = "submissionDate",
+      sortOrder = "desc",
+    } = req.query;
+
+    let submissions = user.writingSubmissions || [];
+
+    // Filter by discourse type if specified
+    if (discourseType) {
+      submissions = submissions.filter(
+        (sub) =>
+          sub.discourseType?.toLowerCase() === discourseType.toLowerCase()
+      );
+    }
+
+    // Sort submissions
+    submissions.sort((a, b) => {
+      let aValue = a[sortBy];
+      let bValue = b[sortBy];
+
+      if (sortBy === "submissionDate") {
+        aValue = new Date(aValue);
+        bValue = new Date(bValue);
+      }
+
+      if (sortOrder === "desc") {
+        return bValue > aValue ? 1 : bValue < aValue ? -1 : 0;
+      } else {
+        return aValue > bValue ? 1 : aValue < bValue ? -1 : 0;
+      }
+    });
+
+    // Apply pagination
+    const totalSubmissions = submissions.length;
+    const paginatedSubmissions = submissions.slice(
+      parseInt(offset),
+      parseInt(offset) + parseInt(limit)
+    );
+
+    // Format submissions for response
+    const formattedSubmissions = paginatedSubmissions.map((submission) => ({
+      id: submission._id,
+      discourseType: submission.discourseType,
+      question: submission.question,
+      submittedText: submission.submittedText,
+      feedback: submission.feedback,
+      submissionDate: submission.submissionDate,
+      // Add computed fields
+      wordCount: submission.submittedText?.split(/\s+/).length || 0,
+      overallScore:
+        submission.feedback?.overallScore || submission.feedback?.score || 0,
+    }));
+
+    res.json({
+      success: true,
+      data: {
+        submissions: formattedSubmissions,
+        pagination: {
+          total: totalSubmissions,
+          limit: parseInt(limit),
+          offset: parseInt(offset),
+          hasMore: parseInt(offset) + parseInt(limit) < totalSubmissions,
+        },
+        filters: {
+          discourseType: discourseType || null,
+          sortBy,
+          sortOrder,
+        },
+      },
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: "Internal Server Error",
+      details: error.message,
+      stack: process.env.NODE_ENV === "development" ? error.stack : undefined,
+    });
   }
 });
 

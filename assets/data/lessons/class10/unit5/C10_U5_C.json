@@ -2,6 +2,11 @@
   "poem_title": "Abandoned",
   "poem_text": [
     {
+      "image": {
+        "description": "An illustration of a baby in a garbage bin surrounded by a cat and rats."
+      }
+    },
+    {
       "stanza": [
         "Abandoned to the garbage bin,",
         "With mosquitoes and insects",
@@ -10,56 +15,27 @@
         "as foul smells comes into play,",
         "irradiating from disposed bacteria.",
         "Unheard shrieks of the baby's hysteria",
-        "die in eerie silence of the night,"
-      ]
-    },
-    {
-      "stanza": [
-        "\"An outcast of destiny\""
-      ]
-    },
-    {
-      "stanza": [
+        "die in eerie silence of the night,",
+        "\"An outcast of destiny\"",
         "Its labored breath",
         "racing in quick gasps",
         "forced lonely like crap",
         "with cyanosed lips",
         "sea-blue nose and finger-tips,",
         "Its tattered and torn dirty wrap",
-        "make it shiver in freezing grasp."
-      ]
-    },
-    {
-      "stanza": [
+        "make it shiver in freezing grasp.",
         "A filthy black cat",
         "edges on to the holed bin",
         "searching for easy rats",
-        "And finds its food"
-      ]
-    },
-    {
-      "image": {
-        "description": "An illustration of a baby in a garbage bin surrounded by a cat and rats."
-      }
-    },
-    {
-      "stanza": [
+        "And finds its food",
         "tearing at the babe's hair",
         "with their sharp teeth",
         "gnawing at its ears",
-        "to complete their feed,"
-      ]
-    },
-    {
-      "stanza": [
+        "to complete their feed,",
         "As the cat jumps in",
         "with a screeching meow",
         "the rats let loose",
-        "a clicking squeak"
-      ]
-    },
-    {
-      "stanza": [
+        "a clicking squeak",
         "A bloody chaos ensues,",
         "The only sin of the infant—",
         "BEING BORN."
@@ -68,4 +44,3 @@
   ],
   "author": "Dr. Suraya Nasim"
 }
-

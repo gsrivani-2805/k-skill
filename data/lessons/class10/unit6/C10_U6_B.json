@@ -1,4 +1,3 @@
-
 {
   "poem_title": "Or will the Dreamer Wake?",
   "poem_text": [
@@ -40,11 +39,7 @@
       "stanza": [
         "There in the West the song thrush warbles",
         "She weaves her nest to hold her clutch",
-        "A long wait now to find a partner"
-      ]
-    },
-    {
-      "stanza": [
+        "A long wait now to find a partner",
         "The eggs are laid, there are not much.",
         "These chicks could be the last ones ever",
         "The last to fly and sing and mate.",
@@ -89,4 +84,3 @@
   ],
   "author": "Medora Chevalier"
 }
-

@@ -1,0 +1,36 @@
+{
+  "title": "The Busy Honeybee",
+  "paragraph": "Honeybees are important insects that live in colonies. They help plants grow by carrying pollen from one flower to another. Honeybees also make honey, which people use as food. A colony has a queen bee, worker bees, and drones, each with a special role.",
+  "questions": [
+    {
+      "question": "What is the main role of honeybees in nature?",
+      "options": [
+        "To make nests",
+        "To carry pollen between flowers",
+        "To protect the hive",
+        "To produce wax"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which type of bee lays eggs?",
+      "options": [
+        "Worker bee",
+        "Drone bee",
+        "Queen bee",
+        "All of them"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What product do honeybees make that humans eat?",
+      "options": [
+        "Milk",
+        "Honey",
+        "Sugar",
+        "Juice"
+      ],
+      "answer": 1
+    }
+  ]
+}

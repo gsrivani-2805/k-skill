@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:K_Skill/auth/reset_password_page.dart';
 import 'package:K_Skill/auth/signup_page.dart';
 import 'package:K_Skill/config/api_config.dart';
-import 'package:K_Skill/screens/dashboard.dart';
 import 'package:K_Skill/services/shared_prefs.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -60,16 +59,10 @@ class _LoginPageState extends State<LoginPage> {
         await SharedPrefsService.setUserStreak(userData['currentStreak']);
         await SharedPreferences.getInstance().then((prefs) {
           prefs.setBool('isLoggedIn', true);
-          prefs.setString(
-            'lastRoute',
-            '/profile',
-          );
+          prefs.setString('lastRoute', '/profile');
         });
 
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const DashboardScreen()),
-        );
+        Navigator.pushNamed(context, '/dashboard');
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Invalid email or password')),

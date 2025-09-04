@@ -23,7 +23,7 @@
                     "C8_U1_C": {
                         "reading_section": "C",
                         "title": "A Letter to a Friend",
-                        "category": "prose",
+                        "category": "letter",
                         "file_path": "data/lessons/class8/unit1/C8_U1_C.json",
                         "quiz_path": "quizzes/class8/unit1/C8_U1_C_Q.json"
                     }

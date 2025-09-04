@@ -87,6 +87,11 @@ class _LevelsScreenState extends State<LevelsScreen> {
         'borderColor': const Color(0xFFBA68C8),
         'icon': Icons.school,
       },
+      {
+        'color': const Color(0xFFE91E63), // Pink for Discourses
+        'borderColor': const Color(0xFFF48FB1),
+        'icon': Icons.forum,
+      },
     ];
   }
 
@@ -96,6 +101,15 @@ class _LevelsScreenState extends State<LevelsScreen> {
       'title': 'ACADEMICS',
       'focus': 'Comprehensive English curriculum for Classes 8, 9, and 10 with structured units and reading lessons.',
       'classes': 3, // Number of classes (8, 9, 10)
+    };
+  }
+
+  // Get Discourses card data
+  Map<String, dynamic> getDiscoursesCardData() {
+    return {
+      'title': 'DISCOURSES',
+      'focus': 'Engage in meaningful discussions and explore various topics through interactive discourse activities.',
+      'topics': 6, // Number of discourse topics available
     };
   }
 
@@ -181,16 +195,27 @@ class _LevelsScreenState extends State<LevelsScreen> {
   Widget _buildMobileLayout() {
     final levelConfigs = getLevelConfigs();
     final academicData = getAcademicCardData();
+    final discoursesData = getDiscoursesCardData();
 
     return ListView.builder(
       padding: const EdgeInsets.all(24.0),
-      itemCount: curriculumData.length + 1, // +1 for Academics card
+      itemCount: curriculumData.length + 2, // +2 for Academics and Discourses cards
       itemBuilder: (context, index) {
         if (index == curriculumData.length) {
-          // Academics card (last item)
+          // Academics card (second to last item)
           final config = levelConfigs[3]; // Purple config for academics
           return _buildAcademicCard(
             academicData: academicData,
+            color: config['color'],
+            borderColor: config['borderColor'],
+            icon: config['icon'],
+            isDesktop: false,
+          );
+        } else if (index == curriculumData.length + 1) {
+          // Discourses card (last item)
+          final config = levelConfigs[4]; // Pink config for discourses
+          return _buildDiscoursesCard(
+            discoursesData: discoursesData,
             color: config['color'],
             borderColor: config['borderColor'],
             icon: config['icon'],
@@ -222,8 +247,9 @@ class _LevelsScreenState extends State<LevelsScreen> {
     final levelConfigs = getLevelConfigs();
     final levels = curriculumData.entries.toList();
     final academicData = getAcademicCardData();
+    final discoursesData = getDiscoursesCardData();
     
-    // Create a combined list with curriculum levels and academics
+    // Create a combined list with curriculum levels, academics, and discourses
     List<Widget> allCards = [];
     
     // Add curriculum cards
@@ -252,6 +278,16 @@ class _LevelsScreenState extends State<LevelsScreen> {
       color: academicConfig['color'],
       borderColor: academicConfig['borderColor'],
       icon: academicConfig['icon'],
+      isDesktop: true,
+    ));
+
+    // Add discourses card
+    final discoursesConfig = levelConfigs[4];
+    allCards.add(_buildDiscoursesCard(
+      discoursesData: discoursesData,
+      color: discoursesConfig['color'],
+      borderColor: discoursesConfig['borderColor'],
+      icon: discoursesConfig['icon'],
       isDesktop: true,
     ));
 
@@ -524,6 +560,132 @@ class _LevelsScreenState extends State<LevelsScreen> {
                   ),
                   child: FractionallySizedBox(
                     widthFactor: 0.6, 
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: color,
+                        borderRadius: BorderRadius.circular(2),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDiscoursesCard({
+    required Map<String, dynamic> discoursesData,
+    required Color color,
+    required Color borderColor,
+    required IconData icon,
+    required bool isDesktop,
+  }) {
+    return Container(
+      margin: EdgeInsets.only(bottom: isDesktop ? 0 : 16.0),
+      child: Card(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+          side: BorderSide(color: borderColor.withOpacity(0.3), width: 1.5),
+        ),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () {
+            // Navigate to Discourses Screen
+            Navigator.pushNamed(context, '/discourse');
+            // Alternative: Navigator.push(context, MaterialPageRoute(builder: (_) => DiscoursesScreen()));
+          },
+          child: Container(
+            padding: const EdgeInsets.all(24.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Colors.white, color.withOpacity(0.05)],
+              ),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Icon and title row
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            discoursesData['title'],
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF2C2C2C),
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 4,
+                            ),
+                            decoration: BoxDecoration(
+                              color: color.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Text(
+                              '${discoursesData['topics']} topics',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: color.withOpacity(0.8),
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: color.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Icon(Icons.arrow_forward, color: color, size: 16),
+                    ),
+                  ],
+                ),
+
+                const SizedBox(height: 16),
+
+                // Description
+                Text(
+                  discoursesData['focus'],
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: Color(0xFF666666),
+                    height: 1.5,
+                  ),
+                  maxLines: isDesktop ? 3 : 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+
+                const SizedBox(height: 16),
+
+                // Progress indicator (placeholder)
+                Container(
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: color.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                  child: FractionallySizedBox(
+                    widthFactor: 0.6, // Different progress for discourses
                     alignment: Alignment.centerLeft,
                     child: Container(
                       decoration: BoxDecoration(

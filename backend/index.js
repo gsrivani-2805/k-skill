@@ -21,6 +21,9 @@ app.use("/", profileRoutes);
 const dictionaryRoutes = require("./routes/dictionary.route");
 app.use("/", dictionaryRoutes);
 
+const discourseRouter = require("./routes/discourse.route");
+app.use("/", discourseRouter);
+
 const chatbotRouter = require("./routes/chat.route");
 app.use("/", chatbotRouter);
 

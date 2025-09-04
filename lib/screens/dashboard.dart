@@ -22,6 +22,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     LevelsScreen(),
     PracticeScreen(),
     GameScreen(),
+    //Discourse(),
     ProfileScreen(),
   ];
 
@@ -44,6 +45,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Learn'),
           BottomNavigationBarItem(icon: Icon(Icons.mic), label: 'Practice'),
           BottomNavigationBarItem(icon: Icon(Icons.play_circle_outline), label: 'Games'),
+          //BottomNavigationBarItem(icon: Icon(Icons.mic), label: 'Discourse'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),

@@ -33,7 +33,7 @@ class _ProseScreenState extends State<ProseScreen> {
     try {
       final String jsonString = await rootBundle.loadString(widget.filePath);
       final dynamic jsonData = json.decode(jsonString);
-      
+
       setState(() {
         // Handle both single lesson object and array of lessons
         if (jsonData is List) {
@@ -60,10 +60,7 @@ class _ProseScreenState extends State<ProseScreen> {
       appBar: AppBar(
         title: Text(
           widget.title,
-          style: const TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 20,
-          ),
+          style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
         ),
         backgroundColor: Colors.blue[700],
         foregroundColor: Colors.white,
@@ -71,41 +68,32 @@ class _ProseScreenState extends State<ProseScreen> {
         centerTitle: true,
       ),
       body: isLoading
-          ? const Center(
-              child: CircularProgressIndicator(),
-            )
+          ? const Center(child: CircularProgressIndicator())
           : error != null
-              ? Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.error_outline,
-                          color: Colors.red[400],
-                          size: 64,
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          error!,
-                          style: TextStyle(
-                            color: Colors.red[700],
-                            fontSize: 16,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
+          ? Center(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.error_outline, color: Colors.red[400], size: 64),
+                    const SizedBox(height: 16),
+                    Text(
+                      error!,
+                      style: TextStyle(color: Colors.red[700], fontSize: 16),
+                      textAlign: TextAlign.center,
                     ),
-                  ),
-                )
-              : ListView.builder(
-                  padding: const EdgeInsets.all(16.0),
-                  itemCount: lessons.length,
-                  itemBuilder: (context, index) {
-                    return LessonCard(lesson: lessons[index]);
-                  },
+                  ],
                 ),
+              ),
+            )
+          : ListView.builder(
+              padding: const EdgeInsets.all(16.0),
+              itemCount: lessons.length,
+              itemBuilder: (context, index) {
+                return LessonCard(lesson: lessons[index]);
+              },
+            ),
     );
   }
 }
@@ -120,9 +108,7 @@ class LessonCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 20),
       elevation: 2,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -151,12 +137,13 @@ class LessonCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            
+
             // Content
             ...buildContentWidgets(lesson['content'] ?? []),
-            
+
             // Author (if available)
-            if (lesson['author'] != null && lesson['author'].toString().isNotEmpty)
+            if (lesson['author'] != null &&
+                lesson['author'].toString().isNotEmpty)
               Container(
                 margin: const EdgeInsets.only(top: 16),
                 padding: const EdgeInsets.all(12),
@@ -186,45 +173,44 @@ class LessonCard extends StatelessWidget {
 
   List<Widget> buildContentWidgets(List<dynamic> content) {
     List<Widget> widgets = [];
-    
+
     for (int i = 0; i < content.length; i++) {
       final item = content[i];
-      
+
       if (item is String) {
         widgets.add(buildTextContent(item, i));
       } else if (item is Map<String, dynamic> && item.containsKey('image')) {
         widgets.add(buildImageContent(item['image']));
       }
-      
+
       // Add spacing between content items
       if (i < content.length - 1) {
         widgets.add(const SizedBox(height: 16));
       }
     }
-    
+
     return widgets;
   }
 
   Widget buildTextContent(String text, int index) {
     // Check if it's a question (starts with a number)
     bool isQuestion = RegExp(r'^\d+\.').hasMatch(text.trim());
-    
+
     // Check if it's a heading or special instruction
-    bool isInstruction = text.contains(':') && 
-        (text.toLowerCase().contains('oral discourse') || 
-         text.toLowerCase().contains('discuss') ||
-         text.toLowerCase().contains('look at'));
-    
+    bool isInstruction =
+        text.contains(':') &&
+        text.toLowerCase().contains('oral discourse');
+
     // Check if it's a section header (like "About the author")
-    bool isSectionHeader = text.trim().toLowerCase() == 'about the author' ||
-        text.trim().length < 50 && 
-        !text.contains('.') && 
-        !text.contains(',') &&
-        text.trim().split(' ').length <= 4;
-    
-    // Check if it's dialogue (contains quotes)
-    bool isDialogue = text.contains('"') || text.contains("'") && text.contains(',');
-    
+    bool isSectionHeader =
+        text.trim().toLowerCase() == 'about the author' ||
+        text.trim().length < 50 &&
+            !text.contains('.') &&
+            !text.contains(',') &&
+            !text.contains('\'') &&
+            !text.trim().toLowerCase().contains('by') &&
+            !text.trim().toLowerCase().contains('!');
+
     if (isQuestion) {
       return Container(
         padding: const EdgeInsets.all(16),
@@ -235,11 +221,7 @@ class LessonCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(
-              Icons.help_outline,
-              color: Colors.amber[700],
-              size: 20,
-            ),
+            Icon(Icons.star, color: Colors.amber[700], size: 20),
             const SizedBox(width: 12),
             Expanded(
               child: Text(
@@ -260,20 +242,13 @@ class LessonCard extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: Colors.green[50],
-          border: Border.all(
-            color: Colors.green[300]!,
-            width: 1,
-          ),
+          border: Border.all(color: Colors.green[300]!, width: 1),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(
-              Icons.assignment,
-              color: Colors.green[700],
-              size: 20,
-            ),
+            Icon(Icons.assignment, color: Colors.green[700], size: 20),
             const SizedBox(width: 12),
             Expanded(
               child: Text(
@@ -306,25 +281,6 @@ class LessonCard extends StatelessWidget {
             color: Colors.blue[800],
           ),
           textAlign: TextAlign.center,
-        ),
-      );
-    } else if (isDialogue) {
-      return Container(
-        padding: const EdgeInsets.all(12),
-        margin: const EdgeInsets.symmetric(vertical: 4),
-        decoration: BoxDecoration(
-          color: Colors.grey[100],
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: 16,
-            height: 1.6,
-            color: Colors.grey[700],
-            fontStyle: FontStyle.italic,
-          ),
-          textAlign: TextAlign.left,
         ),
       );
     } else {
@@ -368,9 +324,7 @@ class LessonCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-              constraints: const BoxConstraints(
-                maxHeight: 300,
-              ),
+              constraints: const BoxConstraints(maxHeight: 300),
               child: Image.asset(
                 'assets/images/$assetPath',
                 fit: BoxFit.cover,

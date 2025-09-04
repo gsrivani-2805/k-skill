@@ -1,5 +1,6 @@
 import 'package:K_Skill/auth/signup_page.dart';
 import 'package:K_Skill/screens/academics.dart';
+import 'package:K_Skill/screens/discourse.dart';
 import 'package:K_Skill/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:K_Skill/assessment/assessment_screen.dart';
@@ -20,10 +21,7 @@ void main() async {
   // Check if user is logged in, if yes go to dashboard, else show welcome page
   String initialRoute = isLoggedIn ? '/dashboard' : '/welcome';
 
-  runApp(MyKSkillApp(
-    isLoggedIn: isLoggedIn,
-    initialRoute: initialRoute,
-  ));
+  runApp(MyKSkillApp(isLoggedIn: isLoggedIn, initialRoute: initialRoute));
 }
 
 class MyKSkillApp extends StatefulWidget {
@@ -40,8 +38,7 @@ class MyKSkillApp extends StatefulWidget {
   State<MyKSkillApp> createState() => _MyKSkillAppState();
 }
 
-class _MyKSkillAppState extends State<MyKSkillApp>
-    with WidgetsBindingObserver {
+class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
@@ -77,33 +74,30 @@ class _MyKSkillAppState extends State<MyKSkillApp>
         '/welcome': (context) => const WelcomePage(),
         '/login': (context) => LoginPage(),
         '/dashboard': (context) => const RouteAwareWrapper(
-              routeName: '/dashboard',
-              child: DashboardScreen(),
-            ),
-        '/profile': (context) => RouteAwareWrapper(
-              routeName: '/profile',
-              child: ProfileScreen(),
-            ),
-        '/levels': (context) => RouteAwareWrapper(
-              routeName: '/levels',
-              child: LevelsScreen(),
-            ),
+          routeName: '/dashboard',
+          child: DashboardScreen(),
+        ),
+        '/profile': (context) =>
+            RouteAwareWrapper(routeName: '/profile', child: ProfileScreen()),
+        '/levels': (context) =>
+            RouteAwareWrapper(routeName: '/levels', child: LevelsScreen()),
         '/reading': (context) => const RouteAwareWrapper(
-              routeName: '/reading',
-              child: ReadingScreen(),
-            ),
+          routeName: '/reading',
+          child: ReadingScreen(),
+        ),
         '/assessment': (context) => const RouteAwareWrapper(
-              routeName: '/assessment',
-              child: AssessmentScreen(),
-            ),
+          routeName: '/assessment',
+          child: AssessmentScreen(),
+        ),
         '/listening': (context) => const RouteAwareWrapper(
-              routeName: '/listening',
-              child: ListeningScreen(),
-            ),
-        '/quiz': (context) => RouteAwareWrapper(
-              routeName: '/quiz',
-              child: QuizScreen(),
-            ),
+          routeName: '/listening',
+          child: ListeningScreen(),
+        ),
+        '/quiz': (context) =>
+            RouteAwareWrapper(routeName: '/quiz', child: QuizScreen()),
+
+        '/discourse': (context) =>
+            RouteAwareWrapper(routeName: '/discourse', child: Discourse()),
       },
     );
   }
@@ -137,10 +131,8 @@ class _MyKSkillAppState extends State<MyKSkillApp>
         );
       case '/profile':
         return MaterialPageRoute(
-          builder: (_) => RouteAwareWrapper(
-            routeName: '/profile',
-            child: ProfileScreen(),
-          ),
+          builder: (_) =>
+              RouteAwareWrapper(routeName: '/profile', child: ProfileScreen()),
           settings: settings,
         );
       case '/levels':
@@ -169,9 +161,15 @@ class _MyKSkillAppState extends State<MyKSkillApp>
         );
       case '/quiz':
         return MaterialPageRoute(
+          builder: (_) =>
+              const RouteAwareWrapper(routeName: '/quiz', child: QuizScreen()),
+          settings: settings,
+        );
+      case '/discourse':
+        return MaterialPageRoute(
           builder: (_) => const RouteAwareWrapper(
-            routeName: '/quiz',
-            child: QuizScreen(),
+            routeName: '/discourse',
+            child: Discourse(),
           ),
           settings: settings,
         );
@@ -183,7 +181,7 @@ class _MyKSkillAppState extends State<MyKSkillApp>
           ),
           settings: settings,
         );
-        case '/academic':
+      case '/academic':
         return MaterialPageRoute(
           builder: (_) => RouteAwareWrapper(
             routeName: '/academic',

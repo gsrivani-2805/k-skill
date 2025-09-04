@@ -1,4 +1,3 @@
-
 {
   "poem_title": "Be Thankful",
   "poem_text": [
@@ -53,11 +52,7 @@
     },
     {
       "stanza": [
-        "Gratitude can turn a negative into a positive."
-      ]
-    },
-    {
-      "stanza": [
+        "Gratitude can turn a negative into a positive.",
         "Find a way to be thankful for your troubles,",
         "and they can become your blessings."
       ]
@@ -65,4 +60,3 @@
   ],
   "author": ""
 }
-
