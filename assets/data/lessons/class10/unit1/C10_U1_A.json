@@ -5,20 +5,8 @@
       "Look at the pictures and answer the questions.",
       {
         "image": {
-          "asset_path": "1.png",
-          "description": "Sudha Chandran"
-        }
-      },
-      {
-        "image": {
-          "asset_path": "2.png",
-          "description": "Stephen Hawking"
-        }
-      },
-      {
-        "image": {
-          "asset_path": "3.png",
-          "description": "Helen Keller"
+          "asset_path": "images/class10/unit1/12.png",
+          "description": ""
         }
       },
       "1. Do you know these people? What is their speciality?\n2. What qualities do you think a person requires to become successful?\n3. What is your opinion about the attitude of society towards individuals with special needs?",
@@ -34,7 +22,7 @@
       "'I call it my chicken drumstick,' joked Nick, who was born in Melbourne, Australia, but now lives in Los Angeles. 'I'd be lost without it.'",
       {
         "image": {
-          "asset_path": "4.png",
+        "asset_path": "images/class10/unit1/11.png",
           "description": "Nick Vujicic in a swimming pool."
         }
       },
@@ -54,7 +42,7 @@
       "'I felt cold and bitter. I hated God for doing this to me and was terrified of what would happen when my parents weren't there to look after me.'",
       {
         "image": {
-          "asset_path": "5.png",
+        "asset_path": "images/class10/unit1/10.png",
           "description": "A man with no limbs, Nick, is seen from the side, looking at a whiteboard with text on it."
         }
       },
@@ -65,7 +53,7 @@
       "'I decided to be thankful for what I do have, not get angry about what I don't.'",
       {
         "image": {
-          "asset_path": "6.png",
+        "asset_path": "images/class10/unit1/9.png",
           "description": "Nick Vujicic surfing on a surfboard in the ocean."
         }
       },
@@ -76,14 +64,8 @@
       "'She was amazing,' said Nick. 'She taught me how to surf and I was terrified at first, but once I got up there it felt absolutely fantastic and I caught some waves pretty well.' Nick quickly learned how to do the 360 degree spins on his board - a feat that got him on the cover of Surfer magazine within 48 hours. 'No one has ever done that in the history of surfing,' he said. 'But I have a very low centre of gravity so I've got pretty good balance.'",
       {
         "image": {
-          "asset_path": "7.png",
+        "asset_path": "images/class10/unit1/8.png",
           "description": "Nick's speech at a stadium"
-        }
-      },
-      {
-        "image": {
-          "asset_path": "8.png",
-          "description": "Nick playing golf"
         }
       },
       "He has visited different countries all over the world. The football fan is now a motivational speaker and has travelled over 24 countries speaking to groups of up to 110,000 people.",

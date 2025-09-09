@@ -12,6 +12,7 @@
     },
     {
       "image": {
+        "asset_path": "images/class8/unit6/5.png",
         "description": "An illustration of a potter working at his wheel, with a man looking at a sad, personified earthen goblet."
       }
     },
@@ -34,6 +35,12 @@
         "The fragrant friendship of a little flower",
         "Whose root was in my bosom buried deep.'"
       ]
+    },
+    {
+      "image": {
+        "asset_path": "images/class8/unit6/6.png",
+        "description": "An illustration of a potter working at his wheel, with a man looking at a sad, personified earthen goblet."
+      }
     },
     {
       "stanza": [

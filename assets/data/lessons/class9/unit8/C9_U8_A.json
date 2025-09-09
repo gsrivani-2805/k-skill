@@ -4,7 +4,7 @@
     "Look at the pictures and answer the questions that follow.",
     {
       "image": {
-        "asset_path": "148.jpeg",
+        "asset_path": "images/class9/unit8/7.png",
         "description": "A collage of three pictures showing popular tourist destinations: a Hindu temple, a church, and the Charminar."
       }
     },
@@ -16,7 +16,7 @@
     "I was thinking about this the last time we went en famille on a big trip. It was at Easter, and we were flying to England for a week. When we arrived at Logan Airport in Boston and were checking in, I suddenly remembered that I had recently joined British Airways' frequent flyer programme. I also remembered that I had put the card in my carry-on bag. And here's where the trouble started.",
     {
       "image": {
-        "asset_path": "149.jpeg",
+        "asset_path": "images/class9/unit8/6.png",
         "description": "An illustration of a chaotic scene at an airport check-in counter, with a man's bag having burst open, scattering its contents everywhere."
       }
     },
@@ -28,7 +28,7 @@
     "On another occasion, I knocked a soft drink onto the lap of a sweet little lady sitting beside me. The flight attendant came and cleaned her up, and brought me a replacement drink, and instantly I knocked it onto the woman again. To this day, I don't know how I did it. I just remember reaching out for the new drink and watching helplessly as my arm, like some cheap prop in one of those 1950s horror movies with a name like ‘The Undead Limb', violently swept the drink from its perch and onto her lap.",
     {
       "image": {
-        "asset_path": "150.jpeg",
+        "asset_path": "images/class9/unit8/5.png",
         "description": "An illustration depicting a clumsy man on an airplane, spilling a drink on the passenger next to him for the second time, while a flight attendant looks on."
       }
     },
@@ -44,12 +44,6 @@
     "So I didn't get my air miles, and I won't be flying to Bali first class just yet. Perhaps just as well, really, I could never go that long without eating.",
     "- by Bill Bryson",
     "About the author",
-    {
-      "image": {
-        "asset_path": "152.jpeg",
-        "description": "A portrait of the author, William McGuire 'Bill' Bryson."
-      }
-    },
     "William Mc Guire \"Bill\" Bryson, (born on December 8, 1951) is a best-selling American author of humorous books on travel, as well as books on the English language and on science. Born an American, he was a resident of Britain for most of his adult life before returning to the US in 1995. In 2003 Bryson moved back to Britain. Bryson shot to prominence in the United Kingdom with the publication of Notes From A Small Island (1995), An Exploration of Britain, for which he made an accompanying television series. He received widespread recognition again with the publication of A Short History of Nearly Everything (2003), which popularised scientific questions for a general audience."
   ]
 }

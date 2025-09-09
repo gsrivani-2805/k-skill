@@ -4,7 +4,7 @@
     "Look at the pictures and answer the questions that follow.",
     {
       "image": {
-        "asset_path": "2.jpeg",
+        "asset_path": "images/class8/unit1/1.png",
         "description": "Two illustrations comparing a small nuclear family (father, mother, son, daughter) and a large joint family with multiple generations living together."
       }
     },
@@ -17,7 +17,7 @@
     "Kamala, her eldest daughter, a widow, who was sitting huddled up on the thinna on the veranda, her head and ears covered with a thin bath towel, got up reluctantly, walked slowly to the gate and screwing up her eyes peered into the darkness.",
     {
       "image": {
-        "asset_path": "3.jpeg",
+        "asset_path": "images/class8/unit1/2.png",
         "description": "An illustration of a man in a suit arriving at a countryside home. An elderly woman is resting on a lounge chair on the veranda, and another woman is sitting nearby."
       }
     },
@@ -53,7 +53,7 @@
     "Gopi placed his briefcase on the thinna. He opened it and pulled out the contents. Clothes, files, a shaving set....",
     {
       "image": {
-        "asset_path": "5.jpeg",
+        "asset_path": "images/class8/unit1/3.png",
         "description": "An illustration showing Gopi opening his briefcase in front of his mother, who is seated on the veranda."
       }
     },
@@ -72,12 +72,6 @@
     "'But Amma can't remember who I am', he said smiling feebly.",
     "'But do you remember your Amma?'",
     "About the author",
-    {
-      "image": {
-        "asset_path": "7.jpeg",
-        "description": "A portrait of the author, Kamla Das."
-      }
-    },
     "Kamla Das (1932-2009) is the daughter of the famous Malayalam poet- Balamani Amma and V.M. Nair. She is an internationally known poet, short story writer and novelist who writes effortlessly both in English and Malayalam. She has received many awards for her literary work. Some of them are Asian Poetry Prize, Kent Award for English Writing from Asian Countries, Asian World Prize, Sahitya Academy Award and Vayalar Rama Varma Sahitya Award ."
   ],
   "author": ""

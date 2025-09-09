@@ -1,0 +1,2409 @@
+{
+  "basic": [
+    {
+      "id": 1,
+      "paragraph": "My cat ____ on the sofa all day. She ____ to eat fish and ____ milk. Yesterday, she ____ a mouse in the garden. I think she ____ very proud.",
+      "blanks": 5,
+      "correctAnswers": ["sleeps", "likes", "drinks", "caught", "was"],
+      "availableWords": ["sleeps", "likes", "drinks", "caught", "was", "sleep", "like", "drink", "catch", "is", "are"],
+      "distractorWords": ["sleep", "like", "drink", "catch", "is", "are"]
+    },
+    {
+      "id": 2,
+      "paragraph": "I ____ to school by bus every morning. The bus ____ at the corner of my street. It ____ usually very crowded. Many students ____ the same bus to get to school.",
+      "blanks": 5,
+      "correctAnswers": ["go", "stops", "is", "take", "my"],
+      "availableWords": ["go", "stops", "is", "take", "my", "goes", "stop", "are", "takes", "I"],
+      "distractorWords": ["goes", "stop", "are", "takes", "I"]
+    },
+    {
+      "id": 3,
+      "paragraph": "My friends and I ____ football in the park on weekends. We always ____ a lot of fun. Last Saturday, my friend ____ the winning goal. It ____ a fantastic moment for ____ team.",
+      "blanks": 5,
+      "correctAnswers": ["play", "have", "scored", "was", "our"],
+      "availableWords": ["play", "have", "scored", "was", "our", "plays", "has", "score", "is", "us"],
+      "distractorWords": ["plays", "has", "score", "is", "us"]
+    },
+    {
+      "id": 4,
+      "paragraph": "The sun ____ very brightly today. There isn't ____ cloud in the sky. Birds ____ singing in the trees. It ____ a beautiful day to go to ____ beach.",
+      "blanks": 5,
+      "correctAnswers": ["shines", "a", "are", "is", "the"],
+      "availableWords": ["shines", "a", "are", "is", "the", "shining", "an", "is", "was", "some"],
+      "distractorWords": ["shining", "an", "was", "some"]
+    },
+    {
+      "id": 5,
+      "paragraph": "My mother ____ delicious cookies. She ____ them for me last night. I ____ three cookies after dinner. They ____ my favorite treat. I love ____ chocolate chip cookies.",
+      "blanks": 5,
+      "correctAnswers": ["makes", "baked", "ate", "are", "her"],
+      "availableWords": ["makes", "baked", "ate", "are", "her", "make", "bakes", "eat", "is", "she"],
+      "distractorWords": ["make", "bakes", "eat", "is", "she"]
+    },
+    {
+      "id": 6,
+      "paragraph": "We ____ in a small house with a big garden. My father ____ flowers and vegetables there. I often ____ him water the plants. Last year, we ____ many tomatoes.",
+      "blanks": 5,
+      "correctAnswers": ["live", "grows", "help", "grew", "our"],
+      "availableWords": ["live", "grows", "help", "grew", "our", "lives", "grow", "helps", "grown", "us"],
+      "distractorWords": ["lives", "grow", "helps", "grown", "us"]
+    },
+    {
+      "id": 7,
+      "paragraph": "My sister ____ a doctor. She ____ in a big hospital. She ____ sick people get better. Yesterday, she ____ for twelve hours. She ____ very tired when she came home.",
+      "blanks": 5,
+      "correctAnswers": ["is", "works", "helps", "worked", "was"],
+      "availableWords": ["is", "works", "helps", "worked", "was", "are", "work", "help", "working", "is"],
+      "distractorWords": ["are", "work", "help", "working"]
+    },
+    {
+      "id": 8,
+      "paragraph": "I ____ a new book last week. It ____ about a magical adventure. I ____ it every night before I sleep. The main character ____ very brave. I ____ the story a lot.",
+      "blanks": 5,
+      "correctAnswers": ["bought", "is", "read", "is", "like"],
+      "availableWords": ["bought", "is", "read", "is", "like", "buy", "are", "reads", "was", "likes"],
+      "distractorWords": ["buy", "are", "reads", "was", "likes"]
+    },
+    {
+      "id": 9,
+      "paragraph": "The children ____ in the playground. They ____ on the swings and the slide. One boy ____ a red ball. They all ____ to be having fun. Their laughter ____ the air.",
+      "blanks": 5,
+      "correctAnswers": ["are", "play", "has", "seem", "fills"],
+      "availableWords": ["are", "play", "has", "seem", "fills", "is", "plays", "have", "seems", "fill"],
+      "distractorWords": ["is", "plays", "have", "seems", "fill"]
+    },
+    {
+      "id": 10,
+      "paragraph": "In winter, it often ____ here. The trees ____ covered in white. We ____ snowmen and have snowball fights. It ____ very cold outside, so we wear ____ warm coats.",
+      "blanks": 5,
+      "correctAnswers": ["snows", "are", "build", "is", "our"],
+      "availableWords": ["snows", "are", "build", "is", "our", "snow", "is", "builds", "was", "us", "we"],
+      "distractorWords": ["snow", "builds", "was", "us", "we"]
+    },
+    {
+      "id": 11,
+      "paragraph": "The train ____ at the station now. Many people ____ getting on. I ____ for my friend. She ____ a green suitcase. I see ____ now!",
+      "blanks": 5,
+      "correctAnswers": ["is", "are", "am", "has", "her"],
+      "availableWords": ["is", "are", "am", "has", "her", "was", "is", "be", "have", "she"],
+      "distractorWords": ["was", "be", "have", "she"]
+    },
+    {
+      "id": 12,
+      "paragraph": "My dog, Max, ____ to dig holes in the yard. He ____ a big hole yesterday. He ____ his favorite toy inside it. We ____ it for an hour. He thinks it ____ a fun game.",
+      "blanks": 5,
+      "correctAnswers": ["loves", "dug", "hid", "looked", "is"],
+      "availableWords": ["loves", "dug", "hid", "looked", "is", "love", "digs", "hides", "look", "are"],
+      "distractorWords": ["love", "digs", "hides", "look", "are"]
+    },
+    {
+      "id": 13,
+      "paragraph": "I ____ help my mom with the shopping. We ____ to the supermarket together. She ____ a list of things we need. I ____ the cart for her. It ____ a helpful thing to do.",
+      "blanks": 5,
+      "correctAnswers": ["always", "go", "makes", "push", "is"],
+      "availableWords": ["always", "go", "makes", "push", "is", "never", "goes", "make", "pull", "was"],
+      "distractorWords": ["never", "goes", "make", "pull", "was"]
+    },
+    {
+      "id": 14,
+      "paragraph": "Our teacher ____ us a story yesterday. It ____ about a clever fox. The fox ____ to trick other animals. We all ____ the story was very funny. We ____ a lot.",
+      "blanks": 5,
+      "correctAnswers": ["told", "was", "wanted", "thought", "laughed"],
+      "availableWords": ["told", "was", "wanted", "thought", "laughed", "tells", "is", "wants", "think", "laugh"],
+      "distractorWords": ["tells", "is", "wants", "think", "laugh"]
+    },
+    {
+      "id": 15,
+      "paragraph": "We went to ____ zoo last weekend. I ____ many interesting animals. The monkeys ____ eating bananas. A lion ____ loudly. It ____ an exciting day.",
+      "blanks": 5,
+      "correctAnswers": ["the", "saw", "were", "roared", "was"],
+      "availableWords": ["the", "saw", "were", "roared", "was", "a", "see", "was", "roars", "is", "are"],
+      "distractorWords": ["a", "see", "roars", "is", "are"]
+    },
+    {
+      "id": 16,
+      "paragraph": "My favorite season ____ summer. The days ____ long and sunny. I ____ to the pool to swim. My family and I ____ barbecue in the evening. We eat ____ delicious food.",
+      "blanks": 5,
+      "correctAnswers": ["is", "are", "go", "have", "some"],
+      "availableWords": ["is", "are", "go", "have", "some", "was", "is", "goes", "has", "any"],
+      "distractorWords": ["was", "goes", "has", "any"]
+    },
+    {
+      "id": 17,
+      "paragraph": "My dad ____ a car to work every day. He ____ early in the morning. He ____ to the radio while he drives. He ____ home around six o'clock. We ____ dinner together.",
+      "blanks": 5,
+      "correctAnswers": ["drives", "leaves", "listens", "comes", "eat"],
+      "availableWords": ["drives", "leaves", "listens", "comes", "eat", "drive", "leave", "listen", "come", "eats"],
+      "distractorWords": ["drive", "leave", "listen", "come", "eats"]
+    },
+    {
+      "id": 18,
+      "paragraph": "My grandmother ____ in the countryside. I ____ her during the holidays. She ____ a beautiful garden with many flowers. I ____ picking fresh strawberries there. They ____ so sweet.",
+      "blanks": 5,
+      "correctAnswers": ["lives", "visit", "has", "love", "are"],
+      "availableWords": ["lives", "visit", "has", "love", "are", "live", "visits", "have", "loves", "is"],
+      "distractorWords": ["live", "visits", "have", "loves", "is"]
+    },
+    {
+      "id": 19,
+      "paragraph": "The airplane ____ high in the sky. It ____ flying to another country. I can ____ its flashing lights. I wonder ____ it is going. Someday, I ____ to fly in one.",
+      "blanks": 5,
+      "correctAnswers": ["is", "is", "see", "where", "want"],
+      "availableWords": ["is", "is", "see", "where", "want", "are", "was", "saw", "when", "wants", "how"],
+      "distractorWords": ["are", "was", "saw", "when", "wants", "how"]
+    },
+    {
+      "id": 20,
+      "paragraph": "I ____ a sandwich for lunch today. I ____ cheese and tomato inside it. It ____ very tasty. My friend ____ a salad. We ate our lunch ____ the school cafeteria.",
+      "blanks": 5,
+      "correctAnswers": ["had", "put", "was", "had", "in"],
+      "availableWords": ["had", "put", "was", "had", "in", "have", "puts", "is", "has", "on", "at"],
+      "distractorWords": ["have", "puts", "is", "has", "on", "at"]
+    },
+    {
+      "id": 21,
+      "paragraph": "A frog ____ near the pond. It ____ for insects to eat. The frog ____ a long, sticky tongue. It ____ it to catch flies. Frogs ____ good swimmers.",
+      "blanks": 5,
+      "correctAnswers": ["sits", "waits", "has", "uses", "are"],
+      "availableWords": ["sits", "waits", "has", "uses", "are", "sit", "wait", "have", "use", "is"],
+      "distractorWords": ["sit", "wait", "have", "use", "is"]
+    },
+    {
+      "id": 22,
+      "paragraph": "My brother and I ____ our room. I ____ my bed every morning. He ____ his toys away. Our parents ____ happy when the room is clean. ____ is a shared responsibility.",
+      "blanks": 5,
+      "correctAnswers": ["share", "make", "puts", "are", "It"],
+      "availableWords": ["share", "make", "puts", "are", "It", "shares", "makes", "put", "is", "He"],
+      "distractorWords": ["shares", "makes", "put", "is", "He"]
+    },
+    {
+      "id": 23,
+      "paragraph": "The baker ____ bread early in the morning. He ____ flour, water, and yeast. The smell of fresh bread ____ wonderful. People ____ to his shop to buy it. I ____ a loaf yesterday.",
+      "blanks": 5,
+      "correctAnswers": ["bakes", "uses", "is", "come", "bought"],
+      "availableWords": ["bakes", "uses", "is", "come", "bought", "bake", "use", "are", "comes", "buy"],
+      "distractorWords": ["bake", "use", "are", "comes", "buy"]
+    },
+    {
+      "id": 24,
+      "paragraph": "A fire truck ____ down the street. It ____ a loud siren. The firefighters ____ to an emergency. They ____ brave people who help others. They wear ____ special uniform.",
+      "blanks": 5,
+      "correctAnswers": ["races", "has", "are", "are", "a"],
+      "availableWords": ["races", "has", "are", "are", "a", "race", "have", "is", "was", "an"],
+      "distractorWords": ["race", "have", "is", "was", "an"]
+    },
+    {
+      "id": 25,
+      "paragraph": "We ____ a test in math class today. I ____ very hard for it. I ____ I did well. The teacher ____ she will give us the results tomorrow. I hope I ____ a good grade.",
+      "blanks": 5,
+      "correctAnswers": ["had", "studied", "think", "said", "get"],
+      "availableWords": ["had", "studied", "think", "said", "get", "have", "study", "thinks", "says", "gets"],
+      "distractorWords": ["have", "study", "thinks", "says", "gets"]
+    },
+    {
+      "id": 26,
+      "paragraph": "A ship ____ across the ocean. It ____ goods from one country to another. The captain ____ the ship through storms. Sailors ____ on the ship for many weeks. Life ____ sea can be hard.",
+      "blanks": 5,
+      "correctAnswers": ["sails", "carries", "guides", "work", "at"],
+      "availableWords": ["sails", "carries", "guides", "work", "at", "sail", "carry", "guide", "works", "on"],
+      "distractorWords": ["sail", "carry", "guide", "works", "on"]
+    },
+    {
+      "id": 27,
+      "paragraph": "This ____ my favorite T-shirt. It ____ blue with a star on it. I ____ it all the time. My mom ____ it for me last year. I ____ I can wear it for a long time.",
+      "blanks": 5,
+      "correctAnswers": ["is", "is", "wear", "bought", "hope"],
+      "availableWords": ["is", "is", "wear", "bought", "hope", "are", "was", "wears", "buy", "hopes"],
+      "distractorWords": ["are", "was", "wears", "buy", "hopes"]
+    },
+    {
+      "id": 28,
+      "paragraph": "An owl ____ at night. It ____ for mice and other small animals. It ____ very big eyes. It can ____ very well in the dark. I ____ an owl in a tree once.",
+      "blanks": 5,
+      "correctAnswers": ["hunts", "looks", "has", "see", "saw"],
+      "availableWords": ["hunts", "looks", "has", "see", "saw", "hunt", "look", "have", "sees", "seen"],
+      "distractorWords": ["hunt", "look", "have", "sees", "seen"]
+    },
+    {
+      "id": 29,
+      "paragraph": "My brother ____ the guitar. He ____ in a band with his friends. They ____ in their garage. They ____ to be famous one day. I ____ all their songs.",
+      "blanks": 5,
+      "correctAnswers": ["plays", "is", "practice", "want", "know"],
+      "availableWords": ["plays", "is", "practice", "want", "know", "play", "are", "practices", "wants", "knows"],
+      "distractorWords": ["play", "are", "practices", "wants", "knows"]
+    },
+    {
+      "id": 30,
+      "paragraph": "It ____ raining outside. I ____ my umbrella with me. The streets ____ wet and shiny. Many people ____ waiting at the bus stop. I ____ to stay dry.",
+      "blanks": 5,
+      "correctAnswers": ["is", "have", "are", "are", "want"],
+      "availableWords": ["is", "have", "are", "are", "want", "was", "has", "is", "were", "wants"],
+      "distractorWords": ["was", "has", "were", "wants"]
+    },
+    {
+      "id": 31,
+      "paragraph": "A farmer ____ up early every day. He ____ the cows and feeds the chickens. His wife ____ him on the farm. They ____ very hard. ____ work is never done.",
+      "blanks": 5,
+      "correctAnswers": ["wakes", "milks", "helps", "work", "Their"],
+      "availableWords": ["wakes", "milks", "helps", "work", "Their", "wake", "milk", "help", "works", "They"],
+      "distractorWords": ["wake", "milk", "help", "works", "They"]
+    },
+    {
+      "id": 32,
+      "paragraph": "I ____ a picture for my mom. I ____ crayons to color it. It ____ a house with a garden. My mom ____ she loves it. She put ____ on the refrigerator.",
+      "blanks": 5,
+      "correctAnswers": ["drew", "used", "shows", "said", "it"],
+      "availableWords": ["drew", "used", "shows", "said", "it", "draw", "use", "show", "says", "her"],
+      "distractorWords": ["draw", "use", "show", "says", "her"]
+    },
+    {
+      "id": 33,
+      "paragraph": "The moon ____ full tonight. It ____ so bright in the dark sky. Stars ____ all around it. I can ____ the Big Dipper. It ____ a beautiful night.",
+      "blanks": 5,
+      "correctAnswers": ["is", "looks", "are", "see", "is"],
+      "availableWords": ["is", "looks", "are", "see", "is", "was", "look", "is", "saw", "are"],
+      "distractorWords": ["was", "look", "saw", "are"]
+    },
+    {
+      "id": 34,
+      "paragraph": "My friend has ____ pet snake. Its name ____ Slithers. It ____ in a glass tank. He ____ it mice to eat. I ____ afraid of snakes.",
+      "blanks": 5,
+      "correctAnswers": ["a", "is", "lives", "feeds", "am"],
+      "availableWords": ["a", "is", "lives", "feeds", "am", "an", "are", "live", "feed", "is"],
+      "distractorWords": ["an", "are", "live", "feed"]
+    },
+    {
+      "id": 35,
+      "paragraph": "We ____ to the library to borrow books. The librarian ____ us find what we need. I ____ a book about dinosaurs. My sister ____ one about space. We ____ to read.",
+      "blanks": 5,
+      "correctAnswers": ["went", "helped", "chose", "found", "love"],
+      "availableWords": ["went", "helped", "chose", "found", "love", "go", "helps", "choose", "finds", "loves"],
+      "distractorWords": ["go", "helps", "choose", "finds", "loves"]
+    },
+    {
+      "id": 36,
+      "paragraph": "A dolphin ____ in the ocean. It ____ a very intelligent animal. Dolphins ____ in groups called pods. They ____ with each other using clicks and whistles. I ____ one at an aquarium.",
+      "blanks": 5,
+      "correctAnswers": ["lives", "is", "swim", "communicate", "saw"],
+      "availableWords": ["lives", "is", "swim", "communicate", "saw", "live", "are", "swims", "communicates", "see"],
+      "distractorWords": ["live", "are", "swims", "communicates", "see"]
+    },
+    {
+      "id": 37,
+      "paragraph": "I ____ my homework after school. My dad sometimes ____ me with math. I always ____ my English homework first. It ____ usually the easiest. I finish ____ an hour.",
+      "blanks": 5,
+      "correctAnswers": ["do", "helps", "do", "is", "in"],
+      "availableWords": ["do", "helps", "do", "is", "in", "does", "help", "did", "are", "on"],
+      "distractorWords": ["does", "help", "did", "are", "on"]
+    },
+    {
+      "id": 38,
+      "paragraph": "The telephone ____ while we were eating dinner. My dad ____ it. It ____ my aunt calling from Canada. She ____ to say hello. We ____ to her for a few minutes.",
+      "blanks": 5,
+      "correctAnswers": ["rang", "answered", "was", "wanted", "spoke"],
+      "availableWords": ["rang", "answered", "was", "wanted", "spoke", "rings", "answers", "is", "wants", "speak"],
+      "distractorWords": ["rings", "answers", "is", "wants", "speak"]
+    },
+    {
+      "id": 39,
+      "paragraph": "The leaves on the trees ____ color in autumn. They ____ from green to red and yellow. The wind ____ them from the branches. It ____ fun to play ____ the fallen leaves.",
+      "blanks": 5,
+      "correctAnswers": ["change", "turn", "blows", "is", "in"],
+      "availableWords": ["change", "turn", "blows", "is", "in", "changes", "turns", "blow", "are", "on"],
+      "distractorWords": ["changes", "turns", "blow", "are", "on"]
+    },
+    {
+      "id": 40,
+      "paragraph": "A chef ____ in a restaurant kitchen. He ____ delicious meals for the customers. He ____ a tall white hat. Many people ____ to eat his food. The food ____ always fresh.",
+      "blanks": 5,
+      "correctAnswers": ["works", "prepares", "wears", "come", "is"],
+      "availableWords": ["works", "prepares", "wears", "come", "is", "work", "prepare", "wear", "comes", "are"],
+      "distractorWords": ["work", "prepare", "wear", "comes", "are"]
+    },
+    {
+      "id": 41,
+      "paragraph": "I ____ my bicycle last weekend. It ____ a flat tire. My dad helped me ____ it. Now, it ____ perfectly again. I rode ____ to my friend's house.",
+      "blanks": 5,
+      "correctAnswers": ["broke", "had", "fix", "works", "it"],
+      "availableWords": ["broke", "had", "fix", "works", "it", "break", "has", "fixes", "work", "him"],
+      "distractorWords": ["break", "has", "fixes", "work", "him"]
+    },
+    {
+      "id": 42,
+      "paragraph": "The baby ____ crying in her crib. Her mother ____ her up. She ____ her a bottle of milk. The baby stopped crying and ____ to smile. She ____ happy now.",
+      "blanks": 5,
+      "correctAnswers": ["was", "picked", "gave", "started", "is"],
+      "availableWords": ["was", "picked", "gave", "started", "is", "is", "picks", "gives", "starts", "was"],
+      "distractorWords": ["picks", "gives", "starts"]
+    },
+    {
+      "id": 43,
+      "paragraph": "A spider ____ a web in the corner of the room. It ____ for a fly to get stuck. The web ____ very sticky. I ____ not like spiders. My dad removed ____ with a jar.",
+      "blanks": 5,
+      "correctAnswers": ["spun", "waited", "was", "do", "it"],
+      "availableWords": ["spun", "waited", "was", "do", "it", "spins", "waits", "is", "did", "him"],
+      "distractorWords": ["spins", "waits", "is", "did", "him"]
+    },
+    {
+      "id": 44,
+      "paragraph": "We are going ____ a trip to the mountains. We ____ to pack warm clothes. It ____ cold up there. We ____ to see snow. I ____ very excited about the trip.",
+      "blanks": 5,
+      "correctAnswers": ["on", "need", "is", "hope", "am"],
+      "availableWords": ["on", "need", "is", "hope", "am", "in", "needs", "are", "hopes", "is"],
+      "distractorWords": ["in", "needs", "are", "hopes"]
+    },
+    {
+      "id": 45,
+      "paragraph": "A police officer ____ people safe. He ____ a uniform and a badge. He ____ a police car. If you are in trouble, you ____ call for help. ____ are here to protect us.",
+      "blanks": 5,
+      "correctAnswers": ["keeps", "wears", "drives", "can", "They"],
+      "availableWords": ["keeps", "wears", "drives", "can", "They", "keep", "wear", "drive", "should", "He"],
+      "distractorWords": ["keep", "wear", "drive", "should", "He"]
+    },
+    {
+      "id": 46,
+      "paragraph": "My favorite subject ____ art. I love to ____ and paint. Our art teacher ____ us how to use different colors. Last week, I ____ a portrait of my dog. She said it ____ very good.",
+      "blanks": 5,
+      "correctAnswers": ["is", "draw", "teaches", "painted", "was"],
+      "availableWords": ["is", "draw", "teaches", "painted", "was", "are", "draws", "teach", "paint", "is"],
+      "distractorWords": ["are", "draws", "teach", "paint"]
+    },
+    {
+      "id": 47,
+      "paragraph": "A squirrel ____ nuts for the winter. It ____ them in the ground. It ____ a bushy tail. The squirrel ____ quickly up the tree. It ____ in a hole in the trunk.",
+      "blanks": 5,
+      "correctAnswers": ["gathers", "hides", "has", "ran", "lives"],
+      "availableWords": ["gathers", "hides", "has", "ran", "lives", "gather", "hide", "have", "runs", "live"],
+      "distractorWords": ["gather", "hide", "have", "runs", "live"]
+    },
+    {
+      "id": 48,
+      "paragraph": "I ____ my grandfather last Sunday. He ____ me a story about his childhood. He ____ in a very small village. Life ____ very different back then. I love listening to ____ stories.",
+      "blanks": 5,
+      "correctAnswers": ["visited", "told", "lived", "was", "his"],
+      "availableWords": ["visited", "told", "lived", "was", "his", "visit", "tells", "lives", "is", "he"],
+      "distractorWords": ["visit", "tells", "lives", "is", "he"]
+    },
+    {
+      "id": 49,
+      "paragraph": "The astronaut ____ in a spaceship. He ____ to the moon. He ____ a special suit to breathe. He ____ on the moon's surface. It ____ an amazing experience.",
+      "blanks": 5,
+      "correctAnswers": ["traveled", "went", "wore", "walked", "was"],
+      "availableWords": ["traveled", "went", "wore", "walked", "was", "travels", "goes", "wears", "walks", "is"],
+      "distractorWords": ["travels", "goes", "wears", "walks", "is"]
+    },
+    {
+      "id": 50,
+      "paragraph": "My sister and I ____ a sandcastle at the beach. We ____ shells to decorate it. The waves ____ getting closer. A big wave ____ and washed it away. We ____ a new one tomorrow.",
+      "blanks": 5,
+      "correctAnswers": ["built", "used", "were", "came", "made"],
+      "availableWords": ["built", "used", "were", "came", "made", "build", "use", "was", "comes", "make"],
+      "distractorWords": ["build", "use", "was", "comes", "make"]
+    },
+    {
+      "id": 51,
+      "paragraph": "The mail carrier ____ letters and packages. He ____ a bag full of mail. He ____ to our house every day. Yesterday, he ____ me a postcard from my friend. I ____ happy to get it.",
+      "blanks": 5,
+      "correctAnswers": ["delivers", "carries", "comes", "brought", "was"],
+      "availableWords": ["delivers", "carries", "comes", "brought", "was", "deliver", "carry", "come", "bring", "is"],
+      "distractorWords": ["deliver", "carry", "come", "bring", "is"]
+    },
+    {
+      "id": 52,
+      "paragraph": "Bees ____ nectar from flowers. They ____ it back to the hive. They use ____ to make honey. Honey ____ a sweet and sticky food. I like honey ____ my toast.",
+      "blanks": 5,
+      "correctAnswers": ["collect", "take", "it", "is", "on"],
+      "availableWords": ["collect", "take", "it", "is", "on", "collects", "takes", "them", "are", "in"],
+      "distractorWords": ["collects", "takes", "them", "are", "in"]
+    },
+    {
+      "id": 53,
+      "paragraph": "The traffic light ____ red. All the cars ____. When it turns green, they ____ again. It is important to ____ the rules of the road. It keeps ____ safe.",
+      "blanks": 5,
+      "correctAnswers": ["is", "stop", "go", "follow", "everyone"],
+      "availableWords": ["is", "stop", "go", "follow", "everyone", "are", "stops", "goes", "follows", "someone"],
+      "distractorWords": ["are", "stops", "goes", "follows", "someone"]
+    },
+    {
+      "id": 54,
+      "paragraph": "I ____ my keys this morning. I ____ for them everywhere. I finally ____ them in my coat pocket. I ____ so relieved. I ____ them in a safe place now.",
+      "blanks": 5,
+      "correctAnswers": ["lost", "looked", "found", "was", "keep"],
+      "availableWords": ["lost", "looked", "found", "was", "keep", "lose", "look", "find", "am", "keeps"],
+      "distractorWords": ["lose", "look", "find", "am", "keeps"]
+    },
+    {
+      "id": 55,
+      "paragraph": "A caterpillar ____ into a butterfly. It ____ a chrysalis first. Then, it ____ as a beautiful butterfly. Butterflies ____ colorful wings. They ____ from flower to flower.",
+      "blanks": 5,
+      "correctAnswers": ["changes", "makes", "emerges", "have", "fly"],
+      "availableWords": ["changes", "makes", "emerges", "have", "fly", "change", "make", "emerge", "has", "flies"],
+      "distractorWords": ["change", "make", "emerge", "has", "flies"]
+    },
+    {
+      "id": 56,
+      "paragraph": "I ____ to a birthday party last night. There ____ balloons and a big cake. We ____ games and listened to music. I ____ my friend a nice present. We all ____ a wonderful time.",
+      "blanks": 5,
+      "correctAnswers": ["went", "were", "played", "gave", "had"],
+      "availableWords": ["went", "were", "played", "gave", "had", "go", "was", "play", "give", "have"],
+      "distractorWords": ["go", "was", "play", "give", "have"]
+    },
+    {
+      "id": 57,
+      "paragraph": "A bear ____ in the forest. It ____ for berries and fish to eat. In the winter, it ____ in a cave. This is called hibernation. The bear ____ up in the spring.",
+      "blanks": 5,
+      "correctAnswers": ["lives", "searches", "sleeps", "wakes", "is"],
+      "availableWords": ["lives", "searches", "sleeps", "wakes", "is", "live", "search", "sleep", "wake", "are"],
+      "distractorWords": ["live", "search", "sleep", "wake", "are"]
+    },
+    {
+      "id": 58,
+      "paragraph": "The school bell ____ at three o'clock. The students ____ their bags. They ____ goodbye to their teacher. They are excited to ____ home. Another school day ____ over.",
+      "blanks": 5,
+      "correctAnswers": ["rings", "pack", "say", "go", "is"],
+      "availableWords": ["rings", "pack", "say", "go", "is", "ring", "packs", "says", "goes", "was"],
+      "distractorWords": ["ring", "packs", "says", "goes", "was"]
+    },
+    {
+      "id": 59,
+      "paragraph": "A penguin ____ in the cold Antarctic. It ____ a bird, but it cannot fly. It ____ its wings to swim in the water. Penguins ____ fish to eat. They ____ in large colonies.",
+      "blanks": 5,
+      "correctAnswers": ["lives", "is", "uses", "catch", "live"],
+      "availableWords": ["lives", "is", "uses", "catch", "live", "live", "are", "use", "catches", "lives"],
+      "distractorWords": ["are", "use", "catches"]
+    },
+    {
+      "id": 60,
+      "paragraph": "I ____ watching cartoons on Saturday mornings. My favorite cartoon ____ about a talking dog. He ____ on funny adventures with his friends. It always ____ me laugh. My brother watches ____ with me.",
+      "blanks": 5,
+      "correctAnswers": ["like", "is", "goes", "makes", "it"],
+      "availableWords": ["like", "is", "goes", "makes", "it", "likes", "are", "go", "make", "them"],
+      "distractorWords": ["likes", "are", "go", "make", "them"]
+    },
+    {
+      "id": 61,
+      "paragraph": "The construction workers ____ a new building. They ____ big machines to dig and lift. It ____ a noisy job. They ____ helmets for safety. The building grows taller ____ day.",
+      "blanks": 5,
+      "correctAnswers": ["are", "use", "is", "wear", "every"],
+      "availableWords": ["are", "use", "is", "wear", "every", "is", "uses", "are", "wears", "some"],
+      "distractorWords": ["uses", "wears", "some"]
+    },
+    {
+      "id": 62,
+      "paragraph": "My mom ____ a beautiful song. She ____ a lovely voice. Sometimes she ____ me lullabies at night. I ____ asleep listening to her. Her songs ____ very peaceful.",
+      "blanks": 5,
+      "correctAnswers": ["sings", "has", "sings", "fall", "are"],
+      "availableWords": ["sings", "has", "sings", "fall", "are", "sing", "have", "falls", "is", "was"],
+      "distractorWords": ["sing", "have", "falls", "is", "was"]
+    },
+    {
+      "id": 63,
+      "paragraph": "A rabbit ____ long ears and a short, fluffy tail. It ____ carrots and lettuce. It ____ very fast to escape from danger. I saw ____ in my garden this morning. It ____ cute.",
+      "blanks": 5,
+      "correctAnswers": ["has", "eats", "hops", "one", "was"],
+      "availableWords": ["has", "eats", "hops", "one", "was", "have", "eat", "hop", "it", "is"],
+      "distractorWords": ["have", "eat", "hop", "it", "is"]
+    },
+    {
+      "id": 64,
+      "paragraph": "We ____ a picnic in the countryside. We ____ a blanket on the grass. My mom ____ sandwiches and fruit. We ____ a wonderful afternoon. A few ants ____ our party.",
+      "blanks": 5,
+      "correctAnswers": ["had", "spread", "packed", "spent", "joined"],
+      "availableWords": ["had", "spread", "packed", "spent", "joined", "have", "spreads", "packs", "spends", "join"],
+      "distractorWords": ["have", "spreads", "packs", "spends", "join"]
+    },
+    {
+      "id": 65,
+      "paragraph": "A photographer ____ pictures with a camera. She ____ for the perfect shot. She ____ many photos of nature. Last year, her photo ____ a prize. She ____ very talented.",
+      "blanks": 5,
+      "correctAnswers": ["takes", "waits", "takes", "won", "is"],
+      "availableWords": ["takes", "waits", "takes", "won", "is", "take", "wait", "win", "was", "are"],
+      "distractorWords": ["take", "wait", "win", "was", "are"]
+    },
+    {
+      "id": 66,
+      "paragraph": "I ____ to the dentist for a check-up. The dentist ____ my teeth. She said I ____ no cavities. I felt very happy. She ____ me a new toothbrush.",
+      "blanks": 5,
+      "correctAnswers": ["went", "checked", "had", "gave", "told"],
+      "availableWords": ["went", "checked", "had", "gave", "told", "go", "checks", "have", "gives", "tells"],
+      "distractorWords": ["go", "checks", "have", "gives", "tells"]
+    },
+    {
+      "id": 67,
+      "paragraph": "A volcano ____ a mountain with an opening at the top. Sometimes, it ____ hot lava. It can ____ very dangerous. Scientists ____ volcanoes to predict eruptions. I ____ a video about one.",
+      "blanks": 5,
+      "correctAnswers": ["is", "erupts", "be", "study", "watched"],
+      "availableWords": ["is", "erupts", "be", "study", "watched", "are", "erupt", "is", "studies", "watch"],
+      "distractorWords": ["are", "erupt", "studies", "watch"]
+    },
+    {
+      "id": 68,
+      "paragraph": "My family and I ____ a movie last night. It ____ a comedy. We ____ a lot. We ____ popcorn while we watched. It ____ a fun family activity.",
+      "blanks": 5,
+      "correctAnswers": ["watched", "was", "laughed", "ate", "is"],
+      "availableWords": ["watched", "was", "laughed", "ate", "is", "watch", "is", "laugh", "eat", "was"],
+      "distractorWords": ["watch", "laugh", "eat"]
+    },
+    {
+      "id": 69,
+      "paragraph": "A horse ____ a large and strong animal. It ____ grass and hay. People ____ horses for riding and work. A baby horse ____ called a foal. Horses can ____ very fast.",
+      "blanks": 5,
+      "correctAnswers": ["is", "eats", "use", "is", "run"],
+      "availableWords": ["is", "eats", "use", "is", "run", "are", "eat", "uses", "are", "runs"],
+      "distractorWords": ["eat", "uses", "runs"]
+    },
+    {
+      "id": 70,
+      "paragraph": "I ____ how to ride a bike when I was six. My dad ____ me. I ____ down a few times. But I did not ____ up. Now, I ____ my bike everywhere.",
+      "blanks": 5,
+      "correctAnswers": ["learned", "taught", "fell", "give", "ride"],
+      "availableWords": ["learned", "taught", "fell", "give", "ride", "learn", "teaches", "fall", "gave", "rides"],
+      "distractorWords": ["learn", "teaches", "fall", "gave", "rides"]
+    },
+    {
+      "id": 71,
+      "paragraph": "A detective ____ mysteries. He ____ for clues to find the answer. He ____ a magnifying glass. He ____ witnesses many questions. It ____ an interesting job.",
+      "blanks": 5,
+      "correctAnswers": ["solves", "looks", "uses", "asks", "is"],
+      "availableWords": ["solves", "looks", "uses", "asks", "is", "solve", "look", "use", "ask", "was"],
+      "distractorWords": ["solve", "look", "use", "ask", "was"]
+    },
+    {
+      "id": 72,
+      "paragraph": "We ____ a snowman in the yard. We ____ a carrot for its nose. We ____ stones for its eyes. It ____ a tall hat and a scarf. Our snowman ____ amazing.",
+      "blanks": 5,
+      "correctAnswers": ["made", "used", "put", "wore", "looked"],
+      "availableWords": ["made", "used", "put", "wore", "looked", "make", "use", "puts", "wears", "looks"],
+      "distractorWords": ["make", "use", "puts", "wears", "looks"]
+    },
+    {
+      "id": 73,
+      "paragraph": "A fish ____ in the water. It ____ gills to breathe. It ____ its fins to swim. Some fish ____ in rivers, and others in the ocean. My cat ____ to watch fish.",
+      "blanks": 5,
+      "correctAnswers": ["lives", "has", "uses", "live", "loves"],
+      "availableWords": ["lives", "has", "uses", "live", "loves", "live", "have", "use", "lives", "love"],
+      "distractorWords": ["have", "use"]
+    },
+    {
+      "id": 74,
+      "paragraph": "I ____ my room last Saturday. I ____ the floor and dusted the furniture. It ____ a lot of work. But now my room ____ clean and tidy. My mom ____ proud of me.",
+      "blanks": 5,
+      "correctAnswers": ["cleaned", "swept", "was", "is", "was"],
+      "availableWords": ["cleaned", "swept", "was", "is", "was", "clean", "sweep", "is", "are", "is"],
+      "distractorWords": ["clean", "sweep", "are"]
+    },
+    {
+      "id": 75,
+      "paragraph": "An artist ____ beautiful pictures. He ____ paint and brushes. He ____ his paintings in a gallery. People ____ to look at his art. Some people ____ his paintings.",
+      "blanks": 5,
+      "correctAnswers": ["paints", "uses", "shows", "come", "buy"],
+      "availableWords": ["paints", "uses", "shows", "come", "buy", "paint", "use", "show", "comes", "buys"],
+      "distractorWords": ["paint", "use", "show", "comes", "buys"]
+    },
+    {
+      "id": 76,
+      "paragraph": "The stars ____ at night. They ____ like tiny diamonds in the sky. I like to ____ at them through a telescope. I can ____ planets too. The universe ____ so big.",
+      "blanks": 5,
+      "correctAnswers": ["shine", "look", "look", "see", "is"],
+      "availableWords": ["shine", "look", "look", "see", "is", "shines", "looks", "saw", "are", "were"],
+      "distractorWords": ["shines", "looks", "saw", "are", "were"]
+    },
+    {
+      "id": 77,
+      "paragraph": "My dad ____ a cake for my birthday. He ____ candles on top. He ____ 'Happy Birthday' to me. I ____ a wish and blew out the candles. The cake ____ delicious.",
+      "blanks": 5,
+      "correctAnswers": ["baked", "put", "sang", "made", "was"],
+      "availableWords": ["baked", "put", "sang", "made", "was", "bakes", "puts", "sings", "make", "is"],
+      "distractorWords": ["bakes", "puts", "sings", "make", "is"]
+    },
+    {
+      "id": 78,
+      "paragraph": "A turtle ____ a hard shell on its back. It ____ its head inside the shell for protection. Turtles ____ very slowly. Some turtles ____ on land and some in water. They ____ for a long time.",
+      "blanks": 5,
+      "correctAnswers": ["has", "hides", "move", "live", "live"],
+      "availableWords": ["has", "hides", "move", "live", "live", "have", "hide", "moves", "lives", "lived"],
+      "distractorWords": ["have", "hide", "moves", "lives", "lived"]
+    },
+    {
+      "id": 79,
+      "paragraph": "I ____ a letter to my grandmother. I ____ her about my school and friends. I put the letter ____ an envelope. I ____ a stamp on it. I ____ it in the mailbox.",
+      "blanks": 5,
+      "correctAnswers": ["wrote", "told", "in", "stuck", "dropped"],
+      "availableWords": ["wrote", "told", "in", "stuck", "dropped", "write", "tell", "on", "stick", "drop"],
+      "distractorWords": ["write", "tell", "on", "stick", "drop"]
+    },
+    {
+      "id": 80,
+      "paragraph": "A musician ____ an instrument. It can ____ a piano, guitar, or violin. They ____ music for people to enjoy. I ____ to be a musician when I grow up. I want to ____ the drums.",
+      "blanks": 5,
+      "correctAnswers": ["plays", "be", "create", "want", "play"],
+      "availableWords": ["plays", "be", "create", "want", "play", "play", "is", "creates", "wants", "playing"],
+      "distractorWords": ["is", "creates", "wants", "playing"]
+    },
+    {
+      "id": 81,
+      "paragraph": "The clock on the wall ____ the time. It ____ a big hand and a small hand. The big hand ____ the minutes. The small hand ____ the hours. It chimes every ____.",
+      "blanks": 5,
+      "correctAnswers": ["tells", "has", "shows", "points", "hour"],
+      "availableWords": ["tells", "has", "shows", "points", "hour", "tell", "have", "show", "point", "day"],
+      "distractorWords": ["tell", "have", "show", "point", "day"]
+    },
+    {
+      "id": 82,
+      "paragraph": "We ____ a garden in our backyard. We ____ seeds in the spring. We water ____ every day. Soon, little green shoots ____. We grow ____ own vegetables.",
+      "blanks": 5,
+      "correctAnswers": ["have", "plant", "them", "appear", "our"],
+      "availableWords": ["have", "plant", "them", "appear", "our", "has", "plants", "it", "appears", "us"],
+      "distractorWords": ["has", "plants", "it", "appears", "us"]
+    },
+    {
+      "id": 83,
+      "paragraph": "A shark ____ a fearsome hunter in the sea. It ____ many rows of sharp teeth. It ____ for fish and seals. Some sharks ____ dangerous to people. I ____ about them in a book.",
+      "blanks": 5,
+      "correctAnswers": ["is", "has", "hunts", "are", "read"],
+      "availableWords": ["is", "has", "hunts", "are", "read", "are", "have", "hunt", "is", "reads"],
+      "distractorWords": ["have", "hunt", "reads"]
+    },
+    {
+      "id": 84,
+      "paragraph": "I ____ my favorite shirt yesterday. I ____ grape juice on it. There ____ a big purple stain. My mom ____ it in the washing machine. Now it ____ clean again.",
+      "blanks": 5,
+      "correctAnswers": ["wore", "spilled", "was", "washed", "is"],
+      "availableWords": ["wore", "spilled", "was", "washed", "is", "wear", "spills", "is", "washes", "was"],
+      "distractorWords": ["wear", "spills", "washes"]
+    },
+    {
+      "id": 85,
+      "paragraph": "A judge ____ in a courtroom. She ____ to lawyers and witnesses. She ____ decisions based on the law. It ____ a very important job. She helps to ____ justice.",
+      "blanks": 5,
+      "correctAnswers": ["works", "listens", "makes", "is", "ensure"],
+      "availableWords": ["works", "listens", "makes", "is", "ensure", "work", "listen", "make", "was", "insure"],
+      "distractorWords": ["work", "listen", "make", "was", "insure"]
+    },
+    {
+      "id": 86,
+      "paragraph": "The children ____ hide-and-seek. One child ____ her eyes and counts to ten. The others ____ and hide. Then she ____ for them. It is a fun ____ to play outside.",
+      "blanks": 5,
+      "correctAnswers": ["played", "closed", "ran", "searched", "game"],
+      "availableWords": ["played", "closed", "ran", "searched", "game", "play", "closes", "run", "searches", "games"],
+      "distractorWords": ["play", "closes", "run", "searches", "games"]
+    },
+    {
+      "id": 87,
+      "paragraph": "A camel ____ in the desert. It can ____ for a long time without water. It ____ one or two humps on its back. The humps ____ fat, not water. Camels are ____ for transport.",
+      "blanks": 5,
+      "correctAnswers": ["lives", "go", "has", "store", "used"],
+      "availableWords": ["lives", "go", "has", "store", "used", "live", "goes", "have", "stores", "use"],
+      "distractorWords": ["live", "goes", "have", "stores", "use"]
+    },
+    {
+      "id": 88,
+      "paragraph": "I ____ a scary movie last night. It ____ about ghosts in an old house. I ____ my eyes a few times. I ____ not sleep well after that. I ____ not watch it alone again.",
+      "blanks": 5,
+      "correctAnswers": ["watched", "was", "covered", "did", "will"],
+      "availableWords": ["watched", "was", "covered", "did", "will", "watch", "is", "cover", "do", "would"],
+      "distractorWords": ["watch", "is", "cover", "do", "would"]
+    },
+    {
+      "id": 89,
+      "paragraph": "A scientist ____ experiments in a laboratory. She ____ a white lab coat. She ____ things under a microscope. She ____ to make new discoveries. Her work ____ help many people.",
+      "blanks": 5,
+      "correctAnswers": ["does", "wears", "studies", "wants", "can"],
+      "availableWords": ["does", "wears", "studies", "wants", "can", "do", "wear", "study", "want", "may"],
+      "distractorWords": ["do", "wear", "study", "want", "may"]
+    },
+    {
+      "id": 90,
+      "paragraph": "We ____ a hike in the forest. We ____ a path up the mountain. We ____ a beautiful waterfall. We ____ some pictures there. It ____ a great view from the top.",
+      "blanks": 5,
+      "correctAnswers": ["took", "followed", "saw", "took", "was"],
+      "availableWords": ["took", "followed", "saw", "took", "was", "take", "follow", "see", "is", "were"],
+      "distractorWords": ["take", "follow", "see", "is", "were"]
+    },
+    {
+      "id": 91,
+      "paragraph": "A kangaroo ____ in Australia. It ____ a pouch to carry its baby. The baby ____ called a joey. Kangaroos ____ by hopping on their strong back legs. They ____ eat grass.",
+      "blanks": 5,
+      "correctAnswers": ["lives", "has", "is", "move", "also"],
+      "availableWords": ["lives", "has", "is", "move", "also", "live", "have", "are", "moves", "too"],
+      "distractorWords": ["live", "have", "are", "moves", "too"]
+    },
+    {
+      "id": 92,
+      "paragraph": "I ____ an email to my cousin. I ____ her about my vacation plans. She ____ back to me quickly. She ____ she was excited for me. We ____ each other soon.",
+      "blanks": 5,
+      "correctAnswers": ["sent", "told", "wrote", "said", "will"],
+      "availableWords": ["sent", "told", "wrote", "said", "will", "send", "tell", "writes", "says", "would"],
+      "distractorWords": ["send", "tell", "writes", "says", "would"]
+    },
+    {
+      "id": 93,
+      "paragraph": "A pilot ____ an airplane. He ____ sure the passengers are safe. He ____ to many different cities. It ____ a job with a lot of responsibility. I ____ to be a pilot one day.",
+      "blanks": 5,
+      "correctAnswers": ["flies", "makes", "travels", "is", "want"],
+      "availableWords": ["flies", "makes", "travels", "is", "want", "fly", "make", "travel", "are", "wants"],
+      "distractorWords": ["fly", "make", "travel", "are", "wants"]
+    },
+    {
+      "id": 94,
+      "paragraph": "We ____ a surprise party for our friend. We ____ the room with balloons. We ____ behind the furniture. When he ____ in, we shouted 'Surprise!'. He ____ very happy.",
+      "blanks": 5,
+      "correctAnswers": ["planned", "decorated", "hid", "walked", "was"],
+      "availableWords": ["planned", "decorated", "hid", "walked", "was", "plan", "decorate", "hide", "walks", "is"],
+      "distractorWords": ["plan", "decorate", "hide", "walks", "is"]
+    },
+    {
+      "id": 95,
+      "paragraph": "A giraffe ____ the tallest animal in the world. It ____ a very long neck. It ____ leaves from tall trees. A giraffe's spots ____ like fingerprints; each one is unique. It ____ in Africa.",
+      "blanks": 5,
+      "correctAnswers": ["is", "has", "eats", "are", "lives"],
+      "availableWords": ["is", "has", "eats", "are", "lives", "are", "have", "eat", "is", "live"],
+      "distractorWords": ["have", "eat"]
+    },
+    {
+      "id": 96,
+      "paragraph": "I ____ my bed this morning but I ____ forget to brush my teeth. My mom always ____ me to do both. She ____ that good habits ____ important.",
+      "blanks": 5,
+      "correctAnswers": ["made", "did", "reminds", "says", "are"],
+      "availableWords": ["made", "did", "reminds", "says", "are", "make", "do", "remind", "say", "is"],
+      "distractorWords": ["make", "do", "remind", "say", "is"]
+    },
+    {
+      "id": 97,
+      "paragraph": "A lion ____ the king of the jungle. The male lion ____ a large mane. Lions ____ in groups called prides. The lionesses ____ most of the hunting. They ____ powerful animals.",
+      "blanks": 5,
+      "correctAnswers": ["is", "has", "live", "do", "are"],
+      "availableWords": ["is", "has", "live", "do", "are", "are", "have", "lives", "does", "is"],
+      "distractorWords": ["have", "lives", "does"]
+    },
+    {
+      "id": 98,
+      "paragraph": "I ____ a new video game. I ____ it with my friends online. We ____ to complete missions together. It ____ a lot of fun. We ____ for hours yesterday.",
+      "blanks": 5,
+      "correctAnswers": ["got", "play", "try", "is", "played"],
+      "availableWords": ["got", "play", "try", "is", "played", "get", "plays", "tries", "was", "play"],
+      "distractorWords": ["get", "plays", "tries", "was"]
+    },
+    {
+      "id": 99,
+      "paragraph": "A writer ____ stories and books. She ____ her imagination to create new worlds. She ____ many hours typing on her computer. Her goal ____ to entertain her readers. It requires ____ dedication.",
+      "blanks": 5,
+      "correctAnswers": ["writes", "uses", "spends", "is", "much"],
+      "availableWords": ["writes", "uses", "spends", "is", "much", "write", "use", "spend", "are", "many"],
+      "distractorWords": ["write", "use", "spend", "are", "many"]
+    },
+    {
+      "id": 100,
+      "paragraph": "We ____ camping last summer. We ____ a tent in the forest. We ____ stories around the campfire. At night, we ____ the stars. It ____ a great adventure.",
+      "blanks": 5,
+      "correctAnswers": ["went", "pitched", "told", "saw", "was"],
+      "availableWords": ["went", "pitched", "told", "saw", "was", "go", "pitch", "tell", "see", "is"],
+      "distractorWords": ["go", "pitch", "tell", "see", "is"]
+    },
+    {
+      "id": 101,
+      "paragraph": "The weather ____ changing. It ____ cloudy now. I think it ____ going to rain. I ____ I brought my umbrella. I do not ____ to get wet.",
+      "blanks": 5,
+      "correctAnswers": ["is", "is", "is", "wish", "want"],
+      "availableWords": ["is", "is", "is", "wish", "want", "was", "are", "am", "wishes", "wants"],
+      "distractorWords": ["was", "are", "am", "wishes", "wants"]
+    },
+    {
+      "id": 102,
+      "paragraph": "An elephant ____ a very large animal. It ____ a long trunk. It ____ its trunk to drink water and pick up food. Elephants ____ very good memories. They ____ in herds.",
+      "blanks": 5,
+      "correctAnswers": ["is", "has", "uses", "have", "live"],
+      "availableWords": ["is", "has", "uses", "have", "live", "are", "have", "use", "has", "lives"],
+      "distractorWords": ["are", "use", "has", "lives"]
+    },
+    {
+      "id": 103,
+      "paragraph": "I ____ a museum with my class. We ____ ancient artifacts. A guide ____ us about the history behind them. I ____ it was very interesting. I ____ a lot.",
+      "blanks": 5,
+      "correctAnswers": ["visited", "saw", "told", "thought", "learned"],
+      "availableWords": ["visited", "saw", "told", "thought", "learned", "visit", "see", "tells", "think", "learn"],
+      "distractorWords": ["visit", "see", "tells", "think", "learn"]
+    },
+    {
+      "id": 104,
+      "paragraph": "A dancer ____ to the rhythm of the music. She ____ her body to express emotions. She ____ for many hours every day. It ____ a lot of discipline. Her performances ____ beautiful.",
+      "blanks": 5,
+      "correctAnswers": ["moves", "uses", "practices", "takes", "are"],
+      "availableWords": ["moves", "uses", "practices", "takes", "are", "move", "use", "practice", "take", "is"],
+      "distractorWords": ["move", "use", "practice", "take", "is"]
+    },
+    {
+      "id": 105,
+      "paragraph": "We ____ a boat on the lake. The water ____ calm and blue. We ____ a fishing rod to catch fish. We did not ____ any, but we had fun. It ____ a peaceful day.",
+      "blanks": 5,
+      "correctAnswers": ["rented", "was", "used", "catch", "was"],
+      "availableWords": ["rented", "was", "used", "catch", "was", "rent", "is", "use", "caught", "is"],
+      "distractorWords": ["rent", "is", "use", "caught"]
+    },
+    {
+      "id": 106,
+      "paragraph": "A monkey ____ from tree to tree. It ____ a long tail for balance. It ____ to eat bananas and other fruits. Monkeys ____ very playful animals. I like ____ them at the zoo.",
+      "blanks": 5,
+      "correctAnswers": ["swings", "has", "loves", "are", "watching"],
+      "availableWords": ["swings", "has", "loves", "are", "watching", "swing", "have", "love", "is", "watch"],
+      "distractorWords": ["swing", "have", "love", "is", "watch"]
+    },
+    {
+      "id": 107,
+      "paragraph": "I ____ a letter from my pen pal. He ____ in another country. He ____ me about his life there. I ____ him back and told him about mine. We ____ pictures of our families.",
+      "blanks": 5,
+      "correctAnswers": ["received", "lives", "told", "wrote", "exchanged"],
+      "availableWords": ["received", "lives", "told", "wrote", "exchanged", "receive", "live", "tells", "write", "exchange"],
+      "distractorWords": ["receive", "live", "tells", "write", "exchange"]
+    },
+    {
+      "id": 108,
+      "paragraph": "A gardener ____ care of plants and flowers. She ____ them and gives them water. She ____ sure they get enough sunlight. It ____ a rewarding job to see things ____. Her garden is ____ most beautiful one.",
+      "blanks": 5,
+      "correctAnswers": ["takes", "plants", "makes", "is", "grow"],
+      "availableWords": ["takes", "plants", "makes", "is", "grow", "take", "plant", "make", "are", "grows"],
+      "distractorWords": ["take", "plant", "make", "are", "grows"]
+    },
+    {
+      "id": 109,
+      "paragraph": "We ____ for a walk on the beach. We ____ pretty seashells. The sun ____ setting over the ocean. It ____ a beautiful sight. We ____ many pictures.",
+      "blanks": 5,
+      "correctAnswers": ["went", "collected", "was", "was", "took"],
+      "availableWords": ["went", "collected", "was", "was", "took", "go", "collect", "is", "are", "take"],
+      "distractorWords": ["go", "collect", "is", "are", "take"]
+    },
+    {
+      "id": 110,
+      "paragraph": "A bat ____ an animal that can fly. It ____ at night and sleeps during the day. It ____ in caves or trees. Bats use echolocation to ____ their prey. Some people ____ they are scary.",
+      "blanks": 5,
+      "correctAnswers": ["is", "hunts", "sleeps", "find", "think"],
+      "availableWords": ["is", "hunts", "sleeps", "find", "think", "are", "hunt", "sleep", "finds", "thinks"],
+      "distractorWords": ["are", "hunt", "sleep", "finds", "thinks"]
+    },
+    {
+      "id": 111,
+      "paragraph": "I ____ my friend at the park. We ____ on the bench and talked. We ____ our plans for the summer. We both ____ to go to the beach. It ____ a nice conversation.",
+      "blanks": 5,
+      "correctAnswers": ["met", "sat", "discussed", "want", "was"],
+      "availableWords": ["met", "sat", "discussed", "want", "was", "meet", "sit", "discuss", "wants", "is"],
+      "distractorWords": ["meet", "sit", "discuss", "wants", "is"]
+    },
+    {
+      "id": 112,
+      "paragraph": "A tailor ____ and mends clothes. He ____ a sewing machine and a needle. He can ____ a suit that fits perfectly. My dad ____ a suit made by him. He ____ very skilled.",
+      "blanks": 5,
+      "correctAnswers": ["makes", "uses", "create", "had", "is"],
+      "availableWords": ["makes", "uses", "create", "had", "is", "make", "use", "creates", "has", "was"],
+      "distractorWords": ["make", "use", "creates", "has", "was"]
+    },
+    {
+      "id": 113,
+      "paragraph": "We ____ a concert last weekend. The band ____ our favorite songs. Everyone ____ and danced. The lights and sound ____ amazing. It was ____ unforgettable experience.",
+      "blanks": 5,
+      "correctAnswers": ["attended", "played", "sang", "were", "an"],
+      "availableWords": ["attended", "played", "sang", "were", "an", "attend", "play", "sings", "was", "a"],
+      "distractorWords": ["attend", "play", "sings", "was", "a"]
+    },
+    {
+      "id": 114,
+      "paragraph": "A zebra ____ in Africa. It ____ black and white stripes. No two zebras ____ the same stripe pattern. They ____ in herds for safety. A lion ____ to hunt zebras.",
+      "blanks": 5,
+      "correctAnswers": ["lives", "has", "have", "live", "likes"],
+      "availableWords": ["lives", "has", "have", "live", "likes", "live", "have", "has", "lives", "like"],
+      "distractorWords": ["like"]
+    },
+    {
+      "id": 115,
+      "paragraph": "I ____ a smoothie for breakfast. I ____ bananas, strawberries, and yogurt. I ____ it in a blender. It ____ healthy and delicious. It gives ____ energy for the day.",
+      "blanks": 5,
+      "correctAnswers": ["made", "used", "mixed", "is", "me"],
+      "availableWords": ["made", "used", "mixed", "is", "me", "make", "use", "mixes", "was", "I"],
+      "distractorWords": ["make", "use", "mixes", "was", "I"]
+    },
+    {
+      "id": 116,
+      "paragraph": "An actor ____ in plays and movies. He ____ to be different characters. He ____ lines and rehearses a lot. It can ____ a very competitive job. Famous actors ____ a lot of money.",
+      "blanks": 5,
+      "correctAnswers": ["performs", "pretends", "memorizes", "be", "earn"],
+      "availableWords": ["performs", "pretends", "memorizes", "be", "earn", "perform", "pretend", "memorize", "is", "earns"],
+      "distractorWords": ["perform", "pretend", "memorize", "is", "earns"]
+    },
+    {
+      "id": 117,
+      "paragraph": "We ____ a board game with my family. It ____ a game of strategy. I ____ against my brother. He ____ this time, but I will win next time. We always ____ fun.",
+      "blanks": 5,
+      "correctAnswers": ["played", "was", "competed", "won", "have"],
+      "availableWords": ["played", "was", "competed", "won", "have", "play", "is", "compete", "wins", "has"],
+      "distractorWords": ["play", "is", "compete", "wins", "has"]
+    },
+    {
+      "id": 118,
+      "paragraph": "A whale ____ the largest mammal on Earth. It ____ in all the world's oceans. It ____ through a blowhole on top of its head. Some whales ____ beautiful songs. They ____ amazing creatures.",
+      "blanks": 5,
+      "correctAnswers": ["is", "lives", "breathes", "sing", "are"],
+      "availableWords": ["is", "lives", "breathes", "sing", "are", "are", "live", "breathe", "sings", "is"],
+      "distractorWords": ["live", "breathe", "sings"]
+    },
+    {
+      "id": 119,
+      "paragraph": "I ____ a mistake on my test. I ____ the wrong answer for a question. My teacher ____ me how to solve it correctly. I will ____ it next time. It is okay to ____ mistakes.",
+      "blanks": 5,
+      "correctAnswers": ["made", "chose", "showed", "remember", "make"],
+      "availableWords": ["made", "chose", "showed", "remember", "make", "make", "choose", "show", "remembers", "made"],
+      "distractorWords": ["choose", "show", "remembers"]
+    },
+    {
+      "id": 120,
+      "paragraph": "A librarian ____ in a library. She ____ people find books and information. She ____ the books on the shelves. Libraries ____ quiet places. I ____ to visit the library.",
+      "blanks": 5,
+      "correctAnswers": ["works", "helps", "organizes", "are", "love"],
+      "availableWords": ["works", "helps", "organizes", "are", "love", "work", "help", "organize", "is", "loves"],
+      "distractorWords": ["work", "help", "organize", "is", "loves"]
+    },
+    {
+      "id": 121,
+      "paragraph": "We ____ our grandparents for the holidays. They ____ in a different city. We ____ by train to get there. They ____ always happy to see us. We ____ gifts and stories.",
+      "blanks": 5,
+      "correctAnswers": ["visited", "live", "traveled", "are", "share"],
+      "availableWords": ["visited", "live", "traveled", "are", "share", "visit", "lives", "travel", "is", "shares"],
+      "distractorWords": ["visit", "lives", "travel", "is", "shares"]
+    },
+    {
+      "id": 122,
+      "paragraph": "A crocodile ____ in rivers and lakes. It ____ a powerful jaw and sharp teeth. It ____ for its prey in the water. It can ____ still for a long time. It ____ like a floating log.",
+      "blanks": 5,
+      "correctAnswers": ["lives", "has", "waits", "stay", "looks"],
+      "availableWords": ["lives", "has", "waits", "stay", "looks", "live", "have", "wait", "stays", "look"],
+      "distractorWords": ["live", "have", "wait", "stays", "look"]
+    },
+    {
+      "id": 123,
+      "paragraph": "I ____ a phone call from my best friend. He ____ me about his new puppy. He ____ so excited. I ____ him if I could come see it. He ____ yes.",
+      "blanks": 5,
+      "correctAnswers": ["got", "told", "sounded", "asked", "said"],
+      "availableWords": ["got", "told", "sounded", "asked", "said", "get", "tells", "sounds", "ask", "says"],
+      "distractorWords": ["get", "tells", "sounds", "ask", "says"]
+    },
+    {
+      "id": 124,
+      "paragraph": "A carpenter ____ with wood. He ____ furniture like tables and chairs. He ____ saws, hammers, and nails. His work requires ____ and precision. I admire ____ skill.",
+      "blanks": 5,
+      "correctAnswers": ["works", "builds", "uses", "skill", "his"],
+      "availableWords": ["works", "builds", "uses", "skill", "his", "work", "build", "use", "skills", "he"],
+      "distractorWords": ["work", "build", "use", "skills", "he"]
+    },
+    {
+      "id": 125,
+      "paragraph": "We ____ a talent show at our school. I ____ a magic trick. My friend ____ a song. The audience ____ for everyone. It ____ a lot of fun.",
+      "blanks": 5,
+      "correctAnswers": ["had", "performed", "sang", "clapped", "was"],
+      "availableWords": ["had", "performed", "sang", "clapped", "was", "have", "perform", "sings", "claps", "is"],
+      "distractorWords": ["have", "perform", "sings", "claps", "is"]
+    },
+    {
+      "id": 126,
+      "paragraph": "A deer ____ in the woods. It ____ a gentle and shy animal. It ____ leaves and grass. When it ____ danger, it runs away quickly. I saw ____ in a clearing.",
+      "blanks": 5,
+      "correctAnswers": ["lives", "is", "eats", "senses", "one"],
+      "availableWords": ["lives", "is", "eats", "senses", "one", "live", "are", "eat", "sense", "it"],
+      "distractorWords": ["live", "are", "eat", "sense", "it"]
+    },
+    {
+      "id": 127,
+      "paragraph": "I ____ to cook. I ____ my mom make dinner last night. We ____ pasta with tomato sauce. It ____ simple but delicious. Cooking together ____ a great way to bond.",
+      "blanks": 5,
+      "correctAnswers": ["love", "helped", "made", "was", "is"],
+      "availableWords": ["love", "helped", "made", "was", "is", "loves", "help", "make", "is", "was"],
+      "distractorWords": ["loves", "help", "make"]
+    },
+    {
+      "id": 128,
+      "paragraph": "A mechanic ____ cars. When a car ____ broken, he finds the problem. He ____ special tools to fix it. He ____ sure the car is safe to drive. It is ____ useful job.",
+      "blanks": 5,
+      "correctAnswers": ["fixes", "is", "uses", "makes", "a"],
+      "availableWords": ["fixes", "is", "uses", "makes", "a", "fix", "are", "use", "make", "an"],
+      "distractorWords": ["fix", "are", "use", "make", "an"]
+    },
+    {
+      "id": 129,
+      "paragraph": "We ____ a new student in our class. Her name ____ Maria. She ____ from another city. The teacher ____ her to everyone. We all ____ her feel welcome.",
+      "blanks": 5,
+      "correctAnswers": ["have", "is", "moved", "introduced", "made"],
+      "availableWords": ["have", "is", "moved", "introduced", "made", "has", "are", "moves", "introduce", "make"],
+      "distractorWords": ["has", "are", "moves", "introduce", "make"]
+    },
+    {
+      "id": 130,
+      "paragraph": "A snake ____ no legs. It ____ along the ground. Some snakes ____ venomous, but many are harmless. A snake sheds ____ skin as it grows. I ____ one at the reptile house.",
+      "blanks": 5,
+      "correctAnswers": ["has", "slithers", "are", "its", "saw"],
+      "availableWords": ["has", "slithers", "are", "its", "saw", "have", "slither", "is", "it's", "see"],
+      "distractorWords": ["have", "slither", "is", "it's", "see"]
+    },
+    {
+      "id": 131,
+      "paragraph": "I ____ a funny dream last night. I ____ I could fly. I ____ over my city and saw everything below. It ____ an amazing feeling. I ____ my mom about it in the morning.",
+      "blanks": 5,
+      "correctAnswers": ["had", "dreamed", "flew", "was", "told"],
+      "availableWords": ["had", "dreamed", "flew", "was", "told", "have", "dream", "fly", "is", "tell"],
+      "distractorWords": ["have", "dream", "fly", "is", "tell"]
+    },
+    {
+      "id": 132,
+      "paragraph": "A florist ____ and sells flowers. She ____ beautiful bouquets for special occasions. She ____ which flowers look good together. Her shop always ____ wonderful. I ____ flowers from her.",
+      "blanks": 5,
+      "correctAnswers": ["arranges", "creates", "knows", "smells", "buy"],
+      "availableWords": ["arranges", "creates", "knows", "smells", "buy", "arrange", "create", "know", "smell", "buys"],
+      "distractorWords": ["arrange", "create", "know", "smell", "buys"]
+    },
+    {
+      "id": 133,
+      "paragraph": "We ____ a family reunion last summer. Relatives from all over the country ____. We ____ a big barbecue and played games. It ____ great to see everyone. We ____ a family photo.",
+      "blanks": 5,
+      "correctAnswers": ["had", "came", "had", "was", "took"],
+      "availableWords": ["had", "came", "had", "was", "took", "have", "come", "has", "is", "take"],
+      "distractorWords": ["have", "come", "has", "is", "take"]
+    },
+    {
+      "id": 134,
+      "paragraph": "A goose ____ a bird that can swim and fly. Geese often ____ in a V-formation. They ____ to warmer places for the winter. A baby goose is ____ a gosling. They ____ very loud honking sounds.",
+      "blanks": 5,
+      "correctAnswers": ["is", "fly", "migrate", "called", "make"],
+      "availableWords": ["is", "fly", "migrate", "called", "make", "are", "flies", "migrates", "calling", "makes"],
+      "distractorWords": ["are", "flies", "migrates", "calling", "makes"]
+    },
+    {
+      "id": 135,
+      "paragraph": "I ____ a cold last week. I ____ a runny nose and a cough. My mom ____ me chicken soup. I ____ in bed for two days. I feel much better ____.",
+      "blanks": 5,
+      "correctAnswers": ["had", "had", "made", "stayed", "now"],
+      "availableWords": ["had", "had", "made", "stayed", "now", "have", "has", "make", "stay", "then"],
+      "distractorWords": ["have", "has", "make", "stay", "then"]
+    },
+    {
+      "id": 136,
+      "paragraph": "A news reporter ____ people about current events. She ____ on TV or writes for a newspaper. She ____ interviews and investigates stories. It ____ a fast-paced job. She must ____ accurate.",
+      "blanks": 5,
+      "correctAnswers": ["tells", "appears", "conducts", "is", "be"],
+      "availableWords": ["tells", "appears", "conducts", "is", "be", "tell", "appear", "conduct", "was", "are"],
+      "distractorWords": ["tell", "appear", "conduct", "was", "are"]
+    },
+    {
+      "id": 137,
+      "paragraph": "We ____ a science experiment in class. We ____ a volcano with baking soda and vinegar. It ____ and bubbled over. It ____ a big mess, but it was fun. We ____ how chemical reactions work.",
+      "blanks": 5,
+      "correctAnswers": ["did", "made", "erupted", "made", "learned"],
+      "availableWords": ["did", "made", "erupted", "made", "learned", "do", "make", "erupt", "learn", "taught"],
+      "distractorWords": ["do", "make", "erupt", "learn", "taught"]
+    },
+    {
+      "id": 138,
+      "paragraph": "A fox ____ a clever animal with a bushy tail. It ____ at night. It ____ chickens from farms. The fox ____ in a den underground. I saw ____ in a field.",
+      "blanks": 5,
+      "correctAnswers": ["is", "hunts", "steals", "lives", "one"],
+      "availableWords": ["is", "hunts", "steals", "lives", "one", "are", "hunt", "steal", "live", "it"],
+      "distractorWords": ["are", "hunt", "steal", "live", "it"]
+    },
+    {
+      "id": 139,
+      "paragraph": "I ____ to a new song on the radio. I really ____ the melody. I ____ the name of the artist. I ____ for the song online later. I want to add ____ to my playlist.",
+      "blanks": 5,
+      "correctAnswers": ["listened", "liked", "forgot", "will", "it"],
+      "availableWords": ["listened", "liked", "forgot", "will", "it", "listen", "like", "forget", "would", "them"],
+      "distractorWords": ["listen", "like", "forget", "would", "them"]
+    },
+    {
+      "id": 140,
+      "paragraph": "A vet ____ care of sick animals. She ____ them medicine and performs surgery. She ____ in a clinic or a hospital. It ____ a very rewarding job. She ____ all kinds of animals.",
+      "blanks": 5,
+      "correctAnswers": ["takes", "gives", "works", "is", "helps"],
+      "availableWords": ["takes", "gives", "works", "is", "helps", "take", "give", "work", "was", "help"],
+      "distractorWords": ["take", "give", "work", "was", "help"]
+    },
+    {
+      "id": 141,
+      "paragraph": "We ____ a trip to the city. We ____ the tall skyscrapers. We ____ the subway to get around. There ____ so many people everywhere. It ____ a busy place.",
+      "blanks": 5,
+      "correctAnswers": ["took", "saw", "rode", "were", "is"],
+      "availableWords": ["took", "saw", "rode", "were", "is", "take", "see", "ride", "was", "are"],
+      "distractorWords": ["take", "see", "ride", "was", "are"]
+    },
+    {
+      "id": 142,
+      "paragraph": "An octopus ____ eight arms called tentacles. It ____ in the ocean. It can ____ its color to hide from predators. It ____ a very intelligent creature. It squirts ink when ____ is scared.",
+      "blanks": 5,
+      "correctAnswers": ["has", "lives", "change", "is", "it"],
+      "availableWords": ["has", "lives", "change", "is", "it", "have", "live", "changes", "are", "he"],
+      "distractorWords": ["have", "live", "changes", "are", "he"]
+    },
+    {
+      "id": 143,
+      "paragraph": "I ____ my friend with his project. He ____ building a model airplane. We ____ the instructions carefully. It ____ a few hours to finish. The airplane ____ fantastic.",
+      "blanks": 5,
+      "correctAnswers": ["helped", "was", "followed", "took", "looked"],
+      "availableWords": ["helped", "was", "followed", "took", "looked", "help", "is", "follow", "takes", "looks"],
+      "distractorWords": ["help", "is", "follow", "takes", "looks"]
+    },
+    {
+      "id": 144,
+      "paragraph": "A chef ____ at a fancy restaurant. He ____ new and exciting dishes. He only ____ the freshest ingredients. People ____ from all over to eat his food. His restaurant ____ very famous.",
+      "blanks": 5,
+      "correctAnswers": ["cooks", "invents", "uses", "come", "is"],
+      "availableWords": ["cooks", "invents", "uses", "come", "is", "cook", "invent", "use", "comes", "are"],
+      "distractorWords": ["cook", "invent", "use", "comes", "are"]
+    },
+    {
+      "id": 145,
+      "paragraph": "We ____ a garage sale. We ____ old toys and books that we don't use anymore. Many people ____ to look at our things. We ____ some money. It ____ a successful day.",
+      "blanks": 5,
+      "correctAnswers": ["had", "sold", "came", "made", "was"],
+      "availableWords": ["had", "sold", "came", "made", "was", "have", "sell", "come", "make", "is"],
+      "distractorWords": ["have", "sell", "come", "make", "is"]
+    },
+    {
+      "id": 146,
+      "paragraph": "A butterfly ____ from a caterpillar. It ____ a short life but it is beautiful. It ____ nectar from flowers with its proboscis. Its wings ____ often brightly colored. They ____ delicate creatures.",
+      "blanks": 5,
+      "correctAnswers": ["develops", "has", "drinks", "are", "are"],
+      "availableWords": ["develops", "has", "drinks", "are", "are", "develop", "have", "drink", "is", "was"],
+      "distractorWords": ["develop", "have", "drink", "is", "was"]
+    },
+    {
+      "id": 147,
+      "paragraph": "I ____ a story before I go to sleep. My dad ____ it to me. Tonight's story ____ about a brave knight. The knight ____ a dragon to save the princess. I ____ the story.",
+      "blanks": 5,
+      "correctAnswers": ["read", "reads", "is", "fights", "love"],
+      "availableWords": ["read", "reads", "is", "fights", "love", "reads", "read", "are", "fight", "loves"],
+      "distractorWords": ["are", "fight", "loves"]
+    },
+    {
+      "id": 148,
+      "paragraph": "A plumber ____ pipes and water systems. If you have a leak, you ____ him. He ____ special tools to fix the problem. He ____ sure there are no more drips. It is ____ important job in a house.",
+      "blanks": 5,
+      "correctAnswers": ["installs", "call", "uses", "makes", "an"],
+      "availableWords": ["installs", "call", "uses", "makes", "an", "install", "calls", "use", "make", "a"],
+      "distractorWords": ["install", "calls", "use", "make", "a"]
+    },
+    {
+      "id": 149,
+      "paragraph": "We ____ to a farm. We ____ the animals. I ____ a sheep and my sister fed a goat. The farmer ____ us how he gets milk from cows. We ____ a great time.",
+      "blanks": 5,
+      "correctAnswers": ["went", "saw", "petted", "showed", "had"],
+      "availableWords": ["went", "saw", "petted", "showed", "had", "go", "see", "pet", "show", "have"],
+      "distractorWords": ["go", "see", "pet", "show", "have"]
+    },
+    {
+      "id": 150,
+      "paragraph": "A teacher ____ students in a school. She ____ them read and write. She ____ questions and helps them learn. She ____ a positive impact on many lives. My teacher ____ very kind.",
+      "blanks": 5,
+      "correctAnswers": ["teaches", "helps", "answers", "has", "is"],
+      "availableWords": ["teaches", "helps", "answers", "has", "is", "teach", "help", "answer", "have", "are"],
+      "distractorWords": ["teach", "help", "answer", "have", "are"]
+    }
+  ],
+  "medium": [
+    {
+      "id": 151,
+      "paragraph": "For the past few years, our city ____ implementing a new recycling program. If residents ____ their waste correctly, the city ____ its environmental goals. I ____ already started sorting my trash. It's not as difficult as I ____ it would be. Everyone ____ to participate ____ we want to make a real difference.",
+      "blanks": 7,
+      "correctAnswers": ["has been", "sort", "will meet", "have", "thought", "needs", "if"],
+      "availableWords": ["has been", "sort", "will meet", "have", "thought", "needs", "if", "was", "sorted", "would meet", "had", "think", "need", "unless"],
+      "distractorWords": ["was", "sorted", "would meet", "had", "think", "need", "unless"]
+    },
+    {
+      "id": 152,
+      "paragraph": "My brother is ____ at cooking than I am. He has ____ countless hours perfecting his recipes. Last night, he ____ a meal that was ____ delicious than anything I have ever tasted. If he ____ a restaurant, I am sure it ____ be very successful. He really enjoys ____ new dishes.",
+      "blanks": 7,
+      "correctAnswers": ["better", "spent", "made", "more", "opened", "would", "creating"],
+      "availableWords": ["better", "spent", "made", "more", "opened", "would", "creating", "good", "spending", "make", "most", "opens", "will", "to create", "create"],
+      "distractorWords": ["good", "spending", "make", "most", "opens", "will", "to create", "create"]
+    },
+    {
+      "id": 153,
+      "paragraph": "I ____ thinking about taking up a new hobby. My friend suggested ____ a musical instrument. I ____ always wanted to play the guitar. If I ____ lessons, I ____ practice every day. I think ____ a new skill would be very rewarding, ____ it might be challenging at first.",
+      "blanks": 8,
+      "correctAnswers": ["have been", "learning", "have", "took", "would", "learning", "although", "I"],
+      "availableWords": ["have been", "learning", "have", "took", "would", "learning", "although", "I", "am", "to learn", "had", "take", "will", "to learn", "because", "me"],
+      "distractorWords": ["am", "to learn", "had", "take", "will", "because", "me"]
+    },
+    {
+      "id": 154,
+      "paragraph": "The company announced that it ____ its headquarters to a new city next year. Employees ____ the option to relocate. If I ____ to move, I ____ to find a new apartment. I ____ never lived in a big city before, so it ____ be a huge change for me. I need ____ about it carefully.",
+      "blanks": 7,
+      "correctAnswers": ["will be moving", "are given", "decide", "will have", "have", "would", "to think"],
+      "availableWords": ["will be moving", "are given", "decide", "will have", "have", "would", "to think", "is moving", "give", "decided", "have", "had", "will", "thinking"],
+      "distractorWords": ["is moving", "give", "decided", "had", "will", "thinking"]
+    },
+    {
+      "id": 155,
+      "paragraph": "If I ____ known about the concert earlier, I ____ have bought tickets. They ____ sold out by the time I checked. My friends, who ____ their tickets weeks ago, said it was the ____ concert they had ever seen. I wish I ____ able to go with them. Next time, I ____ be faster.",
+      "blanks": 7,
+      "correctAnswers": ["had", "would", "were", "bought", "best", "had been", "will"],
+      "availableWords": ["had", "would", "were", "bought", "best", "had been", "will", "have", "will", "was", "buy", "better", "was", "would"],
+      "distractorWords": ["have", "will", "was", "buy", "better"]
+    },
+    {
+      "id": 156,
+      "paragraph": "By the time we ____ at the airport, our flight ____ already departed. We ____ the gate number, and by the time we found it, it was too late. If we ____ left home earlier, we ____ have missed it. We ended up ____ for the next available flight, which was not ____ eight hours.",
+      "blanks": 8,
+      "correctAnswers": ["arrived", "had", "misread", "had", "wouldn't", "waiting", "for", "until"],
+      "availableWords": ["arrived", "had", "misread", "had", "wouldn't", "waiting", "for", "until", "arrive", "has", "misreading", "have", "won't", "to wait", "in", "by"],
+      "distractorWords": ["arrive", "has", "misreading", "have", "won't", "to wait", "in", "by"]
+    },
+    {
+      "id": 157,
+      "paragraph": "Many scientists believe that ____ we reduce carbon emissions, global temperatures ____ continue to rise. Individuals ____ make a difference by ____ their energy consumption. For example, ____ to work instead of driving is one of the ____ effective changes a person can make. We ____ all do our part.",
+      "blanks": 7,
+      "correctAnswers": ["unless", "will", "can", "reducing", "cycling", "most", "should"],
+      "availableWords": ["unless", "will", "can", "reducing", "cycling", "most", "should", "if", "would", "may", "reduce", "to cycle", "more", "must"],
+      "distractorWords": ["if", "would", "may", "reduce", "to cycle", "more", "must"]
+    },
+    {
+      "id": 158,
+      "paragraph": "I ____ on this project for three months, and I'm finally nearing the end. It has been ____ challenging than I initially expected. If I get a good grade, it ____ have been worth all the hard work. My professor ____ me to submit it by Friday, so I ____ work hard to finish it on time. I look forward to ____ a break.",
+      "blanks": 7,
+      "correctAnswers": ["have been working", "more", "will", "advised", "must", "taking", "am"],
+      "availableWords": ["have been working", "more", "will", "advised", "must", "taking", "am", "worked", "most", "would", "advises", "can", "to take", "I"],
+      "distractorWords": ["worked", "most", "would", "advises", "can", "to take", "I"]
+    },
+    {
+      "id": 159,
+      "paragraph": "The author, ____ books have sold millions of copies, ____ giving a talk at the local library next week. I ____ already reserved my seat. If I ____ the chance, I ____ ask her about her writing process. I am interested in ____ how she develops her characters. I think it ____ be a fascinating evening.",
+      "blanks": 7,
+      "correctAnswers": ["whose", "is", "have", "get", "will", "learning", "will"],
+      "availableWords": ["whose", "is", "have", "get", "will", "learning", "will", "who", "was", "had", "got", "would", "to learn", "would"],
+      "distractorWords": ["who", "was", "had", "got", "would", "to learn"]
+    },
+    {
+      "id": 160,
+      "paragraph": "If you ____ to improve your fitness, you ____ start by setting realistic goals. You don't have to run a marathon tomorrow. ____ slowly is more sustainable ____ trying to do too much too soon. You ____ be surprised at how much progress you ____ make in just a few weeks. Consistency is ____ than intensity.",
+      "blanks": 7,
+      "correctAnswers": ["want", "should", "Starting", "than", "will", "can", "more important"],
+      "availableWords": ["want", "should", "Starting", "than", "will", "can", "more important", "wanted", "must", "To start", "then", "would", "could", "important"],
+      "distractorWords": ["wanted", "must", "To start", "then", "would", "could", "important"]
+    },
+    {
+      "id": 161,
+      "paragraph": "My car ____ down last week, so I had to take it to the mechanic. He said the engine ____ to be repaired, which ____ be expensive. I wish I ____ more about cars so I could fix it myself. ____ a car is convenient, but ____ with repairs can be a headache.",
+      "blanks": 6,
+      "correctAnswers": ["broke", "needed", "would", "knew", "Owning", "dealing"],
+      "availableWords": ["broke", "needed", "would", "knew", "Owning", "dealing", "breaks", "needs", "will", "know", "To own", "to deal", "dealt"],
+      "distractorWords": ["breaks", "needs", "will", "know", "To own", "to deal", "dealt"]
+    },
+    {
+      "id": 162,
+      "paragraph": "Since ____ to this city, I ____ discovered so many wonderful cafes. There is one I particularly like ____ is just around the corner from my apartment. If I ____ free time on the weekends, I often ____ there to read. The coffee is the ____ I've ever had, and the atmosphere is very relaxing.",
+      "blanks": 7,
+      "correctAnswers": ["moving", "have", "which", "have", "go", "best", "that"],
+      "availableWords": ["moving", "have", "which", "have", "go", "best", "that", "moved", "had", "that", "had", "went", "better", "who"],
+      "distractorWords": ["moved", "had", "went", "better", "who"]
+    },
+    {
+      "id": 163,
+      "paragraph": "By the time the firefighters ____, the building ____ already been burning for an hour. A witness said he ____ smoke and immediately called for help. If the alarm system ____ working correctly, the fire ____ have been detected earlier. The cause of the fire ____ still being investigated.",
+      "blanks": 6,
+      "correctAnswers": ["arrived", "had", "saw", "had been", "would", "is"],
+      "availableWords": ["arrived", "had", "saw", "had been", "would", "is", "arrive", "has", "seen", "was", "will", "was"],
+      "distractorWords": ["arrive", "has", "seen", "was", "will"]
+    },
+    {
+      "id": 164,
+      "paragraph": "I ____ for a new job for several weeks without much luck. Yesterday, however, I ____ an email inviting me for an interview. If the interview ____ well, I ____ get a job offer. I need ____ for it thoroughly, so I ____ spending the weekend researching the company.",
+      "blanks": 6,
+      "correctAnswers": ["have been looking", "received", "goes", "might", "to prepare", "will be"],
+      "availableWords": ["have been looking", "received", "goes", "might", "to prepare", "will be", "looked", "receive", "went", "can", "preparing", "am"],
+      "distractorWords": ["looked", "receive", "went", "can", "preparing", "am"]
+    },
+    {
+      "id": 165,
+      "paragraph": "____ you ever considered ____ abroad? I ____ about it a lot recently. If I ____ the opportunity, I think I ____ take it. It would be a chance ____ a new culture and learn a new language. It's a ____ scarier prospect than staying here, but also much ____ exciting.",
+      "blanks": 8,
+      "correctAnswers": ["Have", "living", "have been thinking", "had", "would", "to experience", "more", "more"],
+      "availableWords": ["Have", "living", "have been thinking", "had", "would", "to experience", "more", "more", "Did", "to live", "thought", "have", "will", "experiencing", "most", "less"],
+      "distractorWords": ["Did", "to live", "thought", "have", "will", "experiencing", "most", "less"]
+    },
+    {
+      "id": 166,
+      "paragraph": "My friend ____ me to go hiking this weekend, but I'm not sure if I ____. The weather forecast says it ____ rain. If it rains, we ____ not be able to go. We ____ a backup plan, ____ as going to the cinema. We will decide ____ on Saturday morning.",
+      "blanks": 7,
+      "correctAnswers": ["has asked", "can", "might", "will", "should make", "such", "based"],
+      "availableWords": ["has asked", "can", "might", "will", "should make", "such", "based", "asked", "should", "will", "would", "must make", "like", "decided"],
+      "distractorWords": ["asked", "should", "would", "must make", "like", "decided"]
+    },
+    {
+      "id": 167,
+      "paragraph": "The film ____ based on a book that I ____ last year. I thought the book was much ____ than the film. If the director ____ more faithful to the original story, the movie ____ have been better. They changed too many key plot points, ____ was disappointing.",
+      "blanks": 6,
+      "correctAnswers": ["was", "read", "better", "had been", "would", "which"],
+      "availableWords": ["was", "read", "better", "had been", "would", "which", "is", "have read", "good", "was", "will", "that"],
+      "distractorWords": ["is", "have read", "good", "will", "that"]
+    },
+    {
+      "id": 168,
+      "paragraph": "You ____ be a member to use this gym. I ____ here for about a year. If you join, you ____ get access to all the equipment and classes. The trainers are ____ helpful and can help you create a workout plan. ____ in shape is easier when you have support.",
+      "blanks": 6,
+      "correctAnswers": ["must", "have been coming", "will", "very", "Getting", "also"],
+      "availableWords": ["must", "have been coming", "will", "very", "Getting", "also", "can", "came", "would", "so", "To get", "too"],
+      "distractorWords": ["can", "came", "would", "so", "To get", "too"]
+    },
+    {
+      "id": 169,
+      "paragraph": "I regret ____ so much money on that gadget. It ____ working after just a few weeks. If I had read the reviews, I ____ have bought it. From now on, I ____ do more research before ____ a purchase. It was ____ expensive lesson to learn.",
+      "blanks": 6,
+      "correctAnswers": ["spending", "stopped", "wouldn't", "will", "making", "an"],
+      "availableWords": ["spending", "stopped", "wouldn't", "will", "making", "an", "to spend", "stops", "won't", "would", "to make", "a"],
+      "distractorWords": ["to spend", "stops", "won't", "would", "to make", "a"]
+    },
+    {
+      "id": 170,
+      "paragraph": "By the time I finish this course, I ____ have learned three different programming languages. It ____ a lot of work, but I think it ____ be worth it in the long run. If I ____ all my exams, I ____ be qualified for a better job. I am looking forward to ____ my new skills.",
+      "blanks": 7,
+      "correctAnswers": ["will", "has been", "will", "pass", "will", "using", "to"],
+      "availableWords": ["will", "has been", "will", "pass", "will", "using", "to", "would", "was", "would", "passed", "would", "to use", "for"],
+      "distractorWords": ["would", "was", "passed", "to use", "for"]
+    },
+    {
+      "id": 171,
+      "paragraph": "The new manager ____ some changes since she arrived. The office is now ____ more organized than it used to be. If she ____ these policies, productivity ____ likely increase. Many employees seem ____ with the new direction, ____ some are still skeptical.",
+      "blanks": 7,
+      "correctAnswers": ["has implemented", "much", "continues", "will", "pleased", "although", "to be"],
+      "availableWords": ["has implemented", "much", "continues", "will", "pleased", "although", "to be", "implemented", "so", "continued", "would", "pleasing", "because", "being"],
+      "distractorWords": ["implemented", "so", "continued", "would", "pleasing", "because", "being"]
+    },
+    {
+      "id": 172,
+      "paragraph": "I ____ my friend for over ten years. We ____ each other since we were in primary school. If you ____ us together, you ____ think we were brothers. We have so much in common, ____ our taste in music. We are planning ____ on a road trip this summer.",
+      "blanks": 7,
+      "correctAnswers": ["have known", "have known", "saw", "would", "including", "to go", "on"],
+      "availableWords": ["have known", "have known", "saw", "would", "including", "to go", "on", "knew", "knew", "see", "will", "like", "going", "in"],
+      "distractorWords": ["knew", "see", "will", "like", "going", "in"]
+    },
+    {
+      "id": 173,
+      "paragraph": "This is the ____ documentary I ____ ever seen about wildlife. The cinematography is breathtaking. If you ____ animals, you ____ definitely watch it. It shows how different species have adapted ____ in extreme environments. I ____ it to all my friends.",
+      "blanks": 6,
+      "correctAnswers": ["best", "have", "love", "should", "to living", "have recommended"],
+      "availableWords": ["best", "have", "love", "should", "to living", "have recommended", "better", "had", "loved", "must", "living", "recommended"],
+      "distractorWords": ["better", "had", "loved", "must", "living", "recommended"]
+    },
+    {
+      "id": 174,
+      "paragraph": "____ I was walking home yesterday, I ____ into an old friend I hadn't seen in years. We ____ for a coffee to catch up. He told me he ____ in London for the past five years. If I had known he was in town, I ____ have contacted him sooner. It was great ____ him again.",
+      "blanks": 7,
+      "correctAnswers": ["While", "ran", "stopped", "had been living", "would", "to see", "but"],
+      "availableWords": ["While", "ran", "stopped", "had been living", "would", "to see", "but", "As", "run", "stopping", "was living", "will", "seeing", "and"],
+      "distractorWords": ["As", "run", "stopping", "was living", "will", "seeing", "and"]
+    },
+    {
+      "id": 175,
+      "paragraph": "The concert ____ to start at 8 PM, but it was delayed. By the time the band came on stage, we ____ for over an hour. ____ the delay, the performance was fantastic. If they ____ to our city again, I ____ definitely go see them. It was one of the ____ nights of the year.",
+      "blanks": 7,
+      "correctAnswers": ["was supposed", "had been waiting", "Despite", "come", "will", "most memorable", "because"],
+      "availableWords": ["was supposed", "had been waiting", "Despite", "come", "will", "most memorable", "because", "supposed", "waited", "Although", "came", "would", "memorable", "so"],
+      "distractorWords": ["supposed", "waited", "Although", "came", "would", "memorable", "so"]
+    },
+    {
+      "id": 176,
+      "paragraph": "If you heat ice, it ____. This is a scientific fact that ____ for centuries. Water ____ of hydrogen and oxygen atoms. Unless a substance ____ a chemical change, its molecular structure remains the same. This is something everyone ____ in basic chemistry class.",
+      "blanks": 6,
+      "correctAnswers": ["melts", "has been known", "is composed", "undergoes", "learns", "to undergo"],
+      "availableWords": ["melts", "has been known", "is composed", "undergoes", "learns", "to undergo", "melted", "knew", "composes", "underwent", "learn", "undergoing"],
+      "distractorWords": ["melted", "knew", "composes", "underwent", "learn", "undergoing"]
+    },
+    {
+      "id": 177,
+      "paragraph": "I ____ you earlier, but my phone battery ____. I ____ it all day and forgot to charge it. If I ____ my charger with me, this wouldn't have happened. I'm sorry if you ____. I ____ call you as soon as I get home.",
+      "blanks": 6,
+      "correctAnswers": ["would have called", "died", "had been using", "had had", "were worried", "will"],
+      "availableWords": ["would have called", "died", "had been using", "had had", "were worried", "will", "called", "was dead", "used", "had", "worried", "would"],
+      "distractorWords": ["called", "was dead", "used", "had", "worried", "would"]
+    },
+    {
+      "id": 178,
+      "paragraph": "The package I ____ ____ to arrive by now. I ____ it online, and it says it's out for delivery. If it ____ arrive by 5 PM, I ____ have to call customer service. I hope it gets here soon, ____ I need it for this weekend. It's the ____ I've waited for a delivery.",
+      "blanks": 8,
+      "correctAnswers": ["ordered", "was supposed", "have been tracking", "doesn't", "will", "because", "longest", "that"],
+      "availableWords": ["ordered", "was supposed", "have been tracking", "doesn't", "will", "because", "longest", "that", "order", "supposed", "tracked", "don't", "would", "so", "longer", "which"],
+      "distractorWords": ["order", "supposed", "tracked", "don't", "would", "so", "longer", "which"]
+    },
+    {
+      "id": 179,
+      "paragraph": "My sister, ____ is an architect, designed her own house. She ____ on the plans for over a year before construction began. By the time it was finished, she ____ every detail perfectly. If you ____ it, you ____ be amazed by how much thought went into it. She is very proud of what she ____.",
+      "blanks": 7,
+      "correctAnswers": ["who", "had worked", "had planned", "saw", "would", "has achieved", "so"],
+      "availableWords": ["who", "had worked", "had planned", "saw", "would", "has achieved", "so", "which", "worked", "planned", "see", "will", "achieved", "and"],
+      "distractorWords": ["which", "worked", "planned", "see", "will", "achieved", "and"]
+    },
+    {
+      "id": 180,
+      "paragraph": "____ having a degree is important, practical experience is often ____ valuable. Many employers now look for candidates who ____ demonstrated their skills in real-world settings. If I ____ a student again, I ____ try to get an internship. It's the best way ____ what a job is really like.",
+      "blanks": 6,
+      "correctAnswers": ["Although", "more", "have", "were", "would", "to learn"],
+      "availableWords": ["Although", "more", "have", "were", "would", "to learn", "Because", "most", "had", "was", "will", "learning"],
+      "distractorWords": ["Because", "most", "had", "was", "will", "learning"]
+    },
+    {
+      "id": 181,
+      "paragraph": "If I ____ a lottery, the first thing I ____ do is buy a house for my parents. I ____ about this for years. They have done so much for me, so it would be my way of ____ thank you. Of course, ____ the lottery is highly unlikely, but a person can dream, ____ they?",
+      "blanks": 7,
+      "correctAnswers": ["won", "would", "have dreamed", "saying", "winning", "can't", "they"],
+      "availableWords": ["won", "would", "have dreamed", "saying", "winning", "can't", "they", "win", "will", "dreamed", "to say", "to win", "can", "can"],
+      "distractorWords": ["win", "will", "dreamed", "to say", "to win", "can"]
+    },
+    {
+      "id": 182,
+      "paragraph": "The new software update ____ installed tomorrow morning. All employees are advised ____ their work before leaving today. If you ____ any issues after the update, you ____ contact the IT department. The update is expected ____ system performance and security. It ____ be completed before 9 AM.",
+      "blanks": 7,
+      "correctAnswers": ["will be", "to save", "experience", "should", "to improve", "should", "that"],
+      "availableWords": ["will be", "to save", "experience", "should", "to improve", "should", "that", "is", "saving", "experienced", "must", "improving", "must", "which"],
+      "distractorWords": ["is", "saving", "experienced", "must", "improving", "which"]
+    },
+    {
+      "id": 183,
+      "paragraph": "I ____ to that restaurant many times, and the food ____ always been excellent. However, the last time I went, I ____ very disappointed. If they ____ changed their chef, it would explain the drop in quality. I don't think I ____ be going back there anytime soon. It's a shame, ____ it used to be my favorite place.",
+      "blanks": 7,
+      "correctAnswers": ["have been", "has", "was", "have", "will", "as", "since"],
+      "availableWords": ["have been", "has", "was", "have", "will", "as", "since", "went", "had", "am", "had", "would", "because", "so"],
+      "distractorWords": ["went", "had", "am", "would", "because", "so"]
+    },
+    {
+      "id": 184,
+      "paragraph": "By the end of this year, I ____ at this company for a decade. It feels like I started only yesterday. If someone ____ me ten years ago that I would still be here, I ____ have believed them. I ____ many roles during my time here, and I enjoy ____ new challenges.",
+      "blanks": 6,
+      "correctAnswers": ["will have been working", "had told", "wouldn't", "have had", "facing", "the"],
+      "availableWords": ["will have been working", "had told", "wouldn't", "have had", "facing", "the", "am working", "told", "won't", "had", "to face", "a"],
+      "distractorWords": ["am working", "told", "won't", "had", "to face", "a"]
+    },
+    {
+      "id": 185,
+      "paragraph": "The marathon ____ next Sunday, and thousands of runners ____. I ____ for months for this event. If the weather is good, I ____ to achieve a personal best time. My biggest challenge will be ____ a consistent pace for the entire race. I am both nervous ____ excited.",
+      "blanks": 7,
+      "correctAnswers": ["is taking place", "are expected", "have been training", "hope", "maintaining", "and", "but"],
+      "availableWords": ["is taking place", "are expected", "have been training", "hope", "maintaining", "and", "but", "takes place", "expect", "trained", "hoped", "to maintain", "or", "so"],
+      "distractorWords": ["takes place", "expect", "trained", "hoped", "to maintain", "or", "so"]
+    },
+    {
+      "id": 186,
+      "paragraph": "This museum, ____ was recently renovated, now features an interactive exhibit. I ____ it last weekend with my family. If you have children, you ____ definitely take them. There are many hands-on activities ____ are both educational and fun. We ____ for three hours and didn't even see everything.",
+      "blanks": 6,
+      "correctAnswers": ["which", "visited", "should", "that", "stayed", "which"],
+      "availableWords": ["which", "visited", "should", "that", "stayed", "which", "that", "visit", "must", "who", "stay", "who"],
+      "distractorWords": ["that", "visit", "must", "who", "stay"]
+    },
+    {
+      "id": 187,
+      "paragraph": "I wish I ____ paid more attention in my history class. We are studying a period that I ____ find very confusing. If I had taken better notes, I ____ be struggling so much now. I ____ ask the teacher for some extra help. ____ for the exam will be difficult.",
+      "blanks": 6,
+      "correctAnswers": ["had", "now", "wouldn't", "might have to", "Studying", "that"],
+      "availableWords": ["had", "now", "wouldn't", "might have to", "Studying", "that", "have", "then", "won't", "should", "To study", "which"],
+      "distractorWords": ["have", "then", "won't", "should", "To study", "which"]
+    },
+    {
+      "id": 188,
+      "paragraph": "____ you finish your report, please send it to me for review. I ____ it by the end of the day. If there are any major changes ____, I will let you know tomorrow. The deadline for the final version ____ Friday, so we still have some time. Thank you for ____ so hard on this.",
+      "blanks": 7,
+      "correctAnswers": ["When", "need to read", "needed", "is", "working", "so", "hard"],
+      "availableWords": ["When", "need to read", "needed", "is", "working", "so", "hard", "If", "read", "needing", "was", "to work", "very", "much"],
+      "distractorWords": ["If", "read", "needing", "was", "to work", "very", "much"]
+    },
+    {
+      "id": 189,
+      "paragraph": "The new policy on remote work ____ announced next month. The management ____ feedback from employees for the past few weeks. If the policy is flexible, it ____ improve employee morale. Many people enjoy ____ from home, as it offers a better work-life balance. We are all eagerly ____ the announcement.",
+      "blanks": 6,
+      "correctAnswers": ["will be", "has been gathering", "could", "working", "awaiting", "to"],
+      "availableWords": ["will be", "has been gathering", "could", "working", "awaiting", "to", "is", "gathered", "can", "to work", "await", "for"],
+      "distractorWords": ["is", "gathered", "can", "to work", "await", "for"]
+    },
+    {
+      "id": 190,
+      "paragraph": "This is the ____ challenging book I ____ ever tried to read. The language is very complex. If I ____ a dictionary, I ____ be able to understand it. However, ____ up every other word is tedious. I might try ____ an easier book by the same author first.",
+      "blanks": 7,
+      "correctAnswers": ["most", "have", "had", "would", "looking", "reading", "an"],
+      "availableWords": ["most", "have", "had", "would", "looking", "reading", "an", "more", "had", "have", "will", "to look", "to read", "a"],
+      "distractorWords": ["more", "will", "to look", "to read", "a"]
+    },
+    {
+      "id": 191,
+      "paragraph": "The city ____ building a new bridge to ease traffic congestion. Construction ____ next month and is expected to take two years. Once it is complete, commuting times ____ be significantly reduced. If I ____ here in two years, I ____ definitely use it. For now, I have to continue ____ in traffic.",
+      "blanks": 7,
+      "correctAnswers": ["is", "begins", "should", "am still living", "will", "sitting", "here"],
+      "availableWords": ["is", "begins", "should", "am still living", "will", "sitting", "here", "was", "began", "must", "live", "would", "to sit", "there"],
+      "distractorWords": ["was", "began", "must", "live", "would", "to sit", "there"]
+    },
+    {
+      "id": 192,
+      "paragraph": "If you ____ to a new country, you ____ experience culture shock. It's a natural part of the adaptation process. It ____ better once you start ____ friends and learning the local customs. Don't be afraid ____ for help if you're feeling overwhelmed. It's ____ than trying to handle it alone.",
+      "blanks": 7,
+      "correctAnswers": ["move", "might", "gets", "making", "to ask", "better", "to"],
+      "availableWords": ["move", "might", "gets", "making", "to ask", "better", "to", "moved", "can", "got", "to make", "asking", "good", "for"],
+      "distractorWords": ["moved", "can", "got", "to make", "asking", "good", "for"]
+    },
+    {
+      "id": 193,
+      "paragraph": "I ____ to learn how to ski for years. This winter, I finally ____ it. I ____ a few lessons, and it was much ____ than I expected. If I had started when I was younger, I ____ be better now. But it's never too late ____ something new.",
+      "blanks": 6,
+      "correctAnswers": ["have been wanting", "did", "took", "harder", "would", "to learn"],
+      "availableWords": ["have been wanting", "did", "took", "harder", "would", "to learn", "wanted", "do", "take", "hardest", "will", "learning"],
+      "distractorWords": ["wanted", "do", "take", "hardest", "will", "learning"]
+    },
+    {
+      "id": 194,
+      "paragraph": "By the time the police ____, the thief ____ already escaped. An eyewitness, ____ was walking his dog, saw the whole thing. He ____ a detailed description of the suspect. If he ____ seen the suspect's face, the police would have a better chance of catching him.",
+      "blanks": 6,
+      "correctAnswers": ["arrived", "had", "who", "gave", "had", "would"],
+      "availableWords": ["arrived", "had", "who", "gave", "had", "would", "arrive", "has", "which", "give", "have", "will"],
+      "distractorWords": ["arrive", "has", "which", "give", "have", "will"]
+    },
+    {
+      "id": 195,
+      "paragraph": "The play we saw last night was ____. The actors ____ so talented, and the story was very moving. I ____ it to anyone who enjoys live theater. If you decide ____, you ____ to book tickets in advance, as it is very popular. You will not ____ it.",
+      "blanks": 7,
+      "correctAnswers": ["brilliant", "were", "would recommend", "to go", "will need", "regret", "that"],
+      "availableWords": ["brilliant", "were", "would recommend", "to go", "will need", "regret", "that", "good", "are", "recommend", "going", "need", "regretting", "which"],
+      "distractorWords": ["good", "are", "recommend", "going", "need", "regretting", "which"]
+    },
+    {
+      "id": 196,
+      "paragraph": "I ____ about applying for a Master's degree. If I ____ accepted, I ____ have to move to another city. It's a big decision ____ it would mean leaving my job and friends. On the other hand, ____ a higher qualification could open up more career opportunities. I need to ____ the pros and cons carefully.",
+      "blanks": 7,
+      "correctAnswers": ["have been thinking", "get", "will", "because", "having", "weigh", "the"],
+      "availableWords": ["have been thinking", "get", "will", "because", "having", "weigh", "the", "thought", "got", "would", "so", "to have", "weighing", "a"],
+      "distractorWords": ["thought", "got", "would", "so", "to have", "weighing", "a"]
+    },
+    {
+      "id": 197,
+      "paragraph": "I wish I ____ a camera with me on my trip. The landscapes were absolutely ____. I ____ so many pictures if I had one. I tried ____ photos with my phone, but the quality isn't the same. Next time I travel, I ____ definitely bring a proper camera.",
+      "blanks": 6,
+      "correctAnswers": ["had brought", "stunning", "would have taken", "taking", "will", "to take"],
+      "availableWords": ["had brought", "stunning", "would have taken", "taking", "will", "to take", "brought", "stunned", "took", "to take", "would", "taken"],
+      "distractorWords": ["brought", "stunned", "took", "would", "taken"]
+    },
+    {
+      "id": 198,
+      "paragraph": "If the weather ____ nice this weekend, we ____ for a barbecue in the park. My friend ____ to bring his guitar, so we can have some music. We have not ____ a proper get-together in months. It will be a great opportunity ____ with everyone. I ____ really looking forward to it.",
+      "blanks": 7,
+      "correctAnswers": ["is", "will go", "has offered", "had", "to catch up", "am", "so"],
+      "availableWords": ["is", "will go", "has offered", "had", "to catch up", "am", "so", "was", "go", "offered", "have", "catching up", "was", "and"],
+      "distractorWords": ["was", "go", "offered", "have", "catching up", "and"]
+    },
+    {
+      "id": 199,
+      "paragraph": "This is the ____ biography I have ever read. The author ____ an incredible amount of research. By the time I finished it, I ____ I knew the subject personally. If you are interested ____ history, I can't recommend this book ____. It is truly a masterpiece.",
+      "blanks": 6,
+      "correctAnswers": ["most fascinating", "must have done", "felt", "in", "enough", "about"],
+      "availableWords": ["most fascinating", "must have done", "felt", "in", "enough", "about", "fascinating", "did", "feel", "on", "too", "of"],
+      "distractorWords": ["fascinating", "did", "feel", "on", "too", "of"]
+    },
+    {
+      "id": 200,
+      "paragraph": "I ____ my keys. I ____ them everywhere, but I can't find them. I must ____ them somewhere when I was out. If I don't find them, I ____ have to call a locksmith. This is the ____ time this ____ happened this year. I need to be more careful.",
+      "blanks": 7,
+      "correctAnswers": ["have lost", "have looked", "have dropped", "will", "second", "has", "to be"],
+      "availableWords": ["have lost", "have looked", "have dropped", "will", "second", "has", "to be", "lost", "looked", "dropped", "would", "two", "have", "being"],
+      "distractorWords": ["lost", "looked", "dropped", "would", "two", "have", "being"]
+    },
+    {
+      "id": 201,
+      "paragraph": "The new exhibition at the art gallery, ____ features works by modern artists, ____ rave reviews. I am planning ____ it this weekend. If I ____ time, I ____ also attend the artist's talk. I enjoy ____ the stories behind the artworks. It makes the experience ____ more meaningful.",
+      "blanks": 8,
+      "correctAnswers": ["which", "has been receiving", "to visit", "have", "will", "hearing", "much", "so"],
+      "availableWords": ["which", "has been receiving", "to visit", "have", "will", "hearing", "much", "so", "that", "received", "visiting", "had", "would", "to hear", "very", "and"],
+      "distractorWords": ["that", "received", "visiting", "had", "would", "to hear", "very", "and"]
+    },
+    {
+      "id": 202,
+      "paragraph": "If I ____ to choose any superpower, I ____ choose the ability to fly. Imagine ____ able to soar above the city, ____ the world from a different perspective. I ____ not have to worry about traffic ever again. It ____ be the ultimate freedom. What superpower ____ you choose?",
+      "blanks": 7,
+      "correctAnswers": ["had", "would", "being", "seeing", "would", "would", "would"],
+      "availableWords": ["had", "would", "being", "seeing", "would", "would", "would", "have", "will", "to be", "to see", "will", "will", "will"],
+      "distractorWords": ["have", "will", "to be", "to see"]
+    },
+    {
+      "id": 203,
+      "paragraph": "Since the new cafe ____, it ____ incredibly popular. It's often difficult ____ a table, especially on weekends. The coffee they serve is said ____ the best in town. If you want to try it, I ____ going on a weekday. The atmosphere is much ____ relaxed then.",
+      "blanks": 7,
+      "correctAnswers": ["opened", "has become", "to find", "to be", "suggest", "more", "so"],
+      "availableWords": ["opened", "has become", "to find", "to be", "suggest", "more", "so", "opens", "became", "finding", "being", "suggested", "most", "and"],
+      "distractorWords": ["opens", "became", "finding", "being", "suggested", "most", "and"]
+    },
+    {
+      "id": 204,
+      "paragraph": "The results of the study, ____ were published yesterday, suggest a link between sleep and memory. The researchers found that participants who ____ a full eight hours of sleep ____ better on memory tests. If these findings are confirmed, they ____ have important implications for how we approach learning. Further research ____ needed.",
+      "blanks": 7,
+      "correctAnswers": ["which", "had slept", "performed", "could", "is", "that", "were"],
+      "availableWords": ["which", "had slept", "performed", "could", "is", "that", "were", "that", "slept", "perform", "can", "are", "which", "are"],
+      "distractorWords": ["slept", "perform", "can", "are"]
+    },
+    {
+      "id": 205,
+      "paragraph": "I ____ to save money for a new laptop. My current one ____ very old and slow. By the end of the summer, I hope I ____ saved enough. If I buy a new one, I ____ be able to work much more efficiently. It will be ____ expensive, but I think it's a necessary investment.",
+      "blanks": 7,
+      "correctAnswers": ["am trying", "is", "will have", "will", "an", "but", "so"],
+      "availableWords": ["am trying", "is", "will have", "will", "an", "but", "so", "tried", "was", "saved", "would", "a", "and", "because"],
+      "distractorWords": ["tried", "was", "saved", "would", "a", "and", "because"]
+    },
+    {
+      "id": 206,
+      "paragraph": "If you ____ a crime, you ____ report it to the police immediately. ____ as many details as you can remember is crucial for the investigation. The police ____ you questions to understand what happened. Your cooperation ____ help them solve the case. It is everyone's responsibility ____ the community safe.",
+      "blanks": 7,
+      "correctAnswers": ["witness", "should", "Providing", "will ask", "can", "to keep", "to"],
+      "availableWords": ["witness", "should", "Providing", "will ask", "can", "to keep", "to", "witnessed", "must", "To provide", "ask", "may", "keeping", "for"],
+      "distractorWords": ["witnessed", "must", "To provide", "ask", "may", "keeping", "for"]
+    },
+    {
+      "id": 207,
+      "paragraph": "The project I ____ on for the last six months ____ finally presented to the board yesterday. I was nervous, but the presentation ____ well. The board seemed impressed with the results we ____. If they approve the next phase, we ____ begin work next month. I am proud of what my team ____ accomplished.",
+      "blanks": 7,
+      "correctAnswers": ["had been working", "was", "went", "had achieved", "will", "has", "so"],
+      "availableWords": ["had been working", "was", "went", "had achieved", "will", "has", "so", "worked", "is", "go", "achieved", "would", "have", "and"],
+      "distractorWords": ["worked", "is", "go", "achieved", "would", "have", "and"]
+    },
+    {
+      "id": 208,
+      "paragraph": "____ you ever tried meditating? It is said ____ a great way to reduce stress. I ____ doing it for a few minutes every morning. If you are consistent, you ____ notice a difference in your mood. There are many apps ____ can guide you through the process. It's ____ than you might think.",
+      "blanks": 7,
+      "correctAnswers": ["Have", "to be", "have started", "will", "that", "easier", "to"],
+      "availableWords": ["Have", "to be", "have started", "will", "that", "easier", "to", "Did", "being", "started", "would", "which", "easy", "for"],
+      "distractorWords": ["Did", "being", "started", "would", "which", "easy", "for"]
+    },
+    {
+      "id": 209,
+      "paragraph": "The house ____ my grandparents lived is being sold. It ____ in our family for over a century. If those walls could talk, they ____ tell some amazing stories. I have so many fond memories of ____ my summers there. It's sad to see it go, ____ I know it's time for another family to create their own memories.",
+      "blanks": 7,
+      "correctAnswers": ["where", "has been", "would", "spending", "but", "that", "because"],
+      "availableWords": ["where", "has been", "would", "spending", "but", "that", "because", "which", "was", "will", "to spend", "and", "which", "so"],
+      "distractorWords": ["which", "was", "will", "to spend", "and", "so"]
+    },
+    {
+      "id": 210,
+      "paragraph": "By this time tomorrow, we ____ on a beach in Hawaii. I ____ forward to this vacation for months. If everything goes as planned, it ____ be the most relaxing trip ever. I have packed several books ____ while I'm there. I can't wait ____ from work.",
+      "blanks": 6,
+      "correctAnswers": ["will be relaxing", "have been looking", "will", "to read", "to disconnect", "the"],
+      "availableWords": ["will be relaxing", "have been looking", "will", "to read", "to disconnect", "the", "relax", "looked", "would", "reading", "disconnecting", "a"],
+      "distractorWords": ["relax", "looked", "would", "reading", "disconnecting", "a"]
+    },
+    {
+      "id": 211,
+      "paragraph": "I ____ to call you yesterday, but I ____ your number. If you had sent it to me, I ____ have been able to reach you. I ended up ____ an email instead. I hope you got it. Please call me back when you ____ this message.",
+      "blanks": 6,
+      "correctAnswers": ["tried", "didn't have", "would", "sending", "get", "that"],
+      "availableWords": ["tried", "didn't have", "would", "sending", "get", "that", "try", "hadn't", "will", "to send", "got", "which"],
+      "distractorWords": ["try", "hadn't", "will", "to send", "got", "which"]
+    },
+    {
+      "id": 212,
+      "paragraph": "The government has announced that a new high-speed train line ____. It ____ connect the country's two largest cities. By the time it is operational, it ____ have cost billions of dollars. If the project is successful, it ____ travel times dramatically. Many people are excited ____ this development.",
+      "blanks": 6,
+      "correctAnswers": ["will be built", "will", "will", "will reduce", "about", "for"],
+      "availableWords": ["will be built", "will", "will", "will reduce", "about", "for", "is built", "would", "would", "reduces", "of", "to"],
+      "distractorWords": ["is built", "would", "reduces", "of", "to"]
+    },
+    {
+      "id": 213,
+      "paragraph": "My computer ____ strangely all morning. It keeps freezing and I ____ to restart it several times. I think it ____ be a virus. If it crashes completely, I ____ lose all my work. I should ____ up my files right now before it's too late.",
+      "blanks": 6,
+      "correctAnswers": ["has been acting", "have had", "might", "could", "back", "up"],
+      "availableWords": ["has been acting", "have had", "might", "could", "back", "up", "acted", "had", "can", "will", "backed", "down"],
+      "distractorWords": ["acted", "had", "can", "will", "backed", "down"]
+    },
+    {
+      "id": 214,
+      "paragraph": "I ____ a documentary about space exploration last night. It was fascinating ____ how much technology has advanced. If we continue ____ at this pace, we ____ be able to send humans to Mars in the next couple of decades. It's an exciting time for ____ interested in astronomy.",
+      "blanks": 6,
+      "correctAnswers": ["watched", "to see", "innovating", "might", "anyone", "those"],
+      "availableWords": ["watched", "to see", "innovating", "might", "anyone", "those", "watch", "seeing", "to innovate", "can", "someone", "them"],
+      "distractorWords": ["watch", "seeing", "to innovate", "can", "someone", "them"]
+    },
+    {
+      "id": 215,
+      "paragraph": "My application for the scholarship ____. I ____ for their decision for weeks. If I ____ it, I will be able to study abroad next year. It would be a dream come true. I have already started ____ the language of the country I want to go to. I am trying ____ optimistic.",
+      "blanks": 6,
+      "correctAnswers": ["has been submitted", "have been waiting", "get", "learning", "to stay", "that"],
+      "availableWords": ["has been submitted", "have been waiting", "get", "learning", "to stay", "that", "submitted", "waited", "got", "to learn", "staying", "which"],
+      "distractorWords": ["submitted", "waited", "got", "to learn", "staying", "which"]
+    },
+    {
+      "id": 216,
+      "paragraph": "If you mix blue and yellow paint, you ____ green. This is a rule of color theory that artists ____ for centuries. ____ the primary colors allows you to create a whole spectrum of other colors. Unless you ____ a pure white, you can't lighten a color without changing its hue. This is ____ than it sounds.",
+      "blanks": 7,
+      "correctAnswers": ["get", "have used", "Understanding", "have", "more complex", "that", "which"],
+      "availableWords": ["get", "have used", "Understanding", "have", "more complex", "that", "which", "got", "used", "To understand", "had", "complex", "who", "what"],
+      "distractorWords": ["got", "used", "To understand", "had", "complex", "who", "what"]
+    },
+    {
+      "id": 217,
+      "paragraph": "By the time we arrived at the party, most of the guests ____ already left. We ____ in traffic for over an hour. If we had known the roads would be so busy, we ____ have taken the train. It's a shame we ____ most of the fun. We only stayed for a short while before ____ home.",
+      "blanks": 7,
+      "correctAnswers": ["had", "had been stuck", "would", "missed", "heading", "the", "a"],
+      "availableWords": ["had", "had been stuck", "would", "missed", "heading", "the", "a", "have", "stuck", "will", "miss", "to head", "an", "some"],
+      "distractorWords": ["have", "stuck", "will", "miss", "to head", "an", "some"]
+    },
+    {
+      "id": 218,
+      "paragraph": "The new chef at this restaurant ____ some amazing dishes. I ____ here three times this month already. The food is ____ than any other place in town. If you ____ a fan of seafood, you ____ try their grilled octopus. It's the ____ popular item on the menu.",
+      "blanks": 7,
+      "correctAnswers": ["has been creating", "have eaten", "tastier", "are", "must", "most", "so"],
+      "availableWords": ["has been creating", "have eaten", "tastier", "are", "must", "most", "so", "created", "ate", "tasty", "is", "can", "more", "and"],
+      "distractorWords": ["created", "ate", "tasty", "is", "can", "more", "and"]
+    },
+    {
+      "id": 219,
+      "paragraph": "I am thinking of ____ a marathon next year. I ____ running seriously for a few months now. If I want to be ready, I ____ to train consistently. It ____ be a huge challenge, but I love ____ goals for myself. My friend, ____ has run several marathons, is giving me advice.",
+      "blanks": 7,
+      "correctAnswers": ["running", "have been", "will need", "will", "setting", "who", "that"],
+      "availableWords": ["running", "have been", "will need", "will", "setting", "who", "that", "to run", "am", "need", "would", "to set", "which", "whose"],
+      "distractorWords": ["to run", "am", "need", "would", "to set", "which", "whose"]
+    },
+    {
+      "id": 220,
+      "paragraph": "The movie ____ being filmed in our town for the past month. Many famous actors ____ seen in the local cafes. It has been very exciting for everyone. If I ____ a chance to be an extra, I ____ have taken it. The production ____ be wrapping up next week.",
+      "blanks": 6,
+      "correctAnswers": ["has been", "have been", "had had", "would", "will", "to"],
+      "availableWords": ["has been", "have been", "had had", "would", "will", "to", "was", "were", "had", "will", "would", "for"],
+      "distractorWords": ["was", "were", "had", "will"]
+    },
+    {
+      "id": 221,
+      "paragraph": "You ____ have a password to access this network. It ____ changed every month for security reasons. If you ____ your password, you will have to contact IT support. They ____ be able to reset it for you. Remember ____ a strong password that is hard to guess.",
+      "blanks": 6,
+      "correctAnswers": ["must", "is", "forget", "will", "to choose", "that"],
+      "availableWords": ["must", "is", "forget", "will", "to choose", "that", "can", "was", "forgot", "would", "choosing", "which"],
+      "distractorWords": ["can", "was", "forgot", "would", "choosing", "which"]
+    },
+    {
+      "id": 222,
+      "paragraph": "I ____ to read more classic literature. I just finished a novel ____ was written in the 19th century. The language was more formal ____ what I'm used to, but I enjoyed the challenge. If you are looking for a good book, I ____ recommend it. It gives you a great insight ____ the past.",
+      "blanks": 7,
+      "correctAnswers": ["have decided", "that", "than", "would", "into", "the", "a"],
+      "availableWords": ["have decided", "that", "than", "would", "into", "the", "a", "decided", "which", "then", "will", "on", "an", "some"],
+      "distractorWords": ["decided", "which", "then", "will", "on", "an", "some"]
+    },
+    {
+      "id": 223,
+      "paragraph": "The new community garden ____ a great success since it opened. Many local residents ____ involved in planting and tending to the vegetables. If you ____ to join, there is a sign-up sheet at the community center. ____ in the garden is a wonderful way to meet your neighbors and enjoy the outdoors. We ____ more volunteers.",
+      "blanks": 6,
+      "correctAnswers": ["has been", "have gotten", "would like", "Working", "always need", "the"],
+      "availableWords": ["has been", "have gotten", "would like", "Working", "always need", "the", "was", "got", "like", "To work", "need", "a"],
+      "distractorWords": ["was", "got", "like", "To work", "need", "a"]
+    },
+    {
+      "id": 224,
+      "paragraph": "I wish I ____ Spanish. I ____ to South America next year, and it would be very helpful. I ____ taking an online course, but I'm not sure if I'll be fluent by then. If I practice every day, I ____ be able to have basic conversations. It's ____ than knowing nothing at all.",
+      "blanks": 6,
+      "correctAnswers": ["spoke", "am traveling", "have started", "should", "better", "so"],
+      "availableWords": ["spoke", "am traveling", "have started", "should", "better", "so", "speak", "will travel", "started", "must", "good", "and"],
+      "distractorWords": ["speak", "will travel", "started", "must", "good", "and"]
+    },
+    {
+      "id": 225,
+      "paragraph": "This time next week, I ____ my final exams. I ____ for them for months. By the time they are over, I ____ have studied hundreds of hours. If I do well, I ____ be able to get into the university of my choice. I can't wait for them ____ over.",
+      "blanks": 6,
+      "correctAnswers": ["will be taking", "have been studying", "will", "should", "to be", "that"],
+      "availableWords": ["will be taking", "have been studying", "will", "should", "to be", "that", "take", "studied", "would", "can", "being", "which"],
+      "distractorWords": ["take", "studied", "would", "can", "being", "which"]
+    },
+    {
+      "id": 226,
+      "paragraph": "My flight ____ by two hours, so I am stuck at the airport. I ____ have finished my book by the time we take off. If I had known about the delay, I ____ have brought another one. I guess I will just listen to some music ____. It's ____ than just sitting here in silence.",
+      "blanks": 7,
+      "correctAnswers": ["has been delayed", "will", "would", "instead", "better", "that", "which"],
+      "availableWords": ["has been delayed", "will", "would", "instead", "better", "that", "which", "delayed", "would", "will", "so", "good", "who", "what"],
+      "distractorWords": ["delayed", "so", "good", "who", "what"]
+    },
+    {
+      "id": 227,
+      "paragraph": "I am not used to ____ in such a cold climate. I ____ from a much warmer country. It ____ here almost every day since I arrived. If I don't buy a warmer coat, I ____ get sick. My friends have recommended several stores ____ sell good winter gear.",
+      "blanks": 6,
+      "correctAnswers": ["living", "moved", "has been snowing", "will", "that", "where"],
+      "availableWords": ["living", "moved", "has been snowing", "will", "that", "where", "to live", "move", "snowed", "would", "which", "when"],
+      "distractorWords": ["to live", "move", "snowed", "would", "which", "when"]
+    },
+    {
+      "id": 228,
+      "paragraph": "The proposal we ____ on for the last month was finally approved. We ____ our presentation to the committee last week, and they ____ very impressed. If we get the budget we asked for, we ____ start the project next quarter. This is the ____ project my team has ever worked on.",
+      "blanks": 6,
+      "correctAnswers": ["had been working", "gave", "were", "can", "biggest", "so"],
+      "availableWords": ["had been working", "gave", "were", "can", "biggest", "so", "worked", "give", "are", "may", "bigger", "and"],
+      "distractorWords": ["worked", "give", "are", "may", "bigger", "and"]
+    },
+    {
+      "id": 229,
+      "paragraph": "Learning a new language ____ be challenging, but it is also very rewarding. I ____ learning French for a year now. My pronunciation ____ better, but I still need to work on my grammar. If I continue ____, I hope to be conversational in another year. The key is ____ consistently.",
+      "blanks": 6,
+      "correctAnswers": ["can", "have been", "is getting", "practicing", "to practice", "the"],
+      "availableWords": ["can", "have been", "is getting", "practicing", "to practice", "the", "should", "am", "gets", "to practice", "practicing", "a"],
+      "distractorWords": ["should", "am", "gets"]
+    },
+    {
+      "id": 230,
+      "paragraph": "I ____ to the gym three times a week for the past six months. I ____ much stronger and have more energy. If I had started exercising earlier, I ____ have felt this good years ago. It's amazing how much of a difference regular physical activity ____. I would recommend it ____ everyone.",
+      "blanks": 6,
+      "correctAnswers": ["have been going", "feel", "would", "makes", "to", "for"],
+      "availableWords": ["have been going", "feel", "would", "makes", "to", "for", "went", "felt", "will", "make", "of", "with"],
+      "distractorWords": ["went", "felt", "will", "make", "of", "with"]
+    },
+    {
+      "id": 231,
+      "paragraph": "The company is launching a new product next month, which they ____ will revolutionize the market. They ____ it for over two years. If the launch is successful, the company's stock price ____ likely soar. A huge marketing campaign ____ planned to promote it. I am curious ____ what it is.",
+      "blanks": 6,
+      "correctAnswers": ["believe", "have been developing", "will", "is being", "to see", "that"],
+      "availableWords": ["believe", "have been developing", "will", "is being", "to see", "that", "believes", "developed", "would", "planned", "seeing", "which"],
+      "distractorWords": ["believes", "developed", "would", "planned", "seeing", "which"]
+    },
+    {
+      "id": 232,
+      "paragraph": "If I ____ more free time, I ____ travel more. There are so many places in the world I ____ to see. I have always dreamed of ____ the ancient ruins in Greece. I ____ start saving up for a big trip. Maybe in a few years, my dream ____ come true.",
+      "blanks": 7,
+      "correctAnswers": ["had", "would", "would love", "seeing", "should", "will", "that"],
+      "availableWords": ["had", "would", "would love", "seeing", "should", "will", "that", "have", "will", "love", "to see", "must", "would", "which"],
+      "distractorWords": ["have", "will", "love", "to see", "must", "which"]
+    },
+    {
+      "id": 233,
+      "paragraph": "This is the first time I ____ sushi. I was a bit hesitant at first, but it's ____ delicious. The chef, ____ has been making sushi for twenty years, recommended a few rolls. If I had known it was this good, I ____ have tried it sooner. I ____ definitely be coming back.",
+      "blanks": 7,
+      "correctAnswers": ["have ever tried", "surprisingly", "who", "would", "will", "so", "and"],
+      "availableWords": ["have ever tried", "surprisingly", "who", "would", "will", "so", "and", "tried", "surprised", "which", "will", "would", "but", "because"],
+      "distractorWords": ["tried", "surprised", "which", "but", "because"]
+    },
+    {
+      "id": 234,
+      "paragraph": "The dog, ____ was rescued from a shelter, is now living a happy life. It ____ so much since it was adopted. Its new owners ____ it with love and care. If all stray animals ____ find such loving homes, the world would be a better place. Adopting a pet is ____ a rewarding experience.",
+      "blanks": 6,
+      "correctAnswers": ["which", "has changed", "provide", "could", "such", "a"],
+      "availableWords": ["which", "has changed", "provide", "could", "such", "a", "that", "changed", "provides", "can", "so", "an"],
+      "distractorWords": ["that", "changed", "provides", "can", "so", "an"]
+    },
+    {
+      "id": 235,
+      "paragraph": "The old bridge ____ closed for repairs for the next month. All traffic ____ be rerouted through the town center, which ____ cause significant delays. If you need to travel through this area, you ____ allow extra time. The repairs are necessary ____ the bridge is over a hundred years old.",
+      "blanks": 6,
+      "correctAnswers": ["will be", "will have to", "will likely", "should", "because", "so"],
+      "availableWords": ["will be", "will have to", "will likely", "should", "because", "so", "is", "has to", "likely", "must", "as", "and"],
+      "distractorWords": ["is", "has to", "likely", "must", "as", "and"]
+    },
+    {
+      "id": 236,
+      "paragraph": "By the time he retires, Professor Jones ____ at this university for forty years. He ____ thousands of students over his career. If you talk to any of his former students, they ____ tell you what an inspiring teacher he was. The university ____ a farewell party for him next month.",
+      "blanks": 6,
+      "correctAnswers": ["will have taught", "has taught", "will", "is holding", "to", "for"],
+      "availableWords": ["will have taught", "has taught", "will", "is holding", "to", "for", "taught", "taught", "would", "holds", "of", "at"],
+      "distractorWords": ["taught", "would", "holds", "of", "at"]
+    },
+    {
+      "id": 237,
+      "paragraph": "I wish I ____ remember people's names. I met so many new people at the conference, and I ____ have forgotten most of them. It's so embarrassing when someone ____ you and you can't recall their name. If I had a better memory, networking ____ be much easier. I should try ____ some memory techniques.",
+      "blanks": 7,
+      "correctAnswers": ["could", "probably", "remembers", "would", "using", "the", "a"],
+      "availableWords": ["could", "probably", "remembers", "would", "using", "the", "a", "can", "maybe", "remember", "will", "to use", "an", "some"],
+      "distractorWords": ["can", "maybe", "remember", "will", "to use", "an", "some"]
+    },
+    {
+      "id": 238,
+      "paragraph": "The ancient ruins ____ discovered by a local farmer in the 19th century. Archaeologists ____ the site ever since. They ____ many incredible artifacts that have taught us a lot about the civilization that lived there. If they ____ continue to get funding, they will be able to excavate more of the site. There is still much ____.",
+      "blanks": 7,
+      "correctAnswers": ["were", "have been studying", "have unearthed", "can", "to uncover", "that", "which"],
+      "availableWords": ["were", "have been studying", "have unearthed", "can", "to uncover", "that", "which", "are", "studied", "unearthed", "may", "uncovering", "who", "what"],
+      "distractorWords": ["are", "studied", "unearthed", "may", "uncovering", "who", "what"]
+    },
+    {
+      "id": 239,
+      "paragraph": "If you want ____ a good photographer, you ____ to understand light. It is the ____ important element in photography. You can have the best camera in the world, but if the lighting is bad, your photos ____ not be good. ____ with different light sources is a great way to learn.",
+      "blanks": 6,
+      "correctAnswers": ["to become", "need", "most", "will", "Experimenting", "so"],
+      "availableWords": ["to become", "need", "most", "will", "Experimenting", "so", "becoming", "needs", "more", "would", "To experiment", "and"],
+      "distractorWords": ["becoming", "needs", "more", "would", "To experiment", "and"]
+    },
+    {
+      "id": 240,
+      "paragraph": "I ____ this book for two weeks, and I'm only halfway through. It's much ____ than I thought it would be. The plot is very intricate. If I don't finish it soon, I ____ be able to return it to the library on time. I ____ have to renew it. I hope no one else ____ waiting for it.",
+      "blanks": 7,
+      "correctAnswers": ["have been reading", "longer", "won't", "will", "is", "that", "which"],
+      "availableWords": ["have been reading", "longer", "won't", "will", "is", "that", "which", "read", "long", "wouldn't", "would", "are", "who", "what"],
+      "distractorWords": ["read", "long", "wouldn't", "would", "are", "who", "what"]
+    },
+    {
+      "id": 241,
+      "paragraph": "The city council ____ a plan to build a new public park. The park ____ include a playground, a sports field, and a community garden. If the plan is approved, construction ____ begin next year. It will be a ____ better use of the land than the empty lot that is there now. It's something the community ____ needed for a long time.",
+      "blanks": 6,
+      "correctAnswers": ["has proposed", "will", "will", "much", "has", "so"],
+      "availableWords": ["has proposed", "will", "will", "much", "has", "so", "proposed", "would", "would", "very", "have", "and"],
+      "distractorWords": ["proposed", "would", "very", "have", "and"]
+    },
+    {
+      "id": 242,
+      "paragraph": "I wish I ____ to play the piano. I ____ piano music; it's so beautiful. My parents offered ____ me lessons when I was a child, but I wasn't interested. If I had taken them, I ____ be able to play now. Maybe it's not too late ____.",
+      "blanks": 6,
+      "correctAnswers": ["had learned", "love", "to give", "would", "to start", "that"],
+      "availableWords": ["had learned", "love", "to give", "would", "to start", "that", "learned", "loved", "giving", "will", "starting", "which"],
+      "distractorWords": ["learned", "loved", "giving", "will", "starting", "which"]
+    },
+    {
+      "id": 243,
+      "paragraph": "By the time the new CEO took over, the company ____ losing money for three consecutive years. He ____ some drastic changes to turn things around. If he hadn't acted so decisively, the company ____ have gone bankrupt. It was a risky strategy, ____ it paid off in the end. The company is now profitable ____.",
+      "blanks": 7,
+      "correctAnswers": ["had been", "implemented", "would", "but", "again", "so", "and"],
+      "availableWords": ["had been", "implemented", "would", "but", "again", "so", "and", "was", "implementing", "will", "and", "then", "because", "as"],
+      "distractorWords": ["was", "implementing", "will", "then", "because", "as"]
+    },
+    {
+      "id": 244,
+      "paragraph": "This is the ____ hike I've ever been on. The views from the top ____ absolutely worth the effort. We ____ for four hours to get here. If we had started earlier, we ____ have avoided the midday sun. We should remember that for next time. We are ____ forward to the easy part: going down.",
+      "blanks": 7,
+      "correctAnswers": ["most strenuous", "are", "have been hiking", "could", "looking", "the", "a"],
+      "availableWords": ["most strenuous", "are", "have been hiking", "could", "looking", "the", "a", "strenuous", "were", "hiked", "can", "to look", "an", "some"],
+      "distractorWords": ["strenuous", "were", "hiked", "can", "to look", "an", "some"]
+    },
+    {
+      "id": 245,
+      "paragraph": "The police ____ for the suspect for three days now. They believe he ____ still be in the local area. They have asked the public for any information that ____ help them. If anyone sees him, they ____ not approach him but should call 911 immediately. An arrest ____ to be made soon.",
+      "blanks": 6,
+      "correctAnswers": ["have been searching", "may", "could", "should", "is expected", "to"],
+      "availableWords": ["have been searching", "may", "could", "should", "is expected", "to", "searched", "can", "can", "must", "expects", "for"],
+      "distractorWords": ["searched", "can", "must", "expects", "for"]
+    },
+    {
+      "id": 246,
+      "paragraph": "If I had one more day of vacation, I ____ visit the national museum. I ____ it's a must-see attraction. Unfortunately, my flight ____ early tomorrow morning. I ____ have planned my trip better to fit everything in. I guess it's a good reason ____ back one day.",
+      "blanks": 6,
+      "correctAnswers": ["would", "have heard", "leaves", "should", "to come", "that"],
+      "availableWords": ["would", "have heard", "leaves", "should", "to come", "that", "will", "heard", "left", "must", "coming", "which"],
+      "distractorWords": ["will", "heard", "left", "must", "coming", "which"]
+    },
+    {
+      "id": 247,
+      "paragraph": "The new employee, ____ started last week, is already making a great impression. She ____ to have a lot of experience in our field. She ____ on a similar project at her previous company. If she continues to perform this well, she ____ be promoted quickly. She is a great addition ____ the team.",
+      "blanks": 6,
+      "correctAnswers": ["who", "seems", "worked", "will", "to", "for"],
+      "availableWords": ["who", "seems", "worked", "will", "to", "for", "which", "seemed", "has worked", "would", "of", "on"],
+      "distractorWords": ["which", "seemed", "has worked", "would", "of", "on"]
+    },
+    {
+      "id": 248,
+      "paragraph": "I ____ to watch that movie for ages. I finally ____ it last night. It was even ____ than I expected. The acting was superb and the plot was gripping. If you ____ seen it yet, you definitely should. It's one of those films that stays with you long ____ it's over.",
+      "blanks": 7,
+      "correctAnswers": ["have been meaning", "saw", "better", "haven't", "after", "the", "a"],
+      "availableWords": ["have been meaning", "saw", "better", "haven't", "after", "the", "a", "meant", "see", "good", "don't", "before", "an", "some"],
+      "distractorWords": ["meant", "see", "good", "don't", "before", "an", "some"]
+    },
+    {
+      "id": 249,
+      "paragraph": "By the time the package ____, I ____ already left for my trip. I had specifically requested delivery before today. If the company ____ my instructions, this wouldn't have happened. Now I ____ have to ask my neighbor to collect it for me. It's ____ inconvenient.",
+      "blanks": 6,
+      "correctAnswers": ["arrived", "had", "had followed", "will", "very", "so"],
+      "availableWords": ["arrived", "had", "had followed", "will", "very", "so", "arrives", "have", "followed", "would", "so", "and"],
+      "distractorWords": ["arrives", "have", "followed", "would", "and"]
+    },
+    {
+      "id": 250,
+      "paragraph": "My brother ____ for his final exams for the past month. He ____ very little sleep. He says that after his exams ____ over, he is going to sleep for a week. If he passes everything, he ____ graduate this summer. We are all keeping our fingers crossed ____ him.",
+      "blanks": 6,
+      "correctAnswers": ["has been studying", "has been getting", "are", "will", "for", "to"],
+      "availableWords": ["has been studying", "has been getting", "are", "will", "for", "to", "studied", "got", "is", "would", "of", "with"],
+      "distractorWords": ["studied", "got", "is", "would", "of", "with"]
+    }
+  ],
+  "hard": [
+    {
+      "id": 251,
+      "paragraph": "____ it not been for the anonymous tip, the scandal ____ never have come to light. The journalist, ____ exposé won a prestigious award, had been investigating the company for months. It is imperative that such wrongdoings ____ exposed, and that those responsible ____ held accountable. Rarely ____ we see such a clear-cut case of corporate malfeasance. Had the CEO acted responsibly, the crisis ____ have been averted. He now wishes he ____ listened to the warnings. The board has insisted that he ____ immediately, a decision ____ to restore public confidence.",
+      "blanks": 12,
+      "correctAnswers": ["Had", "would", "whose", "be", "be", "do", "could", "had", "resign", "intended", "that", "which"],
+      "availableWords": ["Had", "would", "whose", "be", "be", "do", "could", "had", "resign", "intended", "that", "which", "If", "will", "who", "are", "are", "have", "can", "has", "resigns", "intending", "what", "who"],
+      "distractorWords": ["If", "will", "who", "are", "have", "can", "has", "resigns", "intending", "what"]
+    },
+    {
+      "id": 252,
+      "paragraph": "The committee's recommendation is that the current policy ____ abolished. They argue that not only ____ it ineffective, but it also creates unintended negative consequences. It is essential that any new policy ____ based on thorough research. ____ the government to ignore this advice, it ____ risk losing public trust. The report, ____ a year to compile, was based on extensive data analysis. The chairman stated that never before ____ he seen such a compelling case for reform. It is high time that action ____ taken. He urged that all members ____ the report carefully.",
+      "blanks": 13,
+      "correctAnswers": ["be", "is", "be", "Were", "would", "which", "took", "had", "be", "read", "that", "who", "what"],
+      "availableWords": ["be", "is", "be", "Were", "would", "which", "took", "had", "be", "read", "that", "who", "what", "is", "was", "is", "If", "will", "that", "taken", "has", "are", "reads", "whose", "when", "why"],
+      "distractorWords": ["was", "If", "will", "taken", "has", "are", "reads", "whose", "when", "why"]
+    },
+    {
+      "id": 253,
+      "paragraph": "The novel, the plot of ____ is notoriously complex, has been adapted into a film. The director, a man ____ for his visual style, has admitted to ____ challenges in translating the book's dense prose. ____ he chosen a simpler novel, the adaptation process ____ have been more straightforward. He insisted, however, that the story ____ told on screen. It is a testament to his skill that the film, ____ being somewhat convoluted, is still a critical success. Viewers are advised ____ attention, lest they ____ the subtle clues woven into the narrative.",
+      "blanks": 11,
+      "correctAnswers": ["which", "known", "facing", "Had", "would", "be", "despite", "to pay", "miss", "that", "who"],
+      "availableWords": ["which", "known", "facing", "Had", "would", "be", "despite", "to pay", "miss", "that", "who", "whose", "knowing", "to face", "If", "will", "is", "although", "paying", "missed", "what", "when"],
+      "distractorWords": ["whose", "knowing", "to face", "If", "will", "is", "although", "paying", "missed", "what", "when"]
+    },
+    {
+      "id": 254,
+      "paragraph": "____ the team secured the funding earlier, the research ____ have progressed much more quickly. The lead scientist expressed regret, wishing she ____ more persuasive in her initial proposal. It is crucial that the next phase of the project ____ initiated without delay. So critical ____ the research to the field that any further postponement would be detrimental. Under no circumstances ____ the team abandon its work. The university president has demanded that he ____ kept informed of all progress, ____ highlights the project's importance.",
+      "blanks": 12,
+      "correctAnswers": ["Had", "could", "had been", "be", "is", "should", "be", "which", "that", "who", "what", "when"],
+      "availableWords": ["Had", "could", "had been", "be", "is", "should", "be", "which", "that", "who", "what", "when", "If", "can", "was", "is", "was", "must", "is", "that", "whose", "when", "why", "how"],
+      "distractorWords": ["If", "can", "was", "must", "whose", "why", "how"]
+    },
+    {
+      "id": 255,
+      "paragraph": "The defendant, ____ by his lawyer to remain silent, refused to answer any questions. Not only ____ he refuse to cooperate, but he also displayed open contempt for the proceedings. It is rare ____ a defendant behave with such audacity. Had he shown remorse, the judge ____ have been more lenient in her sentencing. The prosecutor argued that it was imperative the court ____ a clear message. The sentence, ____ was harsher than expected, reflected the severity of the crimes ____ to have been committed.",
+      "blanks": 11,
+      "correctAnswers": ["advised", "did", "to see", "might", "send", "which", "believed", "that", "who", "what", "when"],
+      "availableWords": ["advised", "did", "to see", "might", "send", "which", "believed", "that", "who", "what", "when", "advising", "does", "seeing", "could", "sends", "that", "believing", "whose", "when", "why", "how"],
+      "distractorWords": ["advising", "does", "seeing", "could", "sends", "believing", "whose", "why", "how"]
+    },
+    {
+      "id": 256,
+      "paragraph": "The peace treaty, ____ signing was broadcast live, was intended to end the decade-long conflict. However, little ____ the signatories know that a faction within one party had no intention of ____ by its terms. It was essential that all sides ____ fully committed. ____ this not been the case, the ensuing ceasefire would have been fragile at best. The diplomat who brokered the deal later said that never before ____ he felt such a mix of hope and trepidation. He wishes there ____ more time for negotiation. The events ____ followed proved his fears to be justified.",
+      "blanks": 12,
+      "correctAnswers": ["whose", "did", "abiding", "be", "Had", "had", "had been", "that", "which", "who", "what", "when"],
+      "availableWords": ["whose", "did", "abiding", "be", "Had", "had", "had been", "that", "which", "who", "what", "when", "which", "does", "to abide", "are", "If", "has", "was", "who", "what", "when", "why", "how"],
+      "distractorWords": ["which", "does", "to abide", "are", "If", "has", "was", "why", "how"]
+    },
+    {
+      "id": 257,
+      "paragraph": "So complex ____ the algorithm that only a handful of people in the world truly understood it. ____ it to be implemented incorrectly, the consequences could be catastrophic. The project lead insisted that all calculations ____ double-checked by an independent team. Under no circumstances ____ the system be deployed without rigorous testing. The engineer, ____ work formed the basis of the project, was brought in to consult. She recommended that the launch ____ postponed until all risks ____ fully mitigated.",
+      "blanks": 11,
+      "correctAnswers": ["was", "Were", "be", "should", "whose", "be", "had been", "that", "who", "what", "when"],
+      "availableWords": ["was", "Were", "be", "should", "whose", "be", "had been", "that", "who", "what", "when", "is", "If", "are", "must", "who", "are", "were", "which", "when", "why", "how"],
+      "distractorWords": ["is", "If", "are", "must", "who", "which", "why", "how"]
+    },
+    {
+      "id": 258,
+      "paragraph": "The archaeological dig unearthed a city ____ to have been lost for centuries. The artifacts, many of ____ were perfectly preserved, offer an unprecedented glimpse into this ancient culture. Had it not been for the unusual soil conditions, these items ____ surely have decomposed. Rarely ____ archaeologists find a site of such importance. It is vital that the area ____ protected from looting. The head archaeologist stated that it was the discovery of a lifetime, one ____ he ____ only dreamed of.",
+      "blanks": 11,
+      "correctAnswers": ["thought", "which", "would", "do", "be", "which", "had", "that", "who", "what", "when"],
+      "availableWords": ["thought", "which", "would", "do", "be", "which", "had", "that", "who", "what", "when", "thinking", "whom", "will", "did", "is", "that", "has", "whose", "when", "why", "how"],
+      "distractorWords": ["thinking", "whom", "will", "did", "is", "has", "whose", "why", "how"]
+    },
+    {
+      "id": 259,
+      "paragraph": "The witness reported ____ a strange vehicle in the area shortly before the incident occurred. Not only ____ she see the vehicle, but she was also able to provide a partial license plate number. It is crucial that her testimony ____ treated with the utmost seriousness. The detective in charge, a veteran of the force, said that seldom ____ a witness come forward with such critical information so early in an investigation. ____ she not been so observant, the case ____ have gone cold. He has requested that she ____ brought in for further questioning.",
+      "blanks": 12,
+      "correctAnswers": ["seeing", "did", "be", "had", "Had", "would", "be", "that", "who", "what", "when", "why"],
+      "availableWords": ["seeing", "did", "be", "had", "Had", "would", "be", "that", "who", "what", "when", "why", "to see", "does", "is", "has", "If", "will", "is", "which", "whose", "how", "where", "what"],
+      "distractorWords": ["to see", "does", "is", "has", "If", "will", "which", "whose", "how", "where"]
+    },
+    {
+      "id": 260,
+      "paragraph": "It is a commonly ____ belief that the company's success was due to luck. In reality, ____ it not been for the founder's relentless drive and strategic vision, the venture ____ almost certainly have failed. She demanded that every employee ____ to the highest standards of excellence. On no account ____ compromises on quality be made. This ethos, ____ permeated the entire organization, was the true secret to its success. She wishes more people ____ the hard work involved, rather ____ attributing it all to chance.",
+      "blanks": 12,
+      "correctAnswers": ["held", "had", "would", "adhere", "were", "which", "understood", "than", "that", "who", "what", "when"],
+      "availableWords": ["held", "had", "would", "adhere", "were", "which", "understood", "than", "that", "who", "what", "when", "holding", "if", "will", "adheres", "are", "that", "understand", "then", "whose", "when", "why", "how"],
+      "distractorWords": ["holding", "if", "will", "adheres", "are", "understand", "then", "whose", "why", "how"]
+    },
+    {
+      "id": 261,
+      "paragraph": "The government's proposal, ____ to address the housing crisis, has been met with mixed reactions. Critics argue that ____ the plan be implemented as is, it ____ not solve the root causes of the problem. They suggest that a more comprehensive approach ____ taken. It is essential that any solution ____ the supply-side issues. Little ____ the public know about the intense negotiations happening behind the scenes. A key advisor wishes the government ____ more open about its strategy. He urged that a public consultation ____ held.",
+      "blanks": 13,
+      "correctAnswers": ["intended", "should", "will", "be", "address", "did", "were", "be", "that", "who", "what", "when", "why"],
+      "availableWords": ["intended", "should", "will", "be", "address", "did", "were", "be", "that", "who", "what", "when", "why", "intending", "must", "would", "is", "addresses", "does", "was", "is", "which", "whose", "how", "where", "what"],
+      "distractorWords": ["intending", "must", "would", "is", "addresses", "does", "was", "which", "whose", "how", "where"]
+    },
+    {
+      "id": 262,
+      "paragraph": "____ the experiment conducted under stricter controls, the results ____ have been more reliable. The research team acknowledged the limitations in their paper, a move ____ was praised for its transparency. It is imperative that future studies ____ this variable. Not until these follow-up studies are complete ____ the findings be considered conclusive. The lead author, when asked to comment, stated that he wished he ____ access to better equipment. He insisted that the core hypothesis, ____ unproven, still holds merit.",
+      "blanks": 12,
+      "correctAnswers": ["Had", "would", "which", "address", "can", "had had", "though", "that", "who", "what", "when", "why"],
+      "availableWords": ["Had", "would", "which", "address", "can", "had had", "though", "that", "who", "what", "when", "why", "If", "will", "that", "addresses", "should", "had", "although", "whose", "when", "why", "how", "where"],
+      "distractorWords": ["If", "will", "addresses", "should", "had", "although", "whose", "how", "where"]
+    },
+    {
+      "id": 263,
+      "paragraph": "The historical account, ____ from a recently discovered diary, challenges the traditional narrative of the event. The author of the diary, a woman ____ perspective has long been overlooked, provides a unique insight. ____ this diary remained hidden, our understanding of this period ____ have remained incomplete. So vivid ____ her descriptions that historians have hailed it as a landmark discovery. It is suggested that the official history books ____ revised to reflect this new evidence. It is a powerful reminder that history is a story ____ constantly being rewritten.",
+      "blanks": 13,
+      "correctAnswers": ["taken", "whose", "Had", "would", "are", "be", "that", "is", "which", "who", "what", "when", "why"],
+      "availableWords": ["taken", "whose", "Had", "would", "are", "be", "that", "is", "which", "who", "what", "when", "why", "taking", "who", "If", "will", "is", "are", "who", "was", "that", "whose", "how", "where", "what"],
+      "distractorWords": ["taking", "who", "If", "will", "was", "how", "where"]
+    },
+    {
+      "id": 264,
+      "paragraph": "The CEO's decision to resign, ____ came as a surprise to many, was announced this morning. He stated that ____ he to continue in his role, it ____ be a distraction for the company. He recommended that a successor ____ appointed from within the company's ranks. Under no circumstances, he added, ____ the company deviate from its current strategic path. He wishes the board ____ in its search for his replacement. The announcement, ____ was made at a press conference, sent the company's shares tumbling.",
+      "blanks": 11,
+      "correctAnswers": ["which", "were", "would", "be", "should", "luck", "which", "that", "who", "what", "when"],
+      "availableWords": ["which", "were", "would", "be", "should", "luck", "which", "that", "who", "what", "when", "that", "if", "will", "is", "must", "lucky", "that", "whose", "when", "why", "how"],
+      "distractorWords": ["that", "if", "will", "is", "must", "lucky", "whose", "why", "how"]
+    },
+    {
+      "id": 265,
+      "paragraph": "Rarely ____ one see such a flawless performance. The ballerina, ____ dedication is legendary, seemed to float across the stage. Not only ____ she execute the difficult moves perfectly, but she also conveyed the story's emotion with profound depth. ____ she not trained so rigorously for years, she ____ not have been able to achieve such a feat. It is essential that her talent ____ recognized and celebrated. The audience, ____ was completely mesmerized, gave her a standing ovation ____ lasted for ten minutes.",
+      "blanks": 12,
+      "correctAnswers": ["does", "whose", "did", "Had", "could", "be", "which", "that", "who", "what", "when", "why"],
+      "availableWords": ["does", "whose", "did", "Had", "could", "be", "which", "that", "who", "what", "when", "why", "do", "who", "does", "If", "can", "is", "that", "which", "whose", "how", "where", "what"],
+      "distractorWords": ["do", "who", "If", "can", "is", "how", "where"]
+    },
+    {
+      "id": 266,
+      "paragraph": "The lawyer argued that it was vital his client ____ given a fair trial. He presented evidence ____ suggested the police had made procedural errors. ____ these errors not occurred, he claimed, the key evidence ____ have been ruled inadmissible. He demanded that the case ____ dismissed. The judge, a man ____ for his strict adherence to the law, listened intently. He announced that on no account ____ he rush to a judgment. He would review all the evidence before ____ his decision.",
+      "blanks": 11,
+      "correctAnswers": ["be", "that", "Had", "would", "be", "known", "would", "making", "which", "who", "what"],
+      "availableWords": ["be", "that", "Had", "would", "be", "known", "would", "making", "which", "who", "what", "is", "which", "If", "will", "is", "knowing", "will", "to make", "that", "whose", "when"],
+      "distractorWords": ["is", "which", "If", "will", "knowing", "to make", "whose", "when"]
+    },
+    {
+      "id": 267,
+      "paragraph": "The scientific community insists that all research ____ subject to rigorous peer review before ____ published. Not only ____ this process help to identify errors, but it also upholds the integrity of the scientific record. ____ a flawed study to be published, it ____ undermine public trust in science. It is therefore imperative that reviewers ____ diligent in their assessment. The journal editor, ____ responsibility it is to make the final decision, relies heavily on their expertise. He wishes all submissions ____ of such high quality.",
+      "blanks": 12,
+      "correctAnswers": ["be", "being", "does", "Were", "could", "be", "whose", "were", "that", "who", "what", "when"],
+      "availableWords": ["be", "being", "does", "Were", "could", "be", "whose", "were", "that", "who", "what", "when", "is", "to be", "do", "If", "can", "are", "who", "are", "which", "when", "why", "how"],
+      "distractorWords": ["is", "to be", "do", "If", "can", "are", "who", "which", "why", "how"]
+    },
+    {
+      "id": 268,
+      "paragraph": "So devastating ____ the earthquake that entire towns were leveled. ____ it not been for the swift response of international aid organizations, the death toll ____ have been much higher. It is crucial that emergency supplies ____ distributed efficiently to those in need. The rescue teams, some of ____ had traveled from the other side of the world, worked tirelessly. Never before ____ they witnessed destruction on such a scale. The local governor has requested that all available resources ____ directed to the relief effort.",
+      "blanks": 12,
+      "correctAnswers": ["was", "Had", "would", "be", "whom", "had", "be", "that", "which", "who", "what", "when"],
+      "availableWords": ["was", "Had", "would", "be", "whom", "had", "be", "that", "which", "who", "what", "when", "is", "If", "will", "are", "who", "have", "are", "whose", "when", "why", "how", "where"],
+      "distractorWords": ["is", "If", "will", "are", "who", "have", "whose", "why", "how", "where"]
+    },
+    {
+      "id": 269,
+      "paragraph": "The code of conduct requires that all employees ____ themselves professionally. On no account ____ confidential information be shared outside the company. ____ an employee to violate this policy, they ____ face immediate dismissal. The policy, ____ was updated last year, is intended to protect the company's intellectual property. The HR manager stated that it was essential everyone ____ the policy. She wishes there ____ no need for such strict rules, but experience has proven them necessary.",
+      "blanks": 11,
+      "correctAnswers": ["conduct", "should", "Were", "would", "which", "read", "were", "that", "who", "what", "when"],
+      "availableWords": ["conduct", "should", "Were", "would", "which", "read", "were", "that", "who", "what", "when", "conducts", "must", "If", "will", "that", "reads", "was", "whose", "when", "why", "how"],
+      "distractorWords": ["conducts", "must", "If", "will", "reads", "was", "whose", "why", "how"]
+    },
+    {
+      "id": 270,
+      "paragraph": "The dissident writer, ____ books were banned in his home country, continued to write in exile. Not only ____ he critique the authoritarian regime, but he also wrote beautiful poetry about his homeland. It is a tragedy that he ____ never to see his country again. ____ he been able to return, he ____ have been hailed as a hero. He wished his people ____ free. His work, ____ continues to inspire new generations, is a testament to the power of the written word.",
+      "blanks": 11,
+      "correctAnswers": ["whose", "did", "was", "Had", "would", "were", "which", "that", "who", "what", "when"],
+      "availableWords": ["whose", "did", "was", "Had", "would", "were", "which", "that", "who", "what", "when", "who", "does", "is", "If", "will", "was", "that", "whose", "when", "why", "how"],
+      "distractorWords": ["who", "does", "is", "If", "will", "why", "how"]
+    },
+    {
+      "id": 271,
+      "paragraph": "____ the general heeded the scout's warning, the ambush ____ have been avoided. The scout, a man ____ with navigating the treacherous terrain, had reported signs of enemy movement. It is imperative that intelligence ____ acted upon swiftly. So confident ____ the general in his own plan, however, that he dismissed the report. Little ____ he know that his arrogance would lead to a devastating defeat. He would later wish he ____ less complacent. The battle is now studied as a lesson in the importance of ____ to advice from the ground.",
+      "blanks": 14,
+      "correctAnswers": ["Had", "could", "tasked", "be", "was", "did", "had been", "listening", "that", "who", "what", "when", "why", "how"],
+      "availableWords": ["Had", "could", "tasked", "be", "was", "did", "had been", "listening", "that", "who", "what", "when", "why", "how", "If", "can", "tasking", "is", "is", "does", "was", "to listen", "which", "whose", "when", "why", "how", "where"],
+      "distractorWords": ["If", "can", "tasking", "is", "does", "was", "to listen", "which", "whose", "where"]
+    },
+    {
+      "id": 272,
+      "paragraph": "The investigation revealed that not only ____ the safety procedures ignored, but they had also been falsified. It is crucial that the individuals responsible for this deception ____ brought to justice. ____ the auditors been more thorough, this issue ____ have been discovered years ago. The company now faces a crisis, one ____ from which it may not recover. The new CEO has insisted that a culture of transparency ____ fostered. He wishes he ____ appointed sooner to prevent this. He demanded that a full report ____ submitted to the board.",
+      "blanks": 13,
+      "correctAnswers": ["were", "be", "Had", "might", "from", "be", "had been", "be", "that", "which", "who", "what", "when"],
+      "availableWords": ["were", "be", "Had", "might", "from", "be", "had been", "be", "that", "which", "who", "what", "when", "are", "is", "If", "could", "of", "is", "was", "is", "whose", "when", "why", "how", "where"],
+      "distractorWords": ["are", "is", "If", "could", "of", "was", "whose", "why", "how", "where"]
+    },
+    {
+      "id": 273,
+      "paragraph": "Rarely ____ a discovery have such immediate and profound implications. The new material, ____ properties seem to defy the known laws of physics, was created by a team of young researchers. ____ they not pursued such an unconventional approach, they ____ never have made the breakthrough. It is essential that their findings ____ independently verified. Under no circumstances ____ the material's formula be revealed until patents are secured. The team leader said she wishes she ____ share more details, but the intellectual property issues prevent it. The world waits to see what applications this material ____ have.",
+      "blanks": 14,
+      "correctAnswers": ["does", "whose", "Had", "would", "be", "should", "could", "will", "that", "which", "who", "what", "when", "why"],
+      "availableWords": ["does", "whose", "Had", "would", "be", "should", "could", "will", "that", "which", "who", "what", "when", "why", "do", "who", "If", "will", "is", "must", "can", "would", "whose", "when", "why", "how", "where", "what"],
+      "distractorWords": ["do", "who", "If", "will", "is", "must", "can", "how", "where"]
+    },
+    {
+      "id": 274,
+      "paragraph": "The old manuscript, ____ in a forgotten monastery library, contained information that forced historians to reconsider their theories. The text, ____ to have been written by a contemporary of the king, described events in a completely new light. ____ this manuscript been lost to time, a significant piece of history ____ have remained unknown. It is vital that it ____ preserved and studied. So significant is the finding that a special conference ____ being organized. The historian who found it wishes he ____ it decades ago. He insists that more funding ____ provided for archival research.",
+      "blanks": 14,
+      "correctAnswers": ["discovered", "thought", "Had", "would", "be", "is", "had found", "be", "that", "which", "who", "what", "when", "why"],
+      "availableWords": ["discovered", "thought", "Had", "would", "be", "is", "had found", "be", "that", "which", "who", "what", "when", "why", "discovering", "thinking", "If", "will", "is", "was", "found", "is", "whose", "when", "why", "how", "where", "what"],
+      "distractorWords": ["discovering", "thinking", "If", "will", "was", "found", "whose", "how", "where"]
+    },
+    {
+      "id": 275,
+      "paragraph": "The politician's speech, ____ intended to unify the party, seems to have had the opposite effect. Not only ____ it fail to address the core issues, but it also contained language ____ many found divisive. It is imperative that he ____ a public apology. ____ he consulted his advisors, he ____ have delivered a more conciliatory message. He was reported ____ that he stood by every word. Seldom ____ a leader misjudged the public mood so profoundly. His aides now wish he ____ more cautious. It is recommended that a new communications director ____ hired immediately, a move ____ could help to repair the damage.",
+      "blanks": 11,
+      "correctAnswers": ["originally", "did", "that", "issue", "Had", "would", "to have said", "has", "had been", "be", "which"],
+      "availableWords": ["originally", "did", "that", "issue", "Had", "would", "to have said", "has", "had been", "be", "which", "initially", "does", "who", "issued", "If", "will", "saying", "had", "was", "is", "that", "whose"],
+      "distractorWords": ["initially", "does", "who", "issued", "If", "will", "saying", "had", "was", "is", "that", "whose"]
+    },
+    {
+      "id": 276,
+      "paragraph": "It is demanded that immediate action ____ taken to combat climate change. ____ we to delay further, the consequences ____ catastrophic. The problem, ____ for decades, is now reaching a critical point. Not only ____ rising sea levels a threat, but extreme weather events are also becoming more frequent. Had we acted decisively thirty years ago, the situation now ____ so severe. The latest report suggests that all nations ____ their efforts. It's a crisis ____ which international cooperation is essential. Only by working together ____ we hope to mitigate the worst effects. The time for debate ____ to be over. This is a challenge ____ humanity must face together.",
+      "blanks": 11,
+      "correctAnswers": ["be", "Were", "would prove", "having been ignored", "are", "wouldn't be", "redouble", "for", "can", "seems", "that"],
+      "availableWords": ["be", "Were", "would prove", "having been ignored", "are", "wouldn't be", "redouble", "for", "can", "seems", "that", "is", "If", "will prove", "ignoring", "is", "wasn't", "reduce", "in", "should", "seemed", "which", "whose", "must", "are"],
+      "distractorWords": ["is", "If", "will prove", "ignoring", "wasn't", "reduce", "in", "should", "seemed", "which", "whose", "must", "are"]
+    },
+    {
+      "id": 277,
+      "paragraph": "The rapid advancement of AI necessitates that ethical guidelines ____ established. The technology, ____ with immense potential, also presents significant risks. Little ____ we understand about the long-term societal impact. ____ these systems to become truly autonomous, it is unclear how we ____ ensure their actions align with human values. Had developers been more focused on safety from the start, some current problems ____ have been avoided. It is proposed that an international oversight body ____ created. On no account ____ the development of AI proceed without regulation. The goal is creating AI ____ is both powerful and beneficial, a task ____ is much easier said than done.",
+      "blanks": 11,
+      "correctAnswers": ["be", "imbued", "do", "Were", "could", "might", "be", "should", "that", "which", "much"],
+      "availableWords": ["be", "imbued", "do", "Were", "could", "might", "be", "should", "that", "which", "much", "is", "filled", "did", "If", "can", "would", "is", "must", "which", "that", "so", "more", "less", "are"],
+      "distractorWords": ["is", "filled", "did", "If", "can", "would", "must", "so", "more", "less", "are"]
+    },
+    {
+      "id": 278,
+      "paragraph": "The court's ruling, ____ on a little-known precedent, has sent shockwaves through the legal community. It is suggested that the verdict ____ appealed. ____ the defense team been aware of this precedent, their strategy ____ have been entirely different. Not only ____ the ruling challenge established legal principles, but it also creates uncertainty for future cases. It is vital that the higher court ____ this matter. The presiding judge was reported ____ that it was one of the most complex cases he ____ ever overseen. Under no circumstances ____ the implications of this decision be underestimated.",
+      "blanks": 11,
+      "correctAnswers": ["based", "be", "Had", "would", "does", "clarify", "as having said", "had", "should", "that", "which"],
+      "availableWords": ["based", "be", "Had", "would", "does", "clarify", "as having said", "had", "should", "that", "which", "basing", "is", "If", "will", "did", "clarifies", "saying", "has", "must", "who", "whose", "what"],
+      "distractorWords": ["basing", "is", "If", "will", "did", "clarifies", "saying", "has", "must", "who", "whose", "what"]
+    },
+    {
+      "id": 279,
+      "paragraph": "The economic downturn, now ____ to be more severe than initially predicted, is affecting all sectors. Had the central bank intervened earlier, the recession ____ not be this deep. It was reported that unemployment figures ____ steadily for six months. It is essential that the government ____ a stimulus package to support struggling businesses. On no account ____ the welfare of citizens be compromised. The finance minister wishes the global economic conditions ____ more favorable. The current strategy involves ____ both fiscal and monetary policies, a combination ____ is hoped will spur recovery.",
+      "blanks": 12,
+      "correctAnswers": ["understood", "might", "had been rising", "implement", "should", "were", "using", "that", "which", "who", "what", "when"],
+      "availableWords": ["understood", "might", "had been rising", "implement", "should", "were", "using", "that", "which", "who", "what", "when", "understanding", "could", "rose", "implements", "must", "are", "to use", "who", "what", "when", "why", "how"],
+      "distractorWords": ["understanding", "could", "rose", "implements", "must", "are", "to use", "why", "how"]
+    },
+    {
+      "id": 280,
+      "paragraph": "The data ____ from the probe has revolutionized our understanding of the outer planets. Little ____ scientists expect to find evidence of liquid water. ____ it not been for the probe's advanced sensors, this discovery ____ have been impossible. The mission, ____ for over a decade, has exceeded all expectations. It is proposed that a follow-up mission ____ planned. So promising ____ the findings that securing funding should be a priority. Never before ____ humanity been so close to answering questions about extraterrestrial life. The project lead wishes he ____ see the next mission launch, but he is retiring next year.",
+      "blanks": 13,
+      "correctAnswers": ["transmitted", "did", "Had", "would", "having been planned", "be", "are", "has", "could", "that", "which", "who", "what"],
+      "availableWords": ["transmitted", "did", "Had", "would", "having been planned", "be", "are", "has", "could", "that", "which", "who", "what", "transmitting", "do", "If", "will", "planning", "is", "is", "had", "can", "whose", "when", "why", "how"],
+      "distractorWords": ["transmitting", "do", "If", "will", "planning", "is", "had", "can", "whose", "when", "why", "how"]
+    },
+    {
+      "id": 281,
+      "paragraph": "The historian's new book argues for a re-evaluation of the king's reign, suggesting it ____ neither as benevolent ____ as disastrous as previously portrayed. He insists that past accounts ____ be viewed with skepticism. ____ more primary sources been available to earlier historians, their conclusions ____ have been different. The book aims to provide a narrative ____ is both more nuanced and more accurate. It is a work ____ on meticulous research. Rarely ____ a single book challenge so many long-held assumptions. The author demands that we ____ the past with a more critical eye.",
+      "blanks": 11,
+      "correctAnswers": ["was", "nor", "must", "Had", "might", "that", "based", "has", "approach", "which", "who"],
+      "availableWords": ["was", "nor", "must", "Had", "might", "that", "based", "has", "approach", "which", "who", "is", "or", "should", "If", "could", "which", "basing", "does", "approaches", "whose", "what"],
+      "distractorWords": ["is", "or", "should", "If", "could", "basing", "does", "approaches", "whose", "what"]
+    },
+    {
+      "id": 282,
+      "paragraph": "A breakthrough has been announced in the fight against the disease, a development ____ millions of people have been waiting for. The new drug, ____ in clinical trials, has shown remarkable efficacy. Had it been developed a few years earlier, countless lives ____ have been saved. It is vital that the drug ____ made available as soon as possible. Not only ____ it halt the disease's progression, but it also appears to reverse some of the damage. Under no circumstances ____ the approval process be unnecessarily delayed. The researchers wish they ____ announce a cure, but they stress this is a treatment, not a cure.",
+      "blanks": 12,
+      "correctAnswers": ["that", "currently being tested", "could", "be", "does", "should", "could", "that", "which", "who", "what", "when"],
+      "availableWords": ["that", "currently being tested", "could", "be", "does", "should", "could", "that", "which", "who", "what", "when", "which", "testing", "can", "is", "did", "must", "can", "whose", "when", "why", "how", "where"],
+      "distractorWords": ["which", "testing", "can", "is", "did", "must", "whose", "why", "how", "where"]
+    },
+    {
+      "id": 283,
+      "paragraph": "In her analysis of the poem, the critic suggests that its central theme ____ not love, but rather the fear of ____ forgotten. She argues that the poet's use of imagery, ____ is both beautiful and unsettling, supports this reading. It is a perspective ____ forces the reader to reconsider the poem entirely. ____ one to read the poem without this interpretation in mind, its meaning ____ seem much simpler. The critic insists that a deeper analysis ____ required. Her work is a reminder that literary texts ____ open to multiple, often contradictory, interpretations. It is this ambiguity ____ makes literature so compelling.",
+      "blanks": 12,
+      "correctAnswers": ["is", "being", "which", "that", "Were", "would", "is", "are", "that", "who", "what", "when"],
+      "availableWords": ["is", "being", "which", "that", "Were", "would", "is", "are", "that", "who", "what", "when", "was", "to be", "that", "which", "If", "will", "was", "is", "which", "whose", "why", "how"],
+      "distractorWords": ["was", "to be", "If", "will", "whose", "why", "how"]
+    },
+    {
+      "id": 284,
+      "paragraph": "Geopolitical tensions in the region, ____ for several months, have now reached a boiling point. It is feared that any miscalculation ____ lead to open conflict. Had diplomacy been pursued more vigorously, the current crisis ____ have been averted. A UN resolution demands that all parties ____ from further escalation. Seldom ____ the international community faced such a delicate situation. The foreign minister was reported ____ that dialogue is the only way forward. He wishes his counterparts ____ more willing to compromise. It is a moment ____ calls for calm and rational leadership.",
+      "blanks": 11,
+      "correctAnswers": ["having been escalating", "could", "might", "refrain", "has", "as saying", "were", "that", "which", "who", "what"],
+      "availableWords": ["having been escalating", "could", "might", "refrain", "has", "as saying", "were", "that", "which", "who", "what", "escalating", "can", "would", "refrains", "had", "saying", "are", "which", "whose", "when", "why"],
+      "distractorWords": ["escalating", "can", "would", "refrains", "had", "saying", "are", "whose", "when", "why"]
+    },
+    {
+      "id": 285,
+      "paragraph": "The proposed merger, ____ would create the largest company in the industry, is now being scrutinized by regulators. It is imperative that the deal ____ not harm competition. The CEOs of both companies issued a joint statement, ____ they claimed the merger would lead to greater innovation. ____ the deal to be blocked, both companies' share prices ____ fall sharply. The regulators have requested that more information ____ provided. An army of lawyers, ____ job it is to navigate the complex legal landscape, is working on the case. They wish the process ____ simpler.",
+      "blanks": 11,
+      "correctAnswers": ["which", "do", "in which", "Were", "would", "be", "whose", "were", "that", "who", "what"],
+      "availableWords": ["which", "do", "in which", "Were", "would", "be", "whose", "were", "that", "who", "what", "that", "does", "where", "If", "will", "is", "who", "are", "which", "when", "why"],
+      "distractorWords": ["that", "does", "where", "If", "will", "is", "who", "are", "when", "why"]
+    },
+    {
+      "id": 286,
+      "paragraph": "The city's new urban plan, ____ to create more green spaces, involves redeveloping several industrial areas. The plan, ____ by a team of renowned architects, aims to make the city more livable. Had this initiative been launched a decade ago, the city ____ not be facing its current pollution problems. Little ____ residents realize the scale of the proposed changes. It is crucial that the public ____ consulted throughout the process. On no account ____ the historical character of the city be compromised. The mayor wishes the project ____ be completed sooner, but the timeline is ambitious as it is.",
+      "blanks": 12,
+      "correctAnswers": ["designed", "drawn up", "would", "do", "be", "should", "could", "that", "which", "who", "what", "when"],
+      "availableWords": ["designed", "drawn up", "would", "do", "be", "should", "could", "that", "which", "who", "what", "when", "designing", "drawing", "will", "did", "is", "must", "can", "whose", "when", "why", "how", "where"],
+      "distractorWords": ["designing", "drawing", "will", "did", "is", "must", "can", "whose", "why", "how", "where"]
+    },
+    {
+      "id": 287,
+      "paragraph": "Conservation efforts are being intensified to protect the endangered species, ____ population has dwindled to critical levels. It is recommended that its habitat ____ declared a protected zone. ____ humans not encroached on this area, the species ____ not be on the brink of extinction now. Not only ____ its habitat been destroyed, but poaching has also taken a heavy toll. It is a stark reminder of the impact ____ human activity has on the natural world. Only through concerted international effort ____ this species be saved. Biologists wish they ____ more resources to work with.",
+      "blanks": 13,
+      "correctAnswers": ["whose", "be", "Had", "would", "has", "that", "can", "had", "which", "who", "what", "when", "why"],
+      "availableWords": ["whose", "be", "Had", "would", "has", "that", "can", "had", "which", "who", "what", "when", "why", "which", "is", "If", "will", "have", "which", "could", "have", "that", "whose", "how", "where", "what"],
+      "distractorWords": ["which", "is", "If", "will", "have", "could", "whose", "how", "where"]
+    },
+    {
+      "id": 288,
+      "paragraph": "Following the financial crisis, new regulations ____ introduced to prevent a recurrence. The regulations require that banks ____ higher capital reserves. ____ these rules been in place before, the crisis ____ have been less severe. Little ____ the public know how close the entire system came to collapse. On no account ____ banks be allowed to take such excessive risks again. The central bank governor wishes the reforms ____ gone even further. The new framework, ____ it is an improvement, is not considered foolproof by all experts.",
+      "blanks": 12,
+      "correctAnswers": ["were", "hold", "Had", "would", "did", "should", "had", "while", "that", "which", "who", "what"],
+      "availableWords": ["were", "hold", "Had", "would", "did", "should", "had", "while", "that", "which", "who", "what", "are", "holds", "If", "will", "do", "must", "have", "although", "whose", "when", "why", "how"],
+      "distractorWords": ["are", "holds", "If", "will", "do", "must", "have", "although", "whose", "when", "why", "how"]
+    },
+    {
+      "id": 289,
+      "paragraph": "The philosophical question of whether humans have free will ____ for millennia. One argument suggests that our choices ____ predetermined by a chain of cause and effect. ____ this to be true, the concepts of moral responsibility and justice ____ need to be completely rethought. Another view posits that consciousness allows us to make choices ____ are genuinely free. The debate involves ____ complex metaphysical concepts and empirical findings from neuroscience. It is a question to ____ there may never be a definitive answer, yet ____ to contemplate it is fundamental to understanding ourselves.",
+      "blanks": 12,
+      "correctAnswers": ["has been debated", "are", "Were", "would", "that", "both", "which", "seeking", "that", "who", "what", "when"],
+      "availableWords": ["has been debated", "are", "Were", "would", "that", "both", "which", "seeking", "that", "who", "what", "when", "debated", "is", "If", "will", "which", "and", "that", "to seek", "whose", "when", "why", "how"],
+      "distractorWords": ["debated", "is", "If", "will", "and", "to seek", "whose", "why", "how"]
+    },
+    {
+      "id": 290,
+      "paragraph": "The symphony, ____ composition took the composer five years, is a masterpiece of complex harmony and structure. The final movement, in ____ all the main themes are masterfully interwoven, is particularly breathtaking. Not only ____ the symphony technically demanding, but it is also emotionally profound. Had the composer not been a virtuoso pianist himself, he ____ not have written such an intricate piano part. It is recommended that any new recording ____ the composer's original, faster tempo. Seldom ____ one hear music of such power and beauty. The conductor wishes the orchestra ____ more rehearsal time.",
+      "blanks": 12,
+      "correctAnswers": ["whose", "which", "is", "could", "respect", "does", "had", "that", "who", "what", "when", "why"],
+      "availableWords": ["whose", "which", "is", "could", "respect", "does", "had", "that", "who", "what", "when", "why", "which", "that", "was", "can", "respects", "did", "has", "whose", "when", "why", "how", "where"],
+      "distractorWords": ["which", "that", "was", "can", "respects", "did", "has", "whose", "how", "where"]
+    },
+    {
+      "id": 291,
+      "paragraph": "The recent cyberattack, ____ to have originated from a foreign state, compromised the data of millions of users. It is vital that cybersecurity measures ____ strengthened across all government agencies. ____ the vulnerabilities been patched sooner, this breach ____ have been prevented. Under no circumstances ____ the government's response be seen as anything less than robust. A new policy requires that all employees ____ mandatory security training. The head of cybersecurity wishes she ____ been given a larger budget. The attack is a stark reminder of the threats ____ in our increasingly connected world.",
+      "blanks": 12,
+      "correctAnswers": ["believed", "be", "Had", "could", "should", "undergo", "had", "lurking", "that", "which", "who", "what"],
+      "availableWords": ["believed", "be", "Had", "could", "should", "undergo", "had", "lurking", "that", "which", "who", "what", "believing", "is", "If", "can", "must", "undergoes", "has", "lurk", "whose", "when", "why", "how"],
+      "distractorWords": ["believing", "is", "If", "can", "must", "undergoes", "has", "lurk", "whose", "when", "why", "how"]
+    },
+    {
+      "id": 292,
+      "paragraph": "The film, a loose adaptation of the classic novel, has polarized critics. Some praise the director's bold vision, ____ others argue he has betrayed the source material. The director was reported ____ that he never intended a faithful adaptation. ____ he stuck closer to the book, the film ____ have been more conventional, but perhaps less interesting. The central performance, ____ is being tipped for an Oscar, is undeniably powerful. Rarely ____ an actor inhabit a role so completely. It is the kind of performance ____ stays with you long after ____ the cinema.",
+      "blanks": 12,
+      "correctAnswers": ["while", "as having said", "Had", "would", "which", "does", "that", "leaving", "who", "what", "when", "why"],
+      "availableWords": ["while", "as having said", "Had", "would", "which", "does", "that", "leaving", "who", "what", "when", "why", "and", "saying", "If", "will", "that", "did", "which", "to leave", "whose", "how", "where", "what"],
+      "distractorWords": ["and", "saying", "If", "will", "did", "to leave", "whose", "how", "where"]
+    },
+    {
+      "id": 293,
+      "paragraph": "It is proposed that a new public health policy ____ implemented to tackle rising obesity rates. The policy would involve ____ taxes on sugary drinks and ____ subsidies for healthy food. ____ this policy to be effective, it must be accompanied by a public education campaign. Had such measures been taken years ago, the current health crisis ____ not be so acute. It is essential that the food industry ____ not permitted to weaken the proposals. On no account ____ profit be prioritized over public health. Health officials wish they ____ the authority to act more decisively.",
+      "blanks": 13,
+      "correctAnswers": ["be", "levying", "providing", "For", "would", "be", "should", "had", "that", "which", "who", "what", "when"],
+      "availableWords": ["be", "levying", "providing", "For", "would", "be", "should", "had", "that", "which", "who", "what", "when", "is", "to levy", "to provide", "If", "will", "is", "must", "have", "whose", "when", "why", "how", "where"],
+      "distractorWords": ["is", "to levy", "to provide", "If", "will", "must", "have", "whose", "why", "how", "where"]
+    },
+    {
+      "id": 294,
+      "paragraph": "Quantum mechanics, the principles of ____ govern the subatomic world, is famously counter-intuitive. Not only ____ particles exist in multiple states at once, but they can also be instantaneously connected over vast distances. ____ Einstein alive today, he ____ still be troubled by what he called 'spooky action at a distance'. It is a field ____ challenges our fundamental understanding of reality. So strange ____ its implications that physicists themselves often struggle to grasp them. It is required that any new theory ____ consistent with its predictions. Never before ____ science encountered a realm so bizarre.",
+      "blanks": 13,
+      "correctAnswers": ["which", "do", "Were", "would", "that", "are", "be", "had", "who", "what", "when", "why", "how"],
+      "availableWords": ["which", "do", "Were", "would", "that", "are", "be", "had", "who", "what", "when", "why", "how", "that", "does", "If", "will", "which", "is", "is", "has", "whose", "when", "why", "how", "where"],
+      "distractorWords": ["that", "does", "If", "will", "is", "has", "whose", "where"]
+    },
+    {
+      "id": 295,
+      "paragraph": "The architect's design for the new museum is a stunning example of ____ form and function can be seamlessly integrated. The building, ____ exterior is a complex lattice of steel and glass, is as much a sculpture as it is a structure. It is intended that the interior spaces ____ be both grand and intimate. Had the architect opted for a more conventional design, the building ____ not have become such an instant landmark. Her work is characterized by ____ a bold use of materials and a deep respect for the surrounding environment. It is a masterpiece ____ will be studied for generations.",
+      "blanks": 11,
+      "correctAnswers": ["how", "whose", "should", "would", "both", "that", "which", "who", "what", "when", "why"],
+      "availableWords": ["how", "whose", "should", "would", "both", "that", "which", "who", "what", "when", "why", "that", "which", "must", "will", "and", "which", "that", "whose", "how", "where", "what"],
+      "distractorWords": ["that", "which", "must", "will", "and", "where"]
+    },
+    {
+      "id": 296,
+      "paragraph": "The diplomatic negotiations, ____ for weeks, have reached a critical impasse. It is imperative that a breakthrough ____ found soon. ____ a compromise not be reached, the consequences could be severe. The chief negotiator was quoted ____ that both sides need to show more flexibility. He wishes there ____ a greater sense of urgency. Seldom ____ so much depended on the outcome of a single negotiation. On no account ____ the talks be allowed to collapse. The world watches, ____ for a sign of progress.",
+      "blanks": 11,
+      "correctAnswers": ["having been stalled", "be", "Should", "as saying", "were", "has", "should", "hoping", "that", "which", "who"],
+      "availableWords": ["having been stalled", "be", "Should", "as saying", "were", "has", "should", "hoping", "that", "which", "who", "stalling", "is", "If", "saying", "are", "had", "must", "to hope", "what", "whose", "when"],
+      "distractorWords": ["stalling", "is", "If", "saying", "are", "had", "must", "to hope", "what", "whose", "when"]
+    },
+    {
+      "id": 297,
+      "paragraph": "The ethics of genetic engineering, particularly in humans, is a subject of intense debate. It is suggested by some that we ____ a moral obligation to use this technology to eliminate hereditary diseases. ____ we to go down this path, however, it is unclear where the line ____ be drawn. Had this technology been available in the past, the course of human history ____ have been very different. The potential for misuse is so great that many argue for a global moratorium. It is vital that a public conversation ____ had before we proceed any further. The question is not just ____ we can, but whether we should.",
+      "blanks": 12,
+      "correctAnswers": ["have", "Were", "would", "could", "be", "if", "that", "which", "who", "what", "when", "why"],
+      "availableWords": ["have", "Were", "would", "could", "be", "if", "that", "which", "who", "what", "when", "why", "has", "If", "will", "can", "is", "that", "whose", "when", "why", "how", "where", "what"],
+      "distractorWords": ["has", "If", "will", "can", "is", "whose", "how", "where"]
+    },
+    {
+      "id": 298,
+      "paragraph": "The rise of the gig economy, ____ by platforms connecting freelancers with clients, has transformed the nature of work for many. ____ this model offers flexibility, it often lacks the security of traditional employment. Had the labor laws kept pace with technology, gig workers now ____ have better protections. It is crucial that their legal status ____ clarified. Not only ____ they often lack benefits like health insurance, but their income can also be highly unpredictable. It is a system ____ needs reform to ensure fairness for all participants. The challenge is ____ to balance innovation with worker rights.",
+      "blanks": 12,
+      "correctAnswers": ["driven", "While", "would", "be", "do", "that", "how", "which", "who", "what", "when", "why"],
+      "availableWords": ["driven", "While", "would", "be", "do", "that", "how", "which", "who", "what", "when", "why", "driving", "Although", "will", "is", "did", "which", "what", "that", "whose", "how", "where", "what"],
+      "distractorWords": ["driving", "Although", "will", "is", "did", "whose", "where"]
+    },
+    {
+      "id": 299,
+      "paragraph": "The impact of social media on society is a topic ____ has been extensively studied. It is argued that while these platforms facilitate connection, they are also ____ for spreading misinformation and ____ political polarization. It is imperative that platform companies ____ more responsibility. ____ they to implement stricter content moderation, some of these negative effects ____ be mitigated. Little ____ the average user know about the algorithms shaping their information diet. The current situation demands ____ regulation and greater user awareness, two goals ____ are often in conflict.",
+      "blanks": 12,
+      "correctAnswers": ["that", "responsible", "exacerbating", "take", "Were", "could", "does", "both", "that", "which", "who", "what"],
+      "availableWords": ["that", "responsible", "exacerbating", "take", "Were", "could", "does", "both", "that", "which", "who", "what", "which", "responsibility", "exacerbate", "takes", "If", "can", "did", "and", "whose", "when", "why", "how"],
+      "distractorWords": ["which", "responsibility", "exacerbate", "takes", "If", "can", "did", "and", "whose", "when", "why", "how"]
+    },
+    {
+      "id": 300,
+      "paragraph": "Discussions about the future of work often center on automation and AI. It is predicted that many jobs, particularly those ____ repetitive tasks, ____ be automated in the coming years. Had we begun investing in retraining programs on a larger scale a decade ago, the workforce today ____ be better prepared. It is essential that education systems ____ to teach skills like critical thinking and creativity. On no account ____ we assume that the old models of employment will persist. The challenge is creating an economy ____ offers opportunity for all, not just for those ____ skills are in high demand.",
+      "blanks": 12,
+      "correctAnswers": ["involving", "will", "would", "adapt", "should", "that", "whose", "which", "who", "what", "when", "why"],
+      "availableWords": ["involving", "will", "would", "adapt", "should", "that", "whose", "which", "who", "what", "when", "why", "involved", "would", "will", "adapts", "must", "which", "who", "that", "whose", "how", "where", "what"],
+      "distractorWords": ["involved", "adapts", "must", "how", "where"]
+    }
+  ]
+}
+

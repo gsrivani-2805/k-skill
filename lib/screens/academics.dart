@@ -817,11 +817,7 @@ class UnitDetailScreen extends StatelessWidget {
                     color: classColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: Icon(
-                    Icons.play_arrow,
-                    color: classColor,
-                    size: 24,
-                  ),
+                  child: Icon(Icons.play_arrow, color: classColor, size: 24),
                 ),
               ],
             ),

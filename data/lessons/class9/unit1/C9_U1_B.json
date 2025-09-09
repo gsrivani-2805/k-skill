@@ -3,6 +3,7 @@
   "poem_text": [
     {
       "image": {
+        "asset_path": "images/class9/unit1/5.png",
         "description": "An illustration of a large kangaroo looking down at a duck by the water's edge."
       }
     },
@@ -20,6 +21,7 @@
     },
     {
       "image": {
+        "asset_path": "images/class9/unit1/6.png",
         "description": "An illustration of a duck standing on a colorful, whimsical boat-like object."
       }
     },
@@ -37,6 +39,7 @@
     },
     {
       "image": {
+        "asset_path": "images/class9/unit1/7.png",
         "description": "An illustration of a kangaroo leaping through the air, carrying a duck wearing pink socks on its back, with large bunches of grapes in the background."
       }
     },
@@ -54,6 +57,7 @@
     },
     {
       "image": {
+        "asset_path": "images/class9/unit1/8.png",
         "description": "An illustration of a kangaroo sitting up, smoking a cigar and reading a book under a full moon."
       }
     },

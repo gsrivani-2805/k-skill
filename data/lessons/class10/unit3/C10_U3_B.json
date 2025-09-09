@@ -24,6 +24,7 @@
     },
     {
       "image": {
+        "asset_path": "images/class10/unit3/4.png",
         "description": "An illustration depicting a woman engulfed in flames, with another image below showing a man speaking to a woman."
       }
     },
@@ -64,6 +65,12 @@
       ]
     },
     {
+      "image": {
+        "asset_path": "images/class10/unit3/3.png",
+        "description": "An illustration depicting a woman engulfed in flames, with another image below showing a man speaking to a woman."
+      }
+    },
+    {
       "stanza": [
         "So when the kerosene was thrown",
         "(just a moment of surprise,",
@@ -82,4 +89,3 @@
   ],
   "author": "Ms.Imtiaz Dharker"
 }
-

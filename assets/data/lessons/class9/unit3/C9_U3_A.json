@@ -5,7 +5,7 @@
       "Look at the picture and answer the questions that follow.",
       {
         "image": {
-          "asset_path": "46.png",
+        "asset_path": "images/class9/unit3/6.png",
           "description": "An illustration of a female teacher in a yellow sari, disciplining a young boy in a pink shirt by pulling his ear in front of the class. The other students are watching from their desks."
         }
       },
@@ -22,7 +22,7 @@
       "When Swaminathan's turn came, he looked around helplessly. Rajam sat on the third bench in front, and resolutely looked away. He was gazing at the blackboard intently.",
       {
         "image": {
-          "asset_path": "48.png",
+        "asset_path": "images/class9/unit3/5.png",
           "description": "An illustration from a back view of a classroom scene where a teacher is questioning a boy standing in front of the class. Other students are seated at their desks, watching the interaction."
         }
       },
@@ -35,7 +35,7 @@
       "The peon eyed Swaminathan with a sinister look, grunted, and demanded, 'Didn't I see you break the panes?...'",
       {
         "image": {
-          "asset_path": "49.png",
+        "asset_path": "images/class9/unit3/4.png",
           "description": "An illustration of a young boy, Swaminathan, standing in a classroom with tears in his eyes. A man, presumably the headmaster, stands near his desk in the background, while other students look on."
         }
       },

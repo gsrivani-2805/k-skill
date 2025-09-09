@@ -5,8 +5,8 @@
       "Look at the picture given below and answer the questions that follow.",
       {
         "image": {
-          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:26:59.883Z/page-1-img-1.jpeg",
-          "description": "A woman in a red and orange outfit kneels to give food to a seated, disheveled older man."
+        "asset_path": "images/class8/unit3/1.png",
+        "description": "A woman in a red and orange outfit kneels to give food to a seated, disheveled older man."
         }
       },
       "1. What do you notice in the picture?",

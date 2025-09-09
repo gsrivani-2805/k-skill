@@ -4,7 +4,7 @@
     "Look at the pictures and answer the questions that follow.",
     {
       "image": {
-        "asset_path": "50.jpeg",
+        "asset_path": "images/class8/unit4/1.png",
         "description": "A collage of four images related to science and technology: a humanoid robot, a space shuttle launching, a classroom full of computers, and an astronaut floating in space above Earth."
       }
     },
@@ -20,7 +20,7 @@
     "“In my house.\" He pointed without looking, because he was busy reading.",
     {
       "image": {
-        "asset_path": "51.jpeg",
+        "asset_path": "images/class8/unit4/2.png",
         "description": "An illustration of a boy and a girl from the future reading a physical book. A thought bubble above the girl shows what she imagines an old-fashioned school looked like, with a teacher and many students in a classroom."
       }
     },
@@ -29,20 +29,20 @@
     "School.",
     "Margie was scornful. \"School? What's there to write about school? I hate school.\"",
     "Margie always hated school, but now she hated it more than ever. The mechanical teacher had been giving her test after test in geography and she had been doing worse and worse until her mother had shaken her head sorrowfully and sent for the County Inspector.",
-    {
-      "image": {
-        "asset_path": "52.jpeg",
-        "description": "An illustration of a futuristic classroom where a girl, Margie, is sitting at a large console with a screen. A robot stands nearby, representing the mechanical teacher."
-      }
-    },
     "He was a round little man with a red face and a whole box of tools with dials and wires. He smiled at Margie and gave her an apple, then took the teacher apart. Margie had hoped he wouldn't know how to put it together again, but he knew. After an hour or so, there it was again, large and black and ugly, with a big screen on which all the lessons were shown and the questions were asked. That wasn't so bad. The part Margie hated most was the slot where she had to put homework and test papers. She always had to write them out in a punch code, they made her learn when she was six years old and the mechanical teacher calculated the marks in no time.",
     "The Inspector had smiled and patted Margie's head after he had finished. He said to her mother, \"It's not the little girl's fault. Mrs. Jones, I think the geography sector was geared a little too quickly. Those things happen sometimes. I've slowed it up to an average ten – year level. Actually, the overall pattern of her progress is quite satisfactory.\" And he patted Margie's head again.",
     "Margie was disappointed. She had been hoping they would take the teacher away altogether. They had once taken Tommy's teacher away for nearly a month because the history sector had blanked out completely.",
     "So she said to Tommy, \"Why would anyone write about school?”",
     "Tommy looked at her with very superior eyes. “Because it's not our kind of school, stupid. This is the old kind of school that they had hundreds and hundreds of years ago.\" He added loftily, pronouncing the word carefully, “Centuries ago.”",
+    {
+      "image": {
+        "asset_path": "images/class8/unit4/3.png",
+        "description": "An illustration of a futuristic classroom where a girl, Margie, is sitting at a large console with a screen. A robot stands nearby, representing the mechanical teacher."
+      }
+    },
     "Margie was hurt. “Well, I don't know what kind of school they had all that time ago,\" She read the book over his shoulder for a while, then said, “Anyway, they had a teacher.\"",
     "\"Sure they had a teacher, but it wasn't a regular teacher. It was a man.\"",
-    "\"A man? How could a man be a teacher?\"",
+    "'A man? How could a man be a teacher?'",
     "\"Well, he just told the boys and girls things and gave them homework and asked them questions.\"",
     "“A man isn't smart enough.”",
     "\"Sure he is. My father knows as much as my teacher.\"",
@@ -67,12 +67,6 @@
     "Margie was thinking about how the kids must have loved it in the old days. She was thinking about the fun they had.",
     " - by Isaac Asimov",
     "About the author",
-    {
-      "image": {
-        "asset_path": "55.jpeg",
-        "description": "A portrait of the author, Isaac Asimov."
-      }
-    },
     "Isaac Asimov (1920 - 1992) was an American author best known for his science fiction. He was a professor of biochemistry at Boston University. He is considered the master of science fiction. Most of his works explain scientific concepts in a historical way. He worked as the president of AHA (American Humanist Association). He earned a credit on ‘Star Trek', a movie on science fiction. His famous works are ‘The Foundation Series', 'The Robot Series' and 'The Galactic Empire Series'."
   ]
 }

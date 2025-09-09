@@ -198,8 +198,7 @@ class LessonCard extends StatelessWidget {
 
     // Check if it's a heading or special instruction
     bool isInstruction =
-        text.contains(':') &&
-        text.toLowerCase().contains('oral discourse');
+        text.contains(':') && text.toLowerCase().contains('oral discourse');
 
     // Check if it's a section header (like "About the author")
     bool isSectionHeader =
@@ -302,8 +301,7 @@ class LessonCard extends StatelessWidget {
   }
 
   Widget buildImageContent(Map<String, dynamic> imageData) {
-    final assetPath = imageData['asset_path'];
-    final description = imageData['description'] ?? '';
+    final imagePath = imageData['asset_path'];
 
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8),
@@ -326,7 +324,7 @@ class LessonCard extends StatelessWidget {
             Container(
               constraints: const BoxConstraints(maxHeight: 300),
               child: Image.asset(
-                'assets/images/$assetPath',
+                '$imagePath',
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
                   return Container(
@@ -352,7 +350,7 @@ class LessonCard extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          assetPath,
+                          imagePath,
                           style: TextStyle(
                             color: Colors.grey[500],
                             fontSize: 12,
@@ -364,26 +362,6 @@ class LessonCard extends StatelessWidget {
                 },
               ),
             ),
-            if (description.isNotEmpty)
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(12),
-                    bottomRight: Radius.circular(12),
-                  ),
-                ),
-                child: Text(
-                  description,
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.grey[700],
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
           ],
         ),
       ),

@@ -65,6 +65,13 @@ flutter:
   - assets/games/listening_puzzle.json
   - assets/games/story_completion.json
 
+  - games/grammar_mistakes.json
+  - games/listening_puzzle.json
+  - games/picture_sentence.json
+  - games/sentence_formation.json
+  - games/story_completion.json
+  - games/word_match.json
+
   #academics
   - data/lessons/academic_curriculum.json
 
@@ -474,6 +481,33 @@ flutter:
   - images/advanced/module-4/lesson-2/
   - images/advanced/module-4/lesson-3/
   - images/advanced/module-4/lesson-4/
+
+  - images/class8/unit1/
+  - images/class8/unit2/
+  - images/class8/unit3/
+  - images/class8/unit4/
+  - images/class8/unit5/
+  - images/class8/unit6/
+  - images/class8/unit7/
+  - images/class8/unit8/
+
+  - images/class9/unit1/
+  - images/class9/unit2/
+  - images/class9/unit3/
+  - images/class9/unit4/
+  - images/class9/unit5/
+  - images/class9/unit6/
+  - images/class9/unit7/
+  - images/class9/unit8/
+  
+  - images/class10/unit1/
+  - images/class10/unit2/
+  - images/class10/unit3/
+  - images/class10/unit4/
+  - images/class10/unit5/
+  - images/class10/unit6/
+  - images/class10/unit7/
+  - images/class10/unit8/
 
   - vocabulary/agriculture.json
   - vocabulary/arts.json

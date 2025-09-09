@@ -6,7 +6,7 @@
       "Look at the picture and answer the questions that follow.",
       {
         "image": {
-          "asset_path": "66.png",
+        "asset_path": "images/class9/unit4/7.png",
           "description": "A photograph of a young elephant lying on its side on the ground, entangled in a wire snare. The setting appears to be a dry, wooded area."
         }
       },
@@ -20,7 +20,7 @@
       "People choose different ways to protect the environment. Here is a speech delivered by a Red Indian Chief Seattle more than a century ago to save his land.",
       {
         "image": {
-          "asset_path": "67_0.png",
+        "asset_path": "images/class9/unit4/6.png",
           "description": "A portrait of Chief Seattle, a Native American leader, wearing a traditional headdress."
         }
       },
@@ -29,13 +29,13 @@
       "Every part of the Earth is sacred to my people. Every shining pine needle, every sandy shore, every mist in the dark woods, every clear and humming insect are holy in the memory and experience of my people. The sap which courses through the trees carries the memory and experience of my people. The sap, which courses through the trees, carries the memories of the red man.",
       {
         "image": {
-          "asset_path": "67_1.png",
+        "asset_path": "images/class9/unit4/5.png",
           "description": "A vibrant collage of nature, featuring a deer, horses, an eagle, hummingbirds, and other animals in a lush landscape with a waterfall and clear water."
         }
       },
       {
         "image": {
-          "asset_path": "68.png",
+        "asset_path": "images/class9/unit4/4.png",
           "description": "A painting depicting a gathering of Native Americans in a natural setting. Some are on horseback, while others are seated on the ground, listening to a central figure who is speaking with expressive gestures."
         }
       },
@@ -53,7 +53,7 @@
       "Whatever befalls the Earth - befalls the sons of the Earth. Man did not weave the web of life - he is merely a strand in it. Whatever he does to the web, he does to himself.",
       {
         "image": {
-          "asset_path": "69.png",
+        "asset_path": "images/class9/unit4/3.png",
           "description": "A young boy is holding a globe of the Earth in his hands, surrounded by a field of white flowers. The image has a soft, hopeful feel."
         }
       },

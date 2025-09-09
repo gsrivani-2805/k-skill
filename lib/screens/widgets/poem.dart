@@ -346,83 +346,67 @@ class _PoemScreenState extends State<PoemScreen>
   }
 
   Widget _buildPoemImage(Map<String, dynamic> imageData) {
-    final description = imageData['description'] ?? '';
+    final imagePath = imageData['asset_path'];
 
     return Container(
-      width: double.infinity,
       margin: const EdgeInsets.symmetric(vertical: 8),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.grey.withOpacity(0.3),
             spreadRadius: 1,
-            blurRadius: 8,
-            offset: const Offset(0, 4),
+            blurRadius: 5,
+            offset: const Offset(0, 3),
           ),
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(12),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Placeholder for image (since no asset_path provided)
             Container(
-              height: 200,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.purple[100]!,
-                    Colors.purple[200]!,
-                  ],
-                ),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.image,
-                    size: 48,
-                    color: Colors.purple[700],
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    'Illustration',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.purple[700],
+              constraints: const BoxConstraints(maxHeight: 300),
+              child: Image.asset(
+                '$imagePath',
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Container(
+                    height: 200,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(12),
                     ),
-                  ),
-                ],
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.image_not_supported,
+                          size: 50,
+                          color: Colors.grey[400],
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          'Image not found',
+                          style: TextStyle(
+                            color: Colors.grey[600],
+                            fontSize: 14,
+                          ),
+                        ),
+                        Text(
+                          imagePath,
+                          style: TextStyle(
+                            color: Colors.grey[500],
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
               ),
             ),
-            
-            if (description.isNotEmpty)
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(16),
-                    bottomRight: Radius.circular(16),
-                  ),
-                ),
-                child: Text(
-                  description,
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.grey[700],
-                    height: 1.4,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
           ],
         ),
       ),

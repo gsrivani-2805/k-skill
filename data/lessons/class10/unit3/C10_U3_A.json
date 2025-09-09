@@ -5,7 +5,7 @@
       "Look at the picture and read the following excerpt from the diary of a 72-year-old man. Answer the questions that follow.",
       {
         "image": {
-          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:24:25.599Z/page-1-img-1.jpeg",
+          "asset_path": "images/class10/unit3/7.png",
           "description": "An elderly man sits on a porch, looking out at a bustling village scene. People are walking, carrying goods, and tending to goats, but no one seems to be interacting with him."
         }
       },
@@ -27,7 +27,7 @@
       "'So this little distance has tired you? Rest for a while. But we have to be in time for the bus.'",
       {
         "image": {
-          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:24:25.599Z/page-3-img-1.jpeg",
+          "asset_path": "images/class10/unit3/6.png",
           "description": "A father and son are resting on a rocky, hilly path. The father is drinking from a mug while the son sits beside him. A trunk and a bag are on the ground near them."
         }
       },
@@ -39,7 +39,7 @@
       "'The road is uneven and full of pebbles. It hurts while walking.'",
       {
         "image": {
-          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:24:25.599Z/page-4-img-1.jpeg",
+          "asset_path": "images/class10/unit3/5.png",
           "description": "A man in traditional attire stands by a rural road, waving goodbye to a departing bus."
         }
       },
@@ -48,12 +48,6 @@
       "Father wanted to say something but the bus started moving. I saw my father gradually receding into the distance. I saw that the road we had come by looked like a giant motionless rope. Father would use the same road to go back home. Simultaneously our journeys started in two opposite directions, with me seated in the luxurious seat of a bus and father walking back with weary legs on the pebble-strewn road.",
       "- Yeshe Dorjee Thongchi (Translated by D P Nath)",
       "About the author",
-      {
-        "image": {
-          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:24:25.599Z/page-5-img-1.jpeg",
-          "description": "A portrait of author Yeshe Dorjee Thongchi."
-        }
-      },
       "Yeshe Dorjee Thongchi (born in May, 1952) is a prominent name in Assamese literature. Though he grew up in poverty, he studied well and entered Arunachal Pradesh Civil Service and was later elevated to the Indian Administrative Service. He writes fiction, drama and essays in Assamese and English. He has received a national recognition for his novel 'Mouna Ounth Mukhar Hriday', which won the Sahitya Academy award in 2005. Many of Thongchi's novels, including Sonam, deal with the cultural life of the Monpa and the Sherdukpen tribes of Arunachal Pradesh."
     ]
   }

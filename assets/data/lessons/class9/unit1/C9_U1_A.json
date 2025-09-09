@@ -5,7 +5,7 @@
       "Look at the picture and answer the questions that follow.",
       {
         "image": {
-          "asset_path": "2.png",
+        "asset_path": "images/class9/unit1/1.png",
           "description": "A cartoon drawing of a monkey wearing a yellow shirt and red pants, looking at its reflection in an oval mirror. The monkey is touching its lips, seemingly intrigued by what it sees."
         }
       },
@@ -21,7 +21,7 @@
       "\"It was a hot summer night about ten o' clock. I had my meal at the restaurant and returned to my room. I heard a noise from above as I opened the door. The sound was a familiar one. One could say that rats and I shared the room. I took out my box of matches and lighted the kerosene lamp on the table.",
       {
         "image": {
-          "asset_path": "3.png",
+        "asset_path": "images/class9/unit1/2.png",
           "description": "An illustration of a man sitting at a desk in a dimly lit room, looking at his reflection in a mirror. The room is simple, with a kerosene lamp on the table, clothes hanging on the wall, and a window showing the night sky with a crescent moon."
         }
       },
@@ -36,7 +36,7 @@
       "With such thoughts in my mind I resumed my seat in the chair in front of the table. There were no more sounds from above. Suddenly there came a dull thud as if a rubber tube had fallen to the ground... surely nothing to worry about. Even so I thought I would turn around and take a look. No sooner had I turned than a fat snake wriggled over the back of the chair and landed on my shoulder. The snake's landing on me and my turning were simultaneous.",
       {
         "image": {
-          "asset_path": "4.png",
+        "asset_path": "images/class9/unit1/3.png",
           "description": "An illustration depicting a man in a state of shock, jumping away from a chair. A large cobra is draped over his shoulder, while another cobra is on the table, looking at its reflection in the mirror."
         }
       },
@@ -48,7 +48,7 @@
       "It seemed as if God appreciated that. The snake turned its head. It looked into the mirror and saw its reflection. I do not claim that it was the first snake that had ever looked into a mirror. But it was certain that the snake was looking into the mirror. Was it admiring its own beauty? Was it trying to make an important decision about growing a moustache or using eye shadow and mascara or wearing a vermilion spot on its forehead?",
       {
         "image": {
-          "asset_path": "5.png",
+        "asset_path": "images/class9/unit1/4.png",
           "description": "An illustration showing a man, now dressed in clean clothes, returning to his room with two other men. They are looking into the sparsely furnished room from the doorway."
         }
       },

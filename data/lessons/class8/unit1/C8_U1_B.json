@@ -3,6 +3,7 @@
   "poem_text": [
     {
       "image": {
+        "asset_path": "images/class8/unit1/4.png",
         "description": "An illustration of a woman in a green sari rocking a baby in a hanging cradle."
       }
     },
@@ -26,6 +27,7 @@
     },
     {
       "image": {
+        "asset_path": "images/class8/unit1/5.png",
         "description": "An illustration of a man in his bedroom looking out a barred window at a woman looking in."
       }
     },
@@ -41,4 +43,3 @@
   ],
   "author": "Rabindranath Tagore"
 }
-

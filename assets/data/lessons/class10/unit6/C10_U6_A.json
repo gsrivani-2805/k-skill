@@ -5,14 +5,8 @@
       "Look at the picture and answer the questions that follow.",
       {
         "image": {
-          "asset_path": "1.png",
+        "asset_path": "images/class10/unit6/15.png",
           "description": "A riverbank heavily polluted with a large pile of garbage and plastic waste."
-        }
-      },
-      {
-        "image": {
-          "asset_path": "2.png",
-          "description": "A picturesque, green village with traditional houses nestled in a valley surrounded by lush forests and fields."
         }
       },
       "1. What do you see in the first picture? Do you like it? If not, why?\n2. How is the second picture different from the first? Do you feel good about it? Give reasons for your view.",
@@ -26,7 +20,7 @@
       "Wangari Maathai started the Green Belt Movement and also fought for equal rights for women in Africa. She is the first African woman to win the Nobel Peace Prize. Read the excerpts from her interview with Nippon Hoso Kyokai (NHK) Radio (Japan).",
       {
         "image": {
-          "asset_path": "3.png",
+        "asset_path": "images/class10/unit6/14.png",
           "description": "Wangari Maathai holding her Nobel Peace Prize award certificate. The text on the certificate reads: \"Den Norske Nobelinstitutt har i henhold til reglene i det av ALFRED NOBEL den 27. november 1895 opprettede testamente tildelt Wangari Muta Maathai Nobels Fredspris for 2004\"."
         }
       },
@@ -35,7 +29,7 @@
       "NHK Radio : How is peace connected to a good environment?\nWM : Many wars that are fought in the world are fought over natural resources. Some wars are fought because the environment is so degraded that it is not able to support communities and so they fight over the little that is left. Others are fought because some people want to take a lot of the resources, to control them, and to keep many other people out.",
       {
         "image": {
-          "asset_path": "4.png",
+        "asset_path": "images/class10/unit6/13.png",
           "description": "Wangari Maathai sitting on a large, felled tree trunk in a grassy field, with cattle and people in the background."
         }
       },
@@ -45,7 +39,7 @@
       "NHK Radio : What was the environment like when you were young, and how did you go about saving it?\nWM. : When I was a child, which is almost more than fifty years ago, the environment was very pristine, very beautiful, and very green. We were a British colony, and the British government at that time started to clear cut the indigenous forests in our forested mountains because they wanted to establish commercial plantations of exotic species of trees such as the pines from the northern hemisphere and the eucalyptus from Australia. These trees are very nice, they grow tall, and they grow very fast, but as they grow they destroy all the local biological diversity. All the flora and fauna disappeared. So although we were getting commercial timber for the growing timber industry, we also destroyed our local flora and fauna.",
       {
         "image": {
-          "asset_path": "5.png",
+        "asset_path": "images/class10/unit6/12.png",
           "description": "A young person carefully planting a tree seedling in the ground."
         }
       },
@@ -54,14 +48,14 @@
       "NHK Radio : What happened when you started working with the women?",
       {
         "image": {
-          "asset_path": "6.png",
+        "asset_path": "images/class10/unit6/11.png",
           "description": "Women tending to a large number of tree seedlings arranged in rows at a nursery."
         }
       },
       "W M.: Well, the first time when I told them, \"Let us plant trees\", the women said they did not know how to plant trees. So I asked the foresters to come and teach them, but they were very complicated-they are professionals. It became very complicated for ordinary illiterate women so I told the women, \"We shall use our",
       {
         "image": {
-          "asset_path": "7.png",
+        "asset_path": "images/class10/unit6/10.png",
           "description": "A group of women in colorful attire stand in front of rows of green seedlings."
         }
       },

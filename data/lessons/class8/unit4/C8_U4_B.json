@@ -19,8 +19,8 @@
     },
     {
         "image": {
-          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:26:59.883Z/page-1-img-1.jpeg",
-          "description": "A smartphone displaying various apps on its screen."
+        "asset_path": "images/class8/unit4/4.png",
+        "description": "A smartphone displaying various apps on its screen."
         }
       },
     {
@@ -49,6 +49,7 @@
     },
     {
       "image": {
+        "asset_path": "images/class8/unit4/5.png",
         "description": "An illustration of a two-story house, with a mother downstairs and a daughter upstairs on a balcony."
       }
     },

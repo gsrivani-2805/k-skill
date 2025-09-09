@@ -3,6 +3,7 @@
   "poem_text": [
     {
       "image": {
+        "asset_path": "images/class9/unit8/4.png",
         "description": "An illustration of a man getting off a train at a crowded station platform."
       }
     },
@@ -28,6 +29,7 @@
     },
     {
       "image": {
+        "asset_path": "images/class9/unit8/3.png",
         "description": "An illustration of an elderly man lying in bed, looking thoughtful, with a radio on the bedside table."
       }
     },
