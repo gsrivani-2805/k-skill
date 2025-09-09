@@ -1,25 +1,194 @@
-
 {
-  "lesson_title": "They Literally Build the Nation",
-  "content": [
-    "Civil engineering is one of the oldest disciplines of engineering. It involves the design, construction and management of infrastructure, highways, railways, airports, harbours, bridges, tunnels, ensuring supply of high quality water, among others, and hence the term is used in a very broad sense. It may not be an exaggeration to state that almost every major project has a contribution from a civil engineer. The role of the civil engineer has been continuously changing. Earlier, engineers would focus their efforts on production of site plans, crank out drawings, turn them over to contractors and pretty much be done with it. But things are much more sophisticated these days.",
-    "Development of landscape today requires thoughtful planning, and an understanding of regulations. Permit requirements are more stringent and more numerous; schedules are constrained and owners are mindful of their expenditures.",
-    "Civil engineers today are expected to stay with the clients and guide them through the approval and construction process while offering strategy, advice and their experience.",
-    "Civil engineers are multifaceted, taking on roles and responsibilities that are varied. Environmental civil engineers focus on all round development of design and construction skill of working in harmony with nature. With the focus on environmental issues such as waste-water and sewerage disposal engineers operate as guardians of nature. Structural engineers are responsible for design of buildings, offshore oil platforms etc. Highway engineers are responsible for design of traffic flow planning, roadway geometry design etc.",
-    "Structural engineers are involved in the design of small residential buildings, multi-storeyed buildings, microwave towers, transmission lines for electricity and pipelines for water, oil and gas supply.",
-    "Construction engineers plan and coordinate construction projects. They may have a job title such as constructor, construction superintendent, general superintendent, project engineer etc.",
-    "Construction managers evaluate and determine appropriate construction methods and the most cost-effective plan and schedule. This may require sophisticated estimating and scheduling techniques. Construction managers regularly review engineering and architectural drawing and specifications to monitor progress and ensure compliance with plans and schedules.",
+  "lesson_number": 4,
+  "lesson_title": "The Computer Game",
+  "sections": [
     {
-      "image": {
-        "asset_path": "images/class8/unit4/6.png",
-        "description": "A large dam, an example of a major civil engineering project."
-      }
+      "type": "image",
+      "description": "An illustration of a television game show with a host and a computer. The computer is labeled MT2.",
+        "image_path": "images/class8/unit4/6.png"
     },
-    "And thus, it would be advisable for students to undergo practical industry experience through internships, cooperative education programmes or work experience in the industry.",
-    "Another key discipline is quantity surveying. Technical skills acquired in areas of estimating, costing and specification together with good knowledge of various procurement routes, tendering procedure and contracting essentials make quantity surveyors an inseparable part of the construction industry.",
-    "Job opportunities exist in design offices, consulting firms, government departments such as municipalities, environmental agencies as well as with contracting firms.",
-    "- S.S. Rao (The Hindu, 20th August, 2012)"
-  ],
-  "author": ""
+    {
+      "type": "paragraph",
+      "content": "Gary Lopez (Television game host)\nNoisemaker\nSecond Noisemaker\nMT2, a computer\nA boy and a girl from the audience"
+    },
+    {
+      "type": "paragraph",
+      "content": "(Scene: A television studio)"
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "Good evening, ladies and gentlemen. Welcome to The Computer Game. Today another human player gets a chance to match wits with our very own computer - MT2!"
+    },
+    {
+      "type": "paragraph",
+      "content": "(MT2 blinks its lights and the studio audience claps loudly.)"
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "Today's player is Joan Robinson from the Oak Street School. Feeling smart, Joan?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Joan",
+      "line": "Ready!"
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "I hope so! May I remind you no one has beaten MT2 yet. Now, here's how we play the game. I'll ask a question. The first player to sound a noise maker and give the correct answer scores one point. The first player to earn three points wins the game. Ready, players?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Joan",
+      "line": "Ready!"
+    },
+    {
+      "type": "dialogue",
+      "character": "MT2",
+      "line": "I am prepared to play."
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "First question. How much is 62,415 times 78,921?"
+    },
+    {
+      "type": "dialogue",
+      "character": "First Noisemaker",
+      "line": "BLEEP!"
+    },
+    {
+      "type": "dialogue",
+      "character": "MT2",
+      "line": "The correct answer is 4,925,854,215."
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "Right! One point for the computer!"
+    },
+    {
+      "type": "dialogue",
+      "character": "Second Noisemaker",
+      "line": "NA"
+    },
+    {
+      "type": "paragraph",
+      "content": "(The audience applauds.)"
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "Next question. In which year was the Battle of Hastings fought?"
+    },
+    {
+      "type": "dialogue",
+      "character": "First Noisemaker",
+      "line": "BLEEP!"
+    },
+    {
+      "type": "dialogue",
+      "character": "MT2",
+      "line": "1066. The answer is 1066. One point for MT2. The score is 2-0. What is your next question, master?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "I am not your master. Now, for the third and final question. What are the first three words of the American Declaration of Independence?"
+    },
+    {
+      "type": "dialogue",
+      "character": "First Noisemaker",
+      "line": "BLEEP!"
+    },
+    {
+      "type": "dialogue",
+      "character": "MT2",
+      "line": "The first three words of the American Declaration of Independence are 'When in the...'"
+    },
+    {
+      "type": "dialogue",
+      "character": "Joan",
+      "line": "Wait! Wait! The noise-maker went off too soon."
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "That's correct, Joan. The noise-maker has to go off after I finish the question. So, MT2, you did not win that point. The score is 2-0. Now, for the next question. What is the spelling of 'chrysanthemum'?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Second Noisemaker",
+      "line": "BUZZ!"
+    },
+    {
+      "type": "dialogue",
+      "character": "Joan",
+      "line": "C-h-r-y-s-a-n-t-h-e-m-u-m."
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "That's right! One point for Joan! The score is 2-1."
+    },
+    {
+      "type": "dialogue",
+      "character": "Second Noisemaker",
+      "line": "BUZZ!"
+    },
+    {
+      "type": "dialogue",
+      "character": "Joan",
+      "line": "What happens if a human beats a computer?"
+    },
+    {
+      "type": "dialogue",
+      "character": "MT2",
+      "line": "I cannot answer that question. It is not in my program."
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "The computer is right. We're only programmed for questions. Now, for the final question. Is this the right question? And if it is, can you answer it?"
+    },
+    {
+      "type": "dialogue",
+      "character": "MT2",
+      "line": "The question is not a question. It is not a question at all. It is a statement."
+    },
+    {
+      "type": "paragraph",
+      "content": "MT2's lights start to flash wildly and smoke pours out of its top."
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "The computer is breaking down!"
+    },
+    {
+      "type": "dialogue",
+      "character": "Boy",
+      "line": "Then Joan's the winner!"
+    },
+    {
+      "type": "dialogue",
+      "character": "Gary Lopez",
+      "line": "It seems that way. This is a first for our show."
+    },
+    {
+      "type": "paragraph",
+      "content": "(The crowd goes wild.)"
+    },
+    {
+      "type": "dialogue",
+      "character": "Joan",
+      "line": "I knew it! The computer cannot handle questions that require intelligence."
+    },
+    {
+      "type": "paragraph",
+      "content": "- Steven Otfinoski"
+    }
+  ]
 }
-

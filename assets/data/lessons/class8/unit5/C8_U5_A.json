@@ -1,200 +1,92 @@
-
 {
-  "lesson_title": "The Computer Game",
-  "content": [
-    "CHARACTERS",
-    "Gary Lopez (Television game host)\nJoan Robinson\nMT2, a computer\nA boy and a girl from the audience\nFirst Noisemaker\nSecond Noisemaker",
-    "(Scene: A television studio)",
+  "lesson_number": 5,
+  "lesson_title": "The Treasure Within - Part I",
+  "sections": [
     {
-      "role_play": [
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": Good evening, ladies and gentlemen. Welcome to The Computer Game. Today another human player gets a chance to match wits with our very own computer – MT2!"
-        }
-      ]
+      "type": "image",
+      "description": "Pictures of Dr. Sarvepalli Radhakrishnan, Dr. A.P.J. Abdul Kalam, C.V. Raman and Saina Nehwal.",
+        "image_path": "images/class8/unit5/1.png"
     },
-    "(MT2 blinks its lights and the studio audience claps loudly.)",
     {
-      "role_play": [
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": Today's player is Joan Robinson from the Oak Street School. Feeling smart, Joan?"
-        },
-        {
-          "role": "Joan",
-          "dialogue": ": Ready!"
-        },
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": I hope so! May I remind you no one has beaten MT2 yet. Now, here's how we play the game. I'll ask a question. The first player to sound a noise maker and give the correct answer scores one point. The first player to earn three points wins the game. Ready, players?"
-        },
-        {
-          "role": "Joan",
-          "dialogue": ": Ready!"
-        },
-        {
-          "role": "MT2",
-          "dialogue": "(in flat voice) : I am prepared to play."
-        },
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": First question. How much is 62,415 times 78,921?"
-        },
-        {
-          "role": "First Noisemaker",
-          "dialogue": ": BLEEP!"
-        },
-        {
-          "role": "MT2",
-          "dialogue": ": The correct answer is 4,925,854,215."
-        },
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": Right! One point for the computer!"
-        }
-      ]
-    },
-    "(The audience claps politely.) Next question. Listen carefully. What date in history did the pilgrims land at Plymouth Rock?",
-    {
-      "role_play": [
-        {
-          "role": "Second Noisemaker",
-          "dialogue": ": BUZZ!"
-        },
-        {
-          "role": "Joan",
-          "dialogue": ": 1620!"
-        },
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": I'm sorry. That's not an exact enough answer."
-        },
-        {
-          "role": "First Noisemaker",
-          "dialogue": ": BLEEP!"
-        },
-        {
-          "role": "MT2",
-          "dialogue": ": The pilgrims landed at Plymouth Rock on December 21 of the"
-        }
+      "type": "questions",
+      "content": [
+        "1. Identify the persons in the pictures.",
+        "2. Which field does each of them belong to?",
+        "3. Would you like to be like any one of them? If yes, name the field you like."
       ]
     },
     {
-      "image": {
-        "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:28:02.106Z/page-2-img-1.jpeg",
-        "description": "A cartoon illustration of a television game show. A host stands in the center, a female contestant sits at a desk to the left, and a large computer screen is on the right. An audience of children is in the foreground."
-      }
+      "type": "oral_discourse",
+      "content": "Talk on - \"Ambition of your life.\""
     },
-    "year 1620.",
     {
-      "role_play": [
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": Right! Two points for the computer! If MT2 answers the next question correctly, it's all over, Joan!"
-        },
-        {
-          "role": "Boy in audience",
-          "dialogue": ": Come on, Joan!"
-        },
-        {
-          "role": "Girl in audience",
-          "dialogue": ": You can beat that talking tin can!"
-        },
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": Quiet, please. And here's the next question –"
-        },
-        {
-          "role": "Joan",
-          "dialogue": ": Wait!"
-        },
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": What's the matter?"
-        },
-        {
-          "role": "Joan",
-          "dialogue": ": Could someone else ask the question, please?"
-        },
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": What for?"
-        },
-        {
-          "role": "Joan",
-          "dialogue": ": Maybe I'll have better luck with someone else."
-        },
-        {
-          "role": "Girl",
-          "dialogue": ": (coming up on stage): I'll ask it, Joan!"
-        },
-        {
-          "role": "Joan",
-          "dialogue": ": (whispering to her): Put it in the form of a command. I think the"
-        },
-        {
-          "role": "Girl",
-          "dialogue": "computer's only programmed for questions.\n: (looking at question): Spell the word “chrysanthemum.”"
-        },
-        {
-          "role": "First Noisemaker",
-          "dialogue": ": BLEEP!"
-        },
-        {
-          "role": "MT2",
-          "dialogue": ": Chrysanthemum is spelled ... is spelled ..."
-        },
-        {
-          "role": "Girl",
-          "dialogue": ": Yes?"
-        },
-        {
-          "role": "MT2",
-          "dialogue": ": I do not follow the question. Please repeat in the programmed form."
-        },
-        {
-          "role": "Second Noisemaker",
-          "dialogue": ": BUZZ!"
-        },
-        {
-          "role": "Joan",
-          "dialogue": ": Chrysanthemum. C-H-R-Y-S-A-N-T-H-E-M-U-M."
-        },
-        {
-          "role": "Girl",
-          "dialogue": ": Right! One point for Joan!"
-        },
-        {
-          "role": "Boy",
-          "dialogue": ": Hurrah!"
-        },
-        {
-          "role": "MT2",
-          "dialogue": ": (slowing down): I am MT2, Computer ... I am MT2.. I am MT... MT....M....T....."
-        },
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": The computer's breaking down!"
-        },
-        {
-          "role": "Boy",
-          "dialogue": ": Then Joan's the winner!"
-        }
-      ]
+      "type": "paragraph",
+      "content": "Read the following interview. It is based on a conversation between Ms. Bela Raja (BR), Editor of Sparsh, a newsletter from the Resource Centre, The Valley School, Bangalore and Mr. Hafeez Contractor (HC), one of India's leading architects. Part I"
     },
-    "(Suddenly MT2's lights begin flashing wildly. Smoke pours out of its top.)",
     {
-      "role_play": [
-        {
-          "role": "Gary Lopez",
-          "dialogue": ": Look what you've done. It's blown a fuse!"
-        },
-        {
-          "role": "Joan",
-          "dialogue": ": Now that's what I call a poor loser!"
-        }
-      ]
+      "type": "dialogue",
+      "character": "HC",
+      "line": "I used to have this terrible nightmare. Only now, over the last four to five years, it seems to have disappeared."
+    },
+    {
+      "type": "dialogue",
+      "character": "BR",
+      "line": "What nightmare are you talking about and why do you think it has disappeared now?"
+    },
+    {
+      "type": "dialogue",
+      "character": "HC",
+      "line": "I used to get continuous nightmares about appearing for a maths examination where I did not know anything! Now the psyche must have gotten over it, I don't have to think about education and there is absolutely no time to get nightmares."
+    },
+    {
+      "type": "dialogue",
+      "character": "BR",
+      "line": "Tell us something about your earliest memories in school."
+    },
+    {
+      "type": "dialogue",
+      "character": "HC",
+      "line": "In the first and second year I was a good student. After I reached the third standard, I simply lost interest and I never studied. I used to be interested in games, running around, playing jokes and pranks on others. I would copy in class during exam times. I would try to get hold of the examination paper that had been prepared and study it, as I could not remember things that had been taught to me in class. However, later, one sentence spoken to me by my Principal changed my life. When I approached my eleventh standard, the Principal called me and said, \"Look here, Son. I have been seeing you since day one. You are a good student, but you never studied. I have taken care of you till today. Now, I can no longer take care of you, so you do it yourself.\" He talked to me for five minutes, \"You don't have your father, your mother has worked so hard to bring you up and paid all your fees all these years but you have only played games. Now you should rise to the occasion and study.\" I used to be a very good sportsman. I had been the senior champion for so many years and I also was the cricket captain. I used to play every game, but that year I did not step out onto the field. I would go for prayers and all I would do was eat and study. I normally used to copy and pass, but I realised that once I was in SSC, I could not do that."
+    },
+    {
+      "type": "image",
+      "description": "A close-up picture of Mr. Hafeez Contractor.",
+        "image_path": "images/class8/unit5/2.jpg"
+    },
+    {
+      "type": "dialogue",
+      "character": "HC",
+      "line": "When I got a second class, 50 per cent, in my SSC, my Principal said, \"Son, consider yourself as having got distinction!\". This is my memory of my school days. I did lots of other things. See, as far as my things are concerned, I can't remember. I forget things very easily. To remember, I have to see things as a photograph. I read a book and I can remember the matter as a photograph but not through my mind. That is how it works."
+    },
+    {
+      "type": "dialogue",
+      "character": "BR",
+      "line": "When you were in school and you were doing badly, did the teachers pull you up and how did you feel?"
+    },
+    {
+      "type": "dialogue",
+      "character": "HC",
+      "line": "I never felt anything on being pulled up. I used to be so interested in playing. I would receive a caning every week."
+    },
+    {
+      "type": "dialogue",
+      "character": "BR",
+      "line": "When you knew that you had incurred the wrath of your teacher by not doing your homework or by behaving badly, when you knew you would get a caning, what was the state of your mind?"
+    },
+    {
+      "type": "dialogue",
+      "character": "HC",
+      "line": "State of mind? Just lift up the hand and they would cane me you. It would hurt badly and then I would have to forget about it, because I would want to go and play."
+    },
+    {
+      "type": "dialogue",
+      "character": "BR",
+      "line": "Have you ever felt insecure or threatened?"
+    },
+    {
+      "type": "dialogue",
+      "character": "HC",
+      "line": "I was just interested in playing and nothing else. I was most interested in funny pranks. One day, I did not want to study, so I created a distraction. For one whole hour we played 'chor police'. Every Saturday we were allowed to go into town to see a movie. So what I would do was, have no lunch and collect money from 40-50 students, and run and buy the tickets. On my way back, I would eat to my heart's content. I used to be the leader of a gang. We would have gang fights and plan strategies. These things used to interest me more than any academics. Students used to book my textbooks for the following year, because they were almost brand new. I probably opened them one day before exams."
     }
-   ]
+  ]
 }
-

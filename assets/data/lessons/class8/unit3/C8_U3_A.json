@@ -1,150 +1,153 @@
-[
-  {
-    "lesson_title": "Humanity",
-    "content": [
-      "Look at the picture given below and answer the questions that follow.",
-      {
-        "image": {
-        "asset_path": "images/class8/unit3/1.png",
-        "description": "A woman in a red and orange outfit kneels to give food to a seated, disheveled older man."
-        }
-      },
-      "1. What do you notice in the picture?",
-      "2. What would be the feelings of the man in the picture?",
-      "3. Have you ever seen such incidents? What's your opinion on them?",
-      "Oral Discourse: Narrate an incident you have witnessed where people helped others."
-    ],
-    "author": ""
-  },
-  {
-    "lesson_title": "The Selfish Giant",
-    "content": [
-      "Part I",
-      "(Old Giant and The Giant refer to the same character. 'The Giant' is a selfish character whereas 'Old Giant' is a changed and kind character.)",
-      "An Old Giant addresses the audience directly. The action plays out behind him as he describes it.",
-      {
-        "role_play": [
-          {
-            "role": "Old Giant",
-            "dialogue": ": I once owned a large, lovely garden, with soft green grass. Here and there over the grass stood beautiful flowers like stars, and there were twelve peach trees that in the springtime broke out into delicate blossoms of pink and pearl and in the autumn bore rich fruit. The birds sat on the trees and sang so sweetly that the children used to stop their games in order to listen to them...\nEvery afternoon, as they were coming from school, the children used to go and play in MY garden... but one day I came back.\nI had been to visit my friend the Cornish ogre, and had stayed with him for seven years. After the seven years were over, I had said all that I had to say, and I determined to return to my own castle. When I arrived, I saw children playing in MY garden."
-          },
-          {
-            "role": "The Giant",
-            "dialogue": ": What are you doing here?"
-          }
-        ]
-      },
-      "(The children run away.)",
-      {
-        "role_play": [
-          {
-            "role": "The Giant",
-            "dialogue": ": My own garden is my own garden; any one can understand that, and I will allow nobody to play in it but myself."
-          }
-        ]
-      },
-      "(The old giant points out the younger giant working on a wall, putting up a sign and then listening at the wall.)",
-      {
-        "role_play": [
-          {
-            "role": "Old Giant",
-            "dialogue": ": So I built a high wall all round and put up a notice-board:\nTRESPASSERS WILL BE PROSECUTED"
-          }
-        ]
-      },
-      "I heard the children whispering outside the wall on their way to school.",
-      {
-        "image": {
-          "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:26:59.883Z/page-3-img-1.jpeg",
-          "description": "A cartoon illustration of a large, muscular giant with black hair and a green skirt, chasing a group of small children away from a garden with trees and a tall brick tower."
-        }
-      },
-      {
-        "role_play": [
-          {
-            "role": "Tall Girl",
-            "dialogue": ": Now we have nowhere to play."
-          },
-          {
-            "role": "Short Boy",
-            "dialogue": ": We can play on the road."
-          },
-          {
-            "role": "Square Girl",
-            "dialogue": ": But the road is very dusty."
-          },
-          {
-            "role": "Graceful Girl",
-            "dialogue": ": And full of hard stones."
-          },
-          {
-            "role": "Round Boy",
-            "dialogue": ": I don't like it."
-          },
-          {
-            "role": "Graceful Girl",
-            "dialogue": ": Let's walk around the wall when our lessons are over. At least we can talk about the beautiful garden inside."
-          },
-          {
-            "role": "Tall Girl",
-            "dialogue": ": How happy we were there!"
-          },
-          {
-            "role": "Round Boy",
-            "dialogue": ": He is a very selfish Giant."
-          }
-        ]
-      },
-      "(The Giant opens a door in the wall and shouts at the children.)",
-      {
-        "role_play": [
-          {
-            "role": "The Giant",
-            "dialogue": ": AAAGH! My own garden is my own garden; any one can understand that, and I will allow nobody to play in it but myself."
-          }
-        ]
-      },
-      "(The children scatter.)",
-      {
-        "role_play": [
-          {
-            "role": "Old Giant",
-            "dialogue": ": Then the Spring came, and all over the country there were little blossoms and little birds. Only in my garden it was still Winter. The birds did not come to sing, and the trees forgot to blossom. The people who were pleased best were the Snow and the Frost."
-          },
-          {
-            "role": "Snow and Frost",
-            "dialogue": ": Spring has forgotten this garden; so now we can live here all the year round!"
-          },
-          {
-            "role": "Old Giant",
-            "dialogue": ": The Snow covered up the grass with her great white cloak, and the Frost painted all the trees silver. Then they invited the North Wind to stay with them. When he came, he was wrapped in heavy furs. He roared all day about the garden and rejoiced in blowing the chimney-pots over."
-          },
-          {
-            "role": "North Wind",
-            "dialogue": ": This is a delightful spot; we must ask the Hail to come on a visit."
-          },
-          {
-            "role": "Old Giant",
-            "dialogue": ": So the old Hail came. Every day for three hours he rattled on the roof of the castle till he broke most of the slates, and then he ran round and round the garden as fast as he could go. He was dressed in grey, and his breath was like ice. I sat at the window and looked out at my cold white garden."
-          },
-          {
-            "role": "The Giant",
-            "dialogue": ": I cannot understand why the Spring is so late in coming. I hope there will be a change in the weather."
-          },
-          {
-            "role": "Old Giant",
-            "dialogue": ": But the Spring never came, nor the Summer. The Autumn gave golden fruit to every garden, but to my garden she gave none."
-          },
-          {
-            "role": "Autumn",
-            "dialogue": ": He is too selfish."
-          },
-          {
-            "role": "Old Giant",
-            "dialogue": ": So it was always winter here, and the North Wind, and the Hail, and the Frost, and the Snow danced about through the trees."
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "lesson_number": 3,
+  "lesson_title": "The Selfish Giant - I",
+  "sections": [
+    {
+      "type": "image",
+      "description": "A woman giving food to a man sitting on the ground.",
+        "image_path": "images/class8/unit3/1.png"
+    },
+    {
+      "type": "questions",
+      "content": [
+        "What do you notice in the picture?",
+        "What would be the feelings of the man in the picture?",
+        "Have you ever seen such incidents? What's your opinion on them?"
+      ]
+    },
+    {
+      "type": "oral_discourse",
+      "content": "Narrate an incident you have witnessed where people helped others."
+    },
+    {
+      "type": "paragraph",
+      "content": "Old Giant and The Giant refer to the same character. 'The Giant' is a selfish character whereas 'Old Giant' is a changed and kind character. An Old Giant addresses the audience directly. The action plays out behind him as he describes it."
+    },
+    {
+      "type": "dialogue",
+      "character": "Old Giant",
+      "line": "I once owned a large, lovely garden, with soft green grass. Here and there over the grass stood beautiful flowers like stars, and there were twelve peach trees that in the springtime broke out into delicate blossoms of pink and pearl and in the autumn bore rich fruit. The birds sat on the trees and sang so sweetly that the children used to stop their games in order to listen to them... Every afternoon, as they were coming from school, the children used to go and play in MY garden... but one day I came back. I had been to visit my friend the Cornish ogre, and had stayed with him for seven years. After the seven years were over, I had said all that I had to say, and I determined to return to my own castle. When I arrived, I saw children playing in MY garden."
+    },
+    {
+      "type": "dialogue",
+      "character": "The Giant",
+      "line": "What are you doing here?"
+    },
+    {
+      "type": "paragraph",
+      "content": "(The children run away.)"
+    },
+    {
+      "type": "dialogue",
+      "character": "The Giant",
+      "line": "My own garden is my own garden; any one can understand that, and I will allow nobody to play in it but myself."
+    },
+    {
+      "type": "paragraph",
+      "content": "(The old giant points out the younger giant working on a wall, putting up a sign and then listening at the wall.) So I built a high wall all round and put up a notice-board: TRESPASSERS WILL BE PROSECUTED. I heard the children whispering outside the wall on their way to school."
+    },
+    {
+      "type": "image",
+      "description": "An angry giant chasing children out of a garden with trees and a castle.",
+        "image_path": "images/class8/unit3/2.png"
+    },
+    {
+      "type": "dialogue",
+      "character": "Tall Girl",
+      "line": "Now we have nowhere to play."
+    },
+    {
+      "type": "dialogue",
+      "character": "Short Boy",
+      "line": "We can play on the road."
+    },
+    {
+      "type": "dialogue",
+      "character": "Square Girl",
+      "line": "But the road is very dusty."
+    },
+    {
+      "type": "dialogue",
+      "character": "Graceful Girl",
+      "line": "And full of hard stones."
+    },
+    {
+      "type": "dialogue",
+      "character": "Round Boy",
+      "line": "I don't like it."
+    },
+    {
+      "type": "dialogue",
+      "character": "Graceful Girl",
+      "line": "Let's walk around the wall when our lessons are over. At least we can talk about the beautiful garden inside."
+    },
+    {
+      "type": "dialogue",
+      "character": "Tall Girl",
+      "line": "How happy we were there!"
+    },
+    {
+      "type": "dialogue",
+      "character": "Round Boy",
+      "line": "He is a very selfish Giant."
+    },
+    {
+      "type": "paragraph",
+      "content": "(The Giant opens a door in the wall and shouts at the children.)"
+    },
+    {
+      "type": "dialogue",
+      "character": "The Giant",
+      "line": "AAAGH! My own garden is my own garden; any one can understand that, and I will allow nobody to play in it but myself."
+    },
+    {
+      "type": "paragraph",
+      "content": "(The children scatter.)"
+    },
+    {
+      "type": "dialogue",
+      "character": "Old Giant",
+      "line": "Then the Spring came, and all over the country there were little blossoms and little birds. Only in my garden it was still Winter. The birds did not come to sing, and the trees forgot to blossom. The people who were pleased best were the Snow and the Frost."
+    },
+    {
+      "type": "dialogue",
+      "character": "Snow and Frost",
+      "line": "Spring has forgotten this garden; so now we can live here all the year round!"
+    },
+    {
+      "type": "dialogue",
+      "character": "Old Giant",
+      "line": "The Snow covered up the grass with her great white cloak, and the Frost painted all the trees silver. Then they invited the North Wind to stay with them. When he came, he was wrapped in heavy furs. He roared all day about the garden and rejoiced in blowing the chimney-pots over."
+    },
+    {
+      "type": "dialogue",
+      "character": "North Wind",
+      "line": "This is a delightful spot; we must ask the Hail to come on a visit."
+    },
+    {
+      "type": "dialogue",
+      "character": "Old Giant",
+      "line": "So the old Hail came. Every day for three hours he rattled on the roof of the castle till he broke most of the slates, and then he ran round and round the garden as fast as he could go. He was dressed in grey, and his breath was like ice."
+    },
+    {
+      "type": "dialogue",
+      "character": "The Giant",
+      "line": "I sat at the window and looked out at my cold white garden. I cannot understand why the Spring is so late in coming. I hope there will be a change in the weather."
+    },
+    {
+      "type": "dialogue",
+      "character": "Old Giant",
+      "line": "But the Spring never came, nor the Summer. The Autumn gave golden fruit to every garden, but to my garden she gave none."
+    },
+    {
+      "type": "dialogue",
+      "character": "Autumn",
+      "line": "He is too selfish."
+    },
+    {
+      "type": "dialogue",
+      "character": "Old Giant",
+      "line": "So it was always winter here, and the North Wind, and the Hail, and the Frost, and the Snow danced about through the trees."
+    }
+  ]
+}

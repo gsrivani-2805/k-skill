@@ -1,208 +1,164 @@
 {
+  "lesson_number": 2,
   "lesson_title": "V.V.S. Laxman, Very Very Special",
-  "content": [
-    "'Treat success and failure on the same wavelength'",
-    "\"Success and failure are parts of anybody's life. The key is self-belief and performing consistently in tough conditions,” V.V.S. Laxman tells V. V. Subrahmanyam.",
-    "One of the finest players in contemporary cricket has called it a day. For someone who delighted cricket lovers with his brilliance with the willow for 16 long years in Test cricket, Vangipurapu Venkata Sai Laxman announced his retirement at a crowded media conference in Hyderabad, ahead of the two-test series against New Zealand.",
-    "The 37-year-old star batsman, who was part of the fabulous batting line-up which helped India become the No.1 Test team, shares his experiences and thoughts in an exclusive interview with Sportstar.",
+  "sections": [
     {
-      "image": {
-        "description": "A close-up portrait of V.V.S. Laxman, smiling."
-      }
+      "type": "image",
+      "description": "A close-up picture of V.V.S. Laxman.",
+      "image_path": "images/class9/unit2/4.png"
     },
     {
-      "role_play": [
-        {
-          "role": "Sportstar",
-          "dialogue": ": When you look back, how has the journey been in the world of cricket?"
-        },
-        {
-          "role": "V.V.S.Laxman",
-          "dialogue": ": It has been wonderful. I was lucky that the Hyderabad Cricket Association promoted me and Zaki (Syed Moinuddin Zaki) from the under-16 level itself. They made us play in the under-19 grade the same year. It was a huge leap for us and very encouraging. Fortunately, by 18, I was on the verge of playing for Hyderabad in the Ranji Trophy.\nHonestly, I feel that all the hard work and commitment I put in from the start of my career have culminated in 16 long years of international cricket. It has been an immensely satisfying feeling to have contributed to Indian cricket in my own way."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": Who has been the biggest influence on you?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": My parents (Dr. V. Shantaram and Dr. V. Satyabhama), no doubt about that. Especially, given the fact that sports was never an integral part of our family. But, the guiding philosophy which they taught was handling success and failure with equal ease."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": What did the sport teach you?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": Character. To treat success and failure on the same wavelength. It also taught me to be very balanced and obviously whatever I am today is because of cricket."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": What was the most difficult phase of your career?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": It was when I had to prefer cricket to academics. That was the toughest moment of my life. Though there was always the dream to play for my country, I also had a natural desire to be a doctor, coming from a family of doctors. Luckily, my father gave me the complete freedom to choose any one of the two. Here the role of my uncle Baba Mohan was very crucial along with some of the coaches then."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": Do you believe that it will be difficult for the modern-day young talent to make it as big as you did? Have things changed a lot in this regard?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": Frankly, now-a-days it is more easy to perform and be recognised because of the media glare. There are many platforms for real talent to come good and the IPL is one such which pushes you into national reckoning. If you perform you are bound to get recognized."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": From where did you draw the strength to emerge as a giant every time there was an effort to dwarf your achievements?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": My parents and my entire family again. They, along with my well-wishers, were always the source of inspiration. The best part is that they never changed irrespective of whether I was performing or not."
-        }
-      ]
+      "type": "paragraph",
+      "content": "One of the finest players in contemporary cricket has called it a day. For someone who delighted cricket lovers with his brilliance with the willow for 16 long years in Test cricket, Vangipurapu Venkata Sai Laxman announced his retirement at a crowded media conference in Hyderabad, ahead of the two-test series against New Zealand."
     },
     {
-      "image": {
-        "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:25:29.805Z/page-2-img-1.jpeg",
-        "description": "A full-length photo of a cricketer in white uniform and pads, holding a cricket bat and looking towards the side."
-      }
+      "type": "paragraph",
+      "content": "The 37-year-old star batsman, who was part of the fabulous batting line-up which helped India become the No.1 Test team, shares his experiences and thoughts in an exclusive interview with Sportstar."
     },
     {
-      "role_play": [
-        {
-          "role": "SS",
-          "dialogue": ": What were your biggest moments as a cricketer?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": There were many. But some stand out. Though I never played the World Cup that saw India as the No.1 team, being a member of the Indian team which was the world No.1 in Test cricket was one of them. The 281 against the Aussies in Kolkata in 2001 was another. That Test remains the most memorable match for me. In fact, that Test series was very special for all the players for it was also the best and the most memorable series. That series gave us the confidence that we can be the best. Clearly, that was the turning point of Indian cricket itself."
-        }
-      ]
+      "type": "dialogue",
+      "character": "Sportstar",
+      "line": "When you look back, how has the journey been in the world of cricket?"
     },
     {
-      "image": {
-        "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:25:29.805Z/page-3-img-1.jpeg",
-        "description": "A cricketer in action, playing a shot during a match."
-      }
+      "type": "dialogue",
+      "character": "V.V.S.Laxman",
+      "line": "It has been wonderful. I was lucky that the Hyderabad Cricket Association promoted me and Zaki (Syed Moinuddin Zaki) from the under-16 level itself. They made us play in the under-19 grade the same year. It was a huge leap for us and very encouraging. Fortunately, by 18, I was on the verge of playing for Hyderabad in the Ranji Trophy. Honestly, I feel that all the hard work and commitment I put in from the start of my career have culminated in 16 long years of international cricket. It has been an immensely satisfying feeling to have contributed to Indian cricket in my own way."
     },
     {
-      "role_play": [
-        {
-          "role": "SS",
-          "dialogue": ": When you look back, what were the reasons for India becoming the No. 1 side?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": It is important to remember that it was not a sudden transformation which had come in one year. It all started in early 2000 when Sourav (Ganguly) became the captain. I feel lucky to have played under Sourav, my first captain Sachin and M.S (Dhoni). They all led by example. Everyone was a true performer and all of them had traits of leadership."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": How different was Sourav Ganguly as a captain?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": I must say that the combination of Sourav and Coach John Wright was influential in changing the mindset of Indian cricket itself. For, it was then that we started doing well consistently, especially abroad. And we had some amazingly talented individuals with the hunger for success, who played with great pride, worked really hard and showed great commitment levels."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": What has been your funniest incident on the field?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": Well (with a big smile), when Sourav and I collided while taking a single in an Oval ODI. It is still amusing and embarrassing, when I look back as to how it could have happened."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": What was the most disappointing moment for you?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": There was nothing like that. But, I would feel terribly disgusted whenever I dropped a catch. I would feel sorry for the bowler who puts in such a great effort and the chance is floored! That hurt me the most."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": What are your hobbies?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": I love to spend time with the members of my family. It gives so much of peace. I do love reading biographies of successful individuals. For, they help us know how they handled different aspects in life and in sport."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": You are a complete family man now. Outside you are a celebrity and at home a normal caring father..."
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": I am lucky to have such a wonderful well-knit family with a wonderful wife. And it's a great feeling to see the kids grow up so fast. It's a real joy to be with them."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": Who are the cricketers whom you admire?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": In my early days, Azhar. Well, Sachin is such a role model in every aspect. Kapil was a great inspiration too."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": What is your favourite cuisine?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": I am vegetarian. I love to taste all sorts of dishes. Thai cuisines are my favourite."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": What kind of music do you normally listen to and who are your favourite singers?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": India has been very fortunate to have seen so many great musicians and singers. And, I love listening to Kishore Kumar and our own S. P. Balasubrahmanyam, with whom I fortunately enjoy a special, personal relationship."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": Which TV programme do you love to watch?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": Generally I don't miss any big sporting events and Wimbledon is one such that I love to watch without fail. And, with the family members I do enjoy watching the singing and dancing competition programmes. I am amazed at the talent actually."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": Who was your childhood hero?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": Childhood and current hero -- it is my dad.\nI owe everything to him."
-        }
-      ]
+      "type": "dialogue",
+      "character": "SS",
+      "line": "Who has been the biggest influence on you?"
     },
     {
-      "image": {
-        "asset_path": "https://storage.googleapis.com/test-public-read/long-form-qa/ocr-images/2024-07-29T04:25:29.805Z/page-4-img-1.jpeg",
-        "description": "A cricketer in batting stance, wearing a helmet and pads, ready to play a shot."
-      }
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "My parents (Dr. V. Shantaram and Dr. V. Satyabhama), no doubt about that. Especially, given the fact that sports was never an integral part of our family. But, the guiding philosophy which they taught was handling success and failure with equal ease."
     },
     {
-      "role_play": [
-        {
-          "role": "SS",
-          "dialogue": ": What is that you miss by being a cricketing celebrity?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": I never thought of myself as a big cricketer. It is always nice to be with my family. My wife has all the qualities I look for. I have two wonderful kids and I am blessed to have such a family."
-        },
-        {
-          "role": "SS",
-          "dialogue": ": Have you given thought to post-retirement plans?"
-        },
-        {
-          "role": "VVS",
-          "dialogue": ": Well, I have a dream to set up a school and an academy. I am confident of realising this big dream."
-        }
-      ]
+      "type": "dialogue",
+      "character": "SS",
+      "line": "What did the sport teach you?"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "Character. To treat success and failure on the same wavelength. It also taught me to be very balanced and obviously whatever I am today is because of cricket."
+    },
+    {
+      "type": "dialogue",
+      "character": "SS",
+      "line": "What was the most difficult phase of your career?"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "It was when I had to prefer cricket to academics. That was the toughest moment of my life. Though there was always the dream to play for my country, I also had a natural desire to be a doctor, coming from a family of doctors. Luckily, my father gave me the complete freedom to choose any one of the two. Here the role of my uncle Baba Mohan was very crucial along with some of the coaches then."
+    },
+    {
+      "type": "dialogue",
+      "character": "SS",
+      "line": "Do you believe that it will be difficult for the modern-day young talent to make it as big as you did? Have things changed a lot in this regard?"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "Frankly, now-a-days it is more easy to perform and be recognised because of the media glare. There are many platforms for real talent to come good and the IPL is one such which pushes you into national reckoning. If you perform you are bound to get recognized."
+    },
+    {
+      "type": "image",
+      "description": "A close-up picture of V.V.S. Laxman.",
+      "image_path": "images/class9/unit2/3.png"
+    },
+    {
+      "type": "dialogue",
+      "character": "SS",
+      "line": "From where did you draw the strength to emerge as a giant every time there was an effort to dwarf your achievements?"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "My parents and my entire family again. They, along with my well-wishers, were always the source of inspiration. The best part is that they never changed irrespective of whether I was performing or not."
+    },
+    {
+      "type": "dialogue",
+      "character": "SS",
+      "line": "What were your biggest moments as a cricketer?"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "There were many. But some stand out. Though I never played the World Cup that saw India as the No.1 team, being a member of the Indian team which was the world No.1 in Test cricket was one of them. The 281 against the Aussies in Kolkata in 2001 was another. That Test remains the most memorable match for me. In fact, that Test series was very special for all the players for it was also the best and the most memorable series. That series gave us the confidence that we can be the best. Clearly, that was the turning point of Indian cricket itself."
+    },
+    {
+      "type": "image",
+      "description": "A close-up picture of V.V.S. Laxman.",
+      "image_path": "images/class9/unit2/2.png"
+    },
+    {
+      "type": "dialogue",
+      "character": "SS",
+      "line": "When you look back, what were the reasons for India becoming the No. 1 side?"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "It is important to remember that it was not a sudden transformation which had come in one year. It all started in early 2000 when Sourav (Ganguly) became the captain. I feel lucky to have played under Sourav, my first captain Sachin and M.S (Dhoni). They all led by example. Everyone was a true performer and all of them had traits of leadership."
+    },
+    {
+      "type": "dialogue",
+      "character": "SS",
+      "line": "How different was Sourav Ganguly as a captain?"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "I must say that the combination of Sourav and Coach John Wright was influential in changing the mindset of Indian cricket itself. For, it was then that we started doing well consistently, especially abroad. And we had some amazingly talented individuals with the hunger for success, who played with great pride, worked really hard and showed great commitment levels."
+    },
+    {
+      "type": "dialogue",
+      "character": "SS",
+      "line": "What has been your funniest incident on the field?"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "Well (with a big smile), when Sourav and I collided while taking a single in an Oval ODI. It is still amusing and embarrassing, when I look back as to how it could have happened."
+    },
+    {
+      "type": "dialogue",
+      "character": "SS",
+      "line": "What was the most disappointing moment for you?"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "There was nothing like that. But, I would feel terribly disgusted whenever I dropped a catch. I would feel sorry for the bowler who puts in such a great effort and the chance is floored! That hurt me the most."
+    },
+    {
+      "type": "dialogue",
+      "character": "SS",
+      "line": "What are your hobbies?"
+    },
+    {
+      "type": "image",
+      "description": "A close-up picture of V.V.S. Laxman.",
+      "image_path": "images/class9/unit2/1.png"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "I love to spend time with the members of my family. It gives so much of peace. I do love reading biographies of successful individuals. For, they help us know how they handled their life. I also enjoy reading a lot of books on ancient Indian history. And I do love to eat! I'm blessed to have such a family."
+    },
+    {
+      "type": "dialogue",
+      "character": "SS",
+      "line": "Have you given thought to post-retirement plans?"
+    },
+    {
+      "type": "dialogue",
+      "character": "VVS",
+      "line": "Well, I have a dream to set up a school and an academy. I am confident of realising this big dream."
     }
   ]
 }

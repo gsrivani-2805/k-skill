@@ -1,0 +1,395 @@
+{
+  "lesson_number": 3,
+  "lesson_title": "The Never-Never Nest",
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": "Characters: JACK, Jill (his wife), Nurse and Aunt Jane"
+    },
+    {
+      "type": "paragraph",
+      "content": "Scene: The lounge of JACK and JILL'S Villa at New Hampstead. The essential furniture consists of a table on which are writing materials, and two chairs. As the curtain rises the lounge is empty, but JACK and JILL come immediately, followed by AUNT JANE."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "And this is the lounge."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "Charming! Charming! Such a cosy little room! And such pretty furniture."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "(modestly) We like it, you know, handy place to sit in and listen to the radiogram."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "Oh, have you got a radiogram as well as a car and a piano?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Why, of course, Aunt Jane. You simply must have a radio set nowadays."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "And it's so nice for me when Jack's away at business. I even make him move it into the kitchen, so that I can listen to it while I cook."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Sit down, Aunt Jane, You must be tired-and we've shown you everything now."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "What do you think of our little nest, Aunt Jane?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "I think it's wonderful, my dears. The furniture-and the car-and the piano-and the refrigerator and the radio-what's it- it's wonderful, really wonderful!"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "And we owe it all to you."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "Yes, Jack, that's what's worrying me."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Worrying you, Aunt Jane?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "Yes. That cheque I gave you for your wedding present-it was only two hundred pounds, wasn't it? I- didn't put two thousand by mistake?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Why, no, Aunt Jane. What on earth made you think that?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "(relieved) Well, that's all right. But I still don't altogether understand. This house-it's very lovely-but doesn't it cost a great deal for rent?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Rent? Oh, no, we don't pay rent."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "But, Jack, if you don't pay rent, you'll get turned out-into the street. And that would never do. You've Jill and the baby to think of now, you know."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Our house is ours."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "YOURS?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "(modestly) Of course."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "(suddenly) Jack! I've just thought of something. That car-is it yours?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Well, no, not exactly all."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "How much of it?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Oh, I should say the steering wheel-and one of the tyres -- and about two of the cylinders. But don't you see, that's the wonderful thing about it."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "I don't see anything wonderful about it."
+    },
+    {
+      "type": "image",
+      "description": "An illustration of Jack and Jill talking to Aunt Jane. Aunt Jane is sitting on a chair, pointing and looking at Jack and Jill who are sitting on a couch. The scene is outdoors with a table, two chairs, a couch, and a car in the background.",
+      "image_path": "images/class10/unit3/2.png"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "But there is, Aunt Jane. You see, although we could never buy a car outright, we can enjoy all the pleasures of motoring for a mere five pounds down."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "And the rest by easy instalments, I suppose."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Exactly."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "Exactly. And what about the radio-what's it?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Well, that's the-"
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "And the piano?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Well, of course-"
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "And the furniture?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "I-I'm afraid so-"
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "I suppose all you own is this leg. (She points to one)"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Well, no, as a matter of fact, it's that one. (She points to another.)"
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "And the rest belongs to Mr. Sage, I suppose?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Er-Yes."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "Well. I'm not going to sit on-Mr. Sage's part for any one. (She stands up.) Now, tell me, how much do all these instalments come to?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Well, actually-(He takes out his pocket-book and consults it.)- actually to seven pounds eight and eight pence a week."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "Good heavens! And how much do you earn?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "As a matter of fact-er-that is-six pounds."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "But that's absurd! How can you pay seven pounds eight and eight pence out of six pounds?"
+    },
+    {
+      "type": "paragraph",
+      "content": "(Jack sinks into the chair. Then realises that she is sitting on Mr. Sage's piece and)"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Aunt Jane! Is anything the matter? Would you like to lie down?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "Lie down? Do you suppose I'm going to trust myself in a bed that belongs to Mr. Sage, or Marks and Spencer, or somebody? No, I am going home."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Oh, must you really go?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "I'll drive you to the station."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "What! Travel in a car that has only one tyre and two thingummies! No thank you-I'll take the bus."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Well, of course, if you feel like that about it...."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "(relenting a little) Now, I'm sorry if I sounded rude, but really I'm shocked to find the way you're living. I've never owed a penny in my life-cash down, that's my motto and I want you to do the same. (She opens her handbag.) Now look, here's a little cheque I was meaning to give you, anyway. (She hands it to Jill.) Suppose you take it and pay off just one of your bills- so that you can say one thing at least really belongs to you."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "(awkwardly)Er-thank you. Aunt Jane. It's very nice of you."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "(patting her arm)There! Now I must be going."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "I'll see you to the bus anyway."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Good-bye, Aunt Jane-and thanks so much for the present."
+    },
+    {
+      "type": "dialogue",
+      "character": "Aunt Jane",
+      "line": "(kissing her) Good-bye, my dear."
+    },
+    {
+      "type": "paragraph",
+      "content": "(She and Jack go out. Jill looks at the cheque and exclaims 'Ten pounds!' Then she hurries to the table, addresses an envelope, endorses the cheque and slips it inside with a bill which she takes from the bag and seals the envelope. Then she rings the bell. In a moment the nurse comes in with the baby in her arms.)"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Oh, nurse. I want you to run and post this for me. I'll look after baby while you're gone."
+    },
+    {
+      "type": "dialogue",
+      "character": "Nurse",
+      "line": "Certainly, madam. (She hands the baby to Jill, takes the letter, and goes.) (A second later Jack comes in again.)"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Well, she's gone! What a tartar! Still, she did leave us a bit on account-how much was it?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Ten pounds."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "(with a whistle) Phew! That's great! We can pay off the next two months on the car with that."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "I-I'm afraid we can't-"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Why ever not?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "You see, I-I've already sent it off for something else. Nurse has just gone to post it."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Well that's all right. Who have you sent it to?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Dr. Martin."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Dr. Martin! What on earth possessed you to do that?"
+    },
+    {
+      "type": "image",
+      "description": "An illustration of Jack and Jill talking to Aunt Jane. Aunt Jane is sitting on a chair, pointing and looking at Jack and Jill who are sitting on a couch. The scene is outdoors with a table, two chairs, a couch, and a car in the background.",
+      "image_path": "images/class10/unit3/1.png"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "(nearly in tears) There! Now you're going to be angry with me."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "I'm not angry! But why waste good money on the doctor? Doctors don't expect to get paid anyway."
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "(sobbing a little) But-but you don't understand -"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jack",
+      "line": "Understand what?"
+    },
+    {
+      "type": "dialogue",
+      "character": "Jill",
+      "line": "Why; just one more instalment and BABY'S REALLY OURS!"
+    },
+    {
+      "type": "paragraph",
+      "content": "(She is holding out the infant, a little pathetically, as we black out.)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cedric Mount"
+    }
+  ]
+}

@@ -56,7 +56,7 @@ class _ProseScreenState extends State<ProseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[50],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           widget.title,
@@ -144,25 +144,14 @@ class LessonCard extends StatelessWidget {
             // Author (if available)
             if (lesson['author'] != null &&
                 lesson['author'].toString().isNotEmpty)
-              Container(
-                margin: const EdgeInsets.only(top: 16),
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Row(
-                  children: [
-                    Icon(Icons.person, color: Colors.grey[600]),
-                    const SizedBox(width: 8),
-                    Text(
-                      'Author: ${lesson['author']}',
-                      style: TextStyle(
-                        fontStyle: FontStyle.italic,
-                        color: Colors.grey[700],
-                      ),
-                    ),
-                  ],
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text(
+                  'Author: ${lesson['author']}',
+                  style: const TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.black,
+                  ),
                 ),
               ),
           ],
@@ -247,7 +236,7 @@ class LessonCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.assignment, color: Colors.green[700], size: 20),
+            Icon(Icons.assignment, color: Colors.green[700], size: 22),
             const SizedBox(width: 12),
             Expanded(
               child: Text(
@@ -288,10 +277,10 @@ class LessonCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             height: 1.6,
-            color: Colors.grey[800],
+            color: Colors.black,
             fontWeight: FontWeight.w400,
           ),
           textAlign: TextAlign.justify,
@@ -325,7 +314,6 @@ class LessonCard extends StatelessWidget {
               constraints: const BoxConstraints(maxHeight: 300),
               child: Image.asset(
                 '$imagePath',
-                fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
                   return Container(
                     height: 200,
@@ -347,13 +335,6 @@ class LessonCard extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.grey[600],
                             fontSize: 14,
-                          ),
-                        ),
-                        Text(
-                          imagePath,
-                          style: TextStyle(
-                            color: Colors.grey[500],
-                            fontSize: 12,
                           ),
                         ),
                       ],
