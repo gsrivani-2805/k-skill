@@ -1,36 +1,80 @@
 {
-  "title": "The Busy Honeybee",
-  "paragraph": "Honeybees are important insects that live in colonies. They help plants grow by carrying pollen from one flower to another. Honeybees also make honey, which people use as food. A colony has a queen bee, worker bees, and drones, each with a special role.",
-  "questions": [
+  "reading_comprehension": [
     {
-      "question": "What is the main role of honeybees in nature?",
-      "options": [
-        "To make nests",
-        "To carry pollen between flowers",
-        "To protect the hive",
-        "To produce wax"
-      ],
-      "answer": 1
+      "id": 1,
+      "title": "The Value of Time",
+      "passage": "Ravi was an intelligent boy, but he often procrastinated his work. He delayed studying until the very last moment, thinking he had plenty of time. During his exams, he realized that he had wasted precious days in unnecessary activities. His grades fell, and he regretted his choices. From that day, Ravi decided to manage his time wisely, understanding that time once lost never returns. The experience taught him the importance of discipline and time management in achieving success. He began maintaining a schedule and allocating specific hours for study, play, and rest. His improved habits not only enhanced his academic performance but also reduced his stress levels significantly.",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Why did Ravi's grades fall?",
+          "type": "short_answer",
+          "answer": "His grades fell because he wasted time and did not study properly."
+        },
+        {
+          "id": 2,
+          "question": "What mistake did Ravi make before his exams?",
+          "type": "short_answer",
+          "answer": "He procrastinated and delayed his work."
+        },
+        {
+          "id": 3,
+          "question": "Write the moral of this passage in your own words.",
+          "type": "short_answer",
+          "answer": "Time management and discipline are necessary for success."
+        },
+        {
+          "id": 4,
+          "question": "Choose the correct synonym for procrastinated:",
+          "type": "mcq",
+          "options": ["Delayed", "Planned", "Ignored", "Managed"],
+          "answer": "Delayed"
+        },
+        {
+          "id": 5,
+          "question": "What lesson can students learn from Ravi's experience?",
+          "type": "short_answer",
+          "answer": "They should value time and avoid procrastination."
+        }
+      ]
     },
     {
-      "question": "Which type of bee lays eggs?",
-      "options": [
-        "Worker bee",
-        "Drone bee",
-        "Queen bee",
-        "All of them"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What product do honeybees make that humans eat?",
-      "options": [
-        "Milk",
-        "Honey",
-        "Sugar",
-        "Juice"
-      ],
-      "answer": 1
+      "id": 2,
+      "title": "The Power of Honesty",
+      "passage": "Maya found a wallet containing five hundred rupees on her way to school. Inside, she discovered the owner's identity card. Though her family faced financial difficulties, Maya knew returning the wallet was the right thing to do. She immediately contacted the owner and returned it without taking anything. The grateful owner offered her a reward, but Maya politely declined. However, the owner, impressed by her integrity, offered Maya's mother a job at her office. This unexpected opportunity transformed Maya's family's financial situation. Maya learned that honesty, though sometimes challenging, always leads to unexpected blessings and self-respect.",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What did Maya find on her way to school?",
+          "type": "short_answer",
+          "answer": "Maya found a wallet containing five hundred rupees."
+        },
+        {
+          "id": 2,
+          "question": "Why was it difficult for Maya to return the wallet?",
+          "type": "short_answer",
+          "answer": "It was difficult because her family faced financial difficulties."
+        },
+        {
+          "id": 3,
+          "question": "How did Maya's honesty benefit her family?",
+          "type": "short_answer",
+          "answer": "The wallet's owner offered her mother a job, improving their financial situation."
+        },
+        {
+          "id": 4,
+          "question": "What does the word integrity mean in this context?",
+          "type": "mcq",
+          "options": ["Intelligence", "Honesty", "Poverty", "Kindness"],
+          "answer": "Honesty"
+        },
+        {
+          "id": 5,
+          "question": "What message does this passage convey about honest behavior?",
+          "type": "short_answer",
+          "answer": "Honesty brings unexpected rewards and maintains self-respect."
+        }
+      ]
     }
   ]
 }

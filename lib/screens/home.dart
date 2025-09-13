@@ -5,175 +5,6 @@ import 'package:K_Skill/screens/widgets/dictionary_widget.dart';
 import 'package:K_Skill/screens/widgets/vocabulary_widget.dart';
 import 'package:K_Skill/services/shared_prefs.dart';
 
-class WelcomeBanner extends StatelessWidget {
-  final String userName;
-  final int? currentStreak;
-  final VoidCallback? onTakeAssessment;
-
-  const WelcomeBanner({
-    Key? key,
-    required this.userName,
-    this.currentStreak,
-    this.onTakeAssessment,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.blue.shade50, Colors.indigo.shade50],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          // Desktop layout for wider screens
-          if (constraints.maxWidth > 600) {
-            return Row(
-              children: [
-                // Left side - Image
-                Expanded(flex: 2, child: _buildImageSection()),
-                const SizedBox(width: 24),
-                // Right side - Content
-                Expanded(flex: 3, child: _buildContentSection()),
-              ],
-            );
-          } else {
-            // Mobile layout - Single column
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                _buildImageSection(),
-                const SizedBox(height: 16),
-                _buildContentSection(),
-              ],
-            );
-          }
-        },
-      ),
-    );
-  }
-
-  Widget _buildImageSection() {
-    return Container(
-      height: 200,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: Colors.grey.shade200,
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(8),
-        child: Image.asset(
-          'images/children.jpg',
-          errorBuilder: (context, error, stackTrace) {
-            // Fallback when image is not found
-            return Container(
-              // decoration: BoxDecoration(
-              //   borderRadius: BorderRadius.circular(8),
-              //   gradient: LinearGradient(
-              //     colors: [Colors.blue.shade300, Colors.indigo.shade400],
-              //     begin: Alignment.topLeft,
-              //     end: Alignment.bottomRight,
-              //   ),
-              // ),
-              child: const Center(
-                child: Icon(Icons.assessment, size: 80, color: Colors.white),
-              ),
-            );
-          },
-        ),
-      ),
-    );
-  }
-
-  Widget _buildContentSection() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        // First row - Welcome message
-        Text(
-          'Welcome, $userName',
-          style: const TextStyle(
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-            color: Colors.indigo,
-          ),
-        ),
-        const SizedBox(height: 8),
-
-        // Streak indicator
-        if (currentStreak != null)
-          Row(
-            children: [
-              Icon(
-                Icons.local_fire_department,
-                color: Colors.orange[600],
-                size: 20,
-              ),
-              const SizedBox(width: 8),
-              Text(
-                '$currentStreak day streak',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.orange[600],
-                ),
-              ),
-            ],
-          ),
-        const SizedBox(height: 12),
-
-        // Second row - Subtitle
-        Text(
-          'Test your skills today',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 18,
-            color: Colors.grey.shade700,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-        const SizedBox(height: 20),
-
-        // Third row - Button
-        SizedBox(
-          width: double.infinity,
-          child: ElevatedButton(
-            onPressed: onTakeAssessment,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.indigo,
-              foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-              elevation: 2,
-            ),
-            child: const Text(
-              'Take Assessment',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-// Updated HomeScreen with integrated WelcomeBanner
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -184,6 +15,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   String? userName;
   int? currentStreak;
+  int currentBottomNavIndex = 0;
 
   @override
   void initState() {
@@ -206,110 +38,281 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.grey[50],
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(16),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              WelcomeBanner(
-                userName: userName ?? 'User',
-                currentStreak: currentStreak,
-                onTakeAssessment: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const AssessmentScreen()),
-                  );
-                },
-              ),
-              const SizedBox(height: 24),
+              // Header Section
+              _buildHeader(),
 
-              // Dictionary
-              const DictionaryWidget(),
-              const SizedBox(height: 24),
-
-              // Vocabulary Section Title
-              const Text(
-                'Vocabulary Topics',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black87,
-                ),
-              ),
-              const SizedBox(height: 16),
-
-              VocabularyWidget(),
-
-              const SizedBox(height: 80), 
-              const SizedBox(height: 24),
-
-              const Text(
-                'Reading Comprehension',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black87,
-                ),
-              ),
-              const SizedBox(height: 16),
-
-              // Reading Comprehension Section
-              Container(
+              Padding(
                 padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
-                      blurRadius: 8,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],
-                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // Main Headline
+                    _buildMainHeadline(),
+                    const SizedBox(height: 32),
+
+                    // Dictionary Widget (Existing)
+                    const DictionaryWidget(),
+                    const SizedBox(height: 24),
+
+                    // Learning Modules Section
+                    _buildLearningModules(),
+
+                    const SizedBox(height: 24),
+                    // Vocabulary Section Title
                     const Text(
-                      "Practice your reading skills with short passages and questions.",
-                      style: TextStyle(fontSize: 16, color: Colors.black87),
-                    ),
-                    const SizedBox(height: 12),
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const ReadingComprehension(),
-                            ),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.indigo,
-                          foregroundColor: Colors.white,
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 32,
-                            vertical: 14,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                        ),
-                        child: const Text(
-                          "Start Reading Comprehension",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
+                      'Vocabulary Topics',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black87,
                       ),
                     ),
+                    const SizedBox(height: 16),
+
+                    VocabularyWidget(),
+
+                    const SizedBox(height: 80),
                   ],
                 ),
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHeader() {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // Profile Avatar
+          Container(
+            width: 45,
+            height: 45,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: LinearGradient(
+                colors: [Colors.blue.shade300, Colors.indigo.shade400],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+            ),
+            child: const Icon(Icons.person, color: Colors.white, size: 24),
+          ),
+
+          // Streak Counter
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              color: Colors.orange.shade50,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: Colors.orange.shade200),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.local_fire_department,
+                  color: Colors.orange[600],
+                  size: 18,
+                ),
+                const SizedBox(width: 4),
+                Text(
+                  '${currentStreak ?? 0}',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.orange[600],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildMainHeadline() {
+    return Container(
+      width: double.infinity,
+      height: MediaQuery.of(context).size.height * 0.25,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        image: const DecorationImage(
+          image: AssetImage('images/board.png'),
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildLearningModules() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Practice Modules',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+            color: Colors.black87,
+          ),
+        ),
+        const SizedBox(height: 16),
+
+        // Assessment Card
+        _buildAssessmentCard(),
+        const SizedBox(height: 16),
+
+        // Reading Comprehension Card
+        _buildReadingComprehensionCard(),
+      ],
+    );
+  }
+
+  Widget _buildAssessmentCard() {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const AssessmentScreen()),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.blue.shade400, Colors.indigo.shade500],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.blue.withOpacity(0.3),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(
+                    Icons.assessment,
+                    color: Colors.white,
+                    size: 24,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                const Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Take Assessment',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'Test your skills today',
+                        style: TextStyle(fontSize: 14, color: Colors.white70),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.arrow_forward, color: Colors.white, size: 20),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildReadingComprehensionCard() {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const ReadingComprehension()),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.purple.shade400, Colors.pink.shade400],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.purple.withOpacity(0.3),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(
+                    Icons.menu_book,
+                    color: Colors.white,
+                    size: 24,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                const Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Reading Comprehension',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'Practice reading skills',
+                        style: TextStyle(fontSize: 14, color: Colors.white70),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.arrow_forward, color: Colors.white, size: 20),
+              ],
+            ),
+          ],
         ),
       ),
     );

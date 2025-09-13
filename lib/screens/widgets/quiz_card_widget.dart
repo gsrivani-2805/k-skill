@@ -4,6 +4,7 @@ class QuizCardWidget extends StatefulWidget {
   final String question;
   final List<String> options;
   final String correctAnswer;
+  final String? selectedAnswer; // New parameter to show previously selected answer
   final Function(String selectedAnswer) onAnswerSelected;
 
   const QuizCardWidget({
@@ -12,6 +13,7 @@ class QuizCardWidget extends StatefulWidget {
     required this.options,
     required this.correctAnswer,
     required this.onAnswerSelected,
+    this.selectedAnswer, // Optional parameter for navigation support
   });
 
   @override
@@ -20,6 +22,22 @@ class QuizCardWidget extends StatefulWidget {
 
 class _QuizCardWidgetState extends State<QuizCardWidget> {
   String? selectedOption;
+
+  @override
+  void initState() {
+    super.initState();
+    // Initialize with the passed selectedAnswer
+    selectedOption = widget.selectedAnswer;
+  }
+
+  @override
+  void didUpdateWidget(QuizCardWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Update selectedOption when navigating between questions
+    if (oldWidget.selectedAnswer != widget.selectedAnswer) {
+      selectedOption = widget.selectedAnswer;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

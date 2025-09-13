@@ -452,6 +452,9 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
+  // Add a refresh key to force FutureBuilder rebuild
+  int _refreshKey = 0;
+
   @override
   void initState() {
     super.initState();
@@ -462,6 +465,13 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
   void dispose() {
     _tabController.dispose();
     super.dispose();
+  }
+
+  // Method to refresh the review tab data
+  void _refreshReviewData() {
+    setState(() {
+      _refreshKey++;
+    });
   }
 
   @override
@@ -501,6 +511,344 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
         children: [_buildLearnTab(), _buildPracticeTab(), _buildReviewTab()],
       ),
     );
+  }
+
+  Widget _buildPracticeTab() {
+    return ListView.builder(
+      padding: const EdgeInsets.all(16),
+      itemCount: widget.discourseType.practiceItems.length,
+      itemBuilder: (context, index) {
+        return _buildPracticeItemCard(
+          widget.discourseType.practiceItems[index],
+        );
+      },
+    );
+  }
+
+  Widget _buildPracticeItemCard(PracticeItem item) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.1),
+            blurRadius: 10,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: () async {
+          // Navigate and wait for result
+          final result = await Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => WritingEditorScreen(
+                practiceItem: item,
+                discourseType: widget.discourseType,
+                grammarRules: widget.grammarRules,
+                userId: widget.userId,
+              ),
+            ),
+          );
+
+          // If submission was successful, refresh review data
+          if (result == true) {
+            _refreshReviewData();
+            // Switch to review tab to show the new submission
+            _tabController.animateTo(2);
+          }
+        },
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: item.isCompleted
+                          ? Colors.green.withOpacity(0.1)
+                          : widget.discourseType.color.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Icon(
+                      item.isCompleted ? Icons.check_circle : Icons.edit,
+                      color: item.isCompleted
+                          ? Colors.green
+                          : widget.discourseType.color,
+                      size: 20,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      item.title,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey[400],
+                    size: 16,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Text(
+                item.prompt,
+                style: TextStyle(
+                  color: Colors.grey[700],
+                  fontSize: 14,
+                  height: 1.4,
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  _buildChip(
+                    item.difficulty,
+                    _getDifficultyColor(item.difficulty),
+                  ),
+                  const SizedBox(width: 8),
+                  _buildChip(item.estimatedTime, Colors.grey),
+                  const SizedBox(width: 8),
+                  _buildChip(
+                    item.type.toUpperCase(),
+                    widget.discourseType.color,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildReviewTab() {
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                'Completed Exercises:',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              IconButton(
+                icon: const Icon(Icons.refresh),
+                onPressed: _refreshReviewData,
+                tooltip: 'Refresh submissions',
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Expanded(
+            child: FutureBuilder<List<dynamic>>(
+              // Use the refresh key to force rebuild
+              key: ValueKey(_refreshKey),
+              future: _fetchWritingSubmissions(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircularProgressIndicator(),
+                        SizedBox(height: 16),
+                        Text('Loading your submissions...'),
+                      ],
+                    ),
+                  );
+                } else if (snapshot.hasError) {
+                  return Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.error_outline,
+                          size: 64,
+                          color: Colors.red[300],
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          'Error loading submissions',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red[700],
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          '${snapshot.error}',
+                          style: TextStyle(color: Colors.red[600]),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 16),
+                        ElevatedButton.icon(
+                          onPressed: _refreshReviewData,
+                          icon: const Icon(Icons.refresh),
+                          label: const Text('Retry'),
+                        ),
+                      ],
+                    ),
+                  );
+                } else if (snapshot.hasData && snapshot.data!.isNotEmpty) {
+                  final allSubmissions = snapshot.data!;
+
+                  final filteredSubmissions = allSubmissions.where((
+                    submission,
+                  ) {
+                    if (submission is Map<String, dynamic>) {
+                      final discourseType = submission['discourseType']
+                          ?.toString()
+                          .toLowerCase()
+                          .trim();
+                      final currentType = widget.discourseType.id
+                          .toLowerCase()
+                          .trim();
+                      final hasQuestion = submission.containsKey('question');
+                      final hasSubmittedText = submission.containsKey(
+                        'submittedText',
+                      );
+
+                      return discourseType == currentType &&
+                          hasQuestion &&
+                          hasSubmittedText;
+                    }
+                    return false;
+                  }).toList();
+
+                  if (filteredSubmissions.isEmpty) {
+                    return _buildEmptyStateWithDebugInfo(allSubmissions);
+                  }
+
+                  // Sort by submission date/time (most recent first)
+                  filteredSubmissions.sort((a, b) {
+                    final aDate =
+                        a['submissionDate']?.toString() ??
+                        a['submittedAt']?.toString() ??
+                        a['createdAt']?.toString() ??
+                        '';
+                    final bDate =
+                        b['submissionDate']?.toString() ??
+                        b['submittedAt']?.toString() ??
+                        b['createdAt']?.toString() ??
+                        '';
+                    return bDate.compareTo(aDate);
+                  });
+
+                  return RefreshIndicator(
+                    onRefresh: () async {
+                      _refreshReviewData();
+                      // Wait a bit to ensure the rebuild happens
+                      await Future.delayed(const Duration(milliseconds: 500));
+                    },
+                    child: ListView.builder(
+                      physics: const AlwaysScrollableScrollPhysics(),
+                      itemCount: filteredSubmissions.length,
+                      itemBuilder: (context, index) {
+                        final submission = filteredSubmissions[index];
+                        // Fix numbering: most recent should be highest number
+                        final submissionNumber =
+                            filteredSubmissions.length - index;
+                        return _buildSubmissionCard(
+                          submission,
+                          submissionNumber,
+                        );
+                      },
+                    ),
+                  );
+                } else {
+                  return _buildEmptyStateWithDebugInfo([]);
+                }
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<List<dynamic>> _fetchWritingSubmissions() async {
+    final url = Uri.parse('${ApiConfig.baseUrl}/${widget.userId}/submissions');
+    final headers = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    };
+
+    try {
+      final response = await http.get(url, headers: headers);
+
+      if (response.statusCode == 200) {
+        final jsonResponse = jsonDecode(response.body);
+
+        List<dynamic> submissions = [];
+
+        if (jsonResponse is Map<String, dynamic>) {
+          if (jsonResponse.containsKey('submissions') &&
+              jsonResponse['submissions'] is List) {
+            submissions = jsonResponse['submissions'];
+          } else if (jsonResponse.containsKey('user') &&
+              jsonResponse['user'] is Map) {
+            if (jsonResponse['user']['writingSubmissions'] is List) {
+              submissions = jsonResponse['user']['writingSubmissions'];
+            } else if (jsonResponse['user']['submissions'] is List) {
+              submissions = jsonResponse['user']['submissions'];
+            }
+          } else if (jsonResponse.containsKey('writingSubmissions') &&
+              jsonResponse['writingSubmissions'] is List) {
+            submissions = jsonResponse['writingSubmissions'];
+          } else if (jsonResponse.containsKey('data')) {
+            if (jsonResponse['data'] is List) {
+              submissions = jsonResponse['data'];
+            } else if (jsonResponse['data'] is Map) {
+              if (jsonResponse['data']['submissions'] is List) {
+                submissions = jsonResponse['data']['submissions'];
+              } else if (jsonResponse['data']['writingSubmissions'] is List) {
+                submissions = jsonResponse['data']['writingSubmissions'];
+              }
+            }
+          } else if (jsonResponse.containsKey('discourseType')) {
+            submissions = [jsonResponse];
+          } else if (jsonResponse.containsKey('_id') ||
+              jsonResponse.containsKey('id')) {
+            if (jsonResponse['submissions'] is List) {
+              submissions = jsonResponse['submissions'];
+            } else if (jsonResponse['writingSubmissions'] is List) {
+              submissions = jsonResponse['writingSubmissions'];
+            }
+          }
+        } else if (jsonResponse is List) {
+          submissions = jsonResponse;
+        }
+
+        return submissions;
+      } else if (response.statusCode == 404) {
+        return [];
+      } else {
+        throw Exception(
+          'Failed to load writing submissions: ${response.statusCode}. Body: ${response.body}',
+        );
+      }
+    } catch (e) {
+      throw Exception('Failed to load writing submissions: $e');
+    }
   }
 
   Widget _buildInfoCard(
@@ -598,347 +946,6 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
           ),
           const SizedBox(height: 16),
           _buildGrammarSection(),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildPracticeTab() {
-    return ListView.builder(
-      padding: const EdgeInsets.all(16),
-      itemCount: widget.discourseType.practiceItems.length,
-      itemBuilder: (context, index) {
-        return _buildPracticeItemCard(
-          widget.discourseType.practiceItems[index],
-        );
-      },
-    );
-  }
-
-  Future<List<dynamic>> _fetchWritingSubmissions() async {
-    final url = Uri.parse('${ApiConfig.baseUrl}/${widget.userId}/submissions');
-    final headers = {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-    };
-
-    try {
-      final response = await http.get(url, headers: headers);
-
-      if (response.statusCode == 200) {
-        final jsonResponse = jsonDecode(response.body);
-
-        List<dynamic> submissions = [];
-
-        if (jsonResponse is Map<String, dynamic>) {
-          if (jsonResponse.containsKey('submissions') &&
-              jsonResponse['submissions'] is List) {
-            submissions = jsonResponse['submissions'];
-          } else if (jsonResponse.containsKey('user') &&
-              jsonResponse['user'] is Map) {
-            if (jsonResponse['user']['writingSubmissions'] is List) {
-              submissions = jsonResponse['user']['writingSubmissions'];
-            } else if (jsonResponse['user']['submissions'] is List) {
-              submissions = jsonResponse['user']['submissions'];
-            }
-          } else if (jsonResponse.containsKey('writingSubmissions') &&
-              jsonResponse['writingSubmissions'] is List) {
-            submissions = jsonResponse['writingSubmissions'];
-          } else if (jsonResponse.containsKey('data')) {
-            if (jsonResponse['data'] is List) {
-              submissions = jsonResponse['data'];
-            } else if (jsonResponse['data'] is Map) {
-              if (jsonResponse['data']['submissions'] is List) {
-                submissions = jsonResponse['data']['submissions'];
-              } else if (jsonResponse['data']['writingSubmissions'] is List) {
-                submissions = jsonResponse['data']['writingSubmissions'];
-              }
-            }
-          } else if (jsonResponse.containsKey('discourseType')) {
-            submissions = [jsonResponse];
-          } else if (jsonResponse.containsKey('_id') ||
-              jsonResponse.containsKey('id')) {
-            if (jsonResponse['submissions'] is List) {
-              submissions = jsonResponse['submissions'];
-            } else if (jsonResponse['writingSubmissions'] is List) {
-              submissions = jsonResponse['writingSubmissions'];
-            }
-          }
-        } else if (jsonResponse is List) {
-          submissions = jsonResponse;
-        }
-
-        return submissions;
-      } else if (response.statusCode == 404) {
-        return [];
-      } else {
-        throw Exception(
-          'Failed to load writing submissions: ${response.statusCode}. Body: ${response.body}',
-        );
-      }
-    } catch (e) {
-      throw Exception('Failed to load writing submissions: $e');
-    }
-  }
-
-  // Future<List<dynamic>> _fetchWritingSubmissionsAlternative() async {
-  //   final possibleUrls = [
-  //     '${ApiConfig.baseUrl}/${widget.userId}/submissions',
-  //     '${ApiConfig.baseUrl}/submissions?userId=${widget.userId}',
-  //     '${ApiConfig.baseUrl}/users/${widget.userId}/submissions',
-  //     '${ApiConfig.baseUrl}/writing-submissions/${widget.userId}',
-  //   ];
-
-  //   for (String baseUrl in possibleUrls) {
-  //     try {
-  //       final url = Uri.parse(baseUrl);
-
-  //       final response = await http.get(
-  //         url,
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           'Accept': 'application/json',
-  //         },
-  //       );
-
-  //       if (response.statusCode == 200) {
-  //         final jsonResponse = jsonDecode(response.body);
-
-  //         List<dynamic> submissions = _extractSubmissionsFromResponse(
-  //           jsonResponse,
-  //         );
-
-  //         if (submissions.isNotEmpty) {
-  //           return submissions;
-  //         }
-  //       }
-  //     } catch (e) {
-  //       continue;
-  //     }
-  //   }
-
-  //   return [];
-  // }
-
-  // List<dynamic> _extractSubmissionsFromResponse(dynamic jsonResponse) {
-  //   List<dynamic> submissions = [];
-
-  //   if (jsonResponse is Map<String, dynamic>) {
-  //     final possibleKeys = [
-  //       'submissions',
-  //       'writingSubmissions',
-  //       'data',
-  //       'user',
-  //       'results',
-  //     ];
-
-  //     for (String key in possibleKeys) {
-  //       if (jsonResponse.containsKey(key)) {
-  //         var value = jsonResponse[key];
-
-  //         if (value is List) {
-  //           submissions = value;
-  //           break;
-  //         } else if (value is Map) {
-  //           submissions = _extractSubmissionsFromResponse(value);
-  //           if (submissions.isNotEmpty) break;
-  //         }
-  //       }
-  //     }
-
-  //     if (submissions.isEmpty && jsonResponse.containsKey('discourseType')) {
-  //       submissions = [jsonResponse];
-  //     }
-  //   } else if (jsonResponse is List) {
-  //     submissions = jsonResponse;
-  //   }
-
-  //   return submissions;
-  // }
-
-  Widget _buildReviewTab() {
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                'Completed Exercises:',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              Row(
-                children: [
-                  // IconButton(
-                  //   icon: const Icon(Icons.bug_report),
-                  //   onPressed: () async {
-                  //     try {
-                  //       final submissions =
-                  //           await _fetchWritingSubmissionsAlternative();
-                  //       ScaffoldMessenger.of(context).showSnackBar(
-                  //         SnackBar(
-                  //           content: Text(
-                  //             'Found ${submissions.length} submissions using alternative method',
-                  //           ),
-                  //         ),
-                  //       );
-                  //     } catch (e) {
-                  //       ScaffoldMessenger.of(context).showSnackBar(
-                  //         SnackBar(
-                  //           content: Text('Alternative fetch failed: $e'),
-                  //           backgroundColor: Colors.red,
-                  //         ),
-                  //       );
-                  //     }
-                  //   },
-                  //   tooltip: 'Debug: Try alternative fetch',
-                  // ),
-                  // IconButton(
-                  //   icon: const Icon(Icons.refresh),
-                  //   onPressed: () {
-                  //     setState(() {
-                  //       // This will trigger a rebuild and refetch the data
-                  //     });
-                  //   },
-                  //   tooltip: 'Refresh submissions',
-                  // ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-          Expanded(
-            child: FutureBuilder<List<dynamic>>(
-              key: ValueKey(DateTime.now().millisecondsSinceEpoch),
-              future: _fetchWritingSubmissions(),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CircularProgressIndicator(),
-                        SizedBox(height: 16),
-                        Text('Loading your submissions...'),
-                      ],
-                    ),
-                  );
-                } else if (snapshot.hasError) {
-                  return Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.error_outline,
-                          size: 64,
-                          color: Colors.red[300],
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          'Error loading submissions',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.red[700],
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          '${snapshot.error}',
-                          style: TextStyle(color: Colors.red[600]),
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(height: 16),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ElevatedButton.icon(
-                              onPressed: () {
-                                setState(() {
-                                  // Trigger a rebuild to retry
-                                });
-                              },
-                              icon: const Icon(Icons.refresh),
-                              label: const Text('Retry'),
-                            ),
-                            const SizedBox(width: 8),
-                            ElevatedButton.icon(
-                              onPressed: () async {},
-                              icon: const Icon(Icons.science),
-                              label: const Text('Try Alternative'),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  );
-                } else if (snapshot.hasData && snapshot.data!.isNotEmpty) {
-                  final allSubmissions = snapshot.data!;
-
-                  final filteredSubmissions = allSubmissions.where((
-                    submission,
-                  ) {
-                    if (submission is Map<String, dynamic>) {
-                      final discourseType = submission['discourseType']
-                          ?.toString()
-                          .toLowerCase()
-                          .trim();
-                      final currentType = widget.discourseType.id
-                          .toLowerCase()
-                          .trim();
-                      final hasQuestion = submission.containsKey('question');
-                      final hasSubmittedText = submission.containsKey(
-                        'submittedText',
-                      );
-
-                      return discourseType == currentType &&
-                          hasQuestion &&
-                          hasSubmittedText;
-                    }
-                    return false;
-                  }).toList();
-
-                  if (filteredSubmissions.isEmpty) {
-                    return _buildEmptyStateWithDebugInfo(allSubmissions);
-                  }
-
-                  filteredSubmissions.sort((a, b) {
-                    final aDate =
-                        a['submissionDate']?.toString() ??
-                        a['submittedAt']?.toString() ??
-                        a['createdAt']?.toString() ??
-                        '';
-                    final bDate =
-                        b['submissionDate']?.toString() ??
-                        b['submittedAt']?.toString() ??
-                        b['createdAt']?.toString() ??
-                        '';
-                    return bDate.compareTo(aDate);
-                  });
-
-                  return RefreshIndicator(
-                    onRefresh: () async {
-                      setState(() {
-                        // Trigger a rebuild to refresh data
-                      });
-                    },
-                    child: ListView.builder(
-                      physics: const AlwaysScrollableScrollPhysics(),
-                      itemCount: filteredSubmissions.length,
-                      itemBuilder: (context, index) {
-                        final submission = filteredSubmissions[index];
-                        return _buildSubmissionCard(submission, index + 1);
-                      },
-                    ),
-                  );
-                } else {
-                  return _buildEmptyStateWithDebugInfo([]);
-                }
-              },
-            ),
-          ),
         ],
       ),
     );
@@ -1467,109 +1474,6 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
     return tips.take(5).map((tip) => '• $tip').join('\n');
   }
 
-  Widget _buildPracticeItemCard(PracticeItem item) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          ),
-        ],
-      ),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(16),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => WritingEditorScreen(
-                practiceItem: item,
-                discourseType: widget.discourseType,
-                grammarRules: widget.grammarRules,
-                userId: widget.userId, // Pass userId here
-              ),
-            ),
-          );
-        },
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: item.isCompleted
-                          ? Colors.green.withOpacity(0.1)
-                          : widget.discourseType.color.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Icon(
-                      item.isCompleted ? Icons.check_circle : Icons.edit,
-                      color: item.isCompleted
-                          ? Colors.green
-                          : widget.discourseType.color,
-                      size: 20,
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      item.title,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.grey[400],
-                    size: 16,
-                  ),
-                ],
-              ),
-              const SizedBox(height: 12),
-              Text(
-                item.prompt,
-                style: TextStyle(
-                  color: Colors.grey[700],
-                  fontSize: 14,
-                  height: 1.4,
-                ),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
-              const SizedBox(height: 12),
-              Row(
-                children: [
-                  _buildChip(
-                    item.difficulty,
-                    _getDifficultyColor(item.difficulty),
-                  ),
-                  const SizedBox(width: 8),
-                  _buildChip(item.estimatedTime, Colors.grey),
-                  const SizedBox(width: 8),
-                  _buildChip(
-                    item.type.toUpperCase(),
-                    widget.discourseType.color,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
   Widget _buildChip(String label, Color color) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -1650,6 +1554,242 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
     });
   }
 
+  void _submitForReview() async {
+    if (_textController.text.trim().isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Please write some content before submitting'),
+        ),
+      );
+      return;
+    }
+
+    // Show a loading indicator
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => const Center(child: CircularProgressIndicator()),
+    );
+
+    var baseUrl = ApiConfig.baseUrl;
+    final feedbackUrl = Uri.parse('$baseUrl/check-writing');
+    final saveSubmissionUrl = Uri.parse(
+      '$baseUrl/${widget.userId}/submissions',
+    );
+
+    final headers = {'Content-Type': 'application/json'};
+
+    final submissionDataForFeedback = {
+      'text': _textController.text.trim(),
+      'discourseType': widget.discourseType.id.toLowerCase(),
+      'question': widget.practiceItem.prompt,
+    };
+
+    try {
+      print("=== STARTING SUBMISSION PROCESS ===");
+      print("User ID: ${widget.userId}");
+      print("Discourse Type: ${widget.discourseType.id.toLowerCase()}");
+      print("Submitted Text Length: ${_textController.text.trim().length}");
+
+      // 1. Send text for AI feedback
+      print("Sending request to feedback URL: $feedbackUrl");
+      final feedbackResponse = await http.post(
+        feedbackUrl,
+        headers: headers,
+        body: jsonEncode(submissionDataForFeedback),
+      );
+
+      print("Feedback response status: ${feedbackResponse.statusCode}");
+
+      if (feedbackResponse.statusCode == 200) {
+        final jsonFeedbackResponse = jsonDecode(feedbackResponse.body);
+        final feedback = WritingFeedback.fromJson(jsonFeedbackResponse);
+
+        print("=== FEEDBACK RECEIVED ===");
+
+        // 2. Prepare data to save to user's profile
+        final dataToSave = {
+          'discourseType': widget.discourseType.id.toLowerCase(),
+          'question': widget.practiceItem.prompt,
+          'submittedText': _textController.text.trim(),
+          'exerciseTitle': widget.practiceItem.title, // Add exercise title
+          'feedback': jsonFeedbackResponse,
+        };
+
+        print("=== SAVING SUBMISSION ===");
+        print("Save URL: $saveSubmissionUrl");
+
+        // 3. Send data to save as a submission for the current user
+        final saveResponse = await http.post(
+          saveSubmissionUrl,
+          headers: headers,
+          body: jsonEncode(dataToSave),
+        );
+
+        print("Save response status: ${saveResponse.statusCode}");
+
+        // Close the loading indicator dialog
+        Navigator.of(context).pop();
+
+        if (saveResponse.statusCode == 201 || saveResponse.statusCode == 200) {
+          print("=== SUBMISSION SAVED SUCCESSFULLY ===");
+
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Submission saved successfully!'),
+              backgroundColor: Colors.green,
+              duration: Duration(seconds: 3),
+            ),
+          );
+
+          // Show feedback dialog
+          await _showFeedbackDialog(feedback);
+
+          // Return true to indicate successful submission
+          // This will trigger refresh in the parent screen
+          Navigator.of(context).pop(true);
+        } else {
+          print("=== SAVE FAILED ===");
+          print("Error details: ${saveResponse.body}");
+
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                'Feedback received, but failed to save submission. Status: ${saveResponse.statusCode}',
+              ),
+              backgroundColor: Colors.orange,
+              duration: const Duration(seconds: 5),
+            ),
+          );
+
+          // Show feedback even if save failed
+          await _showFeedbackDialog(feedback);
+
+          // Return false since save failed
+          Navigator.of(context).pop(false);
+        }
+      } else {
+        // Failed to get feedback
+        Navigator.of(context).pop(); // Close loading dialog
+        print("=== FEEDBACK REQUEST FAILED ===");
+        print("Status: ${feedbackResponse.statusCode}");
+        print("Body: ${feedbackResponse.body}");
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Error getting feedback: ${feedbackResponse.statusCode}. Please try again.',
+            ),
+            backgroundColor: Colors.red,
+            duration: const Duration(seconds: 5),
+          ),
+        );
+      }
+    } catch (e, stackTrace) {
+      Navigator.of(context).pop(); // Close loading dialog
+
+      print("=== SUBMISSION ERROR ===");
+      print("Error: $e");
+      print("Stack trace: $stackTrace");
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Network error: ${e.toString()}. Please try again.'),
+          backgroundColor: Colors.red,
+          duration: const Duration(seconds: 5),
+        ),
+      );
+    }
+  }
+
+  // Make this method async and return Future<void>
+  Future<void> _showFeedbackDialog(WritingFeedback feedback) async {
+    return showDialog<void>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Writing Feedback'),
+        content: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Overall Score: ${feedback.overallScore ?? 0}/100',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: widget.discourseType.color,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Summary: ${feedback.feedbackSummary ?? 'No summary available'}',
+                style: const TextStyle(fontWeight: FontWeight.w500),
+              ),
+              const SizedBox(height: 16),
+              const Text(
+                'Detailed Analysis:',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                feedback.discourseSpecificAnalysis ??
+                    'No detailed analysis available',
+                style: const TextStyle(fontStyle: FontStyle.italic),
+              ),
+              const SizedBox(height: 16),
+              const Text(
+                'Detected Errors:',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 8),
+              if (feedback.errors == null || feedback.errors!.isEmpty)
+                const Text('No major errors found. Great job!')
+              else
+                ...feedback.errors!.map((error) {
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Type: ${error['type'] ?? 'Unknown'}',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'Description: ${error['description'] ?? 'No description'}',
+                        ),
+                        Text(
+                          'Suggestion: ${error['suggestion'] ?? 'No suggestion'}',
+                          style: const TextStyle(color: Colors.green),
+                        ),
+                      ],
+                    ),
+                  );
+                }),
+              const SizedBox(height: 16),
+              const Divider(),
+              Text(
+                'Final Tip: ${feedback.finalSuggestion ?? 'Keep practicing!'}',
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Close'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // Rest of your existing build methods remain the same...
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -1696,6 +1836,90 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
         ],
       ),
       bottomNavigationBar: _buildBottomBar(),
+    );
+  }
+
+  // Include all other existing methods...
+  void _saveDraft() {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text('Draft saved successfully!'),
+        backgroundColor: widget.discourseType.color,
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+  }
+
+  void _handleMenuAction(String action) {
+    switch (action) {
+      case 'template':
+        _showTemplateDialog();
+        break;
+      case 'export':
+        _exportText();
+        break;
+    }
+  }
+
+  void _showTemplateDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Use Template'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'This will replace your current text with a template. Continue?',
+            ),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.grey[100],
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Text(
+                widget.practiceItem.template,
+                style: const TextStyle(fontSize: 12, fontFamily: 'monospace'),
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+              setState(() {
+                _textController.text = widget.practiceItem.template;
+              });
+            },
+            child: const Text('Use Template'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _exportText() {
+    if (_textController.text.trim().isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please write some content first')),
+      );
+      return;
+    }
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text('Text copied to clipboard!'),
+        backgroundColor: widget.discourseType.color,
+        behavior: SnackBarBehavior.floating,
+      ),
     );
   }
 
@@ -1912,321 +2136,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
                 ),
               ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  void _saveDraft() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: const Text('Draft saved successfully!'),
-        backgroundColor: widget.discourseType.color,
-        behavior: SnackBarBehavior.floating,
-      ),
-    );
-  }
-
-  void _handleMenuAction(String action) {
-    switch (action) {
-      case 'template':
-        _showTemplateDialog();
-        break;
-      case 'export':
-        _exportText();
-        break;
-    }
-  }
-
-  void _showTemplateDialog() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Use Template'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'This will replace your current text with a template. Continue?',
-            ),
-            const SizedBox(height: 16),
-            Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.grey[100],
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Text(
-                widget.practiceItem.template,
-                style: const TextStyle(fontSize: 12, fontFamily: 'monospace'),
-              ),
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-              setState(() {
-                _textController.text = widget.practiceItem.template;
-              });
-            },
-            child: const Text('Use Template'),
-          ),
-        ],
-      ),
-    );
-  }
-
-  void _exportText() {
-    if (_textController.text.trim().isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Please write some content first')),
-      );
-      return;
-    }
-
-    // Simulate export functionality
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: const Text('Text copied to clipboard!'),
-        backgroundColor: widget.discourseType.color,
-        behavior: SnackBarBehavior.floating,
-      ),
-    );
-  }
-
-  void _submitForReview() async {
-    if (_textController.text.trim().isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Please write some content before submitting'),
-        ),
-      );
-      return;
-    }
-
-    // Show a loading indicator
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) => const Center(child: CircularProgressIndicator()),
-    );
-
-    var baseUrl = ApiConfig.baseUrl;
-    final feedbackUrl = Uri.parse('$baseUrl/check-writing');
-
-    // Fixed URL construction - ensure proper path format
-    final saveSubmissionUrl = Uri.parse(
-      '$baseUrl/${widget.userId}/submissions',
-    );
-
-    final headers = {'Content-Type': 'application/json'};
-
-    final submissionDataForFeedback = {
-      'text': _textController.text.trim(),
-      'discourseType': widget.discourseType.id.toLowerCase(),
-      'question': widget.practiceItem.prompt,
-    };
-
-    try {
-      print("=== STARTING SUBMISSION PROCESS ===");
-      print("User ID: ${widget.userId}");
-      print("Discourse Type: ${widget.discourseType.id.toLowerCase()}");
-      print("Submitted Text Length: ${_textController.text.trim().length}");
-
-      // 1. Send text for AI feedback
-      print("Sending request to feedback URL: $feedbackUrl");
-      final feedbackResponse = await http.post(
-        feedbackUrl,
-        headers: headers,
-        body: jsonEncode(submissionDataForFeedback),
-      );
-
-      print("Feedback response status: ${feedbackResponse.statusCode}");
-      print("Feedback response body: ${feedbackResponse.body}");
-
-      if (feedbackResponse.statusCode == 200) {
-        final jsonFeedbackResponse = jsonDecode(feedbackResponse.body);
-        final feedback = WritingFeedback.fromJson(jsonFeedbackResponse);
-
-        print("=== FEEDBACK RECEIVED ===");
-        print("Parsed feedback successfully");
-
-        // 2. Prepare data to save to user's profile
-        final dataToSave = {
-          'discourseType': widget.discourseType.id.toLowerCase(),
-          'question': widget.practiceItem.prompt,
-          'submittedText': _textController.text.trim(),
-          'feedback': jsonFeedbackResponse, // Pass the raw JSON response
-        };
-
-        print("=== SAVING SUBMISSION ===");
-        print("Save URL: $saveSubmissionUrl");
-        print("Data to save: ${jsonEncode(dataToSave)}");
-
-        // 3. Send data to save as a submission for the current user
-        final saveResponse = await http.post(
-          saveSubmissionUrl,
-          headers: headers,
-          body: jsonEncode(dataToSave),
-        );
-
-        print("Save response status: ${saveResponse.statusCode}");
-        print("Save response body: ${saveResponse.body}");
-
-        // Close the loading indicator dialog
-        Navigator.of(context).pop();
-
-        if (saveResponse.statusCode == 201 || saveResponse.statusCode == 200) {
-          // Successfully got feedback and saved submission
-          print("=== SUBMISSION SAVED SUCCESSFULLY ===");
-
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Submission saved successfully!'),
-              backgroundColor: Colors.green,
-              duration: Duration(seconds: 3),
-            ),
-          );
-          _showFeedbackDialog(feedback);
-        } else {
-          // Failed to save submission, but still show feedback
-          print("=== SAVE FAILED ===");
-          print("Error details: ${saveResponse.body}");
-
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(
-                'Feedback received, but failed to save submission. Status: ${saveResponse.statusCode}',
-              ),
-              backgroundColor: Colors.orange,
-              duration: const Duration(seconds: 5),
-            ),
-          );
-          _showFeedbackDialog(feedback);
-        }
-      } else {
-        // Failed to get feedback
-        Navigator.of(context).pop();
-        print("=== FEEDBACK REQUEST FAILED ===");
-        print("Status: ${feedbackResponse.statusCode}");
-        print("Body: ${feedbackResponse.body}");
-
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(
-              'Error getting feedback: ${feedbackResponse.statusCode}. Please try again.',
-            ),
-            backgroundColor: Colors.red,
-            duration: const Duration(seconds: 5),
-          ),
-        );
-      }
-    } catch (e, stackTrace) {
-      Navigator.of(context).pop();
-
-      print("=== SUBMISSION ERROR ===");
-      print("Error: $e");
-      print("Stack trace: $stackTrace");
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Network error: ${e.toString()}. Please try again.'),
-          backgroundColor: Colors.red,
-          duration: const Duration(seconds: 5),
-        ),
-      );
-    }
-  }
-
-  // Updated _showFeedbackDialog method
-  void _showFeedbackDialog(WritingFeedback feedback) {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Writing Feedback'),
-        content: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'Overall Score: ${feedback.overallScore ?? 0}/100',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: widget.discourseType.color,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'Summary: ${feedback.feedbackSummary ?? 'No summary available'}',
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                'Detailed Analysis:',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                feedback.discourseSpecificAnalysis ??
-                    'No detailed analysis available',
-                style: const TextStyle(fontStyle: FontStyle.italic),
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                'Detected Errors:',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 8),
-              if (feedback.errors == null || feedback.errors!.isEmpty)
-                const Text('No major errors found. Great job! 👍')
-              else
-                ...feedback.errors!.map((error) {
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Type: ${error['type'] ?? 'Unknown'}',
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          'Description: ${error['description'] ?? 'No description'}',
-                        ),
-                        Text(
-                          'Suggestion: ${error['suggestion'] ?? 'No suggestion'}',
-                          style: const TextStyle(color: Colors.green),
-                        ),
-                      ],
-                    ),
-                  );
-                }),
-              const SizedBox(height: 16),
-              const Divider(),
-              Text(
-                'Final Tip: ${feedback.finalSuggestion ?? 'Keep practicing!'}',
-                style: const TextStyle(
-                  fontSize: 14,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
-            ],
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
           ),
         ],
       ),

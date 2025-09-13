@@ -8,7 +8,6 @@ import 'package:flutter_tts/flutter_tts.dart';
 
 class GameScreen extends StatelessWidget {
   GameScreen({super.key});
-
   final List<Map<String, dynamic>> games = [
     {
       "title": "Word Match",
@@ -88,19 +87,25 @@ class GameScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 child: Stack(
                   children: [
-                    // Background image
-                    Positioned.fill(
-                      child: Image.asset(
-                        'images/children.jpg', // random placeholder
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-
+                    // Background image - now unique for each game
+                    // Positioned.fill(
+                    //   child: Image.asset(
+                    //     //game['backgroundImage'],
+                    //     'images/children.jpg',
+                    //     fit: BoxFit.cover,
+                    //     errorBuilder: (context, error, stackTrace) {
+                    //       // Fallback to a default image if the specific image is not found
+                    //       return Image.asset(
+                    //         'images/children.jpg',
+                    //         fit: BoxFit.cover,
+                    //       );
+                    //     },
+                    //   ),
+                    // ),
                     // Color overlay (optional for better contrast)
                     Positioned.fill(
-                      child: Container(color: game['color'].withOpacity(0.6)),
+                      child: Container(color: game['color'].withOpacity(0.8)),
                     ),
-
                     // Foreground content
                     Center(
                       child: Column(
@@ -129,10 +134,6 @@ class GameScreen extends StatelessWidget {
   }
 }
 
-//
-// ===== Placeholder Screens for Each Game =====
-//
-
 class WordMatchScreen extends StatefulWidget {
   final String jsonPath;
   const WordMatchScreen({super.key, required this.jsonPath});
@@ -149,8 +150,15 @@ class _WordMatchScreenState extends State<WordMatchScreen>
   List<String> selectedAnswers = [];
   bool showExplanation = false;
   bool isAnswered = false;
+
+  // Score tracking variables
+  int correctAnswers = 0;
+  List<bool> questionResults = []; // Track each question's result
+
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
+  late AnimationController _scoreAnimationController;
+  late Animation<double> _scoreAnimation;
 
   @override
   void initState() {
@@ -162,12 +170,25 @@ class _WordMatchScreenState extends State<WordMatchScreen>
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
+
+    _scoreAnimationController = AnimationController(
+      duration: const Duration(milliseconds: 1500),
+      vsync: this,
+    );
+    _scoreAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _scoreAnimationController,
+        curve: Curves.elasticOut,
+      ),
+    );
+
     loadGameData();
   }
 
   @override
   void dispose() {
     _animationController.dispose();
+    _scoreAnimationController.dispose();
     super.dispose();
   }
 
@@ -180,15 +201,19 @@ class _WordMatchScreenState extends State<WordMatchScreen>
       });
       _animationController.forward();
     } catch (e) {
-      // Handle error - show snackbar or dialog
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Error loading game data: $e')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error loading game data: $e'),
+          backgroundColor: Colors.red,
+        ),
+      );
     }
   }
 
   void setupGameQuestions() {
     gameQuestions.clear();
+    questionResults.clear();
+    correctAnswers = 0;
 
     final basicQuestions =
         (gameData['basic'] as List?)?.cast<Map<String, dynamic>>() ?? [];
@@ -206,6 +231,9 @@ class _WordMatchScreenState extends State<WordMatchScreen>
     gameQuestions.addAll(hardQuestions.take(5));
 
     gameQuestions.shuffle();
+
+    // Initialize results list
+    questionResults = List.filled(gameQuestions.length, false);
   }
 
   Map<String, dynamic> getCurrentQuestion() {
@@ -231,16 +259,30 @@ class _WordMatchScreenState extends State<WordMatchScreen>
     final currentQ = getCurrentQuestion();
     if (currentQ.isEmpty) return;
 
-    (currentQ['options'] as List)
+    // Get correct answers
+    final correctAnswerIds = (currentQ['options'] as List)
         .where((option) => option['isCorrect'] == true)
         .map((option) => option['id'] as String)
         .toSet();
 
-    selectedAnswers.toSet();
+    final selectedAnswerIds = selectedAnswers.toSet();
+
+    // Check if the answer is completely correct
+    bool isCompletelyCorrect =
+        correctAnswerIds.length == selectedAnswerIds.length &&
+        correctAnswerIds.every((id) => selectedAnswerIds.contains(id));
 
     setState(() {
       isAnswered = true;
       showExplanation = true;
+
+      // Update score
+      if (isCompletelyCorrect) {
+        correctAnswers++;
+        questionResults[currentQuestionIndex] = true;
+      } else {
+        questionResults[currentQuestionIndex] = false;
+      }
     });
   }
 
@@ -257,52 +299,265 @@ class _WordMatchScreenState extends State<WordMatchScreen>
     }
   }
 
+  double getScorePercentage() {
+    return gameQuestions.isEmpty
+        ? 0
+        : (correctAnswers / gameQuestions.length) * 100;
+  }
+
+  String getScoreGrade() {
+    double percentage = getScorePercentage();
+    if (percentage >= 90) return 'Excellent! 🌟';
+    if (percentage >= 80) return 'Great Job! 🎉';
+    if (percentage >= 70) return 'Good Work! 👍';
+    if (percentage >= 60) return 'Keep Trying! 💪';
+    return 'Practice More! 📚';
+  }
+
+  Color getScoreColor() {
+    double percentage = getScorePercentage();
+    if (percentage >= 90) return Colors.green;
+    if (percentage >= 70) return Colors.blue;
+    if (percentage >= 50) return Colors.orange;
+    return Colors.red;
+  }
+
   void showGameComplete() {
+    _scoreAnimationController.forward();
+
     showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (context) => AlertDialog(
+      builder: (context) => Dialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: const Text('🎉 Completed!'),
-        content: const Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'You have completed all 15 questions!',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
-        actions: [
-          ElevatedButton(
-            onPressed: resetGame,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue,
-              foregroundColor: Colors.white,
-            ),
-            child: const Text('Restart'),
+        child: Container(
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(context).size.height * 0.8,
+            maxWidth: MediaQuery.of(context).size.width * 0.9,
           ),
-        ],
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Animated Score Circle
+                  AnimatedBuilder(
+                    animation: _scoreAnimation,
+                    builder: (context, child) {
+                      return Transform.scale(
+                        scale: _scoreAnimation.value,
+                        child: Container(
+                          width: 120,
+                          height: 120,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: getScoreColor().withOpacity(0.1),
+                            border: Border.all(
+                              color: getScoreColor(),
+                              width: 4,
+                            ),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '${getScorePercentage().round()}%',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  color: getScoreColor(),
+                                ),
+                              ),
+                              Text(
+                                '$correctAnswers/${gameQuestions.length}',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: getScoreColor(),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  // Title and Grade
+                  const Text(
+                    '🎉 Game Complete!',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+
+                  const SizedBox(height: 10),
+
+                  Text(
+                    getScoreGrade(),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: getScoreColor(),
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  // Score Details
+                  Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[50],
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(color: Colors.grey[300]!),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Total Questions:',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            Text(
+                              '${gameQuestions.length}',
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 8),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Correct Answers:',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            Text(
+                              '$correctAnswers',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 8),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Wrong Answers:',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            Text(
+                              '${gameQuestions.length - correctAnswers}',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  // Action Buttons
+                  Column(
+                    children: [
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton.icon(
+                          onPressed: resetGame,
+                          icon: const Icon(Icons.refresh),
+                          label: const Text('Play Again'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue,
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.all(16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(height: 12),
+
+                      SizedBox(
+                        width: double.infinity,
+                        child: OutlinedButton.icon(
+                          onPressed: () {
+                            Navigator.of(context).pop(); // Close dialog
+                            Navigator.of(
+                              context,
+                            ).pop(); // Go back to games home
+                          },
+                          icon: const Icon(Icons.home),
+                          label: const Text('Back to Games'),
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: Colors.blue,
+                            padding: const EdgeInsets.all(16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
 
   void resetGame() {
     Navigator.of(context).pop();
+    _scoreAnimationController.reset();
     setState(() {
       currentQuestionIndex = 0;
       selectedAnswers.clear();
       showExplanation = false;
       isAnswered = false;
+      correctAnswers = 0;
       setupGameQuestions();
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 600;
+
     if (gameData.isEmpty) {
-      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+      return const Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircularProgressIndicator(),
+              SizedBox(height: 16),
+              Text('Loading game...', style: TextStyle(fontSize: 16)),
+            ],
+          ),
+        ),
+      );
     }
 
     final currentQ = getCurrentQuestion();
@@ -310,10 +565,27 @@ class _WordMatchScreenState extends State<WordMatchScreen>
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        title: const Text('Word Match Game'),
+        title: Text(
+          'Word Match Game',
+          style: TextStyle(fontSize: isSmallScreen ? 18 : 20),
+        ),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
         elevation: 0,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16.0),
+            child: Center(
+              child: Text(
+                'Score: $correctAnswers/${gameQuestions.length}',
+                style: TextStyle(
+                  fontSize: isSmallScreen ? 14 : 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       body: FadeTransition(
         opacity: _fadeAnimation,
@@ -322,7 +594,7 @@ class _WordMatchScreenState extends State<WordMatchScreen>
               ? const Center(child: Text('No questions available'))
               : SingleChildScrollView(
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: EdgeInsets.all(isSmallScreen ? 12.0 : 16.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
@@ -333,13 +605,15 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(16.0),
+                            padding: EdgeInsets.all(
+                              isSmallScreen ? 12.0 : 16.0,
+                            ),
                             child: Column(
                               children: [
-                                const Text(
+                                Text(
                                   'Word Match Challenge',
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: isSmallScreen ? 16 : 18,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.blue,
                                   ),
@@ -358,13 +632,16 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                 const SizedBox(height: 5),
                                 Text(
                                   'Question ${currentQuestionIndex + 1} of ${gameQuestions.length}',
-                                  style: const TextStyle(fontSize: 12),
+                                  style: TextStyle(
+                                    fontSize: isSmallScreen ? 11 : 12,
+                                  ),
                                 ),
                               ],
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+
+                        SizedBox(height: isSmallScreen ? 15 : 20),
 
                         // Word Card
                         Card(
@@ -381,19 +658,21 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                 end: Alignment.bottomRight,
                               ),
                             ),
-                            padding: const EdgeInsets.all(24.0),
+                            padding: EdgeInsets.all(
+                              isSmallScreen ? 20.0 : 24.0,
+                            ),
                             child: Column(
                               children: [
-                                const Icon(
+                                Icon(
                                   Icons.quiz,
-                                  size: 40,
+                                  size: isSmallScreen ? 35 : 40,
                                   color: Colors.white,
                                 ),
                                 const SizedBox(height: 15),
                                 Text(
                                   currentQ['word'] ?? '',
-                                  style: const TextStyle(
-                                    fontSize: 25,
+                                  style: TextStyle(
+                                    fontSize: isSmallScreen ? 22 : 25,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                     letterSpacing: 2,
@@ -402,8 +681,8 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                 const SizedBox(height: 10),
                                 Text(
                                   currentQ['question'] ?? '',
-                                  style: const TextStyle(
-                                    fontSize: 16,
+                                  style: TextStyle(
+                                    fontSize: isSmallScreen ? 14 : 16,
                                     color: Colors.white,
                                   ),
                                   textAlign: TextAlign.center,
@@ -412,7 +691,8 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+
+                        SizedBox(height: isSmallScreen ? 15 : 20),
 
                         // Options
                         ...((currentQ['options'] as List?) ?? []).map((option) {
@@ -438,7 +718,9 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                           }
 
                           return Padding(
-                            padding: const EdgeInsets.only(bottom: 12.0),
+                            padding: EdgeInsets.only(
+                              bottom: isSmallScreen ? 8.0 : 12.0,
+                            ),
                             child: Card(
                               elevation: isSelected ? 4 : 2,
                               shape: RoundedRectangleBorder(
@@ -451,10 +733,12 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                   borderRadius: BorderRadius.circular(15),
                                 ),
                                 child: ListTile(
-                                  contentPadding: const EdgeInsets.all(16),
+                                  contentPadding: EdgeInsets.all(
+                                    isSmallScreen ? 12 : 16,
+                                  ),
                                   leading: Container(
-                                    width: 30,
-                                    height: 30,
+                                    width: isSmallScreen ? 25 : 30,
+                                    height: isSmallScreen ? 25 : 30,
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: isSelected
@@ -469,6 +753,7 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                               ? Colors.white
                                               : Colors.grey[600],
                                           fontWeight: FontWeight.bold,
+                                          fontSize: isSmallScreen ? 12 : 14,
                                         ),
                                       ),
                                     ),
@@ -476,7 +761,7 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                   title: Text(
                                     option['text'],
                                     style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: isSmallScreen ? 14 : 16,
                                       fontWeight: isSelected
                                           ? FontWeight.w600
                                           : FontWeight.normal,
@@ -492,7 +777,7 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                           color: isCorrect
                                               ? Colors.green
                                               : Colors.red,
-                                          size: 24,
+                                          size: isSmallScreen ? 20 : 24,
                                         )
                                       : null,
                                   onTap: () => selectAnswer(option['id']),
@@ -502,7 +787,7 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                           );
                         }).toList(),
 
-                        const SizedBox(height: 20),
+                        SizedBox(height: isSmallScreen ? 15 : 20),
 
                         // Submit Button
                         if (!isAnswered && selectedAnswers.isNotEmpty)
@@ -511,16 +796,16 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.blue,
                               foregroundColor: Colors.white,
-                              padding: const EdgeInsets.all(16),
+                              padding: EdgeInsets.all(isSmallScreen ? 14 : 16),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               elevation: 4,
                             ),
-                            child: const Text(
+                            child: Text(
                               'Submit Answer',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: isSmallScreen ? 16 : 18,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -538,18 +823,21 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                 borderRadius: BorderRadius.circular(15),
                                 color: Colors.blue[50],
                               ),
-                              padding: const EdgeInsets.all(16),
+                              padding: EdgeInsets.all(isSmallScreen ? 14 : 16),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const Row(
+                                  Row(
                                     children: [
-                                      Icon(Icons.lightbulb, color: Colors.blue),
-                                      SizedBox(width: 8),
+                                      const Icon(
+                                        Icons.lightbulb,
+                                        color: Colors.blue,
+                                      ),
+                                      const SizedBox(width: 8),
                                       Text(
                                         'Explanation',
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: isSmallScreen ? 16 : 18,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.blue,
                                         ),
@@ -559,7 +847,9 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                   const SizedBox(height: 10),
                                   Text(
                                     currentQ['explanation'] ?? '',
-                                    style: const TextStyle(fontSize: 16),
+                                    style: TextStyle(
+                                      fontSize: isSmallScreen ? 14 : 16,
+                                    ),
                                   ),
                                   const SizedBox(height: 15),
                                   if (currentQuestionIndex <
@@ -570,9 +860,9 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                         style: ElevatedButton.styleFrom(
                                           backgroundColor: Colors.blue,
                                           foregroundColor: Colors.white,
-                                          padding: const EdgeInsets.symmetric(
-                                            horizontal: 24,
-                                            vertical: 12,
+                                          padding: EdgeInsets.symmetric(
+                                            horizontal: isSmallScreen ? 20 : 24,
+                                            vertical: isSmallScreen ? 10 : 12,
                                           ),
                                         ),
                                         child: const Text('Next Question'),
@@ -585,9 +875,9 @@ class _WordMatchScreenState extends State<WordMatchScreen>
                                         style: ElevatedButton.styleFrom(
                                           backgroundColor: Colors.green,
                                           foregroundColor: Colors.white,
-                                          padding: const EdgeInsets.symmetric(
-                                            horizontal: 24,
-                                            vertical: 12,
+                                          padding: EdgeInsets.symmetric(
+                                            horizontal: isSmallScreen ? 20 : 24,
+                                            vertical: isSmallScreen ? 10 : 12,
                                           ),
                                         ),
                                         child: const Text('View Results'),
@@ -1565,16 +1855,22 @@ class _SentenceFormState extends State<SentenceForm> {
                       ),
                     ),
 
-                  const SizedBox(height: 16),
+                  // Add bottom padding to prevent overlap with bottom buttons
+                  SizedBox(height: !showResult ? 100 : 16),
                 ],
               ),
             ),
           ),
 
-          // Bottom Action Buttons (Fixed)
+          // Bottom Action Buttons (Fixed with safe area padding)
           if (!showResult)
             Container(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.fromLTRB(
+                16,
+                16,
+                16,
+                16 + MediaQuery.of(context).padding.bottom,
+              ),
               decoration: BoxDecoration(
                 color: Colors.white,
                 boxShadow: [
@@ -1785,6 +2081,7 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
           gameQuestions[currentQuestionIndex];
       currentAnswers = List.filled(currentQuestion['blanks'], '');
       currentAvailableWords = List.from(currentQuestion['availableWords']);
+      currentAvailableWords.shuffle(Random());
       showResults = false;
     });
   }
@@ -1797,18 +2094,21 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
 
   void checkCurrentQuestion() {
     Map<String, dynamic> currentQuestion = gameQuestions[currentQuestionIndex];
-    int correctCount = 0;
     List<String> correctAnswers = List.from(currentQuestion['correctAnswers']);
 
+    bool allCorrect = true;
+
     for (int i = 0; i < currentAnswers.length; i++) {
-      if (currentAnswers[i] == correctAnswers[i]) {
-        correctCount++;
+      if (currentAnswers[i].trim() != correctAnswers[i].trim()) {
+        allCorrect = false;
+        break;
       }
     }
 
     setState(() {
-      totalCorrectAnswers += correctCount;
-      score += correctCount * 10;
+      if (allCorrect) {
+        score += 1; // ✅ +1 if the whole question is correct
+      }
       showResults = true;
     });
   }
@@ -1849,17 +2149,8 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
     });
   }
 
-  Color _getDifficultyColor(String difficulty) {
-    switch (difficulty.toLowerCase()) {
-      case 'basic':
-        return Colors.green;
-      case 'medium':
-        return Colors.orange;
-      case 'hard':
-        return Colors.red;
-      default:
-        return Colors.grey;
-    }
+  bool _areAllBlanksFilled() {
+    return currentAnswers.every((answer) => answer.trim().isNotEmpty);
   }
 
   bool _hasAnyWrongAnswers() {
@@ -1932,6 +2223,101 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
     );
   }
 
+  // Enhanced blank widget that works better for long sentences
+  Widget _buildBlankWidget(int index) {
+    Map<String, dynamic> currentQuestion = gameQuestions[currentQuestionIndex];
+    bool isCorrect =
+        showResults &&
+        currentAnswers[index] == currentQuestion['correctAnswers'][index];
+    bool isIncorrect =
+        showResults &&
+        currentAnswers[index].isNotEmpty &&
+        currentAnswers[index] != currentQuestion['correctAnswers'][index];
+
+    return GestureDetector(
+      onTap: () => removeWordFromBlank(index),
+      child: DragTarget<String>(
+        onAccept: (word) => placeWordInBlank(word, index),
+        builder: (context, candidateData, rejectedData) {
+          return AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            margin: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            constraints: BoxConstraints(
+              minWidth: 80,
+              maxWidth:
+                  MediaQuery.of(context).size.width * 0.4, // Limit max width
+            ),
+            decoration: BoxDecoration(
+              color: isCorrect
+                  ? Colors.green.shade100
+                  : isIncorrect
+                  ? Colors.red.shade100
+                  : candidateData.isNotEmpty
+                  ? Colors.blue.shade50
+                  : currentAnswers[index].isEmpty
+                  ? Colors.grey.shade100
+                  : Colors.blue.shade100,
+              border: Border.all(
+                color: isCorrect
+                    ? Colors.green
+                    : isIncorrect
+                    ? Colors.red
+                    : candidateData.isNotEmpty
+                    ? Colors.blue.shade300
+                    : currentAnswers[index].isEmpty
+                    ? Colors.grey.shade400
+                    : Colors.blue,
+                width: candidateData.isNotEmpty ? 3 : 2,
+              ),
+              borderRadius: BorderRadius.circular(8),
+              boxShadow: candidateData.isNotEmpty
+                  ? [
+                      BoxShadow(
+                        color: Colors.blue.withOpacity(0.2),
+                        blurRadius: 4,
+                        offset: const Offset(0, 2),
+                      ),
+                    ]
+                  : null,
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Flexible(
+                  child: Text(
+                    currentAnswers[index].isEmpty
+                        ? '______'
+                        : currentAnswers[index],
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: currentAnswers[index].isEmpty
+                          ? FontWeight.normal
+                          : FontWeight.bold,
+                      color: currentAnswers[index].isEmpty
+                          ? Colors.grey.shade500
+                          : Colors.black87,
+                    ),
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                if (showResults && currentAnswers[index].isNotEmpty) ...[
+                  const SizedBox(width: 6),
+                  Icon(
+                    isCorrect ? Icons.check_circle : Icons.cancel,
+                    color: isCorrect ? Colors.green : Colors.red,
+                    size: 18,
+                  ),
+                ],
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+
   List<InlineSpan> _buildRichTextSpans() {
     Map<String, dynamic> currentQuestion = gameQuestions[currentQuestionIndex];
     String paragraph = currentQuestion['paragraph'];
@@ -1946,108 +2332,11 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
 
       // Add blank if not the last part
       if (i < parts.length - 1) {
-        bool isCorrect =
-            showResults &&
-            currentAnswers[i] == currentQuestion['correctAnswers'][i];
-        bool isIncorrect =
-            showResults &&
-            currentAnswers[i].isNotEmpty &&
-            currentAnswers[i] != currentQuestion['correctAnswers'][i];
-
         spans.add(
           WidgetSpan(
             alignment: PlaceholderAlignment.baseline,
             baseline: TextBaseline.alphabetic,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
-              child: DragTarget<String>(
-                onAccept: (word) => placeWordInBlank(word, i),
-                builder: (context, candidateData, rejectedData) {
-                  return GestureDetector(
-                    onTap: () => removeWordFromBlank(i),
-                    child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 200),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 8,
-                      ),
-                      constraints: BoxConstraints(
-                        minWidth: MediaQuery.of(context).size.width > 600
-                            ? 100
-                            : 80,
-                      ),
-                      decoration: BoxDecoration(
-                        color: isCorrect
-                            ? Colors.green.shade100
-                            : isIncorrect
-                            ? Colors.red.shade100
-                            : candidateData.isNotEmpty
-                            ? Colors.blue.shade50
-                            : currentAnswers[i].isEmpty
-                            ? Colors.grey.shade100
-                            : Colors.blue.shade100,
-                        border: Border.all(
-                          color: isCorrect
-                              ? Colors.green
-                              : isIncorrect
-                              ? Colors.red
-                              : candidateData.isNotEmpty
-                              ? Colors.blue.shade300
-                              : currentAnswers[i].isEmpty
-                              ? Colors.grey.shade400
-                              : Colors.blue,
-                          width: candidateData.isNotEmpty ? 3 : 2,
-                        ),
-                        borderRadius: BorderRadius.circular(8),
-                        boxShadow: candidateData.isNotEmpty
-                            ? [
-                                BoxShadow(
-                                  color: Colors.blue.withOpacity(0.2),
-                                  blurRadius: 4,
-                                  offset: const Offset(0, 2),
-                                ),
-                              ]
-                            : null,
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Flexible(
-                            child: Text(
-                              currentAnswers[i].isEmpty
-                                  ? '______'
-                                  : currentAnswers[i],
-                              style: TextStyle(
-                                fontSize:
-                                    MediaQuery.of(context).size.width > 600
-                                    ? 16
-                                    : 14,
-                                fontWeight: currentAnswers[i].isEmpty
-                                    ? FontWeight.normal
-                                    : FontWeight.bold,
-                                color: currentAnswers[i].isEmpty
-                                    ? Colors.grey.shade500
-                                    : Colors.black87,
-                              ),
-                              textAlign: TextAlign.center,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                          if (showResults && currentAnswers[i].isNotEmpty) ...[
-                            const SizedBox(width: 6),
-                            Icon(
-                              isCorrect ? Icons.check_circle : Icons.cancel,
-                              color: isCorrect ? Colors.green : Colors.red,
-                              size: 18,
-                            ),
-                          ],
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
+            child: _buildBlankWidget(i),
           ),
         );
       }
@@ -2057,13 +2346,8 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
   }
 
   void showFinalResults() {
-    int totalBlanks = gameQuestions.fold(
-      0,
-      (sum, q) => sum + (q['blanks'] as int),
-    );
-    int percentage = totalBlanks > 0
-        ? ((totalCorrectAnswers * 100) ~/ totalBlanks)
-        : 0;
+    int totalQuestions = gameQuestions.length;
+    int percentage = totalQuestions > 0 ? ((score * 100) ~/ totalQuestions) : 0;
 
     showDialog(
       context: context,
@@ -2073,33 +2357,17 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          title: Row(
-            children: [
-              Icon(Icons.emoji_events, color: Colors.amber, size: 30),
-              const SizedBox(width: 8),
-              const Text('Game Complete!', style: TextStyle(fontSize: 20)),
-            ],
-          ),
+          title: const Text('Game Complete!'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text(
-                '🎉 Congratulations! 🎉',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 16),
               Text(
-                'Your Final Score: $score',
+                'Your Final Score: $score / $totalQuestions',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.green.shade600,
                 ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                '$totalCorrectAnswers out of $totalBlanks correct',
-                style: TextStyle(fontSize: 16, color: Colors.grey.shade600),
               ),
               const SizedBox(height: 8),
               Text(
@@ -2110,25 +2378,13 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 16),
-              Text(
-                percentage >= 80
-                    ? 'Excellent work!'
-                    : percentage >= 60
-                    ? 'Good job!'
-                    : 'Keep practicing!',
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
             ],
           ),
           actions: [
             OutlinedButton(
               onPressed: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pop(); // Go back to main menu
+                Navigator.of(context).pop(); // Back to main menu
               },
               child: const Text('Finish'),
             ),
@@ -2140,10 +2396,6 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue.shade600,
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 24,
-                  vertical: 12,
-                ),
               ),
               child: const Text('Play Again'),
             ),
@@ -2201,303 +2453,273 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
       );
     }
 
-    Map<String, dynamic> currentQuestion = gameQuestions[currentQuestionIndex];
-    String currentDifficulty = currentQuestion['difficulty'] ?? 'Unknown';
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Fill in the Blanks'),
         backgroundColor: Colors.blueAccent,
       ),
-      body: Column(
-        children: [
-          // Header Section (Fixed)
-          Container(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              children: [
-                // Progress and Score
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      'Complete the sentence:',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.blue.withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        'Score: $score',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue,
-                          fontSize: 12,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-
-                // Question number and difficulty
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          'Question ${currentQuestionIndex + 1}/15',
-                          style: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black87,
-                          ),
-                        ),
-                        const SizedBox(width: 12),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 8,
-                            vertical: 3,
-                          ),
-                          decoration: BoxDecoration(
-                            color: _getDifficultyColor(currentDifficulty),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Text(
-                            currentDifficulty,
-                            style: const TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 8),
-
-                LinearProgressIndicator(
-                  value: (currentQuestionIndex + 1) / gameQuestions.length,
-                  backgroundColor: Colors.grey[300],
-                  valueColor: const AlwaysStoppedAnimation<Color>(
-                    Colors.blueAccent,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          // Scrollable Content Area
-          Expanded(
-            child: SingleChildScrollView(
-              physics: const AlwaysScrollableScrollPhysics(),
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+      body: SafeArea(
+        bottom: true,
+        child: Column(
+          children: [
+            // Header Section (Fixed)
+            Container(
+              padding: const EdgeInsets.all(16),
               child: Column(
                 children: [
-                  // Paragraph Section
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Colors.grey[300]!),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.1),
-                          blurRadius: 4,
-                          offset: const Offset(0, 2),
-                        ),
-                      ],
-                    ),
-                    child: RichText(
-                      text: TextSpan(
+                  // Progress and Score
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Complete the sentence:',
                         style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.width > 600
-                              ? 18
-                              : 16,
-                          height: 1.4,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
                           color: Colors.black87,
                         ),
-                        children: _buildRichTextSpans(),
                       ),
-                    ),
-                  ),
-
-                  // Correct Answers Section (only shown when results are displayed and there are wrong answers)
-                  _buildCorrectAnswersSection(),
-
-                  const SizedBox(height: 20),
-
-                  // Word Bank Section
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: Colors.yellow.shade50,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Colors.yellow.shade200),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.account_balance_wallet,
-                              color: Colors.orange.shade700,
-                              size: 20,
-                            ),
-                            const SizedBox(width: 8),
-                            Text(
-                              'Word Bank',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.orange.shade800,
-                              ),
-                            ),
-                          ],
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 10,
+                          vertical: 4,
                         ),
-                        const SizedBox(height: 12),
-                        if (currentAvailableWords.isEmpty) ...[
-                          Container(
-                            width: double.infinity,
-                            padding: const EdgeInsets.all(16),
-                            decoration: BoxDecoration(
-                              color: Colors.green.shade50,
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Colors.green.shade200),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.check_circle,
-                                  color: Colors.green.shade600,
-                                  size: 20,
-                                ),
-                                const SizedBox(width: 8),
-                                Text(
-                                  'All words placed!',
-                                  style: TextStyle(
-                                    color: Colors.green.shade700,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ] else ...[
-                          Wrap(
-                            spacing: 8,
-                            runSpacing: 8,
-                            children: currentAvailableWords.map((word) {
-                              return Draggable<String>(
-                                data: word,
-                                dragAnchorStrategy:
-                                    pointerDragAnchorStrategy, // 👈 makes dragging smoother
-                                feedback: WordChip(
-                                  word: word,
-                                  isDragging: true,
-                                ),
-                                childWhenDragging: WordChip(
-                                  word: word,
-                                  isDragging: false,
-                                  opacity: 0.5,
-                                ),
-                                child: WordChip(word: word, isDragging: false),
-                              );
-                            }).toList(),
-                          ),
-                        ],
-                      ],
-                    ),
-                  ),
-
-                  const SizedBox(height: 16),
-                ],
-              ),
-            ),
-          ),
-
-          // Bottom Action Buttons (Fixed)
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.1),
-                  blurRadius: 4,
-                  offset: const Offset(0, -2),
-                ),
-              ],
-            ),
-            child: Column(
-              children: [
-                if (!showResults) ...[
-                  Row(
-                    children: [
-                      Expanded(
-                        child: OutlinedButton.icon(
-                          onPressed: resetCurrentQuestion,
-                          icon: const Icon(Icons.refresh, size: 18),
-                          label: const Text(
-                            'Reset',
-                            style: TextStyle(fontSize: 14),
-                          ),
-                          style: OutlinedButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(vertical: 12),
-                            side: BorderSide(color: Colors.grey[600]!),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                          ),
+                        decoration: BoxDecoration(
+                          color: Colors.blue.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                      ),
-                      const SizedBox(width: 16),
-                      Expanded(
-                        child: ElevatedButton.icon(
-                          onPressed:
-                              currentAnswers.any((ans) => ans.trim().isEmpty)
-                              ? null
-                              : checkCurrentQuestion,
-
-                          icon: const Icon(Icons.check, size: 18),
-                          label: const Text(
-                            'Check Answers',
-                            style: TextStyle(fontSize: 14),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.green.shade600,
-                            foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(vertical: 12),
-                            disabledBackgroundColor: Colors.grey[300],
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8),
-                            ),
+                        child: Text(
+                          'Score: $score',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                            fontSize: 12,
                           ),
                         ),
                       ),
                     ],
                   ),
-                ] else ...[
-                  if (_hasAnyWrongAnswers()) ...[
-                    // Show both Retry and Next buttons when there are wrong answers
+                  const SizedBox(height: 12),
+
+                  // Question number and difficulty
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Question ${currentQuestionIndex + 1}/15',
+                            style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+
+                  LinearProgressIndicator(
+                    value: (currentQuestionIndex + 1) / gameQuestions.length,
+                    backgroundColor: Colors.grey[300],
+                    valueColor: const AlwaysStoppedAnimation<Color>(
+                      Colors.blueAccent,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Scrollable Content Area
+            Expanded(
+              child: SingleChildScrollView(
+                physics: const AlwaysScrollableScrollPhysics(),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  children: [
+                    // Paragraph Section
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.grey[300]!),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.1),
+                            blurRadius: 4,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      child: RichText(
+                        text: TextSpan(
+                          style: TextStyle(
+                            fontSize: MediaQuery.of(context).size.width > 600
+                                ? 18
+                                : 16,
+                            height: 1.5,
+                            color: Colors.black87,
+                          ),
+                          children: _buildRichTextSpans(),
+                        ),
+                      ),
+                    ),
+
+                    // Correct Answers Section
+                    _buildCorrectAnswersSection(),
+
+                    const SizedBox(height: 20),
+
+                    // Word Bank Section
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: Colors.yellow.shade50,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.yellow.shade200),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.account_balance_wallet,
+                                color: Colors.orange.shade700,
+                                size: 20,
+                              ),
+                              const SizedBox(width: 8),
+                              Text(
+                                'Word Bank (Tap words to use them)',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.orange.shade800,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 12),
+                          if (currentAvailableWords.isEmpty) ...[
+                            Container(
+                              width: double.infinity,
+                              padding: const EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                color: Colors.green.shade50,
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(
+                                  color: Colors.green.shade200,
+                                ),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.check_circle,
+                                    color: Colors.green.shade600,
+                                    size: 20,
+                                  ),
+                                  const SizedBox(width: 8),
+                                  Text(
+                                    'All words placed!',
+                                    style: TextStyle(
+                                      color: Colors.green.shade700,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ] else ...[
+                            // Enhanced word bank with clickable words and better visual feedback
+                            Wrap(
+                              spacing: 8,
+                              runSpacing: 8,
+                              children: currentAvailableWords.map((word) {
+                                return GestureDetector(
+                                  onTap: () {
+                                    // Find the first empty blank and place the word there
+                                    int emptyBlankIndex = currentAnswers
+                                        .indexWhere((answer) => answer.isEmpty);
+                                    if (emptyBlankIndex != -1) {
+                                      placeWordInBlank(word, emptyBlankIndex);
+                                    } else {
+                                      // If no empty blanks, show a snackbar
+                                      ScaffoldMessenger.of(
+                                        context,
+                                      ).showSnackBar(
+                                        SnackBar(
+                                          content: const Text(
+                                            'All blanks are filled. Tap on a blank to replace it.',
+                                          ),
+                                          duration: const Duration(seconds: 2),
+                                          backgroundColor:
+                                              Colors.orange.shade600,
+                                        ),
+                                      );
+                                    }
+                                  },
+                                  child: Draggable<String>(
+                                    data: word,
+                                    dragAnchorStrategy:
+                                        pointerDragAnchorStrategy,
+                                    feedback: WordChip(
+                                      word: word,
+                                      isDragging: true,
+                                    ),
+                                    childWhenDragging: WordChip(
+                                      word: word,
+                                      isDragging: false,
+                                      opacity: 0.3,
+                                    ),
+                                    child: WordChip(
+                                      word: word,
+                                      isDragging: false,
+                                    ),
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ],
+                        ],
+                      ),
+                    ),
+
+                    // Add extra padding at bottom to prevent navigation bar overlap
+                    SizedBox(
+                      height: MediaQuery.of(context).padding.bottom + 100,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // Bottom Action Buttons (Fixed with SafeArea)
+            Container(
+              padding: EdgeInsets.fromLTRB(
+                16,
+                16,
+                16,
+                16 + MediaQuery.of(context).padding.bottom,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.1),
+                    blurRadius: 4,
+                    offset: const Offset(0, -2),
+                  ),
+                ],
+              ),
+              child: Column(
+                children: [
+                  if (!showResults) ...[
                     Row(
                       children: [
                         Expanded(
@@ -2505,13 +2727,12 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
                             onPressed: resetCurrentQuestion,
                             icon: const Icon(Icons.refresh, size: 18),
                             label: const Text(
-                              'Try Again',
+                              'Reset',
                               style: TextStyle(fontSize: 14),
                             ),
                             style: OutlinedButton.styleFrom(
                               padding: const EdgeInsets.symmetric(vertical: 12),
-                              side: BorderSide(color: Colors.orange.shade600),
-                              foregroundColor: Colors.orange.shade600,
+                              side: BorderSide(color: Colors.grey[600]!),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8),
                               ),
@@ -2521,23 +2742,19 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
                         const SizedBox(width: 16),
                         Expanded(
                           child: ElevatedButton.icon(
-                            onPressed: nextQuestion,
-                            icon: Icon(
-                              currentQuestionIndex < gameQuestions.length - 1
-                                  ? Icons.arrow_forward
-                                  : Icons.emoji_events,
-                              size: 18,
-                            ),
-                            label: Text(
-                              currentQuestionIndex < gameQuestions.length - 1
-                                  ? 'Next Question'
-                                  : 'Finish Game',
-                              style: const TextStyle(fontSize: 14),
+                            onPressed: _areAllBlanksFilled()
+                                ? checkCurrentQuestion
+                                : null,
+                            icon: const Icon(Icons.check, size: 18),
+                            label: const Text(
+                              'Check Answers',
+                              style: TextStyle(fontSize: 14),
                             ),
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue.shade600,
+                              backgroundColor: Colors.green.shade600,
                               foregroundColor: Colors.white,
                               padding: const EdgeInsets.symmetric(vertical: 12),
+                              disabledBackgroundColor: Colors.grey[300],
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8),
                               ),
@@ -2547,39 +2764,95 @@ class _FillInTheBlanksState extends State<FillInTheBlanks> {
                       ],
                     ),
                   ] else ...[
-                    // Show only Next button when all answers are correct
-                    ElevatedButton.icon(
-                      onPressed: nextQuestion,
-                      icon: Icon(
-                        currentQuestionIndex < gameQuestions.length - 1
-                            ? Icons.arrow_forward
-                            : Icons.emoji_events,
-                        size: 18,
+                    if (_hasAnyWrongAnswers()) ...[
+                      // Show both Retry and Next buttons when there are wrong answers
+                      Row(
+                        children: [
+                          Expanded(
+                            child: OutlinedButton.icon(
+                              onPressed: resetCurrentQuestion,
+                              icon: const Icon(Icons.refresh, size: 18),
+                              label: const Text(
+                                'Try Again',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                              style: OutlinedButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 12,
+                                ),
+                                side: BorderSide(color: Colors.orange.shade600),
+                                foregroundColor: Colors.orange.shade600,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: ElevatedButton.icon(
+                              onPressed: nextQuestion,
+                              icon: Icon(
+                                currentQuestionIndex < gameQuestions.length - 1
+                                    ? Icons.arrow_forward
+                                    : Icons.emoji_events,
+                                size: 18,
+                              ),
+                              label: Text(
+                                currentQuestionIndex < gameQuestions.length - 1
+                                    ? 'Next Question'
+                                    : 'Finish Game',
+                                style: const TextStyle(fontSize: 14),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue.shade600,
+                                foregroundColor: Colors.white,
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 12,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                      label: Text(
-                        currentQuestionIndex < gameQuestions.length - 1
-                            ? 'Next Question'
-                            : 'Finish Game',
-                        style: const TextStyle(fontSize: 14),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue.shade600,
-                        foregroundColor: Colors.white,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 24,
-                          vertical: 12,
+                    ] else ...[
+                      // Show only Next button when all answers are correct
+                      ElevatedButton.icon(
+                        onPressed: nextQuestion,
+                        icon: Icon(
+                          currentQuestionIndex < gameQuestions.length - 1
+                              ? Icons.arrow_forward
+                              : Icons.emoji_events,
+                          size: 18,
                         ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
+                        label: Text(
+                          currentQuestionIndex < gameQuestions.length - 1
+                              ? 'Next Question'
+                              : 'Finish Game',
+                          style: const TextStyle(fontSize: 14),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue.shade600,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 24,
+                            vertical: 12,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
                         ),
                       ),
-                    ),
+                    ],
                   ],
                 ],
-              ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -2604,11 +2877,11 @@ class WordChip extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         decoration: BoxDecoration(
-          color: isDragging ? Colors.blue.shade600 : Colors.orange.shade100,
+          color: isDragging ? Colors.blue.shade100 : Colors.orange.shade100,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: isDragging ? Colors.blue.shade800 : Colors.orange.shade400,
-            width: isDragging ? 2 : 1,
+            color: isDragging ? Colors.blue.shade300 : Colors.orange.shade300,
+            width: 2,
           ),
           boxShadow: isDragging
               ? [
@@ -2622,7 +2895,7 @@ class WordChip extends StatelessWidget {
                   BoxShadow(
                     color: Colors.orange.withOpacity(0.1),
                     blurRadius: 2,
-                    offset: const Offset(0, 1),
+                    offset: const Offset(0, 2),
                   ),
                 ],
         ),
@@ -2631,7 +2904,7 @@ class WordChip extends StatelessWidget {
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w600,
-            color: isDragging ? Colors.white : Colors.orange.shade800,
+            color: isDragging ? Colors.blue.shade800 : Colors.orange.shade800,
           ),
         ),
       ),
@@ -2730,91 +3003,219 @@ class _PictureSentenceScreenState extends State<PictureSentenceScreen> {
     });
   }
 
+  int _calculateCrossAxisCount(int wordCount) {
+    if (wordCount <= 4) return 2;
+    if (wordCount <= 6) return 2;
+    if (wordCount <= 9) return 3;
+    if (wordCount <= 12) return 3;
+    return 4;
+  }
+
+  double _calculateChildAspectRatio(int wordCount) {
+    if (wordCount <= 4) return 2.5;
+    if (wordCount <= 6) return 2.0;
+    if (wordCount <= 9) return 1.8;
+    if (wordCount <= 12) return 1.5;
+    return 1.2;
+  }
+
   @override
   Widget build(BuildContext context) {
     if (gameData.isEmpty) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
     var currentGame = gameData[currentIndex];
+    final keywordCount = currentGame['keywords'].length;
 
     return Scaffold(
       appBar: AppBar(
         title: const Text("Picture → Sentence"),
         backgroundColor: Colors.teal,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(12.0),
+      body: SafeArea(
         child: Column(
           children: [
-            Image.asset(currentGame['image'], height: 200, fit: BoxFit.cover),
-            const SizedBox(height: 20),
-            Text(
-              selectedWords.join(" "),
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            // Image section
+            Container(
+              height: MediaQuery.of(context).size.height * 0.25,
+              width: double.infinity,
+              padding: const EdgeInsets.all(12.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(currentGame['image']),
+              ),
             ),
-            const SizedBox(height: 10),
 
-            // Dynamic Grid
+            // Selected sentence display
+            Container(
+              width: double.infinity,
+              margin: const EdgeInsets.symmetric(horizontal: 12.0),
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.grey[100],
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.grey[300]!),
+              ),
+              child: Text(
+                selectedWords.isEmpty
+                    ? "Tap words to form a sentence..."
+                    : selectedWords.join(" "),
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: selectedWords.isEmpty
+                      ? Colors.grey[600]
+                      : Colors.black87,
+                ),
+                textAlign: TextAlign.center,
+                maxLines: 3,
+              ),
+            ),
+
+            const SizedBox(height: 12),
+
+            // Feedback message
+            Container(
+              height: 30,
+              child: Text(
+                feedback,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: feedback.startsWith("✅")
+                      ? Colors.green
+                      : feedback.startsWith("❌")
+                      ? Colors.red
+                      : Colors.transparent,
+                ),
+              ),
+            ),
+
+            // Keywords grid - Flexible to take available space
             Expanded(
-              child: GridView.count(
-                crossAxisCount: currentGame['keywords'].length <= 4
-                    ? currentGame['keywords'].length
-                    : 3,
-                mainAxisSpacing: 8,
-                crossAxisSpacing: 8,
-                children: List.generate(currentGame['keywords'].length, (
-                  index,
-                ) {
-                  return GestureDetector(
-                    onTap: () {
-                      if (!wordSelected[index]) {
-                        setState(() {
-                          selectedWords.add(currentGame['keywords'][index]);
-                          wordSelected[index] = true;
-                        });
-                      }
-                    },
-                    child: Container(
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: wordSelected[index]
-                            ? Colors.grey[400]
-                            : Colors.blue[100],
-                        borderRadius: BorderRadius.circular(8),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: _calculateCrossAxisCount(keywordCount),
+                    mainAxisSpacing: 8,
+                    crossAxisSpacing: 8,
+                    childAspectRatio: _calculateChildAspectRatio(keywordCount),
+                  ),
+                  itemCount: keywordCount,
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () {
+                        if (!wordSelected[index]) {
+                          setState(() {
+                            selectedWords.add(currentGame['keywords'][index]);
+                            wordSelected[index] = true;
+                          });
+                        }
+                      },
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 200),
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: wordSelected[index]
+                              ? Colors.grey[400]
+                              : Colors.blue[100],
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: wordSelected[index]
+                                ? Colors.grey[600]!
+                                : Colors.blue[300]!,
+                            width: 1,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8.0,
+                            vertical: 4.0,
+                          ),
+                          child: Text(
+                            currentGame['keywords'][index],
+                            style: TextStyle(
+                              fontSize: keywordCount > 12 ? 12 : 14,
+                              fontWeight: FontWeight.w500,
+                              color: wordSelected[index]
+                                  ? Colors.grey[700]
+                                  : Colors.blue[800],
+                            ),
+                            textAlign: TextAlign.center,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
                       ),
-                      child: Text(
-                        currentGame['keywords'][index],
-                        style: const TextStyle(fontSize: 16),
+                    );
+                  },
+                ),
+              ),
+            ),
+
+            // Bottom button section - Fixed at bottom
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.3),
+                    spreadRadius: 1,
+                    blurRadius: 3,
+                    offset: const Offset(0, -2),
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: selectedWords.isNotEmpty
+                          ? resetSelection
+                          : null,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange,
+                        foregroundColor: Colors.white,
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      child: const Text(
+                        "Reset",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
-                  );
-                }),
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: selectedWords.isNotEmpty ? checkAnswer : null,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.green,
+                        foregroundColor: Colors.white,
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      child: const Text(
+                        "Check",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ),
-
-            Text(
-              feedback,
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: feedback.startsWith("✅") ? Colors.green : Colors.red,
-              ),
-            ),
-            const SizedBox(height: 10),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: checkAnswer,
-                  child: const Text("Check"),
-                ),
-                const SizedBox(width: 10),
-                ElevatedButton(
-                  onPressed: resetSelection,
-                  child: const Text("Reset"),
-                ),
-              ],
             ),
           ],
         ),
@@ -2863,9 +3264,7 @@ class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
   bool isCorrect = false;
   bool gameCompleted = false;
   late AnimationController _pulseController;
-  late AnimationController _slideController;
   late Animation<double> _pulseAnimation;
-  late Animation<Offset> _slideAnimation;
 
   final int basicQuestions = 4;
   final int mediumQuestions = 4;
@@ -2885,20 +3284,10 @@ class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
       duration: Duration(milliseconds: 1000),
       vsync: this,
     );
-    _slideController = AnimationController(
-      duration: Duration(milliseconds: 500),
-      vsync: this,
-    );
 
     _pulseAnimation = Tween<double>(begin: 1.0, end: 1.1).animate(
       CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
     );
-
-    _slideAnimation = Tween<Offset>(begin: Offset(0, 1), end: Offset.zero)
-        .animate(
-          CurvedAnimation(parent: _slideController, curve: Curves.elasticOut),
-        );
-
     _pulseController.repeat(reverse: true);
   }
 
@@ -2932,7 +3321,6 @@ class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
       setState(() {
         isLoading = false;
       });
-      _slideController.forward();
     } catch (e) {
       print('Error loading game data: $e');
       setState(() {
@@ -3367,6 +3755,28 @@ class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
                     ),
                   ),
                 ),
+
+                SizedBox(height: 16),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Text(
+                    'Back Home',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -3453,8 +3863,7 @@ class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
       ),
       body: Stack(
         children: [
-          SlideTransition(
-            position: _slideAnimation,
+          SingleChildScrollView(
             child: SingleChildScrollView(
               padding: EdgeInsets.all(16),
               child: Column(
@@ -3532,7 +3941,6 @@ class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
   @override
   void dispose() {
     _pulseController.dispose();
-    _slideController.dispose();
     flutterTts.stop();
     super.dispose();
   }

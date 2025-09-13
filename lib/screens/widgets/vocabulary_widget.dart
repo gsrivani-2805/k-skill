@@ -241,14 +241,14 @@ class TopicCard extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: isMobile ? 2 : 4),
-            Text(
-              '${topic.words.length} words',
-              style: TextStyle(
-                fontSize: isMobile ? 10 : 12,
-                color: Colors.grey.shade600,
-              ),
-            ),
+            // SizedBox(height: isMobile ? 2 : 4),
+            // Text(
+            //   '${topic.words.length} words',
+            //   style: TextStyle(
+            //     fontSize: isMobile ? 10 : 12,
+            //     color: Colors.grey.shade600,
+            //   ),
+            // ),
           ],
         ),
       ),

@@ -21,6 +21,9 @@ class _QuizScreenState extends State<QuizScreen> {
   String? errorMessage;
   int questionsToSelect = 10;
 
+  // Track user's answers for each question
+  List<String?> userAnswers = [];
+
   @override
   void initState() {
     super.initState();
@@ -91,20 +94,45 @@ class _QuizScreenState extends State<QuizScreen> {
 
     setState(() {
       selectedQuestions = selected;
+      // Initialize userAnswers list with null values
+      userAnswers = List.filled(selectedQuestions.length, null);
     });
   }
 
   void handleAnswerSelected(String selectedAnswer) {
-    if (selectedAnswer ==
-        selectedQuestions[currentQuestionIndex].correctAnswer) {
-      score++;
+    setState(() {
+      userAnswers[currentQuestionIndex] = selectedAnswer;
+    });
+  }
+
+  void _goToPreviousQuestion() {
+    if (currentQuestionIndex > 0) {
+      setState(() {
+        currentQuestionIndex--;
+      });
+    }
+  }
+
+  void _goToNextQuestion() {
+    if (currentQuestionIndex < selectedQuestions.length - 1) {
+      setState(() {
+        currentQuestionIndex++;
+      });
+    }
+  }
+
+  void _completeQuiz() {
+    // Calculate score
+    score = 0;
+    for (int i = 0; i < selectedQuestions.length; i++) {
+      if (userAnswers[i] == selectedQuestions[i].correctAnswer) {
+        score++;
+      }
     }
 
-    if (currentQuestionIndex < selectedQuestions.length - 1) {
-      setState(() => currentQuestionIndex++);
-    } else {
-      setState(() => isQuizCompleted = true);
-    }
+    setState(() {
+      isQuizCompleted = true;
+    });
   }
 
   void _submitScoreAndExit() {
@@ -198,6 +226,67 @@ class _QuizScreenState extends State<QuizScreen> {
     );
   }
 
+  Widget _buildNavigationButtons() {
+    final bool canGoBack = currentQuestionIndex > 0;
+    final bool canGoNext = currentQuestionIndex < selectedQuestions.length - 1;
+    final bool isLastQuestion =
+        currentQuestionIndex == selectedQuestions.length - 1;
+
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 1,
+            blurRadius: 5,
+            offset: const Offset(0, -2),
+          ),
+        ],
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // Previous button
+          ElevatedButton.icon(
+            onPressed: canGoBack ? _goToPreviousQuestion : null,
+            icon: const Icon(Icons.arrow_back, size: 20),
+            label: const Text("Previous"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: canGoBack ? Colors.grey[600] : Colors.grey[300],
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+
+          // Next/Complete button
+          ElevatedButton.icon(
+            onPressed: isLastQuestion
+                ? _completeQuiz
+                : (canGoNext ? _goToNextQuestion : null),
+            icon: Icon(
+              isLastQuestion ? Icons.check : Icons.arrow_forward,
+              size: 20,
+            ),
+            label: Text(isLastQuestion ? "Complete" : "Next"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFFFA500),
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     if (isLoading) return _buildLoadingScreen();
@@ -211,42 +300,70 @@ class _QuizScreenState extends State<QuizScreen> {
       appBar: AppBar(
         backgroundColor: const Color(0xFFFFA500),
         title: Text(
-          "Question ${currentQuestionIndex + 1} / ${selectedQuestions.length}",
+          "Grammar Quiz",
           style: const TextStyle(color: Colors.white),
         ),
-        // actions: [
-        //   Padding(
-        //     padding: const EdgeInsets.only(right: 16),
-        //     child: Center(
-        //       child: Text(
-        //         "Score: $score",
-        //         style: const TextStyle(color: Colors.white),
-        //       ),
-        //     ),
-        //   ),
-        // ],
       ),
-      body: Column(
-        children: [
-          LinearProgressIndicator(
-            value: (currentQuestionIndex + 1) / selectedQuestions.length,
-            backgroundColor: Colors.grey[200],
-            valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFFFA500)),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: QuizCardWidget(
-                question: currentQuestion.question,
-                options: currentQuestion.options,
-                correctAnswer: currentQuestion.correctAnswer,
-                onAnswerSelected: handleAnswerSelected,
+      body: SafeArea(
+        child: Column(
+          children: [
+            // Progress indicator
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              color: Colors.white,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Question ${currentQuestionIndex + 1}",
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "${_getAnsweredCount()} / ${selectedQuestions.length} answered",
+                        style: TextStyle(color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  LinearProgressIndicator(
+                    value:
+                        (currentQuestionIndex + 1) / selectedQuestions.length,
+                    backgroundColor: Colors.grey[200],
+                    valueColor: const AlwaysStoppedAnimation<Color>(
+                      Color(0xFFFFA500),
+                    ),
+                  ),
+                ],
               ),
             ),
-          ),
-        ],
+
+            // Question content
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: QuizCardWidget(
+                  question: currentQuestion.question,
+                  options: currentQuestion.options,
+                  correctAnswer: currentQuestion.correctAnswer,
+                  selectedAnswer:
+                      userAnswers[currentQuestionIndex], // Pass selected answer
+                  onAnswerSelected: handleAnswerSelected,
+                ),
+              ),
+            ),
+
+            // Navigation buttons
+            _buildNavigationButtons(),
+          ],
+        ),
       ),
     );
+  }
+
+  int _getAnsweredCount() {
+    return userAnswers.where((answer) => answer != null).length;
   }
 
   Widget _buildLoadingScreen() => const Scaffold(

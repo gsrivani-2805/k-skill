@@ -930,15 +930,6 @@ class _LessonsScreenState extends State<LessonsScreen> {
         // Send quiz score to backend
         await submitQuizScoreToBackend(lessonKey, result, totalQuestions);
 
-        // Show success message
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Quiz completed! Score: $result/$totalQuestions'),
-            backgroundColor: Colors.blue,
-            duration: Duration(seconds: 3),
-          ),
-        );
-
         // Force rebuild to update the UI with new quiz status
         setState(() {});
       }
