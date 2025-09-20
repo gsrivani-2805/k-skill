@@ -230,8 +230,6 @@ class _WordMatchScreenState extends State<WordMatchScreen>
     gameQuestions.addAll(mediumQuestions.take(5));
     gameQuestions.addAll(hardQuestions.take(5));
 
-    gameQuestions.shuffle();
-
     // Initialize results list
     questionResults = List.filled(gameQuestions.length, false);
   }

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:K_Skill/screens/levels.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
@@ -60,6 +61,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
           "💡 **Just ask me anything about English!**\n"
           "For example: \"Explain the difference between 'affect' and 'effect'\" or \"Help me analyze this poem.\"",
       isUser: false,
+      suggestions: null,
     ),
   ];
 
@@ -240,25 +242,86 @@ class _PracticeScreenState extends State<PracticeScreen> {
                 alignment: msg.isUser
                     ? Alignment.centerRight
                     : Alignment.centerLeft,
-                child: Container(
-                  margin: const EdgeInsets.symmetric(vertical: 6),
-                  padding: const EdgeInsets.all(12),
-                  constraints: BoxConstraints(
-                    maxWidth: MediaQuery.of(context).size.width * 0.75,
-                  ),
-                  decoration: BoxDecoration(
-                    color: msg.isUser ? Colors.grey[200] : Colors.purpleAccent,
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: MarkdownBody(
-                    data: msg.text,
-                    styleSheet: MarkdownStyleSheet(
-                      p: TextStyle(
-                        fontSize: 14,
-                        color: msg.isUser ? Colors.black : Colors.white,
+                child: Column(
+                  crossAxisAlignment: msg.isUser
+                      ? CrossAxisAlignment.end
+                      : CrossAxisAlignment.start,
+                  children: [
+                    // 💬 Chat bubble + Suggestions inside
+                    Container(
+                      margin: const EdgeInsets.symmetric(vertical: 6),
+                      padding: const EdgeInsets.all(12),
+                      constraints: BoxConstraints(
+                        maxWidth: MediaQuery.of(context).size.width * 0.75,
+                      ),
+                      decoration: BoxDecoration(
+                        color: msg.isUser
+                            ? Colors.grey[200]
+                            : Colors.purpleAccent,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // AI Response text
+                          MarkdownBody(
+                            data: msg.text,
+                            styleSheet: MarkdownStyleSheet(
+                              p: TextStyle(
+                                fontSize: 14,
+                                color: msg.isUser ? Colors.black : Colors.white,
+                              ),
+                            ),
+                          ),
+
+                          // 📘 Suggestions inside bubble
+                          if (!msg.isUser &&
+                              msg.suggestions != null &&
+                              msg.suggestions!.isNotEmpty) ...[
+                            const SizedBox(height: 8),
+                            Text(
+                              "👉 For more information, refer to these lessons:",
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                                color:
+                                    Colors.white, 
+                              ),
+                            ),
+                            const SizedBox(height: 6),
+                            Wrap(
+                              spacing: 8,
+                              runSpacing: 4,
+                              children: msg.suggestions!.map((lesson) {
+                                return ActionChip(
+                                  backgroundColor: Colors.white,
+                                  label: Text(
+                                    lesson["title"],
+                                    style: const TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.purple,
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            LessonDetailScreen(
+                                              lessonKey: lesson["lessonId"],
+                                              lessonInfo: lesson,
+                                            ),
+                                      ),
+                                    );
+                                  },
+                                );
+                              }).toList(),
+                            ),
+                          ],
+                        ],
                       ),
                     ),
-                  ),
+                  ],
                 ),
               );
             },
@@ -298,7 +361,9 @@ class _PracticeScreenState extends State<PracticeScreen> {
     if (userMessage.isEmpty) return;
 
     setState(() {
-      chatMessages.add(ChatMessage(text: userMessage, isUser: true));
+      chatMessages.add(
+        ChatMessage(text: userMessage, isUser: true, suggestions: null),
+      );
       _chatController.clear();
     });
 
@@ -314,7 +379,14 @@ class _PracticeScreenState extends State<PracticeScreen> {
         final aiReply = responseData["response"];
 
         setState(() {
-          chatMessages.add(ChatMessage(text: aiReply, isUser: false));
+          chatMessages.add(
+            ChatMessage(
+              text: aiReply,
+              isUser: false,
+              suggestions: (responseData["suggestions"] as List?)
+                  ?.cast<Map<String, dynamic>>(),
+            ),
+          );
         });
       } else {
         setState(() {
@@ -323,6 +395,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
               text:
                   "Oops! There was a problem getting a response. Please try again later.",
               isUser: false,
+              suggestions: null,
             ),
           );
         });
@@ -333,6 +406,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
           ChatMessage(
             text: "Something went wrong: ${e.toString()}",
             isUser: false,
+            suggestions: null,
           ),
         );
       });
@@ -649,10 +723,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                   ),
                 ),
                 icon: const Icon(Icons.refresh, size: 20),
-                label: const Text(
-                  "Next",
-                  style: TextStyle(fontSize: 14),
-                ),
+                label: const Text("Next", style: TextStyle(fontSize: 14)),
               ),
             ),
           ],
@@ -855,6 +926,11 @@ class PracticeMode {
 class ChatMessage {
   final String text;
   final bool isUser;
+  final List<Map<String, dynamic>>? suggestions;
 
-  ChatMessage({required this.text, required this.isUser});
+  ChatMessage({
+    required this.text,
+    required this.isUser,
+    required this.suggestions,
+  });
 }

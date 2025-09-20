@@ -1,11 +1,16 @@
 import 'dart:convert';
+import 'package:K_Skill/config/api_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 
+/// ---------------------
+/// Data Models
+/// ---------------------
 class Question {
   final int id;
   final String question;
-  final String type;
+  final String type; // mcq | short_answer
   final String answer;
   final List<String>? options;
 
@@ -19,10 +24,10 @@ class Question {
 
   factory Question.fromJson(Map<String, dynamic> json) {
     return Question(
-      id: json['id'],
-      question: json['question'],
-      type: json['type'],
-      answer: json['answer'],
+      id: json['id'] ?? 0,
+      question: json['question'] ?? '',
+      type: json['type'] ?? 'short_answer',
+      answer: json['answer'] ?? '',
       options: json['options'] != null
           ? List<String>.from(json['options'])
           : null,
@@ -45,10 +50,10 @@ class ReadingPassage {
 
   factory ReadingPassage.fromJson(Map<String, dynamic> json) {
     return ReadingPassage(
-      id: json['id'],
-      title: json['title'],
-      passage: json['passage'],
-      questions: (json['questions'] as List)
+      id: json['id'] ?? 0,
+      title: json['title'] ?? '',
+      passage: json['passage'] ?? '',
+      questions: (json['questions'] as List? ?? [])
           .map((q) => Question.fromJson(q))
           .toList(),
     );
@@ -62,13 +67,27 @@ class ReadingComprehensionData {
 
   factory ReadingComprehensionData.fromJson(Map<String, dynamic> json) {
     return ReadingComprehensionData(
-      readingComprehension: (json['reading_comprehension'] as List)
-          .map((passage) => ReadingPassage.fromJson(passage))
+      readingComprehension: (json['reading_comprehension'] as List? ?? [])
+          .map((p) => ReadingPassage.fromJson(p))
           .toList(),
     );
   }
 }
 
+/// Simplified AI Feedback Model - now just contains a single feedback paragraph
+class AIFeedback {
+  final String feedback;
+
+  AIFeedback({required this.feedback});
+
+  factory AIFeedback.fromJson(Map<String, dynamic> json) {
+    return AIFeedback(feedback: json['feedback'] ?? 'No feedback available.');
+  }
+}
+
+/// ---------------------
+/// Data Service
+/// ---------------------
 class DataService {
   static Future<ReadingComprehensionData> loadReadingData() async {
     try {
@@ -76,6 +95,9 @@ class DataService {
         'data/practice/reading_comprehension.json',
       );
       final data = json.decode(response);
+      if (data['reading_comprehension'] == null) {
+        throw Exception('reading_comprehension key not found in JSON');
+      }
       return ReadingComprehensionData.fromJson(data);
     } catch (e) {
       throw Exception('Failed to load reading comprehension data: $e');
@@ -83,6 +105,9 @@ class DataService {
   }
 }
 
+/// ---------------------
+/// Main Screen
+/// ---------------------
 class ReadingComprehension extends StatefulWidget {
   const ReadingComprehension({super.key});
 
@@ -96,9 +121,13 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
   int currentQuestion = 0;
   Map<String, String> userAnswers = {};
   Map<String, bool> showFeedback = {};
+  Map<String, AIFeedback> aiFeedback = {};
   bool showResults = false;
   bool isLoading = true;
+  bool isLoadingFeedback = false;
   String? error;
+
+  String baseUrl = ApiConfig.baseUrl;
 
   @override
   void initState() {
@@ -108,19 +137,63 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
 
   Future<void> loadData() async {
     try {
-      final loadedData = await DataService.loadReadingData();
-
-      loadedData.readingComprehension.shuffle();
-      
       setState(() {
-        data = loadedData;
-        isLoading = false;
+        isLoading = true;
+        error = null;
       });
+
+      final loadedData = await DataService.loadReadingData();
+      if (loadedData.readingComprehension.isNotEmpty) {
+        loadedData.readingComprehension.shuffle();
+        setState(() {
+          data = loadedData;
+          isLoading = false;
+        });
+      } else {
+        throw Exception('No reading comprehension data found');
+      }
     } catch (e) {
       setState(() {
         error = e.toString();
         isLoading = false;
       });
+    }
+  }
+
+  Future<AIFeedback?> fetchAIAnalysis({
+    required String passage,
+    required String question,
+    required String studentAnswer,
+    required String correctAnswer,
+  }) async {
+    try {
+      final url = Uri.parse("$baseUrl/check-comprehension");
+      print("Making API call to: $url"); // Debug log
+
+      final response = await http.post(
+        url,
+        headers: {"Content-Type": "application/json"},
+        body: jsonEncode({
+          "passage": passage,
+          "question": question,
+          "studentAnswer": studentAnswer,
+          "correctAnswer": correctAnswer,
+        }),
+      );
+
+      print("API Response Status: ${response.statusCode}"); // Debug log
+      print("API Response Body: ${response.body}"); // Debug log
+
+      if (response.statusCode == 200) {
+        final jsonResponse = jsonDecode(response.body);
+        return AIFeedback.fromJson(jsonResponse);
+      } else {
+        print("API Error: ${response.statusCode} - ${response.body}");
+        return null;
+      }
+    } catch (e) {
+      print("Network Error: $e");
+      return null;
     }
   }
 
@@ -139,32 +212,91 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
       return userAnswer == question.answer;
     } else {
       if (userAnswer == null || userAnswer.isEmpty) return false;
-      return userAnswer.toLowerCase().contains(
-        question.answer.toLowerCase().split(' ')[0],
-      );
+
+      // For short answers, let's rely on the AI feedback instead of basic string matching
+      // Since AI provides more nuanced analysis, we can use a simpler check here
+      // or rely entirely on AI feedback for accuracy assessment
+
+      // Simple approach: check if user answer contains key terms from correct answer
+      final correctWords = question.answer.toLowerCase().split(' ');
+      final userWords = userAnswer.toLowerCase().split(' ');
+
+      // Check if at least 50% of the key content words match
+      int matchCount = 0;
+      for (String correctWord in correctWords) {
+        if (correctWord.length > 2) {
+          // Skip small words like "a", "the", "is"
+          for (String userWord in userWords) {
+            if (userWord.contains(correctWord) ||
+                correctWord.contains(userWord)) {
+              matchCount++;
+              break;
+            }
+          }
+        }
+      }
+
+      // Return true if significant content overlap exists
+      final significantWords = correctWords.where((w) => w.length > 2).length;
+      return significantWords > 0 && (matchCount / significantWords) >= 0.4;
     }
   }
 
-  void submitAnswer() {
+  void submitAnswer() async {
     final passage = data!.readingComprehension[currentPassage];
     final question = passage.questions[currentQuestion];
+    final studentAnswer = userAnswers['$currentPassage-${question.id}'] ?? "";
+    final questionKey = '$currentPassage-${question.id}';
+
+    if (studentAnswer.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Please provide an answer before submitting.'),
+        ),
+      );
+      return;
+    }
 
     setState(() {
-      showFeedback['$currentPassage-${question.id}'] = true;
+      showFeedback[questionKey] = true;
+      // Only show loading feedback for short answer questions
+      if (question.type == 'short_answer') {
+        isLoadingFeedback = true;
+      }
     });
+
+    // Only fetch AI analysis for short answer questions
+    if (question.type == 'short_answer') {
+      final feedback = await fetchAIAnalysis(
+        passage: passage.passage,
+        question: question.question,
+        studentAnswer: studentAnswer,
+        correctAnswer: question.answer,
+      );
+
+      setState(() {
+        isLoadingFeedback = false;
+        if (feedback != null) {
+          aiFeedback[questionKey] = feedback;
+        }
+      });
+
+      if (feedback == null) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Failed to get AI feedback. Please try again.'),
+          ),
+        );
+      }
+    }
   }
 
   void nextQuestion() {
     final passage = data!.readingComprehension[currentPassage];
-
     if (currentQuestion < passage.questions.length - 1) {
-      setState(() {
-        currentQuestion++;
-      });
+      setState(() => currentQuestion++);
     } else {
-      setState(() {
-        showResults = true;
-      });
+      setState(() => showResults = true);
     }
   }
 
@@ -186,27 +318,22 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
       userAnswers.clear();
       showResults = false;
       showFeedback.clear();
+      aiFeedback.clear();
     });
   }
 
   int getScore() {
     int correct = 0;
     final passage = data!.readingComprehension[currentPassage];
-
     for (var question in passage.questions) {
-      if (checkAnswer(question.id)) {
-        correct++;
-      }
+      if (checkAnswer(question.id)) correct++;
     }
     return correct;
   }
 
   @override
   Widget build(BuildContext context) {
-    if (isLoading) {
-      return const Scaffold(body: LoadingWidget());
-    }
-
+    if (isLoading) return const Scaffold(body: LoadingWidget());
     if (error != null) {
       return Scaffold(
         body: Center(
@@ -215,13 +342,25 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
             children: [
               const Icon(Icons.error, size: 64, color: Colors.red),
               const SizedBox(height: 16),
-              Text('Error: $error'),
+              const Text(
+                'Error loading data',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: Text(error!, textAlign: TextAlign.center),
+              ),
               const SizedBox(height: 16),
               ElevatedButton(onPressed: loadData, child: const Text('Retry')),
             ],
           ),
         ),
       );
+    }
+
+    if (data == null || data!.readingComprehension.isEmpty) {
+      return const Scaffold(body: Center(child: Text("No data available")));
     }
 
     final passage = data!.readingComprehension[currentPassage];
@@ -234,19 +373,13 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
         ),
         backgroundColor: Colors.indigo.shade600,
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
       ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
+            colors: [Color(0xFFEBF8FF), Color(0xFFE0E7FF)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Color(0xFFEBF8FF), Color(0xFFE0E7FF)],
           ),
         ),
         child: SafeArea(
@@ -272,24 +405,30 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
                       const SizedBox(height: 16),
                       QuestionCard(
                         question: passage.questions[currentQuestion],
-                        userAnswer:
+                        currentPassage: currentPassage,
+                        selectedAnswer:
                             userAnswers['$currentPassage-${passage.questions[currentQuestion].id}'] ??
                             '',
-                        showFeedback:
-                            showFeedback['$currentPassage-${passage.questions[currentQuestion].id}'] ??
-                            false,
-                        isCorrect: checkAnswer(
-                          passage.questions[currentQuestion].id,
-                        ),
-                        questionNumber: currentQuestion + 1,
-                        onAnswerChanged: (answer) => handleAnswerChange(
+                        onAnswerSelected: (answer) => handleAnswerChange(
                           passage.questions[currentQuestion].id,
                           answer,
                         ),
                         onSubmit: submitAnswer,
-                        onNext: nextQuestion,
-                        isLastQuestion:
-                            currentQuestion == passage.questions.length - 1,
+                        showFeedback:
+                            showFeedback['$currentPassage-${passage.questions[currentQuestion].id}'] ??
+                            false,
+                        aiFeedback:
+                            aiFeedback['$currentPassage-${passage.questions[currentQuestion].id}'],
+                        isLoadingFeedback: isLoadingFeedback,
+                      ),
+                      const SizedBox(height: 16),
+                      ElevatedButton(
+                        onPressed: nextQuestion,
+                        child: Text(
+                          currentQuestion == passage.questions.length - 1
+                              ? "Finish"
+                              : "Next Question",
+                        ),
                       ),
                     ],
                   ),
@@ -324,18 +463,11 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
             LinearProgressIndicator(
               value: (currentQuestion + 1) / passage.questions.length,
               backgroundColor: Colors.grey.shade300,
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.indigo.shade600),
+              valueColor: AlwaysStoppedAnimation(Colors.indigo.shade600),
             ),
             const SizedBox(height: 8),
-            Row(
-              children: [
-                Icon(Icons.schedule, size: 16, color: Colors.grey.shade600),
-                const SizedBox(width: 4),
-                Text(
-                  'Question ${currentQuestion + 1} of ${passage.questions.length}',
-                  style: TextStyle(fontSize: 14, color: Colors.grey.shade600),
-                ),
-              ],
+            Text(
+              "Question ${currentQuestion + 1} of ${passage.questions.length}",
             ),
           ],
         ),
@@ -344,108 +476,63 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
   }
 }
 
-// ------------------ LOADING ------------------
+/// ---------------------
+/// Loading Widget
+/// ---------------------
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFFEBF8FF), Color(0xFFE0E7FF)],
-        ),
-      ),
-      child: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.indigo),
-            ),
-            SizedBox(height: 16),
-            Text(
-              'Loading reading passages...',
-              style: TextStyle(fontSize: 16, color: Colors.grey),
-            ),
-          ],
-        ),
-      ),
-    );
+    return const Center(child: CircularProgressIndicator());
   }
 }
 
-// ------------------ PASSAGE ------------------
+/// ---------------------
+/// Passage Card
+/// ---------------------
 class PassageCard extends StatelessWidget {
   final ReadingPassage passage;
-
   const PassageCard({super.key, required this.passage});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      elevation: 4,
       child: Padding(
         padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(Icons.menu_book, size: 20, color: Colors.indigo.shade600),
-                const SizedBox(width: 8),
-                const Text(
-                  'Read the passage carefully',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black87,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 16),
-            Text(
-              passage.passage,
-              style: const TextStyle(
-                fontSize: 16,
-                height: 1.6,
-                color: Colors.black87,
-              ),
-            ),
-          ],
+        child: Text(
+          passage.passage,
+          style: const TextStyle(fontSize: 16, height: 1.6),
         ),
       ),
     );
   }
 }
 
-// ------------------ QUESTION ------------------
+/// ---------------------
+/// Question Card - Updated to hide AI feedback for MCQ questions
+/// ---------------------
 class QuestionCard extends StatefulWidget {
   final Question question;
-  final String userAnswer;
-  final bool showFeedback;
-  final bool isCorrect;
-  final int questionNumber;
-  final Function(String) onAnswerChanged;
+  final int currentPassage;
+  final String selectedAnswer;
+  final Function(String) onAnswerSelected;
   final VoidCallback onSubmit;
-  final VoidCallback onNext;
-  final bool isLastQuestion;
+  final bool showFeedback;
+  final AIFeedback? aiFeedback;
+  final bool isLoadingFeedback;
 
   const QuestionCard({
     super.key,
     required this.question,
-    required this.userAnswer,
-    required this.showFeedback,
-    required this.isCorrect,
-    required this.questionNumber,
-    required this.onAnswerChanged,
+    required this.currentPassage,
+    required this.selectedAnswer,
+    required this.onAnswerSelected,
     required this.onSubmit,
-    required this.onNext,
-    required this.isLastQuestion,
+    required this.showFeedback,
+    this.aiFeedback,
+    required this.isLoadingFeedback,
   });
 
   @override
@@ -458,14 +545,15 @@ class _QuestionCardState extends State<QuestionCard> {
   @override
   void initState() {
     super.initState();
-    _controller = TextEditingController(text: widget.userAnswer);
+    _controller = TextEditingController(text: widget.selectedAnswer);
   }
 
   @override
   void didUpdateWidget(covariant QuestionCard oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (oldWidget.userAnswer != widget.userAnswer) {
-      _controller.text = widget.userAnswer;
+    if (oldWidget.selectedAnswer != widget.selectedAnswer &&
+        widget.question.type == "short_answer") {
+      _controller.text = widget.selectedAnswer;
       _controller.selection = TextSelection.fromPosition(
         TextPosition(offset: _controller.text.length),
       );
@@ -481,216 +569,212 @@ class _QuestionCardState extends State<QuestionCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 4,
+      elevation: 3,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Question ${widget.questionNumber}',
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-                color: Colors.black87,
+              widget.question.question,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+
+            // MCQ
+            if (widget.question.type == "mcq" &&
+                widget.question.options != null)
+              ...widget.question.options!.map((option) {
+                return RadioListTile<String>(
+                  title: Text(option),
+                  value: option,
+                  groupValue: widget.selectedAnswer,
+                  onChanged: (value) {
+                    if (value != null) widget.onAnswerSelected(value);
+                  },
+                );
+              }),
+
+            // Short Answer
+            if (widget.question.type == "short_answer")
+              TextField(
+                controller: _controller,
+                onChanged: widget.onAnswerSelected,
+                maxLines: null,
+                decoration: const InputDecoration(
+                  hintText: "Type your answer...",
+                  border: OutlineInputBorder(),
+                ),
+              ),
+
+            const SizedBox(height: 12),
+            Center(
+              child: ElevatedButton(
+                onPressed: widget.isLoadingFeedback ? null : widget.onSubmit,
+                child: widget.isLoadingFeedback
+                    ? const SizedBox(
+                        width: 20,
+                        height: 20,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      )
+                    : const Text("Submit"),
               ),
             ),
-            const SizedBox(height: 8),
-            Text(
-              widget.question.question,
-              style: const TextStyle(fontSize: 16, color: Colors.black87),
-            ),
-            const SizedBox(height: 16),
 
-            if (widget.question.type == 'mcq')
-              _buildMCQOptions()
-            else
-              _buildTextAnswer(),
-
-            if (widget.showFeedback) ...[
-              const SizedBox(height: 16),
-              _buildFeedback(),
-            ],
-
-            const SizedBox(height: 20),
-            _buildActionButton(),
+            if (widget.showFeedback) _buildFeedback(),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildMCQOptions() {
+  Widget _buildFeedback() {
+    // Check if answer is correct for basic feedback
+    final isCorrect = widget.question.type == 'mcq'
+        ? widget.selectedAnswer == widget.question.answer
+        : widget.selectedAnswer.toLowerCase().contains(
+            widget.question.answer.toLowerCase().split(' ')[0],
+          );
+
     return Column(
-      children: widget.question.options!.map((option) {
-        return Container(
-          margin: const EdgeInsets.only(bottom: 8),
-          child: InkWell(
-            onTap: widget.showFeedback
-                ? null
-                : () => widget.onAnswerChanged(option),
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(height: 16),
+
+        // Basic Feedback - Always show this
+        Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: isCorrect ? Colors.green.shade50 : Colors.red.shade50,
             borderRadius: BorderRadius.circular(8),
-            child: Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: widget.userAnswer == option
-                      ? Colors.indigo.shade600
-                      : Colors.grey.shade300,
-                  width: widget.userAnswer == option ? 2 : 1,
-                ),
-                borderRadius: BorderRadius.circular(8),
-                color: widget.userAnswer == option
-                    ? Colors.indigo.shade50
-                    : Colors.transparent,
-              ),
-              child: Row(
+            border: Border.all(
+              color: isCorrect ? Colors.green.shade200 : Colors.red.shade200,
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
                 children: [
-                  Radio<String>(
-                    value: option,
-                    groupValue: widget.userAnswer,
-                    onChanged: widget.showFeedback
-                        ? null
-                        : (value) => widget.onAnswerChanged(value!),
-                    activeColor: Colors.indigo.shade600,
+                  Icon(
+                    isCorrect ? Icons.check_circle : Icons.cancel,
+                    color: isCorrect ? Colors.green : Colors.red,
                   ),
-                  Expanded(
-                    child: Text(
-                      option,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Colors.black87,
-                      ),
+                  const SizedBox(width: 8),
+                  Text(
+                    isCorrect ? "Correct!" : "Not quite right",
+                    style: TextStyle(
+                      color: isCorrect
+                          ? Colors.green.shade700
+                          : Colors.red.shade700,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
-            ),
+              if (!isCorrect) ...[
+                const SizedBox(height: 8),
+                Text(
+                  "Correct answer: ${widget.question.answer}",
+                  style: TextStyle(color: Colors.red.shade600),
+                ),
+              ],
+            ],
           ),
-        );
-      }).toList(),
-    );
-  }
-
-  Widget _buildTextAnswer() {
-    return TextField(
-      controller: _controller,
-      onChanged: widget.showFeedback ? null : widget.onAnswerChanged,
-      enabled: !widget.showFeedback,
-      maxLines: 4,
-      decoration: InputDecoration(
-        hintText: 'Write your answer here...',
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: Colors.indigo.shade600, width: 2),
         ),
-        filled: widget.showFeedback,
-        fillColor: Colors.grey.shade100,
-      ),
+
+        // AI Feedback - Only show for short answer questions
+        if (widget.question.type == "short_answer") ...[
+          if (widget.isLoadingFeedback) ...[
+            const SizedBox(height: 16),
+            const Row(
+              children: [
+                SizedBox(
+                  width: 20,
+                  height: 20,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+                SizedBox(width: 12),
+                Text(
+                  "Getting AI feedback...",
+                  style: TextStyle(fontStyle: FontStyle.italic),
+                ),
+              ],
+            ),
+          ] else if (widget.aiFeedback != null) ...[
+            const SizedBox(height: 16),
+            _buildAIFeedbackCard(widget.aiFeedback!),
+          ] else ...[
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.orange.shade50,
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.orange.shade200),
+              ),
+              child: const Row(
+                children: [
+                  Icon(Icons.warning, color: Colors.orange),
+                  SizedBox(width: 8),
+                  Text("Unable to get detailed AI feedback"),
+                ],
+              ),
+            ),
+          ],
+        ],
+      ],
     );
   }
 
-  Widget _buildFeedback() {
+  Widget _buildAIFeedbackCard(AIFeedback feedback) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: widget.isCorrect ? Colors.green.shade50 : Colors.red.shade50,
-        border: Border.all(
-          color: widget.isCorrect ? Colors.green.shade200 : Colors.red.shade200,
-        ),
-        borderRadius: BorderRadius.circular(8),
+        color: Colors.blue.shade50,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.blue.shade200),
       ),
-      child: Row(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(
-            widget.isCorrect ? Icons.check_circle : Icons.cancel,
-            color: widget.isCorrect
-                ? Colors.green.shade600
-                : Colors.red.shade600,
-            size: 24,
+          // Header
+          Row(
+            children: [
+              Icon(Icons.psychology, color: Colors.blue.shade600, size: 24),
+              const SizedBox(width: 8),
+              const Text(
+                "AI Analysis",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+            ],
           ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  widget.isCorrect ? 'Correct!' : 'Not quite right',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: widget.isCorrect
-                        ? Colors.green.shade800
-                        : Colors.red.shade800,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                RichText(
-                  text: TextSpan(
-                    style: const TextStyle(fontSize: 14, color: Colors.black87),
-                    children: [
-                      const TextSpan(
-                        text: 'Correct answer: ',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      TextSpan(text: widget.question.answer),
-                    ],
-                  ),
-                ),
-              ],
+
+          const SizedBox(height: 12),
+
+          // Single feedback paragraph
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: Colors.blue.shade100),
+            ),
+            child: Text(
+              feedback.feedback,
+              style: const TextStyle(fontSize: 14, height: 1.5),
             ),
           ),
         ],
       ),
     );
   }
-
-  Widget _buildActionButton() {
-    if (!widget.showFeedback) {
-      return SizedBox(
-        width: double.infinity,
-        child: ElevatedButton(
-          onPressed: widget.userAnswer.isNotEmpty ? widget.onSubmit : null,
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.indigo.shade600,
-            foregroundColor: Colors.white,
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-          ),
-          child: const Text(
-            'Submit Answer',
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-          ),
-        ),
-      );
-    } else {
-      return SizedBox(
-        width: double.infinity,
-        child: ElevatedButton(
-          onPressed: widget.onNext,
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.green.shade600,
-            foregroundColor: Colors.white,
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-          ),
-          child: Text(
-            widget.isLastQuestion ? 'View Results' : 'Next Question',
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-          ),
-        ),
-      );
-    }
-  }
 }
 
+/// ---------------------
+/// Results Card
+/// ---------------------
 class ResultsCard extends StatelessWidget {
   final ReadingPassage passage;
   final Map<String, String> userAnswers;
@@ -718,147 +802,59 @@ class ResultsCard extends StatelessWidget {
     final score = getScore();
     final percentage = ((score / passage.questions.length) * 100).round();
 
-    return Padding(
+    return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Card(
-        elevation: 4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        elevation: 4,
         child: Padding(
           padding: const EdgeInsets.all(24),
           child: Column(
             children: [
               Icon(Icons.emoji_events, size: 64, color: Colors.amber.shade600),
+              Text("Great Job!", style: Theme.of(context).textTheme.titleLarge),
+              Text(
+                "$percentage%",
+                style: TextStyle(fontSize: 36, color: Colors.indigo.shade600),
+              ),
+              Text("You scored $score out of ${passage.questions.length}"),
+
+              const SizedBox(height: 24),
+              ...passage.questions.map((q) {
+                final qKey = "$currentPassage-${q.id}";
+                final userAns = userAnswers[qKey] ?? "Not answered";
+                final correct = checkAnswer(q.id);
+                return ListTile(
+                  leading: Icon(
+                    correct ? Icons.check_circle : Icons.cancel,
+                    color: correct ? Colors.green : Colors.red,
+                  ),
+                  title: Text(q.question),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Your answer: $userAns"),
+                      Text("Correct: ${q.answer}"),
+                    ],
+                  ),
+                );
+              }),
+
               const SizedBox(height: 16),
-              const Text(
-                'Great Job!',
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black87,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                '$percentage%',
-                style: TextStyle(
-                  fontSize: 48,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.indigo.shade600,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'You scored $score out of ${passage.questions.length}',
-                style: const TextStyle(fontSize: 16, color: Colors.grey),
-              ),
-              const SizedBox(height: 24),
-
-              Expanded(
-                child: ListView.builder(
-                  itemCount: passage.questions.length,
-                  itemBuilder: (context, index) {
-                    final question = passage.questions[index];
-                    final questionKey = '$currentPassage-${question.id}';
-                    final userAns = userAnswers[questionKey] ?? 'Not answered';
-                    final correct = checkAnswer(question.id);
-
-                    return Container(
-                      margin: const EdgeInsets.only(bottom: 12),
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: Colors.grey.shade50,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(
-                            correct ? Icons.check_circle : Icons.cancel,
-                            color: correct
-                                ? Colors.green.shade500
-                                : Colors.red.shade500,
-                            size: 20,
-                          ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Q${index + 1}: ${question.question}',
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.black87,
-                                  ),
-                                ),
-                                const SizedBox(height: 4),
-                                Text(
-                                  'Your answer: $userAns',
-                                  style: const TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                                Text(
-                                  'Correct answer: ${question.answer}',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.green.shade600,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ),
-
-              const SizedBox(height: 24),
               Row(
                 children: [
                   if (hasMorePassages)
                     Expanded(
                       child: ElevatedButton(
                         onPressed: onNextPassage,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.indigo.shade600,
-                          foregroundColor: Colors.white,
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                        ),
-                        child: const Text(
-                          'Next Story',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
+                        child: const Text("Next Story"),
                       ),
                     ),
-                  if (hasMorePassages) const SizedBox(width: 12),
+                  if (hasMorePassages) const SizedBox(width: 8),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: onResetQuiz,
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.grey.shade600,
-                        foregroundColor: Colors.white,
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      child: const Text(
-                        'Start Over',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
+                      child: const Text("Start Over"),
                     ),
                   ),
                 ],

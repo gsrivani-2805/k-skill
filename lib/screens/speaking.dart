@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:K_Skill/config/api_config.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
@@ -49,11 +51,26 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
     );
   }
 
+  Future<void> setTtsSettings() async {
+    if (Platform.isAndroid) {
+      await _flutterTts.setSpeechRate(0.5); // Android is faster, so lower value
+    } else if (Platform.isIOS) {
+      await _flutterTts.setSpeechRate(0.4); // Tune as needed
+    } else {
+      await _flutterTts.setSpeechRate(0.8); // Web works fine
+    }
+
+    await _flutterTts.setPitch(1.0);
+    await _flutterTts.setVolume(1.0);
+  }
+
   void _initializeTts() async {
     await _flutterTts.setLanguage("en-US");
-    await _flutterTts.setPitch(1.0);
-    await _flutterTts.setSpeechRate(0.8);
-    await _flutterTts.setVolume(1.0);
+    // await _flutterTts.setPitch(1.0);
+    // await _flutterTts.setSpeechRate(0.8);
+    // await _flutterTts.setVolume(1.0);
+
+    setTtsSettings();
 
     // Set completion handler to know when TTS is done
     _flutterTts.setCompletionHandler(() {
@@ -111,7 +128,6 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
         );
       },
       onStatus: (status) {
-        print("Speech recognition status: $status");
         if (status == 'notListening' && _isListening) {
           setState(() {
             _isListening = false;
@@ -237,13 +253,11 @@ Format your response as:
         throw Exception('No response generated from Gemini API');
       }
     } else {
-      print('Gemini API Error: ${response.statusCode} - ${response.body}');
       throw Exception(
         'Failed to get response from Gemini API: ${response.statusCode}',
       );
     }
   } catch (e) {
-    print('Error generating LLM response: $e');
     return 'Sorry, I encountered an error. Could you please repeat that?';
   }
 }
@@ -270,7 +284,6 @@ Format your response as:
       // Speak the LLM response
       await _speakText(llmResponse);
     } catch (e) {
-      print('Error processing user input: $e');
       setState(() {
         _currentResponse = 'Sorry, something went wrong. Please try again.';
         _isProcessing = false;

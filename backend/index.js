@@ -27,13 +27,14 @@ app.use("/", discourseRouter);
 const chatbotRouter = require("./routes/chat.route");
 app.use("/", chatbotRouter);
 
-// Example Route
-app.get("/", (req, res) => {
+const readingComprehension = require("./routes/reading_comprehension.route");
+app.use("/", readingComprehension);
+
+app.get("/", (_req, res) => {
   res.send("API is working");
 });
 
-// Start Server
-console.log("MongoDB URI:", process.env.MONGO_URI); // Fixed variable name
+console.log("MongoDB URI:", process.env.MONGO_URI); 
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {

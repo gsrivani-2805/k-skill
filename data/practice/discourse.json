@@ -44,7 +44,7 @@
           "template": "Your Address\nCity, State ZIP Code\nDate\n\nThe Manager\nBookstore Name\nAddress\n\nDear Sir/Madam,\n\nI am writing to apply for...\n\nYours faithfully,\n[Your name]"
         },
         {
-          "id": "letter_2", 
+          "id": "letter_2",
           "title": "Complaint Letter to School",
           "difficulty": "Intermediate",
           "estimatedTime": "25 mins",
@@ -125,7 +125,7 @@
         {
           "id": "email_2",
           "title": "Email Inquiry to Company",
-          "difficulty": "Intermediate", 
+          "difficulty": "Intermediate",
           "estimatedTime": "20 mins",
           "isCompleted": false,
           "type": "professional",
@@ -166,6 +166,7 @@
         "Reflect on experiences and lessons learned",
         "Maintain privacy and personal voice"
       ],
+
       "practiceItems": [
         {
           "id": "diary_1",
@@ -188,7 +189,7 @@
           "id": "diary_2",
           "title": "Achievement and Success",
           "difficulty": "Intermediate",
-          "estimatedTime": "20 mins", 
+          "estimatedTime": "20 mins",
           "isCompleted": false,
           "type": "reflective",
           "prompt": "Write about a recent achievement or success you experienced, reflecting on the journey and what you learned.",
@@ -217,12 +218,539 @@
             "Reflect on the values that guided your choice"
           ],
           "template": "Dear Diary,\n\nDate: [Today's date]\n\nI've been wrestling with a decision...\n\nAfter much thought...\n\nHoping for the best,\n[Your name]"
+        },
+        {
+          "id": "diary_4",
+          "title": "The Happiest Day in Your Life",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about the happiest day of your life, describing why it was so special and how you felt.",
+          "guidelines": [
+            "Describe the event that made you happy",
+            "Include details about people, place, and activities",
+            "Express your emotions clearly",
+            "Reflect on why it was meaningful",
+            "End with how you remember it today"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I remembered the happiest day of my life...\n\nIt was special because...\n\nForever cherished,\n[Your name]"
+        },
+        {
+          "id": "diary_5",
+          "title": "How You Felt on Your Birthday",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Describe your feelings and experiences on your birthday.",
+          "guidelines": [
+            "Describe how you started the day",
+            "Mention gifts, surprises, or celebrations",
+            "Include details about family and friends",
+            "Explain your emotions throughout the day",
+            "Reflect on what made it memorable"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday was my birthday, and...\n\nI felt so...\n\nGratefully yours,\n[Your name]"
+        },
+        {
+          "id": "diary_6",
+          "title": "A Day When You Helped Someone in Need",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about a day when you helped someone in need and how it made you feel.",
+          "guidelines": [
+            "Describe the situation and who needed help",
+            "Explain what you did to help",
+            "Share your emotions before and after",
+            "Reflect on the impact of your actions",
+            "Mention what you learned from the experience"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I had the chance to help...\n\nIt made me feel...\n\nWith kindness,\n[Your name]"
+        },
+        {
+          "id": "diary_7",
+          "title": "The Day You Overcame a Big Fear",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Describe a day when you overcame a big fear and how it changed you.",
+          "guidelines": [
+            "Explain what the fear was",
+            "Describe the situation when you faced it",
+            "Share your thoughts and emotions",
+            "Explain how you managed to overcome it",
+            "Reflect on what you learned about yourself"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I faced one of my biggest fears...\n\nAnd I finally...\n\nProudly,\n[Your name]"
+        },
+        {
+          "id": "diary_8",
+          "title": "How You Felt When You Lost Something Important",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a time when you lost something important to you, and how you felt.",
+          "guidelines": [
+            "Describe what you lost",
+            "Explain how it happened",
+            "Share your immediate emotions",
+            "Reflect on how you coped with the loss",
+            "Mention any lessons you learned"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I lost something important...\n\nIt made me feel...\n\nSincerely,\n[Your name]"
+        },
+        {
+          "id": "diary_9",
+          "title": "A Lesson You Learned from a Mistake",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about a mistake you made and the lesson you learned from it.",
+          "guidelines": [
+            "Describe the mistake in detail",
+            "Explain how it happened",
+            "Share your emotions during the experience",
+            "Reflect on what you learned",
+            "Explain how it changed your behavior"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nI made a mistake today...\n\nBut I learned that...\n\nWiser now,\n[Your name]"
+        },
+        {
+          "id": "diary_10",
+          "title": "A Day When You Felt Very Lonely",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Describe a day when you felt very lonely, and how you handled it.",
+          "guidelines": [
+            "Describe the situation and place",
+            "Explain why you felt lonely",
+            "Express your emotions clearly",
+            "Mention if you found comfort or support",
+            "Reflect on how you dealt with the loneliness"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I felt very lonely because...\n\nBut I realized...\n\nYours truly,\n[Your name]"
+        },
+        {
+          "id": "diary_11",
+          "title": "Trying Cooking Something New",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience of trying to cook something new.",
+          "guidelines": [
+            "Mention the dish you tried",
+            "Describe the process of cooking it",
+            "Include any difficulties you faced",
+            "Share the final outcome and taste",
+            "Reflect on how you felt about the attempt"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I tried cooking...\n\nThe process was...\n\nDeliciously yours,\n[Your name]"
+        },
+        {
+          "id": "diary_12",
+          "title": "An Embarrassing but Funny Incident in School",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about an embarrassing but funny incident that happened to you in school.",
+          "guidelines": [
+            "Describe what happened in detail",
+            "Explain your emotions during the incident",
+            "Share how your classmates or teachers reacted",
+            "Reflect on why it was both embarrassing and funny",
+            "Mention how you feel about it now"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nSomething funny and embarrassing happened today at school...\n\nAt first, I felt...\n\nNow when I think back...\n\nLaughing at myself,\n[Your name]"
+        },
+        {
+          "id": "diary_13",
+          "title": "A Day When You Got Praised by Your Teacher",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a day when your teacher praised you and how it made you feel.",
+          "guidelines": [
+            "Describe the situation in class",
+            "Mention what you did to deserve praise",
+            "Share the teacher’s exact words if possible",
+            "Explain how your classmates reacted",
+            "Reflect on how this encouraged you"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday my teacher praised me for...\n\nIt made me feel...\n\nEncouraged,\n[Your name]"
+        },
+        {
+          "id": "diary_14",
+          "title": "Your Thoughts on Preparing for Exams",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write a diary entry about your thoughts and feelings while preparing for exams.",
+          "guidelines": [
+            "Describe your daily routine during exam time",
+            "Share the subjects you focus on most",
+            "Explain your worries or challenges",
+            "Include strategies that help you",
+            "Reflect on your hopes for the results"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nExam season is here...\n\nI feel...\n\nWith determination,\n[Your name]"
+        },
+        {
+          "id": "diary_15",
+          "title": "A Day When Your Best Friend Was Absent",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a day in school when your best friend was absent.",
+          "guidelines": [
+            "Describe how you felt without them",
+            "Mention activities or classes you missed doing together",
+            "Share how the day was different",
+            "Explain how you stayed occupied",
+            "Reflect on the importance of friendship"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday school felt different because my best friend was absent...\n\nI realized...\n\nMissing them,\n[Your name]"
+        },
+        {
+          "id": "diary_16",
+          "title": "Your First Stage Performance",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your first experience performing on stage.",
+          "guidelines": [
+            "Describe the event and setting",
+            "Mention your preparation before the performance",
+            "Explain your emotions before, during, and after",
+            "Include audience and teacher reactions",
+            "Reflect on what you learned from it"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I had my first stage performance...\n\nI felt...\n\nBravely yours,\n[Your name]"
+        },
+        {
+          "id": "diary_17",
+          "title": "A Sports Day Experience",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience of a school sports day.",
+          "guidelines": [
+            "Describe the atmosphere of the sports day",
+            "Mention the games you participated in",
+            "Share your emotions and experiences",
+            "Include moments of winning or losing",
+            "Reflect on what you enjoyed most"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday was our school sports day...\n\nIt was exciting because...\n\nEnergetically,\n[Your name]"
+        },
+        {
+          "id": "diary_18",
+          "title": "Your Experience of Participating in a Competition",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience of participating in a competition.",
+          "guidelines": [
+            "Describe the competition and your role",
+            "Explain your preparation",
+            "Share your emotions before and during",
+            "Mention the outcome",
+            "Reflect on the lessons learned"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I participated in...\n\nThe experience taught me...\n\nGratefully,\n[Your name]"
+        },
+        {
+          "id": "diary_19",
+          "title": "A Family Trip You Will Never Forget",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a memorable family trip you had and why it was unforgettable.",
+          "guidelines": [
+            "Describe the destination",
+            "Mention who was with you",
+            "Explain what activities you did",
+            "Share your emotions and fun moments",
+            "Reflect on why it is unforgettable"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nI will never forget our trip to...\n\nIt was memorable because...\n\nLovingly,\n[Your name]"
+        },
+        {
+          "id": "diary_20",
+          "title": "A Picnic or Excursion with Classmates",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a picnic or excursion you enjoyed with your classmates.",
+          "guidelines": [
+            "Describe the place you visited",
+            "Explain what activities you did with classmates",
+            "Mention fun and laughter moments",
+            "Include teachers’ involvement if any",
+            "Reflect on what you enjoyed most"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nWe went on a picnic/excursion to...\n\nThe best part was...\n\nHappily,\n[Your name]"
+        },
+        {
+          "id": "diary_21",
+          "title": "A Memorable Festival Celebration",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a memorable festival celebration with your family.",
+          "guidelines": [
+            "Mention the festival you celebrated",
+            "Describe the preparations",
+            "Explain family traditions and rituals",
+            "Share your emotions on the day",
+            "Reflect on why it was memorable"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nWe celebrated...\n\nIt was special because...\n\nFestively yours,\n[Your name]"
+        },
+        {
+          "id": "diary_22",
+          "title": "An Unexpected Guest at Your Home",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about the experience of having an unexpected guest at your home.",
+          "guidelines": [
+            "Describe who the guest was",
+            "Explain how you and your family reacted",
+            "Mention what happened during the visit",
+            "Share your feelings",
+            "Reflect on the surprise"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday we had an unexpected guest...\n\nThe visit was...\n\nSurprised,\n[Your name]"
+        },
+        {
+          "id": "diary_23",
+          "title": "How You Spent Your Summer Vacation",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about how you spent your summer vacation.",
+          "guidelines": [
+            "Mention where you went or stayed",
+            "Describe activities and hobbies you enjoyed",
+            "Include family or friends you spent time with",
+            "Share your happiest moment",
+            "Reflect on how the vacation helped you"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nThis summer vacation, I...\n\nThe most memorable part was...\n\nRelaxed,\n[Your name]"
+        },
+        {
+          "id": "diary_24",
+          "title": "When Electricity Went Off at Night",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience when the electricity went off at night.",
+          "guidelines": [
+            "Describe what you were doing when it happened",
+            "Explain your emotions in the darkness",
+            "Mention how your family reacted",
+            "Share if you did anything fun like storytelling or games",
+            "Reflect on how it felt overall"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nThe power went off tonight...\n\nIt felt...\n\nIn the dark,\n[Your name]"
+        },
+        {
+          "id": "diary_25",
+          "title": "An Interesting Story Told by Your Grandparents",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about an interesting story your grandparents told you.",
+          "guidelines": [
+            "Mention which grandparent told the story",
+            "Describe the main theme or lesson",
+            "Share what made it interesting",
+            "Explain how you felt listening to it",
+            "Reflect on why you still remember it"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday my grandparent shared a story about...\n\nIt taught me...\n\nThoughtfully,\n[Your name]"
+        },
+        {
+          "id": "diary_26",
+          "title": "Your Feelings about Shifting to a New House",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your feelings when you shifted to a new house.",
+          "guidelines": [
+            "Describe the old house and memories",
+            "Explain the new house and surroundings",
+            "Share your emotions about the change",
+            "Mention any challenges adjusting",
+            "Reflect on your hopes in the new place"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nWe shifted to a new house today...\n\nI feel...\n\nHopefully,\n[Your name]"
+        },
+        {
+          "id": "diary_27",
+          "title": "A Rainy Day Experience",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience of a rainy day.",
+          "guidelines": [
+            "Describe the weather and surroundings",
+            "Mention what you did during the rain",
+            "Share your emotions and observations",
+            "Include activities like playing, reading, or watching rain",
+            "Reflect on what you enjoyed most"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nIt rained heavily today...\n\nI enjoyed...\n\nRainy thoughts,\n[Your name]"
+        },
+        {
+          "id": "diary_28",
+          "title": "When You Stood Up for What Was Right",
+          "difficulty": "Advanced",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about a situation when you stood up for what was right.",
+          "guidelines": [
+            "Describe the situation and issue",
+            "Explain what actions you took",
+            "Share your emotions while standing up",
+            "Mention reactions of others",
+            "Reflect on what you learned from it"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I stood up for...\n\nIt felt...\n\nWith courage,\n[Your name]"
+        },
+        {
+          "id": "diary_29",
+          "title": "An Accident or Incident You Witnessed",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about an accident or incident you witnessed and how it affected you.",
+          "guidelines": [
+            "Describe what happened",
+            "Mention the people involved",
+            "Share your immediate reactions",
+            "Explain how it made you feel",
+            "Reflect on what you learned from witnessing it"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I witnessed...\n\nIt made me realize...\n\nSincerely,\n[Your name]"
+        },
+        {
+          "id": "diary_30",
+          "title": "A Surprise You Received",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a surprise you received from a friend or relative.",
+          "guidelines": [
+            "Describe the surprise in detail",
+            "Explain who gave it to you",
+            "Share your emotions when you received it",
+            "Mention how others reacted",
+            "Reflect on why it was meaningful"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I received a big surprise...\n\nI felt...\n\nExcitedly,\n[Your name]"
+        },
+        {
+          "id": "diary_31",
+          "title": "A Visit to a Village, Farm, or Temple",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience of visiting a village, farm, or temple.",
+          "guidelines": [
+            "Describe the place you visited",
+            "Mention what you saw and did",
+            "Share your emotions and thoughts",
+            "Include sensory details of the surroundings",
+            "Reflect on why the visit was memorable"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nI visited...\n\nIt was memorable because...\n\nWarmly,\n[Your name]"
+        },
+        {
+          "id": "diary_32",
+          "title": "A Day without Using Mobile or TV",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about a day you spent without using a mobile or TV.",
+          "guidelines": [
+            "Explain why you avoided devices",
+            "Describe how the day started",
+            "Mention activities you did instead",
+            "Share your feelings during the day",
+            "Reflect on what you learned"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I spent a day without mobile or TV...\n\nIt made me feel...\n\nPeacefully,\n[Your name]"
+        },
+        {
+          "id": "diary_33",
+          "title": "A Dream that Felt Very Real",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a dream that felt very real to you.",
+          "guidelines": [
+            "Describe the dream in detail",
+            "Share the emotions you felt",
+            "Mention if it was pleasant or scary",
+            "Explain how you felt when you woke up",
+            "Reflect on what the dream meant to you"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nLast night I had a dream that felt so real...\n\nWhen I woke up...\n\nDreamily,\n[Your name]"
+        },
+        {
+          "id": "diary_34",
+          "title": "If You Could Travel Anywhere in the World",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "imaginative",
+          "prompt": "Write about where you would go if you could travel anywhere in the world and why.",
+          "guidelines": [
+            "Choose a dream destination",
+            "Describe the place vividly",
+            "Explain why you want to go there",
+            "Share what activities you would do",
+            "Reflect on how it would make you feel"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nIf I could travel anywhere, I would go to...\n\nBecause...\n\nAdventurously,\n[Your name]"
         }
       ]
     },
     {
       "id": "essay",
-      "title": "Essay Writing", 
+      "title": "Essay Writing",
       "subtitle": "Academic & Opinion Essays",
       "icon": "article",
       "color": "0xFF9C27B0",
@@ -268,7 +796,7 @@
     {
       "id": "speech",
       "title": "Speech Writing",
-      "subtitle": "Public Speaking & Presentations", 
+      "subtitle": "Public Speaking & Presentations",
       "icon": "mic",
       "color": "0xFF3F51B5",
       "completedCount": 1,
@@ -279,7 +807,7 @@
         "Clear main message or theme",
         "Logical organization of points",
         "Rhetorical devices and techniques",
-        "Audience engagement strategies", 
+        "Audience engagement strategies",
         "Memorable conclusion with call to action"
       ],
       "rules": [
@@ -314,7 +842,7 @@
       "id": "cv",
       "title": "CV/Resume",
       "subtitle": "Professional Documents",
-      "icon": "person", 
+      "icon": "person",
       "color": "0xFFFF9800",
       "completedCount": 1,
       "totalCount": 6,
@@ -323,7 +851,7 @@
         "Contact information header",
         "Professional summary/objective",
         "Education section with achievements",
-        "Skills and competencies", 
+        "Skills and competencies",
         "Experience and projects",
         "Additional sections (languages, hobbies)"
       ],
@@ -366,7 +894,7 @@
     ],
     "formal": [
       "Use professional tone throughout",
-      "Avoid contractions and slang", 
+      "Avoid contractions and slang",
       "Structure paragraphs logically",
       "Use appropriate salutations and closings",
       "Maintain consistent formatting"
@@ -374,7 +902,7 @@
     "creative": [
       "Show, don't just tell",
       "Use vivid, descriptive language",
-      "Vary your sentence beginnings", 
+      "Vary your sentence beginnings",
       "Include dialogue when appropriate",
       "Create emotional connections"
     ]
@@ -389,13 +917,13 @@
     "capitalization": [
       "Capitalize the first word of sentences",
       "Capitalize proper nouns and names",
-      "Capitalize the first word after a colon in formal writing", 
+      "Capitalize the first word after a colon in formal writing",
       "Capitalize titles when they precede names"
     ],
     "common_mistakes": [
       "Its vs. It's - possession vs. contraction",
       "Their, There, They're - possession, location, contraction",
-      "Your vs. You're - possession vs. contraction", 
+      "Your vs. You're - possession vs. contraction",
       "Affect vs. Effect - verb vs. noun"
     ]
   }

@@ -144,10 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
       height: MediaQuery.of(context).size.height * 0.25,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        image: const DecorationImage(
-          image: AssetImage('images/board.png'),
-          fit: BoxFit.cover,
-        ),
+        image: const DecorationImage(image: AssetImage('images/board.png')),
       ),
     );
   }

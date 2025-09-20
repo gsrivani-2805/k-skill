@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -62,44 +63,29 @@ class _ListeningScreenState extends State<ListeningScreen> {
     }
   }
 
-  Future<void> _speakText(String text) async {
-    await _flutterTts.setLanguage("en-US");
+  Future<void> setTtsSettings() async {
+    if (Platform.isAndroid) {
+      await _flutterTts.setSpeechRate(0.5); // Android is faster, so lower value
+    } else if (Platform.isIOS) {
+      await _flutterTts.setSpeechRate(0.4); // Tune as needed
+    } else {
+      await _flutterTts.setSpeechRate(0.8); // Web works fine
+    }
+
     await _flutterTts.setPitch(1.0);
-    await _flutterTts.setSpeechRate(0.5);
-    await _flutterTts.speak(text);
+    await _flutterTts.setVolume(1.0);
   }
 
-  // void _submitText() {
-  //   final typed = _controller.text.trim().toLowerCase();
-  //   final original = _selectedSentences[_currentIndex]['text']!
-  //       .trim()
-  //       .toLowerCase();
+  Future<void> _speakText(String text) async {
+    await _flutterTts.setLanguage("en-US");
 
-  //   // You can replace this logic with a better similarity function later
-  //   final typedWords = typed.split(RegExp(r'\s+'));
-  //   final originalWords = original.split(RegExp(r'\s+'));
+    // await _flutterTts.setPitch(1.0);
+    // await _flutterTts.setSpeechRate(0.5);
 
-  //   int matched = 0;
-  //   for (int i = 0; i < originalWords.length && i < typedWords.length; i++) {
-  //     if (originalWords[i] == typedWords[i]) matched++;
-  //   }
+    setTtsSettings();
 
-  //   double score = (matched / originalWords.length) * 100;
-  //   _scores.add(score);
-
-  //   if (_currentIndex < _selectedSentences.length - 1) {
-  //     setState(() {
-  //       _currentIndex++;
-  //       _controller.clear();
-  //       _submitted = false;
-  //     });
-  //   } else {
-  //     setState(() {
-  //       _submitted = true;
-  //       _finalScore = _scores.reduce((a, b) => a + b) / _scores.length;
-  //     });
-  //   }
-  // }
+    await _flutterTts.speak(text);
+  }
 
   void _submitText() {
     final typed = _controller.text.trim().toLowerCase();

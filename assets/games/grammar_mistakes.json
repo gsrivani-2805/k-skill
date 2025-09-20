@@ -1773,7 +1773,7 @@
     {
       "id": 107,
       "paragraph": "The book, ____ by a renowned author, ____ published last month. It ____ widely praised for its intricate plot and well-developed characters. Many readers ____ forward to the sequel.",
-      "blanks": 5,
+      "blanks": 4,
       "correctAnswers": ["written", "was", "was", "are looking"],
       "availableWords": [
         "written",
@@ -1866,7 +1866,7 @@
     {
       "id": 112,
       "paragraph": "She ____ to contact me several times, but I ____ away. I wish I ____ her calls.",
-      "blanks": 4,
+      "blanks": 3,
       "correctAnswers": ["tried", "was", "had answered"],
       "availableWords": [
         "tried",
@@ -1935,7 +1935,7 @@
     {
       "id": 116,
       "paragraph": "The company ____ significant growth in the last quarter. This ____ largely due to a new marketing strategy ____ was implemented.",
-      "blanks": 4,
+      "blanks": 3,
       "correctAnswers": ["has seen", "is", "which"],
       "availableWords": [
         "has seen",
@@ -1967,7 +1967,7 @@
     {
       "id": 118,
       "paragraph": "She ____ that she ____ never ____ such a beautiful sunset before. It was truly breathtaking.",
-      "blanks": 4,
+      "blanks": 3,
       "correctAnswers": ["said", "had", "seen"],
       "availableWords": [
         "said",
@@ -1983,7 +1983,7 @@
     {
       "id": 119,
       "paragraph": "The new manager ____ quickly to the team's dynamics. She ____ to be a great asset. Everyone ____ her contributions.",
-      "blanks": 4,
+      "blanks": 3,
       "correctAnswers": ["adapted", "has proven", "appreciates"],
       "availableWords": [
         "adapted",
@@ -2132,7 +2132,7 @@
     {
       "id": 127,
       "paragraph": "The decision, ____ was highly controversial, ____ met with strong opposition. However, the council ____ to move forward with it.",
-      "blanks": 4,
+      "blanks": 3,
       "correctAnswers": ["which", "was", "decided"],
       "availableWords": [
         "which",
@@ -3351,7 +3351,7 @@
     {
       "id": 193,
       "paragraph": "Had they ____ the warnings seriously, the accident ____ avoided. It was a tragic oversight.",
-      "blanks": 3,
+      "blanks": 2,
       "correctAnswers": ["taken", "could have been", "was"],
       "availableWords": [
         "taken",
@@ -3514,7 +3514,7 @@
     {
       "id": 201,
       "paragraph": "____ it not been for the anonymous tip, the scandal ____ never have come to light. The journalist, ____ exposé won a prestigious award, had been investigating the company for months. It is imperative that such wrongdoings ____ exposed, and that those responsible ____ held accountable. Rarely ____ we see such a clear-cut case of corporate malfeasance. Had the CEO acted responsibly, the crisis ____ have been averted. He now wishes he ____ listened to the warnings. The board has insisted that he ____ immediately, a decision ____ to restore public confidence.",
-      "blanks": 9,
+      "blanks": 10,
       "correctAnswers": [
         "Had",
         "would",
@@ -3567,7 +3567,7 @@
     {
       "id": 202,
       "paragraph": "The committee's recommendation is that the current policy ____ abolished. They argue that not only ____ it ineffective, but it also creates unintended negative consequences. It is essential that any new policy ____ based on thorough research. ____ the government to ignore this advice, it ____ risk losing public trust. The report, ____ a year to compile, was based on extensive data analysis. The chairman stated that never before ____ he seen such a compelling case for reform. It is high time that action ____ taken. He urged that all members ____ the report carefully.",
-      "blanks": 10,
+      "blanks": 9,
       "correctAnswers": [
         "be",
         "is",
@@ -3655,7 +3655,7 @@
     {
       "id": 204,
       "paragraph": "Had the ancient civilizations ____ the advanced technology we ____ today, their architectural marvels ____ undoubtedly have been even more grand. It is a testament to their ingenuity that they ____ so much ____ the tools they possessed.",
-      "blanks": 6,
+      "blanks": 5,
       "correctAnswers": [
         "possessed",
         "have",
@@ -3688,7 +3688,7 @@
     {
       "id": 205,
       "paragraph": "It is proposed that the new regulations ____ immediately. Critics argue that ____ the changes to be implemented so hastily, businesses ____ insufficient time to adapt. Nevertheless, the council has declared its intention that the reforms ____ through.",
-      "blanks": 5,
+      "blanks": 4,
       "correctAnswers": ["be enacted", "were", "would have", "go"],
       "availableWords": [
         "be enacted",
@@ -3756,7 +3756,7 @@
     {
       "id": 208,
       "paragraph": "The discovery of the new planet, ____ orbit lies far beyond Neptune, ____ hailed as a monumental achievement. Astronomers ____ for years for such a celestial body. Its implications for understanding the solar system ____ profound.",
-      "blanks": 5,
+      "blanks": 4,
       "correctAnswers": ["whose", "was", "had been searching", "are"],
       "availableWords": [
         "whose",
@@ -3780,7 +3780,7 @@
     {
       "id": 209,
       "paragraph": "It is advisable that all employees ____ aware of the updated security protocols. ____ any unauthorized access to sensitive data, it is crucial that the incident ____ reported immediately. Management insists that compliance ____ mandatory for everyone.",
-      "blanks": 5,
+      "blanks": 4,
       "correctAnswers": ["be", "Should", "be", "be"],
       "availableWords": [
         "be",
@@ -3804,7 +3804,7 @@
     {
       "id": 210,
       "paragraph": "Never before ____ humanity faced such a complex array of global challenges. It is imperative that international cooperation ____ strengthened, and that collective action ____ taken. Only then ____ we hope to surmount these obstacles.",
-      "blanks": 5,
+      "blanks": 4,
       "correctAnswers": ["has", "be", "be", "can"],
       "availableWords": [
         "has",
@@ -3883,7 +3883,7 @@
     {
       "id": 214,
       "paragraph": "It is proposed that an independent body ____ established to oversee the reforms. They argue that ____ such a body to be absent, public trust ____ eroded.",
-      "blanks": 4,
+      "blanks": 3,
       "correctAnswers": ["be", "were", "would be"],
       "availableWords": [
         "be",
@@ -4226,7 +4226,7 @@
     {
       "id": 234,
       "paragraph": "It is proposed that an independent audit ____ conducted. The board has insisted that transparency ____ maintained ____ all costs.",
-      "blanks": 4,
+      "blanks": 3,
       "correctAnswers": ["be", "be", "at"],
       "availableWords": [
         "be",
@@ -4338,7 +4338,7 @@
     {
       "id": 241,
       "paragraph": "Such ____ the fervor of the crowd ____ the speaker could barely be heard. The message, ____ powerful, was nearly lost.",
-      "blanks": 4,
+      "blanks": 3,
       "correctAnswers": ["was", "that", "though"],
       "availableWords": [
         "was",
@@ -4505,7 +4505,7 @@
     {
       "id": 251,
       "paragraph": "____ it not been for the anonymous tip, the scandal ____ never have come to light. The journalist, ____ exposé won a prestigious award, had been investigating the company for months. It is imperative that such wrongdoings ____ exposed, and that those responsible ____ held accountable. Rarely ____ we see such a clear-cut case of corporate malfeasance. Had the CEO acted responsibly, the crisis ____ have been averted. He now wishes he ____ listened to the warnings. The board has insisted that he ____ immediately, a decision ____ to restore public confidence.",
-      "blanks": 9,
+      "blanks": 10,
       "correctAnswers": [
         "Had",
         "would",
@@ -4558,7 +4558,7 @@
     {
       "id": 252,
       "paragraph": "The committee's recommendation is that the current policy ____ abolished. They argue that not only ____ it ineffective, but it also creates unintended negative consequences. It is essential that any new policy ____ based on thorough research. ____ the government to ignore this advice, it ____ risk losing public trust. The report, ____ a year to compile, was based on extensive data analysis. The chairman stated that never before ____ he seen such a compelling case for reform. It is high time that action ____ taken. He urged that all members ____ the report carefully.",
-      "blanks": 10,
+      "blanks": 9,
       "correctAnswers": [
         "be",
         "is",
@@ -4646,7 +4646,7 @@
     {
       "id": 254,
       "paragraph": "Had the ancient civilizations ____ the advanced technology we ____ today, their architectural marvels ____ undoubtedly have been even more grand. It is a testament to their ingenuity that they ____ so much ____ the tools they possessed.",
-      "blanks": 6,
+      "blanks": 5,
       "correctAnswers": [
         "possessed",
         "have",
@@ -4679,7 +4679,7 @@
     {
       "id": 255,
       "paragraph": "It is proposed that the new regulations ____ immediately. Critics argue that ____ the changes to be implemented so hastily, businesses ____ insufficient time to adapt. Nevertheless, the council has declared its intention that the reforms ____ through.",
-      "blanks": 5,
+      "blanks": 4,
       "correctAnswers": ["be enacted", "were", "would have", "go"],
       "availableWords": [
         "be enacted",
@@ -4725,7 +4725,7 @@
     {
       "id": 257,
       "paragraph": "Hardly ____ the speaker finished his address ____ the audience erupted in applause. So compelling ____ his words that many felt profoundly inspired. It ____ a truly memorable moment for all present.",
-      "blanks": 5,
+      "blanks": 4,
       "correctAnswers": ["had", "when", "were", "was"],
       "availableWords": [
         "had",
@@ -4747,7 +4747,7 @@
     {
       "id": 258,
       "paragraph": "The discovery of the new planet, ____ orbit lies far beyond Neptune, ____ hailed as a monumental achievement. Astronomers ____ for years for such a celestial body. Its implications for understanding the solar system ____ profound.",
-      "blanks": 5,
+      "blanks": 4,
       "correctAnswers": ["whose", "was", "had been searching", "are"],
       "availableWords": [
         "whose",
@@ -4771,7 +4771,7 @@
     {
       "id": 259,
       "paragraph": "It is advisable that all employees ____ aware of the updated security protocols. ____ any unauthorized access to sensitive data, it is crucial that the incident ____ reported immediately. Management insists that compliance ____ mandatory for everyone.",
-      "blanks": 5,
+      "blanks": 4,
       "correctAnswers": ["be", "Should", "be", "be"],
       "availableWords": [
         "be",
@@ -4795,7 +4795,7 @@
     {
       "id": 260,
       "paragraph": "Never before ____ humanity faced such a complex array of global challenges. It is imperative that international cooperation ____ strengthened, and that collective action ____ taken. Only then ____ we hope to surmount these obstacles.",
-      "blanks": 5,
+      "blanks": 4,
       "correctAnswers": ["has", "be", "be", "can"],
       "availableWords": [
         "has",
@@ -5209,7 +5209,7 @@
     {
       "id": 283,
       "paragraph": "It is recommended that the report ____ revised to include additional data. The committee has insisted that accuracy ____ of utmost importance. Any errors ____ undermine its findings.",
-      "blanks": 4,
+      "blanks": 3,
       "correctAnswers": ["be", "be", "would"],
       "availableWords": [
         "be",
@@ -5376,7 +5376,7 @@
     {
       "id": 292,
       "paragraph": "It is advised that the company ____ a comprehensive risk assessment. Lest unexpected events ____ to disruption, proactive measures ____ essential.",
-      "blanks": 4,
+      "blanks": 3,
       "correctAnswers": ["conduct", "lead", "are"],
       "availableWords": [
         "conduct",
@@ -5428,7 +5428,7 @@
     },
     {
       "id": 295,
-      "paragraph": "Were it not for his unwavering determination, he ____ never ____ succeeded. His resilience ____ a testament to his character.",
+      "paragraph": "Were it not for his unwavering determination, he never ____ succeeded. His resilience ____ a testament to his character.",
       "blanks": 3,
       "correctAnswers": ["would have", "is"],
       "availableWords": [

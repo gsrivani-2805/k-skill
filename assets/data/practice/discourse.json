@@ -7,7 +7,7 @@
       "icon": "mail_outline",
       "color": "0xFF2196F3",
       "completedCount": 5,
-      "totalCount": 12,
+      "totalCount": 40,
       "description": "Master the art of formal and informal letter writing with proper structure, tone, and formatting guidelines.",
       "keyComponents": [
         "Sender's address and date",
@@ -44,7 +44,7 @@
           "template": "Your Address\nCity, State ZIP Code\nDate\n\nThe Manager\nBookstore Name\nAddress\n\nDear Sir/Madam,\n\nI am writing to apply for...\n\nYours faithfully,\n[Your name]"
         },
         {
-          "id": "letter_2", 
+          "id": "letter_2",
           "title": "Complaint Letter to School",
           "difficulty": "Intermediate",
           "estimatedTime": "25 mins",
@@ -76,6 +76,551 @@
             "Use contractions and colloquial language"
           ],
           "template": "Your Address\nDate\n\nDear [Friend's name],\n\nHow are you? I hope you're doing well...\n\nWith love,\n[Your name]"
+        },
+        {
+          "id": "letter_4",
+          "title": "Summer Vacation Experience",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write a letter to your friend telling him/her about your summer vacation.",
+          "guidelines": [
+            "Begin with a warm greeting",
+            "Describe where you went and what you did",
+            "Highlight the most enjoyable experience",
+            "Use descriptive and personal language",
+            "End with a friendly closing"
+          ],
+          "template": "Your Address\nDate\n\nDear [Friend's Name],\n\nI hope you are doing well. I wanted to tell you about my summer vacation...\n\nWith love,\n[Your Name]"
+        },
+        {
+          "id": "letter_5",
+          "title": "Birthday Party Invitation",
+          "difficulty": "Beginner",
+          "estimatedTime": "10 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write a letter to your best friend inviting him/her to your birthday party.",
+          "guidelines": [
+            "Mention the date, time, and place of the party",
+            "Add what fun activities will be there",
+            "Encourage your friend to attend",
+            "Use friendly and cheerful language"
+          ],
+          "template": "Your Address\nDate\n\nDear [Friend's Name],\n\nI’m so excited to invite you to my birthday party on [date] at [place]...\n\nYours lovingly,\n[Your Name]"
+        },
+        {
+          "id": "letter_6",
+          "title": "Congratulating Classmate",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write a letter to your classmate congratulating him/her for winning a prize.",
+          "guidelines": [
+            "Start with congratulations",
+            "Mention the prize and why it’s special",
+            "Express pride and happiness",
+            "Encourage your classmate to keep working hard"
+          ],
+          "template": "Your Address\nDate\n\nDear [Classmate’s Name],\n\nMany congratulations on winning the prize in...\n\nYour friend,\n[Your Name]"
+        },
+        {
+          "id": "letter_7",
+          "title": "Apologizing to Cousin",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write a letter to your cousin apologizing for missing his/her function.",
+          "guidelines": [
+            "Begin with an apology",
+            "Explain why you couldn’t attend",
+            "Express regret and feelings",
+            "Promise to make it up in the future"
+          ],
+          "template": "Your Address\nDate\n\nDear [Cousin’s Name],\n\nI’m really sorry I couldn’t attend your function...\n\nWith apologies,\n[Your Name]"
+        },
+        {
+          "id": "letter_8",
+          "title": "Sharing Exam Results",
+          "difficulty": "Beginner",
+          "estimatedTime": "10 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write a letter to your brother/sister sharing your exam results.",
+          "guidelines": [
+            "Mention your overall performance",
+            "Highlight your best subject",
+            "Be honest about weak areas",
+            "Express your feelings (happy/proud/motivated)"
+          ],
+          "template": "Your Address\nDate\n\nDear [Brother/Sister’s Name],\n\nI wanted to share my exam results with you...\n\nWith love,\n[Your Name]"
+        },
+        {
+          "id": "letter_9",
+          "title": "Life in Hostel",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write a letter to your parents describing your life in the hostel.",
+          "guidelines": [
+            "Describe daily routine in hostel",
+            "Mention food, friends, and studies",
+            "Share challenges and good experiences",
+            "Reassure parents about your well-being"
+          ],
+          "template": "Your Address\nDate\n\nDear Mom and Dad,\n\nI want to tell you about my life in the hostel...\n\nYours lovingly,\n[Your Name]"
+        },
+        {
+          "id": "letter_10",
+          "title": "Thanking Uncle for Gift",
+          "difficulty": "Beginner",
+          "estimatedTime": "10 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write a letter to your uncle thanking him for sending you a gift.",
+          "guidelines": [
+            "Express gratitude warmly",
+            "Mention how you will use the gift",
+            "Explain why it means a lot to you",
+            "Close with affection"
+          ],
+          "template": "Your Address\nDate\n\nDear Uncle,\n\nThank you so much for the wonderful gift...\n\nWith love,\n[Your Name]"
+        },
+        {
+          "id": "letter_11",
+          "title": "Thanking English Teacher",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "semi-formal",
+          "prompt": "Write a letter to your English teacher thanking her for improving your writing skills.",
+          "guidelines": [
+            "Begin respectfully",
+            "Explain how your skills improved",
+            "Give specific examples",
+            "Express gratitude and respect"
+          ],
+          "template": "Your Address\nDate\n\nDear Madam,\n\nI want to sincerely thank you for helping me improve my writing skills...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_12",
+          "title": "Requesting Extra Maths Classes",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "semi-formal",
+          "prompt": "Write a letter to your Mathematics teacher requesting extra classes before exams.",
+          "guidelines": [
+            "State the need clearly",
+            "Mention specific topics of difficulty",
+            "Show eagerness to improve",
+            "Be polite and respectful"
+          ],
+          "template": "Your Address\nDate\n\nDear Sir,\n\nI am writing to request extra classes in mathematics before the exams...\n\nYours sincerely,\n[Your Name]"
+        },
+        {
+          "id": "letter_13",
+          "title": "Seeking Science Project Guidance",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "semi-formal",
+          "prompt": "Write a letter to your Science teacher seeking guidance for a project competition.",
+          "guidelines": [
+            "Mention details of the competition",
+            "Explain your project idea briefly",
+            "Ask for guidance and support",
+            "Show gratitude and respect"
+          ],
+          "template": "Your Address\nDate\n\nDear Sir/Madam,\n\nI am participating in the upcoming project competition and would like your guidance...\n\nYours sincerely,\n[Your Name]"
+        },
+        {
+          "id": "letter_14",
+          "title": "Requesting Permission for Cultural Program",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "semi-formal",
+          "prompt": "Write a letter to your class teacher requesting permission to participate in a cultural program.",
+          "guidelines": [
+            "Mention the cultural program details",
+            "Highlight the importance of participation",
+            "Assure balance between studies and activities",
+            "Request kind permission"
+          ],
+          "template": "Your Address\nDate\n\nDear [Teacher’s Name],\n\nI would like to request permission to participate in the cultural program...\n\nYours obediently,\n[Your Name]"
+        },
+        {
+          "id": "letter_15",
+          "title": "Advice from Sports Coach",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "semi-formal",
+          "prompt": "Write a letter to your sports coach asking for advice before a tournament.",
+          "guidelines": [
+            "State the tournament details",
+            "Explain your preparation so far",
+            "Ask for tips on improvement",
+            "Express gratitude and respect"
+          ],
+          "template": "Your Address\nDate\n\nDear Coach,\n\nI am preparing for the upcoming tournament and seek your advice...\n\nYours sincerely,\n[Your Name]"
+        },
+        {
+          "id": "letter_16",
+          "title": "Leave Request Due to Illness",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to your Principal requesting leave for three days due to illness.",
+          "guidelines": [
+            "Mention dates of leave",
+            "Specify illness briefly",
+            "Request kind approval",
+            "Assure to catch up on work"
+          ],
+          "template": "Your Address\nDate\n\nThe Principal\nSchool Name\nAddress\n\nDear Sir/Madam,\n\nI request leave for three days due to illness...\n\nYours obediently,\n[Your Name]"
+        },
+        {
+          "id": "letter_17",
+          "title": "Permission for Sports Event",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to your Principal asking for permission to attend a district-level sports event.",
+          "guidelines": [
+            "Mention event details",
+            "Explain importance for personal growth",
+            "Request leave/permission",
+            "Show gratitude"
+          ],
+          "template": "Your Address\nDate\n\nThe Principal\nSchool Name\nAddress\n\nDear Sir/Madam,\n\nI request your kind permission to attend the district-level sports event...\n\nYours obediently,\n[Your Name]"
+        },
+        {
+          "id": "letter_18",
+          "title": "Complaint about Noisy Classrooms",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to your Principal complaining about noisy classrooms during study hours.",
+          "guidelines": [
+            "Explain the disturbance caused",
+            "Mention specific incidents",
+            "Request necessary action",
+            "Maintain polite tone"
+          ],
+          "template": "Your Address\nDate\n\nThe Principal\nSchool Name\nAddress\n\nDear Sir/Madam,\n\nI would like to bring to your notice the problem of noisy classrooms...\n\nYours obediently,\n[Your Name]"
+        },
+        {
+          "id": "letter_19",
+          "title": "Requesting Cleanliness Drive",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to your Principal requesting permission to organize a cleanliness drive in your school.",
+          "guidelines": [
+            "Explain purpose of cleanliness drive",
+            "Highlight benefits to students and school",
+            "Request approval",
+            "Offer to coordinate the activity"
+          ],
+          "template": "Your Address\nDate\n\nThe Principal\nSchool Name\nAddress\n\nDear Sir/Madam,\n\nI request your permission to organize a cleanliness drive...\n\nYours obediently,\n[Your Name]"
+        },
+        {
+          "id": "letter_20",
+          "title": "Complaint about Damaged Fans and Lights",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to your Principal complaining about damaged fans and lights in your classroom.",
+          "guidelines": [
+            "Mention the problems caused",
+            "Request quick repair",
+            "Maintain respectful tone",
+            "Offer cooperation if needed"
+          ],
+          "template": "Your Address\nDate\n\nThe Principal\nSchool Name\nAddress\n\nDear Sir/Madam,\n\nI am writing to report the issue of damaged fans and lights...\n\nYours obediently,\n[Your Name]"
+        },
+        {
+          "id": "letter_21",
+          "title": "Permission for Science Exhibition",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to your Principal seeking permission to attend a science exhibition in another school.",
+          "guidelines": [
+            "Mention details of exhibition",
+            "Highlight learning benefits",
+            "Request kind permission",
+            "Express gratitude"
+          ],
+          "template": "Your Address\nDate\n\nThe Principal\nSchool Name\nAddress\n\nDear Sir/Madam,\n\nI kindly request your permission to attend the upcoming science exhibition...\n\nYours obediently,\n[Your Name]"
+        },
+        {
+          "id": "letter_22",
+          "title": "Problem of Garbage Dumping",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to the Editor about the problem of garbage dumping in your area.",
+          "guidelines": [
+            "Describe the issue clearly",
+            "Mention its impact on residents",
+            "Suggest possible solutions",
+            "Request authorities to take action"
+          ],
+          "template": "Your Address\nDate\n\nThe Editor\nNewspaper Name\nAddress\n\nDear Sir/Madam,\n\nThrough your esteemed newspaper, I wish to highlight the problem of garbage dumping...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_23",
+          "title": "Concern about Road Accidents",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to the Editor expressing concern about increasing road accidents in your city.",
+          "guidelines": [
+            "Provide statistics/examples if possible",
+            "Describe causes of accidents",
+            "Suggest preventive measures",
+            "Urge authorities to take steps"
+          ],
+          "template": "Your Address\nDate\n\nThe Editor\nNewspaper Name\nAddress\n\nDear Sir/Madam,\n\nI would like to draw attention to the rising number of road accidents...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_24",
+          "title": "Plastic Pollution Effects",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to the Editor highlighting the ill effects of plastic pollution.",
+          "guidelines": [
+            "Describe harmful effects on environment",
+            "Mention health hazards",
+            "Suggest solutions like bans/recycling",
+            "Call for public awareness"
+          ],
+          "template": "Your Address\nDate\n\nThe Editor\nNewspaper Name\nAddress\n\nDear Sir/Madam,\n\nI wish to bring attention to the harmful effects of plastic pollution...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_25",
+          "title": "Demanding Better Bus Facilities",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to the Editor demanding better bus facilities for daily commuters.",
+          "guidelines": [
+            "Explain problems faced by commuters",
+            "Highlight importance of better facilities",
+            "Request government action",
+            "Maintain polite and formal tone"
+          ],
+          "template": "Your Address\nDate\n\nThe Editor\nNewspaper Name\nAddress\n\nDear Sir/Madam,\n\nThrough your newspaper, I want to highlight the poor bus facilities faced by commuters...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_26",
+          "title": "Importance of Tree Plantation",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to the Editor about the importance of tree plantation in modern life.",
+          "guidelines": [
+            "Highlight role of trees in environment",
+            "Mention current problems like pollution",
+            "Suggest tree plantation drives",
+            "Request public cooperation"
+          ],
+          "template": "Your Address\nDate\n\nThe Editor\nNewspaper Name\nAddress\n\nDear Sir/Madam,\n\nI wish to emphasize the importance of tree plantation in modern life...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_27",
+          "title": "Poor Condition of Roads",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to the Municipal Commissioner complaining about the poor condition of roads in your area.",
+          "guidelines": [
+            "Describe the bad road condition",
+            "Mention problems faced (accidents, delays)",
+            "Request urgent repair",
+            "Be respectful yet firm"
+          ],
+          "template": "Your Address\nDate\n\nThe Municipal Commissioner\nCity Name\n\nDear Sir/Madam,\n\nI wish to bring to your notice the poor condition of roads in our area...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_28",
+          "title": "Request for Public Library",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to the Mayor requesting the opening of a public library in your locality.",
+          "guidelines": [
+            "Explain the need for a library",
+            "Mention benefits to students and citizens",
+            "Suggest possible location",
+            "Request prompt action"
+          ],
+          "template": "Your Address\nDate\n\nThe Mayor\nCity Name\n\nDear Sir/Madam,\n\nI request the opening of a public library in our locality for the benefit of students and residents...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_29",
+          "title": "Street Lights Not Working",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to the Electricity Department regarding street lights not working in your colony.",
+          "guidelines": [
+            "Describe the problem",
+            "Mention safety concerns",
+            "Request immediate repair",
+            "Keep tone polite but urgent"
+          ],
+          "template": "Your Address\nDate\n\nThe Officer In-Charge\nElectricity Department\n\nDear Sir/Madam,\n\nI am writing to report the non-functioning street lights in our colony...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_30",
+          "title": "Water Shortage Problem",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to the Municipal Commissioner about the shortage of drinking water in your area.",
+          "guidelines": [
+            "Describe the severity of shortage",
+            "Mention daily struggles faced",
+            "Request urgent arrangements",
+            "Suggest long-term solutions"
+          ],
+          "template": "Your Address\nDate\n\nThe Municipal Commissioner\nCity Name\n\nDear Sir/Madam,\n\nI wish to bring to your notice the acute shortage of drinking water in our area...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_31",
+          "title": "Noise Pollution from Factories",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to the Pollution Control Board complaining about noise pollution caused by nearby factories.",
+          "guidelines": [
+            "Explain the disturbance caused",
+            "Mention health effects on residents",
+            "Request strict action",
+            "Use formal and firm tone"
+          ],
+          "template": "Your Address\nDate\n\nThe Chairman\nPollution Control Board\n\nDear Sir/Madam,\n\nI wish to complain about the increasing noise pollution caused by factories near our area...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_32",
+          "title": "Delay in Delivery of Goods",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to a company complaining about the delay in delivery of goods you ordered online.",
+          "guidelines": [
+            "Mention details of the order",
+            "State delay and inconvenience caused",
+            "Request prompt delivery",
+            "Maintain polite but firm tone"
+          ],
+          "template": "Your Address\nDate\n\nCustomer Care Manager\nCompany Name\n\nDear Sir/Madam,\n\nI am writing to complain about the delay in delivery of my order placed on...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_33",
+          "title": "Defective Product Complaint",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to a company complaining about receiving a defective product.",
+          "guidelines": [
+            "Mention product details and invoice number",
+            "Explain the defect clearly",
+            "Request replacement or refund",
+            "Attach proof if possible"
+          ],
+          "template": "Your Address\nDate\n\nCustomer Service Department\nCompany Name\n\nDear Sir/Madam,\n\nI am writing to complain about the defective product delivered to me...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_34",
+          "title": "Enquiry About Summer Camp",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to an organization enquiring about the details of a summer camp.",
+          "guidelines": [
+            "Mention your interest in the camp",
+            "Ask for details about dates, fees, and activities",
+            "Request information on eligibility",
+            "Maintain polite tone"
+          ],
+          "template": "Your Address\nDate\n\nThe Manager\nOrganization Name\n\nDear Sir/Madam,\n\nI am interested in knowing the details of the upcoming summer camp...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_35",
+          "title": "Scholarship Availability",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to an NGO asking about scholarship availability for needy students.",
+          "guidelines": [
+            "Introduce yourself briefly",
+            "Explain the need for scholarship",
+            "Request details of eligibility and process",
+            "Use respectful tone"
+          ],
+          "template": "Your Address\nDate\n\nThe Director\nNGO Name\n\nDear Sir/Madam,\n\nI wish to enquire about the availability of scholarships for needy students...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_36",
+          "title": "Requesting Product Catalogue",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to a company requesting their product catalogue and price list.",
+          "guidelines": [
+            "State your interest in their products",
+            "Request latest catalogue and price list",
+            "Mention possible future purchases",
+            "Maintain professional tone"
+          ],
+          "template": "Your Address\nDate\n\nSales Manager\nCompany Name\n\nDear Sir/Madam,\n\nI request you to kindly send me your latest product catalogue and price list...\n\nYours faithfully,\n[Your Name]"
+        },
+        {
+          "id": "letter_37",
+          "title": "Request for Donation",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "formal",
+          "prompt": "Write a letter to a company requesting a donation for your school’s charity event.",
+          "guidelines": [
+            "Introduce the charity event",
+            "Explain its purpose and benefits",
+            "Request a suitable donation",
+            "Express gratitude in advance"
+          ],
+          "template": "Your Address\nDate\n\nThe Manager\nCompany Name\n\nDear Sir/Madam,\n\nOur school is organizing a charity event and we request your kind support in the form of a donation...\n\nYours faithfully,\n[Your Name]"
         }
       ]
     },
@@ -86,7 +631,7 @@
       "icon": "email_outlined",
       "color": "0xFF4CAF50",
       "completedCount": 3,
-      "totalCount": 10,
+      "totalCount": 30,
       "description": "Learn to write effective professional and personal emails with proper etiquette and formatting.",
       "keyComponents": [
         "Clear and specific subject line",
@@ -125,7 +670,7 @@
         {
           "id": "email_2",
           "title": "Email Inquiry to Company",
-          "difficulty": "Intermediate", 
+          "difficulty": "Intermediate",
           "estimatedTime": "20 mins",
           "isCompleted": false,
           "type": "professional",
@@ -138,6 +683,454 @@
             "Attach resume (mention in email)"
           ],
           "template": "Subject: Internship Inquiry - [Your Field] Student\n\nDear Hiring Manager,\n\nI am writing to inquire about...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_3",
+          "title": "Weekly Reading Hour Suggestion",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to your Principal suggesting a weekly reading hour to encourage students to read books beyond the syllabus.",
+          "guidelines": [
+            "Use a polite and respectful tone",
+            "Explain why reading beyond the syllabus is important",
+            "Suggest how a weekly reading hour could work",
+            "Keep it concise and convincing"
+          ],
+          "template": "Subject: Suggestion for Weekly Reading Hour\n\nDear Principal,\n\nI would like to suggest...\n\nThank you for considering my request.\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_4",
+          "title": "Guidance for Science Exhibition",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to your Science teacher asking for guidance to make a working model for the upcoming exhibition.",
+          "guidelines": [
+            "Use clear subject line",
+            "Explain your interest in participating",
+            "Ask for suggestions or resources",
+            "Be polite and eager to learn"
+          ],
+          "template": "Subject: Guidance for Science Exhibition Model\n\nDear [Teacher’s Name],\n\nI wish to participate in the science exhibition...\n\nThank you for your help.\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_5",
+          "title": "Request for More Storybooks",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to the Librarian requesting more storybooks and magazines in the school library.",
+          "guidelines": [
+            "State the problem clearly",
+            "Mention why storybooks and magazines are important",
+            "Request politely for the addition",
+            "Keep it short and respectful"
+          ],
+          "template": "Subject: Request for More Storybooks in Library\n\nDear Librarian,\n\nI have noticed that...\n\nI kindly request you to add more...\n\nBest regards,\n[Your Name]"
+        },
+        {
+          "id": "email_6",
+          "title": "Charity Drive Permission",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to your Principal requesting permission to conduct a charity drive for collecting clothes and books for needy children.",
+          "guidelines": [
+            "Use polite and formal tone",
+            "Explain the purpose of the charity drive",
+            "Mention who will participate and how",
+            "Seek permission clearly"
+          ],
+          "template": "Subject: Permission Request for Charity Drive\n\nDear Principal,\n\nOur class would like to...\n\nWe kindly request your permission...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_7",
+          "title": "Help with Essay Writing",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to your English teacher asking for tips to improve introductions and conclusions in essays.",
+          "guidelines": [
+            "Explain your difficulty clearly",
+            "Request tips or resources",
+            "Show willingness to improve",
+            "Keep tone respectful"
+          ],
+          "template": "Subject: Request for Help with Essay Writing\n\nDear [Teacher’s Name],\n\nI face difficulty in writing...\n\nCould you kindly guide me...\n\nThank you,\n[Your Name]"
+        },
+        {
+          "id": "email_8",
+          "title": "Extra Help with Map Pointing",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to your Social Studies teacher requesting extra help with remembering countries, rivers, and mountains during map pointing.",
+          "guidelines": [
+            "Be honest about your struggle",
+            "Request specific extra help",
+            "Keep it short and polite",
+            "Thank the teacher in advance"
+          ],
+          "template": "Subject: Request for Extra Help in Map Pointing\n\nDear [Teacher’s Name],\n\nI am finding it difficult to...\n\nCould you kindly provide me with...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_9",
+          "title": "Digital Notice Boards Suggestion",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to your Principal suggesting the use of digital notice boards instead of paper to help the environment.",
+          "guidelines": [
+            "State the problem with paper notices",
+            "Explain benefits of digital boards",
+            "Be polite and persuasive",
+            "Keep the email formal"
+          ],
+          "template": "Subject: Suggestion to Introduce Digital Notice Boards\n\nDear Principal,\n\nI would like to suggest...\n\nThis will help...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_10",
+          "title": "Help with Math Word Problems",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to your Maths teacher asking for tips to solve word problems effectively.",
+          "guidelines": [
+            "Explain your difficulty clearly",
+            "Request specific techniques or steps",
+            "Keep it polite and respectful",
+            "Thank teacher for their support"
+          ],
+          "template": "Subject: Request for Help with Word Problems\n\nDear [Teacher’s Name],\n\nI often struggle with...\n\nCould you please suggest some tips...\n\nThank you,\n[Your Name]"
+        },
+        {
+          "id": "email_11",
+          "title": "Healthy Food Day Request",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to your Principal requesting permission to celebrate a Healthy Food Day where students bring nutritious meals.",
+          "guidelines": [
+            "Explain why Healthy Food Day is important",
+            "Describe how students will participate",
+            "Seek permission politely",
+            "Use clear and formal tone"
+          ],
+          "template": "Subject: Request to Celebrate Healthy Food Day\n\nDear Principal,\n\nI would like to propose...\n\nThis will benefit...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_12",
+          "title": "Thank You to Class Teacher",
+          "difficulty": "Beginner",
+          "estimatedTime": "10 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email thanking your class teacher for helping you improve your discipline and punctuality.",
+          "guidelines": [
+            "Express gratitude sincerely",
+            "Mention how the teacher helped you",
+            "Keep it short and respectful",
+            "End with thanks again"
+          ],
+          "template": "Subject: Thank You for Your Guidance\n\nDear [Teacher’s Name],\n\nI want to sincerely thank you...\n\nYour guidance has helped me...\n\nWarm regards,\n[Your Name]"
+        },
+        {
+          "id": "email_13",
+          "title": "Planting Trees Experience",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an email to your cousin describing how you planted trees in your backyard last weekend.",
+          "guidelines": [
+            "Use friendly and casual tone",
+            "Describe what trees you planted",
+            "Share how you felt doing it",
+            "Encourage your cousin to try"
+          ],
+          "template": "Subject: I Planted Trees!\n\nHi [Cousin’s Name],\n\nLast weekend I planted...\n\nIt was such a great experience...\n\nTake care,\n[Your Name]"
+        },
+        {
+          "id": "email_14",
+          "title": "Learning to Ride Bicycle",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an email to your friend sharing the joy of learning to ride a bicycle after many falls.",
+          "guidelines": [
+            "Keep tone light and cheerful",
+            "Mention the struggles you faced",
+            "Describe how you finally succeeded",
+            "End on a happy note"
+          ],
+          "template": "Subject: I Finally Rode My Bicycle!\n\nHey [Friend’s Name],\n\nAfter many tries...\n\nIt felt amazing!\n\nYour friend,\n[Your Name]"
+        },
+        {
+          "id": "email_15",
+          "title": "First Train Journey",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an email to your brother/sister narrating your first train journey experience.",
+          "guidelines": [
+            "Describe where you traveled",
+            "Share what excited you",
+            "Mention small details (scenery, food, sounds)",
+            "Keep it personal"
+          ],
+          "template": "Subject: My First Train Journey\n\nHi [Brother/Sister’s Name],\n\nI had my first train journey...\n\nIt was unforgettable...\n\nLots of love,\n[Your Name]"
+        },
+        {
+          "id": "email_16",
+          "title": "Funny Incident in Classroom",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an email to your cousin describing a funny incident that happened in your classroom.",
+          "guidelines": [
+            "Use a playful and humorous tone",
+            "Explain what happened",
+            "Share how everyone reacted",
+            "Keep it short and fun"
+          ],
+          "template": "Subject: Funny Classroom Story\n\nHi [Cousin’s Name],\n\nToday in class...\n\nWe all laughed so much!\n\nTake care,\n[Your Name]"
+        },
+        {
+          "id": "email_17",
+          "title": "Sharing a Story with Grandmother",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an email to your grandmother telling her about a story you recently read that reminded you of her.",
+          "guidelines": [
+            "Use warm and loving tone",
+            "Briefly describe the story",
+            "Explain why it reminded you of her",
+            "Show affection"
+          ],
+          "template": "Subject: A Story That Reminded Me of You\n\nDear Grandma,\n\nI read a story recently...\n\nIt made me think of you...\n\nLove,\n[Your Name]"
+        },
+        {
+          "id": "email_18",
+          "title": "Speech Competition Experience",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an email to your uncle sharing how you prepared for a speech competition and your performance.",
+          "guidelines": [
+            "Share how you prepared",
+            "Mention the topic of your speech",
+            "Explain how you felt during and after",
+            "Keep tone proud but humble"
+          ],
+          "template": "Subject: My Speech Competition\n\nDear Uncle,\n\nI worked hard for...\n\nIt went really well!\n\nLots of love,\n[Your Name]"
+        },
+        {
+          "id": "email_19",
+          "title": "Watching Favorite Movie",
+          "difficulty": "Beginner",
+          "estimatedTime": "10 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an email to your best friend about watching your favorite movie recently and how much you enjoyed it.",
+          "guidelines": [
+            "Mention the movie name",
+            "Describe why you liked it",
+            "Share favorite scene",
+            "Invite friend to watch too"
+          ],
+          "template": "Subject: I Watched My Favorite Movie!\n\nHey [Friend’s Name],\n\nI just watched...\n\nYou should definitely watch it too!\n\nCheers,\n[Your Name]"
+        },
+        {
+          "id": "email_20",
+          "title": "Science Experiment at Home",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an email to your cousin describing a science experiment you tried at home and the interesting results.",
+          "guidelines": [
+            "Describe the experiment simply",
+            "Explain what you observed",
+            "Share why it was exciting",
+            "Keep it casual"
+          ],
+          "template": "Subject: Cool Science Experiment!\n\nHi [Cousin’s Name],\n\nI tried an experiment at home...\n\nIt was so exciting!\n\nTake care,\n[Your Name]"
+        },
+        {
+          "id": "email_21",
+          "title": "Getting Lost at Fair",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an email to your friend narrating how you got lost in a fair for some time but found your way back.",
+          "guidelines": [
+            "Share what fair you went to",
+            "Describe how you got lost",
+            "Mention how you felt",
+            "Explain how you finally found the way"
+          ],
+          "template": "Subject: My Adventure at the Fair\n\nHey [Friend’s Name],\n\nI went to a fair yesterday...\n\nIt was scary but also funny...\n\nYour friend,\n[Your Name]"
+        },
+        {
+          "id": "email_22",
+          "title": "Bought a New Bicycle",
+          "difficulty": "Beginner",
+          "estimatedTime": "10 mins",
+          "isCompleted": false,
+          "type": "informal",
+          "prompt": "Write an email to your sister sharing the excitement of buying a new bicycle with your saved pocket money.",
+          "guidelines": [
+            "Share how you saved money",
+            "Describe the bicycle",
+            "Express your excitement",
+            "Keep tone joyful"
+          ],
+          "template": "Subject: I Bought a New Bicycle!\n\nHi [Sister’s Name],\n\nAfter saving money...\n\nI finally got my bicycle!\n\nLots of love,\n[Your Name]"
+        },
+        {
+          "id": "email_23",
+          "title": "Bicycle Theft Complaint",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to the Police Station reporting that your bicycle was stolen.",
+          "guidelines": [
+            "Use formal and clear tone",
+            "Mention date and place of theft",
+            "Describe bicycle briefly",
+            "Request immediate action"
+          ],
+          "template": "Subject: Complaint Regarding Stolen Bicycle\n\nRespected Sir/Madam,\n\nI wish to report...\n\nKindly take necessary action.\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_24",
+          "title": "Water Supply Problem",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to the Municipal Commissioner about irregular water supply in your locality.",
+          "guidelines": [
+            "Explain the issue clearly",
+            "Mention how residents are suffering",
+            "Request urgent action",
+            "Keep email formal and polite"
+          ],
+          "template": "Subject: Complaint About Irregular Water Supply\n\nRespected Commissioner,\n\nI wish to bring to your notice...\n\nWe request your urgent help...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_25",
+          "title": "Noise Pollution Complaint",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to the Municipal Officer complaining about loudspeakers being played late at night in your locality.",
+          "guidelines": [
+            "Explain the disturbance clearly",
+            "Mention times when noise occurs",
+            "Request action to stop it",
+            "Keep tone polite yet firm"
+          ],
+          "template": "Subject: Complaint Regarding Noise Pollution\n\nRespected Officer,\n\nThis is to bring to your notice...\n\nWe kindly request strict action...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_26",
+          "title": "Request to Close Open Drain",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to the Health Officer requesting immediate action to cover open drains in your colony.",
+          "guidelines": [
+            "Explain the health hazard",
+            "Describe problems caused by open drains",
+            "Request immediate repair",
+            "Be polite and clear"
+          ],
+          "template": "Subject: Request to Close Open Drains in Colony\n\nRespected Sir/Madam,\n\nI wish to bring to your attention...\n\nKindly take action at the earliest...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_27",
+          "title": "Complaint About Stray Dogs",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to the Animal Control Department complaining about the increasing number of stray dogs in your area.",
+          "guidelines": [
+            "State the problem clearly",
+            "Mention safety risks to residents",
+            "Request quick action",
+            "Use formal polite tone"
+          ],
+          "template": "Subject: Complaint Regarding Stray Dogs\n\nRespected Sir/Madam,\n\nThis is to inform you that...\n\nWe request your immediate action...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_28",
+          "title": "Complaint About Street Lights",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to the Electricity Department complaining about the street lights not working in your area.",
+          "guidelines": [
+            "Explain the issue clearly",
+            "Mention streets affected",
+            "Request urgent repair",
+            "Keep email formal"
+          ],
+          "template": "Subject: Street Lights Not Working in Locality\n\nRespected Sir/Madam,\n\nI would like to bring to your notice...\n\nWe request your quick action...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_29",
+          "title": "Garbage Clearance Request",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to the Municipal Commissioner requesting regular clearance of garbage from your colony.",
+          "guidelines": [
+            "Mention the problem clearly",
+            "Explain the inconvenience caused",
+            "Request regular clearance",
+            "Keep tone formal and respectful"
+          ],
+          "template": "Subject: Request for Regular Garbage Clearance\n\nRespected Commissioner,\n\nI am writing to bring to your notice...\n\nWe kindly request immediate measures...\n\nSincerely,\n[Your Name]"
+        },
+        {
+          "id": "email_30",
+          "title": "Complaint About Potholes",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "professional",
+          "prompt": "Write an email to the Municipal Officer complaining about potholes on the main road of your locality.",
+          "guidelines": [
+            "Describe location of potholes",
+            "Explain the danger to vehicles and pedestrians",
+            "Request urgent repair",
+            "Keep email formal and clear"
+          ],
+          "template": "Subject: Complaint About Potholes on Main Road\n\nRespected Officer,\n\nThis is to bring to your kind notice...\n\nKindly repair them at the earliest...\n\nSincerely,\n[Your Name]"
         }
       ]
     },
@@ -166,6 +1159,7 @@
         "Reflect on experiences and lessons learned",
         "Maintain privacy and personal voice"
       ],
+
       "practiceItems": [
         {
           "id": "diary_1",
@@ -188,7 +1182,7 @@
           "id": "diary_2",
           "title": "Achievement and Success",
           "difficulty": "Intermediate",
-          "estimatedTime": "20 mins", 
+          "estimatedTime": "20 mins",
           "isCompleted": false,
           "type": "reflective",
           "prompt": "Write about a recent achievement or success you experienced, reflecting on the journey and what you learned.",
@@ -217,17 +1211,544 @@
             "Reflect on the values that guided your choice"
           ],
           "template": "Dear Diary,\n\nDate: [Today's date]\n\nI've been wrestling with a decision...\n\nAfter much thought...\n\nHoping for the best,\n[Your name]"
+        },
+        {
+          "id": "diary_4",
+          "title": "The Happiest Day in Your Life",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about the happiest day of your life, describing why it was so special and how you felt.",
+          "guidelines": [
+            "Describe the event that made you happy",
+            "Include details about people, place, and activities",
+            "Express your emotions clearly",
+            "Reflect on why it was meaningful",
+            "End with how you remember it today"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I remembered the happiest day of my life...\n\nIt was special because...\n\nForever cherished,\n[Your name]"
+        },
+        {
+          "id": "diary_5",
+          "title": "How You Felt on Your Birthday",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Describe your feelings and experiences on your birthday.",
+          "guidelines": [
+            "Describe how you started the day",
+            "Mention gifts, surprises, or celebrations",
+            "Include details about family and friends",
+            "Explain your emotions throughout the day",
+            "Reflect on what made it memorable"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday was my birthday, and...\n\nI felt so...\n\nGratefully yours,\n[Your name]"
+        },
+        {
+          "id": "diary_6",
+          "title": "A Day When You Helped Someone in Need",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about a day when you helped someone in need and how it made you feel.",
+          "guidelines": [
+            "Describe the situation and who needed help",
+            "Explain what you did to help",
+            "Share your emotions before and after",
+            "Reflect on the impact of your actions",
+            "Mention what you learned from the experience"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I had the chance to help...\n\nIt made me feel...\n\nWith kindness,\n[Your name]"
+        },
+        {
+          "id": "diary_7",
+          "title": "The Day You Overcame a Big Fear",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Describe a day when you overcame a big fear and how it changed you.",
+          "guidelines": [
+            "Explain what the fear was",
+            "Describe the situation when you faced it",
+            "Share your thoughts and emotions",
+            "Explain how you managed to overcome it",
+            "Reflect on what you learned about yourself"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I faced one of my biggest fears...\n\nAnd I finally...\n\nProudly,\n[Your name]"
+        },
+        {
+          "id": "diary_8",
+          "title": "How You Felt When You Lost Something Important",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a time when you lost something important to you, and how you felt.",
+          "guidelines": [
+            "Describe what you lost",
+            "Explain how it happened",
+            "Share your immediate emotions",
+            "Reflect on how you coped with the loss",
+            "Mention any lessons you learned"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I lost something important...\n\nIt made me feel...\n\nSincerely,\n[Your name]"
+        },
+        {
+          "id": "diary_9",
+          "title": "A Lesson You Learned from a Mistake",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about a mistake you made and the lesson you learned from it.",
+          "guidelines": [
+            "Describe the mistake in detail",
+            "Explain how it happened",
+            "Share your emotions during the experience",
+            "Reflect on what you learned",
+            "Explain how it changed your behavior"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nI made a mistake today...\n\nBut I learned that...\n\nWiser now,\n[Your name]"
+        },
+        {
+          "id": "diary_10",
+          "title": "A Day When You Felt Very Lonely",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Describe a day when you felt very lonely, and how you handled it.",
+          "guidelines": [
+            "Describe the situation and place",
+            "Explain why you felt lonely",
+            "Express your emotions clearly",
+            "Mention if you found comfort or support",
+            "Reflect on how you dealt with the loneliness"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I felt very lonely because...\n\nBut I realized...\n\nYours truly,\n[Your name]"
+        },
+        {
+          "id": "diary_11",
+          "title": "Trying Cooking Something New",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience of trying to cook something new.",
+          "guidelines": [
+            "Mention the dish you tried",
+            "Describe the process of cooking it",
+            "Include any difficulties you faced",
+            "Share the final outcome and taste",
+            "Reflect on how you felt about the attempt"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I tried cooking...\n\nThe process was...\n\nDeliciously yours,\n[Your name]"
+        },
+        {
+          "id": "diary_12",
+          "title": "An Embarrassing but Funny Incident in School",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about an embarrassing but funny incident that happened to you in school.",
+          "guidelines": [
+            "Describe what happened in detail",
+            "Explain your emotions during the incident",
+            "Share how your classmates or teachers reacted",
+            "Reflect on why it was both embarrassing and funny",
+            "Mention how you feel about it now"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nSomething funny and embarrassing happened today at school...\n\nAt first, I felt...\n\nNow when I think back...\n\nLaughing at myself,\n[Your name]"
+        },
+        {
+          "id": "diary_13",
+          "title": "A Day When You Got Praised by Your Teacher",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a day when your teacher praised you and how it made you feel.",
+          "guidelines": [
+            "Describe the situation in class",
+            "Mention what you did to deserve praise",
+            "Share the teacher’s exact words if possible",
+            "Explain how your classmates reacted",
+            "Reflect on how this encouraged you"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday my teacher praised me for...\n\nIt made me feel...\n\nEncouraged,\n[Your name]"
+        },
+        {
+          "id": "diary_14",
+          "title": "Your Thoughts on Preparing for Exams",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write a diary entry about your thoughts and feelings while preparing for exams.",
+          "guidelines": [
+            "Describe your daily routine during exam time",
+            "Share the subjects you focus on most",
+            "Explain your worries or challenges",
+            "Include strategies that help you",
+            "Reflect on your hopes for the results"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nExam season is here...\n\nI feel...\n\nWith determination,\n[Your name]"
+        },
+        {
+          "id": "diary_15",
+          "title": "A Day When Your Best Friend Was Absent",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a day in school when your best friend was absent.",
+          "guidelines": [
+            "Describe how you felt without them",
+            "Mention activities or classes you missed doing together",
+            "Share how the day was different",
+            "Explain how you stayed occupied",
+            "Reflect on the importance of friendship"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday school felt different because my best friend was absent...\n\nI realized...\n\nMissing them,\n[Your name]"
+        },
+        {
+          "id": "diary_16",
+          "title": "Your First Stage Performance",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your first experience performing on stage.",
+          "guidelines": [
+            "Describe the event and setting",
+            "Mention your preparation before the performance",
+            "Explain your emotions before, during, and after",
+            "Include audience and teacher reactions",
+            "Reflect on what you learned from it"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I had my first stage performance...\n\nI felt...\n\nBravely yours,\n[Your name]"
+        },
+        {
+          "id": "diary_17",
+          "title": "A Sports Day Experience",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience of a school sports day.",
+          "guidelines": [
+            "Describe the atmosphere of the sports day",
+            "Mention the games you participated in",
+            "Share your emotions and experiences",
+            "Include moments of winning or losing",
+            "Reflect on what you enjoyed most"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday was our school sports day...\n\nIt was exciting because...\n\nEnergetically,\n[Your name]"
+        },
+        {
+          "id": "diary_18",
+          "title": "Your Experience of Participating in a Competition",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience of participating in a competition.",
+          "guidelines": [
+            "Describe the competition and your role",
+            "Explain your preparation",
+            "Share your emotions before and during",
+            "Mention the outcome",
+            "Reflect on the lessons learned"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I participated in...\n\nThe experience taught me...\n\nGratefully,\n[Your name]"
+        },
+        {
+          "id": "diary_19",
+          "title": "A Family Trip You Will Never Forget",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a memorable family trip you had and why it was unforgettable.",
+          "guidelines": [
+            "Describe the destination",
+            "Mention who was with you",
+            "Explain what activities you did",
+            "Share your emotions and fun moments",
+            "Reflect on why it is unforgettable"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nI will never forget our trip to...\n\nIt was memorable because...\n\nLovingly,\n[Your name]"
+        },
+        {
+          "id": "diary_20",
+          "title": "A Picnic or Excursion with Classmates",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a picnic or excursion you enjoyed with your classmates.",
+          "guidelines": [
+            "Describe the place you visited",
+            "Explain what activities you did with classmates",
+            "Mention fun and laughter moments",
+            "Include teachers’ involvement if any",
+            "Reflect on what you enjoyed most"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nWe went on a picnic/excursion to...\n\nThe best part was...\n\nHappily,\n[Your name]"
+        },
+        {
+          "id": "diary_21",
+          "title": "A Memorable Festival Celebration",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a memorable festival celebration with your family.",
+          "guidelines": [
+            "Mention the festival you celebrated",
+            "Describe the preparations",
+            "Explain family traditions and rituals",
+            "Share your emotions on the day",
+            "Reflect on why it was memorable"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nWe celebrated...\n\nIt was special because...\n\nFestively yours,\n[Your name]"
+        },
+        {
+          "id": "diary_22",
+          "title": "An Unexpected Guest at Your Home",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about the experience of having an unexpected guest at your home.",
+          "guidelines": [
+            "Describe who the guest was",
+            "Explain how you and your family reacted",
+            "Mention what happened during the visit",
+            "Share your feelings",
+            "Reflect on the surprise"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday we had an unexpected guest...\n\nThe visit was...\n\nSurprised,\n[Your name]"
+        },
+        {
+          "id": "diary_23",
+          "title": "How You Spent Your Summer Vacation",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about how you spent your summer vacation.",
+          "guidelines": [
+            "Mention where you went or stayed",
+            "Describe activities and hobbies you enjoyed",
+            "Include family or friends you spent time with",
+            "Share your happiest moment",
+            "Reflect on how the vacation helped you"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nThis summer vacation, I...\n\nThe most memorable part was...\n\nRelaxed,\n[Your name]"
+        },
+        {
+          "id": "diary_24",
+          "title": "When Electricity Went Off at Night",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience when the electricity went off at night.",
+          "guidelines": [
+            "Describe what you were doing when it happened",
+            "Explain your emotions in the darkness",
+            "Mention how your family reacted",
+            "Share if you did anything fun like storytelling or games",
+            "Reflect on how it felt overall"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nThe power went off tonight...\n\nIt felt...\n\nIn the dark,\n[Your name]"
+        },
+        {
+          "id": "diary_25",
+          "title": "An Interesting Story Told by Your Grandparents",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about an interesting story your grandparents told you.",
+          "guidelines": [
+            "Mention which grandparent told the story",
+            "Describe the main theme or lesson",
+            "Share what made it interesting",
+            "Explain how you felt listening to it",
+            "Reflect on why you still remember it"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday my grandparent shared a story about...\n\nIt taught me...\n\nThoughtfully,\n[Your name]"
+        },
+        {
+          "id": "diary_26",
+          "title": "Your Feelings about Shifting to a New House",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your feelings when you shifted to a new house.",
+          "guidelines": [
+            "Describe the old house and memories",
+            "Explain the new house and surroundings",
+            "Share your emotions about the change",
+            "Mention any challenges adjusting",
+            "Reflect on your hopes in the new place"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nWe shifted to a new house today...\n\nI feel...\n\nHopefully,\n[Your name]"
+        },
+        {
+          "id": "diary_27",
+          "title": "A Rainy Day Experience",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience of a rainy day.",
+          "guidelines": [
+            "Describe the weather and surroundings",
+            "Mention what you did during the rain",
+            "Share your emotions and observations",
+            "Include activities like playing, reading, or watching rain",
+            "Reflect on what you enjoyed most"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nIt rained heavily today...\n\nI enjoyed...\n\nRainy thoughts,\n[Your name]"
+        },
+        {
+          "id": "diary_28",
+          "title": "When You Stood Up for What Was Right",
+          "difficulty": "Advanced",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about a situation when you stood up for what was right.",
+          "guidelines": [
+            "Describe the situation and issue",
+            "Explain what actions you took",
+            "Share your emotions while standing up",
+            "Mention reactions of others",
+            "Reflect on what you learned from it"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I stood up for...\n\nIt felt...\n\nWith courage,\n[Your name]"
+        },
+        {
+          "id": "diary_29",
+          "title": "An Accident or Incident You Witnessed",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about an accident or incident you witnessed and how it affected you.",
+          "guidelines": [
+            "Describe what happened",
+            "Mention the people involved",
+            "Share your immediate reactions",
+            "Explain how it made you feel",
+            "Reflect on what you learned from witnessing it"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I witnessed...\n\nIt made me realize...\n\nSincerely,\n[Your name]"
+        },
+        {
+          "id": "diary_30",
+          "title": "A Surprise You Received",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a surprise you received from a friend or relative.",
+          "guidelines": [
+            "Describe the surprise in detail",
+            "Explain who gave it to you",
+            "Share your emotions when you received it",
+            "Mention how others reacted",
+            "Reflect on why it was meaningful"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I received a big surprise...\n\nI felt...\n\nExcitedly,\n[Your name]"
+        },
+        {
+          "id": "diary_31",
+          "title": "A Visit to a Village, Farm, or Temple",
+          "difficulty": "Beginner",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about your experience of visiting a village, farm, or temple.",
+          "guidelines": [
+            "Describe the place you visited",
+            "Mention what you saw and did",
+            "Share your emotions and thoughts",
+            "Include sensory details of the surroundings",
+            "Reflect on why the visit was memorable"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nI visited...\n\nIt was memorable because...\n\nWarmly,\n[Your name]"
+        },
+        {
+          "id": "diary_32",
+          "title": "A Day without Using Mobile or TV",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "reflective",
+          "prompt": "Write about a day you spent without using a mobile or TV.",
+          "guidelines": [
+            "Explain why you avoided devices",
+            "Describe how the day started",
+            "Mention activities you did instead",
+            "Share your feelings during the day",
+            "Reflect on what you learned"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nToday I spent a day without mobile or TV...\n\nIt made me feel...\n\nPeacefully,\n[Your name]"
+        },
+        {
+          "id": "diary_33",
+          "title": "A Dream that Felt Very Real",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "personal",
+          "prompt": "Write about a dream that felt very real to you.",
+          "guidelines": [
+            "Describe the dream in detail",
+            "Share the emotions you felt",
+            "Mention if it was pleasant or scary",
+            "Explain how you felt when you woke up",
+            "Reflect on what the dream meant to you"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nLast night I had a dream that felt so real...\n\nWhen I woke up...\n\nDreamily,\n[Your name]"
+        },
+        {
+          "id": "diary_34",
+          "title": "If You Could Travel Anywhere in the World",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "imaginative",
+          "prompt": "Write about where you would go if you could travel anywhere in the world and why.",
+          "guidelines": [
+            "Choose a dream destination",
+            "Describe the place vividly",
+            "Explain why you want to go there",
+            "Share what activities you would do",
+            "Reflect on how it would make you feel"
+          ],
+          "template": "Dear Diary,\n\nDate: [Today's date]\n\nIf I could travel anywhere, I would go to...\n\nBecause...\n\nAdventurously,\n[Your name]"
         }
       ]
     },
     {
       "id": "essay",
-      "title": "Essay Writing", 
+      "title": "Essay Writing",
       "subtitle": "Academic & Opinion Essays",
       "icon": "article_outlined",
       "color": "0xFF9C27B0",
       "completedCount": 2,
-      "totalCount": 12,
+      "totalCount": 41,
       "description": "Develop strong essay writing skills with proper structure, argumentation, and evidence-based reasoning.",
       "keyComponents": [
         "Clear thesis statement",
@@ -261,14 +1782,694 @@
             "Address potential counterarguments briefly",
             "End with a strong conclusion"
           ],
-          "template": "Introduction: Hook + Background + Thesis\nBody Paragraph 1: First advantage + examples\nBody Paragraph 2: Second advantage + examples  \nBody Paragraph 3: Third advantage + examples\nConclusion: Restate thesis + final thoughts"
+          "template": "Introduction: Hook + Background + Thesis\nBody Paragraph 1: First advantage + examples\nBody Paragraph 2: Second advantage + examples\nBody Paragraph 3: Third advantage + examples\nConclusion: Restate thesis + final thoughts"
+        },
+        {
+          "id": "essay_2",
+          "title": "The Role of Education in Removing Poverty",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on how education helps in reducing poverty and improving quality of life.",
+          "guidelines": [
+            "Introduce the link between education and poverty reduction",
+            "Explain how education opens job opportunities",
+            "Discuss the role of literacy in social awareness",
+            "Use examples of communities improved by education",
+            "Conclude with a vision for a poverty-free society"
+          ],
+          "template": "Introduction: Importance of education\nBody 1: Education and employment\nBody 2: Social awareness and empowerment\nBody 3: Real-life examples/case studies\nConclusion: Reinforce importance of education"
+        },
+        {
+          "id": "essay_3",
+          "title": "Importance of Respecting Elders",
+          "difficulty": "Beginner",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "opinion",
+          "prompt": "Write an essay on why it is important to respect elders at home and in society.",
+          "guidelines": [
+            "Begin with a statement about family and traditions",
+            "Explain how elders guide younger generations",
+            "Include cultural or moral reasons for respect",
+            "Share a personal or observed example",
+            "Conclude with the value of respect in society"
+          ],
+          "template": "Introduction: Importance of elders\nBody 1: Wisdom and guidance\nBody 2: Moral and cultural values\nBody 3: Example/story\nConclusion: Reinforce need for respect"
+        },
+        {
+          "id": "essay_4",
+          "title": "The Impact of Television on Children",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay discussing both the positive and negative effects of television on children.",
+          "guidelines": [
+            "Start with how television is part of daily life",
+            "Mention educational benefits",
+            "Discuss harmful effects like reduced play time or violence",
+            "Balance arguments with examples",
+            "Conclude with advice for healthy viewing"
+          ],
+          "template": "Introduction: Role of TV\nBody 1: Educational benefits\nBody 2: Negative effects\nBody 3: Balance and examples\nConclusion: Healthy use of television"
+        },
+        {
+          "id": "essay_5",
+          "title": "Dowry System – A Social Evil",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay explaining why the dowry system is harmful and how it can be removed from society.",
+          "guidelines": [
+            "Introduce the tradition and its misuse",
+            "Explain the social and economic harm it causes",
+            "Provide examples of its negative consequences",
+            "Suggest legal and social reforms",
+            "Conclude with a vision for equality in marriage"
+          ],
+          "template": "Introduction: What is dowry system\nBody 1: Social/economic problems\nBody 2: Negative examples/cases\nBody 3: Solutions and reforms\nConclusion: Hope for change"
+        },
+        {
+          "id": "essay_6",
+          "title": "The Importance of Good Manners",
+          "difficulty": "Beginner",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay about why good manners are essential in daily life.",
+          "guidelines": [
+            "Define what good manners mean",
+            "Explain their role in building relationships",
+            "Give examples of polite behavior",
+            "Describe how manners reflect character",
+            "Conclude with importance for society"
+          ],
+          "template": "Introduction: What are good manners\nBody 1: Importance in relationships\nBody 2: Examples of manners\nBody 3: Reflection of character\nConclusion: Reinforce value of good manners"
+        },
+        {
+          "id": "essay_7",
+          "title": "Role of Youth in Nation Building",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on the contribution of youth towards the progress of the nation.",
+          "guidelines": [
+            "Start with the power of young minds",
+            "Discuss youth in education and innovation",
+            "Mention social responsibility and leadership",
+            "Use examples of youth movements or leaders",
+            "Conclude with call for active participation"
+          ],
+          "template": "Introduction: Power of youth\nBody 1: Education and innovation\nBody 2: Social responsibility\nBody 3: Examples and leadership\nConclusion: Inspire contribution"
+        },
+        {
+          "id": "essay_8",
+          "title": "Why Literacy is the Key to Development",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay explaining how literacy drives progress in society and economy.",
+          "guidelines": [
+            "Define literacy in a simple way",
+            "Explain link to employment and opportunities",
+            "Mention role in social awareness",
+            "Give examples of literacy campaigns",
+            "Conclude with vision for developed society"
+          ],
+          "template": "Introduction: What is literacy\nBody 1: Literacy and employment\nBody 2: Social awareness\nBody 3: Campaigns/examples\nConclusion: Literacy as key to progress"
+        },
+        {
+          "id": "essay_9",
+          "title": "The Importance of Discipline in Society",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "opinion",
+          "prompt": "Write an essay on why discipline is essential for order and growth in society.",
+          "guidelines": [
+            "Start with a definition of discipline",
+            "Explain its role in daily life",
+            "Give examples from school, work, or government",
+            "Discuss what happens when discipline is missing",
+            "Conclude with benefits of a disciplined society"
+          ],
+          "template": "Introduction: Define discipline\nBody 1: Importance in daily life\nBody 2: Examples from institutions\nBody 3: Results of lack of discipline\nConclusion: Vision of disciplined society"
+        },
+        {
+          "id": "essay_10",
+          "title": "Technology and Its Impact on Human Relations",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay discussing how modern technology has changed human relationships, both positively and negatively.",
+          "guidelines": [
+            "Introduce technology in communication",
+            "Explain positive aspects (connection, speed)",
+            "Discuss negatives (loneliness, less face-to-face talk)",
+            "Give real-life examples or case studies",
+            "Conclude with balanced viewpoint"
+          ],
+          "template": "Introduction: Tech in daily life\nBody 1: Positive impacts\nBody 2: Negative impacts\nBody 3: Examples\nConclusion: Balanced perspective"
+        },
+        {
+          "id": "essay_11",
+          "title": "The Problem of Population Explosion in India",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on the causes, effects, and solutions of population explosion in India.",
+          "guidelines": [
+            "Define population explosion",
+            "Explain reasons (poverty, lack of awareness)",
+            "Discuss effects on economy, environment, society",
+            "Suggest solutions like education, family planning",
+            "Conclude with need for urgent action"
+          ],
+          "template": "Introduction: Define problem\nBody 1: Causes\nBody 2: Effects\nBody 3: Solutions\nConclusion: Urgent call for action"
+        },
+        {
+          "id": "essay_12",
+          "title": "Importance of Clean Rivers",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay on why clean rivers are vital for people, nature, and the economy.",
+          "guidelines": [
+            "Introduce importance of rivers",
+            "Explain their role in daily life",
+            "Discuss pollution problems",
+            "Suggest solutions for clean rivers",
+            "Conclude with vision for sustainable future"
+          ],
+          "template": "Introduction: Importance of rivers\nBody 1: Role in life and economy\nBody 2: Pollution issues\nBody 3: Solutions\nConclusion: Clean rivers for future"
+        },
+        {
+          "id": "essay_13",
+          "title": "How Plastic Harms Marine Life",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on how plastic pollution affects oceans and marine animals.",
+          "guidelines": [
+            "Begin with statistics or facts",
+            "Explain types of harm to marine life",
+            "Give real examples or case studies",
+            "Suggest alternatives to plastic",
+            "Conclude with call for responsibility"
+          ],
+          "template": "Introduction: Plastic in oceans\nBody 1: Harm to marine animals\nBody 2: Examples and facts\nBody 3: Alternatives and solutions\nConclusion: Shared responsibility"
+        },
+        {
+          "id": "essay_14",
+          "title": "Global Warming and Melting of Glaciers",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay explaining how global warming causes glaciers to melt and its impact on Earth.",
+          "guidelines": [
+            "Introduce global warming",
+            "Explain how glaciers are affected",
+            "Discuss impact on sea levels and climate",
+            "Use data or examples",
+            "Conclude with solutions for climate action"
+          ],
+          "template": "Introduction: Global warming issue\nBody 1: Melting glaciers\nBody 2: Impacts on Earth\nBody 3: Solutions\nConclusion: Global responsibility"
+        },
+        {
+          "id": "essay_15",
+          "title": "The Importance of Rainforests",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay describing why rainforests are called the lungs of the Earth and why they must be protected.",
+          "guidelines": [
+            "Introduce rainforests’ role",
+            "Discuss biodiversity and oxygen",
+            "Mention threats like deforestation",
+            "Suggest conservation steps",
+            "Conclude with importance for future generations"
+          ],
+          "template": "Introduction: Rainforests as Earth’s lungs\nBody 1: Role in biodiversity and oxygen\nBody 2: Deforestation issues\nBody 3: Conservation steps\nConclusion: Save rainforests"
+        },
+        {
+          "id": "essay_16",
+          "title": "Why We Should Protect Birds",
+          "difficulty": "Beginner",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "opinion",
+          "prompt": "Write an essay on the importance of protecting birds for balance in nature.",
+          "guidelines": [
+            "Introduce role of birds in ecosystem",
+            "Explain benefits like pollination and pest control",
+            "Discuss threats from hunting or pollution",
+            "Give examples of endangered birds",
+            "Conclude with call for protection"
+          ],
+          "template": "Introduction: Role of birds\nBody 1: Benefits to nature\nBody 2: Threats faced\nBody 3: Examples\nConclusion: Protect birds"
+        },
+        {
+          "id": "essay_17",
+          "title": "The Role of Farmers in Protecting Nature",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay on how farmers contribute to nature conservation and food security.",
+          "guidelines": [
+            "Introduce farmers’ role in society",
+            "Explain eco-friendly practices",
+            "Mention organic farming or water management",
+            "Give real-life examples",
+            "Conclude with respect for farmers"
+          ],
+          "template": "Introduction: Farmers’ importance\nBody 1: Eco-friendly practices\nBody 2: Examples\nBody 3: Role in conservation\nConclusion: Respect and support farmers"
+        },
+        {
+          "id": "essay_18",
+          "title": "How Seasons Affect Human Life",
+          "difficulty": "Beginner",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay on how different seasons influence our lifestyle, health, and work.",
+          "guidelines": [
+            "Introduce four seasons",
+            "Explain changes in lifestyle and festivals",
+            "Discuss health impacts",
+            "Give examples from daily life",
+            "Conclude with importance of adapting"
+          ],
+          "template": "Introduction: Seasons of year\nBody 1: Lifestyle and festivals\nBody 2: Health and work\nBody 3: Examples\nConclusion: Adaptation"
+        },
+        {
+          "id": "essay_19",
+          "title": "Solar and Wind Energy – The Future of Power",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on why solar and wind energy are the best alternatives to fossil fuels.",
+          "guidelines": [
+            "Introduce energy crisis",
+            "Explain benefits of renewable sources",
+            "Give examples of countries using them",
+            "Discuss challenges in adoption",
+            "Conclude with vision for green future"
+          ],
+          "template": "Introduction: Energy crisis\nBody 1: Benefits of solar and wind\nBody 2: Examples worldwide\nBody 3: Challenges and solutions\nConclusion: Future of power"
+        },
+        {
+          "id": "essay_20",
+          "title": "Importance of Recycling for a Greener Earth",
+          "difficulty": "Beginner",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "opinion",
+          "prompt": "Write an essay on why recycling is necessary to protect the environment.",
+          "guidelines": [
+            "Introduce concept of recycling",
+            "Explain benefits like less pollution",
+            "Give examples of recycling methods",
+            "Discuss role of individuals",
+            "Conclude with call to action"
+          ],
+          "template": "Introduction: Recycling importance\nBody 1: Benefits\nBody 2: Examples\nBody 3: Individual role\nConclusion: Greener Earth"
+        },
+        {
+          "id": "essay_21",
+          "title": "Earthquakes and Natural Disasters – Causes and Effects",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay on the causes and effects of earthquakes and other natural disasters.",
+          "guidelines": [
+            "Introduce natural disasters",
+            "Explain causes of earthquakes",
+            "Discuss effects on life and property",
+            "Give real examples",
+            "Conclude with disaster preparedness"
+          ],
+          "template": "Introduction: Natural disasters\nBody 1: Causes\nBody 2: Effects\nBody 3: Examples\nConclusion: Preparedness"
+        },
+        {
+          "id": "essay_22",
+          "title": "The Problem of Child Marriage in Rural Areas",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on the issue of child marriage in rural areas and its impact on society.",
+          "guidelines": [
+            "Define child marriage",
+            "Explain reasons behind it",
+            "Discuss harmful effects",
+            "Suggest laws and education as solutions",
+            "Conclude with need for awareness"
+          ],
+          "template": "Introduction: Child marriage issue\nBody 1: Causes\nBody 2: Effects\nBody 3: Solutions\nConclusion: Awareness needed"
+        },
+        {
+          "id": "essay_23",
+          "title": "Corruption in Public Life",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay explaining how corruption affects governance and development.",
+          "guidelines": [
+            "Introduce corruption problem",
+            "Discuss causes like greed and weak laws",
+            "Explain effects on growth and trust",
+            "Suggest transparency and reforms",
+            "Conclude with importance of honesty"
+          ],
+          "template": "Introduction: Define corruption\nBody 1: Causes\nBody 2: Effects\nBody 3: Solutions\nConclusion: Honest governance"
+        },
+        {
+          "id": "essay_24",
+          "title": "Climate Change and Farmers’ Struggles",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on how climate change affects farmers and agriculture.",
+          "guidelines": [
+            "Introduce climate change issue",
+            "Discuss effects like drought and floods",
+            "Give examples of farmer struggles",
+            "Suggest solutions like sustainable farming",
+            "Conclude with role of society"
+          ],
+          "template": "Introduction: Climate change\nBody 1: Effects on farming\nBody 2: Examples\nBody 3: Solutions\nConclusion: Support farmers"
+        },
+        {
+          "id": "essay_25",
+          "title": "The Effect of Gadgets on Human Health",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay discussing how excessive gadget use affects human health.",
+          "guidelines": [
+            "Introduce gadgets in modern life",
+            "Discuss positive uses",
+            "Explain harmful effects like eye strain, stress",
+            "Give examples or studies",
+            "Conclude with balance and advice"
+          ],
+          "template": "Introduction: Gadgets today\nBody 1: Positive uses\nBody 2: Negative effects\nBody 3: Examples\nConclusion: Balanced use"
+        },
+        {
+          "id": "essay_26",
+          "title": "Poverty and Hunger in India",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on the causes, effects, and solutions for poverty and hunger in India.",
+          "guidelines": [
+            "Introduce poverty issue",
+            "Explain causes like unemployment",
+            "Discuss effects on children and families",
+            "Suggest solutions like jobs and welfare",
+            "Conclude with call for action"
+          ],
+          "template": "Introduction: Define poverty and hunger\nBody 1: Causes\nBody 2: Effects\nBody 3: Solutions\nConclusion: Call for action"
+        },
+        {
+          "id": "essay_27",
+          "title": "The Problem of Brain Drain",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on why educated people move abroad and its impact on the nation.",
+          "guidelines": [
+            "Define brain drain",
+            "Explain reasons like better jobs abroad",
+            "Discuss negative impact on home country",
+            "Mention possible benefits (remittances)",
+            "Suggest solutions like opportunities at home"
+          ],
+          "template": "Introduction: Define brain drain\nBody 1: Causes\nBody 2: Negative impacts\nBody 3: Benefits and solutions\nConclusion: Retain talent"
+        },
+        {
+          "id": "essay_28",
+          "title": "Water Scarcity in Cities",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay explaining the reasons behind water scarcity in cities and possible solutions.",
+          "guidelines": [
+            "Introduce importance of water",
+            "Explain causes like population and wastage",
+            "Discuss impact on urban life",
+            "Suggest conservation methods",
+            "Conclude with shared responsibility"
+          ],
+          "template": "Introduction: Importance of water\nBody 1: Causes of scarcity\nBody 2: Effects on cities\nBody 3: Solutions\nConclusion: Save water together"
+        },
+        {
+          "id": "essay_29",
+          "title": "The Impact of Online Gaming on Students",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on both the advantages and disadvantages of online gaming for students.",
+          "guidelines": [
+            "Introduce popularity of online games",
+            "Explain positive aspects like skills and teamwork",
+            "Discuss negatives like addiction and health issues",
+            "Give examples or survey data",
+            "Conclude with advice for balanced play"
+          ],
+          "template": "Introduction: Online games\nBody 1: Positive impacts\nBody 2: Negative impacts\nBody 3: Examples/data\nConclusion: Balanced approach"
+        },
+        {
+          "id": "essay_30",
+          "title": "Traffic Jams and Road Accidents",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay on the problems of traffic jams and road accidents in cities.",
+          "guidelines": [
+            "Introduce traffic problem",
+            "Explain causes of traffic jams",
+            "Discuss road accidents and safety issues",
+            "Give real-life examples",
+            "Conclude with solutions for safe travel"
+          ],
+          "template": "Introduction: Traffic in cities\nBody 1: Causes of jams\nBody 2: Accidents and safety issues\nBody 3: Examples\nConclusion: Safer roads"
+        },
+        {
+          "id": "essay_31",
+          "title": "The Problem of Inflation in Daily Life",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on how inflation affects daily life and the economy.",
+          "guidelines": [
+            "Introduce inflation concept",
+            "Explain reasons for price rise",
+            "Discuss effects on families and economy",
+            "Suggest government and personal steps",
+            "Conclude with need for balance"
+          ],
+          "template": "Introduction: Define inflation\nBody 1: Causes\nBody 2: Effects\nBody 3: Solutions\nConclusion: Balance economy"
+        },
+        {
+          "id": "essay_32",
+          "title": "The Importance of the Internet in Education",
+          "difficulty": "Beginner",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on how the internet is transforming the field of education.",
+          "guidelines": [
+            "Introduce role of internet",
+            "Explain benefits like online learning",
+            "Discuss challenges like distraction",
+            "Give examples from schools or universities",
+            "Conclude with balanced view"
+          ],
+          "template": "Introduction: Internet in education\nBody 1: Benefits\nBody 2: Challenges\nBody 3: Examples\nConclusion: Balanced perspective"
+        },
+        {
+          "id": "essay_33",
+          "title": "Artificial Intelligence – Boon or Bane?",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on the benefits and risks of artificial intelligence in modern life.",
+          "guidelines": [
+            "Introduce AI technology",
+            "Explain benefits like automation",
+            "Discuss risks like job loss or misuse",
+            "Give real-world examples",
+            "Conclude with balanced perspective"
+          ],
+          "template": "Introduction: AI in life\nBody 1: Benefits\nBody 2: Risks\nBody 3: Examples\nConclusion: Balanced approach"
+        },
+        {
+          "id": "essay_34",
+          "title": "Women in Sports – Breaking Barriers",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay on how women are achieving success in sports and overcoming challenges.",
+          "guidelines": [
+            "Introduce women’s participation in sports",
+            "Mention achievements of famous women athletes",
+            "Discuss challenges faced",
+            "Highlight importance of equality",
+            "Conclude with inspiring message"
+          ],
+          "template": "Introduction: Women in sports\nBody 1: Achievements\nBody 2: Challenges faced\nBody 3: Importance of equality\nConclusion: Inspiring message"
+        },
+        {
+          "id": "essay_35",
+          "title": "Space Exploration and Human Future",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay on why space exploration is important for the future of humanity.",
+          "guidelines": [
+            "Introduce space exploration history",
+            "Discuss benefits like science and resources",
+            "Explain challenges like cost",
+            "Give examples of missions",
+            "Conclude with vision for future"
+          ],
+          "template": "Introduction: Space exploration\nBody 1: Benefits\nBody 2: Challenges\nBody 3: Examples\nConclusion: Human future"
+        },
+        {
+          "id": "essay_36",
+          "title": "Importance of Physical Fitness in Modern Life",
+          "difficulty": "Beginner",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay on why physical fitness is important for health and success in modern life.",
+          "guidelines": [
+            "Introduce need for fitness",
+            "Discuss benefits for health",
+            "Mention mental well-being",
+            "Give examples of fitness activities",
+            "Conclude with advice for all"
+          ],
+          "template": "Introduction: Fitness need\nBody 1: Health benefits\nBody 2: Mental well-being\nBody 3: Activities\nConclusion: Stay fit"
+        },
+        {
+          "id": "essay_37",
+          "title": "Role of Soldiers in Protecting Borders",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay about the sacrifices and role of soldiers in protecting the nation’s borders.",
+          "guidelines": [
+            "Introduce soldiers’ role",
+            "Explain importance of security",
+            "Mention sacrifices and bravery",
+            "Give examples of real soldiers",
+            "Conclude with respect and gratitude"
+          ],
+          "template": "Introduction: Soldiers’ role\nBody 1: Importance of borders\nBody 2: Sacrifices and bravery\nBody 3: Examples\nConclusion: Respect soldiers"
+        },
+        {
+          "id": "essay_38",
+          "title": "Festivals of India and Their Cultural Value",
+          "difficulty": "Beginner",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write an essay on the importance of festivals in India and their role in culture.",
+          "guidelines": [
+            "Introduce India’s diversity",
+            "Explain role of festivals in unity",
+            "Mention major festivals",
+            "Describe cultural values",
+            "Conclude with importance for future generations"
+          ],
+          "template": "Introduction: India’s diversity\nBody 1: Festivals and unity\nBody 2: Major festivals\nBody 3: Cultural values\nConclusion: Preserve festivals"
+        },
+        {
+          "id": "essay_39",
+          "title": "Online Shopping vs Traditional Shopping",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "argumentative",
+          "prompt": "Write an essay comparing online shopping and traditional shopping.",
+          "guidelines": [
+            "Introduce both shopping methods",
+            "Explain benefits of online shopping",
+            "Discuss advantages of traditional shopping",
+            "Give examples and comparisons",
+            "Conclude with balanced choice"
+          ],
+          "template": "Introduction: Shopping methods\nBody 1: Online shopping benefits\nBody 2: Traditional shopping benefits\nBody 3: Comparison/examples\nConclusion: Balanced choice"
+        },
+        {
+          "id": "essay_40",
+          "title": "The Importance of Newspapers in the Digital Age",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "opinion",
+          "prompt": "Write an essay on why newspapers are still important in today’s digital world.",
+          "guidelines": [
+            "Introduce rise of digital media",
+            "Explain importance of newspapers",
+            "Mention reliability and depth",
+            "Give examples of their role",
+            "Conclude with balanced view"
+          ],
+          "template": "Introduction: Digital media vs newspapers\nBody 1: Importance of newspapers\nBody 2: Reliability and depth\nBody 3: Examples\nConclusion: Balanced perspective"
+        },
+        {
+          "id": "essay_41",
+          "title": "My Dream for a Corruption-Free India",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "opinion",
+          "prompt": "Write an essay sharing your dream of a corruption-free India and how it can be achieved.",
+          "guidelines": [
+            "Introduce corruption problem",
+            "Explain your dream vision",
+            "Suggest solutions like laws and honesty",
+            "Discuss role of youth and citizens",
+            "Conclude with inspiring message"
+          ],
+          "template": "Introduction: Corruption issue\nBody 1: Vision of corruption-free India\nBody 2: Solutions\nBody 3: Role of youth\nConclusion: Inspiring message"
         }
       ]
     },
     {
       "id": "speech",
       "title": "Speech Writing",
-      "subtitle": "Public Speaking & Presentations", 
+      "subtitle": "Public Speaking & Presentations",
       "icon": "mic_outlined",
       "color": "0xFF3F51B5",
       "completedCount": 1,
@@ -279,7 +2480,7 @@
         "Clear main message or theme",
         "Logical organization of points",
         "Rhetorical devices and techniques",
-        "Audience engagement strategies", 
+        "Audience engagement strategies",
         "Memorable conclusion with call to action"
       ],
       "rules": [
@@ -290,6 +2491,7 @@
         "Practice vocal variety and pacing",
         "End with a strong call to action"
       ],
+
       "practiceItems": [
         {
           "id": "speech_1",
@@ -307,6 +2509,584 @@
             "End with an inspiring call to action"
           ],
           "template": "Opening Hook: [Environmental fact/question]\nMain Point 1: [First eco-action]\nMain Point 2: [Second eco-action]\nMain Point 3: [Third eco-action]\nConclusion: [Call to action]"
+        },
+        {
+          "id": "speech_2",
+          "title": "The Importance of Morning Assembly in Shaping Our Day",
+          "difficulty": "Easy",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Deliver a short speech on why the morning assembly is important for discipline, unity, and starting the day positively in school.",
+          "guidelines": [
+            "Begin with a thought-provoking quote or greeting",
+            "Explain how morning assemblies set the tone for the day",
+            "Highlight 2–3 benefits (discipline, confidence, moral values)",
+            "Share a personal experience or observation",
+            "Conclude with a positive note on participation"
+          ],
+          "template": "Opening Greeting: [Quote/Greeting]\nBenefit 1: [Discipline]\nBenefit 2: [Unity/Confidence]\nBenefit 3: [Moral values]\nConclusion: [Encouragement to participate actively]"
+        },
+        {
+          "id": "speech_3",
+          "title": "Why We Celebrate Children’s Day in Schools",
+          "difficulty": "Easy",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Prepare a speech for Children’s Day, explaining its history, significance, and what it teaches students.",
+          "guidelines": [
+            "Start with a quote about childhood",
+            "Briefly explain Pandit Nehru’s role and love for children",
+            "Share why schools celebrate this day",
+            "Add a message on the importance of enjoying childhood responsibly",
+            "End with a cheerful Children’s Day wish"
+          ],
+          "template": "Opening Hook: [Quote about childhood]\nHistory: [Why and when Children’s Day is celebrated]\nImportance: [Significance for students]\nPersonal Touch: [Message to friends]\nConclusion: [Children’s Day greeting]"
+        },
+        {
+          "id": "speech_4",
+          "title": "Value of Participating in Debate and Elocution Competitions",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "motivational",
+          "prompt": "Write a speech motivating students to take part in debate and elocution competitions, explaining how they build confidence and skills.",
+          "guidelines": [
+            "Start with a question about overcoming stage fear",
+            "List benefits of public speaking (confidence, critical thinking, fluency)",
+            "Share your own or a friend’s experience",
+            "Encourage students to step out of their comfort zone",
+            "End with a motivational statement"
+          ],
+          "template": "Opening Question: [Stage fear related question]\nBenefit 1: [Confidence]\nBenefit 2: [Critical thinking]\nBenefit 3: [Communication skills]\nConclusion: [Motivational call to participate]"
+        },
+        {
+          "id": "speech_5",
+          "title": "My First Experience on Stage in School",
+          "difficulty": "Easy",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "narrative",
+          "prompt": "Narrate your first experience of speaking or performing on stage, sharing how you felt and what you learned.",
+          "guidelines": [
+            "Begin with when and why you were on stage",
+            "Describe your emotions (nervous, excited, happy)",
+            "Explain what happened during the performance",
+            "Share what you learned from the experience",
+            "End with encouragement to try stage opportunities"
+          ],
+          "template": "Introduction: [When/why on stage]\nFeeling: [Describe emotions]\nExperience: [What happened]\nLesson: [What you learned]\nConclusion: [Encourage others]"
+        },
+        {
+          "id": "speech_6",
+          "title": "Role of Annual Sports Meet in Student Development",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Deliver a speech on the importance of annual sports meets in building teamwork, discipline, and leadership among students.",
+          "guidelines": [
+            "Start with a quote about sports or fitness",
+            "Explain how sports improve health and teamwork",
+            "Mention leadership and discipline gained through participation",
+            "Add an example of a famous athlete’s journey",
+            "Conclude with a call to participate in sports"
+          ],
+          "template": "Opening Quote: [Sports-related quote]\nBenefit 1: [Teamwork]\nBenefit 2: [Discipline]\nBenefit 3: [Leadership]\nConclusion: [Encouragement to join sports]"
+        },
+        {
+          "id": "speech_7",
+          "title": "Why Cultural Fests Make School Life Memorable",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write a speech about the joy of cultural fests, highlighting performances, creativity, and togetherness.",
+          "guidelines": [
+            "Start with an enthusiastic greeting",
+            "Describe the excitement of preparations and events",
+            "Highlight cultural diversity and creativity",
+            "Share how these events strengthen friendships",
+            "Conclude by stating why cultural fests are unforgettable"
+          ],
+          "template": "Greeting: [Warm introduction]\nEvent Highlight 1: [Performances]\nEvent Highlight 2: [Creativity/diversity]\nEvent Highlight 3: [Togetherness]\nConclusion: [Memorable value of cultural fest]"
+        },
+        {
+          "id": "speech_8",
+          "title": "The Spirit of Independence Day Celebrations in School",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Prepare a speech for Independence Day in school, focusing on the spirit of freedom, patriotism, and unity.",
+          "guidelines": [
+            "Start with a patriotic slogan or greeting",
+            "Briefly mention the struggle for independence",
+            "Highlight how schools celebrate the day",
+            "Explain the values of patriotism and unity",
+            "End with a motivating message for students"
+          ],
+          "template": "Opening Slogan: [Patriotic greeting]\nHistory: [Struggle for independence]\nCelebrations: [How school celebrates]\nValues: [Patriotism and unity]\nConclusion: [Inspiring message]"
+        },
+        {
+          "id": "speech_9",
+          "title": "How School Exhibitions Inspire Young Innovators",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "descriptive",
+          "prompt": "Write a speech about the role of school exhibitions in encouraging creativity, teamwork, and innovation among students.",
+          "guidelines": [
+            "Begin with an engaging fact about innovation",
+            "Describe the purpose of school exhibitions",
+            "Give examples of creative student projects",
+            "Highlight how exhibitions boost confidence",
+            "Conclude with a message on innovation"
+          ],
+          "template": "Opening Fact: [About innovation]\nPurpose: [Why exhibitions are held]\nExample: [Student projects]\nBenefit: [Confidence/creativity]\nConclusion: [Message on innovation]"
+        },
+        {
+          "id": "speech_10",
+          "title": "Farewell Functions – A Mixture of Joy and Tears",
+          "difficulty": "Easy",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "narrative",
+          "prompt": "Deliver a farewell speech sharing the emotions of joy, gratitude, and sadness during school farewell functions.",
+          "guidelines": [
+            "Start with a nostalgic memory or thank you",
+            "Mention happy school experiences",
+            "Talk about bonds with teachers and friends",
+            "Express the mixed emotions of parting",
+            "End with best wishes for the future"
+          ],
+          "template": "Opening: [Nostalgic memory]\nExperience 1: [Happy school moments]\nExperience 2: [Friendship/teachers]\nEmotion: [Joy and sadness]\nConclusion: [Best wishes for classmates]"
+        },
+        {
+          "id": "speech_11",
+          "title": "Republic Day Celebrations and Their Message to Students",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Write a speech on Republic Day celebrations in school and the values of democracy, equality, and responsibility they teach.",
+          "guidelines": [
+            "Start with a patriotic quote or greeting",
+            "Explain the significance of Republic Day",
+            "Describe how schools celebrate it",
+            "Share its message for students (equality, rights, duties)",
+            "Conclude with a patriotic call to action"
+          ],
+          "template": "Opening Quote: [Patriotic greeting]\nSignificance: [Why Republic Day is celebrated]\nCelebration: [How school observes it]\nMessage: [Values of democracy]\nConclusion: [Inspiring call to action]"
+        },
+        {
+          "id": "speech_12",
+          "title": "Why Every Student Should Take Part in the Annual Day",
+          "difficulty": "Easy",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "motivational",
+          "prompt": "Deliver a motivational speech encouraging all students to participate in Annual Day programs for learning and fun.",
+          "guidelines": [
+            "Start with a cheerful greeting",
+            "Explain what Annual Day means for students",
+            "Highlight benefits (confidence, teamwork, joy)",
+            "Give an example of your own experience",
+            "End with a call to participate"
+          ],
+          "template": "Greeting: [Warm introduction]\nMeaning: [What Annual Day is]\nBenefit 1: [Confidence]\nBenefit 2: [Teamwork]\nBenefit 3: [Joy]\nConclusion: [Call to participate]"
+        },
+        {
+          "id": "speech_13",
+          "title": "The Role of School Clubs in Discovering Our Talents",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Prepare a speech on how school clubs (literary, arts, science, sports) help students discover and nurture their talents.",
+          "guidelines": [
+            "Begin with a thought about hobbies and talents",
+            "List different types of school clubs",
+            "Explain how they build skills and confidence",
+            "Share a personal or friend’s experience",
+            "End with encouragement to join clubs"
+          ],
+          "template": "Opening Thought: [About hobbies/talents]\nClub 1: [Literary/arts]\nClub 2: [Science/sports]\nBenefit: [Skill/talent discovery]\nConclusion: [Encouragement]"
+        },
+        {
+          "id": "speech_14",
+          "title": "Cleanliness Drives and What Students Learn from Them",
+          "difficulty": "Easy",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Write a short speech on the importance of school cleanliness drives and the lessons students learn from them.",
+          "guidelines": [
+            "Start with a quote about cleanliness",
+            "Describe what happens in cleanliness drives",
+            "Explain values learned (responsibility, teamwork, respect for environment)",
+            "Mention how it improves school life",
+            "Conclude with a cleanliness pledge"
+          ],
+          "template": "Opening Quote: [About cleanliness]\nActivity: [Cleanliness drive details]\nLesson 1: [Responsibility]\nLesson 2: [Teamwork]\nLesson 3: [Respect for environment]\nConclusion: [Cleanliness pledge]"
+        },
+        {
+          "id": "speech_15",
+          "title": "School Elections – Preparing Us for Democracy",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Deliver a speech about school elections and how they prepare students for leadership, responsibility, and democracy.",
+          "guidelines": [
+            "Begin with a question about leadership",
+            "Explain the purpose of school elections",
+            "Highlight skills gained (leadership, campaigning, decision-making)",
+            "Share how elections reflect democracy",
+            "End with an inspiring message about responsibility"
+          ],
+          "template": "Opening Question: [About leadership]\nPurpose: [Why elections are held]\nSkill 1: [Leadership]\nSkill 2: [Decision-making]\nSkill 3: [Responsibility]\nConclusion: [Message about democracy]"
+        },
+        {
+          "id": "speech_16",
+          "title": "Why Discipline in School is the First Step to Success",
+          "difficulty": "Easy",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "motivational",
+          "prompt": "Write a speech on the importance of discipline in school life and how it leads to success.",
+          "guidelines": [
+            "Start with a proverb about discipline",
+            "Explain how discipline shapes good habits",
+            "Give examples from school routines",
+            "Share how discipline leads to success",
+            "Conclude with advice for students"
+          ],
+          "template": "Opening Proverb: [About discipline]\nPoint 1: [Good habits]\nPoint 2: [School routine]\nPoint 3: [Success through discipline]\nConclusion: [Advice to students]"
+        },
+        {
+          "id": "speech_17",
+          "title": "Education is the Most Powerful Weapon",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "persuasive",
+          "prompt": "Prepare a speech highlighting the power of education in changing lives and shaping society.",
+          "guidelines": [
+            "Start with a famous quote on education",
+            "Explain how education empowers individuals",
+            "Give examples of real-life success stories",
+            "Highlight education’s role in society’s progress",
+            "Conclude with a call to value education"
+          ],
+          "template": "Opening Quote: [On education]\nPoint 1: [Personal empowerment]\nPoint 2: [Society’s progress]\nExample: [Real-life success]\nConclusion: [Call to value education]"
+        },
+        {
+          "id": "speech_18",
+          "title": "Role of Youth in Creating a Better Tomorrow",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "motivational",
+          "prompt": "Write a speech on how today’s youth can contribute to building a better and brighter future.",
+          "guidelines": [
+            "Begin with a thought about youth power",
+            "List challenges faced by society",
+            "Explain how youth can solve them (innovation, responsibility, service)",
+            "Give examples of young achievers",
+            "End with a motivational call to action"
+          ],
+          "template": "Opening Thought: [Youth power]\nChallenge 1: [Problem]\nSolution 1: [Role of youth]\nExample: [Young achiever]\nConclusion: [Motivational call]"
+        },
+        {
+          "id": "speech_19",
+          "title": "Saving Trees, Saving Life",
+          "difficulty": "Easy",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "persuasive",
+          "prompt": "Deliver a short speech on the importance of planting and saving trees for a healthy environment.",
+          "guidelines": [
+            "Start with a fact about deforestation",
+            "Explain how trees support life",
+            "Suggest simple actions (planting, reducing paper use)",
+            "Share personal or local examples",
+            "End with a green pledge"
+          ],
+          "template": "Opening Fact: [Deforestation]\nPoint 1: [Trees and life]\nPoint 2: [Actions to save trees]\nExample: [Local/Personal]\nConclusion: [Green pledge]"
+        },
+        {
+          "id": "speech_20",
+          "title": "Why Books Are Still Our Best Friends",
+          "difficulty": "Easy",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "motivational",
+          "prompt": "Write a speech on the timeless value of books in learning and personal growth.",
+          "guidelines": [
+            "Begin with a quote about books",
+            "Describe how books provide knowledge and imagination",
+            "Compare books with modern gadgets",
+            "Share personal experience of learning from a book",
+            "Conclude with advice to read regularly"
+          ],
+          "template": "Opening Quote: [On books]\nPoint 1: [Knowledge]\nPoint 2: [Imagination]\nComparison: [Books vs gadgets]\nConclusion: [Advice to read]"
+        },
+        {
+          "id": "speech_21",
+          "title": "Importance of Physical Fitness in Student Life",
+          "difficulty": "Easy",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Prepare a speech on why physical fitness is important for students in balancing academics and health.",
+          "guidelines": [
+            "Start with a health-related fact or quote",
+            "Explain the link between fitness and learning",
+            "List simple student-friendly fitness habits",
+            "Share a personal or school sports example",
+            "Conclude with advice on healthy living"
+          ],
+          "template": "Opening Fact/Quote: [On health]\nPoint 1: [Fitness and learning]\nPoint 2: [Fitness habits]\nExample: [Sports/Personal]\nConclusion: [Advice on health]"
+        },
+        {
+          "id": "speech_22",
+          "title": "Social Media – Boon or Bane for Students?",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "debate",
+          "prompt": "Deliver a speech discussing both the advantages and disadvantages of social media for students.",
+          "guidelines": [
+            "Start with a question about social media use",
+            "Present benefits (connection, learning, expression)",
+            "Present drawbacks (addiction, distraction, misuse)",
+            "Balance both sides with examples",
+            "Conclude with advice on responsible use"
+          ],
+          "template": "Opening Question: [On social media]\nBenefit 1: [Connection]\nBenefit 2: [Learning]\nDrawback 1: [Distraction]\nDrawback 2: [Misuse]\nConclusion: [Responsible use]"
+        },
+        {
+          "id": "speech_23",
+          "title": "My Role Model and Why I Admire Them",
+          "difficulty": "Easy",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "narrative",
+          "prompt": "Write a speech about your role model and the qualities that inspire you.",
+          "guidelines": [
+            "Begin with an introduction of your role model",
+            "Describe their main qualities or achievements",
+            "Explain how they influence your life",
+            "Share a personal story or lesson learned",
+            "Conclude with why others should be inspired too"
+          ],
+          "template": "Introduction: [Who is your role model]\nQuality 1: [Trait]\nQuality 2: [Achievement]\nImpact: [How they inspire you]\nConclusion: [Why admire them]"
+        },
+        {
+          "id": "speech_24",
+          "title": "Value of Friendship in Our Growing Years",
+          "difficulty": "Easy",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "narrative",
+          "prompt": "Prepare a speech on the importance of friendship in student life and personal growth.",
+          "guidelines": [
+            "Start with a quote or proverb about friendship",
+            "Explain why friends are important in school life",
+            "Share experiences of learning and support from friends",
+            "Highlight values like trust, care, and loyalty",
+            "Conclude with an appreciation of friendship"
+          ],
+          "template": "Opening Quote: [On friendship]\nPoint 1: [Importance of friends]\nPoint 2: [Experiences]\nValue: [Trust, care, loyalty]\nConclusion: [Appreciation]"
+        },
+        {
+          "id": "speech_25",
+          "title": "Water Conservation – A Responsibility of Every Student",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "persuasive",
+          "prompt": "Write a persuasive speech urging students to save water and practice water conservation.",
+          "guidelines": [
+            "Begin with a shocking fact about water scarcity",
+            "Explain why water is vital for life",
+            "Suggest practical water-saving tips for students",
+            "Use rhetorical questions for effect",
+            "Conclude with a pledge to save water"
+          ],
+          "template": "Opening Fact: [Water scarcity]\nPoint 1: [Importance of water]\nPoint 2: [Tips for saving water]\nQuestion: [Rhetorical]\nConclusion: [Pledge to conserve]"
+        },
+        {
+          "id": "speech_26",
+          "title": "Importance of Teamwork in Everyday Life",
+          "difficulty": "Easy",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Deliver a speech explaining why teamwork is essential in school, sports, and life.",
+          "guidelines": [
+            "Start with a proverb about teamwork",
+            "Explain teamwork in school and projects",
+            "Give examples from sports or group tasks",
+            "Highlight benefits like cooperation and success",
+            "Conclude with advice to work together"
+          ],
+          "template": "Opening Proverb: [On teamwork]\nPoint 1: [School teamwork]\nPoint 2: [Sports example]\nBenefit: [Cooperation, success]\nConclusion: [Advice]"
+        },
+        {
+          "id": "speech_27",
+          "title": "Kindness – A Language Everyone Understands",
+          "difficulty": "Easy",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "motivational",
+          "prompt": "Prepare a short speech on why kindness is powerful and should be practiced daily.",
+          "guidelines": [
+            "Start with a story or quote about kindness",
+            "Explain how kindness impacts others positively",
+            "Give examples from daily student life",
+            "Highlight how kindness builds relationships",
+            "End with a call to spread kindness"
+          ],
+          "template": "Opening Story/Quote: [On kindness]\nPoint 1: [Impact on others]\nPoint 2: [Examples from life]\nPoint 3: [Building relationships]\nConclusion: [Call to spread kindness]"
+        },
+        {
+          "id": "speech_28",
+          "title": "How to Overcome Fear of Failure",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "motivational",
+          "prompt": "Write a speech on how students can overcome fear of failure and build confidence.",
+          "guidelines": [
+            "Start with a motivational quote about failure",
+            "Explain why failure is part of success",
+            "Give examples of famous people who failed first",
+            "Suggest practical tips for students",
+            "Conclude with encouragement to never give up"
+          ],
+          "template": "Opening Quote: [On failure]\nPoint 1: [Failure is learning]\nExample: [Famous personality]\nTip 1: [Practical advice]\nConclusion: [Encouragement]"
+        },
+        {
+          "id": "speech_29",
+          "title": "The Power of Positive Thinking",
+          "difficulty": "Easy",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "motivational",
+          "prompt": "Deliver a motivational speech about how positive thinking helps students succeed.",
+          "guidelines": [
+            "Start with a proverb about positivity",
+            "Explain how positive thinking reduces stress",
+            "Give examples from student life and exams",
+            "Highlight long-term benefits of optimism",
+            "Conclude with advice to stay positive"
+          ],
+          "template": "Opening Proverb: [On positivity]\nPoint 1: [Stress reduction]\nPoint 2: [Examples]\nBenefit: [Long-term success]\nConclusion: [Advice]"
+        },
+        {
+          "id": "speech_30",
+          "title": "Why Honoring Our Parents is Equal to Worship",
+          "difficulty": "Easy",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "moral",
+          "prompt": "Write a speech on the importance of respecting and honoring parents.",
+          "guidelines": [
+            "Begin with a proverb about parents",
+            "Explain the sacrifices parents make",
+            "Share personal examples of parental support",
+            "Highlight respect as a moral duty",
+            "Conclude with a message of gratitude"
+          ],
+          "template": "Opening Proverb: [On parents]\nPoint 1: [Sacrifices]\nPoint 2: [Personal example]\nPoint 3: [Respect as duty]\nConclusion: [Gratitude message]"
+        },
+        {
+          "id": "speech_31",
+          "title": "Dreams Are the First Step Towards Success",
+          "difficulty": "Easy",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "motivational",
+          "prompt": "Prepare a speech about how having dreams and goals leads to success.",
+          "guidelines": [
+            "Start with a motivational quote on dreams",
+            "Explain why dreams give direction",
+            "Give examples of achievers who had big dreams",
+            "Encourage students to set their own goals",
+            "Conclude with advice to follow dreams"
+          ],
+          "template": "Opening Quote: [On dreams]\nPoint 1: [Dreams give direction]\nExample: [Achiever]\nPoint 2: [Set goals]\nConclusion: [Advice to follow dreams]"
+        },
+        {
+          "id": "speech_32",
+          "title": "Role of Technology in Making Learning Easier",
+          "difficulty": "Intermediate",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "informative",
+          "prompt": "Deliver a speech on how technology supports education and makes learning more effective.",
+          "guidelines": [
+            "Start with a fact about technology in education",
+            "Explain how it helps students learn faster",
+            "Give examples (online classes, apps, smart boards)",
+            "Highlight benefits and challenges",
+            "Conclude with advice on balanced use"
+          ],
+          "template": "Opening Fact: [On technology]\nBenefit 1: [Faster learning]\nExample: [Apps/Smart boards]\nBenefit 2: [Accessibility]\nConclusion: [Balanced use]"
+        },
+        {
+          "id": "speech_33",
+          "title": "Why Every Student Should Learn Public Speaking",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "motivational",
+          "prompt": "Prepare a speech on the importance of learning public speaking for students.",
+          "guidelines": [
+            "Begin with a fact about communication skills",
+            "Explain why public speaking builds confidence",
+            "Give examples from debates and competitions",
+            "Highlight its value in future careers",
+            "Conclude with encouragement to practice"
+          ],
+          "template": "Opening Fact: [On communication]\nPoint 1: [Confidence]\nPoint 2: [Debates/Competitions]\nPoint 3: [Career value]\nConclusion: [Encouragement]"
+        },
+        {
+          "id": "speech_34",
+          "title": "Unity is Strength – A Lesson for All of Us",
+          "difficulty": "Easy",
+          "estimatedTime": "15 mins",
+          "isCompleted": false,
+          "type": "moral",
+          "prompt": "Write a short speech on the value of unity and cooperation in life.",
+          "guidelines": [
+            "Start with a proverb about unity",
+            "Explain why unity is important in school and society",
+            "Give examples (team projects, sports, community work)",
+            "Highlight the power of cooperation",
+            "Conclude with a moral lesson"
+          ],
+          "template": "Opening Proverb: [On unity]\nPoint 1: [Importance in school]\nPoint 2: [Examples]\nPoint 3: [Cooperation]\nConclusion: [Moral lesson]"
+        },
+        {
+          "id": "speech_35",
+          "title": "The Dangers of Plastic and How We Can Avoid It",
+          "difficulty": "Intermediate",
+          "estimatedTime": "20 mins",
+          "isCompleted": false,
+          "type": "persuasive",
+          "prompt": "Deliver a speech warning about the dangers of plastic use and suggesting alternatives.",
+          "guidelines": [
+            "Start with a shocking fact about plastic pollution",
+            "Explain why plastic is harmful to environment and health",
+            "Suggest eco-friendly alternatives",
+            "Give examples of student-led initiatives",
+            "Conclude with a pledge to reduce plastic use"
+          ],
+          "template": "Opening Fact: [On plastic pollution]\nPoint 1: [Harm to environment]\nPoint 2: [Harm to health]\nSolution: [Eco-friendly alternatives]\nExample: [Student initiative]\nConclusion: [Pledge]"
         }
       ]
     },
@@ -314,16 +3094,16 @@
       "id": "cv",
       "title": "CV/Resume",
       "subtitle": "Professional Documents",
-      "icon": "person_outline", 
+      "icon": "person_outline",
       "color": "0xFFFF9800",
       "completedCount": 1,
-      "totalCount": 6,
+      "totalCount": 16,
       "description": "Create professional CVs and resumes that effectively showcase your skills, experience, and qualifications.",
       "keyComponents": [
         "Contact information header",
         "Professional summary/objective",
         "Education section with achievements",
-        "Skills and competencies", 
+        "Skills and competencies",
         "Experience and projects",
         "Additional sections (languages, hobbies)"
       ],
@@ -352,6 +3132,312 @@
             "Include any volunteer work or projects"
           ],
           "template": "[Full Name]\n[Contact Information]\n\nPersonal Statement:\n[2-3 sentences]\n\nEducation:\n[School/College details]\n\nSkills:\n[Relevant abilities]\n\nExperience:\n[Any work/volunteer experience]"
+        },
+        {
+          "id": "cv_2",
+          "title": "Resume for Sales Executive (Grocery Store)",
+          "difficulty": "Beginner",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "resume",
+          "prompt": "Write a resume to apply for a part-time job in a grocery store as a Sales Executive.",
+          "guidelines": [
+            "Start with name and contact details",
+            "Add a short objective (career goal)",
+            "Highlight communication and sales skills",
+            "Mention any prior customer service/volunteer work",
+            "Add education details"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo gain experience as a Sales Executive while studying.\n\nSkills:\n- Communication\n- Customer handling\n- Teamwork\n\nEducation:\n[Your current course]\n\nExperience:\n[Any part-time or volunteer work]"
+        },
+        {
+          "id": "cv_3",
+          "title": "Resume for Cashier (Supermarket)",
+          "difficulty": "Beginner",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "resume",
+          "prompt": "Prepare a resume for applying as a cashier at a supermarket.",
+          "guidelines": [
+            "Provide personal/contact details",
+            "State objective with interest in cashier role",
+            "Highlight skills in math, accuracy, and customer service",
+            "Mention education background",
+            "Add relevant work or volunteer experience"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo work as a cashier and utilize accuracy and customer service skills.\n\nSkills:\n- Handling cash\n- Mathematical accuracy\n- Polite communication\n\nEducation:\n[School/College]\n\nExperience:\n[Any relevant experience]"
+        },
+        {
+          "id": "cv_4",
+          "title": "Resume for Library Assistant",
+          "difficulty": "Intermediate",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "resume",
+          "prompt": "Write a resume for a part-time job as a library assistant in your college.",
+          "guidelines": [
+            "Mention attention to detail and organizational skills",
+            "Add experience with books or academic work",
+            "State education clearly",
+            "Show reliability and responsibility",
+            "Highlight any tech/computer skills"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo assist in library operations with organizational and academic skills.\n\nSkills:\n- Cataloguing\n- Record keeping\n- Computer literacy\n\nEducation:\n[Your details]\n\nExperience:\n[Relevant or volunteer work]"
+        },
+        {
+          "id": "cv_5",
+          "title": "Resume for Receptionist (Hospital)",
+          "difficulty": "Intermediate",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "resume",
+          "prompt": "Prepare a resume to apply for the role of a receptionist in a hospital.",
+          "guidelines": [
+            "Include complete contact details",
+            "Write a polite and professional objective",
+            "Highlight communication and multitasking skills",
+            "Mention knowledge of handling patients or visitors",
+            "Add education background"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo work as a receptionist with strong communication and organizational skills.\n\nSkills:\n- Communication\n- Time management\n- Basic computer operations\n\nEducation:\n[Your details]\n\nExperience:\n[Any relevant experience]"
+        },
+        {
+          "id": "cv_6",
+          "title": "Resume for Computer Operator Internship (Cyber Café)",
+          "difficulty": "Intermediate",
+          "estimatedTime": "35 mins",
+          "isCompleted": false,
+          "type": "resume",
+          "prompt": "Draft a resume for a summer internship as a computer operator in a cyber café.",
+          "guidelines": [
+            "Mention computer knowledge and software skills",
+            "Add typing speed if known",
+            "Show willingness to learn",
+            "Include education and IT-related subjects",
+            "Highlight problem-solving ability"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo gain hands-on experience as a computer operator.\n\nSkills:\n- MS Office\n- Typing speed: [wpm]\n- Troubleshooting basics\n\nEducation:\n[Your details]\n\nExperience:\n[Any projects or coursework]"
+        },
+        {
+          "id": "cv_7",
+          "title": "Resume for Home Tutor (Class 8 - Science & Math)",
+          "difficulty": "Intermediate",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "resume",
+          "prompt": "Write a resume to apply as a home tutor for Class 8 students in Science and Math.",
+          "guidelines": [
+            "Highlight subject knowledge in Science and Math",
+            "Mention patience and teaching ability",
+            "Add academic performance/grades",
+            "State past tutoring or peer-teaching experience",
+            "Provide contact details"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo tutor students in Science and Math effectively.\n\nSkills:\n- Strong subject knowledge\n- Patience and clarity\n- Lesson planning\n\nEducation:\n[Your course details]\n\nExperience:\n[Any tutoring or mentoring experience]"
+        },
+        {
+          "id": "cv_8",
+          "title": "Resume for Waiter/Waitress (Restaurant)",
+          "difficulty": "Beginner",
+          "estimatedTime": "25 mins",
+          "isCompleted": false,
+          "type": "resume",
+          "prompt": "Prepare a resume for a part-time job as a waiter/waitress in a restaurant.",
+          "guidelines": [
+            "Show teamwork and customer service skills",
+            "Add communication and multitasking abilities",
+            "Mention prior hospitality or volunteering experience",
+            "Include education",
+            "Add personal qualities like politeness and punctuality"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo provide excellent customer service as a waiter/waitress.\n\nSkills:\n- Communication\n- Teamwork\n- Time management\n\nEducation:\n[Your details]\n\nExperience:\n[Any hospitality experience]"
+        },
+        {
+          "id": "cv_9",
+          "title": "Resume for Call Center Customer Service Executive",
+          "difficulty": "Intermediate",
+          "estimatedTime": "30 mins",
+          "isCompleted": false,
+          "type": "resume",
+          "prompt": "Write a resume to apply for a part-time job as a call center customer service executive.",
+          "guidelines": [
+            "Highlight communication and problem-solving skills",
+            "Add knowledge of computer and phone systems",
+            "Show patience and adaptability",
+            "Include prior service/volunteer experience",
+            "List education clearly"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo work as a customer service executive and assist clients effectively.\n\nSkills:\n- Communication\n- Conflict resolution\n- Computer literacy\n\nEducation:\n[Your details]\n\nExperience:\n[Any relevant experience]"
+        },
+        {
+          "id": "cv_10",
+          "title": "CV for Research Internship (University Science Dept.)",
+          "difficulty": "Advanced",
+          "estimatedTime": "45 mins",
+          "isCompleted": false,
+          "type": "cv",
+          "prompt": "Prepare a CV for applying for a research internship in a university science department.",
+          "guidelines": [
+            "Start with academic background",
+            "Include projects and lab work",
+            "Highlight research interests",
+            "Add relevant skills and software knowledge",
+            "Mention academic achievements"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo gain research experience in [field].\n\nEducation:\n[Academic background]\n\nProjects/Research:\n[List research projects]\n\nSkills:\n[Lab/software skills]\n\nAchievements:\n[Scholarships/awards]"
+        },
+        {
+          "id": "cv_11",
+          "title": "CV for Scholarship Application",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "cv",
+          "prompt": "Write a CV to apply for a scholarship in your chosen field of study.",
+          "guidelines": [
+            "List academic achievements and grades",
+            "Add extracurricular activities",
+            "Include leadership roles",
+            "Mention projects or community service",
+            "Write a clear career goal"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo secure a scholarship in [field].\n\nEducation:\n[Details with achievements]\n\nSkills:\n[Relevant skills]\n\nActivities:\n[Clubs/community service]\n\nAchievements:\n[Awards, ranks]"
+        },
+        {
+          "id": "cv_12",
+          "title": "CV for Graduate Program (Engineering)",
+          "difficulty": "Advanced",
+          "estimatedTime": "45 mins",
+          "isCompleted": false,
+          "type": "cv",
+          "prompt": "Prepare a CV for applying to a graduate program in engineering.",
+          "guidelines": [
+            "Include education background with GPA",
+            "Highlight projects, internships, and research",
+            "Add technical and software skills",
+            "Show leadership roles or teamwork",
+            "Mention academic awards"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo pursue graduate studies in engineering.\n\nEducation:\n[Details]\n\nProjects:\n[Relevant academic/industry projects]\n\nSkills:\n[Technical and programming skills]\n\nExperience:\n[Internships]\n\nAchievements:\n[Awards/scholarships]"
+        },
+        {
+          "id": "cv_13",
+          "title": "CV for Teaching Assistant (College)",
+          "difficulty": "Advanced",
+          "estimatedTime": "40 mins",
+          "isCompleted": false,
+          "type": "cv",
+          "prompt": "Draft a CV to apply for a teaching assistant position in your college.",
+          "guidelines": [
+            "Highlight strong academic performance",
+            "Add teaching/tutoring experience",
+            "Include technical or subject expertise",
+            "Mention communication and mentoring skills",
+            "Add education details"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo serve as a teaching assistant in [subject].\n\nEducation:\n[Your background]\n\nSkills:\n- Subject expertise\n- Communication\n- Mentoring\n\nExperience:\n[Tutoring/assisting]\n\nAchievements:\n[Academic awards]"
+        },
+        {
+          "id": "cv_14",
+          "title": "CV for High School English Teacher",
+          "difficulty": "Advanced",
+          "estimatedTime": "50 mins",
+          "isCompleted": false,
+          "type": "cv",
+          "prompt": "Write a CV for applying for the position of a high school English teacher.",
+          "guidelines": [
+            "Start with education in English/teaching",
+            "Add teaching certifications",
+            "Include teaching experience",
+            "Highlight lesson planning and classroom management skills",
+            "Mention extracurricular involvement"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo teach English at the high school level.\n\nEducation:\n[Degrees, certifications]\n\nSkills:\n- Lesson planning\n- Classroom management\n- Literature analysis\n\nExperience:\n[Teaching positions]\n\nAchievements:\n[Recognitions]"
+        },
+        {
+          "id": "cv_15",
+          "title": "CV for Software Engineer (IT Company)",
+          "difficulty": "Advanced",
+          "estimatedTime": "50 mins",
+          "isCompleted": false,
+          "type": "cv",
+          "prompt": "Prepare a CV for applying for the post of a software engineer in an IT company.",
+          "guidelines": [
+            "Add computer science degree/education",
+            "Mention programming languages and frameworks",
+            "Include projects and internships",
+            "Highlight teamwork and problem-solving skills",
+            "Add certifications if any"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo work as a software engineer in an IT company.\n\nEducation:\n[CS/IT degree]\n\nSkills:\n[Programming languages, tools]\n\nProjects:\n[Software development projects]\n\nExperience:\n[Internships/work]\n\nAchievements:\n[Certifications]"
+        },
+        {
+          "id": "cv_16",
+          "title": "CV for Junior Doctor (Hospital)",
+          "difficulty": "Advanced",
+          "estimatedTime": "50 mins",
+          "isCompleted": false,
+          "type": "cv",
+          "prompt": "Write a CV for applying as a junior doctor in a hospital.",
+          "guidelines": [
+            "Add medical education background",
+            "Include clinical rotations and internships",
+            "Highlight medical and communication skills",
+            "Mention research if any",
+            "Add certifications and licenses"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo begin a medical career as a junior doctor.\n\nEducation:\n[Medical degree]\n\nSkills:\n- Patient care\n- Diagnosis\n- Communication\n\nExperience:\n[Internships, rotations]\n\nResearch:\n[Any publications]\n\nAchievements:\n[Certifications]"
+        },
+        {
+          "id": "cv_17",
+          "title": "CV for Marketing Manager",
+          "difficulty": "Advanced",
+          "estimatedTime": "55 mins",
+          "isCompleted": false,
+          "type": "cv",
+          "prompt": "Prepare a CV to apply for the role of marketing manager in a company.",
+          "guidelines": [
+            "Highlight marketing degree or MBA",
+            "Show leadership and strategic planning skills",
+            "Include experience in campaigns and projects",
+            "Add achievements in sales/branding",
+            "Mention digital marketing tools knowledge"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo lead marketing strategies as a manager.\n\nEducation:\n[MBA/Marketing degree]\n\nSkills:\n- Strategy planning\n- Campaign management\n- Digital tools\n\nExperience:\n[Marketing positions]\n\nAchievements:\n[Campaign results]"
+        },
+        {
+          "id": "cv_18",
+          "title": "CV for Graphic Designer (Creative Agency)",
+          "difficulty": "Advanced",
+          "estimatedTime": "45 mins",
+          "isCompleted": false,
+          "type": "cv",
+          "prompt": "Draft a CV for applying as a graphic designer in a creative agency.",
+          "guidelines": [
+            "Highlight design education and skills",
+            "Mention software tools (Photoshop, Illustrator, etc.)",
+            "Add portfolio link",
+            "Show creativity and project experience",
+            "Include teamwork and collaboration skills"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo work as a creative graphic designer.\n\nEducation:\n[Design background]\n\nSkills:\n- Photoshop\n- Illustrator\n- Creativity\n\nPortfolio:\n[Link]\n\nExperience:\n[Design projects]\n\nAchievements:\n[Awards if any]"
+        },
+        {
+          "id": "cv_19",
+          "title": "CV for NGO Project Coordinator",
+          "difficulty": "Advanced",
+          "estimatedTime": "50 mins",
+          "isCompleted": false,
+          "type": "cv",
+          "prompt": "Write a CV for applying to an NGO as a project coordinator.",
+          "guidelines": [
+            "Mention education and background in social sciences or related fields",
+            "Highlight project management and leadership skills",
+            "Add volunteer or NGO experience",
+            "Show ability to work with communities",
+            "Include achievements in past initiatives"
+          ],
+          "template": "[Full Name]\n[Contact Information]\n\nObjective:\nTo contribute as a project coordinator in an NGO.\n\nEducation:\n[Your details]\n\nSkills:\n- Project management\n- Leadership\n- Community engagement\n\nExperience:\n[NGO or volunteering]\n\nAchievements:\n[Impactful results]"
         }
       ]
     }
@@ -366,7 +3452,7 @@
     ],
     "formal": [
       "Use professional tone throughout",
-      "Avoid contractions and slang", 
+      "Avoid contractions and slang",
       "Structure paragraphs logically",
       "Use appropriate salutations and closings",
       "Maintain consistent formatting"
@@ -374,7 +3460,7 @@
     "creative": [
       "Show, don't just tell",
       "Use vivid, descriptive language",
-      "Vary your sentence beginnings", 
+      "Vary your sentence beginnings",
       "Include dialogue when appropriate",
       "Create emotional connections"
     ]
@@ -389,13 +3475,13 @@
     "capitalization": [
       "Capitalize the first word of sentences",
       "Capitalize proper nouns and names",
-      "Capitalize the first word after a colon in formal writing", 
+      "Capitalize the first word after a colon in formal writing",
       "Capitalize titles when they precede names"
     ],
     "common_mistakes": [
       "Its vs. It's - possession vs. contraction",
       "Their, There, They're - possession, location, contraction",
-      "Your vs. You're - possession vs. contraction", 
+      "Your vs. You're - possession vs. contraction",
       "Affect vs. Effect - verb vs. noun"
     ]
   }
