@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,7 +13,7 @@ class ListeningScreen extends StatefulWidget {
 
 class _ListeningScreenState extends State<ListeningScreen> {
   final _controller = TextEditingController();
-  final FlutterTts _flutterTts = FlutterTts();
+  final FlutterTts flutterTts = FlutterTts();
 
   List<Map<String, String>> _selectedSentences = [];
   int _currentIndex = 0;
@@ -63,28 +62,34 @@ class _ListeningScreenState extends State<ListeningScreen> {
     }
   }
 
-  Future<void> setTtsSettings() async {
-    if (Platform.isAndroid) {
-      await _flutterTts.setSpeechRate(0.5); // Android is faster, so lower value
-    } else if (Platform.isIOS) {
-      await _flutterTts.setSpeechRate(0.4); // Tune as needed
-    } else {
-      await _flutterTts.setSpeechRate(0.8); // Web works fine
-    }
+  // Future<void> setTtsSettings() async {
+  //   if (Platform.isAndroid) {
+  //     await _flutterTts.setSpeechRate(0.5); // Android is faster, so lower value
+  //   } else if (Platform.isIOS) {
+  //     await _flutterTts.setSpeechRate(0.4); // Tune as needed
+  //   } else {
+  //     await _flutterTts.setSpeechRate(0.8); // Web works fine
+  //   }
 
-    await _flutterTts.setPitch(1.0);
-    await _flutterTts.setVolume(1.0);
-  }
+  //   await _flutterTts.setPitch(1.0);
+  //   await _flutterTts.setVolume(1.0);
+  // }
+
+  // Future<void> _speakText(String text) async {
+  //   await _flutterTts.setLanguage("en-US");
+
+  //   // await _flutterTts.setPitch(1.0);
+  //   // await _flutterTts.setSpeechRate(0.5);
+
+  //   setTtsSettings();
+
+  //   await _flutterTts.speak(text);
+  // }
 
   Future<void> _speakText(String text) async {
-    await _flutterTts.setLanguage("en-US");
-
-    // await _flutterTts.setPitch(1.0);
-    // await _flutterTts.setSpeechRate(0.5);
-
-    setTtsSettings();
-
-    await _flutterTts.speak(text);
+    await flutterTts.setLanguage("en-IN");
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(text);
   }
 
   void _submitText() {
@@ -298,7 +303,7 @@ class _ListeningScreenState extends State<ListeningScreen> {
   @override
   void dispose() {
     _controller.dispose();
-    _flutterTts.stop();
+    flutterTts.stop();
     super.dispose();
   }
 }

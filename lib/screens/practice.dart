@@ -284,8 +284,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                               style: TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w500,
-                                color:
-                                    Colors.white, 
+                                color: Colors.white,
                               ),
                             ),
                             const SizedBox(height: 6),
@@ -747,8 +746,8 @@ class _PracticeScreenState extends State<PracticeScreen> {
 
   Future<void> playSentence() async {
     if (selectedListeningSentence != null) {
-      await flutterTts.setLanguage("en-US");
-      await flutterTts.setSpeechRate(0.5);
+      await flutterTts.setLanguage("en-IN");
+      await flutterTts.setPitch(1.0);
       await flutterTts.speak(selectedListeningSentence!);
     }
   }

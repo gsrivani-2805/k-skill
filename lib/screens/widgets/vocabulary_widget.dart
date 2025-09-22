@@ -108,9 +108,7 @@ class _VocabularyWidgetState extends State<VocabularyWidget> {
       setState(() {
         isLoading = false;
       });
-    } catch (e) {
-      print('Error loading vocabulary data: $e');
-    }
+    } catch (e) {}
   }
 
   @override
@@ -319,7 +317,6 @@ class _WordsListPageState extends State<WordsListPage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -504,13 +501,12 @@ class _WordsListPageState extends State<WordsListPage> {
 class WordCard extends StatelessWidget {
   final VocabularyWord word;
   final VoidCallback onTap;
+  final flutterTts = FlutterTts();
 
-  const WordCard({Key? key, required this.word, required this.onTap})
-    : super(key: key);
+  WordCard({super.key, required this.word, required this.onTap});
 
   Future<void> _play(String text) async {
-    final flutterTts = FlutterTts();
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("en-IN");
     await flutterTts.setPitch(1.0);
     await flutterTts.speak(text);
   }
@@ -618,12 +614,12 @@ class WordCard extends StatelessWidget {
 // Word Detail Page
 class WordDetailPage extends StatelessWidget {
   final VocabularyWord word;
+  final flutterTts = FlutterTts();
 
-  const WordDetailPage({Key? key, required this.word}) : super(key: key);
+  WordDetailPage({super.key, required this.word});
 
   Future<void> _play(String text) async {
-    final flutterTts = FlutterTts();
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("en-IN");
     await flutterTts.setPitch(1.0);
     await flutterTts.speak(text);
   }
@@ -803,5 +799,9 @@ class WordDetailPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void dispose() {
+    flutterTts.stop();
   }
 }

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:K_Skill/config/api_config.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
@@ -51,26 +49,27 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
     );
   }
 
-  Future<void> setTtsSettings() async {
-    if (Platform.isAndroid) {
-      await _flutterTts.setSpeechRate(0.5); // Android is faster, so lower value
-    } else if (Platform.isIOS) {
-      await _flutterTts.setSpeechRate(0.4); // Tune as needed
-    } else {
-      await _flutterTts.setSpeechRate(0.8); // Web works fine
-    }
+  // Future<void> setTtsSettings() async {
+  //   if (Platform.isAndroid) {
+  //     await _flutterTts.setSpeechRate(0.5); // Android is faster, so lower value
+  //   } else if (Platform.isIOS) {
+  //     await _flutterTts.setSpeechRate(0.4); // Tune as needed
+  //   } else {
+  //     await _flutterTts.setSpeechRate(0.8); // Web works fine
+  //   }
 
-    await _flutterTts.setPitch(1.0);
-    await _flutterTts.setVolume(1.0);
-  }
+  //   await _flutterTts.setPitch(1.0);
+  //   await _flutterTts.setVolume(1.0);
+  // }
 
   void _initializeTts() async {
-    await _flutterTts.setLanguage("en-US");
+    await _flutterTts.setLanguage("en-IN");
+    await _flutterTts.setPitch(1.0);
     // await _flutterTts.setPitch(1.0);
     // await _flutterTts.setSpeechRate(0.8);
     // await _flutterTts.setVolume(1.0);
 
-    setTtsSettings();
+    // setTtsSettings();
 
     // Set completion handler to know when TTS is done
     _flutterTts.setCompletionHandler(() {
@@ -104,7 +103,6 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
     try {
       await _flutterTts.speak(text);
     } catch (e) {
-      print("Error speaking text: $e");
       setState(() {
         _isSpeaking = false;
       });
@@ -115,7 +113,6 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
   void _startListening() async {
     bool available = await _speech.initialize(
       onError: (error) {
-        print("Speech recognition error: $error");
         setState(() {
           _isListening = false;
         });
@@ -165,7 +162,7 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
         });
       },
       partialResults: true,
-      localeId: 'en_US',
+      localeId: 'en_IN',
       cancelOnError: true,
     );
   }

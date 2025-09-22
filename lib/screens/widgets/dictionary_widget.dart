@@ -96,7 +96,7 @@ class _DictionaryWidgetState extends State<DictionaryWidget>
   }
 
   void _play(String text) async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("en-IN");
     await flutterTts.setPitch(1.0);
     await flutterTts.speak(text);
   }
