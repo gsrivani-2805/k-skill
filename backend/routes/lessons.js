@@ -2465,7 +2465,7 @@ module.exports = [
     lessonId: "L1_M5_L1",
     title: "Introducing Yourself",
     file_path: "lessons/basic/module-5/L1_M5_L1.json",
-    p,
+    keywords: []
   },
   {
     lessonId: "L1_M5_L2",
