@@ -45,7 +45,6 @@ class _LevelsScreenState extends State<LevelsScreen> {
 
     if (isLoggedIn) {
       await prefs.setString('lastRoute', '/levels');
-      print('Stored route: /levels');
     }
   }
 

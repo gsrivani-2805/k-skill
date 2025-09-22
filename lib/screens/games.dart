@@ -2925,6 +2925,8 @@ class _PictureSentenceScreenState extends State<PictureSentenceScreen> {
   List<String> selectedWords = [];
   List<bool> wordSelected = [];
   String feedback = "";
+  int correctAnswers = 0;
+  bool gameCompleted = false;
 
   @override
   void initState() {
@@ -2966,8 +2968,10 @@ class _PictureSentenceScreenState extends State<PictureSentenceScreen> {
         feedback = "";
       });
     } else {
+      // Game completed, show results
       setState(() {
-        feedback = "🎉 Game Over!";
+        gameCompleted = true;
+        feedback = "";
       });
     }
   }
@@ -2979,6 +2983,7 @@ class _PictureSentenceScreenState extends State<PictureSentenceScreen> {
     if (userSentence.toLowerCase() == correctSentence.toLowerCase()) {
       setState(() {
         feedback = "✅ Correct!";
+        correctAnswers++;
       });
       Future.delayed(const Duration(seconds: 1), () {
         nextQuestion();
@@ -3001,6 +3006,34 @@ class _PictureSentenceScreenState extends State<PictureSentenceScreen> {
     });
   }
 
+  void restartGame() {
+    setState(() {
+      currentIndex = 0;
+      selectedWords.clear();
+      correctAnswers = 0;
+      gameCompleted = false;
+      feedback = "";
+
+      // Re-shuffle keywords for all games
+      for (var game in gameData) {
+        if (game['keywords'] != null) {
+          List<String> keywords = List<String>.from(game['keywords']);
+          keywords.shuffle();
+          game['keywords'] = keywords;
+        }
+      }
+
+      wordSelected = List.generate(
+        gameData[currentIndex]['keywords'].length,
+        (_) => false,
+      );
+    });
+  }
+
+  void goBackHome() {
+    Navigator.of(context).pop();
+  }
+
   int _calculateCrossAxisCount(int wordCount) {
     if (wordCount <= 4) return 2;
     if (wordCount <= 6) return 2;
@@ -3017,17 +3050,173 @@ class _PictureSentenceScreenState extends State<PictureSentenceScreen> {
     return 1.2;
   }
 
+  Widget buildResultsScreen() {
+    double percentage = (correctAnswers / gameData.length) * 100;
+    String resultMessage;
+    Color resultColor;
+    String emoji;
+
+    if (percentage >= 80) {
+      resultMessage = "Excellent!";
+      resultColor = Colors.green;
+      emoji = "🏆";
+    } else if (percentage >= 60) {
+      resultMessage = "Good Job!";
+      resultColor = Colors.blue;
+      emoji = "👏";
+    } else if (percentage >= 40) {
+      resultMessage = "Keep Practicing!";
+      resultColor = Colors.orange;
+      emoji = "💪";
+    } else {
+      resultMessage = "Try Again!";
+      resultColor = Colors.red;
+      emoji = "📚";
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Results"),
+        backgroundColor: Colors.teal,
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              '/games',
+              (route) => false,
+            );
+          },
+        ),
+      ),
+      body: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Result emoji and message
+            Text(emoji, style: const TextStyle(fontSize: 80)),
+            const SizedBox(height: 20),
+            Text(
+              resultMessage,
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: resultColor,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 30),
+
+            // Score display
+            Container(
+              padding: const EdgeInsets.all(24.0),
+              decoration: BoxDecoration(
+                color: Colors.grey[100],
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: Colors.grey[300]!),
+              ),
+              child: Column(
+                children: [
+                  Text(
+                    "Your Score",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.grey[600],
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    "$correctAnswers/${gameData.length}",
+                    style: const TextStyle(
+                      fontSize: 48,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    "${percentage.toStringAsFixed(0)}%",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                      color: resultColor,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 50),
+
+            // Action buttons
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: restartGame,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: const Text(
+                  "🔄 Play Again",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 16),
+
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: goBackHome,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.grey[600],
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: const Text(
+                  "🏠 Back Home",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     if (gameData.isEmpty) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
+
+    // Show results screen if game is completed
+    if (gameCompleted) {
+      return buildResultsScreen();
+    }
+
     var currentGame = gameData[currentIndex];
     final keywordCount = currentGame['keywords'].length;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Picture → Sentence"),
+        title: Text(
+          "Picture → Sentence (${currentIndex + 1}/${gameData.length})",
+        ),
         backgroundColor: Colors.teal,
       ),
       body: SafeArea(
@@ -5230,22 +5419,3 @@ class _StoryCompletionScreenState extends State<StoryCompletionScreen> {
   }
 }
 
-//
-// ===== Helper Function for Placeholder UI =====
-//
-
-// Widget _buildPlaceholder(BuildContext context, String gameName) {
-//   return Scaffold(
-//     appBar: AppBar(
-//       title: Text(gameName),
-//       backgroundColor: Colors.deepPurple,
-//       foregroundColor: Colors.white,
-//     ),
-//     body: Center(
-//       child: Text(
-//         "$gameName Coming Soon...",
-//         style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-//       ),
-//     ),
-//   );
-// }

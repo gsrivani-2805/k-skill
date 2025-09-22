@@ -197,14 +197,14 @@ class _DictionaryWidgetState extends State<DictionaryWidget>
             child: Row(
               children: [
                 // Search Icon
-                // Padding(
-                //   padding: const EdgeInsets.symmetric(horizontal: 12),
-                //   child: Icon(
-                //     Icons.search_rounded,
-                //     color: _isFocused ? Colors.orange[600] : Colors.grey[500],
-                //     size: 24,
-                //   ),
-                // ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  child: Icon(
+                    Icons.search_rounded,
+                    color: _isFocused ? Colors.orange[600] : Colors.grey[500],
+                    size: 24,
+                  ),
+                ),
 
                 // Text Field
                 Expanded(

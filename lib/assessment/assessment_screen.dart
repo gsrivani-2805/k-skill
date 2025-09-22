@@ -204,7 +204,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                           description: "Test your knowledge of English grammar and vocabulary",
                           icon: Icons.quiz_rounded,
                           duration: "25 minutes",
-                          questions: 50,
+                          questions: 25,
                           color: Colors.orange,
                           done: quizDone,
                           onTap: () => _navigateAndSet('/quiz', (v, score) {

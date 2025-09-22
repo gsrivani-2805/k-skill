@@ -1,6 +1,7 @@
 import 'package:K_Skill/auth/signup_page.dart';
 import 'package:K_Skill/screens/academics.dart';
 import 'package:K_Skill/screens/discourse.dart';
+import 'package:K_Skill/screens/games.dart';
 import 'package:K_Skill/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:K_Skill/assessment/assessment_screen.dart';
@@ -98,6 +99,9 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
 
         '/discourse': (context) =>
             RouteAwareWrapper(routeName: '/discourse', child: Discourse()),
+
+        '/games': (context) =>
+            RouteAwareWrapper(routeName: '/games', child: GameScreen()),
       },
     );
   }
@@ -171,6 +175,12 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
             routeName: '/discourse',
             child: Discourse(),
           ),
+          settings: settings,
+        );
+      case '/games':
+        return MaterialPageRoute(
+          builder: (_) =>
+              RouteAwareWrapper(routeName: '/games', child: GameScreen()),
           settings: settings,
         );
       case '/listening':
