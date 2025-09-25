@@ -12,37 +12,37 @@ class GameScreen extends StatelessWidget {
     {
       "title": "Word Match",
       "color": Colors.orange,
-      "icon": Icons.swap_horiz,
+      "icon": Icons.compare_arrows,
       "route": WordMatchScreen(jsonPath: "games/word_match.json"),
     },
     {
       "title": "Sentence Formation",
       "color": Colors.blueAccent,
-      "icon": Icons.build,
+      "icon": Icons.construction,
       "route": SentenceForm(jsonPath: "games/sentence_formation.json"),
     },
     {
       "title": "Fill In the Blanks",
       "color": Colors.green,
-      "icon": Icons.edit,
+      "icon": Icons.edit_note,
       "route": FillInTheBlanks(jsonPath: "games/grammar_mistakes.json"),
     },
     {
       "title": "Picture Sentence",
       "color": Colors.purple,
-      "icon": Icons.image,
+      "icon": Icons.image_search,
       "route": PictureSentenceScreen(jsonPath: "games/picture_sentence.json"),
     },
     {
       "title": "Listening Puzzle",
       "color": Colors.redAccent,
-      "icon": Icons.headset,
+      "icon": Icons.headphones,
       "route": ListeningPuzzleScreen(jsonPath: "games/listening_puzzle.json"),
     },
     {
       "title": "Story Completion",
       "color": Colors.teal,
-      "icon": Icons.book,
+      "icon": Icons.auto_stories,
       "route": StoryCompletionScreen(jsonPath: "games/story_completion.json"),
     },
   ];
@@ -116,11 +116,7 @@ class GameScreen extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
-                            game['icon'],
-                            size: 48,
-                            color: Colors.white,
-                          ),
+                          Icon(game['icon'], size: 48, color: Colors.white),
                           SizedBox(height: 8),
                           Text(
                             game['title'],
