@@ -526,110 +526,112 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
   }
 
   Widget _buildPracticeItemCard(PracticeItem item) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          ),
-        ],
-      ),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(16),
-        onTap: () async {
-          // Navigate and wait for result
-          final result = await Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => WritingEditorScreen(
-                practiceItem: item,
-                discourseType: widget.discourseType,
-                grammarRules: widget.grammarRules,
-                userId: widget.userId,
-              ),
+    return SingleChildScrollView(
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 16),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.1),
+              blurRadius: 10,
+              offset: const Offset(0, 5),
             ),
-          );
-
-          // If submission was successful, refresh review data
-          if (result == true) {
-            _refreshReviewData();
-            // Switch to review tab to show the new submission
-            _tabController.animateTo(2);
-          }
-        },
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: item.isCompleted
-                          ? Colors.green.withOpacity(0.1)
-                          : widget.discourseType.color.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Icon(
-                      item.isCompleted ? Icons.check_circle : Icons.edit,
-                      color: item.isCompleted
-                          ? Colors.green
-                          : widget.discourseType.color,
-                      size: 20,
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      item.title,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
+          ],
+        ),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () async {
+            // Navigate and wait for result
+            final result = await Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => WritingEditorScreen(
+                  practiceItem: item,
+                  discourseType: widget.discourseType,
+                  grammarRules: widget.grammarRules,
+                  userId: widget.userId,
+                ),
+              ),
+            );
+      
+            // If submission was successful, refresh review data
+            if (result == true) {
+              _refreshReviewData();
+              // Switch to review tab to show the new submission
+              _tabController.animateTo(2);
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: item.isCompleted
+                            ? Colors.green.withOpacity(0.1)
+                            : widget.discourseType.color.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Icon(
+                        item.isCompleted ? Icons.check_circle : Icons.edit,
+                        color: item.isCompleted
+                            ? Colors.green
+                            : widget.discourseType.color,
+                        size: 20,
                       ),
                     ),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.grey[400],
-                    size: 16,
-                  ),
-                ],
-              ),
-              const SizedBox(height: 12),
-              Text(
-                item.prompt,
-                style: TextStyle(
-                  color: Colors.grey[700],
-                  fontSize: 14,
-                  height: 1.4,
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        item.title,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.grey[400],
+                      size: 16,
+                    ),
+                  ],
                 ),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
-              const SizedBox(height: 12),
-              Row(
-                children: [
-                  _buildChip(
-                    item.difficulty,
-                    _getDifficultyColor(item.difficulty),
+                const SizedBox(height: 12),
+                Text(
+                  item.prompt,
+                  style: TextStyle(
+                    color: Colors.grey[700],
+                    fontSize: 14,
+                    height: 1.4,
                   ),
-                  const SizedBox(width: 8),
-                  _buildChip(item.estimatedTime, Colors.grey),
-                  const SizedBox(width: 8),
-                  _buildChip(
-                    item.type.toUpperCase(),
-                    widget.discourseType.color,
-                  ),
-                ],
-              ),
-            ],
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                const SizedBox(height: 12),
+                Row(
+                  children: [
+                    _buildChip(
+                      item.difficulty,
+                      _getDifficultyColor(item.difficulty),
+                    ),
+                    const SizedBox(width: 8),
+                    _buildChip(item.estimatedTime, Colors.grey),
+                    const SizedBox(width: 8),
+                    _buildChip(
+                      item.type.toUpperCase(),
+                      widget.discourseType.color,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

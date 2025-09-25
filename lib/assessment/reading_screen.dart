@@ -114,10 +114,6 @@ class _ReadingScreenState extends State<ReadingScreen> {
     double score = similarity;
     _scores.add(score);
 
-    print("Original: $original");
-    print("Spoken: $spoken");
-    print("Similarity Score: $score");
-
     if (_currentPassageIndex < _passages.length - 1) {
       setState(() {
         _currentPassageIndex++;

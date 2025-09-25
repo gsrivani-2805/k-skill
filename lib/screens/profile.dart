@@ -266,52 +266,151 @@ class _ProfileScreenState extends State<ProfileScreen>
     return Container(
       color: Colors.white,
       padding: EdgeInsets.symmetric(vertical: 24, horizontal: 16),
-      child: Row(
-        children: [
-          CircleAvatar(
-            radius: 36,
-            backgroundColor: primaryYellow,
-            child: ClipOval(child: _buildGenderAvatar(profile.gender)),
-          ),
-          SizedBox(width: 16),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          // Check if it's mobile view (width less than 600px)
+          bool isMobile = constraints.maxWidth < 600;
+
+          if (isMobile) {
+            // Mobile layout - vertical alignment
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  profile.name,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                // Profile Avatar
+                CircleAvatar(
+                  radius: 36,
+                  backgroundColor: primaryYellow,
+                  child: ClipOval(child: _buildGenderAvatar(profile.gender)),
                 ),
-                Text(profile.className, style: TextStyle(color: Colors.grey)),
-                Text(profile.school, style: TextStyle(color: Colors.grey)),
-                SizedBox(height: 6),
-                Row(
+                SizedBox(height: 16),
+
+                // Profile Details
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Icon(
-                      Icons.local_fire_department,
-                      color: Colors.orange,
-                      size: 20,
-                    ),
-                    SizedBox(width: 4),
                     Text(
-                      '${profile.currentStreak} day streak',
-                      style: TextStyle(color: Colors.orange),
+                      profile.name,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    Spacer(),
+                    SizedBox(height: 4),
+                    Text(
+                      profile.className,
+                      style: TextStyle(color: Colors.grey),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      profile.school,
+                      style: TextStyle(color: Colors.grey),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 16),
+
+                // Streak and Level in same row
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // Streak (left side)
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.local_fire_department,
+                          color: Colors.orange,
+                          size: 20,
+                        ),
+                        SizedBox(width: 4),
+                        Text(
+                          '${profile.currentStreak} day streak',
+                          style: TextStyle(color: Colors.orange),
+                        ),
+                      ],
+                    ),
+
+                    // Level (right side)
                     Chip(
                       label: Text(
                         profile.currentLevel,
                         style: TextStyle(color: Colors.white),
                       ),
-                      backgroundColor: primaryGreen,
+                      backgroundColor: getColorbyLevel(profile.currentLevel),
                       avatar: Icon(Icons.star, color: Colors.white, size: 16),
                     ),
                   ],
                 ),
               ],
-            ),
-          ),
-        ],
+            );
+          } else {
+            // Web layout - original horizontal alignment
+            return Row(
+              children: [
+                CircleAvatar(
+                  radius: 36,
+                  backgroundColor: primaryYellow,
+                  child: ClipOval(child: _buildGenderAvatar(profile.gender)),
+                ),
+                SizedBox(width: 16),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        profile.name,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        profile.className,
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                      Text(
+                        profile.school,
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                      SizedBox(height: 6),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.local_fire_department,
+                            color: Colors.orange,
+                            size: 20,
+                          ),
+                          SizedBox(width: 4),
+                          Text(
+                            '${profile.currentStreak} day streak',
+                            style: TextStyle(color: Colors.orange),
+                          ),
+                          Spacer(),
+                          Chip(
+                            label: Text(
+                              profile.currentLevel,
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            backgroundColor: getColorbyLevel(
+                              profile.currentLevel,
+                            ),
+                            avatar: Icon(
+                              Icons.star,
+                              color: Colors.white,
+                              size: 16,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            );
+          }
+        },
       ),
     );
   }
@@ -442,16 +541,18 @@ class _ProfileScreenState extends State<ProfileScreen>
     // Navigate through the curriculum structure: levels -> modules -> lessons
     for (String levelKey in curriculumData.keys) {
       final levelData = curriculumData[levelKey];
-      
-      if (levelData is Map<String, dynamic> && levelData.containsKey('modules')) {
+
+      if (levelData is Map<String, dynamic> &&
+          levelData.containsKey('modules')) {
         final modules = levelData['modules'] as Map<String, dynamic>;
-        
+
         for (String moduleKey in modules.keys) {
           final moduleData = modules[moduleKey];
-          
-          if (moduleData is Map<String, dynamic> && moduleData.containsKey('lessons')) {
+
+          if (moduleData is Map<String, dynamic> &&
+              moduleData.containsKey('lessons')) {
             final lessons = moduleData['lessons'] as Map<String, dynamic>;
-            
+
             if (lessons.containsKey(lessonId)) {
               return {
                 'lessonInfo': lessons[lessonId] as Map<String, dynamic>,
@@ -464,27 +565,19 @@ class _ProfileScreenState extends State<ProfileScreen>
       }
     }
 
-    return {
-      'lessonInfo': null, 
-      'moduleKey': null, 
-      'levelKey': null,
-    };
+    return {'lessonInfo': null, 'moduleKey': null, 'levelKey': null};
   }
 
-  // Updated method to open lesson detail - same as in LessonsScreen
   void _openLessonDetail(String lessonKey, Map<String, dynamic> lessonInfo) {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => LessonDetailScreen(
-          lessonKey: lessonKey, 
-          lessonInfo: lessonInfo,
-        ),
+        builder: (context) =>
+            LessonDetailScreen(lessonKey: lessonKey, lessonInfo: lessonInfo),
       ),
     );
   }
 
-  // Show dialog when lesson is not found
   void _showLessonNotFoundDialog(String lessonId) {
     showDialog(
       context: context,
@@ -806,5 +899,14 @@ class _ProfileScreenState extends State<ProfileScreen>
     if (scores.isEmpty) return 0;
     final total = scores.values.reduce((a, b) => a + b);
     return (total / scores.length).toInt();
+  }
+
+  Color? getColorbyLevel(String currentLevel) {
+    if (currentLevel == 'Basic') {
+      return Colors.green;
+    } else if (currentLevel == 'Intermediate') {
+      return Colors.orange;
+    }
+    return Colors.red;
   }
 }

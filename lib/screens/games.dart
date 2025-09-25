@@ -12,35 +12,40 @@ class GameScreen extends StatelessWidget {
     {
       "title": "Word Match",
       "color": Colors.orange,
+      "icon": Icons.swap_horiz,
       "route": WordMatchScreen(jsonPath: "games/word_match.json"),
     },
     {
       "title": "Sentence Formation",
       "color": Colors.blueAccent,
+      "icon": Icons.build,
       "route": SentenceForm(jsonPath: "games/sentence_formation.json"),
     },
     {
       "title": "Fill In the Blanks",
       "color": Colors.green,
+      "icon": Icons.edit,
       "route": FillInTheBlanks(jsonPath: "games/grammar_mistakes.json"),
     },
     {
       "title": "Picture Sentence",
       "color": Colors.purple,
+      "icon": Icons.image,
       "route": PictureSentenceScreen(jsonPath: "games/picture_sentence.json"),
     },
     {
       "title": "Listening Puzzle",
       "color": Colors.redAccent,
+      "icon": Icons.headset,
       "route": ListeningPuzzleScreen(jsonPath: "games/listening_puzzle.json"),
     },
     {
       "title": "Story Completion",
       "color": Colors.teal,
+      "icon": Icons.book,
       "route": StoryCompletionScreen(jsonPath: "games/story_completion.json"),
     },
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,6 +116,12 @@ class GameScreen extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          Icon(
+                            game['icon'],
+                            size: 48,
+                            color: Colors.white,
+                          ),
+                          SizedBox(height: 8),
                           Text(
                             game['title'],
                             textAlign: TextAlign.center,
@@ -5418,4 +5429,3 @@ class _StoryCompletionScreenState extends State<StoryCompletionScreen> {
     super.dispose();
   }
 }
-

@@ -94,6 +94,14 @@ router.post("/:userId/submit-assessment", async (req, res) => {
     user.assessmentScores.listening = listeningScore;
     user.assessmentScores.overall = overallScore;
 
+    if (overallScore >= 80) {
+      user.currentLevel = "Advanced";
+    } else if (overallScore >= 60) {
+      user.currentLevel = "Intermediate";
+    } else {
+      user.currentLevel = "Basic";
+    }
+
     await user.save();
 
     res.status(200).json({ message: "Assessment submitted successfully" });
@@ -107,11 +115,6 @@ router.post("/:userId/submissions", async (req, res) => {
   try {
     const { userId } = req.params;
 
-    // Enhanced logging for debugging
-    console.log("=== SUBMISSION REQUEST ===");
-    console.log("User ID:", userId);
-    console.log("Request Body:", JSON.stringify(req.body, null, 2));
-
     if (!mongoose.Types.ObjectId.isValid(userId)) {
       console.log("Invalid User ID format:", userId);
       return res.status(400).json({ error: "Invalid User ID format" });
@@ -119,7 +122,6 @@ router.post("/:userId/submissions", async (req, res) => {
 
     const { discourseType, question, submittedText, feedback } = req.body;
 
-    // Enhanced validation with specific field checks
     const missingFields = [];
     if (!discourseType) missingFields.push("discourseType");
     if (!submittedText) missingFields.push("submittedText");
@@ -193,9 +195,6 @@ router.post("/:userId/submissions", async (req, res) => {
       totalSubmissions: savedUser.writingSubmissions.length,
     });
   } catch (error) {
-    console.error("=== ERROR SAVING SUBMISSION ===");
-    console.error("Error details:", error);
-    console.error("Stack trace:", error.stack);
 
     if (error.name === "CastError") {
       return res.status(400).json({
