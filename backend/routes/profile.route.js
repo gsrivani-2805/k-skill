@@ -9,7 +9,11 @@ router.get("/:userId/profile", async (req, res) => {
   try {
     const { userId } = req.params;
 
-    const user = await User.findById(userId).lean();
+    const user = await User.findById(userId)
+      .select(
+        "name class gender school address currentStreak currentLevel completedLessons assessmentScores"
+      )
+      .lean();
 
     if (!user) {
       return res.status(404).json({ error: "User not found" });
@@ -195,7 +199,6 @@ router.post("/:userId/submissions", async (req, res) => {
       totalSubmissions: savedUser.writingSubmissions.length,
     });
   } catch (error) {
-
     if (error.name === "CastError") {
       return res.status(400).json({
         error: "Invalid User ID format",
@@ -224,12 +227,10 @@ router.post("/:userId/submissions", async (req, res) => {
   }
 });
 
-// Enhanced feedback mapping function
 function mapAIResponseToSchema(feedback) {
   console.log("Mapping feedback to schema:", typeof feedback, feedback);
 
   try {
-    // If feedback is already an object, return it
     if (typeof feedback === "object" && feedback !== null) {
       return {
         overallScore: feedback.overallScore || feedback.score || 0,
@@ -239,11 +240,10 @@ function mapAIResponseToSchema(feedback) {
         strengths: feedback.strengths || [],
         areasForImprovement:
           feedback.areasForImprovement || feedback.areas_for_improvement || [],
-        ...feedback, // Include any additional fields
+        ...feedback,
       };
     }
 
-    // If feedback is a string, wrap it in the expected structure
     if (typeof feedback === "string") {
       return {
         overallScore: 0,
@@ -265,8 +265,6 @@ function mapAIResponseToSchema(feedback) {
       areasForImprovement: [],
     };
   } catch (error) {
-    console.error("Error in mapAIResponseToSchema:", error);
-    // Return a safe default structure
     return {
       overallScore: 0,
       overallFeedback: "Error processing feedback",

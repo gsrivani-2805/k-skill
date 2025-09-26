@@ -116,7 +116,7 @@ class GameScreen extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(game['icon'], size: 48, color: Colors.white),
+                          Icon(game['icon'], size: 36, color: Colors.white),
                           SizedBox(height: 8),
                           Text(
                             game['title'],
