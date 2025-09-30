@@ -44,6 +44,131 @@ router.get("/:userId/profile", async (req, res) => {
   }
 });
 
+router.put("/:userId/profile", async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const { name, class: className, school, address } = req.body;
+
+    // Validate User ID format
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(400).json({ error: "Invalid User ID format" });
+    }
+
+    // Validate required fields
+    if (!name || !className || !school) {
+      return res.status(400).json({ 
+        error: "Missing required fields", 
+        required: ["name", "class", "school"],
+        received: Object.keys(req.body)
+      });
+    }
+
+    // Validate field lengths and formats
+    if (name.length < 1 || name.length > 100) {
+      return res.status(400).json({ error: "Name must be between 1 and 100 characters" });
+    }
+    if (className.length < 1 || className.length > 50) {
+      return res.status(400).json({ error: "Class must be between 1 and 50 characters" });
+    }
+    if (school.length < 1 || school.length > 200) {
+      return res.status(400).json({ error: "School name must be between 1 and 200 characters" });
+    }
+
+    // Find user
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    // Store original values for potential rollback
+    const originalValues = {
+      name: user.name,
+      class: user.class,
+      school: user.school,
+      address: user.address
+    };
+
+    try {
+      // Update user fields
+      user.name = name.trim();
+      user.class = className.trim();
+      user.school = school.trim();
+      if (address) user.address = address.trim();
+
+      // Save updated user
+      const updatedUser = await user.save();
+
+      // Return updated profile data in the same format as GET endpoint
+      const profileData = {
+        name: updatedUser.name,
+        class: updatedUser.class,
+        gender: updatedUser.gender || "",
+        school: updatedUser.school,
+        address: updatedUser.address || "",
+        currentStreak: updatedUser.currentStreak || 0,
+        currentLevel: updatedUser.currentLevel || "Basic",
+        completedLessons: updatedUser.completedLessons.map((lesson) => ({
+          lessonId: lesson.lessonId,
+        })),
+        assessmentScores: {
+          ...updatedUser.assessmentScores,
+          overall: updatedUser.assessmentScores?.overall || 0,
+        },
+      };
+
+      res.json({
+        message: "Profile updated successfully",
+        profile: profileData,
+        updatedFields: {
+          name: updatedUser.name,
+          class: updatedUser.class,
+          school: updatedUser.school,
+          address: updatedUser.address || ""
+        }
+      });
+
+    } catch (saveError) {
+      throw saveError;
+    }
+
+  } catch (error) {
+    
+    if (error.name === "ValidationError") {
+      const validationErrors = Object.keys(error.errors).map((key) => ({
+        field: key,
+        message: error.errors[key].message,
+        value: error.errors[key].value,
+      }));
+      return res.status(400).json({
+        error: "Validation failed",
+        details: validationErrors,
+      });
+    }
+
+    // Handle duplicate key errors
+    if (error.code === 11000) {
+      return res.status(400).json({
+        error: "Duplicate value",
+        details: "A user with this information already exists"
+      });
+    }
+
+    // Handle cast errors
+    if (error.name === "CastError") {
+      return res.status(400).json({
+        error: "Invalid data format",
+        details: error.message
+      });
+    }
+
+    // Generic server error
+    res.status(500).json({ 
+      error: "Internal Server Error",
+      details: process.env.NODE_ENV === "development" ? error.message : "Something went wrong"
+    });
+  }
+});
+
 router.post("/:userId/mark-complete", async (req, res) => {
   try {
     const { userId } = req.params;

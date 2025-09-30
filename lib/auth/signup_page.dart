@@ -28,9 +28,19 @@ class _SignupPageState extends State<SignupPage> {
   static const String baseUrl = ApiConfig.baseUrl;
 
   final List<String> _classes = [
-    'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5', 'Class 6',
-    'Class 7', 'Class 8', 'Class 9', 'Class 10', 'Class 11', 'Class 12',
-    'College', 'Adult Learner',
+    'Class 1',
+    'Class 2',
+    'Class 3',
+    'Class 4',
+    'Class 5',
+    'Class 6',
+    'Class 7',
+    'Class 8',
+    'Class 9',
+    'Class 10',
+    'Class 11',
+    'Class 12',
+    'Adult Learner',
   ];
   final List<String> _genders = ['Male', 'Female', 'Other'];
 
@@ -49,8 +59,9 @@ class _SignupPageState extends State<SignupPage> {
     final email = _emailController.text.trim();
     if (email.isEmpty ||
         !RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(email)) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Enter a valid email")));
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Enter a valid email")));
       return;
     }
     setState(() => _isLoading = true);
@@ -62,15 +73,18 @@ class _SignupPageState extends State<SignupPage> {
       );
       if (response.statusCode == 200) {
         setState(() => _otpSent = true);
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text("OTP sent to your email")));
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text("OTP sent to your email")));
       } else {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text("Failed to send OTP")));
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text("Failed to send OTP")));
       }
     } catch (e) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Error sending OTP")));
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Error sending OTP")));
     } finally {
       setState(() => _isLoading = false);
     }
@@ -80,8 +94,9 @@ class _SignupPageState extends State<SignupPage> {
     final email = _emailController.text.trim();
     final otp = _otpController.text.trim();
     if (otp.isEmpty) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Enter OTP")));
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Enter OTP")));
       return;
     }
     setState(() => _isLoading = true);
@@ -95,20 +110,23 @@ class _SignupPageState extends State<SignupPage> {
         setState(() {
           _emailVerified = true;
         });
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text("Email verified")));
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text("Email verified")));
       } else {
         setState(() {
           _otpSent = false;
           _emailController.clear();
           _otpController.clear();
         });
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text("Invalid or expired OTP")));
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text("Invalid or expired OTP")));
       }
     } catch (e) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Error verifying OTP")));
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Error verifying OTP")));
     } finally {
       setState(() => _isLoading = false);
     }
@@ -137,333 +155,399 @@ class _SignupPageState extends State<SignupPage> {
 
       if (response.statusCode == 201) {
         await SharedPrefsService.setUserName(_nameController.text.trim());
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text('Registered successfully!')));
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('Registered successfully!')));
         Navigator.pop(context);
       } else {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text('Signup failed. Try again.')));
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('Signup failed. Try again.')));
       }
     } catch (e) {
       setState(() => _isLoading = false);
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text('Something went wrong!')));
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('Something went wrong!')));
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[50],
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.blue[600]),
-          onPressed: () => Navigator.pop(context),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+          decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFFDDD5F0),
+              Color(0xFFEBE5F5),
+              Color(0xFFFFF9EB),
+              Color(0xFFFFFDF5),
+            ],
+            stops: [0.0, 0.3, 0.7, 1.0],
+          ),
         ),
-        title: Text('Sign Up', style: TextStyle(color: Colors.blue[600])),
-      ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          padding: EdgeInsets.all(24.0),
+        child: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Header
-              Container(
-                alignment: Alignment.center,
-                child: Column(
+              // Custom AppBar
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
                   children: [
-                    Icon(Icons.person_add, size: 60, color: Colors.blue[600]),
-                    SizedBox(height: 16),
-                    Text('Create Account',
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blue[800])),
-                    SizedBox(height: 8),
-                    Text('Start your English learning journey with K - Skill',
-                        style:
-                            TextStyle(fontSize: 16, color: Colors.grey[600])),
+                    IconButton(
+                      icon: Icon(Icons.arrow_back, color: Colors.blue[600]),
+                      onPressed: () => Navigator.pop(context),
+                    ),
+                    Text(
+                      'Sign Up',
+                      style: TextStyle(
+                        color: Colors.blue[600],
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ],
                 ),
               ),
-              SizedBox(height: 32),
-
-              Form(
-                key: _formKey,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    if (!_emailVerified) ...[
-                      // Email Field
-                      TextFormField(
-                        controller: _emailController,
-                        keyboardType: TextInputType.emailAddress,
-                        decoration: InputDecoration(
-                          labelText: 'Email',
-                          hintText: 'Enter your email',
-                          prefixIcon: Icon(Icons.email),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                        ),
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please enter your email';
-                          }
-                          if (!RegExp(
-                                  r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
-                              .hasMatch(value)) {
-                            return 'Please enter a valid email';
-                          }
-                          return null;
-                        },
-                      ),
-                      SizedBox(height: 16),
-
-                      if (!_otpSent)
-                        ElevatedButton(
-                          onPressed: _isLoading ? null : _sendOtp,
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue[600],
-                            foregroundColor: Colors.white,
-                            padding: EdgeInsets.symmetric(vertical: 16),
-                            shape: RoundedRectangleBorder(
+              // Scrollable Content
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: EdgeInsets.all(24.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      // Header
+                      Container(
+                        alignment: Alignment.center,
+                        child: Column(
+                          children: [
+                            ClipRRect(
                               borderRadius: BorderRadius.circular(12),
+                              child: Image.asset(
+                                'images/kskill_logo.png',
+                                height: 150,
+                                width: 150,
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          child: _isLoading
-                              ? CircularProgressIndicator(color: Colors.white)
-                              : Text('Verify Email',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold)),
-                        )
-                      else ...[
-                        // OTP Field
-                        TextFormField(
-                          controller: _otpController,
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                            labelText: 'OTP',
-                            hintText: 'Enter OTP',
-                            prefixIcon: Icon(Icons.lock_clock),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
+                            SizedBox(height: 16),
+                            Text(
+                              'Create Account',
+                              style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue[800],
+                              ),
                             ),
-                            filled: true,
-                            fillColor: Colors.white,
-                          ),
-                        ),
-                        SizedBox(height: 16),
-                        ElevatedButton(
-                          onPressed: _isLoading ? null : _verifyOtp,
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue[600],
-                            foregroundColor: Colors.white,
-                            padding: EdgeInsets.symmetric(vertical: 16),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
+                            SizedBox(height: 8),
+                            Text(
+                              'Start your English learning with K - Skill',
+                              style: TextStyle(fontSize: 16, color: Colors.grey[600]),
+                              textAlign: TextAlign.center,
                             ),
-                          ),
-                          child: _isLoading
-                              ? CircularProgressIndicator(color: Colors.white)
-                              : Text('Submit OTP',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold)),
+                          ],
                         ),
-                      ],
-                    ] else ...[
-                      // Full Name Field
-                      TextFormField(
-                        controller: _nameController,
-                        decoration: InputDecoration(
-                          labelText: 'Full Name',
-                          hintText: 'Enter your full name',
-                          prefixIcon: Icon(Icons.person),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                        ),
-                        validator: (value) =>
-                            value == null || value.isEmpty
-                                ? 'Please enter your name'
-                                : null,
-                      ),
-                      SizedBox(height: 16),
-
-                      // Password Field
-                      TextFormField(
-                        controller: _passwordController,
-                        obscureText: _obscurePassword,
-                        decoration: InputDecoration(
-                          labelText: 'Password',
-                          hintText: 'Enter your password',
-                          prefixIcon: Icon(Icons.lock),
-                          suffixIcon: IconButton(
-                            icon: Icon(_obscurePassword
-                                ? Icons.visibility_off
-                                : Icons.visibility),
-                            onPressed: () {
-                              setState(() {
-                                _obscurePassword = !_obscurePassword;
-                              });
-                            },
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                        ),
-                        validator: (value) =>
-                            value == null || value.isEmpty
-                                ? 'Please enter your password'
-                                : value.length < 6
-                                    ? 'Password must be at least 6 characters'
-                                    : null,
-                      ),
-                      SizedBox(height: 16),
-
-                      // Class Dropdown
-                      DropdownButtonFormField<String>(
-                        value:
-                            _selectedClass.isEmpty ? null : _selectedClass,
-                        decoration: InputDecoration(
-                          labelText: 'Class',
-                          hintText: 'Select your class',
-                          prefixIcon: Icon(Icons.school),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                        ),
-                        items: _classes
-                            .map((String className) => DropdownMenuItem<String>(
-                                  value: className,
-                                  child: Text(className),
-                                ))
-                            .toList(),
-                        onChanged: (String? newValue) {
-                          setState(() => _selectedClass = newValue!);
-                        },
-                        validator: (value) => value == null || value.isEmpty
-                            ? 'Please select your class'
-                            : null,
-                      ),
-                      SizedBox(height: 16),
-
-                      // Gender Dropdown
-                      DropdownButtonFormField<String>(
-                        value:
-                            _selectedGender.isEmpty ? null : _selectedGender,
-                        decoration: InputDecoration(
-                          labelText: 'Gender',
-                          hintText: 'Select your gender',
-                          prefixIcon: Icon(Icons.people),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                        ),
-                        items: _genders
-                            .map((String gender) => DropdownMenuItem<String>(
-                                  value: gender,
-                                  child: Text(gender),
-                                ))
-                            .toList(),
-                        onChanged: (String? newValue) {
-                          setState(() => _selectedGender = newValue!);
-                        },
-                        validator: (value) => value == null || value.isEmpty
-                            ? 'Please select your gender'
-                            : null,
-                      ),
-                      SizedBox(height: 16),
-
-                      // School Field
-                      TextFormField(
-                        controller: _schoolController,
-                        decoration: InputDecoration(
-                          labelText: 'School',
-                          hintText: 'Enter your school name',
-                          prefixIcon: Icon(Icons.location_city),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                        ),
-                        validator: (value) => value == null || value.isEmpty
-                            ? 'Please enter your school name'
-                            : null,
-                      ),
-                      SizedBox(height: 16),
-
-                      // Address Field
-                      TextFormField(
-                        controller: _addressController,
-                        maxLines: 3,
-                        decoration: InputDecoration(
-                          labelText: 'Address',
-                          hintText: 'Enter your address',
-                          prefixIcon: Icon(Icons.location_on),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          filled: true,
-                          fillColor: Colors.white,
-                        ),
-                        validator: (value) => value == null || value.isEmpty
-                            ? 'Please enter your address'
-                            : null,
                       ),
                       SizedBox(height: 32),
 
-                      ElevatedButton(
-                        onPressed: _isLoading ? null : _signup,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue[600],
-                          foregroundColor: Colors.white,
-                          padding: EdgeInsets.symmetric(vertical: 16),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
-                        child: _isLoading
-                            ? CircularProgressIndicator(color: Colors.white)
-                            : Text('Create Account',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold)),
-                      ),
-                      SizedBox(height: 24),
+                      Form(
+                        key: _formKey,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            if (!_emailVerified) ...[
+                              // Email Field
+                              TextFormField(
+                                controller: _emailController,
+                                keyboardType: TextInputType.emailAddress,
+                                decoration: InputDecoration(
+                                  labelText: 'Email',
+                                  hintText: 'Enter your email',
+                                  prefixIcon: Icon(Icons.email),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'Please enter your email';
+                                  }
+                                  if (!RegExp(
+                                    r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+                                  ).hasMatch(value)) {
+                                    return 'Please enter a valid email';
+                                  }
+                                  return null;
+                                },
+                              ),
+                              SizedBox(height: 16),
 
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("Already have an account? ",
-                              style: TextStyle(color: Colors.grey[600])),
-                          TextButton(
-                            onPressed: () => Navigator.pop(context),
-                            child: Text('Login',
-                                style: TextStyle(
-                                    color: Colors.blue[600],
-                                    fontWeight: FontWeight.bold)),
-                          ),
-                        ],
+                              if (!_otpSent)
+                                ElevatedButton(
+                                  onPressed: _isLoading ? null : _sendOtp,
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.blue[600],
+                                    foregroundColor: Colors.white,
+                                    padding: EdgeInsets.symmetric(vertical: 16),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                  ),
+                                  child: _isLoading
+                                      ? CircularProgressIndicator(color: Colors.white)
+                                      : Text(
+                                          'Verify Email',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                )
+                              else ...[
+                                // OTP Field
+                                TextFormField(
+                                  controller: _otpController,
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                    labelText: 'OTP',
+                                    hintText: 'Enter OTP',
+                                    prefixIcon: Icon(Icons.lock_clock),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    filled: true,
+                                    fillColor: Colors.white,
+                                  ),
+                                ),
+                                SizedBox(height: 16),
+                                ElevatedButton(
+                                  onPressed: _isLoading ? null : _verifyOtp,
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.blue[600],
+                                    foregroundColor: Colors.white,
+                                    padding: EdgeInsets.symmetric(vertical: 16),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                  ),
+                                  child: _isLoading
+                                      ? CircularProgressIndicator(color: Colors.white)
+                                      : Text(
+                                          'Submit OTP',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                ),
+                              ],
+                            ] else ...[
+                              // Full Name Field
+                              TextFormField(
+                                controller: _nameController,
+                                decoration: InputDecoration(
+                                  labelText: 'Full Name',
+                                  hintText: 'Enter your full name',
+                                  prefixIcon: Icon(Icons.person),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                validator: (value) => value == null || value.isEmpty
+                                    ? 'Please enter your name'
+                                    : null,
+                              ),
+                              SizedBox(height: 16),
+
+                              // Password Field
+                              TextFormField(
+                                controller: _passwordController,
+                                obscureText: _obscurePassword,
+                                decoration: InputDecoration(
+                                  labelText: 'Password',
+                                  hintText: 'Enter your password',
+                                  prefixIcon: Icon(Icons.lock),
+                                  suffixIcon: IconButton(
+                                    icon: Icon(
+                                      _obscurePassword
+                                          ? Icons.visibility_off
+                                          : Icons.visibility,
+                                    ),
+                                    onPressed: () {
+                                      setState(() {
+                                        _obscurePassword = !_obscurePassword;
+                                      });
+                                    },
+                                  ),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                validator: (value) => value == null || value.isEmpty
+                                    ? 'Please enter your password'
+                                    : value.length < 6
+                                    ? 'Password must be at least 6 characters'
+                                    : null,
+                              ),
+                              SizedBox(height: 16),
+
+                              // Class Dropdown
+                              DropdownButtonFormField<String>(
+                                value: _selectedClass.isEmpty ? null : _selectedClass,
+                                decoration: InputDecoration(
+                                  labelText: 'Class',
+                                  hintText: 'Select your class',
+                                  prefixIcon: Icon(Icons.school),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                items: _classes
+                                    .map(
+                                      (String className) => DropdownMenuItem<String>(
+                                        value: className,
+                                        child: Text(className),
+                                      ),
+                                    )
+                                    .toList(),
+                                onChanged: (String? newValue) {
+                                  setState(() => _selectedClass = newValue!);
+                                },
+                                validator: (value) => value == null || value.isEmpty
+                                    ? 'Please select your class'
+                                    : null,
+                              ),
+                              SizedBox(height: 16),
+
+                              // Gender Dropdown
+                              DropdownButtonFormField<String>(
+                                value: _selectedGender.isEmpty ? null : _selectedGender,
+                                decoration: InputDecoration(
+                                  labelText: 'Gender',
+                                  hintText: 'Select your gender',
+                                  prefixIcon: Icon(Icons.people),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                items: _genders
+                                    .map(
+                                      (String gender) => DropdownMenuItem<String>(
+                                        value: gender,
+                                        child: Text(gender),
+                                      ),
+                                    )
+                                    .toList(),
+                                onChanged: (String? newValue) {
+                                  setState(() => _selectedGender = newValue!);
+                                },
+                                validator: (value) => value == null || value.isEmpty
+                                    ? 'Please select your gender'
+                                    : null,
+                              ),
+                              SizedBox(height: 16),
+
+                              // School Field
+                              TextFormField(
+                                controller: _schoolController,
+                                decoration: InputDecoration(
+                                  labelText: 'School',
+                                  hintText: 'Enter your school name',
+                                  prefixIcon: Icon(Icons.location_city),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                validator: (value) => value == null || value.isEmpty
+                                    ? 'Please enter your school name'
+                                    : null,
+                              ),
+                              SizedBox(height: 16),
+
+                              // Address Field
+                              TextFormField(
+                                controller: _addressController,
+                                maxLines: 3,
+                                decoration: InputDecoration(
+                                  labelText: 'Address',
+                                  hintText: 'Enter your address',
+                                  prefixIcon: Icon(Icons.location_on),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                validator: (value) => value == null || value.isEmpty
+                                    ? 'Please enter your address'
+                                    : null,
+                              ),
+                              SizedBox(height: 32),
+
+                              ElevatedButton(
+                                onPressed: _isLoading ? null : _signup,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.blue[600],
+                                  foregroundColor: Colors.white,
+                                  padding: EdgeInsets.symmetric(vertical: 16),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                ),
+                                child: _isLoading
+                                    ? CircularProgressIndicator(color: Colors.white)
+                                    : Text(
+                                        'Create Account',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                              ),
+                              SizedBox(height: 24),
+
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Already have an account? ",
+                                    style: TextStyle(color: Colors.grey[600]),
+                                  ),
+                                  TextButton(
+                                    onPressed: () => Navigator.pop(context),
+                                    child: Text(
+                                      'Login',
+                                      style: TextStyle(
+                                        color: Colors.blue[600],
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ],
+                        ),
                       ),
-                    ]
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],

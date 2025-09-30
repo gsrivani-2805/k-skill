@@ -5,60 +5,94 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-
 class GameScreen extends StatelessWidget {
   GameScreen({super.key});
+
   final List<Map<String, dynamic>> games = [
     {
-      "title": "Word Match",
-      "color": Colors.orange,
-      "icon": Icons.compare_arrows,
+      "title": "Word Detective",
+      "subtitle": "Match words with their secret meanings!",
+      "emoji": "🕵🏼",
+      "gradient": [Color(0xFFFFE4E6), Color(0xFFFFD1D6)], // Light pink gradient
+      "difficulty": "Easy",
       "route": WordMatchScreen(jsonPath: "games/word_match.json"),
     },
     {
       "title": "Sentence Formation",
-      "color": Colors.blueAccent,
-      "icon": Icons.construction,
+      "subtitle": "Build sentences piece by piece!",
+      "emoji": "🧩",
+      "gradient": [Color(0xFFE6F3FF), Color(0xFFCCE7FF)], // Light blue gradient
+      "difficulty": "Medium",
       "route": SentenceForm(jsonPath: "games/sentence_formation.json"),
     },
     {
-      "title": "Fill In the Blanks",
-      "color": Colors.green,
-      "icon": Icons.edit_note,
+      "title": "Fill in the Blanks",
+      "subtitle": "Fill in the missing pieces to complete the magical story!",
+      "emoji": "✍🏼",
+      "gradient": [Color(0xFFFFF4E6), Color(0xFFFFE6CC)], // Light yellow/orange gradient
+      "difficulty": "Easy",
       "route": FillInTheBlanks(jsonPath: "games/grammar_mistakes.json"),
     },
     {
-      "title": "Picture Sentence",
-      "color": Colors.purple,
-      "icon": Icons.image_search,
+      "title": "Picture Story",
+      "subtitle": "Tell stories through amazing pictures!",
+      "emoji": "📷",
+      "gradient": [Color(0xFFF0E6FF), Color(0xFFE6D9FF)], // Light purple gradient
+      "difficulty": "Medium",
       "route": PictureSentenceScreen(jsonPath: "games/picture_sentence.json"),
     },
     {
-      "title": "Listening Puzzle",
-      "color": Colors.redAccent,
-      "icon": Icons.headphones,
+      "title": "Sound Quest",
+      "subtitle": "Listen carefully and solve the puzzle!",
+      "emoji": "🗣️",
+      "gradient": [Color(0xFFE6FFE6), Color(0xFFCCFFCC)], // Light green gradient
+      "difficulty": "Hard",
       "route": ListeningPuzzleScreen(jsonPath: "games/listening_puzzle.json"),
     },
     {
-      "title": "Story Completion",
-      "color": Colors.teal,
-      "icon": Icons.auto_stories,
+      "title": "Story Wizard",
+      "subtitle": "Create epic endings to incredible adventures!",
+      "emoji": "📝",
+      "gradient": [Color(0xFFE6F9FF), Color(0xFFCCF2FF)], // Light cyan gradient
+      "difficulty": "Hard",
       "route": StoryCompletionScreen(jsonPath: "games/story_completion.json"),
     },
   ];
+
+  Color _getDifficultyColor(String difficulty) {
+    switch (difficulty.toLowerCase()) {
+      case 'easy':
+        return Color(0xFF81C784); // Light green
+      case 'medium':
+        return Color(0xFFFFB74D); // Light orange
+      case 'hard':
+        return Color(0xFFE57373); // Light red
+      default:
+        return Color(0xFF64B5F6); // Light blue
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isTablet = screenWidth > 600;
+
     return Scaffold(
+      backgroundColor: Color(0xFFF8F9FA), // Light gray background
       appBar: AppBar(
         title: const Text(
           "Game Zone",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 24,
+            color: Colors.white,
+          ),
         ),
-        backgroundColor: Colors.deepPurple,
-        foregroundColor: Colors.white,
+        backgroundColor: Color(0xFF7CB342), // Light green to match practice zone
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon: const Icon(Icons.arrow_back),
+          color: Colors.white,
           onPressed: () {
             Navigator.pushNamedAndRemoveUntil(
               context,
@@ -68,79 +102,212 @@ class GameScreen extends StatelessWidget {
           },
         ),
       ),
-      backgroundColor: Colors.grey[100],
-      body: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            mainAxisSpacing: 12,
-            crossAxisSpacing: 12,
-            childAspectRatio: 1,
-          ),
-          itemCount: games.length,
-          itemBuilder: (context, index) {
-            final game = games[index];
-            return GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => game['route']),
-                );
-              },
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Stack(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(isTablet ? 20.0 : 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Welcome text
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Background image - now unique for each game
-                    // Positioned.fill(
-                    //   child: Image.asset(
-                    //     //game['backgroundImage'],
-                    //     'images/children.jpg',
-                    //     fit: BoxFit.cover,
-                    //     errorBuilder: (context, error, stackTrace) {
-                    //       // Fallback to a default image if the specific image is not found
-                    //       return Image.asset(
-                    //         'images/children.jpg',
-                    //         fit: BoxFit.cover,
-                    //       );
-                    //     },
-                    //   ),
-                    // ),
-                    // Color overlay (optional for better contrast)
-                    Positioned.fill(
-                      child: Container(color: game['color'].withOpacity(0.8)),
+                    Text(
+                      "Choose Your Adventure!",
+                      style: TextStyle(
+                        color: Color(0xFF424242), // Soft dark gray
+                        fontSize: isTablet ? 28 : 22,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    // Foreground content
-                    Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(game['icon'], size: 36, color: Colors.white),
-                          SizedBox(height: 8),
-                          Text(
-                            game['title'],
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
+                    SizedBox(height: 8),
+                    Text(
+                      "Pick a game and start learning! 🌟",
+                      style: TextStyle(
+                        color: Color(0xFF757575), // Light gray
+                        fontSize: isTablet ? 18 : 16,
                       ),
                     ),
                   ],
                 ),
               ),
-            );
-          },
+
+              // Games grid
+              Expanded(
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    // Responsive grid
+                    int crossAxisCount;
+                    double childAspectRatio;
+
+                    if (constraints.maxWidth > 800) {
+                      crossAxisCount = 3;
+                      childAspectRatio = 0.85;
+                    } else if (constraints.maxWidth > 600) {
+                      crossAxisCount = 2;
+                      childAspectRatio = 0.9;
+                    } else {
+                      crossAxisCount = 1;
+                      childAspectRatio = 1.8;
+                    }
+
+                    return GridView.builder(
+                      physics: BouncingScrollPhysics(),
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: crossAxisCount,
+                        mainAxisSpacing: 16,
+                        crossAxisSpacing: 16,
+                        childAspectRatio: childAspectRatio,
+                      ),
+                      itemCount: games.length,
+                      itemBuilder: (context, index) {
+                        final game = games[index];
+                        return _buildGameCard(context, game, isTablet);
+                      },
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildGameCard(
+    BuildContext context,
+    Map<String, dynamic> game,
+    bool isTablet,
+  ) {
+    return GestureDetector(
+      onTap: () {
+        // Add subtle haptic feedback
+        HapticFeedback.lightImpact();
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => game['route']),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: game['gradient'],
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: game['gradient'][0].withOpacity(0.2), // Lighter shadow
+              blurRadius: 10, // Reduced blur
+              offset: Offset(0, 4), // Smaller offset
+            ),
+          ],
+        ),
+        child: Stack(
+          children: [
+            // Floating action button - student friendly
+            Positioned(
+              bottom: 16,
+              right: 16,
+              child: Container(
+                width: isTablet ? 56 : 48,
+                height: isTablet ? 56 : 48,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(28),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1), // Lighter shadow
+                      blurRadius: 6,
+                      offset: Offset(0, 2),
+                    ),
+                  ],
+                ),
+                child: Center(
+                  child: Container(
+                    width: isTablet ? 40 : 32,
+                    height: isTablet ? 40 : 32,
+                    decoration: BoxDecoration(
+                      color: _getDifficultyColor(game['difficulty']),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Icon(
+                      Icons.arrow_forward_rounded,
+                      color: Colors.white,
+                      size: isTablet ? 24 : 20,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            // Main content
+            Padding(
+              padding: EdgeInsets.all(isTablet ? 20 : 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Emoji
+                  Text(
+                    game['emoji'],
+                    style: TextStyle(fontSize: isTablet ? 48 : 40),
+                  ),
+
+                  SizedBox(height: isTablet ? 16 : 12),
+
+                  // Title
+                  Text(
+                    game['title'],
+                    style: TextStyle(
+                      color: Color(0xFF424242), // Dark gray for better contrast on light backgrounds
+                      fontSize: isTablet ? 24 : 20,
+                      fontWeight: FontWeight.bold,
+                      shadows: [
+                        Shadow(
+                          color: Colors.white.withOpacity(0.8), // Light shadow for subtle effect
+                          offset: Offset(0, 1),
+                          blurRadius: 2,
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  SizedBox(height: isTablet ? 12 : 8),
+
+                  // Subtitle
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(right: isTablet ? 70 : 60),
+                      child: Text(
+                        game['subtitle'],
+                        style: TextStyle(
+                          color: Color(0xFF616161), // Medium gray for subtitle
+                          fontSize: isTablet ? 16 : 14,
+                          height: 1.3,
+                          shadows: [
+                            Shadow(
+                              color: Colors.white.withOpacity(0.6),
+                              offset: Offset(0, 1),
+                              blurRadius: 1,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
-
 class WordMatchScreen extends StatefulWidget {
   final String jsonPath;
   const WordMatchScreen({super.key, required this.jsonPath});

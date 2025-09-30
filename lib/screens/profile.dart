@@ -12,10 +12,10 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class UserProfile {
-  final String name;
-  final String className;
+  String name;
+  String className;
   final String gender;
-  final String school;
+  String school;
   final String address;
   final int currentStreak;
   final String currentLevel;
@@ -156,7 +156,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     await prefs.remove('userId');
     await prefs.setBool('isLoggedIn', false);
 
-    // Navigate to login page and remove all previous screens from stack
     Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
   }
 
@@ -262,26 +261,95 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
 
+  Future<void> _updateProfileOnServer(
+    String name,
+    String className,
+    String school,
+  ) async {
+    try {
+      final response = await http.put(
+        Uri.parse('$baseUrl/$userId/profile'),
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({'name': name, 'class': className, 'school': school}),
+      );
+
+      if (response.statusCode == 200) {
+        // Profile updated successfully
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Profile updated successfully!'),
+            backgroundColor: Colors.green,
+          ),
+        );
+        // Reload profile data
+        setState(() {
+          profileFuture = _loadProfileWithLessons();
+        });
+      } else {
+        throw Exception('Failed to update profile: ${response.body}');
+      }
+    } catch (error) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error updating profile: $error'),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
+  }
+
   Widget _buildProfileHeader(UserProfile profile) {
     return Container(
       color: Colors.white,
       padding: EdgeInsets.symmetric(vertical: 24, horizontal: 16),
       child: LayoutBuilder(
         builder: (context, constraints) {
-          // Check if it's mobile view (width less than 600px)
           bool isMobile = constraints.maxWidth < 600;
 
           if (isMobile) {
-            // Mobile layout - vertical alignment
+            // Mobile layout
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Profile Avatar
-                CircleAvatar(
-                  radius: 36,
-                  backgroundColor: primaryYellow,
-                  child: ClipOval(child: _buildGenderAvatar(profile.gender)),
+                // Profile Avatar with Edit Button
+                Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundColor: primaryYellow,
+                      child: ClipOval(
+                        child: _buildGenderAvatar(profile.gender),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: () => _showEditProfileDialog(context, profile),
+                        child: Container(
+                          padding: EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.white, width: 2),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 4,
+                                offset: Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: Icon(
+                            Icons.edit,
+                            color: Colors.white,
+                            size: 16,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(height: 16),
 
@@ -312,11 +380,10 @@ class _ProfileScreenState extends State<ProfileScreen>
                 ),
                 SizedBox(height: 16),
 
-                // Streak and Level in same row
+                // Streak and Level
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // Streak (left side)
                     Row(
                       children: [
                         Icon(
@@ -331,8 +398,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                         ),
                       ],
                     ),
-
-                    // Level (right side)
                     Chip(
                       label: Text(
                         profile.currentLevel,
@@ -346,13 +411,46 @@ class _ProfileScreenState extends State<ProfileScreen>
               ],
             );
           } else {
-            // Web layout - original horizontal alignment
+            // Web layout
             return Row(
               children: [
-                CircleAvatar(
-                  radius: 36,
-                  backgroundColor: primaryYellow,
-                  child: ClipOval(child: _buildGenderAvatar(profile.gender)),
+                Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 36,
+                      backgroundColor: primaryYellow,
+                      child: ClipOval(
+                        child: _buildGenderAvatar(profile.gender),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: () => _showEditProfileDialog(context, profile),
+                        child: Container(
+                          padding: EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.white, width: 2),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 4,
+                                offset: Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: Icon(
+                            Icons.edit,
+                            color: Colors.white,
+                            size: 16,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(width: 16),
                 Expanded(
@@ -413,6 +511,160 @@ class _ProfileScreenState extends State<ProfileScreen>
         },
       ),
     );
+  }
+
+  void _showEditProfileDialog(BuildContext context, UserProfile profile) {
+    final List<String> classes = [
+      'Class 1',
+      'Class 2',
+      'Class 3',
+      'Class 4',
+      'Class 5',
+      'Class 6',
+      'Class 7',
+      'Class 8',
+      'Class 9',
+      'Class 10',
+      'Class 11',
+      'Class 12',
+      'Adult Learner',
+    ];
+
+    TextEditingController nameController = TextEditingController(
+      text: profile.name,
+    );
+    TextEditingController schoolController = TextEditingController(
+      text: profile.school,
+    );
+
+    String selectedClass =
+        profile.className.isNotEmpty && classes.contains(profile.className)
+        ? profile.className
+        : classes[0];
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (context, setState) {
+            return AlertDialog(
+              title: Row(
+                children: [
+                  Icon(Icons.edit, color: Colors.blue),
+                  SizedBox(width: 8),
+                  Text('Edit Profile'),
+                ],
+              ),
+              content: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    TextField(
+                      controller: nameController,
+                      decoration: InputDecoration(
+                        labelText: 'Name',
+                        prefixIcon: Icon(Icons.person),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 16),
+
+                    // Dropdown for Class Selection
+                    DropdownButtonFormField<String>(
+                      value: selectedClass,
+                      decoration: InputDecoration(
+                        labelText: 'Class',
+                        prefixIcon: Icon(Icons.school),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      items: classes.map((String className) {
+                        return DropdownMenuItem<String>(
+                          value: className,
+                          child: Text(className),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {
+                        if (newValue != null) {
+                          setState(() {
+                            selectedClass = newValue;
+                          });
+                        }
+                      },
+                    ),
+
+                    SizedBox(height: 16),
+                    TextField(
+                      controller: schoolController,
+                      decoration: InputDecoration(
+                        labelText: 'School',
+                        prefixIcon: Icon(Icons.location_city),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: Text('Cancel', style: TextStyle(color: Colors.grey)),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  onPressed: () {
+                    if (nameController.text.trim().isNotEmpty &&
+                        schoolController.text.trim().isNotEmpty) {
+                      _updateProfile(
+                        nameController.text.trim(),
+                        selectedClass, // Use the selected class from dropdown
+                        schoolController.text.trim(),
+                        profile,
+                      );
+                      Navigator.of(context).pop();
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Please fill all fields'),
+                          backgroundColor: Colors.red,
+                        ),
+                      );
+                    }
+                  },
+                  child: Text('Save'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+
+  void _updateProfile(
+    String name,
+    String className,
+    String school,
+    UserProfile profile,
+  ) {
+    setState(() {
+      profile.name = name;
+      profile.className = className;
+      profile.school = school;
+    });
+
+    _updateProfileOnServer(name, className, school);
   }
 
   Widget _buildOverview(
@@ -533,7 +785,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // Updated helper method to find lesson info with proper structure navigation
   Map<String, dynamic> _findLessonInfo(
     String lessonId,
     Map<String, dynamic> curriculumData,
