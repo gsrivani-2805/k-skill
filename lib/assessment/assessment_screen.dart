@@ -162,8 +162,8 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                         const SizedBox(width: 16),
                         Expanded(
                           child: _buildAssessmentTile(
-                            title: "Reading Comprehension",
-                            description: "Test your reading skills with passages and questions",
+                            title: "Reading Skills",
+                            description: "Test your reading skills with passages",
                             icon: Icons.description_rounded,
                             duration: "15 minutes",
                             questions: 3,
@@ -215,7 +215,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                         ),
                         const SizedBox(height: 16),
                         _buildAssessmentTile(
-                          title: "Reading Comprehension",
+                          title: "Reading Skills",
                           description: "Test your reading skills with passages and questions",
                           icon: Icons.description_rounded,
                           duration: "15 minutes",

@@ -156,7 +156,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     await prefs.remove('userId');
     await prefs.setBool('isLoggedIn', false);
 
-    Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
+    Navigator.of(context).pushNamedAndRemoveUntil('/welcome', (route) => false);
   }
 
   @override
@@ -298,6 +298,76 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
 
+  Widget _buildLearningSuggestion(String currentLevel) {
+    String emoji;
+    String message;
+    String levelToStart;
+    Color backgroundColor;
+    Color textColor;
+
+    // Determine content based on current level
+    if (currentLevel == 'Basic') {
+      emoji = '🌱';
+      message = 'Great start! Begin your journey with';
+      levelToStart = 'Basic Level';
+      backgroundColor = Colors.green.shade50;
+      textColor = Colors.green.shade700;
+    } else if (currentLevel == 'Intermediate') {
+      emoji = '🚀';
+      message = 'You\'re doing well! Continue from';
+      levelToStart = 'Intermediate Level';
+      backgroundColor = Colors.orange.shade50;
+      textColor = Colors.orange.shade700;
+    } else {
+      // Advanced level
+      emoji = '⭐';
+      message = 'Excellent! Challenge yourself with';
+      levelToStart = 'Advanced Level';
+      backgroundColor = Colors.red.shade50;
+      textColor = Colors.red.shade700;
+    }
+
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamedAndRemoveUntil(context, '/levels', (route) => false);
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(color: textColor.withOpacity(0.3)),
+        ),
+        child: Row(
+          children: [
+            // Emoji icon
+            Text(emoji, style: const TextStyle(fontSize: 20)),
+            const SizedBox(width: 8),
+
+            // Message text with level highlighted
+            Expanded(
+              child: RichText(
+                text: TextSpan(
+                  style: TextStyle(fontSize: 13, color: textColor, height: 1.3),
+                  children: [
+                    TextSpan(text: '$message '),
+                    TextSpan(
+                      text: levelToStart,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // Arrow icon
+            Icon(Icons.arrow_forward, color: textColor, size: 18),
+          ],
+        ),
+      ),
+    );
+  }
+
   Widget _buildProfileHeader(UserProfile profile) {
     return Container(
       color: Colors.white,
@@ -408,103 +478,117 @@ class _ProfileScreenState extends State<ProfileScreen>
                     ),
                   ],
                 ),
+                SizedBox(height: 12),
+                // Learning suggestion
+                _buildLearningSuggestion(profile.currentLevel),
               ],
             );
           } else {
             // Web layout
-            return Row(
+            return Column(
               children: [
-                Stack(
+                Row(
                   children: [
-                    CircleAvatar(
-                      radius: 36,
-                      backgroundColor: primaryYellow,
-                      child: ClipOval(
-                        child: _buildGenderAvatar(profile.gender),
-                      ),
+                    Stack(
+                      children: [
+                        CircleAvatar(
+                          radius: 36,
+                          backgroundColor: primaryYellow,
+                          child: ClipOval(
+                            child: _buildGenderAvatar(profile.gender),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: GestureDetector(
+                            onTap: () =>
+                                _showEditProfileDialog(context, profile),
+                            child: Container(
+                              padding: EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                color: Colors.blue,
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: Colors.white,
+                                  width: 2,
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    blurRadius: 4,
+                                    offset: Offset(0, 2),
+                                  ),
+                                ],
+                              ),
+                              child: Icon(
+                                Icons.edit,
+                                color: Colors.white,
+                                size: 16,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    Positioned(
-                      bottom: 0,
-                      right: 0,
-                      child: GestureDetector(
-                        onTap: () => _showEditProfileDialog(context, profile),
-                        child: Container(
-                          padding: EdgeInsets.all(6),
-                          decoration: BoxDecoration(
-                            color: Colors.blue,
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.white, width: 2),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 4,
-                                offset: Offset(0, 2),
+                    SizedBox(width: 16),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            profile.name,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            profile.className,
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                          Text(
+                            profile.school,
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                          SizedBox(height: 6),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.local_fire_department,
+                                color: Colors.orange,
+                                size: 20,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                '${profile.currentStreak} day streak',
+                                style: TextStyle(color: Colors.orange),
+                              ),
+                              Spacer(),
+                              Chip(
+                                label: Text(
+                                  profile.currentLevel,
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                backgroundColor: getColorbyLevel(
+                                  profile.currentLevel,
+                                ),
+                                avatar: Icon(
+                                  Icons.star,
+                                  color: Colors.white,
+                                  size: 16,
+                                ),
                               ),
                             ],
                           ),
-                          child: Icon(
-                            Icons.edit,
-                            color: Colors.white,
-                            size: 16,
-                          ),
-                        ),
+                        ],
                       ),
                     ),
                   ],
                 ),
-                SizedBox(width: 16),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        profile.name,
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        profile.className,
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      Text(
-                        profile.school,
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      SizedBox(height: 6),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.local_fire_department,
-                            color: Colors.orange,
-                            size: 20,
-                          ),
-                          SizedBox(width: 4),
-                          Text(
-                            '${profile.currentStreak} day streak',
-                            style: TextStyle(color: Colors.orange),
-                          ),
-                          Spacer(),
-                          Chip(
-                            label: Text(
-                              profile.currentLevel,
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            backgroundColor: getColorbyLevel(
-                              profile.currentLevel,
-                            ),
-                            avatar: Icon(
-                              Icons.star,
-                              color: Colors.white,
-                              size: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
+                SizedBox(height: 12),
+                // Learning suggestion
+                _buildLearningSuggestion(profile.currentLevel),
               ],
             );
           }

@@ -50,18 +50,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Main Headline
-                    _buildMainHeadline(),
+                    // Main Headline and Learning Modules Section - Responsive Layout
+                    _buildResponsiveMainSection(),
                     const SizedBox(height: 32),
 
                     // Dictionary Widget (Existing)
                     const DictionaryWidget(),
                     const SizedBox(height: 24),
 
-                    // Learning Modules Section
-                    _buildLearningModules(),
-
-                    const SizedBox(height: 24),
                     // Vocabulary Section Title
                     const Text(
                       'Vocabulary Topics',
@@ -94,9 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
         double welcomeTextSize = isSmallScreen ? 20 : 22;
 
         return Container(
-          padding: EdgeInsets.symmetric(
-            vertical: 12,
-          ),
+          padding: EdgeInsets.symmetric(vertical: 12),
           child: Row(
             children: [
               // Profile Avatar
@@ -184,7 +178,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // Helper method for time-based greeting
   String _getTimeBasedGreeting() {
     final hour = DateTime.now().hour;
     if (hour < 12) {
@@ -196,13 +189,57 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  Widget _buildResponsiveMainSection() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isWeb = screenWidth > 600;
+
+    if (isWeb) {
+      // Web view: Side by side layout
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Welcome Banner Image
+          Expanded(
+            flex: 1,
+            child: _buildMainHeadline(),
+          ),
+          const SizedBox(width: 24),
+          // Practice Modules
+          Expanded(
+            flex: 1,
+            child: _buildLearningModules(),
+          ),
+        ],
+      );
+    } else {
+      // Mobile view: Stacked layout
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _buildMainHeadline(),
+          const SizedBox(height: 32),
+          _buildLearningModules(),
+        ],
+      );
+    }
+  }
+
   Widget _buildMainHeadline() {
-    return Container(
-      width: double.infinity,
-      height: MediaQuery.of(context).size.height * 0.25,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        image: const DecorationImage(image: AssetImage('images/board.png')),
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isWeb = screenWidth > 600;
+
+    return Center(
+      child: Container(
+        width: isWeb ? double.infinity : double.infinity,
+        height: isWeb ? 280 : MediaQuery.of(context).size.height * 0.25,
+        constraints: const BoxConstraints(minHeight: 200, maxHeight: 350),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          image: const DecorationImage(
+            image: AssetImage('images/board.png'),
+            fit: BoxFit.contain,
+          ),
+        ),
       ),
     );
   }

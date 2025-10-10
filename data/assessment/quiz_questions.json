@@ -4102,13 +4102,6 @@
           "grammar_type": "Gerunds and Infinitives (Bare Infinitive)"
         },
         {
-          "id": 85,
-          "question": "That he is honest is known to all. (The underlined part is a...)",
-          "options": ["Noun Clause", "Adjective Clause", "Adverb Clause", "Principal Clause"],
-          "correct_answer": "Noun Clause",
-          "grammar_type": "Clause Identification"
-        },
-        {
           "id": 86,
           "question": "We must listen to his words. Change the voice.",
           "options": ["His words must be listened to by us.", "His words must be listened by us.", "His words must be listened to.", "His words must be listened."],
@@ -4163,13 +4156,6 @@
           "options": ["work", "working", "worked", "to work"],
           "correct_answer": "working",
           "grammar_type": "Gerunds and Infinitives"
-        },
-        {
-          "id": 94,
-          "question": "The place where he lives is not known. (The underlined part is a...)",
-          "options": ["Noun Clause", "Adjective Clause", "Adverb Clause", "Principal Clause"],
-          "correct_answer": "Adjective Clause",
-          "grammar_type": "Clause Identification"
         },
         {
           "id": 95,
@@ -4228,13 +4214,6 @@
           "grammar_type": "Gerunds and Infinitives"
         },
         {
-          "id": 103,
-          "question": "He will not come if it rains. (The underlined part is a...)",
-          "options": ["Noun Clause", "Adjective Clause", "Adverb Clause of Condition", "Adverb Clause of Reason"],
-          "correct_answer": "Adverb Clause of Condition",
-          "grammar_type": "Clause Identification"
-        },
-        {
           "id": 104,
           "question": "I made him do the work. Change the voice.",
           "options": ["He was made to do the work by me.", "He was made do the work by me.", "He did the work by me.", "The work was done by him."],
@@ -4289,13 +4268,6 @@
           "options": ["smoke", "smoking", "be smoked", "to smoke"],
           "correct_answer": "smoking",
           "grammar_type": "Gerunds and Infinitives"
-        },
-        {
-          "id": 112,
-          "question": "I will do it when I have time. (The underlined part is a...)",
-          "options": ["Noun Clause", "Adjective Clause", "Adverb Clause of Time", "Adverb Clause of Condition"],
-          "correct_answer": "Adverb Clause of Time",
-          "grammar_type": "Clause Identification"
         },
         {
           "id": 113,
@@ -4354,13 +4326,6 @@
           "grammar_type": "Gerunds and Infinitives"
         },
         {
-          "id": 121,
-          "question": "He works hard so that he may pass. (The underlined part is a...)",
-          "options": ["Noun Clause", "Adjective Clause", "Adverb Clause of Purpose", "Adverb Clause of Result"],
-          "correct_answer": "Adverb Clause of Purpose",
-          "grammar_type": "Clause Identification"
-        },
-        {
           "id": 122,
           "question": "The child is crying for the toy. The verb 'crying' is:",
           "options": ["Transitive", "Intransitive", "Linking", "Auxiliary"],
@@ -4415,13 +4380,6 @@
           "options": ["go", "to go", "going", "to going"],
           "correct_answer": "going",
           "grammar_type": "Gerunds and Infinitives"
-        },
-        {
-          "id": 130,
-          "question": "He ran as fast as he could. (The underlined part is a...)",
-          "options": ["Noun Clause", "Adjective Clause", "Adverb Clause of Manner", "Adverb Clause of Degree"],
-          "correct_answer": "Adverb Clause of Manner",
-          "grammar_type": "Clause Identification"
         },
         {
           "id": 131,
@@ -4480,13 +4438,6 @@
           "grammar_type": "Gerunds and Infinitives"
         },
         {
-          "id": 139,
-          "question": "He is richer than I am. (The underlined part is a...)",
-          "options": ["Noun Clause", "Adjective Clause", "Adverb Clause of Comparison", "Principal Clause"],
-          "correct_answer": "Adverb Clause of Comparison",
-          "grammar_type": "Clause Identification"
-        },
-        {
           "id": 140,
           "question": "He gave me a book. The verb 'gave' is:",
           "options": ["Transitive", "Intransitive", "Ditransitive", "Linking"],
@@ -4541,13 +4492,6 @@
           "options": ["help", "to help", "helping", "to helping"],
           "correct_answer": "helping",
           "grammar_type": "Gerunds and Infinitives"
-        },
-        {
-          "id": 148,
-          "question": "I am glad that you have come. (The underlined part is a...)",
-          "options": ["Noun Clause", "Adjective Clause", "Adverb Clause of Reason", "Adverb Clause of Time"],
-          "correct_answer": "Adverb Clause of Reason",
-          "grammar_type": "Clause Identification"
         },
         {
           "id": 149,
