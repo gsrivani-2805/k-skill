@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'dictionary_bottom_sheet.dart'; // Import the dictionary bottom sheet
 
 class PlayScreen extends StatefulWidget {
   final String filePath;
@@ -160,7 +161,7 @@ class _PlayScreenState extends State<PlayScreen> {
       case 'oral_discourse':
         return Container(
           padding: const EdgeInsets.all(16),
-          margin: EdgeInsets.symmetric(vertical: 16),
+          margin: const EdgeInsets.symmetric(vertical: 16),
           decoration: BoxDecoration(
             color: Colors.green[50],
             border: Border.all(color: Colors.green[300]!, width: 1),
@@ -189,6 +190,15 @@ class _PlayScreenState extends State<PlayScreen> {
       default:
         return const SizedBox.shrink();
     }
+  }
+
+  void _showDictionaryBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => const DictionaryBottomSheet(),
+    );
   }
 
   @override
@@ -251,6 +261,13 @@ class _PlayScreenState extends State<PlayScreen> {
             ],
           ),
         ),
+      ),
+      // Floating Action Button for Dictionary
+      floatingActionButton: FloatingActionButton(
+        onPressed: _showDictionaryBottomSheet,
+        backgroundColor: Colors.purple[700],
+        tooltip: 'Dictionary',
+        child: const Icon(Icons.search, color: Colors.white),
       ),
     );
   }

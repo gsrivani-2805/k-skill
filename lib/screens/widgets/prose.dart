@@ -1,3 +1,4 @@
+import 'package:K_Skill/screens/widgets/dictionary_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -35,11 +36,10 @@ class _ProseScreenState extends State<ProseScreen> {
       final dynamic jsonData = json.decode(jsonString);
 
       setState(() {
-        // Handle both single lesson object and array of lessons
         if (jsonData is List) {
           lessons = jsonData;
         } else if (jsonData is Map<String, dynamic>) {
-          lessons = [jsonData]; // Wrap single lesson in a list
+          lessons = [jsonData];
         } else {
           throw Exception('Invalid JSON format');
         }
@@ -51,6 +51,15 @@ class _ProseScreenState extends State<ProseScreen> {
         isLoading = false;
       });
     }
+  }
+
+  void _showDictionaryBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => const DictionaryBottomSheet(),
+    );
   }
 
   @override
@@ -94,6 +103,12 @@ class _ProseScreenState extends State<ProseScreen> {
                 return LessonCard(lesson: lessons[index]);
               },
             ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _showDictionaryBottomSheet,
+        backgroundColor: Colors.purple[700],
+        tooltip: 'Dictionary',
+        child: const Icon(Icons.search, color: Colors.white),
+      ),
     );
   }
 }
@@ -114,7 +129,6 @@ class LessonCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Lesson Title
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
@@ -137,11 +151,7 @@ class LessonCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-
-            // Content
             ...buildContentWidgets(lesson['content'] ?? []),
-
-            // Author (if available)
             if (lesson['author'] != null &&
                 lesson['author'].toString().isNotEmpty)
               Padding(
@@ -172,7 +182,6 @@ class LessonCard extends StatelessWidget {
         widgets.add(buildImageContent(item['image']));
       }
 
-      // Add spacing between content items
       if (i < content.length - 1) {
         widgets.add(const SizedBox(height: 16));
       }
@@ -182,14 +191,9 @@ class LessonCard extends StatelessWidget {
   }
 
   Widget buildTextContent(String text, int index) {
-    // Check if it's a question (starts with a number)
     bool isQuestion = RegExp(r'^\d+\.').hasMatch(text.trim());
-
-    // Check if it's a heading or special instruction
     bool isInstruction =
         text.contains(':') && text.toLowerCase().contains('oral discourse');
-
-    // Check if it's a section header (like "About the author")
     bool isSectionHeader =
         text.trim().toLowerCase() == 'about the author' ||
         text.trim().length < 50 &&
@@ -272,7 +276,6 @@ class LessonCard extends StatelessWidget {
         ),
       );
     } else {
-      // Regular paragraph text
       return Container(
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
         child: Text(
@@ -313,7 +316,7 @@ class LessonCard extends StatelessWidget {
             Container(
               constraints: const BoxConstraints(maxHeight: 300),
               child: Image.asset(
-                '$imagePath',
+                imagePath,
                 errorBuilder: (context, error, stackTrace) {
                   return Container(
                     height: 200,

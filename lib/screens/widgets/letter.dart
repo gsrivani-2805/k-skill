@@ -1,3 +1,4 @@
+import 'package:K_Skill/screens/widgets/dictionary_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -49,6 +50,15 @@ class _LetterScreenState extends State<LetterScreen> {
     }
   }
 
+  void _showDictionaryBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => const DictionaryBottomSheet(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +68,7 @@ class _LetterScreenState extends State<LetterScreen> {
           widget.title,
           style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
         ),
-        backgroundColor: Colors.blue[700],
+        backgroundColor: Colors.purple[700],
         foregroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
@@ -102,6 +112,13 @@ class _LetterScreenState extends State<LetterScreen> {
                 child: buildLetterContent(),
               ),
             ),
+      // Floating Action Button for Dictionary
+      floatingActionButton: FloatingActionButton(
+        onPressed: _showDictionaryBottomSheet,
+        backgroundColor: Colors.purple[700],
+        tooltip: 'Dictionary',
+        child: const Icon(Icons.search, color: Colors.white),
+      ),
     );
   }
 

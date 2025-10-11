@@ -1,3 +1,4 @@
+import 'package:K_Skill/screens/widgets/dictionary_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -64,10 +65,19 @@ class _PoemScreenState extends State<PoemScreen>
     }
   }
 
+  void _showDictionaryBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => const DictionaryBottomSheet(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFAF9F6), // Warm off-white
+      backgroundColor: const Color(0xFFFAF9F6), 
       appBar: AppBar(
         title: Text(
           widget.title,
@@ -94,6 +104,12 @@ class _PoemScreenState extends State<PoemScreen>
           : error != null
               ? _buildErrorWidget()
               : _buildPoemContent(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _showDictionaryBottomSheet,
+        backgroundColor: Colors.purple[700],
+        tooltip: 'Dictionary',
+        child: const Icon(Icons.search, color: Colors.white),
+      ),
     );
   }
 
@@ -369,7 +385,7 @@ class _PoemScreenState extends State<PoemScreen>
             Container(
               constraints: const BoxConstraints(maxHeight: 300),
               child: Image.asset(
-                '$imagePath',
+                imagePath,
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
                   return Container(
@@ -444,9 +460,9 @@ class _PoemScreenState extends State<PoemScreen>
       backgroundColor: Colors.transparent,
       builder: (context) {
         return Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
-            borderRadius: const BorderRadius.only(
+            borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
             ),

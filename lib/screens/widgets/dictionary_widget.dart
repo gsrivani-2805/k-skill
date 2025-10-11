@@ -298,7 +298,6 @@ class _DictionaryWidgetState extends State<DictionaryWidget>
                               : Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    const Icon(Icons.search_rounded, size: 18),
                                     const SizedBox(width: 6),
                                     const Text(
                                       "Search",

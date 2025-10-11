@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:K_Skill/screens/widgets/dictionary_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -98,7 +99,8 @@ class _LevelsScreenState extends State<LevelsScreen> {
   Map<String, dynamic> getAcademicCardData() {
     return {
       'title': 'ACADEMICS',
-      'focus': 'Comprehensive English curriculum for Classes 8, 9, and 10 with structured units and reading lessons.',
+      'focus':
+          'Comprehensive English curriculum for Classes 8, 9, and 10 with structured units and reading lessons.',
       'classes': 3, // Number of classes (8, 9, 10)
     };
   }
@@ -107,7 +109,8 @@ class _LevelsScreenState extends State<LevelsScreen> {
   Map<String, dynamic> getDiscoursesCardData() {
     return {
       'title': 'DISCOURSES',
-      'focus': 'Engage in meaningful discussions and explore various topics through interactive discourse activities.',
+      'focus':
+          'Engage in meaningful discussions and explore various topics through interactive discourse activities.',
       'topics': 6, // Number of discourse topics available
     };
   }
@@ -198,7 +201,8 @@ class _LevelsScreenState extends State<LevelsScreen> {
 
     return ListView.builder(
       padding: const EdgeInsets.all(24.0),
-      itemCount: curriculumData.length + 2, // +2 for Academics and Discourses cards
+      itemCount:
+          curriculumData.length + 2, // +2 for Academics and Discourses cards
       itemBuilder: (context, index) {
         if (index == curriculumData.length) {
           // Academics card (second to last item)
@@ -226,7 +230,8 @@ class _LevelsScreenState extends State<LevelsScreen> {
           Map<String, dynamic> level = curriculumData[levelKey];
           int moduleCount = (level['modules'] as Map<String, dynamic>).length;
 
-          final config = levelConfigs[index % 3]; // Use first 3 configs for curriculum
+          final config =
+              levelConfigs[index % 3]; // Use first 3 configs for curriculum
 
           return _buildLevelCard(
             level: level,
@@ -247,10 +252,10 @@ class _LevelsScreenState extends State<LevelsScreen> {
     final levels = curriculumData.entries.toList();
     final academicData = getAcademicCardData();
     final discoursesData = getDiscoursesCardData();
-    
+
     // Create a combined list with curriculum levels, academics, and discourses
     List<Widget> allCards = [];
-    
+
     // Add curriculum cards
     for (int i = 0; i < levels.length; i++) {
       final entry = levels[i];
@@ -259,36 +264,42 @@ class _LevelsScreenState extends State<LevelsScreen> {
       int moduleCount = (level['modules'] as Map<String, dynamic>).length;
       final config = levelConfigs[i % 3];
 
-      allCards.add(_buildLevelCard(
-        level: level,
-        levelKey: levelKey,
-        moduleCount: moduleCount,
-        color: config['color'],
-        borderColor: config['borderColor'],
-        icon: config['icon'],
-        isDesktop: true,
-      ));
+      allCards.add(
+        _buildLevelCard(
+          level: level,
+          levelKey: levelKey,
+          moduleCount: moduleCount,
+          color: config['color'],
+          borderColor: config['borderColor'],
+          icon: config['icon'],
+          isDesktop: true,
+        ),
+      );
     }
 
     // Add academics card
     final academicConfig = levelConfigs[3];
-    allCards.add(_buildAcademicCard(
-      academicData: academicData,
-      color: academicConfig['color'],
-      borderColor: academicConfig['borderColor'],
-      icon: academicConfig['icon'],
-      isDesktop: true,
-    ));
+    allCards.add(
+      _buildAcademicCard(
+        academicData: academicData,
+        color: academicConfig['color'],
+        borderColor: academicConfig['borderColor'],
+        icon: academicConfig['icon'],
+        isDesktop: true,
+      ),
+    );
 
     // Add discourses card
     final discoursesConfig = levelConfigs[4];
-    allCards.add(_buildDiscoursesCard(
-      discoursesData: discoursesData,
-      color: discoursesConfig['color'],
-      borderColor: discoursesConfig['borderColor'],
-      icon: discoursesConfig['icon'],
-      isDesktop: true,
-    ));
+    allCards.add(
+      _buildDiscoursesCard(
+        discoursesData: discoursesData,
+        color: discoursesConfig['color'],
+        borderColor: discoursesConfig['borderColor'],
+        icon: discoursesConfig['icon'],
+        isDesktop: true,
+      ),
+    );
 
     return SingleChildScrollView(
       padding: const EdgeInsets.all(32.0),
@@ -303,7 +314,9 @@ class _LevelsScreenState extends State<LevelsScreen> {
                     Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(
-                          right: j < i + 2 && j < allCards.length - 1 ? 16.0 : 0,
+                          right: j < i + 2 && j < allCards.length - 1
+                              ? 16.0
+                              : 0,
                         ),
                         child: allCards[j],
                       ),
@@ -558,7 +571,7 @@ class _LevelsScreenState extends State<LevelsScreen> {
                     borderRadius: BorderRadius.circular(2),
                   ),
                   child: FractionallySizedBox(
-                    widthFactor: 0.6, 
+                    widthFactor: 0.6,
                     alignment: Alignment.centerLeft,
                     child: Container(
                       decoration: BoxDecoration(
@@ -1453,6 +1466,15 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     }
   }
 
+  void _showDictionaryBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => const DictionaryBottomSheet(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -1474,6 +1496,13 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       ),
 
       body: _buildBody(),
+      // Floating Action Button for Dictionary
+      floatingActionButton: FloatingActionButton(
+        onPressed: _showDictionaryBottomSheet,
+        backgroundColor: Colors.purple[700],
+        tooltip: 'Dictionary',
+        child: const Icon(Icons.search, color: Colors.white),
+      ),
     );
   }
 
