@@ -722,7 +722,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                   ),
                 ),
                 icon: const Icon(Icons.refresh, size: 20),
-                label: const Text("Next", style: TextStyle(fontSize: 14)),
+                label: const Text("Next", style: TextStyle(fontSize: 14, color: Colors.white)),
               ),
             ),
           ],
@@ -893,7 +893,10 @@ class _PracticeScreenState extends State<PracticeScreen> {
             },
 
             icon: const Icon(Icons.refresh),
-            label: const Text("Practice Again"),
+            label: const Text(
+              "Practice Again",
+              style: TextStyle(color: Colors.white),
+            ),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blue,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
