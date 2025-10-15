@@ -2024,37 +2024,66 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
   }
 
   Widget _buildMedia(Map<String, dynamic> media) {
-    final imagePath = media['image'];
-    if (imagePath == null || imagePath.toString().isEmpty) {
-      return SizedBox.shrink();
-    }
+    final rawPath = media['image'];
+    if (rawPath == null || rawPath.isEmpty) return const SizedBox.shrink();
 
-    return FutureBuilder(
-      future: rootBundle.load(imagePath),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.done &&
-            snapshot.hasData) {
-          return Container(
-            margin: EdgeInsets.only(bottom: 16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 12),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    imagePath,
-                    width: double.infinity,
-                    height: 250,
-                  ),
-                ),
-              ],
+    // 🔥 Decode double-encoded URLs like %2520 → space
+    final imagePath = Uri.decodeFull(Uri.decodeFull(rawPath));
+
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 8),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.white,
+            spreadRadius: 1,
+            blurRadius: 5,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              constraints: const BoxConstraints(maxHeight: 300),
+              child: Image.asset(
+                imagePath,
+                errorBuilder: (context, error, stackTrace) {
+                  return Container(
+                    height: 200,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.image_not_supported,
+                          size: 50,
+                          color: Colors.grey[400],
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          'Image not found',
+                          style: TextStyle(
+                            color: Colors.grey[600],
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
             ),
-          );
-        }
-        // If loading or asset not found, show nothing
-        return SizedBox.shrink();
-      },
+          ],
+        ),
+      ),
     );
   }
 

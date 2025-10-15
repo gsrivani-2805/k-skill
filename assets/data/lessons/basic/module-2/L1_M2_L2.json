@@ -90,7 +90,7 @@
                 "The parents love their children very much."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/Our Immediate Family.jpg"
+                "image": "images/basic/module-2/lesson-2/Our_Immediate_Family.jpg"
               }
             }
           ]
@@ -123,11 +123,11 @@
                 },
                 {
                   "label": "Nephew",
-                  "value": "Your nephew is the son of your brother or sister. [15, 30]"
+                  "value": "Your nephew is the son of your brother or sister."
                 },
                 {
                   "label": "Niece",
-                  "value": "Your niece is the daughter of your brother or sister. [15, 30]"
+                  "value": "Your niece is the daughter of your brother or sister."
                 },
                 {
                   "label": "Grandparents",
@@ -135,11 +135,11 @@
                 },
                 {
                   "label": "Great-grandfather",
-                  "value": "The father of your grandfather or grandmother. [15]"
+                  "value": "The father of your grandfather or grandmother."
                 },
                 {
                   "label": "Great-grandmother",
-                  "value": "The mother of your grandfather or grandmother. [15]"
+                  "value": "The mother of your grandfather or grandmother."
                 },
                 {
                   "label": "Relative",
@@ -167,7 +167,7 @@
                 "All our relatives came for the wedding."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/Extended Family.png"
+                "image": "images/basic/module-2/lesson-2/Extended_Family.png"
               }
             }
           ]
@@ -180,7 +180,7 @@
               "examples": [],
               "usage_examples": [],
               "media": {
-                "image": "images/basic/module-2/lesson-2/Family roles.jpg"
+                "image": "images/basic/module-2/lesson-2/Family_roles.jpg"
               },
               "table": {
                 "title": "Family Relationships",
@@ -283,7 +283,7 @@
                 "My brother goes to the barber for a haircut every month."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/Important Community Helpers_,.png"
+                "image": "images/basic/module-2/lesson-2/Important_Community_Helpers.png"
               }
             }
           ]
@@ -355,7 +355,7 @@
                 "We should always listen to the advice of our elders."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/Village Leaders and Others.png"
+                "image": "images/basic/module-2/lesson-2/Village_Leaders_and_Others.png"
               }
             }
           ]
@@ -443,7 +443,7 @@
                 "The new teacher has short, straight hair."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/Physical Appearance.png"
+                "image": "images/basic/module-2/lesson-2/Physical_Appearance.png"
               },
               "table": {
                 "title": "Opposites in Physical Description",
@@ -530,7 +530,6 @@
                 "The lazy boy did not finish his homework."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/Character.jpg"
               }
             }
           ]
@@ -635,7 +634,7 @@
                 "My sister is sweeping the floor with a broom."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/. Items in a House 2.jpg"
+                "image": "images/basic/module-2/lesson-2/Items_in_a_House.jpg"
               }
             }
           ]
@@ -680,7 +679,6 @@
                 "Follow this path to reach the river."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p9"
               }
             }
           ]
@@ -740,7 +738,6 @@
                 "This feather is very light."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p10"
               }
             }
           ]
@@ -785,7 +782,6 @@
                 "The market is a noisy place."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p11"
               }
             }
           ]
@@ -878,7 +874,6 @@
                 "Let's rest for a while."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p12"
               }
             }
           ]
@@ -923,7 +918,6 @@
                 "They will build a new house."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p13"
               }
             }
           ]
@@ -978,7 +972,6 @@
                 "If you don't know, ask the teacher."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p14"
               }
             }
           ]
@@ -1071,7 +1064,6 @@
                 "The artist painted a beautiful picture of the village."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p15"
               }
             }
           ]
@@ -1126,7 +1118,6 @@
                 "The doctor is attending to the patient."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p16"
               }
             }
           ]
@@ -1140,20 +1131,20 @@
           "title": "8.1. Immediate Family",
           "sections": [
             {
-              "text": "Terms for your closest family members. [19]",
+              "text": "Terms for your closest family members.",
               "examples": [
-                {"label": "Father", "value": "Your male parent. [32]"},
-                {"label": "Mother", "value": "Your female parent. [32]"},
+                {"label": "Father", "value": "Your male parent."},
+                {"label": "Mother", "value": "Your female parent."},
                 {"label": "Son", "value": "Your male child."},
                 {"label": "Daughter", "value": "Your female child."},
-                {"label": "Brother", "value": "A male with the same parents as you. [32]"},
-                {"label": "Sister", "value": "A female with the same parents as you. [32]"},
+                {"label": "Brother", "value": "A male with the same parents as you."},
+                {"label": "Sister", "value": "A female with the same parents as you."},
                 {"label": "Parents", "value": "Your father and mother together."},
                 {"label": "Children", "value": "Your sons and daughters together."},
-                {"label": "Siblings", "value": "Your brothers and sisters together. [6, 31]"},
-                {"label": "Spouse", "value": "Your husband or wife. [15]"},
-                {"label": "Husband", "value": "The man you are married to. [3, 6]"},
-                {"label": "Wife", "value": "The woman you are married to. [3, 6]"}
+                {"label": "Siblings", "value": "Your brothers and sisters together."},
+                {"label": "Spouse", "value": "Your husband or wife."},
+                {"label": "Husband", "value": "The man you are married to."},
+                {"label": "Wife", "value": "The woman you are married to."}
               ],
               "usage_examples": [
                 "My father is a farmer.",
@@ -1170,7 +1161,7 @@
                 "His wife is a doctor."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/Family Members.png"
+                "image": "images/basic/module-2/lesson-2/Family_Members.png"
               }
             }
           ]
@@ -1187,7 +1178,7 @@
                 {"label": "Granddaughter", "value": "The daughter of your child."},
                 {"label": "Uncle", "value": "The brother of your father or mother."},
                 {"label": "Aunt", "value": "The sister of your father or mother."},
-                {"label": "Cousin", "value": "The child of your uncle or aunt. [3, 6]"},
+                {"label": "Cousin", "value": "The child of your uncle or aunt."},
                 {"label": "Nephew", "value": "The son of your brother or sister. [6]"},
                 {"label": "Niece", "value": "The daughter of your brother or sister. [6]"},
                 {"label": "Grandparents", "value": "The parents of your parents."},
@@ -1225,7 +1216,7 @@
                 "I made a family tree for my school project."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/Our Immediate Family.jpg"
+                "image": "images/basic/module-2/lesson-2/Extended_Family.png"
               }
             }
           ]
@@ -1270,7 +1261,6 @@
                 "His fiancée is very beautiful."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p19"
               }
             }
           ]
@@ -1320,7 +1310,6 @@
                 "The baby is sleeping in the cradle."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p20"
               }
             }
           ]
@@ -1355,7 +1344,6 @@
                 "We must be hospitable to our guests."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/Extended Family.png"
               }
             }
           ]
@@ -1410,7 +1398,6 @@
                 "The youth bring energy and new ideas to the household."
               ],
               "media": {
-                "image": "images/basic/module-2/lesson-2/p22"
               }
             }
           ]
