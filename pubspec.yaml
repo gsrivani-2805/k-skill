@@ -385,6 +385,11 @@ flutter:
   - assets/data/quizzes/advanced/module-4/L3_M4_Q4.json
 
   - images/
+  - data/
+  - practice/
+  - games/
+  - vocabulary/
+
 
   #images for each lesson
   - assets/images/
