@@ -2011,6 +2011,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             SizedBox(height: 16),
 
           if (section['media'] != null) _buildMedia(section['media']),
+          SizedBox(height: 16),
 
           if (section['examples'] != null) _buildExamples(section['examples']),
 
@@ -2229,53 +2230,56 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     );
   }
 
-  Widget _buildTable(Map<String, dynamic> table) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Icon(Icons.table_chart, color: Colors.indigo.shade600, size: 18),
-              SizedBox(width: 8),
-              Text(
+Widget _buildTable(Map<String, dynamic> table) {
+  return Container(
+    margin: EdgeInsets.only(bottom: 16),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(Icons.table_chart, color: Colors.indigo.shade600, size: 18),
+            SizedBox(width: 8),
+            // ✅ Allow wrapping to multiple lines
+            Expanded(
+              child: Text(
                 table['title'] ?? 'Reference Table',
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
                   color: Colors.indigo.shade700,
                 ),
+                softWrap: true,
               ),
+            ),
+          ],
+        ),
+        SizedBox(height: 12),
+        Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: Colors.grey.shade300),
+          ),
+          child: Column(
+            children: [
+              if (table['headers'] != null) _buildTableHeader(table['headers']),
+              if (table['rows'] != null)
+                ...((table['rows'] as List)
+                    .asMap()
+                    .entries
+                    .map(
+                      (entry) => _buildTableRow(entry.value, entry.key % 2 == 0),
+                    )
+                    .toList()),
             ],
           ),
-          SizedBox(height: 12),
-          Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: Colors.grey.shade300),
-            ),
-            child: Column(
-              children: [
-                if (table['headers'] != null)
-                  _buildTableHeader(table['headers']),
-                if (table['rows'] != null)
-                  ...((table['rows'] as List)
-                      .asMap()
-                      .entries
-                      .map(
-                        (entry) =>
-                            _buildTableRow(entry.value, entry.key % 2 == 0),
-                      )
-                      .toList()),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
+}
 
   Widget _buildTableHeader(List<dynamic> headers) {
     return Container(
