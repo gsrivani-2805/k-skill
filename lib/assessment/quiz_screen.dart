@@ -135,8 +135,12 @@ class _QuizScreenState extends State<QuizScreen> {
     });
   }
 
-  void _submitScoreAndExit() {
+  void _submitScoreAndContinue() {
     Navigator.pop(context, score);
+    
+    Future.delayed(Duration.zero, () {
+      Navigator.pushNamed(context, '/reading');
+    });
   }
 
   Widget _buildResultScreen() {
@@ -163,12 +167,6 @@ class _QuizScreenState extends State<QuizScreen> {
         title: const Text("Quiz Result", style: TextStyle(color: Colors.white)),
         backgroundColor: const Color(0xFFFFA500), // Orange
         automaticallyImplyLeading: false,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
       ),
       body: Center(
         child: Card(
@@ -201,21 +199,44 @@ class _QuizScreenState extends State<QuizScreen> {
                   style: const TextStyle(color: Colors.grey, fontSize: 16),
                 ),
                 const SizedBox(height: 30),
-                ElevatedButton(
-                  onPressed: _submitScoreAndExit,
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.blue.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(Icons.info_outline, color: Colors.blue[700]),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Text(
+                          "Next: Reading Practice",
+                          style: TextStyle(
+                            color: Colors.blue[700],
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton.icon(
+                  onPressed: _submitScoreAndContinue,
+                  icon: const Icon(Icons.arrow_forward),
+                  label: const Text("Continue to Reading"),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFFFA500),
+                    foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 32,
-                      vertical: 12,
+                      vertical: 14,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
-                  ),
-                  child: const Text(
-                    "Back to Assessment",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ),
               ],

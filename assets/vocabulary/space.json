@@ -293,16 +293,6 @@
       ]
     },
     {
-      "word": "Gravity",
-      "pronunciation": "/ˈɡrævɪti/",
-      "definition": "The force that attracts a body toward the center of the earth, or toward any other physical body having mass.",
-      "sentences": [
-        "Gravity keeps the planets in orbit around the sun.",
-        "Without gravity, we would float away.",
-        "The strength of gravity depends on the mass of objects."
-      ]
-    },
-    {
       "word": "Weightlessness",
       "pronunciation": "/ˈweɪtləsnɪs/",
       "definition": "The state of being without apparent weight, as in freefall or in orbit around the Earth.",
@@ -313,16 +303,6 @@
       ]
     },
     {
-      "word": "Aurora",
-      "pronunciation": "/ɔːˈrɔːrə/",
-      "definition": "A natural light display in the sky, usually seen in the high-latitude regions (around the Arctic and Antarctic).",
-      "sentences": [
-        "The aurora borealis is also known as the Northern Lights.",
-        "We hope to see the aurora on our trip to Alaska.",
-        "Auroras are caused by particles from the sun interacting with Earth's atmosphere."
-      ]
-    },
-    {
       "word": "Eclipse",
       "pronunciation": "/ɪˈklɪps/",
       "definition": "An event where one celestial body obscures another, such as when the moon passes between the sun and Earth, blocking the sun's light.",
@@ -330,16 +310,6 @@
         "We watched a partial solar eclipse.",
         "During a lunar eclipse, the moon turns reddish.",
         "Eclipses are rare and exciting events."
-      ]
-    },
-    {
-      "word": "Constellation",
-      "pronunciation": "/ˌkɒnstəˈleɪʃən/",
-      "definition": "A group of stars forming a recognizable pattern that is traditionally named after its apparent form or identified with a mythological figure.",
-      "sentences": [
-        "Orion is a very famous constellation.",
-        "Learning about constellations helps you find your way in the night sky.",
-        "Each constellation has its own story."
       ]
     },
     {
@@ -373,26 +343,6 @@
       ]
     },
     {
-      "word": "Galaxy",
-      "pronunciation": "/ˈɡæləksi/",
-      "definition": "A large system of stars, stellar remnants, interstellar gas, dust, and dark matter bound together by gravity.",
-      "sentences": [
-        "Our Milky Way is a spiral galaxy.",
-        "Scientists estimate there are billions of galaxies in the observable universe.",
-        "Galaxies often contain black holes at their centers."
-      ]
-    },
-    {
-      "word": "Milky Way",
-      "pronunciation": "/ˈmɪlki weɪ/",
-      "definition": "The galaxy that contains our Solar System, visible as a faint band of light in the night sky.",
-      "sentences": [
-        "On a clear night, far from city lights, you can see the Milky Way.",
-        "The Milky Way is a barred spiral galaxy.",
-        "Our sun is just one of hundreds of billions of stars in the Milky Way."
-      ]
-    },
-    {
       "word": "Andromeda Galaxy",
       "pronunciation": "/ænˈdrɒmɪdə ˈɡæləksi/",
       "definition": "The closest large spiral galaxy to the Milky Way.",
@@ -420,16 +370,6 @@
         "The James Webb Space Telescope can see further back in time than Hubble.",
         "Scientists are excited about the discoveries from the James Webb Space Telescope.",
         "The James Webb Space Telescope is designed to study the early universe."
-      ]
-    },
-    {
-      "word": "Observatory",
-      "pronunciation": "/əbˈzɜːrvətɔːri/",
-      "definition": "A building or place equipped for observing natural phenomena, especially astronomical ones.",
-      "sentences": [
-        "We visited a famous observatory on our trip.",
-        "The observatory has a powerful telescope for stargazing.",
-        "Many observatories are built in remote, dark locations."
       ]
     },
     {
@@ -663,16 +603,6 @@
       ]
     },
     {
-      "word": "Quasar",
-      "pronunciation": "/ˈkweɪzɑːr/",
-      "definition": "An extremely luminous active galactic nucleus, powered by a supermassive black hole.",
-      "sentences": [
-        "Quasars are some of the brightest objects in the universe.",
-        "Quasars are very distant and were more common in the early universe.",
-        "Studying quasars helps us understand galaxy formation."
-      ]
-    },
-    {
       "word": "Cosmic Microwave Background (CMB)",
       "pronunciation": "/ˈkɒzmɪk ˈmaɪkrəˌweɪv ˈbækˌɡraʊnd/",
       "definition": "Faint cosmic background radiation that fills all space, considered to be the afterglow of the Big Bang.",
@@ -863,26 +793,6 @@
       ]
     },
     {
-      "word": "Asteroid",
-      "pronunciation": "/ˈæstərɔɪd/",
-      "definition": "A small rocky body orbiting the sun.",
-      "sentences": [
-        "Most asteroids are found in the asteroid belt.",
-        "Some asteroids are very small, while others are hundreds of miles wide.",
-        "Scientists study asteroids to understand the early solar system."
-      ]
-    },
-    {
-      "word": "Comet",
-      "pronunciation": "/ˈkɒmɪt/",
-      "definition": "An icy, small solar system body that, when passing close to the Sun, heats up and begins to outgas, displaying a visible atmosphere or coma, and sometimes also a tail.",
-      "sentences": [
-        "Halley's Comet is a famous periodic comet.",
-        "Comets are often described as 'dirty snowballs'.",
-        "The tail of a comet always points away from the sun."
-      ]
-    },
-    {
       "word": "Meteoroid",
       "pronunciation": "/ˈmiːtiərɔɪd/",
       "definition": "A small body of rock or metal in outer space, before it enters Earth's atmosphere.",
@@ -890,26 +800,6 @@
         "A meteoroid can be as small as a grain of sand or as large as a boulder.",
         "When a meteoroid enters the atmosphere, it becomes a meteor.",
         "Scientists track meteoroids that might pose a threat to Earth."
-      ]
-    },
-    {
-      "word": "Meteor",
-      "pronunciation": "/ˈmiːtiər/",
-      "definition": "A streak of light in the sky produced by a meteoroid burning up as it enters Earth's atmosphere; commonly called a 'shooting star'.",
-      "sentences": [
-        "We saw a bright meteor during the meteor shower.",
-        "Meteors burn up due to friction with the air.",
-        "A meteor is a fleeting but beautiful sight."
-      ]
-    },
-    {
-      "word": "Meteorite",
-      "pronunciation": "/ˈmiːtiəraɪt/",
-      "definition": "A piece of rock or metal from space that survives passage through the atmosphere and lands on Earth's surface.",
-      "sentences": [
-        "Scientists found a large meteorite in Antarctica.",
-        "Meteorites can be very valuable to collectors.",
-        "Studying meteorites helps us understand the composition of other planets."
       ]
     },
     {
@@ -1313,16 +1203,6 @@
       ]
     },
     {
-      "word": "Cosmic Rays",
-      "pronunciation": "/ˈkɒzmɪk reɪz/",
-      "definition": "High-energy protons and atomic nuclei that move through space at nearly the speed of light.",
-      "sentences": [
-        "Cosmic rays originate from supernovae and other violent cosmic events.",
-        "Earth's atmosphere protects us from most cosmic rays.",
-        "Scientists study cosmic rays to understand extreme phenomena in the universe."
-      ]
-    },
-    {
       "word": "Neutrino",
       "pronunciation": "/njuːˈtriːnoʊ/",
       "definition": "A very small, neutral subatomic particle that interacts very weakly with other matter.",
@@ -1340,16 +1220,6 @@
         "Scientists first detected gravitational waves in 2015.",
         "Gravitational waves provide a new way to observe the universe.",
         "The collision of black holes creates powerful gravitational waves."
-      ]
-    },
-    {
-      "word": "Pulsar",
-      "pronunciation": "/ˈpʌlsɑːr/",
-      "definition": "A highly magnetized, rotating neutron star that emits beams of electromagnetic radiation out of its magnetic poles.",
-      "sentences": [
-        "Pulsars are like cosmic lighthouses, sending out regular flashes of light.",
-        "Astronomers use pulsars as cosmic clocks due to their precise timing.",
-        "The first pulsar was discovered in 1967."
       ]
     },
     {
@@ -1380,36 +1250,6 @@
         "The ISM consists of gas, dust, and cosmic rays.",
         "New stars are born from dense regions within the interstellar medium.",
         "Understanding the ISM is important for studying galaxy evolution."
-      ]
-    },
-    {
-      "word": "Dark Matter",
-      "pronunciation": "/dɑːrk ˈmætər/",
-      "definition": "A hypothetical form of matter that does not interact with electromagnetic radiation, making it invisible to telescopes, but its presence is inferred from its gravitational effects.",
-      "sentences": [
-        "Dark matter is thought to make up a large portion of the universe's mass.",
-        "Scientists are still trying to directly detect dark matter particles.",
-        "The rotation of galaxies suggests the presence of dark matter."
-      ]
-    },
-    {
-      "word": "Dark Energy",
-      "pronunciation": "/dɑːrk ˈɛnərdʒi/",
-      "definition": "A hypothetical form of energy that is believed to be responsible for the accelerating expansion of the universe.",
-      "sentences": [
-        "Dark energy is one of the biggest mysteries in modern cosmology.",
-        "The existence of dark energy was inferred from observations of distant supernovae.",
-        "Dark energy is thought to be a property of space itself."
-      ]
-    },
-    {
-      "word": "Cosmology",
-      "pronunciation": "/kɒzˈmɒlədʒi/",
-      "definition": "The scientific study of the origin, evolution, and eventual fate of the universe.",
-      "sentences": [
-        "Cosmology is a branch of astronomy that deals with the universe as a whole.",
-        "Modern cosmology is based on the Big Bang theory.",
-        "Scientists in cosmology use observations and theoretical models."
       ]
     },
     {
@@ -1503,26 +1343,6 @@
       ]
     },
     {
-      "word": "Star Cluster",
-      "pronunciation": "/stɑːr ˈklʌstər/",
-      "definition": "A large group of stars that are gravitationally bound together.",
-      "sentences": [
-        "The Pleiades is a famous open star cluster.",
-        "Globular star clusters contain millions of old stars.",
-        "Star clusters are useful for studying stellar evolution."
-      ]
-    },
-    {
-      "word": "Globular Cluster",
-      "pronunciation": "/ˈɡlɒbjʊlər ˈklʌstər/",
-      "definition": "A large, spherical cluster of old stars, typically found in the halo of a galaxy.",
-      "sentences": [
-        "Globular clusters are among the oldest objects in our galaxy.",
-        "Many globular clusters orbit the Milky Way.",
-        "Globular clusters are very densely packed with stars."
-      ]
-    },
-    {
       "word": "Open Cluster",
       "pronunciation": "/ˈoʊpən ˈklʌstər/",
       "definition": "A relatively loose grouping of young stars, typically found in the spiral arms of a galaxy.",
@@ -1550,16 +1370,6 @@
         "Our sun is currently a main sequence star.",
         "Most stars in the universe are main sequence stars.",
         "A star spends the majority of its life as a main sequence star."
-      ]
-    },
-    {
-      "word": "Red Dwarf",
-      "pronunciation": "/rɛd dwɔːrf/",
-      "definition": "A small, cool, and dim star, the most common type of star in the galaxy.",
-      "sentences": [
-        "Red dwarfs have very long lifespans.",
-        "Proxima Centauri is a red dwarf star.",
-        "Finding habitable exoplanets around red dwarfs is a focus of research."
       ]
     },
     {
@@ -1593,16 +1403,6 @@
       ]
     },
     {
-      "word": "Cosmic Ray",
-      "pronunciation": "/ˈkɒzmɪk reɪ/",
-      "definition": "A high-energy proton or atomic nucleus that moves through space at nearly the speed of light.",
-      "sentences": [
-        "Cosmic rays can originate from violent events like supernovae.",
-        "Earth's magnetic field protects us from most cosmic rays.",
-        "Scientists use special detectors to study cosmic rays."
-      ]
-    },
-    {
       "word": "Neutrino",
       "pronunciation": "/njuːˈtriːnoʊ/",
       "definition": "A very light, neutral subatomic particle that interacts very weakly with other matter, making it difficult to detect.",
@@ -1623,36 +1423,6 @@
       ]
     },
     {
-      "word": "Wormhole",
-      "pronunciation": "/ˈwɜːrmˌhoʊl/",
-      "definition": "A hypothetical tunnel through spacetime that could connect two distant points in the universe.",
-      "sentences": [
-        "Wormholes are a concept from science fiction, but some theoretical physicists explore them.",
-        "If wormholes exist, they could allow for faster-than-light travel.",
-        "The idea of wormholes comes from Einstein's theory of relativity."
-      ]
-    },
-    {
-      "word": "Time Dilation",
-      "pronunciation": "/taɪm daɪˈleɪʃən/",
-      "definition": "The phenomenon of time passing more slowly for an object that is moving relative to an observer, or for an object in a stronger gravitational field.",
-      "sentences": [
-        "Time dilation is a prediction of Einstein's theory of relativity.",
-        "Astronauts on the ISS experience a tiny amount of time dilation.",
-        "Time dilation becomes significant near black holes."
-      ]
-    },
-    {
-      "word": "Singularity",
-      "pronunciation": "/ˌsɪŋɡjʊˈlærɪti/",
-      "definition": "A point in space-time where the laws of physics as we know them break down, such as at the center of a black hole.",
-      "sentences": [
-        "At the heart of a black hole lies a singularity.",
-        "The Big Bang is thought to have originated from a singularity.",
-        "Understanding singularities is a challenge for physicists."
-      ]
-    },
-    {
       "word": "Event Horizon",
       "pronunciation": "/ɪˈvɛnt həˈraɪzn̩/",
       "definition": "The boundary around a black hole beyond which nothing, not even light, can escape.",
@@ -1660,36 +1430,6 @@
         "Once something crosses the event horizon, it cannot return.",
         "The event horizon is often called the 'point of no return'.",
         "The size of a black hole's event horizon depends on its mass."
-      ]
-    },
-    {
-      "word": "Accretion Disk",
-      "pronunciation": "/əˈkriːʃən dɪsk/",
-      "definition": "A rotating disk of matter formed by accretion around a massive object (like a black hole or young star).",
-      "sentences": [
-        "Black holes are often surrounded by hot accretion disks.",
-        "Material in an accretion disk spirals inward due to gravity.",
-        "Accretion disks emit powerful X-rays."
-      ]
-    },
-    {
-      "word": "Gamma-Ray Burst (GRB)",
-      "pronunciation": "/ˈɡæmə reɪ bɜːrst/",
-      "definition": "Extremely energetic explosions that have been observed in distant galaxies, the brightest electromagnetic events known to occur in the universe.",
-      "sentences": [
-        "Gamma-ray bursts are thought to be caused by supernovae or colliding neutron stars.",
-        "GRBs are incredibly powerful and brief events.",
-        "Scientists use GRBs to study the early universe."
-      ]
-    },
-    {
-      "word": "Neutron Star Merger",
-      "pronunciation": "/ˈnjuːtrɒn stɑːr ˈmɜːrdʒər/",
-      "definition": "The collision of two neutron stars, which produces gravitational waves and often a gamma-ray burst.",
-      "sentences": [
-        "The first detection of a neutron star merger confirmed predictions about gravitational waves.",
-        "Neutron star mergers are thought to produce heavy elements like gold.",
-        "Scientists study neutron star mergers to understand extreme physics."
       ]
     },
     {
@@ -1723,26 +1463,6 @@
       ]
     },
     {
-      "word": "Open Cluster",
-      "pronunciation": "/ˈoʊpən ˈklʌstər/",
-      "definition": "A relatively loose grouping of young stars, typically found in the spiral arms of a galaxy.",
-      "sentences": [
-        "The Pleiades is a well-known open cluster.",
-        "Open clusters are usually smaller and less dense than globular clusters.",
-        "Stars in open clusters are often born from the same nebula."
-      ]
-    },
-    {
-      "word": "Protostar",
-      "pronunciation": "/ˈproʊtoʊˌstɑːr/",
-      "definition": "A very young star that is still gathering mass from its parent molecular cloud.",
-      "sentences": [
-        "A protostar is the earliest stage of a star's life.",
-        "Protostars are often surrounded by a disk of gas and dust.",
-        "Gravity causes gas and dust to collapse and form a protostar."
-      ]
-    },
-    {
       "word": "Main Sequence Star",
       "pronunciation": "/meɪn ˈsiːkwəns stɑːr/",
       "definition": "Any star that is fusing hydrogen in its core and has a stable balance between outward pressure from fusion and inward gravitational forces.",
@@ -1760,36 +1480,6 @@
         "Red dwarfs have very long lifespans.",
         "Proxima Centauri is a red dwarf star.",
         "Finding habitable exoplanets around red dwarfs is a focus of research."
-      ]
-    },
-    {
-      "word": "Brown Dwarf",
-      "pronunciation": "/braʊn dwɔːrf/",
-      "definition": "An object that is too large to be a planet but too small to be a star, lacking the mass to sustain nuclear fusion in its core.",
-      "sentences": [
-        "Brown dwarfs are sometimes called 'failed stars'.",
-        "Brown dwarfs emit very little light.",
-        "Scientists are still discovering many brown dwarfs."
-      ]
-    },
-    {
-      "word": "Planetary Nebula",
-      "pronunciation": "/ˈplænɪtɛri ˈnɛbjʊlə/",
-      "definition": "A type of emission nebula consisting of an expanding, glowing shell of ionized gas ejected from old red giant stars late in their lives.",
-      "sentences": [
-        "Planetary nebulae are beautiful and colorful objects in space.",
-        "Our sun will eventually form a planetary nebula.",
-        "Planetary nebulae are not related to planets, despite their name."
-      ]
-    },
-    {
-      "word": "Remnant (Stellar)",
-      "pronunciation": "/ˈrɛmnənt/",
-      "definition": "What is left of a star after it has died, such as a white dwarf, neutron star, or black hole.",
-      "sentences": [
-        "A supernova leaves behind a stellar remnant.",
-        "Scientists study stellar remnants to understand stellar evolution.",
-        "The Crab Nebula is a remnant of a supernova."
       ]
     }
   ]

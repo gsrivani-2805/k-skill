@@ -129,6 +129,16 @@ class _ReadingScreenState extends State<ReadingScreen> {
     }
   }
 
+  void _submitScoreAndContinue() {
+    // Return score to assessment screen
+    Navigator.pop(context, (_finalScore * 100).toInt());
+    
+    // Navigate to listening practice
+    Future.delayed(Duration.zero, () {
+      Navigator.pushNamed(context, '/listening');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_loading) {
@@ -151,12 +161,13 @@ class _ReadingScreenState extends State<ReadingScreen> {
         title: Text(_finished ? "Reading Completed" : "Reading Assessment"),
         backgroundColor: primaryColor,
         foregroundColor: Colors.white,
-        leading: IconButton(
+        leading: _finished ? null : IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+        automaticallyImplyLeading: !_finished,
       ),
 
       body: _finished
@@ -256,45 +267,88 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   Widget _buildResultScreen() {
-    return Scaffold(
-      backgroundColor: lightBlue,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.emoji_events, size: 100, color: accentColor),
-            const SizedBox(height: 20),
-            Text(
-              'Your Score',
-              style: TextStyle(
-                fontSize: 24,
-                color: accentColor,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              '${(_finalScore * 100).toStringAsFixed(2)}%',
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: primaryColor,
-              ),
-            ),
-            const SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () =>
-                  Navigator.pop(context, (_finalScore * 100).toInt()),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: primaryColor,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30,
-                  vertical: 12,
+    return Center(
+      child: Card(
+        margin: const EdgeInsets.all(24),
+        elevation: 6,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(32),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.emoji_events, size: 80, color: accentColor),
+              const SizedBox(height: 20),
+              Text(
+                'Reading Completed!',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: accentColor,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              child: const Text('Back to Assessment'),
-            ),
-          ],
+              const SizedBox(height: 16),
+              Text(
+                'Your Score',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.grey[600],
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                '${(_finalScore * 100).toStringAsFixed(2)}%',
+                style: TextStyle(
+                  fontSize: 48,
+                  fontWeight: FontWeight.bold,
+                  color: primaryColor,
+                ),
+              ),
+              const SizedBox(height: 24),
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.info_outline, color: Colors.green[700]),
+                    const SizedBox(width: 12),
+                    Text(
+                      "Next: Listening Practice",
+                      style: TextStyle(
+                        color: Colors.green[700],
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton.icon(
+                onPressed: _submitScoreAndContinue,
+                icon: const Icon(Icons.arrow_forward),
+                label: const Text('Continue to Listening'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryColor,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 32,
+                    vertical: 14,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

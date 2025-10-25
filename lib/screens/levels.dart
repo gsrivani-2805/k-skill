@@ -835,35 +835,32 @@ class LessonsScreen extends StatefulWidget {
 
 class _LessonsScreenState extends State<LessonsScreen> {
   Set<String> completedLessons = <String>{};
-  Map<String, int> quizScores = <String, int>{}; // Store quiz scores
-  Map<String, int> totalQuestions =
-      <String, int>{}; // Store total questions count
+  Map<String, int> quizScores = <String, int>{};
+  Map<String, int> totalQuestions = <String, int>{};
+  Map<String, int> pendingQuizScores = <String, int>{}; // Track unsubmitted scores
+  Map<String, int> pendingTotalQuestions = <String, int>{};
   static const String baseUrl = ApiConfig.baseUrl;
 
   @override
   void initState() {
     super.initState();
-    // Load data in the correct order
     _loadData();
   }
 
   Future<void> _loadData() async {
-    // First load local quiz scores (for offline support)
     await loadQuizScores();
-
-    // Then fetch from backend (this will override local data with server data)
     await fetchCompletedLessons();
-
-    // Trigger a rebuild to ensure UI updates
     setState(() {});
   }
 
-  // Load quiz scores from local storage
   Future<void> loadQuizScores() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    Map<String, dynamic> lessons = widget.moduleData['lessons'];
+    Map<String, dynamic>? lessons = widget.moduleData['lessons'];
+    
+    if (lessons == null) return;
 
     for (String lessonKey in lessons.keys) {
+      // Load submitted scores
       int? score = prefs.getInt('quiz_score_$lessonKey');
       int? total = prefs.getInt('quiz_total_$lessonKey');
 
@@ -873,10 +870,42 @@ class _LessonsScreenState extends State<LessonsScreen> {
           totalQuestions[lessonKey] = total;
         });
       }
+
+      // Load pending (unsubmitted) scores
+      int? pendingScore = prefs.getInt('pending_quiz_score_$lessonKey');
+      int? pendingTotal = prefs.getInt('pending_quiz_total_$lessonKey');
+
+      if (pendingScore != null && pendingTotal != null) {
+        setState(() {
+          pendingQuizScores[lessonKey] = pendingScore;
+          pendingTotalQuestions[lessonKey] = pendingTotal;
+        });
+      }
     }
   }
 
-  // Save quiz score to local storage
+  Future<void> savePendingQuizScore(String lessonKey, int score, int total) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('pending_quiz_score_$lessonKey', score);
+    await prefs.setInt('pending_quiz_total_$lessonKey', total);
+
+    setState(() {
+      pendingQuizScores[lessonKey] = score;
+      pendingTotalQuestions[lessonKey] = total;
+    });
+  }
+
+  Future<void> clearPendingQuizScore(String lessonKey) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.remove('pending_quiz_score_$lessonKey');
+    await prefs.remove('pending_quiz_total_$lessonKey');
+
+    setState(() {
+      pendingQuizScores.remove(lessonKey);
+      pendingTotalQuestions.remove(lessonKey);
+    });
+  }
+
   Future<void> saveQuizScore(String lessonKey, int score, int total) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setInt('quiz_score_$lessonKey', score);
@@ -930,19 +959,20 @@ class _LessonsScreenState extends State<LessonsScreen> {
         ),
       );
 
-      // Handle the returned quiz score
       if (result != null && result is int) {
-        // Assuming the quiz always has 10 questions (4 Easy + 4 Medium + 2 Hard)
-        // You might want to modify this based on your actual quiz structure
         int totalQuestions = 10;
+        
+        // Save as pending score (not yet submitted)
+        await savePendingQuizScore(lessonKey, result, totalQuestions);
 
-        // Save quiz score locally first
-        await saveQuizScore(lessonKey, result, totalQuestions);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Quiz completed! Score: $result/$totalQuestions. Click "Submit Quiz" to mark as complete.'),
+            backgroundColor: Colors.blue,
+            duration: Duration(seconds: 3),
+          ),
+        );
 
-        // Send quiz score to backend
-        await submitQuizScoreToBackend(lessonKey, result, totalQuestions);
-
-        // Force rebuild to update the UI with new quiz status
         setState(() {});
       }
     } else {
@@ -964,48 +994,21 @@ class _LessonsScreenState extends State<LessonsScreen> {
     }
   }
 
-  // New method to submit quiz score to backend
-  Future<void> submitQuizScoreToBackend(
-    String lessonKey,
-    int score,
-    int totalQuestions,
-  ) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? userId = prefs.getString('userId');
-
-    if (userId == null) {
-      print('User ID not found for quiz score submission');
+  Future<void> submitQuizAndMarkComplete(String lessonKey) async {
+    if (!pendingQuizScores.containsKey(lessonKey) || 
+        !pendingTotalQuestions.containsKey(lessonKey)) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('No quiz score to submit. Please take the quiz first.'),
+          backgroundColor: Colors.orange,
+        ),
+      );
       return;
     }
 
-    final url = Uri.parse('$baseUrl/$userId/submit-quiz');
+    int score = pendingQuizScores[lessonKey]!;
+    int total = pendingTotalQuestions[lessonKey]!;
 
-    try {
-      final response = await http.post(
-        url,
-        headers: {'Content-Type': 'application/json'},
-        body: json.encode({
-          'lessonId': lessonKey,
-          'quizScore': score,
-          'totalQuestions': totalQuestions,
-          'percentage': (score / totalQuestions * 100).round(),
-        }),
-      );
-
-      if (response.statusCode == 200) {
-        print('Quiz score submitted successfully');
-      } else {
-        print('Failed to submit quiz score: ${response.statusCode}');
-        // You might want to show a warning to the user here
-      }
-    } catch (e) {
-      print('Error submitting quiz score: $e');
-      // Handle network errors gracefully
-    }
-  }
-
-  // Updated markAsCompleted method to include quiz score
-  void markAsCompleted(String lessonKey, {int? quizScore}) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? userId = prefs.getString('userId');
 
@@ -1021,17 +1024,12 @@ class _LessonsScreenState extends State<LessonsScreen> {
 
     final url = Uri.parse('$baseUrl/$userId/mark-complete');
 
-    // Prepare request body with optional quiz score
-    Map<String, dynamic> requestBody = {'lessonId': lessonKey};
-
-    // Include quiz score if provided or if quiz was attempted
-    int? scoreToSend = quizScore ?? quizScores[lessonKey];
-    if (scoreToSend != null) {
-      requestBody['quizScore'] = scoreToSend;
-      requestBody['totalQuestions'] = totalQuestions[lessonKey] ?? 10;
-      requestBody['percentage'] =
-          ((scoreToSend / (totalQuestions[lessonKey] ?? 10)) * 100).round();
-    }
+    Map<String, dynamic> requestBody = {
+      'lessonId': lessonKey,
+      'quizScore': score,
+      'totalQuestions': total,
+      'percentage': ((score / total) * 100).round(),
+    };
 
     final response = await http.post(
       url,
@@ -1040,17 +1038,19 @@ class _LessonsScreenState extends State<LessonsScreen> {
     );
 
     if (response.statusCode == 200) {
+      // Save the submitted score permanently
+      await saveQuizScore(lessonKey, score, total);
+      
+      // Clear pending score
+      await clearPendingQuizScore(lessonKey);
+      
       setState(() {
         completedLessons.add(lessonKey);
       });
 
-      String message = scoreToSend != null
-          ? 'Lesson completed! Quiz score: $scoreToSend/${totalQuestions[lessonKey] ?? 10}'
-          : 'Lesson marked as completed!';
-
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(message),
+          content: Text('Lesson completed! Quiz score: $score/$total'),
           backgroundColor: Colors.green,
           duration: Duration(seconds: 2),
         ),
@@ -1058,7 +1058,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Failed to mark lesson complete'),
+          content: Text('Failed to submit quiz. Please try again.'),
           backgroundColor: Colors.red,
         ),
       );
@@ -1075,55 +1075,78 @@ class _LessonsScreenState extends State<LessonsScreen> {
     );
   }
 
-  // Check if quiz has been attempted
-  bool hasAttemptedQuiz(String lessonKey) {
-    return quizScores.containsKey(lessonKey);
+  bool hasCompletedQuiz(String lessonKey) {
+    return completedLessons.contains(lessonKey);
   }
 
-  // Get quiz score display text
+  bool hasPendingQuiz(String lessonKey) {
+    return pendingQuizScores.containsKey(lessonKey);
+  }
+
   String getQuizButtonText(String lessonKey, bool isCompact) {
-    if (hasAttemptedQuiz(lessonKey)) {
-      return isCompact ? 'Retake Quiz' : 'Retake Quiz';
+    if (hasCompletedQuiz(lessonKey)) {
+      return 'Retake Quiz';
     } else {
-      return isCompact ? 'Take Quiz' : 'Take Quiz';
+      return 'Take Quiz';
     }
   }
 
-  // Get quiz button color based on score
   Color getQuizButtonColor(String lessonKey) {
-    if (hasAttemptedQuiz(lessonKey)) {
+    if (hasCompletedQuiz(lessonKey) && 
+        quizScores.containsKey(lessonKey) && 
+        totalQuestions.containsKey(lessonKey)) {
       int score = quizScores[lessonKey]!;
       int total = totalQuestions[lessonKey]!;
       double percentage = (score / total) * 100;
 
       if (percentage >= 80) {
-        return Colors.green[600]!; // Excellent
+        return Colors.green[600]!;
       } else if (percentage >= 60) {
-        return Colors.orange[600]!; // Good
+        return Colors.orange[600]!;
       } else {
-        return Colors.red[600]!; // Needs improvement
+        return Colors.red[600]!;
       }
     } else {
-      return Colors.blue[600]!; // Default
+      return Colors.blue[600]!;
     }
   }
 
-  // Get completion button text
-  String getCompletionButtonText(
-    String lessonKey,
-    bool isCompleted,
-    bool isCompact,
-  ) {
-    if (isCompleted) {
+  String getSubmitButtonText(String lessonKey, bool isCompact) {
+    if (hasCompletedQuiz(lessonKey)) {
       return 'Completed';
+    } else if (hasPendingQuiz(lessonKey)) {
+      return 'Submit Quiz';
     } else {
-      return isCompact ? 'Attempt Quiz' : 'Attempt Quiz to Mark Complete';
+      return isCompact ? 'Take Quiz First' : 'Attempt Quiz to Mark Complete';
+    }
+  }
+
+  Color getSubmitButtonColor(String lessonKey) {
+    if (hasCompletedQuiz(lessonKey)) {
+      return Colors.green[300]!;
+    } else if (hasPendingQuiz(lessonKey)) {
+      return Colors.green[600]!;
+    } else {
+      return Colors.grey[400]!;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    Map<String, dynamic> lessons = widget.moduleData['lessons'];
+    Map<String, dynamic>? lessons = widget.moduleData['lessons'];
+    
+    if (lessons == null || lessons.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text(widget.moduleData['title'] ?? 'Lessons'),
+          backgroundColor: Colors.blue[700],
+          foregroundColor: Colors.white,
+        ),
+        body: Center(
+          child: Text('No lessons available'),
+        ),
+      );
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -1157,8 +1180,8 @@ class _LessonsScreenState extends State<LessonsScreen> {
               itemBuilder: (context, index) {
                 String lessonKey = lessons.keys.elementAt(index);
                 Map<String, dynamic> lessonInfo = lessons[lessonKey];
-                bool isCompleted = completedLessons.contains(lessonKey);
-                bool quizAttempted = hasAttemptedQuiz(lessonKey);
+                bool isCompleted = hasCompletedQuiz(lessonKey);
+                bool isPending = hasPendingQuiz(lessonKey);
 
                 return Container(
                   margin: EdgeInsets.only(bottom: isSmallScreen ? 12.0 : 16.0),
@@ -1184,11 +1207,9 @@ class _LessonsScreenState extends State<LessonsScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            // Header Row
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                // Status Icon
                                 Container(
                                   padding: EdgeInsets.all(
                                     isSmallScreen ? 6 : 8,
@@ -1196,7 +1217,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                   decoration: BoxDecoration(
                                     color: isCompleted
                                         ? Colors.green[100]
-                                        : Colors.orange[100],
+                                        : (isPending ? Colors.blue[100] : Colors.orange[100]),
                                     borderRadius: BorderRadius.circular(
                                       isSmallScreen ? 6 : 8,
                                     ),
@@ -1204,16 +1225,15 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                   child: Icon(
                                     isCompleted
                                         ? Icons.check_circle
-                                        : Icons.play_circle_outline,
+                                        : (isPending ? Icons.pending : Icons.play_circle_outline),
                                     color: isCompleted
                                         ? Colors.green[700]
-                                        : Colors.orange[700],
+                                        : (isPending ? Colors.blue[700] : Colors.orange[700]),
                                     size: isSmallScreen ? 20 : 24,
                                   ),
                                 ),
                                 SizedBox(width: isSmallScreen ? 8 : 12),
 
-                                // Lesson Info
                                 Expanded(
                                   child: Column(
                                     crossAxisAlignment:
@@ -1241,13 +1261,13 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                               color: Colors.grey[600],
                                             ),
                                           ),
-                                          if (quizAttempted) ...[
+                                          if (isCompleted && 
+                                              quizScores.containsKey(lessonKey) &&
+                                              totalQuestions.containsKey(lessonKey)) ...[
                                             SizedBox(width: 8),
                                             Container(
                                               padding: EdgeInsets.symmetric(
-                                                horizontal: isSmallScreen
-                                                    ? 4
-                                                    : 6,
+                                                horizontal: isSmallScreen ? 4 : 6,
                                                 vertical: 2,
                                               ),
                                               decoration: BoxDecoration(
@@ -1269,9 +1289,34 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                                   color: getQuizButtonColor(
                                                     lessonKey,
                                                   ),
-                                                  fontSize: isSmallScreen
-                                                      ? 10
-                                                      : 12,
+                                                  fontSize: isSmallScreen ? 10 : 12,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                          if (isPending && 
+                                              pendingQuizScores.containsKey(lessonKey) &&
+                                              pendingTotalQuestions.containsKey(lessonKey)) ...[
+                                            SizedBox(width: 8),
+                                            Container(
+                                              padding: EdgeInsets.symmetric(
+                                                horizontal: isSmallScreen ? 4 : 6,
+                                                vertical: 2,
+                                              ),
+                                              decoration: BoxDecoration(
+                                                color: Colors.blue.withOpacity(0.1),
+                                                borderRadius: BorderRadius.circular(6),
+                                                border: Border.all(
+                                                  color: Colors.blue,
+                                                  width: 1,
+                                                ),
+                                              ),
+                                              child: Text(
+                                                'Pending: ${pendingQuizScores[lessonKey]}/${pendingTotalQuestions[lessonKey]}',
+                                                style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontSize: isSmallScreen ? 10 : 12,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
@@ -1283,7 +1328,6 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                   ),
                                 ),
 
-                                // Completion Badge & Arrow
                                 Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -1321,18 +1365,14 @@ class _LessonsScreenState extends State<LessonsScreen> {
 
                             SizedBox(height: isSmallScreen ? 12 : 16),
 
-                            // Action Buttons Row
                             Row(
                               children: [
-                                // Quiz Button
                                 Expanded(
                                   child: ElevatedButton.icon(
                                     onPressed: () =>
                                         takeQuiz(lessonKey, lessonInfo),
                                     icon: Icon(
-                                      quizAttempted
-                                          ? Icons.refresh
-                                          : Icons.quiz,
+                                      isCompleted ? Icons.refresh : Icons.quiz,
                                       size: isSmallScreen ? 16 : 18,
                                     ),
                                     label: Text(
@@ -1362,22 +1402,22 @@ class _LessonsScreenState extends State<LessonsScreen> {
 
                                 SizedBox(width: 12),
 
-                                // Mark Complete Button
                                 Expanded(
                                   child: ElevatedButton.icon(
-                                    onPressed: (isCompleted || !quizAttempted)
+                                    onPressed: (isCompleted || !isPending)
                                         ? null
-                                        : () => markAsCompleted(lessonKey),
+                                        : () => submitQuizAndMarkComplete(lessonKey),
                                     icon: Icon(
                                       isCompleted
                                           ? Icons.check_circle
-                                          : Icons.check_circle_outline,
+                                          : (isPending 
+                                              ? Icons.send 
+                                              : Icons.lock),
                                       size: isSmallScreen ? 16 : 18,
                                     ),
                                     label: Text(
-                                      getCompletionButtonText(
+                                      getSubmitButtonText(
                                         lessonKey,
-                                        isCompleted,
                                         isSmallScreen,
                                       ),
                                       style: TextStyle(
@@ -1385,11 +1425,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                       ),
                                     ),
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: isCompleted
-                                          ? Colors.green[300]
-                                          : quizAttempted
-                                          ? Colors.green[600]
-                                          : Colors.grey[400],
+                                      backgroundColor: getSubmitButtonColor(lessonKey),
                                       foregroundColor: Colors.white,
                                       padding: EdgeInsets.symmetric(
                                         vertical: isSmallScreen ? 8 : 12,

@@ -223,16 +223,6 @@
       ]
     },
     {
-      "word": "Exhibition",
-      "pronunciation": "/ˌɛksɪˈbɪʃən/",
-      "definition": "A public display of works of art or other items.",
-      "sentences": [
-        "The museum is holding a new exhibition of modern art.",
-        "The exhibition will run for three months.",
-        "We saw an amazing photography exhibition."
-      ]
-    },
-    {
       "word": "Concert",
       "pronunciation": "/ˈkɒnsərt/",
       "definition": "A musical performance given in public, typically by several performers or of several compositions.",
@@ -323,26 +313,6 @@
       ]
     },
     {
-      "word": "Heritage",
-      "pronunciation": "/ˈhɛrɪtɪdʒ/",
-      "definition": "Something inherited from the past; traditions, achievements, etc., that are passed down from one generation to the next.",
-      "sentences": [
-        "The old building is part of our national heritage.",
-        "We should preserve our cultural heritage.",
-        "Learning about your heritage is important."
-      ]
-    },
-    {
-      "word": "Folklore",
-      "pronunciation": "/ˈfoʊklɔːr/",
-      "definition": "The traditional beliefs, customs, and stories of a community, passed through generations by word of mouth.",
-      "sentences": [
-        "The book collects local folklore.",
-        "Many myths and legends are part of folklore.",
-        "Folklore often teaches lessons."
-      ]
-    },
-    {
       "word": "Myth",
       "pronunciation": "/mɪθ/",
       "definition": "A traditional story, especially one concerning the early history of a people or explaining a natural or social phenomenon, and typically involving supernatural beings or events.",
@@ -350,16 +320,6 @@
         "The story of Hercules is a Greek myth.",
         "Many cultures have creation myths.",
         "It's a common myth that bats are blind."
-      ]
-    },
-    {
-      "word": "Legend",
-      "pronunciation": "/ˈlɛdʒənd/",
-      "definition": "A traditional story sometimes popularly regarded as historical but unauthenticated.",
-      "sentences": [
-        "The legend of King Arthur is very famous.",
-        "Local legends tell of a hidden treasure.",
-        "Is that a true story or just a legend?"
       ]
     },
     {
@@ -1063,16 +1023,6 @@
       ]
     },
     {
-      "word": "Baroque",
-      "pronunciation": "/bəˈroʊk/",
-      "definition": "A highly ornate and extravagant style of architecture, art, and music that flourished in Europe from the early 17th to mid-18th century.",
-      "sentences": [
-        "The church had elaborate Baroque decorations.",
-        "Baroque music is often grand and complex.",
-        "The Baroque period produced many famous artists."
-      ]
-    },
-    {
       "word": "Rococo",
       "pronunciation": "/rəˈkoʊkoʊ/",
       "definition": "An elaborately ornamental late baroque style of decoration prevalent in 18th-century Continental Europe, with asymmetrical patterns involving motifs and scrollwork.",
@@ -1100,16 +1050,6 @@
         "The Chrysler Building is a famous example of Art Deco architecture.",
         "Art Deco designs are often sleek and geometric.",
         "She loves the Art Deco style of furniture."
-      ]
-    },
-    {
-      "word": "Renaissance",
-      "pronunciation": "/ˈrɛnɪsɑːns/",
-      "definition": "The revival of art and literature under the influence of classical models in the 14th–16th centuries.",
-      "sentences": [
-        "The Renaissance was a period of great artistic growth.",
-        "Many famous artists lived during the Renaissance.",
-        "The Renaissance brought new ideas to Europe."
       ]
     },
     {
@@ -1423,16 +1363,6 @@
       ]
     },
     {
-      "word": "Parable",
-      "pronunciation": "/ˈpærəbəl/",
-      "definition": "A simple story used to illustrate a moral or spiritual lesson, as told by Jesus in the Gospels.",
-      "sentences": [
-        "The story of the Good Samaritan is a well-known parable.",
-        "Parables often teach important lessons.",
-        "He explained the concept using a parable."
-      ]
-    },
-    {
       "word": "Proverb",
       "pronunciation": "/ˈprɒvɜːrb/",
       "definition": "A short, popular saying, usually of unknown and ancient origin, that expresses some general truth or useful thought.",
@@ -1723,26 +1653,6 @@
       ]
     },
     {
-      "word": "Opera",
-      "pronunciation": "/ˈɒprə/",
-      "definition": "A dramatic work in one or more acts, set to music for singers and instrumentalists.",
-      "sentences": [
-        "We saw an opera at the grand theater.",
-        "Opera singers have very powerful voices.",
-        "The story of the opera was very sad."
-      ]
-    },
-    {
-      "word": "Ballet",
-      "pronunciation": "/ˈbæleɪ/",
-      "definition": "An artistic dance form performed to music using precise and highly formalized set steps and gestures.",
-      "sentences": [
-        "The ballet dancers moved gracefully.",
-        "She has been studying ballet since she was five.",
-        "The Nutcracker is a famous ballet."
-      ]
-    },
-    {
       "word": "Choreography",
       "pronunciation": "/ˌkɒriˈɒɡrəfi/",
       "definition": "The sequence of steps and movements in a dance or ice skating routine.",
@@ -2003,16 +1913,6 @@
       ]
     },
     {
-      "word": "Exhibition",
-      "pronunciation": "/ˌɛksɪˈbɪʃən/",
-      "definition": "A public display of works of art or other items.",
-      "sentences": [
-        "The museum is holding a new exhibition of modern art.",
-        "The exhibition will run for three months.",
-        "We saw an amazing photography exhibition."
-      ]
-    },
-    {
       "word": "Vernacular",
       "pronunciation": "/vərˈnækjʊlər/",
       "definition": "The language or dialect spoken by the ordinary people in a particular country or region.",
@@ -2193,16 +2093,6 @@
       ]
     },
     {
-      "word": "Composition",
-      "pronunciation": "/ˌkɒmpəˈzɪʃən/",
-      "definition": "The way in which parts of a work of art or music are put together.",
-      "sentences": [
-        "The painting has a balanced composition.",
-        "The musician worked on the composition of the song.",
-        "Good composition makes a photo visually appealing."
-      ]
-    },
-    {
       "word": "Form",
       "pronunciation": "/fɔːrm/",
       "definition": "The visible shape or configuration of something.",
@@ -2333,16 +2223,6 @@
       ]
     },
     {
-      "word": "Perspective",
-      "pronunciation": "/pərˈspɛktɪv/",
-      "definition": "The art of drawing solid objects on a two-dimensional surface so as to give the right impression of their height, width, depth, and position in relation to each other when viewed from a particular point.",
-      "sentences": [
-        "The artist used perspective to create depth in the painting.",
-        "Learning perspective is essential for realistic drawing.",
-        "The painting showed a unique perspective."
-      ]
-    },
-    {
       "word": "Focal point",
       "pronunciation": "/ˈfoʊkəl pɔɪnt/",
       "definition": "The center of interest or activity.",
@@ -2370,16 +2250,6 @@
         "The flowers in the foreground were very detailed.",
         "He placed a small figure in the foreground.",
         "The foreground drew the viewer's eye."
-      ]
-    },
-    {
-      "word": "Exhibition",
-      "pronunciation": "/ˌɛksɪˈbɪʃən/",
-      "definition": "A public display of works of art or other items.",
-      "sentences": [
-        "The museum is holding a new exhibition of modern art.",
-        "The exhibition will run for three months.",
-        "We saw an amazing photography exhibition."
       ]
     },
     {
@@ -2543,16 +2413,6 @@
       ]
     },
     {
-      "word": "Preservation",
-      "pronunciation": "/ˌprɛzərˈveɪʃən/",
-      "definition": "The action of preserving something.",
-      "sentences": [
-        "The organization works for historical preservation.",
-        "The preservation of ancient artifacts is important.",
-        "They are dedicated to the preservation of natural habitats."
-      ]
-    },
-    {
       "word": "Conservation",
       "pronunciation": "/ˌkɒnsərˈveɪʃən/",
       "definition": "The protection of animals, plants, and natural resources.",
@@ -2560,16 +2420,6 @@
         "Wildlife conservation is vital for the planet.",
         "He works in art conservation.",
         "Conservation efforts help protect endangered species."
-      ]
-    },
-    {
-      "word": "Restoration",
-      "pronunciation": "/ˌrɛstəˈreɪʃən/",
-      "definition": "The action of returning something to a former condition.",
-      "sentences": [
-        "The painting underwent careful restoration.",
-        "The restoration of the old building took years.",
-        "Art restoration requires great skill."
       ]
     },
     {
@@ -2640,16 +2490,6 @@
         "The book collects local folklore.",
         "Many myths and legends are part of folklore.",
         "Folklore often teaches lessons."
-      ]
-    },
-    {
-      "word": "Myth",
-      "pronunciation": "/mɪθ/",
-      "definition": "A traditional story, especially one concerning the early history of a people or explaining a natural or social phenomenon, and typically involving supernatural beings or events.",
-      "sentences": [
-        "The story of Hercules is a Greek myth.",
-        "Many cultures have creation myths.",
-        "It's a common myth that bats are blind."
       ]
     },
     {
@@ -2973,26 +2813,6 @@
       ]
     },
     {
-      "word": "Autobiography",
-      "pronunciation": "/ˌɔːtəbaɪˈɒɡrəfi/",
-      "definition": "An account of a person's life written by that person.",
-      "sentences": [
-        "She wrote her autobiography at the age of 80.",
-        "His autobiography revealed many personal details.",
-        "An autobiography offers a unique perspective."
-      ]
-    },
-    {
-      "word": "Memoir",
-      "pronunciation": "/ˈmɛmwɑːr/",
-      "definition": "A historical account or biography written from personal knowledge or special sources.",
-      "sentences": [
-        "Her memoir focused on her years as a journalist.",
-        "Memoirs often share personal experiences.",
-        "He published a memoir about his travels."
-      ]
-    },
-    {
       "word": "Journalism",
       "pronunciation": "/ˈdʒɜːrnəlɪzəm/",
       "definition": "The activity or profession of writing for newspapers, magazines, or news websites or preparing news to be broadcast.",
@@ -3040,26 +2860,6 @@
         "The invention of the printing press revolutionized communication.",
         "The old printing press is now a museum exhibit.",
         "The printing press made books more accessible."
-      ]
-    },
-    {
-      "word": "Manuscript",
-      "pronunciation": "/ˈmænjʊskrɪpt/",
-      "definition": "A book, document, or piece of music written by hand rather than typed or printed.",
-      "sentences": [
-        "The ancient manuscript was beautifully illustrated.",
-        "She found a rare medieval manuscript.",
-        "The author submitted her manuscript to the publisher."
-      ]
-    },
-    {
-      "word": "Calligraphy",
-      "pronunciation": "/kəˈlɪɡrəfi/",
-      "definition": "Decorative handwriting or handwritten lettering.",
-      "sentences": [
-        "He practices calligraphy every day.",
-        "The invitation was written in elegant calligraphy.",
-        "Calligraphy is an ancient art form."
       ]
     }
   ]

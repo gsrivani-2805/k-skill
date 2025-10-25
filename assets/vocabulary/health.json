@@ -533,16 +533,6 @@
       ]
     },
     {
-      "word": "Immunity",
-      "pronunciation": "/ɪˈmjuːnəti/",
-      "definition": "The ability of an organism to resist a particular infection or toxin by the action of specific antibodies or sensitized white blood cells.",
-      "sentences": [
-        "Getting vaccinated builds your **immunity**.",
-        "Some people have natural **immunity** to certain diseases.",
-        "Her strong **immunity** helped her fight off the virus."
-      ]
-    },
-    {
       "word": "Contagious",
       "pronunciation": "/kənˈteɪdʒəs/",
       "definition": "(Of a disease) spread from one person or organism to another by direct or indirect contact.",
@@ -620,16 +610,6 @@
         "There was noticeable **swelling** around the injury.",
         "Apply ice to reduce the **swelling**.",
         "The bee sting caused some **swelling**."
-      ]
-    },
-    {
-      "word": "Bruise",
-      "pronunciation": "/bruːz/",
-      "definition": "A mark on the skin caused by a blow, where blood vessels are broken.",
-      "sentences": [
-        "I got a big **bruise** on my leg when I fell.",
-        "The apple had a soft **bruise** on its side.",
-        "His arm was covered in **bruises** after the game."
       ]
     },
     {
@@ -820,16 +800,6 @@
         "Follow the correct **dosage** for the medicine.",
         "The doctor adjusted the **dosage** for the child.",
         "Never exceed the recommended **dosage**."
-      ]
-    },
-    {
-      "word": "Side effects",
-      "pronunciation": "/saɪd ɪˈfɛkts/",
-      "definition": "Unintended and often unpleasant effects of a drug or medical treatment.",
-      "sentences": [
-        "This medicine has few **side effects**.",
-        "Read the label for possible **side effects**.",
-        "She experienced some mild **side effects**."
       ]
     },
     {
@@ -1133,16 +1103,6 @@
       ]
     },
     {
-      "word": "Medical record",
-      "pronunciation": "/ˈmɛdɪkl ˈrɛkərd/",
-      "definition": "A detailed history of a patient's health, including illnesses, treatments, and test results.",
-      "sentences": [
-        "Your **medical record** contains all your health information.",
-        "The hospital keeps digital **medical records**.",
-        "Accessing your **medical record** requires proper authorization."
-      ]
-    },
-    {
       "word": "Confidentiality",
       "pronunciation": "/ˌkɑːnfɪˌdɛnʃiˈæləti/",
       "definition": "The state of keeping or being kept secret or private.",
@@ -1363,16 +1323,6 @@
       ]
     },
     {
-      "word": "Prevention",
-      "pronunciation": "/prɪˈvɛnʃn/",
-      "definition": "The action of stopping something from happening or arising.",
-      "sentences": [
-        "Handwashing is key to disease **prevention**.",
-        "Early **prevention** can save lives.",
-        "The campaign focuses on accident **prevention**."
-      ]
-    },
-    {
       "word": "Screening",
       "pronunciation": "/ˈskriːnɪŋ/",
       "definition": "A test or examination to detect the presence or absence of a disease.",
@@ -1380,16 +1330,6 @@
         "Regular cancer **screening** is recommended for adults.",
         "The school offers vision **screening** for students.",
         "Early **screening** can lead to better treatment outcomes."
-      ]
-    },
-    {
-      "word": "Diagnosis",
-      "pronunciation": "/ˌdaɪəɡˈnoʊsɪs/",
-      "definition": "The identification of the nature of an illness or other problem by examination of the symptoms.",
-      "sentences": [
-        "The doctor gave me a clear **diagnosis**.",
-        "Getting an early **diagnosis** is important for treatment.",
-        "Her **diagnosis** was confirmed after tests."
       ]
     },
     {
@@ -1410,16 +1350,6 @@
         "The doctor outlined a comprehensive **treatment plan**.",
         "Follow your **treatment plan** carefully for best results.",
         "The **treatment plan** included medication and therapy."
-      ]
-    },
-    {
-      "word": "Rehabilitation",
-      "pronunciation": "/ˌriːhəˌbɪlɪˈteɪʃn/",
-      "definition": "The action of restoring someone to health or normal life through training and therapy after illness or injury.",
-      "sentences": [
-        "He went to a **rehabilitation** center after his accident.",
-        "Physical **rehabilitation** helps patients regain strength.",
-        "The program focuses on full **rehabilitation**."
       ]
     },
     {
@@ -1550,16 +1480,6 @@
         "Medical **research** helps find new cures.",
         "Scientists conduct extensive **research** on diseases.",
         "Her **research** focuses on genetic disorders."
-      ]
-    },
-    {
-      "word": "Prevention",
-      "pronunciation": "/prɪˈvɛnʃn/",
-      "definition": "The action of stopping something from happening or arising.",
-      "sentences": [
-        "Handwashing is key to disease **prevention**.",
-        "Early **prevention** can save lives.",
-        "The campaign focuses on accident **prevention**."
       ]
     },
     {
@@ -1883,16 +1803,6 @@
       ]
     },
     {
-      "word": "Clinical trial",
-      "pronunciation": "/ˈklɪnɪkl ˈtraɪəl/",
-      "definition": "A research study conducted on human volunteers to evaluate the safety and effectiveness of new medical treatments or interventions.",
-      "sentences": [
-        "The new drug is currently undergoing a **clinical trial**.",
-        "Participating in a **clinical trial** can help advance medicine.",
-        "The results of the **clinical trial** were promising."
-      ]
-    },
-    {
       "word": "Drug development",
       "pronunciation": "/drʌɡ dɪˈvɛləpmənt/",
       "definition": "The process of bringing a new pharmaceutical drug to the market.",
@@ -1980,26 +1890,6 @@
         "Patient information is protected by **confidentiality** rules.",
         "Doctors must maintain strict **confidentiality**.",
         "We value your privacy and **confidentiality**."
-      ]
-    },
-    {
-      "word": "Privacy",
-      "pronunciation": "/ˈpraɪvəsi/",
-      "definition": "A state in which one is not observed or disturbed by other people.",
-      "sentences": [
-        "The hospital ensures patient **privacy**.",
-        "She values her personal **privacy**.",
-        "Respecting others' **privacy** is important."
-      ]
-    },
-    {
-      "word": "Informed consent",
-      "pronunciation": "/ɪnˈfɔːrmd kənˈsɛnt/",
-      "definition": "Permission granted in the knowledge of the possible consequences, typically that which is given by a patient to a doctor for treatment with full knowledge of the possible risks and benefits.",
-      "sentences": [
-        "The doctor explained the procedure to get **informed consent**.",
-        "**Informed consent** is a legal and ethical requirement.",
-        "Patients have the right to give or refuse **informed consent**."
       ]
     },
     {

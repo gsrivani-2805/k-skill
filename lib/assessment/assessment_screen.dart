@@ -47,7 +47,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
   }
 
   double _calculateOverallProgress() {
-    double normalizedQuiz = quizScore * 2.0; // Assuming quiz score is out of 50, normalize to 100
+    double normalizedQuiz = quizScore * 2.0;
     double normalizedReading = readingScore / 4;
     double normalizedListening = listeningScore / 4;
     return normalizedQuiz + normalizedReading + normalizedListening;
@@ -61,7 +61,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
         'userId': userId,
-        'quizScore': quizScore*4,
+        'quizScore': quizScore * 4,
         'readingScore': readingScore,
         'listeningScore': listeningScore,
         'overallScore': overallScore,
@@ -75,78 +75,308 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
     ).showSnackBar(SnackBar(content: Text(snackText)));
   }
 
+  Future<bool> _onWillPop() async {
+    // Check if any assessment is completed
+    bool hasProgress = quizDone || readingDone || listeningDone;
+    bool allDone = quizDone && readingDone && listeningDone;
+
+    if (!hasProgress) {
+      return true; // Allow back navigation if no progress
+    }
+
+    // Build the completed assessments list with scores
+    List<Map<String, dynamic>> completedAssessments = [];
+    if (quizDone)
+      completedAssessments.add({
+        'name': 'Grammar & Vocabulary',
+        'score': quizScore * 4,
+        'maxScore': 100,
+      });
+    if (readingDone)
+      completedAssessments.add({
+        'name': 'Reading Skills',
+        'score': readingScore,
+        'maxScore': 100,
+      });
+    if (listeningDone)
+      completedAssessments.add({
+        'name': 'Listening Skills',
+        'score': listeningScore,
+        'maxScore': 100,
+      });
+
+    // Show alert dialog
+    final shouldPop = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Row(
+          children: [
+            Icon(
+              allDone
+                  ? Icons.check_circle_outline
+                  : Icons.warning_amber_rounded,
+              color: allDone ? Colors.green : Colors.orange,
+            ),
+            const SizedBox(width: 8),
+            Text(allDone ? 'Assessment Complete' : 'Progress'),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              allDone
+                  ? 'You have completed all assessments. Here are your scores:'
+                  : 'You have completed the following assessments:',
+              style: const TextStyle(fontWeight: FontWeight.w500),
+            ),
+            const SizedBox(height: 12),
+            ...completedAssessments.map(
+              (assessment) => Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.check_circle,
+                          color: Colors.green,
+                          size: 20,
+                        ),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            assessment['name'],
+                            style: const TextStyle(fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      ],
+                    ),
+                    if (allDone)
+                      Padding(
+                        padding: const EdgeInsets.only(left: 28, top: 2),
+                        child: Text(
+                          'Score: ${assessment['score']}/${assessment['maxScore']}',
+                          style: TextStyle(
+                            color: Colors.blue[700],
+                            fontSize: 13,
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+            ),
+            if (allDone) ...[
+              const Divider(height: 24),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Overall Score:',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  Text(
+                    '${_calculateOverallProgress().toStringAsFixed(2)}/100',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Colors.green[700],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+            ],
+            const SizedBox(height: 8),
+            Text(
+              allDone
+                  ? 'Would you like to submit your scores now?'
+                  : 'If you go back now without submitting, your progress will be lost. Are you sure you want to leave?',
+              style: const TextStyle(color: Colors.black87),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: const Text('Leave', style: TextStyle(color: Colors.red)),
+          ),
+          ElevatedButton(
+            onPressed: allDone
+                ? () async {
+                    Navigator.of(context).pop(false);
+                    await submitAssessment();
+                    if (context.mounted) {
+                      Navigator.of(context).pop();
+                    }
+                  }
+                : () => Navigator.of(context).pop(false),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: allDone ? Colors.green : Colors.blue,
+              foregroundColor: Colors.white,
+            ),
+            child: Text(allDone ? 'Submit Scores' : 'Continue Assessment'),
+          ),
+        ],
+      ),
+    );
+
+    return shouldPop ?? false;
+  }
+
   @override
   Widget build(BuildContext context) {
     bool allDone = quizDone && readingDone && listeningDone;
     final screenWidth = MediaQuery.of(context).size.width;
     final isDesktop = screenWidth >= 768;
-    
-    return Scaffold(
-      backgroundColor: const Color(0xFFEFF5FF),
-      appBar: AppBar(
-        title: Text(
-          "K-Skill English Proficiency Assessment",
-          style: TextStyle(
-            fontSize: isDesktop ? 20 : 16,
+
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) async {
+        if (didPop) return;
+
+        final shouldPop = await _onWillPop();
+        if (shouldPop && context.mounted) {
+          Navigator.of(context).pop();
+        }
+      },
+      child: Scaffold(
+        backgroundColor: const Color(0xFFEFF5FF),
+        appBar: AppBar(
+          title: Text(
+            "K-Skill English Proficiency Assessment",
+            style: TextStyle(fontSize: isDesktop ? 20 : 16),
+          ),
+          backgroundColor: Colors.blue,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () async {
+              final shouldPop = await _onWillPop();
+              if (shouldPop && context.mounted) {
+                Navigator.of(context).pop();
+              }
+            },
           ),
         ),
-        backgroundColor: Colors.blue,
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(isDesktop ? 24 : 16),
-          child: Center(
-            child: Container(
-              width: double.infinity,
-              constraints: BoxConstraints(
-                maxWidth: isDesktop ? 1200 : double.infinity,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              padding: EdgeInsets.all(isDesktop ? 32 : 20),
-              child: Column(
-                children: [
-                  // Header Section
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: Image.asset(
-                      'images/login_side_image.png',
-                      height: isDesktop ? 150 : 120,
-                      width: isDesktop ? 150 : 120,
-                      fit: BoxFit.cover,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(isDesktop ? 24 : 16),
+            child: Center(
+              child: Container(
+                width: double.infinity,
+                constraints: BoxConstraints(
+                  maxWidth: isDesktop ? 1200 : double.infinity,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                padding: EdgeInsets.all(isDesktop ? 32 : 20),
+                child: Column(
+                  children: [
+                    // Header Section
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset(
+                        'images/login_side_image.png',
+                        height: isDesktop ? 150 : 120,
+                        width: isDesktop ? 150 : 120,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: isDesktop ? 20 : 16),
-                  Text(
-                    "English Proficiency Assessment",
-                    style: TextStyle(
-                      fontSize: isDesktop ? 24 : 20,
-                      fontWeight: FontWeight.bold,
+                    SizedBox(height: isDesktop ? 20 : 16),
+                    Text(
+                      "English Proficiency Assessment",
+                      style: TextStyle(
+                        fontSize: isDesktop ? 24 : 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(height: isDesktop ? 12 : 8),
-                  Text(
-                    "Complete all three components to determine your English proficiency level and unlock your personalized learning path.",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black54,
-                      fontSize: isDesktop ? 16 : 14,
+                    SizedBox(height: isDesktop ? 12 : 8),
+                    Text(
+                      "Complete all three components to determine your English proficiency level and unlock your personalized learning path.",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black54,
+                        fontSize: isDesktop ? 16 : 14,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: isDesktop ? 40 : 24),
-                  
-                  // Assessment Cards Section
-                  if (isDesktop)
-                    // Desktop Layout - Single Row
-                    Row(
-                      children: [
-                        Expanded(
-                          child: _buildAssessmentTile(
+                    SizedBox(height: isDesktop ? 40 : 24),
+
+                    // Assessment Cards Section
+                    if (isDesktop)
+                      // Desktop Layout - Single Row
+                      Row(
+                        children: [
+                          Expanded(
+                            child: _buildAssessmentTile(
+                              title: "Grammar & Vocabulary",
+                              description:
+                                  "Test your knowledge of English grammar and vocabulary",
+                              icon: Icons.quiz_rounded,
+                              duration: "25 minutes",
+                              questions: 25,
+                              color: Colors.orange,
+                              done: quizDone,
+                              onTap: () => _navigateAndSet('/quiz', (v, score) {
+                                quizDone = v;
+                                quizScore = score;
+                              }),
+                              isDesktop: true,
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: _buildAssessmentTile(
+                              title: "Reading Skills",
+                              description:
+                                  "Test your reading skills with passages",
+                              icon: Icons.description_rounded,
+                              duration: "15 minutes",
+                              questions: 3,
+                              color: Colors.blue,
+                              done: readingDone,
+                              onTap: () =>
+                                  _navigateAndSet('/reading', (v, score) {
+                                    readingDone = v;
+                                    readingScore = score;
+                                  }),
+                              isDesktop: true,
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: _buildAssessmentTile(
+                              title: "Listening Skills",
+                              description:
+                                  "Listen to audio clips carefully and type what you hear",
+                              icon: Icons.headphones,
+                              duration: "15 minutes",
+                              questions: 3,
+                              color: Colors.green,
+                              done: listeningDone,
+                              onTap: () =>
+                                  _navigateAndSet('/listening', (v, score) {
+                                    listeningDone = v;
+                                    listeningScore = score;
+                                  }),
+                              isDesktop: true,
+                            ),
+                          ),
+                        ],
+                      )
+                    else
+                      // Mobile/Tablet Layout - Single Column
+                      Column(
+                        children: [
+                          _buildAssessmentTile(
                             title: "Grammar & Vocabulary",
-                            description: "Test your knowledge of English grammar and vocabulary",
+                            description:
+                                "Test your knowledge of English grammar and vocabulary",
                             icon: Icons.quiz_rounded,
                             duration: "25 minutes",
                             questions: 25,
@@ -156,138 +386,88 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                               quizDone = v;
                               quizScore = score;
                             }),
-                            isDesktop: true,
+                            isDesktop: false,
                           ),
-                        ),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: _buildAssessmentTile(
+                          const SizedBox(height: 16),
+                          _buildAssessmentTile(
                             title: "Reading Skills",
-                            description: "Test your reading skills with passages",
+                            description:
+                                "Test your reading skills with passages and questions",
                             icon: Icons.description_rounded,
                             duration: "15 minutes",
                             questions: 3,
                             color: Colors.blue,
                             done: readingDone,
-                            onTap: () => _navigateAndSet('/reading', (v, score) {
-                              readingDone = v;
-                              readingScore = score;
-                            }),
-                            isDesktop: true,
+                            onTap: () =>
+                                _navigateAndSet('/reading', (v, score) {
+                                  readingDone = v;
+                                  readingScore = score;
+                                }),
+                            isDesktop: false,
                           ),
-                        ),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: _buildAssessmentTile(
+                          const SizedBox(height: 16),
+                          _buildAssessmentTile(
                             title: "Listening Skills",
-                            description: "Listen to audio clips carefully and type what you hear",
+                            description:
+                                "Listen to audio clips and answer questions",
                             icon: Icons.headphones,
                             duration: "15 minutes",
                             questions: 3,
                             color: Colors.green,
                             done: listeningDone,
-                            onTap: () => _navigateAndSet('/listening', (v, score) {
-                              listeningDone = v;
-                              listeningScore = score;
-                            }),
-                            isDesktop: true,
+                            onTap: () =>
+                                _navigateAndSet('/listening', (v, score) {
+                                  listeningDone = v;
+                                  listeningScore = score;
+                                }),
+                            isDesktop: false,
                           ),
-                        ),
-                      ],
-                    )
-                  else
-                    // Mobile/Tablet Layout - Single Column
-                    Column(
-                      children: [
-                        _buildAssessmentTile(
-                          title: "Grammar & Vocabulary",
-                          description: "Test your knowledge of English grammar and vocabulary",
-                          icon: Icons.quiz_rounded,
-                          duration: "25 minutes",
-                          questions: 25,
-                          color: Colors.orange,
-                          done: quizDone,
-                          onTap: () => _navigateAndSet('/quiz', (v, score) {
-                            quizDone = v;
-                            quizScore = score;
-                          }),
-                          isDesktop: false,
-                        ),
-                        const SizedBox(height: 16),
-                        _buildAssessmentTile(
-                          title: "Reading Skills",
-                          description: "Test your reading skills with passages and questions",
-                          icon: Icons.description_rounded,
-                          duration: "15 minutes",
-                          questions: 3,
-                          color: Colors.blue,
-                          done: readingDone,
-                          onTap: () => _navigateAndSet('/reading', (v, score) {
-                            readingDone = v;
-                            readingScore = score;
-                          }),
-                          isDesktop: false,
-                        ),
-                        const SizedBox(height: 16),
-                        _buildAssessmentTile(
-                          title: "Listening Skills",
-                          description: "Listen to audio clips and answer questions",
-                          icon: Icons.headphones,
-                          duration: "15 minutes",
-                          questions: 3,
-                          color: Colors.green,
-                          done: listeningDone,
-                          onTap: () => _navigateAndSet('/listening', (v, score) {
-                            listeningDone = v;
-                            listeningScore = score;
-                          }),
-                          isDesktop: false,
-                        ),
-                      ],
-                    ),
+                        ],
+                      ),
 
-                  SizedBox(height: isDesktop ? 32 : 24),
-                  
-                  // Completion Section
-                  if (allDone)
-                    Column(
-                      children: [
-                        Text(
-                          "🎉 Assessment Completed!",
-                          style: TextStyle(
-                            fontSize: isDesktop ? 20 : 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.green[800],
-                          ),
-                        ),
-                        SizedBox(height: isDesktop ? 16 : 12),
-                        ElevatedButton.icon(
-                          onPressed: submitAssessment,
-                          icon: const Icon(Icons.check_circle_outline),
-                          label: const Text("Submit Assessment"),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.green[600],
-                            foregroundColor: Colors.white,
-                            padding: EdgeInsets.symmetric(
-                              horizontal: isDesktop ? 32 : 24,
-                              vertical: isDesktop ? 16 : 12,
-                            ),
-                            textStyle: TextStyle(
-                              fontSize: isDesktop ? 16 : 14,
+                    SizedBox(height: isDesktop ? 32 : 24),
+
+                    // Completion Section
+                    if (allDone)
+                      Column(
+                        children: [
+                          Text(
+                            "🎉 Assessment Completed!",
+                            style: TextStyle(
+                              fontSize: isDesktop ? 20 : 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green[800],
                             ),
                           ),
-                        ),
-                        SizedBox(height: isDesktop ? 16 : 12),
-                        Text(
-                          "🧠 Overall Progress: ${_calculateOverallProgress().toStringAsFixed(2)}/100",
-                          style: TextStyle(
-                            fontSize: isDesktop ? 18 : 16,
-                            fontWeight: FontWeight.w500,
+                          SizedBox(height: isDesktop ? 16 : 12),
+                          ElevatedButton.icon(
+                            onPressed: submitAssessment,
+                            icon: const Icon(Icons.check_circle_outline),
+                            label: const Text("Submit Assessment"),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.green[600],
+                              foregroundColor: Colors.white,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: isDesktop ? 32 : 24,
+                                vertical: isDesktop ? 16 : 12,
+                              ),
+                              textStyle: TextStyle(
+                                fontSize: isDesktop ? 16 : 14,
+                              ),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                ],
+                          SizedBox(height: isDesktop ? 16 : 12),
+                          Text(
+                            "🧠 Overall Progress: ${_calculateOverallProgress().toStringAsFixed(2)}/100",
+                            style: TextStyle(
+                              fontSize: isDesktop ? 18 : 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -330,11 +510,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                icon,
-                size: isDesktop ? 48 : 40,
-                color: color,
-              ),
+              Icon(icon, size: isDesktop ? 48 : 40, color: color),
               SizedBox(height: isDesktop ? 12 : 10),
               Text(
                 title,
@@ -366,9 +542,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                       SizedBox(width: isDesktop ? 4 : 2),
                       Text(
                         duration,
-                        style: TextStyle(
-                          fontSize: isDesktop ? 14 : 12,
-                        ),
+                        style: TextStyle(fontSize: isDesktop ? 14 : 12),
                       ),
                     ],
                   ),
@@ -379,9 +553,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                       SizedBox(width: isDesktop ? 4 : 2),
                       Text(
                         '$questions questions',
-                        style: TextStyle(
-                          fontSize: isDesktop ? 14 : 12,
-                        ),
+                        style: TextStyle(fontSize: isDesktop ? 14 : 12),
                       ),
                     ],
                   ),
@@ -390,7 +562,10 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
               SizedBox(height: isDesktop ? 12 : 8),
               if (done)
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 4,
+                  ),
                   decoration: BoxDecoration(
                     color: Colors.green.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(20),

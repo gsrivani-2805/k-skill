@@ -333,26 +333,6 @@
       ]
     },
     {
-      "word": "Diplomacy",
-      "pronunciation": "/dɪˈploʊməsi/",
-      "definition": "The skill of managing international relations, usually by a country's representatives.",
-      "sentences": [
-        "Diplomacy is important for peaceful relations.",
-        "They used diplomacy to resolve the conflict.",
-        "Good diplomacy can prevent wars."
-      ]
-    },
-    {
-      "word": "Treaty",
-      "pronunciation": "/ˈtriːti/",
-      "definition": "A formal agreement between two or more countries.",
-      "sentences": [
-        "The two countries signed a peace treaty.",
-        "The treaty helped end the war.",
-        "International treaties are very important."
-      ]
-    },
-    {
       "word": "Embassy",
       "pronunciation": "/ˈɛmbəsi/",
       "definition": "The official residence or offices of an ambassador in a foreign country.",
@@ -370,16 +350,6 @@
         "The ambassador met with the foreign minister.",
         "She was appointed as the new ambassador.",
         "An ambassador promotes good relations."
-      ]
-    },
-    {
-      "word": "Summit",
-      "pronunciation": "/ˈsʌmɪt/",
-      "definition": "A meeting between heads of government.",
-      "sentences": [
-        "World leaders attended the climate summit.",
-        "The summit aimed to discuss global issues.",
-        "Important decisions were made at the summit."
       ]
     },
     {
@@ -623,36 +593,6 @@
       ]
     },
     {
-      "word": "Felony",
-      "pronunciation": "/ˈfɛləni/",
-      "definition": "A serious crime, typically one punishable by imprisonment for more than a year.",
-      "sentences": [
-        "Armed robbery is a felony.",
-        "He was charged with a felony.",
-        "Felonies carry severe punishments."
-      ]
-    },
-    {
-      "word": "Misdemeanor",
-      "pronunciation": "/ˌmɪsdɪˈmiːnər/",
-      "definition": "A minor wrongdoing, less serious than a felony.",
-      "sentences": [
-        "Shoplifting can be a misdemeanor.",
-        "He received a fine for the misdemeanor.",
-        "Misdemeanors usually result in lighter sentences."
-      ]
-    },
-    {
-      "word": "Verdict",
-      "pronunciation": "/ˈvɜːrdɪkt/",
-      "definition": "The decision made by a jury or judge in a court case.",
-      "sentences": [
-        "The jury delivered a guilty verdict.",
-        "Everyone waited anxiously for the verdict.",
-        "The judge announced the verdict."
-      ]
-    },
-    {
       "word": "Testimony",
       "pronunciation": "/ˈtɛstɪmoʊni/",
       "definition": "A formal written or spoken statement, especially one given in a court of law.",
@@ -660,16 +600,6 @@
         "The witness gave powerful testimony.",
         "Her testimony helped the jury understand the case.",
         "He was asked to provide testimony."
-      ]
-    },
-    {
-      "word": "Subpoena",
-      "pronunciation": "/səˈpiːnə/",
-      "definition": "A written order for someone to appear in court.",
-      "sentences": [
-        "He received a subpoena to testify.",
-        "The lawyer issued a subpoena for the documents.",
-        "Ignoring a subpoena can lead to trouble."
       ]
     },
     {
@@ -1023,16 +953,6 @@
       ]
     },
     {
-      "word": "Treaty",
-      "pronunciation": "/ˈtriːti/",
-      "definition": "A formal agreement between two or more countries.",
-      "sentences": [
-        "The two countries signed a peace treaty.",
-        "The treaty helped end the war.",
-        "International treaties are very important."
-      ]
-    },
-    {
       "word": "Alliance",
       "pronunciation": "/əˈlaɪəns/",
       "definition": "A union or association formed for mutual benefit, especially between countries or organizations.",
@@ -1050,26 +970,6 @@
         "She is a skilled diplomat.",
         "Diplomats work to maintain peace.",
         "He met with a foreign diplomat."
-      ]
-    },
-    {
-      "word": "Negotiation",
-      "pronunciation": "/nɪˌɡoʊʃiˈeɪʃən/",
-      "definition": "Discussion aimed at reaching an agreement.",
-      "sentences": [
-        "The negotiation lasted for hours.",
-        "They are in negotiation to resolve the conflict.",
-        "Good negotiation skills are important."
-      ]
-    },
-    {
-      "word": "Sanction",
-      "pronunciation": "/ˈsæŋkʃən/",
-      "definition": "An official permission or approval for an action, or a penalty for disobeying a law.",
-      "sentences": [
-        "The government imposed economic sanctions on the country.",
-        "They received official sanction for the project.",
-        "Sanctions aim to change a country's behavior."
       ]
     },
     {
@@ -1653,16 +1553,6 @@
       ]
     },
     {
-      "word": "Treaty",
-      "pronunciation": "/ˈtriːti/",
-      "definition": "A formal agreement between two or more countries.",
-      "sentences": [
-        "The two countries signed a peace treaty.",
-        "The treaty helped end the war.",
-        "International treaties are very important."
-      ]
-    },
-    {
       "word": "Convention",
       "pronunciation": "/kənˈvɛnʃən/",
       "definition": "A large meeting or assembly, or an international agreement.",
@@ -1690,16 +1580,6 @@
         "The court has jurisdiction over this case.",
         "The crime happened outside their jurisdiction.",
         "This matter falls under federal jurisdiction."
-      ]
-    },
-    {
-      "word": "Verdict",
-      "pronunciation": "/ˈvɜːrdɪkt/",
-      "definition": "The decision made by a jury or judge in a court case.",
-      "sentences": [
-        "The jury delivered a guilty verdict.",
-        "Everyone waited anxiously for the verdict.",
-        "The judge announced the verdict."
       ]
     },
     {
@@ -1943,16 +1823,6 @@
       ]
     },
     {
-      "word": "Plea",
-      "pronunciation": "/pliː/",
-      "definition": "A formal statement by or on behalf of a defendant stating guilt or innocence in response to a charge.",
-      "sentences": [
-        "He entered a plea of not guilty.",
-        "The judge asked for his plea.",
-        "They made a plea for mercy."
-      ]
-    },
-    {
       "word": "Arraignment",
       "pronunciation": "/əˈreɪnmənt/",
       "definition": "A formal reading of a criminal charge in the presence of the defendant to inform them of the charges against them.",
@@ -2070,16 +1940,6 @@
         "He was granted parole after serving half his sentence.",
         "Parole allows prisoners to re-enter society.",
         "She is eligible for parole next year."
-      ]
-    },
-    {
-      "word": "Probation",
-      "pronunciation": "/proʊˈbeɪʃən/",
-      "definition": "The release of an offender from detention, subject to a period of good behavior under supervision.",
-      "sentences": [
-        "He was put on probation instead of going to jail.",
-        "During probation, he had to report to an officer.",
-        "Probation is a chance to prove good behavior."
       ]
     },
     {
@@ -2293,16 +2153,6 @@
       ]
     },
     {
-      "word": "Monarchy",
-      "pronunciation": "/ˈmɒnɑːrki/",
-      "definition": "A system of government with a monarch (king or queen) as the head of state.",
-      "sentences": [
-        "Many countries used to be monarchies.",
-        "The UK has a constitutional monarchy.",
-        "In a monarchy, power is often inherited."
-      ]
-    },
-    {
       "word": "Oligarchy",
       "pronunciation": "/ˈɒlɪɡɑːrki/",
       "definition": "A small group of people having control of a country or organization.",
@@ -2320,16 +2170,6 @@
         "Some ancient societies were theocracies.",
         "In a theocracy, religious law is supreme.",
         "Iran is an example of a modern theocracy."
-      ]
-    },
-    {
-      "word": "Anarchy",
-      "pronunciation": "/ˈænɑːrki/",
-      "definition": "A state of disorder due to absence or non-recognition of authority.",
-      "sentences": [
-        "Without laws, there would be anarchy.",
-        "The city descended into anarchy after the earthquake.",
-        "Anarchy means no rules or government."
       ]
     },
     {
@@ -2563,16 +2403,6 @@
       ]
     },
     {
-      "word": "Vandalism",
-      "pronunciation": "/ˈvændəlɪzəm/",
-      "definition": "Action involving deliberate destruction of or damage to public or private property.",
-      "sentences": [
-        "The park was closed due to vandalism.",
-        "Vandalism is a disrespectful act.",
-        "They cleaned up the vandalism on the wall."
-      ]
-    },
-    {
       "word": "Assault",
       "pronunciation": "/əˈsɔːlt/",
       "definition": "An act that threatens physical harm to a person, whether or not actual harm is done.",
@@ -2793,16 +2623,6 @@
       ]
     },
     {
-      "word": "Lobbying",
-      "pronunciation": "/ˈlɒbiɪŋ/",
-      "definition": "The act of trying to influence decisions made by officials in the government.",
-      "sentences": [
-        "Lobbying is a common practice in politics.",
-        "They spent years lobbying for the new law.",
-        "Lobbying can be controversial."
-      ]
-    },
-    {
       "word": "Grassroots",
       "pronunciation": "/ˈɡrɑːsruːts/",
       "definition": "The ordinary people regarded as the main body of an organization or political party.",
@@ -2950,16 +2770,6 @@
         "Everyone hopes for world peace.",
         "They signed a peace treaty.",
         "Peace is better than war."
-      ]
-    },
-    {
-      "word": "Treaty",
-      "pronunciation": "/ˈtriːti/",
-      "definition": "A formal agreement between two or more countries.",
-      "sentences": [
-        "The two countries signed a peace treaty.",
-        "The treaty helped end the war.",
-        "International treaties are very important."
       ]
     },
     {
@@ -3263,16 +3073,6 @@
       ]
     },
     {
-      "word": "Plea bargain",
-      "pronunciation": "/pliː ˈbɑːrɡɪn/",
-      "definition": "An arrangement between prosecutor and defendant whereby the defendant pleads guilty to a lesser charge in exchange for a more lenient sentence or an agreement to drop other charges.",
-      "sentences": [
-        "He accepted a plea bargain.",
-        "The plea bargain avoided a long trial.",
-        "Plea bargains are common in the legal system."
-      ]
-    },
-    {
       "word": "Habeas corpus",
       "pronunciation": "/ˈheɪbiəs ˈkɔːrpəs/",
       "definition": "A legal action that requires a person to be brought before a court or judge, especially to investigate the legality of their detention.",
@@ -3533,16 +3333,6 @@
       ]
     },
     {
-      "word": "Diplomat",
-      "pronunciation": "/ˈdɪpləmæt/",
-      "definition": "An official representing a country abroad.",
-      "sentences": [
-        "She is a skilled diplomat.",
-        "Diplomats work to maintain peace.",
-        "He met with a foreign diplomat."
-      ]
-    },
-    {
       "word": "Foreign relations",
       "pronunciation": "/ˈfɒrɪn rɪˈleɪʃənz/",
       "definition": "The relationships between countries.",
@@ -3653,16 +3443,6 @@
       ]
     },
     {
-      "word": "Sanction",
-      "pronunciation": "/ˈsæŋkʃən/",
-      "definition": "An official permission or approval for an action, or a penalty for disobeying a law.",
-      "sentences": [
-        "The government imposed economic sanctions on the country.",
-        "They received official sanction for the project.",
-        "Sanctions aim to change a country's behavior."
-      ]
-    },
-    {
       "word": "Embargo",
       "pronunciation": "/ɪmˈbɑːrɡoʊ/",
       "definition": "An official ban on trade or other commercial activity with a particular country.",
@@ -3670,16 +3450,6 @@
         "The country imposed an embargo on oil imports.",
         "The embargo hurt their economy.",
         "An embargo can be a strong political tool."
-      ]
-    },
-    {
-      "word": "Tariff",
-      "pronunciation": "/ˈtærɪf/",
-      "definition": "A tax or duty to be paid on a particular class of imports or exports.",
-      "sentences": [
-        "The government imposed a new tariff on imported goods.",
-        "Tariffs can make foreign goods more expensive.",
-        "They discussed trade tariffs."
       ]
     },
     {

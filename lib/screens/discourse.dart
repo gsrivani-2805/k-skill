@@ -555,7 +555,7 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
                 ),
               ),
             );
-      
+
             // If submission was successful, refresh review data
             if (result == true) {
               _refreshReviewData();
@@ -1530,7 +1530,6 @@ class WritingEditorScreen extends StatefulWidget {
 class _WritingEditorScreenState extends State<WritingEditorScreen> {
   final TextEditingController _textController = TextEditingController();
   final FocusNode _focusNode = FocusNode();
-  bool _isAutoSaveEnabled = true;
   int _wordCount = 0;
   int _characterCount = 0;
 
@@ -1588,11 +1587,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
     };
 
     try {
-      print("=== STARTING SUBMISSION PROCESS ===");
-      print("User ID: ${widget.userId}");
-      print("Discourse Type: ${widget.discourseType.id.toLowerCase()}");
-      print("Submitted Text Length: ${_textController.text.trim().length}");
-
       // 1. Send text for AI feedback
       print("Sending request to feedback URL: $feedbackUrl");
       final feedbackResponse = await http.post(
@@ -1607,8 +1601,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
         final jsonFeedbackResponse = jsonDecode(feedbackResponse.body);
         final feedback = WritingFeedback.fromJson(jsonFeedbackResponse);
 
-        print("=== FEEDBACK RECEIVED ===");
-
         // 2. Prepare data to save to user's profile
         final dataToSave = {
           'discourseType': widget.discourseType.id.toLowerCase(),
@@ -1618,9 +1610,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
           'feedback': jsonFeedbackResponse,
         };
 
-        print("=== SAVING SUBMISSION ===");
-        print("Save URL: $saveSubmissionUrl");
-
         // 3. Send data to save as a submission for the current user
         final saveResponse = await http.post(
           saveSubmissionUrl,
@@ -1628,14 +1617,10 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
           body: jsonEncode(dataToSave),
         );
 
-        print("Save response status: ${saveResponse.statusCode}");
-
         // Close the loading indicator dialog
         Navigator.of(context).pop();
 
         if (saveResponse.statusCode == 201 || saveResponse.statusCode == 200) {
-          print("=== SUBMISSION SAVED SUCCESSFULLY ===");
-
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text('Submission saved successfully!'),
@@ -1651,9 +1636,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
           // This will trigger refresh in the parent screen
           Navigator.of(context).pop(true);
         } else {
-          print("=== SAVE FAILED ===");
-          print("Error details: ${saveResponse.body}");
-
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(
@@ -1673,10 +1655,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
       } else {
         // Failed to get feedback
         Navigator.of(context).pop(); // Close loading dialog
-        print("=== FEEDBACK REQUEST FAILED ===");
-        print("Status: ${feedbackResponse.statusCode}");
-        print("Body: ${feedbackResponse.body}");
-
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
@@ -1687,12 +1665,8 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
           ),
         );
       }
-    } catch (e, stackTrace) {
+    } catch (e) {
       Navigator.of(context).pop(); // Close loading dialog
-
-      print("=== SUBMISSION ERROR ===");
-      print("Error: $e");
-      print("Stack trace: $stackTrace");
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -1813,10 +1787,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
           },
         ),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.save, color: Colors.white),
-            onPressed: _saveDraft,
-          ),
           PopupMenuButton<String>(
             icon: const Icon(Icons.more_vert, color: Colors.white),
             onSelected: _handleMenuAction,
@@ -1825,7 +1795,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
                 value: 'template',
                 child: Text('Use Template'),
               ),
-              const PopupMenuItem(value: 'export', child: Text('Export Text')),
             ],
           ),
         ],
@@ -1841,24 +1810,10 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
     );
   }
 
-  // Include all other existing methods...
-  void _saveDraft() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: const Text('Draft saved successfully!'),
-        backgroundColor: widget.discourseType.color,
-        behavior: SnackBarBehavior.floating,
-      ),
-    );
-  }
-
   void _handleMenuAction(String action) {
     switch (action) {
       case 'template':
         _showTemplateDialog();
-        break;
-      case 'export':
-        _exportText();
         break;
     }
   }
@@ -1904,23 +1859,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
             child: const Text('Use Template'),
           ),
         ],
-      ),
-    );
-  }
-
-  void _exportText() {
-    if (_textController.text.trim().isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Please write some content first')),
-      );
-      return;
-    }
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: const Text('Text copied to clipboard!'),
-        backgroundColor: widget.discourseType.color,
-        behavior: SnackBarBehavior.floating,
       ),
     );
   }
@@ -2044,28 +1982,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
               color: Colors.grey[600],
               fontWeight: FontWeight.w500,
             ),
-          ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'Auto-save',
-                style: TextStyle(fontSize: 11, color: Colors.grey[600]),
-              ),
-              const SizedBox(width: 4),
-              Transform.scale(
-                scale: 0.8,
-                child: Switch(
-                  value: _isAutoSaveEnabled,
-                  onChanged: (value) {
-                    setState(() {
-                      _isAutoSaveEnabled = value;
-                    });
-                  },
-                  activeColor: widget.discourseType.color,
-                ),
-              ),
-            ],
           ),
         ],
       ),

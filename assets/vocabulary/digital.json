@@ -303,16 +303,6 @@
       ]
     },
     {
-      "word": "Router",
-      "pronunciation": "/ˈraʊtər/",
-      "definition": "A device that sends internet signals to different devices in your home or office.",
-      "sentences": [
-        "My Wi-Fi router is in the living room.",
-        "I had to restart the router to fix the internet connection.",
-        "The router helps all our devices connect to the internet."
-      ]
-    },
-    {
       "word": "Wi-Fi",
       "pronunciation": "/ˈwaɪfaɪ/",
       "definition": "A technology that allows devices to connect to the Internet wirelessly.",
@@ -353,36 +343,6 @@
       ]
     },
     {
-      "word": "Podcast",
-      "pronunciation": "/ˈpɒdkæst/",
-      "definition": "A digital audio file available on the Internet for downloading to a computer or mobile device.",
-      "sentences": [
-        "I listen to a science podcast on my way to school.",
-        "There are podcasts on almost every topic.",
-        "My favorite podcast teaches me new facts."
-      ]
-    },
-    {
-      "word": "Blog",
-      "pronunciation": "/blɒɡ/",
-      "definition": "A website where a person writes regularly about topics they are interested in, often with pictures and links.",
-      "sentences": [
-        "She writes a blog about her travel adventures.",
-        "I read a food blog to find new recipes.",
-        "Starting a blog is a good way to share your thoughts."
-      ]
-    },
-    {
-      "word": "Vlog",
-      "pronunciation": "/vlɒɡ/",
-      "definition": "A video blog, where a person shares their thoughts or experiences through videos online.",
-      "sentences": [
-        "My favorite YouTuber posts a new vlog every week.",
-        "She started a vlog about her daily life.",
-        "Vlogs are a popular way to share stories visually."
-      ]
-    },
-    {
       "word": "Webinar",
       "pronunciation": "/ˈwɛbɪnɑːr/",
       "definition": "An online seminar or presentation conducted over the Internet.",
@@ -403,16 +363,6 @@
       ]
     },
     {
-      "word": "Hashtag",
-      "pronunciation": "/ˈhæʃtæɡ/",
-      "definition": "A word or phrase preceded by a hash symbol (#) used on social media to group related content.",
-      "sentences": [
-        "Use a hashtag to make your post more visible.",
-        "The event went viral with the hashtag #BestDayEver.",
-        "I searched for posts using the hashtag #ScienceFacts."
-      ]
-    },
-    {
       "word": "Emoji",
       "pronunciation": "/ɪˈmoʊdʒi/",
       "definition": "Small digital images or icons used to express an idea, emotion, etc., in electronic communication.",
@@ -430,16 +380,6 @@
         "I sent a funny GIF to make my friend laugh.",
         "GIFs are popular for expressing reactions online.",
         "You can find many GIFs on social media."
-      ]
-    },
-    {
-      "word": "Meme",
-      "pronunciation": "/miːm/",
-      "definition": "An image, video, piece of text, etc., that is copied (often with slight variations) and spread rapidly by Internet users.",
-      "sentences": [
-        "That meme about cats is so relatable.",
-        "Memes are a form of internet humor.",
-        "The internet is full of funny memes."
       ]
     },
     {
@@ -503,16 +443,6 @@
       ]
     },
     {
-      "word": "Router",
-      "pronunciation": "/ˈraʊtər/",
-      "definition": "A device that forwards data packets between computer networks.",
-      "sentences": [
-        "My Wi-Fi router is in the living room.",
-        "I had to restart the router to fix the internet connection.",
-        "The router helps all our devices connect to the internet."
-      ]
-    },
-    {
       "word": "Modem",
       "pronunciation": "/ˈmoʊdɛm/",
       "definition": "A device that connects your home network to the Internet service provider.",
@@ -520,16 +450,6 @@
         "The modem converts the internet signal for your computer.",
         "You need both a modem and a router for home internet.",
         "I checked the lights on the modem to see if the internet was working."
-      ]
-    },
-    {
-      "word": "Broadband",
-      "pronunciation": "/ˈbrɔːdbænd/",
-      "definition": "High-speed Internet access that is always on.",
-      "sentences": [
-        "We have broadband internet at home, so it's very fast.",
-        "Broadband makes it easy to stream videos.",
-        "Most homes now use broadband connections."
       ]
     },
     {
@@ -633,16 +553,6 @@
       ]
     },
     {
-      "word": "Firewall",
-      "pronunciation": "/ˈfaɪərˌwɔːl/",
-      "definition": "A system that prevents unauthorized access to or from a private network.",
-      "sentences": [
-        "A firewall protects your computer from internet threats.",
-        "The school network has a strong firewall.",
-        "Make sure your personal firewall is turned on."
-      ]
-    },
-    {
       "word": "Antivirus",
       "pronunciation": "/ˌæntiˈvaɪrəs/",
       "definition": "Software designed to detect and destroy computer viruses.",
@@ -733,16 +643,6 @@
       ]
     },
     {
-      "word": "Phishing",
-      "pronunciation": "/ˈfɪʃɪŋ/",
-      "definition": "The fraudulent practice of sending emails purporting to be from reputable companies in order to induce individuals to reveal personal information, such as passwords and credit card numbers.",
-      "sentences": [
-        "Be careful of phishing scams that try to steal your information.",
-        "I received a suspicious email that looked like a phishing attempt.",
-        "Never click on links in emails you suspect are phishing."
-      ]
-    },
-    {
       "word": "Malware",
       "pronunciation": "/ˈmælˌwɛər/",
       "definition": "Software that is specifically designed to disrupt, damage, or gain unauthorized access to a computer system.",
@@ -783,36 +683,6 @@
       ]
     },
     {
-      "word": "Firewall",
-      "pronunciation": "/ˈfaɪərˌwɔːl/",
-      "definition": "A network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
-      "sentences": [
-        "A firewall acts as a barrier between your computer and the internet.",
-        "Make sure your firewall is always active.",
-        "The company's firewall prevented a cyber attack."
-      ]
-    },
-    {
-      "word": "VPN (Virtual Private Network)",
-      "pronunciation": "/ˌviː piː ˈɛn/",
-      "definition": "A network that extends across a public network and enables users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network.",
-      "sentences": [
-        "I use a VPN to protect my privacy when using public Wi-Fi.",
-        "A VPN can help you access content that is restricted in your region.",
-        "Many companies use VPNs for secure remote access."
-      ]
-    },
-    {
-      "word": "Router",
-      "pronunciation": "/ˈraʊtər/",
-      "definition": "A networking device that forwards data packets between computer networks.",
-      "sentences": [
-        "My Wi-Fi router provides internet access throughout the house.",
-        "If the internet is slow, try restarting the router.",
-        "The router connects our home network to the internet."
-      ]
-    },
-    {
       "word": "Modem",
       "pronunciation": "/ˈmoʊdɛm/",
       "definition": "A device that converts digital signals into analog signals for transmission over a phone line or cable, and vice versa.",
@@ -843,16 +713,6 @@
       ]
     },
     {
-      "word": "Bluetooth",
-      "pronunciation": "/ˈbluːtuːθ/",
-      "definition": "A standard for the short-range wireless interconnection of mobile phones, computers, and other electronic devices.",
-      "sentences": [
-        "I connected my wireless earbuds to my phone via Bluetooth.",
-        "Bluetooth is useful for sharing files between nearby devices.",
-        "My car's audio system uses Bluetooth to connect to my phone."
-      ]
-    },
-    {
       "word": "GPS (Global Positioning System)",
       "pronunciation": "/ˌdʒiː piː ˈɛs/",
       "definition": "A satellite-based navigation system used to determine the precise location on Earth.",
@@ -860,16 +720,6 @@
         "My phone uses GPS to show me directions.",
         "GPS helps drivers find their way.",
         "Many apps use GPS to provide location-based services."
-      ]
-    },
-    {
-      "word": "QR Code (Quick Response Code)",
-      "pronunciation": "/ˌkjuː ɑːr ˈkoʊd/",
-      "definition": "A type of barcode that can be read by a smartphone camera to quickly access information or a website.",
-      "sentences": [
-        "Scan the QR code to view the menu.",
-        "QR codes are often used for contactless payments.",
-        "I used a QR code to download the app."
       ]
     },
     {
@@ -943,16 +793,6 @@
       ]
     },
     {
-      "word": "Podcast",
-      "pronunciation": "/ˈpɒdkæst/",
-      "definition": "A digital audio file made available on the Internet for downloading to a computer or mobile device, typically available as a series.",
-      "sentences": [
-        "I listen to a history podcast during my commute.",
-        "There are podcasts for every interest, from true crime to comedy.",
-        "My friend started a podcast about local news."
-      ]
-    },
-    {
       "word": "E-book",
       "pronunciation": "/ˈiːbʊk/",
       "definition": "An electronic version of a printed book that can be read on a computer or a specially designed handheld device.",
@@ -1000,26 +840,6 @@
         "Cybersecurity experts work to keep online information safe.",
         "Learning about cybersecurity can protect you from scams.",
         "Good cybersecurity practices are essential for businesses."
-      ]
-    },
-    {
-      "word": "Phishing",
-      "pronunciation": "/ˈfɪʃɪŋ/",
-      "definition": "A type of online fraud where criminals try to trick you into giving them your personal information.",
-      "sentences": [
-        "Be careful of phishing emails that look real but are fake.",
-        "Phishing attempts often ask for your password or bank details.",
-        "Never respond to a phishing email."
-      ]
-    },
-    {
-      "word": "Two-Factor Authentication (2FA)",
-      "pronunciation": "/tuː ˈfæktər ɔːˌθɛntɪˈkeɪʃən/",
-      "definition": "An extra security step that requires two different ways to prove your identity, like a password and a code from your phone.",
-      "sentences": [
-        "I enabled 2FA on my email for better security.",
-        "Two-factor authentication makes it harder for hackers to get into your accounts.",
-        "Many online services now recommend using 2FA."
       ]
     },
     {
@@ -1103,46 +923,6 @@
       ]
     },
     {
-      "word": "Cookie",
-      "pronunciation": "/ˈkʊki/",
-      "definition": "Small text files stored on your computer by websites you visit, used to remember your preferences or login information.",
-      "sentences": [
-        "Websites use cookies to personalize your experience.",
-        "You can clear cookies from your browser settings.",
-        "Accepting cookies helps the website remember you."
-      ]
-    },
-    {
-      "word": "Cache",
-      "pronunciation": "/kæʃ/",
-      "definition": "A temporary storage area for data that is frequently accessed, allowing for faster retrieval.",
-      "sentences": [
-        "Clearing your browser cache can fix problems with loading websites.",
-        "The computer saves frequently used data in its cache.",
-        "Your phone has a cache for apps to load faster."
-      ]
-    },
-    {
-      "word": "Bandwidth",
-      "pronunciation": "/ˈbændwɪdθ/",
-      "definition": "The maximum amount of data that can be transmitted over an internet connection in a given amount of time.",
-      "sentences": [
-        "Streaming high-quality video uses a lot of bandwidth.",
-        "Our internet speed depends on our bandwidth.",
-        "More devices connected to the network can reduce available bandwidth."
-      ]
-    },
-    {
-      "word": "Latency",
-      "pronunciation": "/ˈleɪtənsi/",
-      "definition": "The delay before a data transfer begins, or the time it takes for a signal to travel from one point to another.",
-      "sentences": [
-        "High latency can make online gaming frustrating.",
-        "Fiber optic internet generally has lower latency.",
-        "I noticed some latency during the video call, causing a slight delay."
-      ]
-    },
-    {
       "word": "Broadband",
       "pronunciation": "/ˈbrɔːdbænd/",
       "definition": "A high-capacity transmission technique using a wide range of frequencies, which enables a large number of messages to be communicated simultaneously.",
@@ -1150,36 +930,6 @@
         "Broadband internet is essential for modern homes.",
         "We have a fast broadband connection at home.",
         "Most internet providers now offer broadband services."
-      ]
-    },
-    {
-      "word": "Fiber Optic",
-      "pronunciation": "/ˈfaɪbər ˈɒptɪk/",
-      "definition": "Technology that uses thin strands of glass or plastic to transmit data as light signals, allowing for very fast internet speeds.",
-      "sentences": [
-        "Fiber optic cables provide extremely fast internet.",
-        "Many cities are upgrading to fiber optic networks.",
-        "Our new internet service uses fiber optic technology."
-      ]
-    },
-    {
-      "word": "Wireless",
-      "pronunciation": "/ˈwaɪərləs/",
-      "definition": "Relating to the use of radio waves to transmit signals, rather than cables.",
-      "sentences": [
-        "I prefer wireless headphones for convenience.",
-        "Our entire office uses a wireless network.",
-        "Wireless charging is a great feature for phones."
-      ]
-    },
-    {
-      "word": "Hotspot",
-      "pronunciation": "/ˈhɒtspɒt/",
-      "definition": "A location where Wi-Fi access is available, often provided by a public network or a mobile device.",
-      "sentences": [
-        "I connected to the free Wi-Fi hotspot at the library.",
-        "My phone can create a personal hotspot for my laptop.",
-        "Public hotspots are convenient but can be less secure."
       ]
     },
     {
@@ -1203,26 +953,6 @@
       ]
     },
     {
-      "word": "Ethernet",
-      "pronunciation": "/ˈiːθərˌnɛt/",
-      "definition": "A system for connecting computers in a local area network (LAN) using physical cables.",
-      "sentences": [
-        "Using an Ethernet cable gives a more stable internet connection.",
-        "My gaming console is connected via Ethernet for faster speeds.",
-        "Many office computers are connected using Ethernet."
-      ]
-    },
-    {
-      "word": "Server",
-      "pronunciation": "/ˈsɜːrvər/",
-      "definition": "A powerful computer that provides services or resources to other computers (clients) over a network.",
-      "sentences": [
-        "The website is hosted on a powerful server.",
-        "When you access a website, your computer connects to its server.",
-        "Many online games require a stable server connection."
-      ]
-    },
-    {
       "word": "Cloud Computing",
       "pronunciation": "/klaʊd kəmˈpjuːtɪŋ/",
       "definition": "The delivery of computing services—including servers, storage, databases, networking, software, analytics, and intelligence—over the Internet ('the cloud').",
@@ -1240,16 +970,6 @@
         "Major internet companies operate huge data centers.",
         "Data centers require a lot of electricity to run.",
         "Our online information is stored in secure data centers."
-      ]
-    },
-    {
-      "word": "Algorithm",
-      "pronunciation": "/ˈælɡəˌrɪðəm/",
-      "definition": "A set of rules or instructions that a computer follows to solve a problem or perform a calculation.",
-      "sentences": [
-        "Search engines use complex algorithms to rank websites.",
-        "The app's recommendation algorithm suggests new movies.",
-        "Understanding algorithms is key to computer science."
       ]
     },
     {
@@ -1363,16 +1083,6 @@
       ]
     },
     {
-      "word": "Forum",
-      "pronunciation": "/ˈfɔːrəm/",
-      "definition": "An online discussion board where users can post questions, share ideas, and engage in conversations.",
-      "sentences": [
-        "I asked for help on a coding forum.",
-        "The gaming forum is very active with new posts daily.",
-        "You can find answers to many questions on online forums."
-      ]
-    },
-    {
       "word": "Thread",
       "pronunciation": "/θrɛd/",
       "definition": "A series of messages on an online forum or social media platform that are related to the same topic.",
@@ -1430,16 +1140,6 @@
         "My laptop has a built-in webcam.",
         "Make sure your webcam is working before the online class.",
         "I bought an external webcam for better video quality."
-      ]
-    },
-    {
-      "word": "Microphone",
-      "pronunciation": "/ˈmaɪkrəˌfoʊn/",
-      "definition": "A device that converts sound into electrical signals, used for recording or transmitting audio.",
-      "sentences": [
-        "Speak clearly into the microphone so everyone can hear you.",
-        "My headset has a noise-canceling microphone.",
-        "The microphone picked up all the background noise."
       ]
     },
     {
@@ -1533,16 +1233,6 @@
       ]
     },
     {
-      "word": "GPS (Global Positioning System)",
-      "pronunciation": "/ˌdʒiː piː ˈɛs/",
-      "definition": "A satellite-based navigation system that provides location and time information anywhere on Earth.",
-      "sentences": [
-        "My phone's GPS helps me find my way around new cities.",
-        "GPS is used in cars for navigation.",
-        "Many fitness trackers use GPS to record your route."
-      ]
-    },
-    {
       "word": "Streaming Service",
       "pronunciation": "/ˈstriːmɪŋ ˈsɜːrvɪs/",
       "definition": "An online platform that delivers digital media content (like movies, music, or TV shows) to users over the Internet.",
@@ -1573,16 +1263,6 @@
       ]
     },
     {
-      "word": "Podcast",
-      "pronunciation": "/ˈpɒdkæst/",
-      "definition": "A digital audio file available on the Internet for downloading to a computer or mobile device.",
-      "sentences": [
-        "I listen to a science podcast on my way to school.",
-        "There are podcasts on almost every topic.",
-        "My favorite podcast teaches me new facts."
-      ]
-    },
-    {
       "word": "Blog",
       "pronunciation": "/blɒɡ/",
       "definition": "A regularly updated website or web page, typically one run by an individual or small group, that is written in an informal or conversational style.",
@@ -1593,16 +1273,6 @@
       ]
     },
     {
-      "word": "Vlog",
-      "pronunciation": "/vlɒɡ/",
-      "definition": "A video blog, where a person shares their thoughts or experiences through videos online.",
-      "sentences": [
-        "My favorite YouTuber posts a new vlog every week.",
-        "She started a vlog about her daily life.",
-        "Vlogs are a popular way to share stories visually."
-      ]
-    },
-    {
       "word": "Webinar",
       "pronunciation": "/ˈwɛbɪnɑːr/",
       "definition": "An online seminar or presentation conducted over the Internet.",
@@ -1610,16 +1280,6 @@
         "I attended a webinar about digital art.",
         "Many companies offer free webinars to teach new skills.",
         "The webinar was very informative."
-      ]
-    },
-    {
-      "word": "Forum",
-      "pronunciation": "/ˈfɔːrəm/",
-      "definition": "An online discussion group where people can post messages and reply to each other.",
-      "sentences": [
-        "I found the answer to my question on an online forum.",
-        "The gaming forum has many helpful tips.",
-        "You can ask questions and get advice on a forum."
       ]
     },
     {
@@ -1633,26 +1293,6 @@
       ]
     },
     {
-      "word": "Emoji",
-      "pronunciation": "/ɪˈmoʊdʒi/",
-      "definition": "Small digital images or icons used to express an idea, emotion, etc., in electronic communication.",
-      "sentences": [
-        "I sent a happy face emoji to my friend.",
-        "Emojis help express feelings in text messages.",
-        "She used a lot of emojis in her message."
-      ]
-    },
-    {
-      "word": "GIF (Graphics Interchange Format)",
-      "pronunciation": "/ɡɪf/",
-      "definition": "A short, animated image file that loops continuously.",
-      "sentences": [
-        "I sent a funny GIF to make my friend laugh.",
-        "GIFs are popular for expressing reactions online.",
-        "You can find many GIFs on social media."
-      ]
-    },
-    {
       "word": "Meme",
       "pronunciation": "/miːm/",
       "definition": "An image, video, piece of text, etc., that is copied (often with slight variations) and spread rapidly by Internet users.",
@@ -1660,86 +1300,6 @@
         "That meme about cats is so relatable.",
         "Memes are a form of internet humor.",
         "The internet is full of funny memes."
-      ]
-    },
-    {
-      "word": "Algorithm",
-      "pronunciation": "/ˈælɡəˌrɪðəm/",
-      "definition": "A set of rules or steps that a computer follows to solve a problem or complete a task.",
-      "sentences": [
-        "Search engines use algorithms to show you relevant results.",
-        "The app's algorithm suggests new songs you might like.",
-        "Computer programs are built using algorithms."
-      ]
-    },
-    {
-      "word": "Data",
-      "pronunciation": "/ˈdeɪtə/",
-      "definition": "Facts and statistics collected together for reference or analysis by computers.",
-      "sentences": [
-        "My phone stores a lot of personal data.",
-        "Companies collect data to understand their customers.",
-        "Protecting your data online is important."
-      ]
-    },
-    {
-      "word": "Server",
-      "pronunciation": "/ˈsɜːrvər/",
-      "definition": "A computer program or device that provides a service to another computer program and its user, also known as the client.",
-      "sentences": [
-        "The website went down because the server crashed.",
-        "Servers store information for many websites.",
-        "When you access a website, your computer connects to a server."
-      ]
-    },
-    {
-      "word": "Cloud (Computing)",
-      "pronunciation": "/klaʊd/",
-      "definition": "Storing and accessing data and programs over the Internet instead of your computer's hard drive.",
-      "sentences": [
-        "I save my photos to the cloud so I can access them anywhere.",
-        "Cloud storage helps you save space on your device.",
-        "Many online services use cloud computing."
-      ]
-    },
-    {
-      "word": "Streaming",
-      "pronunciation": "/ˈstriːmɪŋ/",
-      "definition": "Playing video or audio content directly from the Internet without downloading it first.",
-      "sentences": [
-        "I enjoy streaming movies on the weekend.",
-        "Streaming music saves space on my phone.",
-        "The internet speed needs to be fast for smooth streaming."
-      ]
-    },
-    {
-      "word": "Podcast",
-      "pronunciation": "/ˈpɒdkæst/",
-      "definition": "A digital audio file available on the Internet for downloading to a computer or mobile device.",
-      "sentences": [
-        "I listen to a science podcast on my way to school.",
-        "There are podcasts on almost every topic.",
-        "My favorite podcast teaches me new facts."
-      ]
-    },
-    {
-      "word": "Blog",
-      "pronunciation": "/blɒɡ/",
-      "definition": "A website where a person writes regularly about topics they are interested in, often with pictures and links.",
-      "sentences": [
-        "She writes a blog about her travel adventures.",
-        "I read a food blog to find new recipes.",
-        "Starting a blog is a good way to share your thoughts."
-      ]
-    },
-    {
-      "word": "Vlog",
-      "pronunciation": "/vlɒɡ/",
-      "definition": "A video blog, where a person shares their thoughts or experiences through videos online.",
-      "sentences": [
-        "My favorite YouTuber posts a new vlog every week.",
-        "She started a vlog about her daily life.",
-        "Vlogs are a popular way to share stories visually."
       ]
     },
     {
@@ -1753,136 +1313,6 @@
       ]
     },
     {
-      "word": "Forum",
-      "pronunciation": "/ˈfɔːrəm/",
-      "definition": "An online discussion group where people can post messages and reply to each other.",
-      "sentences": [
-        "I found the answer to my question on an online forum.",
-        "The gaming forum has many helpful tips.",
-        "You can ask questions and get advice on a forum."
-      ]
-    },
-    {
-      "word": "Hashtag",
-      "pronunciation": "/ˈhæʃtæɡ/",
-      "definition": "A word or phrase preceded by a hash symbol (#) used on social media to group related content.",
-      "sentences": [
-        "Use a hashtag to make your post more visible.",
-        "The event went viral with the hashtag #BestDayEver.",
-        "I searched for posts using the hashtag #ScienceFacts."
-      ]
-    },
-    {
-      "word": "Emoji",
-      "pronunciation": "/ɪˈmoʊdʒi/",
-      "definition": "Small digital images or icons used to express an idea, emotion, etc., in electronic communication.",
-      "sentences": [
-        "I sent a happy face emoji to my friend.",
-        "Emojis help express feelings in text messages.",
-        "She used a lot of emojis in her message."
-      ]
-    },
-    {
-      "word": "GIF (Graphics Interchange Format)",
-      "pronunciation": "/ɡɪf/",
-      "definition": "A short, animated image file that loops continuously.",
-      "sentences": [
-        "I sent a funny GIF to make my friend laugh.",
-        "GIFs are popular for expressing reactions online.",
-        "You can find many GIFs on social media."
-      ]
-    },
-    {
-      "word": "Meme",
-      "pronunciation": "/miːm/",
-      "definition": "An image, video, piece of text, etc., that is copied (often with slight variations) and spread rapidly by Internet users.",
-      "sentences": [
-        "That meme about cats is so relatable.",
-        "Memes are a form of internet humor.",
-        "The internet is full of funny memes."
-      ]
-    },
-    {
-      "word": "Algorithm",
-      "pronunciation": "/ˈælɡəˌrɪðəm/",
-      "definition": "A set of rules or steps that a computer follows to solve a problem or complete a task.",
-      "sentences": [
-        "Search engines use algorithms to show you relevant results.",
-        "The app's algorithm suggests new songs you might like.",
-        "Computer programs are built using algorithms."
-      ]
-    },
-    {
-      "word": "Data",
-      "pronunciation": "/ˈdeɪtə/",
-      "definition": "Facts and statistics collected together for reference or analysis by computers.",
-      "sentences": [
-        "My phone stores a lot of personal data.",
-        "Companies collect data to understand their customers.",
-        "Protecting your data online is important."
-      ]
-    },
-    {
-      "word": "Server",
-      "pronunciation": "/ˈsɜːrvər/",
-      "definition": "A computer program or device that provides a service to another computer program and its user, also known as the client.",
-      "sentences": [
-        "The website went down because the server crashed.",
-        "Servers store information for many websites.",
-        "When you access a website, your computer connects to a server."
-      ]
-    },
-    {
-      "word": "Cloud (Computing)",
-      "pronunciation": "/klaʊd/",
-      "definition": "Storing and accessing data and programs over the Internet instead of your computer's hard drive.",
-      "sentences": [
-        "I save my photos to the cloud so I can access them anywhere.",
-        "Cloud storage helps you save space on your device.",
-        "Many online services use cloud computing."
-      ]
-    },
-    {
-      "word": "Streaming",
-      "pronunciation": "/ˈstriːmɪŋ/",
-      "definition": "Playing video or audio content directly from the Internet without downloading it first.",
-      "sentences": [
-        "I enjoy streaming movies on the weekend.",
-        "Streaming music saves space on my phone.",
-        "The internet speed needs to be fast for smooth streaming."
-      ]
-    },
-    {
-      "word": "Podcast",
-      "pronunciation": "/ˈpɒdkæst/",
-      "definition": "A digital audio file available on the Internet for downloading to a computer or mobile device.",
-      "sentences": [
-        "I listen to a science podcast on my way to school.",
-        "There are podcasts on almost every topic.",
-        "My favorite podcast teaches me new facts."
-      ]
-    },
-    {
-      "word": "Blog",
-      "pronunciation": "/blɒɡ/",
-      "definition": "A website where a person writes regularly about topics they are interested in, often with pictures and links.",
-      "sentences": [
-        "She writes a blog about her travel adventures.",
-        "I read a food blog to find new recipes.",
-        "Starting a blog is a good way to share your thoughts."
-      ]
-    },
-    {
-      "word": "Vlog",
-      "pronunciation": "/vlɒɡ/",
-      "definition": "A video blog, where a person shares their thoughts or experiences through videos online.",
-      "sentences": [
-        "My favorite YouTuber posts a new vlog every week.",
-        "She started a vlog about her daily life.",
-        "Vlogs are a popular way to share stories visually."
-      ]
-    },
-    {
       "word": "Webinar",
       "pronunciation": "/ˈwɛbɪnɑːr/",
       "definition": "An online seminar or presentation conducted over the Internet.",
@@ -1890,116 +1320,6 @@
         "I attended a webinar about digital art.",
         "Many companies offer free webinars to teach new skills.",
         "The webinar was very informative."
-      ]
-    },
-    {
-      "word": "Forum",
-      "pronunciation": "/ˈfɔːrəm/",
-      "definition": "An online discussion group where people can post messages and reply to each other.",
-      "sentences": [
-        "I found the answer to my question on an online forum.",
-        "The gaming forum has many helpful tips.",
-        "You can ask questions and get advice on a forum."
-      ]
-    },
-    {
-      "word": "Hashtag",
-      "pronunciation": "/ˈhæʃtæɡ/",
-      "definition": "A word or phrase preceded by a hash symbol (#) used on social media to group related content.",
-      "sentences": [
-        "Use a hashtag to make your post more visible.",
-        "The event went viral with the hashtag #BestDayEver.",
-        "I searched for posts using the hashtag #ScienceFacts."
-      ]
-    },
-    {
-      "word": "Emoji",
-      "pronunciation": "/ɪˈmoʊdʒi/",
-      "definition": "Small digital images or icons used to express an idea, emotion, etc., in electronic communication.",
-      "sentences": [
-        "I sent a happy face emoji to my friend.",
-        "Emojis help express feelings in text messages.",
-        "She used a lot of emojis in her message."
-      ]
-    },
-    {
-      "word": "GIF (Graphics Interchange Format)",
-      "pronunciation": "/ɡɪf/",
-      "definition": "A short, animated image file that loops continuously.",
-      "sentences": [
-        "I sent a funny GIF to make my friend laugh.",
-        "GIFs are popular for expressing reactions online.",
-        "You can find many GIFs on social media."
-      ]
-    },
-    {
-      "word": "Meme",
-      "pronunciation": "/miːm/",
-      "definition": "An image, video, piece of text, etc., that is copied (often with slight variations) and spread rapidly by Internet users.",
-      "sentences": [
-        "That meme about cats is so relatable.",
-        "Memes are a form of internet humor.",
-        "The internet is full of funny memes."
-      ]
-    },
-    {
-      "word": "Algorithm",
-      "pronunciation": "/ˈælɡəˌrɪðəm/",
-      "definition": "A set of rules or steps that a computer follows to solve a problem or complete a task.",
-      "sentences": [
-        "Search engines use algorithms to show you relevant results.",
-        "The app's algorithm suggests new songs you might like.",
-        "Computer programs are built using algorithms."
-      ]
-    },
-    {
-      "word": "Data",
-      "pronunciation": "/ˈdeɪtə/",
-      "definition": "Facts and statistics collected together for reference or analysis by computers.",
-      "sentences": [
-        "My phone stores a lot of personal data.",
-        "Companies collect data to understand their customers.",
-        "Protecting your data online is important."
-      ]
-    },
-    {
-      "word": "Server",
-      "pronunciation": "/ˈsɜːrvər/",
-      "definition": "A computer program or device that provides a service to another computer program and its user, also known as the client.",
-      "sentences": [
-        "The website went down because the server crashed.",
-        "Servers store information for many websites.",
-        "When you access a website, your computer connects to a server."
-      ]
-    },
-    {
-      "word": "Cloud (Computing)",
-      "pronunciation": "/klaʊd/",
-      "definition": "Storing and accessing data and programs over the Internet instead of your computer's hard drive.",
-      "sentences": [
-        "I save my photos to the cloud so I can access them anywhere.",
-        "Cloud storage helps you save space on your device.",
-        "Many online services use cloud computing."
-      ]
-    },
-    {
-      "word": "Streaming",
-      "pronunciation": "/ˈstriːmɪŋ/",
-      "definition": "Playing video or audio content directly from the Internet without downloading it first.",
-      "sentences": [
-        "I enjoy streaming movies on the weekend.",
-        "Streaming music saves space on my phone.",
-        "The internet speed needs to be fast for smooth streaming."
-      ]
-    },
-    {
-      "word": "Podcast",
-      "pronunciation": "/ˈpɒdkæst/",
-      "definition": "A digital audio file available on the Internet for downloading to a computer or mobile device.",
-      "sentences": [
-        "I listen to a science podcast on my way to school.",
-        "There are podcasts on almost every topic.",
-        "My favorite podcast teaches me new facts."
       ]
     }
   ]

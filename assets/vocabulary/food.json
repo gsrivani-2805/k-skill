@@ -233,16 +233,6 @@
       ]
     },
     {
-      "word": "Butter",
-      "pronunciation": "/ˈbʌtər/",
-      "definition": "A yellow fat food made from milk or cream, used for spreading on bread or in cooking.",
-      "sentences": [
-        "Spread butter on the toast.",
-        "Do you prefer butter or margarine?",
-        "The recipe calls for unsalted butter."
-      ]
-    },
-    {
       "word": "Egg",
       "pronunciation": "/ɛɡ/",
       "definition": "An oval or round object laid by a female bird, reptile, or insect, containing a young creature.",
@@ -290,16 +280,6 @@
         "I put strawberry jam on my toast.",
         "Do you prefer jam or marmalade?",
         "Homemade jam tastes the best."
-      ]
-    },
-    {
-      "word": "Cereal",
-      "pronunciation": "/ˈsɪriəl/",
-      "definition": "A breakfast food made from grain, often eaten with milk.",
-      "sentences": [
-        "I eat cereal every morning.",
-        "What kind of cereal do you like?",
-        "Cereal is a quick breakfast option."
       ]
     },
     {
@@ -550,16 +530,6 @@
         "We will roast a chicken for Sunday dinner.",
         "Roast potatoes are delicious.",
         "The smell of roasting meat filled the kitchen."
-      ]
-    },
-    {
-      "word": "Grill",
-      "pronunciation": "/ɡrɪl/",
-      "definition": "To cook food over direct heat, usually on a metal frame.",
-      "sentences": [
-        "Let's grill some burgers for the barbecue.",
-        "He grilled the fish perfectly.",
-        "We love grilled vegetables."
       ]
     },
     {
@@ -943,16 +913,6 @@
       ]
     },
     {
-      "word": "Spatula",
-      "pronunciation": "/ˈspætʃələ/",
-      "definition": "A kitchen utensil with a broad, flat, flexible blade, used for mixing, spreading, and lifting.",
-      "sentences": [
-        "Flip the pancakes with a spatula.",
-        "Use a rubber spatula to scrape the bowl.",
-        "The spatula is heat-resistant."
-      ]
-    },
-    {
       "word": "Ladle",
       "pronunciation": "/ˈleɪdl/",
       "definition": "A large long-handled spoon with a cup-shaped bowl, used for serving soup or stew.",
@@ -993,16 +953,6 @@
       ]
     },
     {
-      "word": "Bottle opener",
-      "pronunciation": "/ˈbɑːtl ˈoʊpənər/",
-      "definition": "A device for opening bottles, especially those with crown caps.",
-      "sentences": [
-        "Can you find the bottle opener?",
-        "He used a bottle opener to open the soda.",
-        "The bottle opener is on the counter."
-      ]
-    },
-    {
       "word": "Corkscrew",
       "pronunciation": "/ˈkɔːrkˌskruː/",
       "definition": "A tool for drawing corks from bottles.",
@@ -1033,16 +983,6 @@
       ]
     },
     {
-      "word": "Microwave",
-      "pronunciation": "/ˈmaɪkroʊˌweɪv/",
-      "definition": "An electric oven that cooks food very quickly by heating it with microwaves.",
-      "sentences": [
-        "Heat your leftovers in the microwave.",
-        "The microwave is easy to use.",
-        "Don't put metal in the microwave."
-      ]
-    },
-    {
       "word": "Kettle",
       "pronunciation": "/ˈkɛtl/",
       "definition": "A container with a lid, spout, and handle, used for boiling water.",
@@ -1050,16 +990,6 @@
         "Boil water in the kettle for tea.",
         "The electric kettle heats water quickly.",
         "The kettle is whistling."
-      ]
-    },
-    {
-      "word": "Cutting board",
-      "pronunciation": "/ˈkʌtɪŋ bɔːrd/",
-      "definition": "A board on which food is cut.",
-      "sentences": [
-        "Chop the vegetables on the cutting board.",
-        "Clean the cutting board after use.",
-        "This cutting board is made of wood."
       ]
     },
     {
@@ -1093,16 +1023,6 @@
       ]
     },
     {
-      "word": "Ladle",
-      "pronunciation": "/ˈleɪdl/",
-      "definition": "A large long-handled spoon with a cup-shaped bowl, used for serving soup or stew.",
-      "sentences": [
-        "Serve the soup with a ladle.",
-        "The ladle is hanging on the hook.",
-        "He used a ladle to pour the sauce."
-      ]
-    },
-    {
       "word": "Colander",
       "pronunciation": "/ˈkɑːləndər/",
       "definition": "A perforated bowl used to drain off liquid from food.",
@@ -1123,16 +1043,6 @@
       ]
     },
     {
-      "word": "Can opener",
-      "pronunciation": "/kæn ˈoʊpənər/",
-      "definition": "A device for opening cans of food.",
-      "sentences": [
-        "I need a can opener for the tomatoes.",
-        "Where is the can opener?",
-        "This electric can opener is very efficient."
-      ]
-    },
-    {
       "word": "Bottle opener",
       "pronunciation": "/ˈbɑːtl ˈoʊpənər/",
       "definition": "A device for opening bottles, especially those with crown caps.",
@@ -1143,36 +1053,6 @@
       ]
     },
     {
-      "word": "Corkscrew",
-      "pronunciation": "/ˈkɔːrkˌskruː/",
-      "definition": "A tool for drawing corks from bottles.",
-      "sentences": [
-        "We need a corkscrew to open the wine.",
-        "He struggled with the corkscrew.",
-        "A waiter always carries a corkscrew."
-      ]
-    },
-    {
-      "word": "Toaster",
-      "pronunciation": "/ˈtoʊstər/",
-      "definition": "An electrical appliance for making toast.",
-      "sentences": [
-        "Put the bread in the toaster.",
-        "The toaster makes perfect toast.",
-        "My toaster has two slots."
-      ]
-    },
-    {
-      "word": "Blender",
-      "pronunciation": "/ˈblɛndər/",
-      "definition": "An electric machine used for mixing soft foods or liquids.",
-      "sentences": [
-        "I'll make a smoothie in the blender.",
-        "The blender is very powerful.",
-        "Blend the fruits until smooth."
-      ]
-    },
-    {
       "word": "Microwave",
       "pronunciation": "/ˈmaɪkroʊˌweɪv/",
       "definition": "An electric oven that cooks food very quickly by heating it with microwaves.",
@@ -1180,16 +1060,6 @@
         "Heat your leftovers in the microwave.",
         "The microwave is easy to use.",
         "Don't put metal in the microwave."
-      ]
-    },
-    {
-      "word": "Kettle",
-      "pronunciation": "/ˈkɛtl/",
-      "definition": "A container with a lid, spout, and handle, used for boiling water.",
-      "sentences": [
-        "Boil water in the kettle for tea.",
-        "The electric kettle heats water quickly.",
-        "The kettle is whistling."
       ]
     },
     {
@@ -1883,16 +1753,6 @@
       ]
     },
     {
-      "word": "Muffin",
-      "pronunciation": "/ˈmʌfɪn/",
-      "definition": "A small, sweet cake, often baked in a cup-shaped paper liner.",
-      "sentences": [
-        "I bought a blueberry muffin for breakfast.",
-        "Muffins are great for a quick snack.",
-        "She baked a batch of chocolate chip muffins."
-      ]
-    },
-    {
       "word": "Doughnut",
       "pronunciation": "/ˈdoʊnʌt/",
       "definition": "A small, fried cake of sweetened dough, typically in the shape of a ring or ball, sometimes filled.",
@@ -1900,26 +1760,6 @@
         "He loves glazed doughnuts.",
         "Let's get some doughnuts and coffee.",
         "The doughnut shop opens early."
-      ]
-    },
-    {
-      "word": "Croissant",
-      "pronunciation": "/kwɑːˈsɑːn/",
-      "definition": "A crescent-shaped pastry made of rich, flaky dough.",
-      "sentences": [
-        "I had a croissant and coffee for breakfast.",
-        "Croissants are a popular French pastry.",
-        "The warm croissant melted in my mouth."
-      ]
-    },
-    {
-      "word": "Bagel",
-      "pronunciation": "/ˈbeɪɡl/",
-      "definition": "A chewy, ring-shaped bread roll, often eaten with cream cheese.",
-      "sentences": [
-        "I had a bagel with cream cheese.",
-        "Bagels are great for breakfast or lunch.",
-        "Toast the bagel before adding toppings."
       ]
     },
     {
@@ -1980,16 +1820,6 @@
         "Would you like a biscuit with your tea?",
         "I dipped the biscuit in my coffee.",
         "Chocolate biscuits are my favorite."
-      ]
-    },
-    {
-      "word": "Cookie (US)",
-      "pronunciation": "/ˈkʊki/",
-      "definition": "A small, flat, sweet cake.",
-      "sentences": [
-        "I love chocolate chip cookies.",
-        "Can I have another cookie?",
-        "Bake cookies for the party."
       ]
     },
     {
@@ -2083,16 +1913,6 @@
       ]
     },
     {
-      "word": "Dessert (US)",
-      "pronunciation": "/dɪˈzɜːrt/",
-      "definition": "The sweet course eaten at the end of a meal.",
-      "sentences": [
-        "I'll have ice cream for dessert.",
-        "What's on the dessert menu?",
-        "She baked a pie for dessert."
-      ]
-    },
-    {
       "word": "Casserole",
       "pronunciation": "/ˈkæsəˌroʊl/",
       "definition": "A dish of food baked and served in a deep dish.",
@@ -2100,16 +1920,6 @@
         "My mom made a chicken and vegetable casserole.",
         "Casseroles are easy to prepare for a crowd.",
         "This casserole is warm and comforting."
-      ]
-    },
-    {
-      "word": "Stir-fry",
-      "pronunciation": "/stɜːr fraɪ/",
-      "definition": "A dish of Chinese origin consisting of small pieces of meat and vegetables fried quickly in a wok or pan.",
-      "sentences": [
-        "Let's make a vegetable stir-fry for dinner.",
-        "Stir-fry is a quick and healthy meal.",
-        "Add soy sauce to the stir-fry."
       ]
     },
     {
@@ -2190,16 +2000,6 @@
         "The chef prepared a special dish.",
         "He is a talented chef.",
         "The chef's hat is very tall."
-      ]
-    },
-    {
-      "word": "Cook (noun)",
-      "pronunciation": "/kʊk/",
-      "definition": "A person who prepares food for eating.",
-      "sentences": [
-        "My mom is a great cook.",
-        "He is a good cook.",
-        "The cook prepared a delicious meal."
       ]
     },
     {

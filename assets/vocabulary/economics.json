@@ -303,16 +303,6 @@
       ]
     },
     {
-      "word": "Shares",
-      "pronunciation": "/ʃɛərz/",
-      "definition": "Units of ownership in a company that are sold to investors.",
-      "sentences": [
-        "She bought shares in a technology company.",
-        "The value of his shares increased.",
-        "Many people invest in company shares."
-      ]
-    },
-    {
       "word": "Bonds",
       "pronunciation": "/bɒndz/",
       "definition": "Certificates of debt issued by a government or company to raise money, promising to pay interest and repay the principal at a later date.",
@@ -540,16 +530,6 @@
         "The store has a large stock of winter clothes.",
         "We need to check the stock levels.",
         "The company keeps its stock in a large warehouse."
-      ]
-    },
-    {
-      "word": "Bond",
-      "pronunciation": "/bɒnd/",
-      "definition": "A certificate issued by a government or a public company promising to repay borrowed money at a fixed rate of interest at a specified time.",
-      "sentences": [
-        "He invested in government bonds.",
-        "Bonds are a type of investment.",
-        "The company issued new bonds to raise capital."
       ]
     },
     {
@@ -1260,26 +1240,6 @@
         "Healthy competition benefits consumers.",
         "The market has strong competition.",
         "Competition drives innovation."
-      ]
-    },
-    {
-      "word": "Subsidy (economic)",
-      "pronunciation": "/ˈsʌbsɪdi/",
-      "definition": "A sum of money granted by the state or a public body to help an industry or business keep the price of a commodity or service low or competitive.",
-      "sentences": [
-        "The government provided a subsidy to the renewable energy sector.",
-        "Subsidies can distort market prices.",
-        "Farmers often receive agricultural subsidies."
-      ]
-    },
-    {
-      "word": "Tariff (economic)",
-      "pronunciation": "/ˈtærɪf/",
-      "definition": "A tax or duty to be paid on a particular class of imports or exports, used to protect domestic industries.",
-      "sentences": [
-        "The new tariff made imported goods more expensive.",
-        "Tariffs are a tool of protectionism.",
-        "Countries often negotiate over tariffs in trade agreements."
       ]
     },
     {
@@ -2023,16 +1983,6 @@
       ]
     },
     {
-      "word": "Trade surplus (goods and services)",
-      "pronunciation": "/treɪd ˈsɜːrpləs/",
-      "definition": "When a country exports more goods and services than it imports.",
-      "sentences": [
-        "Germany often has a trade surplus in goods and services.",
-        "A trade surplus indicates a country is a net exporter.",
-        "The country achieved a record trade surplus in goods and services."
-      ]
-    },
-    {
       "word": "Current account",
       "pronunciation": "/ˈkʌrənt əˈkaʊnt/",
       "definition": "A record of all payments for goods, services, and income flows between a country and the rest of the world.",
@@ -2180,16 +2130,6 @@
         "Trade liberalization can boost economic growth.",
         "Many countries are pursuing trade liberalization.",
         "Trade liberalization aims to foster global trade."
-      ]
-    },
-    {
-      "word": "Comparative advantage theory",
-      "pronunciation": "/kəmˈpærətɪv ədˈvɑːntɪdʒ ˈθɪəri/",
-      "definition": "A theory that states that countries should specialize in producing goods and services in which they have a comparative advantage and trade them for other goods and services.",
-      "sentences": [
-        "The comparative advantage theory explains the benefits of international trade.",
-        "According to comparative advantage theory, even less efficient countries can benefit from trade.",
-        "Comparative advantage theory is a cornerstone of international economics."
       ]
     },
     {
@@ -2433,16 +2373,6 @@
       ]
     },
     {
-      "word": "Fiscal stimulus package",
-      "pronunciation": "/ˈfɪskəl ˈstɪmjʊləs ˈpækɪdʒ/",
-      "definition": "A set of government spending and tax measures designed to stimulate the economy.",
-      "sentences": [
-        "The government announced a large fiscal stimulus package.",
-        "A fiscal stimulus package aims to boost demand and employment.",
-        "The fiscal stimulus package was debated in parliament."
-      ]
-    },
-    {
       "word": "Monetary stimulus",
       "pronunciation": "/ˈmʌnɪtɛri ˈstɪmjʊləs/",
       "definition": "Actions taken by a central bank to increase the money supply and encourage lending and investment.",
@@ -2510,16 +2440,6 @@
         "Retail sales are a coincident economic indicator.",
         "Coincident economic indicators reflect the current state of the economy.",
         "He monitors coincident economic indicators for real-time insights."
-      ]
-    },
-    {
-      "word": "Fiscal stimulus measures",
-      "pronunciation": "/ˈfɪskəl ˈstɪmjʊləs ˈmɛʒərz/",
-      "definition": "Government actions, such as tax cuts or increased spending, to boost economic activity.",
-      "sentences": [
-        "The government introduced several fiscal stimulus measures.",
-        "Fiscal stimulus measures aim to increase demand.",
-        "The effectiveness of fiscal stimulus measures is often debated."
       ]
     },
     {
@@ -2650,16 +2570,6 @@
         "Some countries have adopted full dollarization.",
         "Dollarization eliminates exchange rate risk.",
         "Dollarization means a country gives up its independent monetary policy."
-      ]
-    },
-    {
-      "word": "Trade war (economic)",
-      "pronunciation": "/treɪd wɔːr/",
-      "definition": "A situation in which countries impose tariffs or other trade barriers on each other in retaliation for similar actions.",
-      "sentences": [
-        "The trade war between the two economic powers affected global markets.",
-        "Trade wars can lead to higher prices for consumers and reduced trade volumes.",
-        "Resolving a trade war requires diplomatic efforts."
       ]
     }
   ]

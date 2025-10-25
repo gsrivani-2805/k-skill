@@ -18,20 +18,20 @@ class GameScreen extends StatelessWidget {
       "route": WordMatchScreen(jsonPath: "games/word_match.json"),
     },
     {
-      "title": "Sentence Formation",
-      "subtitle": "Build sentences piece by piece!",
-      "emoji": "🧩",
-      "gradient": [Color(0xFFE6F3FF), Color(0xFFCCE7FF)], // Light blue gradient
-      "difficulty": "Medium",
-      "route": SentenceForm(jsonPath: "games/sentence_formation.json"),
-    },
-    {
       "title": "Fill in the Blanks",
       "subtitle": "Fill in the missing pieces to complete the magical story!",
       "emoji": "✍🏼",
       "gradient": [Color(0xFFFFF4E6), Color(0xFFFFE6CC)], // Light yellow/orange gradient
       "difficulty": "Easy",
       "route": FillInTheBlanks(jsonPath: "games/grammar_mistakes.json"),
+    },
+    {
+      "title": "Sentence Formation",
+      "subtitle": "Build sentences piece by piece!",
+      "emoji": "🧩",
+      "gradient": [Color(0xFFE6F3FF), Color(0xFFCCE7FF)], // Light blue gradient
+      "difficulty": "Medium",
+      "route": SentenceForm(jsonPath: "games/sentence_formation.json"),
     },
     {
       "title": "Picture Story",
