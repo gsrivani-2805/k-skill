@@ -42,16 +42,43 @@
               "text": "There are several methods used to teach phonics, each with a slightly different approach to connecting sounds and letters.",
               "examples": [],
               "usage_examples": [],
-              "media": {},
+              "media": {
+                "image": "images/basic/module-1/lesson-1/phonics_2.png"
+              },
               "table": {
                 "title": "Types of Phonics",
                 "headers": ["Type", "Focus", "Method", "Example"],
                 "rows": [
-                  ["Synthetic Phonics", "Individual sounds", "Blend phonemes", "/c/ /a/ /t/ → cat"],
-                  ["Analytic Phonics", "Whole word to parts", "Analyze letter-sound relationships", "cat → c, a, t"],
-                  ["Analogy Phonics", "Known word parts", "Use word families", "cat → bat, hat"],
-                  ["Embedded Phonics", "Context-based", "Teach while reading", "th in \"that\""],
-                  ["Onset-Rime Phonics", "Word parts", "Combine onset and rime", "sn + ap = snap"]
+                  [
+                    "Synthetic Phonics",
+                    "Individual sounds",
+                    "Blend phonemes",
+                    "/c/ /a/ /t/ → cat"
+                  ],
+                  [
+                    "Analytic Phonics",
+                    "Whole word to parts",
+                    "Analyze letter-sound relationships",
+                    "cat → c, a, t"
+                  ],
+                  [
+                    "Analogy Phonics",
+                    "Known word parts",
+                    "Use word families",
+                    "cat → bat, hat"
+                  ],
+                  [
+                    "Embedded Phonics",
+                    "Context-based",
+                    "Teach while reading",
+                    "th in \"that\""
+                  ],
+                  [
+                    "Onset-Rime Phonics",
+                    "Word parts",
+                    "Combine onset and rime",
+                    "sn + ap = snap"
+                  ]
                 ]
               }
             }
@@ -82,7 +109,7 @@
                 "Mirror practice for mouth movements (e.g., observing mouth shape for the /m/ sound to ensure correct articulation)."
               ],
               "media": {
-                "image": "images/basic/module-1/lesson-1/p2"
+                "image": "images/basic/module-1/lesson-1/speech_sounds.png"
               }
             }
           ]
@@ -100,14 +127,22 @@
               "examples": [],
               "usage_examples": [],
               "media": {
-                "image": "images/basic/module-1/lesson-1/speech sounds.png"
+                "image": "images/basic/module-1/lesson-1/phonemes.png"
               },
               "table": {
                 "title": "Categories of Consonant Sounds",
                 "headers": ["Type", "Sounds", "Examples"],
                 "rows": [
-                  ["Plosives (Stops)", "/p/, /b/, /t/, /d/, /k/, /g/", "pen, bat, top, dog, cat, go"],
-                  ["Fricatives", "/f/, /v/, /s/, /z/, /θ/, /ð/, /ʃ/, /ʒ/, /h/", "fan, van, sun, zip, think, this, ship, treasure, hat"],
+                  [
+                    "Plosives (Stops)",
+                    "/p/, /b/, /t/, /d/, /k/, /g/",
+                    "pen, bat, top, dog, cat, go"
+                  ],
+                  [
+                    "Fricatives",
+                    "/f/, /v/, /s/, /z/, /θ/, /ð/, /ʃ/, /ʒ/, /h/",
+                    "fan, van, sun, zip, think, this, ship, treasure, hat"
+                  ],
                   ["Affricates", "/tʃ/, /dʒ/", "chip, jam"],
                   ["Nasals", "/m/, /n/, /ŋ/", "man, nose, ring"],
                   ["Approximants", "/l/, /r/, /w/, /j/", "lamp, red, win, yes"]
@@ -133,14 +168,22 @@
               ],
               "usage_examples": [],
               "media": {
-                "image": "images/basic/module-1/lesson-1/digraphs.png"
+                "image": "images/basic/module-1/lesson-1/diagraphs.png"
               },
               "table": {
                 "title": "Common Digraphs",
                 "headers": ["Type", "Examples", "Sound Produced"],
                 "rows": [
-                  ["Consonant Digraphs", "ch, sh, th, ph, wh", "/tʃ/, /ʃ/, /θ/, /f/, /w/"],
-                  ["Vowel Digraphs", "ai, ea, oa, ee, ie", "/eɪ/, /iː/, /oʊ/ etc."]
+                  [
+                    "Consonant Digraphs",
+                    "ch, sh, th, ph, wh",
+                    "/tʃ/, /ʃ/, /θ/, /f/, /w/"
+                  ],
+                  [
+                    "Vowel Digraphs",
+                    "ai, ea, oa, ee, ie",
+                    "/eɪ/, /iː/, /oʊ/ etc."
+                  ]
                 ]
               }
             }
@@ -154,7 +197,6 @@
               "examples": [],
               "usage_examples": [],
               "media": {
-                "image": "images/basic/module-1/lesson-1/p5"
               },
               "table": {
                 "title": "Common Diphthongs",
@@ -181,7 +223,7 @@
               "examples": [],
               "usage_examples": [],
               "media": {
-                "image": "images/basic/module-1/lesson-1/r controlled words.png"
+                "image": "images/basic/module-1/lesson-1/r_controlled_words.png"
               },
               "table": {
                 "title": "R-Controlled Vowel Sounds",
@@ -206,7 +248,6 @@
               "examples": [],
               "usage_examples": [],
               "media": {
-                "image": "images/basic/module-1/lesson-1/p7"
               },
               "table": {
                 "title": "Short Vowel Sounds",
@@ -230,7 +271,6 @@
               "examples": [],
               "usage_examples": [],
               "media": {
-                "image": "images/basic/module-1/lesson-1/p8"
               },
               "table": {
                 "title": "Long Vowel Sounds",
@@ -289,7 +329,6 @@
                 "bath, math, path, with, cloth"
               ],
               "media": {
-                "image": "images/basic/module-1/lesson-1/p9"
               }
             }
           ]

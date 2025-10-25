@@ -173,16 +173,6 @@
       ]
     },
     {
-      "word": "Loan",
-      "pronunciation": "/loʊn/",
-      "definition": "A sum of money that is borrowed and expected to be paid back with interest.",
-      "sentences": [
-        "He took out a bank loan to start his business.",
-        "Many students take out a student loan for college.",
-        "She applied for a small loan."
-      ]
-    },
-    {
       "word": "Debt",
       "pronunciation": "/dɛt/",
       "definition": "A sum of money that is owed or due.",
@@ -543,16 +533,6 @@
       ]
     },
     {
-      "word": "Investment",
-      "pronunciation": "/ɪnˈvɛstmənt/",
-      "definition": "The action or process of investing money for profit or material result.",
-      "sentences": [
-        "Buying a house is a big investment.",
-        "He made a wise investment in stocks.",
-        "Education is a valuable investment in your future."
-      ]
-    },
-    {
       "word": "Capital",
       "pronunciation": "/ˈkæpɪtl/",
       "definition": "Wealth in the form of money or other assets owned by a person or organization or available for a purpose such as starting a company or investing.",
@@ -883,16 +863,6 @@
       ]
     },
     {
-      "word": "Interest rates",
-      "pronunciation": "/ˈɪntrəst reɪts/",
-      "definition": "The proportion of a loan that is charged as interest to the borrower, typically expressed as an annual percentage.",
-      "sentences": [
-        "The central bank raised interest rates.",
-        "High interest rates can make borrowing expensive.",
-        "She compared different interest rates before choosing a bank."
-      ]
-    },
-    {
       "word": "Fiscal policy",
       "pronunciation": "/ˈfɪskl ˈpɑːləsi/",
       "definition": "The means by which a government adjusts its spending levels and tax rates to monitor and influence a nation's economy.",
@@ -1090,16 +1060,6 @@
         "The company consulted all its stakeholders.",
         "Employees, customers, and investors are all stakeholders.",
         "Meeting the needs of all stakeholders is a challenge."
-      ]
-    },
-    {
-      "word": "Shareholder",
-      "pronunciation": "/ˈʃɛərˌhoʊldər/",
-      "definition": "An owner of shares in a company or mutual fund.",
-      "sentences": [
-        "The company held a meeting for its shareholders.",
-        "As a shareholder, you have a say in the company's decisions.",
-        "Many small investors are also shareholders."
       ]
     },
     {

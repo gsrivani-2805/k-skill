@@ -48,6 +48,7 @@ flutter:
   - data/assessment/reading_passage.json
 
   #practice
+  - data/practice/
   - data/practice/listening_sentences.json
   - data/practice/reading_passages.json
   - data/practice/discourse.json
@@ -63,6 +64,7 @@ flutter:
 
   - images/games/
 
+  - games/
   - games/grammar_mistakes.json
   - games/listening_puzzle.json
   - games/picture_sentence.json

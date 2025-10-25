@@ -203,16 +203,6 @@
       ]
     },
     {
-      "word": "Bluetooth",
-      "pronunciation": "/ˈbluːˌtuːθ/",
-      "definition": "A technology that allows electronic devices to connect and exchange data wirelessly over short distances.",
-      "sentences": [
-        "Connect your headphones using Bluetooth.",
-        "My car has Bluetooth for calls.",
-        "Bluetooth speakers are very convenient."
-      ]
-    },
-    {
       "word": "Data",
       "pronunciation": "/ˈdeɪtə/",
       "definition": "Facts and statistics collected together for reference or analysis.",
@@ -533,16 +523,6 @@
       ]
     },
     {
-      "word": "Upload",
-      "pronunciation": "/ˌʌpˈloʊd/",
-      "definition": "To transfer data from one computer system to another, typically to a larger computer or to the Internet.",
-      "sentences": [
-        "Upload your photos to the cloud.",
-        "It takes a while to upload videos.",
-        "You can upload documents to the website."
-      ]
-    },
-    {
       "word": "Cloud storage",
       "pronunciation": "/klaʊd ˈstɔːrɪdʒ/",
       "definition": "A method of storing digital data in multiple networked servers, rather than on a local device.",
@@ -583,16 +563,6 @@
       ]
     },
     {
-      "word": "Firewall",
-      "pronunciation": "/ˈfaɪərˌwɔːl/",
-      "definition": "A network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
-      "sentences": [
-        "The firewall protects my computer from threats.",
-        "A strong firewall is important for online security.",
-        "Configure your firewall settings carefully."
-      ]
-    },
-    {
       "word": "Hacker",
       "pronunciation": "/ˈhækər/",
       "definition": "A person who uses computers to gain unauthorized access to data.",
@@ -600,16 +570,6 @@
         "A hacker tried to access my account.",
         "Hackers can steal personal information.",
         "Protect yourself from hackers."
-      ]
-    },
-    {
-      "word": "Phishing",
-      "pronunciation": "/ˈfɪʃɪŋ/",
-      "definition": "The fraudulent practice of sending emails purporting to be from reputable companies in order to induce individuals to reveal personal information.",
-      "sentences": [
-        "Be aware of phishing emails.",
-        "Phishing attempts are common online.",
-        "Don't click on suspicious links to avoid phishing."
       ]
     },
     {
@@ -650,16 +610,6 @@
         "Speak clearly into the microphone.",
         "The microphone picked up every sound.",
         "My headphones have a built-in microphone."
-      ]
-    },
-    {
-      "word": "Webinar",
-      "pronunciation": "/ˈwɛbɪˌnɑːr/",
-      "definition": "An online seminar or presentation.",
-      "sentences": [
-        "I attended a webinar on digital marketing.",
-        "Many companies host webinars for training.",
-        "Register for the upcoming webinar."
       ]
     },
     {
@@ -1123,16 +1073,6 @@
       ]
     },
     {
-      "word": "Antivirus",
-      "pronunciation": "/ˈæntiˌvaɪrəs/",
-      "definition": "Software designed to detect, prevent, and remove malicious software, such as computer viruses.",
-      "sentences": [
-        "Install antivirus software on your computer.",
-        "Antivirus programs protect your data.",
-        "Run an antivirus scan regularly."
-      ]
-    },
-    {
       "word": "Malware",
       "pronunciation": "/ˈmælˌwɛər/",
       "definition": "Software that is specifically designed to disrupt, damage, or gain unauthorized access to a computer system.",
@@ -1150,16 +1090,6 @@
         "Be aware of phishing emails.",
         "Phishing attempts are common online.",
         "Don't click on suspicious links to avoid phishing."
-      ]
-    },
-    {
-      "word": "Spam",
-      "pronunciation": "/spæm/",
-      "definition": "Irrelevant or inappropriate messages sent on the Internet to a large number of recipients.",
-      "sentences": [
-        "My email inbox is full of spam.",
-        "Mark unwanted emails as spam.",
-        "Spam filters help reduce junk mail."
       ]
     },
     {
@@ -1220,16 +1150,6 @@
         "Save your preferences for future use.",
         "The software remembers your preferences.",
         "Adjust your preferences for a personalized experience."
-      ]
-    },
-    {
-      "word": "Update",
-      "pronunciation": "/ʌpˈdeɪt/",
-      "definition": "To make something more modern or current.",
-      "sentences": [
-        "Update your software regularly for security.",
-        "The app needs an update.",
-        "Install the latest update for better performance."
       ]
     },
     {
@@ -1730,16 +1650,6 @@
         "Robotics is a fascinating field of study.",
         "Advances in robotics are changing industries.",
         "She is studying robotics at university."
-      ]
-    },
-    {
-      "word": "Virtual assistant",
-      "pronunciation": "/ˈvɜːrtʃuəl əˈsɪstənt/",
-      "definition": "An AI-powered software agent that can perform tasks or services for an individual.",
-      "sentences": [
-        "Siri and Alexa are virtual assistants.",
-        "My virtual assistant helps me set alarms.",
-        "Virtual assistants can answer questions and play music."
       ]
     },
     {

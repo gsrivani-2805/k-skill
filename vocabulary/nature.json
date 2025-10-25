@@ -23,26 +23,6 @@
       ]
     },
     {
-      "word": "Ecology",
-      "pronunciation": "/ɪˈkɒlədʒi/",
-      "definition": "The study of how living things interact with each other and their environment.",
-      "sentences": [
-        "She studies ecology at university.",
-        "Ecology helps us understand ecosystems.",
-        "The balance of nature is part of ecology."
-      ]
-    },
-    {
-      "word": "Ecosystem",
-      "pronunciation": "/ˈiːkoʊˌsɪstəm/",
-      "definition": "A community of living things interacting with their non-living environment.",
-      "sentences": [
-        "A forest is a complex ecosystem.",
-        "Protecting one part of an ecosystem helps the whole.",
-        "Coral reefs are important marine ecosystems."
-      ]
-    },
-    {
       "word": "Planet",
       "pronunciation": "/ˈplænɪt/",
       "definition": "A large, round object in space that moves around a star.",
@@ -113,16 +93,6 @@
       ]
     },
     {
-      "word": "Recycle",
-      "pronunciation": "/riːˈsaɪkl/",
-      "definition": "To process used materials so they can be used again.",
-      "sentences": [
-        "Remember to recycle plastic bottles.",
-        "Recycling helps reduce waste.",
-        "We recycle paper, glass, and plastic."
-      ]
-    },
-    {
       "word": "Waste",
       "pronunciation": "/weɪst/",
       "definition": "Unwanted or unusable material, substances, or by-products.",
@@ -140,16 +110,6 @@
         "We put our food scraps in the compost bin.",
         "Compost enriches the soil for plants.",
         "Making compost helps reduce waste."
-      ]
-    },
-    {
-      "word": "Renewable energy",
-      "pronunciation": "/rɪˈnjuːəbl ˈɛnərdʒi/",
-      "definition": "Energy from sources that naturally replenish, like solar or wind power.",
-      "sentences": [
-        "Solar panels use renewable energy.",
-        "Renewable energy is cleaner than fossil fuels.",
-        "Many countries are investing in renewable energy."
       ]
     },
     {
@@ -193,16 +153,6 @@
       ]
     },
     {
-      "word": "Fossil fuels",
-      "pronunciation": "/ˈfɒsl fjuːəlz/",
-      "definition": "Natural fuels like coal, oil, or natural gas, formed from the remains of ancient organisms.",
-      "sentences": [
-        "Burning fossil fuels contributes to global warming.",
-        "We need to reduce our reliance on fossil fuels.",
-        "Coal is a type of fossil fuel."
-      ]
-    },
-    {
       "word": "Conservation",
       "pronunciation": "/ˌkɒnsərˈveɪʃən/",
       "definition": "The protection of animals, plants, and natural resources.",
@@ -240,16 +190,6 @@
         "Many species of birds live in this area.",
         "The panda is an endangered species.",
         "Scientists discover new species regularly."
-      ]
-    },
-    {
-      "word": "Endangered species",
-      "pronunciation": "/ɪnˈdeɪndʒərd ˈspiːʃiːz/",
-      "definition": "A species of animal or plant that is seriously at risk of extinction.",
-      "sentences": [
-        "The tiger is an endangered species.",
-        "Conservationists work to save endangered species.",
-        "Protecting their habitats helps endangered species."
       ]
     },
     {
@@ -373,16 +313,6 @@
       ]
     },
     {
-      "word": "Organic",
-      "pronunciation": "/ɔːrˈɡænɪk/",
-      "definition": "Produced or grown without artificial chemicals.",
-      "sentences": [
-        "I prefer to eat organic fruits and vegetables.",
-        "Organic farming is better for the soil.",
-        "She buys organic cotton clothes."
-      ]
-    },
-    {
       "word": "Natural resources",
       "pronunciation": "/ˈnætʃərəl rɪˈsɔːrsɪz/",
       "definition": "Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.",
@@ -393,36 +323,6 @@
       ]
     },
     {
-      "word": "Fossil fuels",
-      "pronunciation": "/ˈfɒsl fjuːəlz/",
-      "definition": "Natural fuels like coal, oil, or natural gas, formed from the remains of ancient organisms.",
-      "sentences": [
-        "Burning fossil fuels contributes to global warming.",
-        "We need to reduce our reliance on fossil fuels.",
-        "Coal is a type of fossil fuel."
-      ]
-    },
-    {
-      "word": "Alternative energy",
-      "pronunciation": "/ɔːlˈtɜːrnətɪv ˈɛnərdʒi/",
-      "definition": "Energy that does not come from fossil fuels and is not harmful to the environment.",
-      "sentences": [
-        "Solar and wind power are alternative energy sources.",
-        "We need to develop more alternative energy.",
-        "Alternative energy helps reduce pollution."
-      ]
-    },
-    {
-      "word": "Carbon neutrality",
-      "pronunciation": "/ˈkɑːrbən njuːˈtrælɪti/",
-      "definition": "Achieving net zero carbon dioxide emissions by balancing carbon emissions with carbon removal.",
-      "sentences": [
-        "Many companies aim for carbon neutrality.",
-        "Carbon neutrality helps fight climate change.",
-        "Achieving carbon neutrality is a global goal."
-      ]
-    },
-    {
       "word": "Carbon capture",
       "pronunciation": "/ˈkɑːrbən ˈkæptʃər/",
       "definition": "The process of capturing carbon dioxide from large point sources, such as power plants, and storing it instead of releasing it into the atmosphere.",
@@ -430,16 +330,6 @@
         "Scientists are researching carbon capture technologies.",
         "Carbon capture can help reduce emissions.",
         "Some power plants are experimenting with carbon capture."
-      ]
-    },
-    {
-      "word": "Deforestation",
-      "pronunciation": "/diːˌfɒrɪˈsteɪʃən/",
-      "definition": "The clearing of forests by cutting down trees.",
-      "sentences": [
-        "Deforestation contributes to climate change.",
-        "Logging causes widespread deforestation.",
-        "We need to stop deforestation."
       ]
     },
     {
@@ -503,26 +393,6 @@
       ]
     },
     {
-      "word": "Waste management",
-      "pronunciation": "/weɪst ˈmænɪdʒmənt/",
-      "definition": "The collection, transport, processing, recycling, or disposal of waste materials.",
-      "sentences": [
-        "Good waste management is important for cities.",
-        "Waste management aims to reduce environmental impact.",
-        "They are improving their waste management system."
-      ]
-    },
-    {
-      "word": "Landfill",
-      "pronunciation": "/ˈlændfɪl/",
-      "definition": "A place where waste is buried under the ground.",
-      "sentences": [
-        "Most of our trash goes to a landfill.",
-        "Landfills can pollute the soil and water.",
-        "Reducing waste helps reduce the need for landfills."
-      ]
-    },
-    {
       "word": "Incineration",
       "pronunciation": "/ɪnˌsɪnəˈreɪʃən/",
       "definition": "The destruction of waste material by burning.",
@@ -563,16 +433,6 @@
       ]
     },
     {
-      "word": "Groundwater",
-      "pronunciation": "/ˈɡraʊndˌwɔːtər/",
-      "definition": "Water held underground in the soil or in pores and crevices in rock.",
-      "sentences": [
-        "Many people get their drinking water from groundwater.",
-        "Pollution can contaminate groundwater.",
-        "Groundwater is an important natural resource."
-      ]
-    },
-    {
       "word": "Aquifer",
       "pronunciation": "/ˈækwɪfər/",
       "definition": "A body of permeable rock which can contain or transmit groundwater.",
@@ -600,26 +460,6 @@
         "Protecting the watershed is important for clean water.",
         "The entire region is part of this watershed.",
         "Pollution in one part of a watershed affects the whole."
-      ]
-    },
-    {
-      "word": "Ecosystem services",
-      "pronunciation": "/ˈiːkoʊˌsɪstəm ˈsɜːrvɪsɪz/",
-      "definition": "The benefits that humans receive from ecosystems, such as clean air and water, pollination, and climate regulation.",
-      "sentences": [
-        "Forests provide many valuable ecosystem services.",
-        "Protecting nature helps preserve ecosystem services.",
-        "Ecosystem services are essential for human well-being."
-      ]
-    },
-    {
-      "word": "Biodiversity",
-      "pronunciation": "/ˌbaɪoʊdaɪˈvɜːrsɪti/",
-      "definition": "The variety of life on Earth, including plants, animals, and microorganisms.",
-      "sentences": [
-        "Protecting biodiversity is crucial for healthy ecosystems.",
-        "Loss of habitat reduces biodiversity.",
-        "Biodiversity makes our planet rich and resilient."
       ]
     },
     {
@@ -783,16 +623,6 @@
       ]
     },
     {
-      "word": "Runoff",
-      "pronunciation": "/ˈrʌnɒf/",
-      "definition": "Water from rain or melted snow that flows over the ground surface.",
-      "sentences": [
-        "Agricultural runoff can pollute water sources.",
-        "Stormwater runoff can carry pollutants.",
-        "Reducing runoff helps protect water quality."
-      ]
-    },
-    {
       "word": "Groundwater",
       "pronunciation": "/ˈɡraʊndˌwɔːtər/",
       "definition": "Water held underground in the soil or in pores and crevices in rock.",
@@ -800,16 +630,6 @@
         "Many people get their drinking water from groundwater.",
         "Pollution can contaminate groundwater.",
         "Groundwater is an important natural resource."
-      ]
-    },
-    {
-      "word": "Erosion",
-      "pronunciation": "/ɪˈroʊʒən/",
-      "definition": "The process of eroding or being eroded by wind, water, or other natural agents.",
-      "sentences": [
-        "Soil erosion can be caused by heavy rain.",
-        "Planting trees helps prevent erosion.",
-        "Coastal erosion is a concern in some areas."
       ]
     },
     {
@@ -970,16 +790,6 @@
         "The Antarctic is a vast continent of ice.",
         "Penguins live in the Antarctic.",
         "The Antarctic Treaty protects the continent."
-      ]
-    },
-    {
-      "word": "Ecosystem",
-      "pronunciation": "/ˈiːkoʊˌsɪstəm/",
-      "definition": "A community of living things interacting with their non-living environment.",
-      "sentences": [
-        "A forest is a complex ecosystem.",
-        "Protecting one part of an ecosystem helps the whole.",
-        "Coral reefs are important marine ecosystems."
       ]
     },
     {
@@ -1293,16 +1103,6 @@
       ]
     },
     {
-      "word": "Habitat",
-      "pronunciation": "/ˈhæbɪtæt/",
-      "definition": "The natural home or environment of an animal, plant, or other organism.",
-      "sentences": [
-        "The rainforest is the habitat of many unique animals.",
-        "Loss of habitat threatens many species.",
-        "We need to protect animal habitats."
-      ]
-    },
-    {
       "word": "Niche",
       "pronunciation": "/nɪtʃ/",
       "definition": "The role or position of an organism or population within an ecological community.",
@@ -1340,36 +1140,6 @@
         "Natural selection drives evolution.",
         "Stronger animals survive through natural selection.",
         "Natural selection favors beneficial traits."
-      ]
-    },
-    {
-      "word": "Biodiversity",
-      "pronunciation": "/ˌbaɪoʊdaɪˈvɜːrsɪti/",
-      "definition": "The variety of life on Earth, including plants, animals, and microorganisms.",
-      "sentences": [
-        "Protecting biodiversity is crucial for healthy ecosystems.",
-        "Loss of habitat reduces biodiversity.",
-        "Biodiversity makes our planet rich and resilient."
-      ]
-    },
-    {
-      "word": "Conservation",
-      "pronunciation": "/ˌkɒnsərˈveɪʃən/",
-      "definition": "The protection of animals, plants, and natural resources.",
-      "sentences": [
-        "Wildlife conservation is vital for the planet.",
-        "He works in environmental conservation.",
-        "Conservation efforts help protect endangered species."
-      ]
-    },
-    {
-      "word": "Preservation",
-      "pronunciation": "/ˌprɛzərˈveɪʃən/",
-      "definition": "The action of preserving something.",
-      "sentences": [
-        "The organization works for historical preservation.",
-        "The preservation of natural habitats is important.",
-        "They are dedicated to the preservation of endangered species."
       ]
     },
     {
@@ -1413,16 +1183,6 @@
       ]
     },
     {
-      "word": "Carbon footprint",
-      "pronunciation": "/ˈkɑːrbən ˈfʊtprɪnt/",
-      "definition": "The total amount of greenhouse gases produced by human activities.",
-      "sentences": [
-        "We can reduce our carbon footprint by walking more.",
-        "Flying has a large carbon footprint.",
-        "Measuring your carbon footprint helps you be more aware."
-      ]
-    },
-    {
       "word": "Recycle",
       "pronunciation": "/riːˈsaɪkl/",
       "definition": "To process used materials so they can be used again.",
@@ -1450,16 +1210,6 @@
         "We should reduce our energy consumption.",
         "Reduce, reuse, and recycle are important steps.",
         "Reducing waste helps the environment."
-      ]
-    },
-    {
-      "word": "Compost",
-      "pronunciation": "/ˈkɒmpoʊst/",
-      "definition": "Decayed organic material used as a fertilizer.",
-      "sentences": [
-        "We put our food scraps in the compost bin.",
-        "Compost enriches the soil for plants.",
-        "Making compost helps reduce waste."
       ]
     },
     {
@@ -1553,16 +1303,6 @@
       ]
     },
     {
-      "word": "Deforestation",
-      "pronunciation": "/diːˌfɒrɪˈsteɪʃən/",
-      "definition": "The clearing of forests by cutting down trees.",
-      "sentences": [
-        "Deforestation contributes to climate change.",
-        "Logging causes widespread deforestation.",
-        "We need to stop deforestation."
-      ]
-    },
-    {
       "word": "Logging",
       "pronunciation": "/ˈlɒɡɪŋ/",
       "definition": "The activity or business of felling trees and cutting and preparing the timber.",
@@ -1570,26 +1310,6 @@
         "Illegal logging is a problem in some rainforests.",
         "Logging can lead to deforestation.",
         "Sustainable logging practices are important."
-      ]
-    },
-    {
-      "word": "Reforestation",
-      "pronunciation": "/riːˌfɒrɪˈsteɪʃən/",
-      "definition": "The process of replanting trees in areas where forests have been cut down.",
-      "sentences": [
-        "Reforestation helps restore forests.",
-        "They are working on a large reforestation project.",
-        "Reforestation is crucial for carbon absorption."
-      ]
-    },
-    {
-      "word": "Afforestation",
-      "pronunciation": "/əˌfɒrɪˈsteɪʃən/",
-      "definition": "The establishment of a forest or stand of trees in an area where there was no previous tree cover.",
-      "sentences": [
-        "Afforestation projects help combat climate change.",
-        "They are planting new trees as part of afforestation.",
-        "Afforestation increases forest cover."
       ]
     },
     {
@@ -2143,26 +1863,6 @@
       ]
     },
     {
-      "word": "Organic farming",
-      "pronunciation": "/ɔːrˈɡænɪk ˈfɑːrmɪŋ/",
-      "definition": "A method of crop and livestock production that involves much more than choosing not to use pesticides, fertilizers, genetically modified organisms, antibiotics and growth hormones.",
-      "sentences": [
-        "Organic farming avoids synthetic chemicals.",
-        "Organic farming is better for the soil and environment.",
-        "Many farmers are switching to organic farming."
-      ]
-    },
-    {
-      "word": "Permaculture",
-      "pronunciation": "/ˈpɜːrməˌkʌltʃər/",
-      "definition": "The development of agricultural ecosystems intended to be sustainable and self-sufficient.",
-      "sentences": [
-        "Permaculture designs mimic natural ecosystems.",
-        "She is learning about permaculture principles.",
-        "Permaculture aims for long-term sustainability."
-      ]
-    },
-    {
       "word": "Agroecology",
       "pronunciation": "/ˌæɡroʊɪˈkɒlədʒi/",
       "definition": "The study of ecological processes applied to agricultural production systems.",
@@ -2183,16 +1883,6 @@
       ]
     },
     {
-      "word": "Food miles",
-      "pronunciation": "/fuːd maɪlz/",
-      "definition": "The distance food is transported from the time of its production until it reaches the consumer.",
-      "sentences": [
-        "Buying local food reduces food miles.",
-        "High food miles contribute to carbon emissions.",
-        "Consider food miles when making purchases."
-      ]
-    },
-    {
       "word": "Local food",
       "pronunciation": "/ˈloʊkəl fuːd/",
       "definition": "Food that is produced and sold within a relatively small area.",
@@ -2200,16 +1890,6 @@
         "Eating local food supports local farmers.",
         "Local food is often fresher.",
         "Farmers' markets sell local food."
-      ]
-    },
-    {
-      "word": "Community garden",
-      "pronunciation": "/kəˈmjuːnɪti ˈɡɑːrdən/",
-      "definition": "A piece of land gardened collectively by a group of people.",
-      "sentences": [
-        "We grow vegetables in our community garden.",
-        "Community gardens promote healthy eating.",
-        "The community garden brings people together."
       ]
     },
     {
@@ -2283,16 +1963,6 @@
       ]
     },
     {
-      "word": "Biodiversity",
-      "pronunciation": "/ˌbaɪoʊdaɪˈvɜːrsɪti/",
-      "definition": "The variety of life on Earth, including plants, animals, and microorganisms.",
-      "sentences": [
-        "Protecting biodiversity is crucial for healthy ecosystems.",
-        "Loss of habitat reduces biodiversity.",
-        "Biodiversity makes our planet rich and resilient."
-      ]
-    },
-    {
       "word": "Endangered species",
       "pronunciation": "/ɪnˈdeɪndʒərd ˈspiːʃiːz/",
       "definition": "A species of animal or plant that is seriously at risk of extinction.",
@@ -2313,16 +1983,6 @@
       ]
     },
     {
-      "word": "Conservation",
-      "pronunciation": "/ˌkɒnsərˈveɪʃən/",
-      "definition": "The protection of animals, plants, and natural resources.",
-      "sentences": [
-        "Wildlife conservation is vital for the planet.",
-        "He works in environmental conservation.",
-        "Conservation efforts help protect endangered species."
-      ]
-    },
-    {
       "word": "Preservation",
       "pronunciation": "/ˌprɛzərˈveɪʃən/",
       "definition": "The action of preserving something.",
@@ -2330,16 +1990,6 @@
         "The organization works for historical preservation.",
         "The preservation of natural habitats is important.",
         "They are dedicated to the preservation of endangered species."
-      ]
-    },
-    {
-      "word": "Restoration",
-      "pronunciation": "/ˌrɛstəˈreɪʃən/",
-      "definition": "The action of returning something to a former condition.",
-      "sentences": [
-        "The wetland underwent ecological restoration.",
-        "Restoration projects aim to bring back native species.",
-        "Habitat restoration is crucial for wildlife."
       ]
     },
     {
@@ -2370,16 +2020,6 @@
         "I prefer to eat organic fruits and vegetables.",
         "Organic farming is better for the soil.",
         "She buys organic cotton clothes."
-      ]
-    },
-    {
-      "word": "Natural resources",
-      "pronunciation": "/ˈnætʃərəl rɪˈsɔːrsɪz/",
-      "definition": "Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.",
-      "sentences": [
-        "Water is an important natural resource.",
-        "We need to conserve our natural resources.",
-        "Forests are valuable natural resources."
       ]
     },
     {

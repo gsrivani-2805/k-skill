@@ -253,16 +253,6 @@
       ]
     },
     {
-      "word": "Warm-up",
-      "pronunciation": "/ˈwɔːrm ʌp/",
-      "definition": "A period of gentle exercise or practice to prepare for more strenuous activity.",
-      "sentences": [
-        "Always do a warm-up before exercising.",
-        "The team did a quick warm-up before the game.",
-        "A proper warm-up prevents injuries."
-      ]
-    },
-    {
       "word": "Cool-down",
       "pronunciation": "/ˈkuːl daʊn/",
       "definition": "A period of gentle exercise to allow the body to recover after strenuous activity.",
@@ -270,16 +260,6 @@
         "Don't forget your cool-down after running.",
         "The cool-down helps your muscles relax.",
         "A short cool-down is important for flexibility."
-      ]
-    },
-    {
-      "word": "Stretching",
-      "pronunciation": "/ˈstrɛtʃɪŋ/",
-      "definition": "The action of extending a limb or one's entire body to its full length.",
-      "sentences": [
-        "Stretching helps improve flexibility.",
-        "I do stretching exercises daily.",
-        "Proper stretching can prevent muscle soreness."
       ]
     },
     {
@@ -703,16 +683,6 @@
       ]
     },
     {
-      "word": "Weightlifting",
-      "pronunciation": "/ˈweɪtˌlɪftɪŋ/",
-      "definition": "The sport or activity of lifting heavy weights.",
-      "sentences": [
-        "He started weightlifting to build muscle.",
-        "Weightlifting can be dangerous if not done correctly.",
-        "She competes in weightlifting competitions."
-      ]
-    },
-    {
       "word": "Bodybuilding",
       "pronunciation": "/ˈbɒdiˌbɪldɪŋ/",
       "definition": "The practice of strengthening and enlarging the muscles of the body through exercise.",
@@ -763,16 +733,6 @@
       ]
     },
     {
-      "word": "Yoga",
-      "pronunciation": "/ˈjoʊɡə/",
-      "definition": "A Hindu spiritual and ascetic discipline, a part of which, including breath control, simple meditation, and the adoption of specific bodily postures, is widely practiced for health and relaxation.",
-      "sentences": [
-        "Yoga helps me relax and stay flexible.",
-        "She practices yoga every morning.",
-        "Yoga can improve both physical and mental well-being."
-      ]
-    },
-    {
       "word": "Meditation",
       "pronunciation": "/ˌmɛdɪˈteɪʃən/",
       "definition": "The practice of focusing one's mind for a period of time, in silence or with the aid of chanting, for religious or spiritual purposes or as a method of relaxation.",
@@ -810,26 +770,6 @@
         "He follows a healthy diet.",
         "Eating a balanced diet is important.",
         "Her diet includes lots of fruits and vegetables."
-      ]
-    },
-    {
-      "word": "Hydration",
-      "pronunciation": "/haɪˈdreɪʃən/",
-      "definition": "The process of causing something to absorb water.",
-      "sentences": [
-        "Proper hydration is key for athletes.",
-        "Drink plenty of water for good hydration.",
-        "Lack of hydration can cause headaches."
-      ]
-    },
-    {
-      "word": "Supplements",
-      "pronunciation": "/ˈsʌplɪmənts/",
-      "definition": "Something that completes or enhances something else when added to it.",
-      "sentences": [
-        "Some athletes take protein supplements.",
-        "Dietary supplements can provide extra nutrients.",
-        "Always consult a doctor before taking supplements."
       ]
     },
     {
@@ -910,16 +850,6 @@
         "Always do a warm-up before exercising.",
         "The team did a quick warm-up before the game.",
         "A proper warm-up prevents injuries."
-      ]
-    },
-    {
-      "word": "Cool-down",
-      "pronunciation": "/ˈkuːl daʊn/",
-      "definition": "A period of gentle exercise to allow the body to recover after strenuous activity.",
-      "sentences": [
-        "Don't forget your cool-down after running.",
-        "The cool-down helps your muscles relax.",
-        "A short cool-down is important for flexibility."
       ]
     },
     {
@@ -1123,36 +1053,6 @@
       ]
     },
     {
-      "word": "Sportsmanship",
-      "pronunciation": "/ˈspɔːrtsmənʃɪp/",
-      "definition": "Fair and generous behavior or treatment of others, especially in a sports contest.",
-      "sentences": [
-        "He showed great sportsmanship after losing.",
-        "Good sportsmanship is about respecting your opponents.",
-        "The coach emphasized sportsmanship."
-      ]
-    },
-    {
-      "word": "Discipline",
-      "pronunciation": "/ˈdɪsɪplɪn/",
-      "definition": "The practice of training people to obey rules or a code of behavior, using punishment to correct disobedience.",
-      "sentences": [
-        "Athletes need a lot of discipline.",
-        "Discipline is key to achieving goals.",
-        "He showed great discipline in his training."
-      ]
-    },
-    {
-      "word": "Dedication",
-      "pronunciation": "/ˌdɛdɪˈkeɪʃən/",
-      "definition": "The quality of being committed to a task or purpose.",
-      "sentences": [
-        "Her dedication to training paid off.",
-        "Dedication is essential for success in sports.",
-        "He showed great dedication to his team."
-      ]
-    },
-    {
       "word": "Practice",
       "pronunciation": "/ˈpræktɪs/",
       "definition": "The actual application or use of an idea, belief, or method, as opposed to theories relating to it.",
@@ -1170,36 +1070,6 @@
         "He is in intense training for the marathon.",
         "Training helps athletes improve.",
         "The team's training schedule is very demanding."
-      ]
-    },
-    {
-      "word": "Warm-up",
-      "pronunciation": "/ˈwɔːrm ʌp/",
-      "definition": "A period of gentle exercise or practice to prepare for more strenuous activity.",
-      "sentences": [
-        "Always do a warm-up before exercising.",
-        "The team did a quick warm-up before the game.",
-        "A proper warm-up prevents injuries."
-      ]
-    },
-    {
-      "word": "Cool-down",
-      "pronunciation": "/ˈkuːl daʊn/",
-      "definition": "A period of gentle exercise to allow the body to recover after strenuous activity.",
-      "sentences": [
-        "Don't forget your cool-down after running.",
-        "The cool-down helps your muscles relax.",
-        "A short cool-down is important for flexibility."
-      ]
-    },
-    {
-      "word": "Stretching",
-      "pronunciation": "/ˈstrɛtʃɪŋ/",
-      "definition": "The action of extending a limb or one's entire body to its full length.",
-      "sentences": [
-        "Stretching helps improve flexibility.",
-        "I do stretching exercises daily.",
-        "Proper stretching can prevent muscle soreness."
       ]
     },
     {
@@ -1240,16 +1110,6 @@
         "Getting enough sleep is crucial for athletes.",
         "Lack of sleep can affect your performance.",
         "Aim for 7-8 hours of sleep each night."
-      ]
-    },
-    {
-      "word": "Hydration",
-      "pronunciation": "/haɪˈdreɪʃən/",
-      "definition": "The process of causing something to absorb water.",
-      "sentences": [
-        "Proper hydration is key for athletes.",
-        "Drink plenty of water for good hydration.",
-        "Lack of hydration can cause headaches."
       ]
     },
     {
@@ -1710,16 +1570,6 @@
         "Good sportsmanship means fair play.",
         "Fair play is important in all competitions.",
         "The team was praised for its fair play."
-      ]
-    },
-    {
-      "word": "Sportsmanship",
-      "pronunciation": "/ˈspɔːrtsmənʃɪp/",
-      "definition": "Fair and generous behavior or treatment of others, especially in a sports contest.",
-      "sentences": [
-        "He showed great sportsmanship after losing.",
-        "Good sportsmanship is about respecting your opponents.",
-        "The coach emphasized sportsmanship."
       ]
     },
     {

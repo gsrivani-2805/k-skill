@@ -69,7 +69,7 @@
                 "He is a DOC-tor."
               ],
               "media": {
-                "image": "images/basic/module-1/lesson-2/Noun vs. Verb Stress.png"
+                "image": "images/basic/module-1/lesson-2/Noun_vs_Verb_Stress.png"
               }
             },
             {
@@ -146,6 +146,9 @@
                   "value": "to-MOR-row (primary stress on 'MOR')"
                 }
               ],
+              "media": {
+                "image": "images/basic/module-1/lesson-2/Primary_Stress.png"
+              },
               "usage_examples": [
                 "My uncle works at the HOS-pi-tal.",
                 "The GOV-ern-ment helps our village.",
@@ -162,10 +165,7 @@
                 "Farming is our oc-cu-PA-tion.",
                 "This is a TRAD-i-tion in our village.",
                 "We need to pro-TECT our environment."
-              ],
-              "media": {
-                "image": "images/basic/module-1/lesson-2/Primary Stress.png"
-              }
+              ]
             }
           ]
         },
@@ -226,7 +226,7 @@
                 "I like pho-to-GRA-phic art."
               ],
               "media": {
-                "image": "images/basic/module-1/lesson-2/Stress on the Second Syllable.png"
+                "image": "images/basic/module-1/lesson-2/Stress_on_the_Second_Syllable.png"
               },
               "table": {
                 "title": "Primary vs. Secondary Stress Examples",
@@ -331,7 +331,7 @@
                 "This is a DE-sert (dry land). They will de-SERT (abandon) the village."
               ],
               "media": {
-                "image": "images/basic/module-1/lesson-2/Stress in Compound Words.png"
+                "image": "images/basic/module-1/lesson-2/Stress_in_Compound_Words.png"
               },
               "table": {
                 "title": "Words Changing Meaning with Stress",

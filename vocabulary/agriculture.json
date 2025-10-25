@@ -2243,16 +2243,6 @@
       ]
     },
     {
-      "word": "Crop rotation",
-      "pronunciation": "/krɒp roʊˈteɪʃən/",
-      "definition": "The practice of growing different crops in succession on the same land to preserve its fertility.",
-      "sentences": [
-        "Crop rotation helps prevent soil exhaustion.",
-        "The farmer uses a four-year crop rotation.",
-        "Crop rotation improves soil health over time."
-      ]
-    },
-    {
       "word": "Intercropping",
       "pronunciation": "/ˈɪntərˌkrɒpɪŋ/",
       "definition": "Growing two or more crops in close proximity in the same field during the same growing season.",
@@ -2303,16 +2293,6 @@
       ]
     },
     {
-      "word": "Food system",
-      "pronunciation": "/fuːd ˈsɪstəm/",
-      "definition": "All the processes involved in feeding a population: growing, harvesting, processing, packaging, transporting, marketing, consumption, and disposal of food and food-related items.",
-      "sentences": [
-        "The global food system is complex.",
-        "Improving the local food system benefits everyone.",
-        "Understanding the food system is important for policy makers."
-      ]
-    },
-    {
       "word": "Value chain",
       "pronunciation": "/ˈvæljuː tʃeɪn/",
       "definition": "The full range of activities required to bring a product or service from conception to delivery.",
@@ -2443,16 +2423,6 @@
       ]
     },
     {
-      "word": "Vertical farming",
-      "pronunciation": "/ˈvɜːrtɪkl ˈfɑːrmɪŋ/",
-      "definition": "The practice of growing crops in vertically stacked layers, often indoors.",
-      "sentences": [
-        "Vertical farming can produce food in urban areas.",
-        "Vertical farming uses less land and water.",
-        "Some companies specialize in vertical farming."
-      ]
-    },
-    {
       "word": "Hydroponic system",
       "pronunciation": "/ˌhaɪdrəˈpɒnɪk ˈsɪstəm/",
       "definition": "An apparatus used for growing plants in water without soil.",
@@ -2473,16 +2443,6 @@
       ]
     },
     {
-      "word": "Agroecology",
-      "pronunciation": "/ˌæɡroʊiˈkɒlədʒi/",
-      "definition": "The study of ecological processes applied to agricultural production systems.",
-      "sentences": [
-        "Agroecology focuses on sustainable food systems.",
-        "She is researching agroecology practices.",
-        "Agroecology combines science with traditional knowledge."
-      ]
-    },
-    {
       "word": "Biotechnology (agricultural)",
       "pronunciation": "/ˌbaɪoʊtɛkˈnɒlədʒi/",
       "definition": "The use of living organisms or biological systems to produce products for agricultural use.",
@@ -2490,16 +2450,6 @@
         "Agricultural biotechnology helps develop disease-resistant crops.",
         "Biotechnology plays a role in modern farming.",
         "New seeds are often developed using biotechnology."
-      ]
-    },
-    {
-      "word": "Genetic engineering",
-      "pronunciation": "/dʒɪˈnɛtɪk ˌɛndʒɪˈnɪərɪŋ/",
-      "definition": "The deliberate modification of the characteristics of an organism by manipulating its genetic material.",
-      "sentences": [
-        "Genetic engineering can create crops with improved traits.",
-        "Some people have concerns about genetic engineering in food.",
-        "Scientists use genetic engineering to study plant functions."
       ]
     },
     {
@@ -2520,16 +2470,6 @@
         "The fish hatchery releases young fish into the river.",
         "Chicks are born in the poultry hatchery.",
         "A hatchery helps increase animal populations."
-      ]
-    },
-    {
-      "word": "Incubator",
-      "pronunciation": "/ˈɪŋkjəbeɪtər/",
-      "definition": "An apparatus used to hatch eggs artificially.",
-      "sentences": [
-        "The eggs were placed in the incubator.",
-        "An incubator maintains the correct temperature for hatching.",
-        "She bought a small incubator for her chicken eggs."
       ]
     },
     {
@@ -2593,16 +2533,6 @@
       ]
     },
     {
-      "word": "Agroecology",
-      "pronunciation": "/ˌæɡroʊiˈkɒlədʒi/",
-      "definition": "The study of ecological processes applied to agricultural production systems.",
-      "sentences": [
-        "Agroecology focuses on sustainable food systems.",
-        "She is researching agroecology practices.",
-        "Agroecology combines science with traditional knowledge."
-      ]
-    },
-    {
       "word": "Food system",
       "pronunciation": "/fuːd ˈsɪstəm/",
       "definition": "All the processes involved in feeding a population: growing, harvesting, processing, packaging, transporting, marketing, consumption, and disposal of food and food-related items.",
@@ -2620,106 +2550,6 @@
         "The agricultural value chain includes many steps.",
         "Adding value to products strengthens the value chain.",
         "Understanding the value chain helps farmers get better prices."
-      ]
-    },
-    {
-      "word": "Farm gate",
-      "pronunciation": "/fɑːrm ɡeɪt/",
-      "definition": "The point at which agricultural products leave the farm.",
-      "sentences": [
-        "The price at the farm gate is often lower than retail.",
-        "They sell fresh produce directly at the farm gate.",
-        "Farm gate sales benefit local economies."
-      ]
-    },
-    {
-      "word": "Rural development",
-      "pronunciation": "/ˈrʊərəl dɪˈvɛləpmənt/",
-      "definition": "The process of improving the quality of life and economic well-being of people living in rural areas.",
-      "sentences": [
-        "Rural development projects help farming communities.",
-        "The government invests in rural development.",
-        "Rural development aims to create opportunities."
-      ]
-    },
-    {
-      "word": "Land tenure",
-      "pronunciation": "/lænd ˈtɛnjʊər/",
-      "definition": "The legal regime, or body of laws, customs, and institutions, that governs the relationship between people regarding land.",
-      "sentences": [
-        "Secure land tenure is important for farmers.",
-        "Land tenure systems vary across countries.",
-        "Issues with land tenure can affect agricultural investment."
-      ]
-    },
-    {
-      "word": "Agricultural policy",
-      "pronunciation": "/ˌæɡrɪˈkʌltʃərəl ˈpɒlɪsi/",
-      "definition": "Government policies relating to domestic agriculture and imports of foreign agricultural products.",
-      "sentences": [
-        "Agricultural policy affects farmers' decisions.",
-        "The new agricultural policy aims to support small farms.",
-        "Agricultural policy often includes subsidies."
-      ]
-    },
-    {
-      "word": "Food sovereignty",
-      "pronunciation": "/fuːd ˈsɒvrənti/",
-      "definition": "The right of peoples to healthy and culturally appropriate food produced through sustainable methods, and their right to define their own food and agriculture systems.",
-      "sentences": [
-        "Food sovereignty emphasizes local control over food.",
-        "Advocates for food sovereignty promote small-scale farming.",
-        "Food sovereignty challenges corporate control of food."
-      ]
-    },
-    {
-      "word": "Agritourism",
-      "pronunciation": "/ˈæɡrɪˌtʊərɪzəm/",
-      "definition": "Tourism that combines agricultural activities with travel and leisure.",
-      "sentences": [
-        "Many farms offer agritourism experiences.",
-        "Agritourism allows visitors to learn about farming.",
-        "Pumpkin patches are a popular form of agritourism."
-      ]
-    },
-    {
-      "word": "Farm stand",
-      "pronunciation": "/fɑːrm stænd/",
-      "definition": "A roadside stand where a farmer sells produce directly to consumers.",
-      "sentences": [
-        "We bought fresh berries at the farm stand.",
-        "The farm stand opens early in the morning.",
-        "Supporting a farm stand helps local farmers."
-      ]
-    },
-    {
-      "word": "Farmers' market",
-      "pronunciation": "/ˈfɑːrmərz ˈmɑːrkɪt/",
-      "definition": "A public market where farmers sell their produce directly to consumers.",
-      "sentences": [
-        "I love shopping at the farmers' market on Saturdays.",
-        "The farmers' market offers fresh, local products.",
-        "Many communities have a weekly farmers' market."
-      ]
-    },
-    {
-      "word": "Crop insurance",
-      "pronunciation": "/krɒp ˈɪnʃʊrəns/",
-      "definition": "Insurance purchased by agricultural producers to protect against the loss of their crops due to natural disasters or declines in prices.",
-      "sentences": [
-        "Crop insurance helps farmers manage risks.",
-        "The farmer filed a claim for crop insurance after the hail storm.",
-        "Crop insurance provides financial protection."
-      ]
-    },
-    {
-      "word": "Farm loan",
-      "pronunciation": "/fɑːrm loʊn/",
-      "definition": "A loan specifically for agricultural purposes, such as buying land, equipment, or livestock.",
-      "sentences": [
-        "He took out a farm loan to buy a new tractor.",
-        "Farm loans help farmers invest in their operations.",
-        "The bank offers special farm loan programs."
       ]
     },
     {
@@ -2753,46 +2583,6 @@
       ]
     },
     {
-      "word": "Hydroponic system",
-      "pronunciation": "/ˌhaɪdrəˈpɒnɪk ˈsɪstəm/",
-      "definition": "An apparatus used for growing plants in water without soil.",
-      "sentences": [
-        "He built a small hydroponic system in his garage.",
-        "Hydroponic systems are popular for growing lettuce.",
-        "A hydroponic system requires careful nutrient management."
-      ]
-    },
-    {
-      "word": "Aquaponic system",
-      "pronunciation": "/ˌækwəˈpɒnɪk ˈsɪstəm/",
-      "definition": "A system that combines aquaculture (raising aquatic animals) with hydroponics (growing plants in water).",
-      "sentences": [
-        "An aquaponic system uses fish waste to fertilize plants.",
-        "Aquaponic systems are sustainable and efficient.",
-        "He is experimenting with an aquaponic system."
-      ]
-    },
-    {
-      "word": "Agroecology",
-      "pronunciation": "/ˌæɡroʊiˈkɒlədʒi/",
-      "definition": "The study of ecological processes applied to agricultural production systems.",
-      "sentences": [
-        "Agroecology focuses on sustainable food systems.",
-        "She is researching agroecology practices.",
-        "Agroecology combines science with traditional knowledge."
-      ]
-    },
-    {
-      "word": "Biotechnology (agricultural)",
-      "pronunciation": "/ˌbaɪoʊtɛkˈnɒlədʒi/",
-      "definition": "The use of living organisms or biological systems to produce products for agricultural use.",
-      "sentences": [
-        "Agricultural biotechnology helps develop disease-resistant crops.",
-        "Biotechnology plays a role in modern farming.",
-        "New seeds are often developed using biotechnology."
-      ]
-    },
-    {
       "word": "Genetic engineering",
       "pronunciation": "/dʒɪˈnɛtɪk ˌɛndʒɪˈnɪərɪŋ/",
       "definition": "The deliberate modification of the characteristics of an organism by manipulating its genetic material.",
@@ -2803,26 +2593,6 @@
       ]
     },
     {
-      "word": "Breeding (animal/plant)",
-      "pronunciation": "/ˈbriːdɪŋ/",
-      "definition": "The mating and production of offspring by animals or plants.",
-      "sentences": [
-        "Selective breeding improves livestock characteristics.",
-        "Plant breeding creates new crop varieties.",
-        "He specializes in horse breeding."
-      ]
-    },
-    {
-      "word": "Hatchery",
-      "pronunciation": "/ˈhætʃəri/",
-      "definition": "A place where the eggs of chickens, fish, or other animals are hatched under artificial conditions.",
-      "sentences": [
-        "The fish hatchery releases young fish into the river.",
-        "Chicks are born in the poultry hatchery.",
-        "A hatchery helps increase animal populations."
-      ]
-    },
-    {
       "word": "Incubator",
       "pronunciation": "/ˈɪŋkjəbeɪtər/",
       "definition": "An apparatus used to hatch eggs artificially.",
@@ -2830,26 +2600,6 @@
         "The eggs were placed in the incubator.",
         "An incubator maintains the correct temperature for hatching.",
         "She bought a small incubator for her chicken eggs."
-      ]
-    },
-    {
-      "word": "Farming practices",
-      "pronunciation": "/ˈfɑːrmɪŋ ˈpræktɪsɪz/",
-      "definition": "The methods and techniques used in agriculture.",
-      "sentences": [
-        "Sustainable farming practices protect the environment.",
-        "He is learning new farming practices.",
-        "Traditional farming practices are still used in some areas."
-      ]
-    },
-    {
-      "word": "Crop protection",
-      "pronunciation": "/krɒp prəˈtɛkʃən/",
-      "definition": "Measures taken to protect crops from pests, diseases, and weeds.",
-      "sentences": [
-        "Crop protection is essential for a good harvest.",
-        "They use various methods for crop protection.",
-        "Effective crop protection reduces losses."
       ]
     },
     {
@@ -2870,26 +2620,6 @@
         "Practicing no-till farming improves soil health.",
         "Soil health is crucial for sustainable agriculture.",
         "The farmer focuses on improving soil health."
-      ]
-    },
-    {
-      "word": "Nutrient cycle",
-      "pronunciation": "/ˈnuːtriənt ˈsaɪkl/",
-      "definition": "The movement and exchange of organic and inorganic matter back into the production of living matter.",
-      "sentences": [
-        "The nitrogen cycle is an important nutrient cycle.",
-        "Understanding the nutrient cycle helps farmers manage their land.",
-        "Healthy soil supports a complete nutrient cycle."
-      ]
-    },
-    {
-      "word": "Carbon sequestration",
-      "pronunciation": "/ˈkɑːrbən ˌsiːkwɛˈstreɪʃən/",
-      "definition": "The process of capturing and storing atmospheric carbon dioxide.",
-      "sentences": [
-        "Healthy soils can contribute to carbon sequestration.",
-        "Agroforestry helps with carbon sequestration.",
-        "Carbon sequestration is important for climate change mitigation."
       ]
     },
     {
