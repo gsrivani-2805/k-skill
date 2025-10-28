@@ -63,7 +63,7 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
   // }
 
   void _initializeTts() async {
-    await _flutterTts.setLanguage("en-IN");
+    await _flutterTts.setLanguage("en-US");
     await _flutterTts.setPitch(1.0);
     // await _flutterTts.setPitch(1.0);
     // await _flutterTts.setSpeechRate(0.8);
@@ -162,7 +162,7 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
         });
       },
       partialResults: true,
-      localeId: 'en_IN',
+      localeId: 'en-US',
       cancelOnError: true,
     );
   }
@@ -218,7 +218,7 @@ Format your response as:
     }
 
     final response = await http.post(
-      Uri.parse('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$_geminiApiKey'),
+      Uri.parse('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$_geminiApiKey'),
       headers: {
         'Content-Type': 'application/json',
       },
