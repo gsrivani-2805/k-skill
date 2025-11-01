@@ -17,15 +17,15 @@ async function sendOTP(email, otp) {
     service: "gmail",
     auth: {
       user: "kskill2025@gmail.com",
-      pass: "gaqk urkk ubxo rkvt " // Use Gmail App Password
-    }
+      pass: "gaqk urkk ubxo rkvt ", // Use Gmail App Password
+    },
   });
 
   await transporter.sendMail({
     from: "kskill2025@gmail.com",
     to: email,
     subject: "OTP for K-Skill verification",
-    text: `Your OTP code is ${otp}. It is valid for 5 minutes.`
+    text: `Your OTP code is ${otp}. It is valid for 5 minutes.`,
   });
 }
 
@@ -41,24 +41,28 @@ router.post("/verify-otp", (req, res) => {
   const { email, otp } = req.body;
   const record = otpStore.get(email);
   if (!record || Date.now() > record.expires || record.otp !== otp) {
-    return res.status(400).json({ success: false, message: "Invalid or expired OTP" });
+    return res
+      .status(400)
+      .json({ success: false, message: "Invalid or expired OTP" });
   }
   otpStore.delete(email);
   res.json({ success: true, message: "Email verified" });
 });
 
-router.post('/reset-password', async (req, res) => {
+router.post("/reset-password", async (req, res) => {
   const { email, newPassword } = req.body;
 
-  await User.findOneAndUpdate({ email }, {
-    password: newPassword,
-    otp: null,
-    otpExpires: null
-  });
+  await User.findOneAndUpdate(
+    { email },
+    {
+      password: newPassword,
+      otp: null,
+      otpExpires: null,
+    }
+  );
 
-  res.status(200).json({ message: 'Password updated successfully' });
+  res.status(200).json({ message: "Password updated successfully" });
 });
-
 
 // ✅ Signup Route (no hashing)
 router.post("/signup", async (req, res) => {
@@ -158,4 +162,3 @@ router.post("/login", async (req, res) => {
 });
 
 module.exports = router;
-

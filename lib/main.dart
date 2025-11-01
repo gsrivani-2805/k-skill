@@ -3,6 +3,7 @@ import 'package:K_Skill/screens/academics.dart';
 import 'package:K_Skill/screens/discourse.dart';
 import 'package:K_Skill/screens/games.dart';
 import 'package:K_Skill/screens/welcome.dart';
+import 'package:K_Skill/screens/splash_screen.dart'; // Add this import
 import 'package:flutter/material.dart';
 import 'package:K_Skill/assessment/assessment_screen.dart';
 import 'package:K_Skill/assessment/listening_screen.dart';
@@ -16,24 +17,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
-
-  // Check if user is logged in, if yes go to dashboard, else show welcome page
-  String initialRoute = isLoggedIn ? '/dashboard' : '/welcome';
-
-  runApp(MyKSkillApp(isLoggedIn: isLoggedIn, initialRoute: initialRoute));
+  
+  // Always start with splash screen
+  runApp(const MyKSkillApp());
 }
 
 class MyKSkillApp extends StatefulWidget {
-  final bool isLoggedIn;
-  final String initialRoute;
-
-  const MyKSkillApp({
-    required this.isLoggedIn,
-    required this.initialRoute,
-    super.key,
-  });
+  const MyKSkillApp({super.key});
 
   @override
   State<MyKSkillApp> createState() => _MyKSkillAppState();
@@ -60,7 +50,6 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
       // Clear last route when app closes or goes background
       final prefs = await SharedPreferences.getInstance();
       await prefs.remove('lastRoute');
-      print('Last route cleared on app close.');
     }
   }
 
@@ -69,9 +58,10 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
     return MaterialApp(
       title: 'K-Skill App',
       debugShowCheckedModeBanner: false,
-      initialRoute: widget.initialRoute,
+      initialRoute: '/', 
       onGenerateRoute: _generateRoute,
       routes: {
+        '/': (context) => const SplashScreen(), 
         '/welcome': (context) => const WelcomePage(),
         '/login': (context) => LoginPage(),
         '/dashboard': (context) => const RouteAwareWrapper(
@@ -110,7 +100,12 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
     final String routeName = settings.name ?? '/';
 
     switch (routeName) {
-      case '/welcome': // Add welcome case
+      case '/': // Splash screen
+        return MaterialPageRoute(
+          builder: (_) => const SplashScreen(),
+          settings: settings,
+        );
+      case '/welcome':
         return MaterialPageRoute(
           builder: (_) => const WelcomePage(),
           settings: settings,
@@ -240,7 +235,6 @@ class _RouteAwareWrapperState extends State<RouteAwareWrapper> {
 
     if (isLoggedIn && widget.routeName != '/login') {
       await prefs.setString('lastRoute', widget.routeName);
-      print('Stored route: ${widget.routeName}');
     }
   }
 

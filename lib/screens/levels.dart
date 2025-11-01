@@ -838,8 +838,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
   Set<String> completedLessons = <String>{};
   Map<String, int> quizScores = <String, int>{};
   Map<String, int> totalQuestions = <String, int>{};
-  Map<String, int> pendingQuizScores =
-      <String, int>{}; // Track unsubmitted scores
+  Map<String, int> pendingQuizScores = <String, int>{};
   Map<String, int> pendingTotalQuestions = <String, int>{};
   static const String baseUrl = ApiConfig.baseUrl;
 
@@ -966,7 +965,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
       );
 
       if (result != null && result is int) {
-        int totalQuestions = 10;
+        int totalQuestions = 20;
 
         // Save as pending score (not yet submitted)
         await savePendingQuizScore(lessonKey, result, totalQuestions);
@@ -1031,42 +1030,47 @@ class _LessonsScreenState extends State<LessonsScreen> {
     }
 
     final url = Uri.parse('$baseUrl/$userId/mark-complete');
+    final percentage = ((score / total) * 100).round();
 
-    Map<String, dynamic> requestBody = {
+    final requestBody = {
       'lessonId': lessonKey,
       'quizScore': score,
       'totalQuestions': total,
-      'percentage': ((score / total) * 100).round(),
+      'percentage': percentage,
     };
 
-    final response = await http.post(
-      url,
-      headers: {'Content-Type': 'application/json'},
-      body: json.encode(requestBody),
-    );
-
-    if (response.statusCode == 200) {
-      // Save the submitted score permanently
-      await saveQuizScore(lessonKey, score, total);
-
-      // Clear pending score
-      await clearPendingQuizScore(lessonKey);
-
-      setState(() {
-        completedLessons.add(lessonKey);
-      });
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Lesson completed! Quiz score: $score/$total'),
-          backgroundColor: Colors.green,
-          duration: Duration(seconds: 2),
-        ),
+    try {
+      final response = await http.post(
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode(requestBody),
       );
-    } else {
+
+      if (response.statusCode == 200) {
+        await saveQuizScore(lessonKey, score, total);
+        await clearPendingQuizScore(lessonKey);
+        setState(() {
+          completedLessons.add(lessonKey);
+        });
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Lesson completed! Quiz score: $score/$total'),
+            backgroundColor: Colors.green,
+          ),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Failed to submit quiz. Please try again.'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Failed to submit quiz. Please try again.'),
+          content: Text('Error submitting quiz: $e'),
           backgroundColor: Colors.red,
         ),
       );
@@ -1700,7 +1704,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           _buildHeader(),
           _buildObjectives(),
           _buildTopics(),
-          _buildYouTubeResources(), 
+          _buildYouTubeResources(),
           SizedBox(height: 24),
         ],
       ),
@@ -2650,7 +2654,6 @@ class _LessonQuizState extends State<LessonQuiz> {
       _selectRandomQuestions();
       setState(() => isLoading = false);
     } catch (e) {
-      print("Error loading questions: $e");
       setState(() {
         isLoading = false;
         errorMessage = "Failed to load quiz questions: ${e.toString()}";

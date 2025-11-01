@@ -1,13 +1,15 @@
-// server.js or routes/user.js
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const User = require("../models/user.model");
 
-// GET user profile by ID
 router.get("/:userId/profile", async (req, res) => {
   try {
     const { userId } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(400).json({ error: "Invalid User ID format" });
+    }
 
     const user = await User.findById(userId)
       .select(
@@ -19,20 +21,29 @@ router.get("/:userId/profile", async (req, res) => {
       return res.status(404).json({ error: "User not found" });
     }
 
-    // Format data as expected by Flutter
+    // ✅ Return all quiz fields properly
+    const formattedCompletedLessons = (user.completedLessons || []).map(
+      (lesson) => ({
+        lessonId: lesson.lessonId,
+        score: lesson.score ?? 0,
+        totalQuestions: lesson.totalQuestions ?? 0,
+        percentage: lesson.percentage ?? 0,
+      })
+    );
+
     const profileData = {
-      name: user.name,
+      name: user.name || "",
       class: user.class || "",
       gender: user.gender || "",
       school: user.school || "",
       address: user.address || "",
       currentStreak: user.currentStreak || 0,
       currentLevel: user.currentLevel || "Basic",
-      completedLessons: user.completedLessons.map((lesson) => ({
-        lessonId: lesson.lessonId,
-      })),
+      completedLessons: formattedCompletedLessons, // ✅ Full lesson data
       assessmentScores: {
-        ...user.assessmentScores,
+        quiz: user.assessmentScores?.quiz || 0,
+        reading: user.assessmentScores?.reading || 0,
+        listening: user.assessmentScores?.listening || 0,
         overall: user.assessmentScores?.overall || 0,
       },
     };
@@ -49,187 +60,123 @@ router.put("/:userId/profile", async (req, res) => {
     const { userId } = req.params;
     const { name, class: className, school, address } = req.body;
 
-    // Validate User ID format
     if (!mongoose.Types.ObjectId.isValid(userId)) {
       return res.status(400).json({ error: "Invalid User ID format" });
     }
 
-    // Validate required fields
     if (!name || !className || !school) {
-      return res.status(400).json({ 
-        error: "Missing required fields", 
+      return res.status(400).json({
+        error: "Missing required fields",
         required: ["name", "class", "school"],
-        received: Object.keys(req.body)
+        received: Object.keys(req.body),
       });
-    }
-
-    // Validate field lengths and formats
-    if (name.length < 1 || name.length > 100) {
-      return res.status(400).json({ error: "Name must be between 1 and 100 characters" });
-    }
-    if (className.length < 1 || className.length > 50) {
-      return res.status(400).json({ error: "Class must be between 1 and 50 characters" });
-    }
-    if (school.length < 1 || school.length > 200) {
-      return res.status(400).json({ error: "School name must be between 1 and 200 characters" });
-    }
-
-    // Find user
-    const user = await User.findById(userId);
-    if (!user) {
-      return res.status(404).json({ error: "User not found" });
-    }
-
-    // Store original values for potential rollback
-    const originalValues = {
-      name: user.name,
-      class: user.class,
-      school: user.school,
-      address: user.address
-    };
-
-    try {
-      // Update user fields
-      user.name = name.trim();
-      user.class = className.trim();
-      user.school = school.trim();
-      if (address) user.address = address.trim();
-
-      // Save updated user
-      const updatedUser = await user.save();
-
-      // Return updated profile data in the same format as GET endpoint
-      const profileData = {
-        name: updatedUser.name,
-        class: updatedUser.class,
-        gender: updatedUser.gender || "",
-        school: updatedUser.school,
-        address: updatedUser.address || "",
-        currentStreak: updatedUser.currentStreak || 0,
-        currentLevel: updatedUser.currentLevel || "Basic",
-        completedLessons: updatedUser.completedLessons.map((lesson) => ({
-          lessonId: lesson.lessonId,
-        })),
-        assessmentScores: {
-          ...updatedUser.assessmentScores,
-          overall: updatedUser.assessmentScores?.overall || 0,
-        },
-      };
-
-      res.json({
-        message: "Profile updated successfully",
-        profile: profileData,
-        updatedFields: {
-          name: updatedUser.name,
-          class: updatedUser.class,
-          school: updatedUser.school,
-          address: updatedUser.address || ""
-        }
-      });
-
-    } catch (saveError) {
-      throw saveError;
-    }
-
-  } catch (error) {
-    
-    if (error.name === "ValidationError") {
-      const validationErrors = Object.keys(error.errors).map((key) => ({
-        field: key,
-        message: error.errors[key].message,
-        value: error.errors[key].value,
-      }));
-      return res.status(400).json({
-        error: "Validation failed",
-        details: validationErrors,
-      });
-    }
-
-    // Handle duplicate key errors
-    if (error.code === 11000) {
-      return res.status(400).json({
-        error: "Duplicate value",
-        details: "A user with this information already exists"
-      });
-    }
-
-    // Handle cast errors
-    if (error.name === "CastError") {
-      return res.status(400).json({
-        error: "Invalid data format",
-        details: error.message
-      });
-    }
-
-    // Generic server error
-    res.status(500).json({ 
-      error: "Internal Server Error",
-      details: process.env.NODE_ENV === "development" ? error.message : "Something went wrong"
-    });
-  }
-});
-
-router.post("/:userId/mark-complete", async (req, res) => {
-  try {
-    const { userId } = req.params;
-    const { lessonId, score = 0 } = req.body;
-
-    if (!lessonId) {
-      return res.status(400).json({ error: "lessonId is required" });
     }
 
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ error: "User not found" });
 
-    // Avoid duplicate entries
-    const alreadyExists = user.completedLessons.some(
-      (lesson) => lesson.lessonId === lessonId
+    user.name = name.trim();
+    user.class = className.trim();
+    user.school = school.trim();
+    if (address) user.address = address.trim();
+
+    const updatedUser = await user.save();
+
+    const formattedCompletedLessons = (updatedUser.completedLessons || []).map(
+      (lesson) => ({
+        lessonId: lesson.lessonId,
+        score: lesson.score ?? 0,
+        totalQuestions: lesson.totalQuestions ?? 0,
+        percentage: lesson.percentage ?? 0,
+      })
     );
 
-    if (!alreadyExists) {
-      user.completedLessons.push({ lessonId, score });
-      await user.save();
+    const profileData = {
+      name: updatedUser.name,
+      class: updatedUser.class,
+      gender: updatedUser.gender || "",
+      school: updatedUser.school,
+      address: updatedUser.address || "",
+      currentStreak: updatedUser.currentStreak || 0,
+      currentLevel: updatedUser.currentLevel || "Basic",
+      completedLessons: formattedCompletedLessons, // ✅ return all fields
+      assessmentScores: {
+        ...updatedUser.assessmentScores,
+        overall: updatedUser.assessmentScores?.overall || 0,
+      },
+    };
+
+    res.json({
+      message: "Profile updated successfully",
+      profile: profileData,
+    });
+  } catch (error) {
+    console.error("Error updating profile:", error);
+    res
+      .status(500)
+      .json({ error: "Internal Server Error", details: error.message });
+  }
+});
+
+router.post("/:userId/mark-complete", async (req, res) => {
+  const { userId } = req.params;
+  const { lessonId, quizScore, totalQuestions, percentage } = req.body;
+
+  if (!lessonId || quizScore === undefined || totalQuestions === undefined) {
+    return res.status(400).json({ message: "Missing required fields" });
+  }
+
+  try {
+    const user = await User.findById(userId);
+    if (!user) return res.status(404).json({ message: "User not found" });
+
+    const existingLesson = user.completedLessons.find(
+      (l) => l.lessonId === lessonId
+    );
+
+    if (existingLesson) {
+      existingLesson.score = quizScore;
+      existingLesson.totalQuestions = totalQuestions;
+      existingLesson.percentage = percentage;
+    } else {
+      user.completedLessons.push({
+        lessonId,
+        score: quizScore,
+        totalQuestions,
+        percentage,
+      });
     }
 
-    res.json({ message: "Lesson marked as completed" });
+    await user.save();
+
+    res.status(200).json({
+      message: "Lesson marked complete",
+      completedLessons: user.completedLessons,
+    });
   } catch (error) {
     console.error("Error marking lesson complete:", error);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 });
 
 router.post("/:userId/submit-assessment", async (req, res) => {
   const { userId } = req.params;
-
-  // Validate req.body exists
-  if (!req.body) {
-    return res.status(400).json({ message: "Missing request body" });
-  }
-
   const { quizScore, readingScore, listeningScore, overallScore } = req.body;
 
   try {
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ message: "User not found" });
 
-    // Initialize assessmentScores if undefined
-    if (!user.assessmentScores) {
-      user.assessmentScores = {};
-    }
+    user.assessmentScores = {
+      quiz: quizScore,
+      reading: readingScore,
+      listening: listeningScore,
+      overall: overallScore,
+    };
 
-    // Assign scores
-    user.assessmentScores.quiz = quizScore;
-    user.assessmentScores.reading = readingScore;
-    user.assessmentScores.listening = listeningScore;
-    user.assessmentScores.overall = overallScore;
-
-    if (overallScore >= 80) {
-      user.currentLevel = "Advanced";
-    } else if (overallScore >= 60) {
-      user.currentLevel = "Intermediate";
-    } else {
-      user.currentLevel = "Basic";
-    }
+    if (overallScore >= 80) user.currentLevel = "Advanced";
+    else if (overallScore >= 60) user.currentLevel = "Intermediate";
+    else user.currentLevel = "Basic";
 
     await user.save();
 
@@ -239,7 +186,7 @@ router.post("/:userId/submit-assessment", async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 });
-// Fixed backend route
+
 router.post("/:userId/submissions", async (req, res) => {
   try {
     const { userId } = req.params;
@@ -496,5 +443,39 @@ router.get("/:userId/submissions", async (req, res) => {
     });
   }
 });
+
+router.post("/:userId/active-time", async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const { activeTime } = req.body;
+
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(400).json({ error: "Invalid User ID" });
+    }
+
+    const user = await User.findById(userId);
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    if (!user.usageStats) {
+      user.usageStats = { totalSeconds: 0, lastUpdated: new Date() };
+    }
+
+    const additionalSeconds = Number(activeTime) || 0;
+    user.usageStats.totalSeconds += additionalSeconds;
+
+    user.usageStats.lastUpdated = new Date();
+
+    await user.save();
+
+    res.json({
+      message: "Active time updated successfully",
+      usageStats: user.usageStats,
+    });
+  } catch (error) {
+    console.error("Error updating active time:", error);
+    res.status(500).json({ error: "Failed to update usage time" });
+  }
+});
+
 
 module.exports = router;

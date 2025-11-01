@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:K_Skill/auth/reset_password_page.dart';
 import 'package:K_Skill/auth/signup_page.dart';
@@ -22,6 +21,10 @@ class _LoginPageState extends State<LoginPage> {
 
   static const String baseUrl = ApiConfig.baseUrl;
 
+  // Guest credentials
+  static const String guestEmail = 'kskill2025@gmail.com';
+  static const String guestPassword = 'guest123';
+
   @override
   void dispose() {
     _emailController.dispose();
@@ -29,6 +32,7 @@ class _LoginPageState extends State<LoginPage> {
     super.dispose();
   }
 
+  // ✅ LOGIN FUNCTION
   Future<void> _login() async {
     if (!_formKey.currentState!.validate()) return;
 
@@ -44,8 +48,6 @@ class _LoginPageState extends State<LoginPage> {
         }),
       );
 
-      print("request to login to $baseUrl/api/auth/login");
-
       setState(() => _isLoading = false);
 
       if (response.statusCode == 200) {
@@ -53,27 +55,42 @@ class _LoginPageState extends State<LoginPage> {
         final userData = data['user'];
         final token = data['token'];
 
+        // ✅ Store user data and token
         await SharedPrefsService.setUserId(userData['userId']);
         await SharedPrefsService.setUserName(userData['name']);
-        await SharedPrefsService.setToken(token);
         await SharedPrefsService.setUserStreak(userData['currentStreak']);
-        await SharedPreferences.getInstance().then((prefs) {
-          prefs.setBool('isLoggedIn', true);
-          prefs.setString('lastRoute', '/profile');
-        });
+        await SharedPrefsService.setToken(token); // includes login timestamp
 
-        Navigator.pushNamed(context, '/dashboard');
+        // ✅ Mark user as logged in
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setBool('isLoggedIn', true);
+        await prefs.setString('lastRoute', '/profile');
+
+        // ✅ Navigate to dashboard
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          '/dashboard',
+          (route) => false,
+        );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Invalid email or password')),
         );
       }
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Login failed. Please try again.')),
-      );
       setState(() => _isLoading = false);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Login failed. Please try again. $e')),
+      );
     }
+  }
+
+  void _loginAsGuest() {
+    setState(() {
+      _emailController.text = guestEmail;
+      _passwordController.text = guestPassword;
+    });
+    _login();
   }
 
   @override
@@ -215,7 +232,7 @@ class _LoginPageState extends State<LoginPage> {
                           return null;
                         },
                       ),
-                      SizedBox(height: 24),
+                      SizedBox(height: 16),
 
                       // Login Button
                       ElevatedButton(
@@ -238,6 +255,50 @@ class _LoginPageState extends State<LoginPage> {
                                 ),
                               ),
                       ),
+
+                      SizedBox(height: 16),
+
+                      // OR Divider
+                      Row(
+                        children: [
+                          Expanded(child: Divider(color: Colors.grey[400])),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 16),
+                            child: Text(
+                              'OR',
+                              style: TextStyle(
+                                color: Colors.grey[600],
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                          Expanded(child: Divider(color: Colors.grey[400])),
+                        ],
+                      ),
+
+                      SizedBox(height: 16),
+
+                      // Guest Login
+                      OutlinedButton.icon(
+                        onPressed: _isLoading ? null : _loginAsGuest,
+                        icon: Icon(Icons.person_outline),
+                        label: Text(
+                          'Continue as Guest',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: Colors.blue[600],
+                          padding: EdgeInsets.symmetric(vertical: 16),
+                          side: BorderSide(color: Colors.blue[600]!, width: 2),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                      ),
+
                       SizedBox(height: 16),
 
                       // Forgot Password
@@ -257,7 +318,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       SizedBox(height: 16),
 
-                      // Sign Up Link
+                      // Sign Up
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

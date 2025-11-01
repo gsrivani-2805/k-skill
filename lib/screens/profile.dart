@@ -21,6 +21,7 @@ class UserProfile {
   final String currentLevel;
   final List<String> recentLessons;
   final Map<String, double> assessmentScores;
+  final List<Map<String, dynamic>> completedLessons; // ✅ NEW
 
   UserProfile({
     required this.name,
@@ -32,17 +33,29 @@ class UserProfile {
     required this.currentLevel,
     required this.recentLessons,
     required this.assessmentScores,
+    required this.completedLessons, // ✅ NEW
   });
 
   factory UserProfile.fromJson(Map<String, dynamic> json) {
-    final lessons = json['completedLessons'] as List<dynamic>;
+    final lessons = json['completedLessons'] as List<dynamic>? ?? [];
     final recentLessons = lessons
         .map((lesson) => lesson['lessonId'] as String)
         .toList();
-    final scores = json['assessmentScores'] as Map<String, dynamic>;
+
+    final scores = json['assessmentScores'] as Map<String, dynamic>? ?? {};
+
+    // ✅ Safely parse completedLessons with score data
+    final completedLessonList = lessons.map((lesson) {
+      return {
+        'lessonId': lesson['lessonId'] ?? '',
+        'score': lesson['score'] ?? 0,
+        'totalQuestions': lesson['totalQuestions'] ?? 0,
+        'percentage': lesson['percentage'] ?? 0,
+      };
+    }).toList();
 
     return UserProfile(
-      name: json['name'],
+      name: json['name'] ?? '',
       className: json['class'] ?? '',
       gender: json['gender'] ?? '',
       school: json['school'] ?? '',
@@ -53,6 +66,7 @@ class UserProfile {
       assessmentScores: scores.map(
         (key, value) => MapEntry(key, (value as num).toDouble()),
       ),
+      completedLessons: List<Map<String, dynamic>>.from(completedLessonList),
     );
   }
 }
@@ -152,11 +166,34 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   Future<void> _logout() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.remove('lastRoute');
-    await prefs.remove('userId');
-    await prefs.setBool('isLoggedIn', false);
+    final userId = prefs.getString('userId');
+    final activeTime = prefs.getInt('activeTime') ?? 0;
 
-    Navigator.of(context).pushNamedAndRemoveUntil('/welcome', (route) => false);
+    print("🕒 Logging out... Active time: $activeTime for user: $userId");
+
+    if (userId != null && activeTime > 0) {
+      try {
+        final response = await http.post(
+          Uri.parse('$baseUrl/$userId/active-time'),
+          headers: {'Content-Type': 'application/json'},
+          body: jsonEncode({'activeTime': activeTime}),
+        );
+
+        if (response.statusCode == 200) {
+          print("✅ Active time updated successfully!");
+        } else {
+          print("❌ Failed to update active time: ${response.body}");
+        }
+      } catch (e) {
+        print("⚠️ Error updating active time: $e");
+      }
+    } else {
+      print("⚠️ No userId or activeTime found");
+    }
+
+    await prefs.clear();
+
+    Navigator.pushReplacementNamed(context, '/login');
   }
 
   @override
@@ -792,15 +829,44 @@ class _ProfileScreenState extends State<ProfileScreen>
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10),
+
         ...sortedLessons.map((lessonId) {
-          // Find the lesson info from all lessons data
           final lessonSearchResult = _findLessonInfo(lessonId, allLessonsData);
           final lessonInfo = lessonSearchResult['lessonInfo'];
+
+          Map<String, dynamic>? completedLesson;
+          if (profile.completedLessons.isNotEmpty) {
+            completedLesson = profile.completedLessons.firstWhere(
+              (l) => l['lessonId'] == lessonId,
+              orElse: () => {},
+            );
+          } else {
+            completedLesson = {};
+          }
+
+          final hasQuizData = completedLesson.isNotEmpty;
+          final score = hasQuizData ? completedLesson['score'] ?? 0 : 0;
+          final total = hasQuizData
+              ? completedLesson['totalQuestions'] ?? 0
+              : 0;
+          final percentage = hasQuizData
+              ? completedLesson['percentage'] ?? 0
+              : 0;
+
+          Color scoreColor;
+          if (percentage >= 80) {
+            scoreColor = Colors.green;
+          } else if (percentage >= 60) {
+            scoreColor = Colors.orange;
+          } else {
+            scoreColor = Colors.redAccent;
+          }
 
           return Card(
             elevation: 2,
             margin: EdgeInsets.only(bottom: 8),
             child: ListTile(
+              contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               leading: Container(
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
@@ -817,15 +883,65 @@ class _ProfileScreenState extends State<ProfileScreen>
                 lessonTitles[lessonId] ?? lessonId,
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
               ),
-              subtitle: Text(
-                lessonInfo != null
-                    ? 'Completed - Tap to view lesson'
-                    : 'Lesson data not found',
-                style: TextStyle(
-                  color: lessonInfo != null ? primaryGreen : Colors.red,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w500,
-                ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    lessonInfo != null
+                        ? 'Completed - Tap to view lesson'
+                        : 'Lesson data not found',
+                    style: TextStyle(
+                      color: lessonInfo != null ? primaryGreen : Colors.red,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+
+                  // ✅ Quiz score display
+                  if (hasQuizData)
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: scoreColor.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(color: scoreColor, width: 1),
+                          ),
+                          child: Text(
+                            'Score: $score/$total',
+                            style: TextStyle(
+                              color: scoreColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          '$percentage%',
+                          style: TextStyle(
+                            color: scoreColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    )
+                  else
+                    Text(
+                      'No quiz taken yet',
+                      style: TextStyle(
+                        color: Colors.grey[500],
+                        fontStyle: FontStyle.italic,
+                        fontSize: 12,
+                      ),
+                    ),
+                ],
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios,
@@ -838,6 +954,7 @@ class _ProfileScreenState extends State<ProfileScreen>
             ),
           );
         }),
+
         if (sortedLessons.isEmpty)
           Card(
             child: Padding(
@@ -942,10 +1059,10 @@ class _ProfileScreenState extends State<ProfileScreen>
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
-          mainAxisSize: MainAxisSize.min, // <-- allow shrink
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: color, size: 28), // reduced size
+            Icon(icon, color: color, size: 28),
             SizedBox(height: 8),
             FittedBox(
               fit: BoxFit.scaleDown,

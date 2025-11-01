@@ -1,23 +1,57 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:K_Skill/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyKSkillApp(isLoggedIn: false, initialRoute: '',));
+  TestWidgetsFlutterBinding.ensureInitialized();
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  setUp(() {
+    SharedPreferences.setMockInitialValues({});
+  });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+  testWidgets('App starts with splash screen', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyKSkillApp());
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('K - Skill'), findsOneWidget);
+    expect(find.text('Master English with confidence'), findsOneWidget);
+
+    expect(find.byType(CircularProgressIndicator), findsOneWidget);
+  });
+
+  testWidgets('Splash navigates to welcome when not logged in', (
+    WidgetTester tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({'isLoggedIn': false});
+
+    await tester.pumpWidget(const MyKSkillApp());
+    await tester.pumpAndSettle(const Duration(seconds: 4));
+
+    expect(find.text('Welcome to K-Skill!'), findsOneWidget);
+    expect(find.text('Login'), findsOneWidget);
+    expect(find.text('Sign Up'), findsOneWidget);
+  });
+
+  testWidgets('Splash navigates to dashboard when logged in', (
+    WidgetTester tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({'isLoggedIn': true});
+
+    await tester.pumpWidget(const MyKSkillApp());
+    await tester.pumpAndSettle(const Duration(seconds: 4));
+    expect(find.text('Welcome to K-Skill!'), findsNothing);
+  });
+
+  testWidgets('Welcome page has login and signup buttons', (
+    WidgetTester tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({'isLoggedIn': false});
+
+    await tester.pumpWidget(const MyKSkillApp());
+    await tester.pumpAndSettle(const Duration(seconds: 4));
+
+    expect(find.widgetWithText(ElevatedButton, 'Login'), findsOneWidget);
+    expect(find.widgetWithText(OutlinedButton, 'Sign Up'), findsOneWidget);
   });
 }
