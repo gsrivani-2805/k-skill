@@ -419,8 +419,6 @@ class _PracticeScreenState extends State<PracticeScreen> {
     final data = json.decode(jsonStr);
     readingPassages = List<String>.from(data['passages']);
 
-    print("Loaded passages: $readingPassages");
-
     setState(() {
       selectedPassage = (readingPassages..shuffle()).first;
     });
@@ -721,7 +719,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                icon: const Icon(Icons.refresh, size: 20),
+                icon: const Icon(Icons.refresh, size: 20, color: Colors.white,),
                 label: const Text("Next", style: TextStyle(fontSize: 14, color: Colors.white)),
               ),
             ),
@@ -780,10 +778,11 @@ class _PracticeScreenState extends State<PracticeScreen> {
           Center(
             child: ElevatedButton.icon(
               onPressed: playSentence,
-              icon: const Icon(Icons.play_arrow, size: 24),
+              icon: const Icon(Icons.play_arrow, size: 24, color: Colors.white,),
               label: const Text("Play Audio"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.orange,
+                foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 12,
@@ -824,6 +823,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.orange,
+                  foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 24,
                     vertical: 12,
@@ -892,13 +892,14 @@ class _PracticeScreenState extends State<PracticeScreen> {
               });
             },
 
-            icon: const Icon(Icons.refresh),
+            icon: const Icon(Icons.refresh, color: Colors.white,),
             label: const Text(
               "Practice Again",
               style: TextStyle(color: Colors.white),
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),

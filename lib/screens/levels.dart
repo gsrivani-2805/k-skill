@@ -7,6 +7,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:K_Skill/config/api_config.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CurriculumData {
   static Map<String, dynamic>? _data;
@@ -837,7 +838,8 @@ class _LessonsScreenState extends State<LessonsScreen> {
   Set<String> completedLessons = <String>{};
   Map<String, int> quizScores = <String, int>{};
   Map<String, int> totalQuestions = <String, int>{};
-  Map<String, int> pendingQuizScores = <String, int>{}; // Track unsubmitted scores
+  Map<String, int> pendingQuizScores =
+      <String, int>{}; // Track unsubmitted scores
   Map<String, int> pendingTotalQuestions = <String, int>{};
   static const String baseUrl = ApiConfig.baseUrl;
 
@@ -856,7 +858,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
   Future<void> loadQuizScores() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     Map<String, dynamic>? lessons = widget.moduleData['lessons'];
-    
+
     if (lessons == null) return;
 
     for (String lessonKey in lessons.keys) {
@@ -884,7 +886,11 @@ class _LessonsScreenState extends State<LessonsScreen> {
     }
   }
 
-  Future<void> savePendingQuizScore(String lessonKey, int score, int total) async {
+  Future<void> savePendingQuizScore(
+    String lessonKey,
+    int score,
+    int total,
+  ) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setInt('pending_quiz_score_$lessonKey', score);
     await prefs.setInt('pending_quiz_total_$lessonKey', total);
@@ -961,13 +967,15 @@ class _LessonsScreenState extends State<LessonsScreen> {
 
       if (result != null && result is int) {
         int totalQuestions = 10;
-        
+
         // Save as pending score (not yet submitted)
         await savePendingQuizScore(lessonKey, result, totalQuestions);
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Quiz completed! Score: $result/$totalQuestions. Click "Submit Quiz" to mark as complete.'),
+            content: Text(
+              'Quiz completed! Score: $result/$totalQuestions. Click "Submit Quiz" to mark as complete.',
+            ),
             backgroundColor: Colors.blue,
             duration: Duration(seconds: 3),
           ),
@@ -995,7 +1003,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
   }
 
   Future<void> submitQuizAndMarkComplete(String lessonKey) async {
-    if (!pendingQuizScores.containsKey(lessonKey) || 
+    if (!pendingQuizScores.containsKey(lessonKey) ||
         !pendingTotalQuestions.containsKey(lessonKey)) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -1040,10 +1048,10 @@ class _LessonsScreenState extends State<LessonsScreen> {
     if (response.statusCode == 200) {
       // Save the submitted score permanently
       await saveQuizScore(lessonKey, score, total);
-      
+
       // Clear pending score
       await clearPendingQuizScore(lessonKey);
-      
+
       setState(() {
         completedLessons.add(lessonKey);
       });
@@ -1092,8 +1100,8 @@ class _LessonsScreenState extends State<LessonsScreen> {
   }
 
   Color getQuizButtonColor(String lessonKey) {
-    if (hasCompletedQuiz(lessonKey) && 
-        quizScores.containsKey(lessonKey) && 
+    if (hasCompletedQuiz(lessonKey) &&
+        quizScores.containsKey(lessonKey) &&
         totalQuestions.containsKey(lessonKey)) {
       int score = quizScores[lessonKey]!;
       int total = totalQuestions[lessonKey]!;
@@ -1134,7 +1142,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
   @override
   Widget build(BuildContext context) {
     Map<String, dynamic>? lessons = widget.moduleData['lessons'];
-    
+
     if (lessons == null || lessons.isEmpty) {
       return Scaffold(
         appBar: AppBar(
@@ -1142,9 +1150,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
           backgroundColor: Colors.blue[700],
           foregroundColor: Colors.white,
         ),
-        body: Center(
-          child: Text('No lessons available'),
-        ),
+        body: Center(child: Text('No lessons available')),
       );
     }
 
@@ -1217,7 +1223,9 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                   decoration: BoxDecoration(
                                     color: isCompleted
                                         ? Colors.green[100]
-                                        : (isPending ? Colors.blue[100] : Colors.orange[100]),
+                                        : (isPending
+                                              ? Colors.blue[100]
+                                              : Colors.orange[100]),
                                     borderRadius: BorderRadius.circular(
                                       isSmallScreen ? 6 : 8,
                                     ),
@@ -1225,10 +1233,14 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                   child: Icon(
                                     isCompleted
                                         ? Icons.check_circle
-                                        : (isPending ? Icons.pending : Icons.play_circle_outline),
+                                        : (isPending
+                                              ? Icons.pending
+                                              : Icons.play_circle_outline),
                                     color: isCompleted
                                         ? Colors.green[700]
-                                        : (isPending ? Colors.blue[700] : Colors.orange[700]),
+                                        : (isPending
+                                              ? Colors.blue[700]
+                                              : Colors.orange[700]),
                                     size: isSmallScreen ? 20 : 24,
                                   ),
                                 ),
@@ -1261,13 +1273,19 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                               color: Colors.grey[600],
                                             ),
                                           ),
-                                          if (isCompleted && 
-                                              quizScores.containsKey(lessonKey) &&
-                                              totalQuestions.containsKey(lessonKey)) ...[
+                                          if (isCompleted &&
+                                              quizScores.containsKey(
+                                                lessonKey,
+                                              ) &&
+                                              totalQuestions.containsKey(
+                                                lessonKey,
+                                              )) ...[
                                             SizedBox(width: 8),
                                             Container(
                                               padding: EdgeInsets.symmetric(
-                                                horizontal: isSmallScreen ? 4 : 6,
+                                                horizontal: isSmallScreen
+                                                    ? 4
+                                                    : 6,
                                                 vertical: 2,
                                               ),
                                               decoration: BoxDecoration(
@@ -1289,24 +1307,35 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                                   color: getQuizButtonColor(
                                                     lessonKey,
                                                   ),
-                                                  fontSize: isSmallScreen ? 10 : 12,
+                                                  fontSize: isSmallScreen
+                                                      ? 10
+                                                      : 12,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
                                             ),
                                           ],
-                                          if (isPending && 
-                                              pendingQuizScores.containsKey(lessonKey) &&
-                                              pendingTotalQuestions.containsKey(lessonKey)) ...[
+                                          if (isPending &&
+                                              pendingQuizScores.containsKey(
+                                                lessonKey,
+                                              ) &&
+                                              pendingTotalQuestions.containsKey(
+                                                lessonKey,
+                                              )) ...[
                                             SizedBox(width: 8),
                                             Container(
                                               padding: EdgeInsets.symmetric(
-                                                horizontal: isSmallScreen ? 4 : 6,
+                                                horizontal: isSmallScreen
+                                                    ? 4
+                                                    : 6,
                                                 vertical: 2,
                                               ),
                                               decoration: BoxDecoration(
-                                                color: Colors.blue.withOpacity(0.1),
-                                                borderRadius: BorderRadius.circular(6),
+                                                color: Colors.blue.withOpacity(
+                                                  0.1,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(6),
                                                 border: Border.all(
                                                   color: Colors.blue,
                                                   width: 1,
@@ -1316,7 +1345,9 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                                 'Pending: ${pendingQuizScores[lessonKey]}/${pendingTotalQuestions[lessonKey]}',
                                                 style: TextStyle(
                                                   color: Colors.blue,
-                                                  fontSize: isSmallScreen ? 10 : 12,
+                                                  fontSize: isSmallScreen
+                                                      ? 10
+                                                      : 12,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
@@ -1406,13 +1437,15 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                   child: ElevatedButton.icon(
                                     onPressed: (isCompleted || !isPending)
                                         ? null
-                                        : () => submitQuizAndMarkComplete(lessonKey),
+                                        : () => submitQuizAndMarkComplete(
+                                            lessonKey,
+                                          ),
                                     icon: Icon(
                                       isCompleted
                                           ? Icons.check_circle
-                                          : (isPending 
-                                              ? Icons.send 
-                                              : Icons.lock),
+                                          : (isPending
+                                                ? Icons.send
+                                                : Icons.lock),
                                       size: isSmallScreen ? 16 : 18,
                                     ),
                                     label: Text(
@@ -1425,7 +1458,9 @@ class _LessonsScreenState extends State<LessonsScreen> {
                                       ),
                                     ),
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: getSubmitButtonColor(lessonKey),
+                                      backgroundColor: getSubmitButtonColor(
+                                        lessonKey,
+                                      ),
                                       foregroundColor: Colors.white,
                                       padding: EdgeInsets.symmetric(
                                         vertical: isSmallScreen ? 8 : 12,
@@ -1509,6 +1544,20 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       backgroundColor: Colors.transparent,
       builder: (context) => const DictionaryBottomSheet(),
     );
+  }
+
+  // Launch YouTube video
+  Future<void> _launchYouTubeVideo(String url) async {
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Could not open video'),
+          backgroundColor: Colors.red.shade600,
+        ),
+      );
+    }
   }
 
   @override
@@ -1651,7 +1700,8 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           _buildHeader(),
           _buildObjectives(),
           _buildTopics(),
-          SizedBox(height: 24), // Bottom padding
+          _buildYouTubeResources(), 
+          SizedBox(height: 24),
         ],
       ),
     );
@@ -2064,7 +2114,6 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     final rawPath = media['image'];
     if (rawPath == null || rawPath.isEmpty) return const SizedBox.shrink();
 
-    // 🔥 Decode double-encoded URLs like %2520 → space
     final imagePath = Uri.decodeFull(Uri.decodeFull(rawPath));
 
     return Container(
@@ -2242,10 +2291,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           const SizedBox(width: 8),
           Expanded(
             child: MarkdownBody(
-              data: example.replaceAll(
-                '\n',
-                '  \n',
-              ), // <- Force markdown line breaks
+              data: example.replaceAll('\n', '  \n'),
               styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context))
                   .copyWith(
                     p: TextStyle(
@@ -2266,56 +2312,57 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     );
   }
 
-Widget _buildTable(Map<String, dynamic> table) {
-  return Container(
-    margin: EdgeInsets.only(bottom: 16),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Icon(Icons.table_chart, color: Colors.indigo.shade600, size: 18),
-            SizedBox(width: 8),
-            // ✅ Allow wrapping to multiple lines
-            Expanded(
-              child: Text(
-                table['title'] ?? 'Reference Table',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.indigo.shade700,
-                ),
-                softWrap: true,
-              ),
-            ),
-          ],
-        ),
-        SizedBox(height: 12),
-        Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.grey.shade300),
-          ),
-          child: Column(
+  Widget _buildTable(Map<String, dynamic> table) {
+    return Container(
+      margin: EdgeInsets.only(bottom: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              if (table['headers'] != null) _buildTableHeader(table['headers']),
-              if (table['rows'] != null)
-                ...((table['rows'] as List)
-                    .asMap()
-                    .entries
-                    .map(
-                      (entry) => _buildTableRow(entry.value, entry.key % 2 == 0),
-                    )
-                    .toList()),
+              Icon(Icons.table_chart, color: Colors.indigo.shade600, size: 18),
+              SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  table['title'] ?? 'Reference Table',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.indigo.shade700,
+                  ),
+                  softWrap: true,
+                ),
+              ),
             ],
           ),
-        ),
-      ],
-    ),
-  );
-}
+          SizedBox(height: 12),
+          Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.grey.shade300),
+            ),
+            child: Column(
+              children: [
+                if (table['headers'] != null)
+                  _buildTableHeader(table['headers']),
+                if (table['rows'] != null)
+                  ...((table['rows'] as List)
+                      .asMap()
+                      .entries
+                      .map(
+                        (entry) =>
+                            _buildTableRow(entry.value, entry.key % 2 == 0),
+                      )
+                      .toList()),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
   Widget _buildTableHeader(List<dynamic> headers) {
     return Container(
@@ -2385,6 +2432,114 @@ Widget _buildTable(Map<String, dynamic> table) {
               ),
             )
             .toList(),
+      ),
+    );
+  }
+
+  // YouTube Resources Section - Simple clickable links
+  Widget _buildYouTubeResources() {
+    if (lessonContent!['youtube_resources'] == null ||
+        (lessonContent!['youtube_resources'] as List).isEmpty) {
+      return SizedBox.shrink();
+    }
+
+    return Container(
+      margin: EdgeInsets.fromLTRB(16, 24, 16, 16),
+      padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.shade200,
+            blurRadius: 8,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.red.shade100,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Icon(
+                  Icons.play_circle_outline,
+                  color: Colors.red.shade600,
+                  size: 20,
+                ),
+              ),
+              SizedBox(width: 12),
+              Text(
+                'Video Resources',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey.shade800,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 16),
+          ...(lessonContent!['youtube_resources'] as List)
+              .asMap()
+              .entries
+              .map((entry) => _buildYouTubeLink(entry.value, entry.key))
+              .toList(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildYouTubeLink(Map<String, dynamic> video, int index) {
+    final url = video['url'] ?? '';
+    final title = video['title'] ?? 'Video ${index + 1}';
+
+    return Container(
+      margin: EdgeInsets.only(bottom: 12),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => _launchYouTubeVideo(url),
+          borderRadius: BorderRadius.circular(8),
+          child: Container(
+            padding: EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.red.shade50,
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: Colors.red.shade100),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.all(6),
+                  decoration: BoxDecoration(
+                    color: Colors.red.shade600,
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Icon(Icons.play_arrow, color: Colors.white, size: 18),
+                ),
+                SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.red.shade700,
+                    ),
+                  ),
+                ),
+                Icon(Icons.open_in_new, size: 16, color: Colors.red.shade600),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

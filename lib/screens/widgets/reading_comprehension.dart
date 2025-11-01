@@ -4,13 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 
-/// ---------------------
-/// Data Models
-/// ---------------------
 class Question {
   final int id;
   final String question;
-  final String type; // mcq | short_answer
+  final String type;
   final String answer;
   final List<String>? options;
 
@@ -74,7 +71,6 @@ class ReadingComprehensionData {
   }
 }
 
-/// Simplified AI Feedback Model - now just contains a single feedback paragraph
 class AIFeedback {
   final String feedback;
 
@@ -85,9 +81,6 @@ class AIFeedback {
   }
 }
 
-/// ---------------------
-/// Data Service
-/// ---------------------
 class DataService {
   static Future<ReadingComprehensionData> loadReadingData() async {
     try {
@@ -105,9 +98,6 @@ class DataService {
   }
 }
 
-/// ---------------------
-/// Main Screen
-/// ---------------------
 class ReadingComprehension extends StatefulWidget {
   const ReadingComprehension({super.key});
 
@@ -168,7 +158,6 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
   }) async {
     try {
       final url = Uri.parse("$baseUrl/check-comprehension");
-      print("Making API call to: $url"); // Debug log
 
       final response = await http.post(
         url,
@@ -181,18 +170,13 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
         }),
       );
 
-      print("API Response Status: ${response.statusCode}"); // Debug log
-      print("API Response Body: ${response.body}"); // Debug log
-
       if (response.statusCode == 200) {
         final jsonResponse = jsonDecode(response.body);
         return AIFeedback.fromJson(jsonResponse);
       } else {
-        print("API Error: ${response.statusCode} - ${response.body}");
         return null;
       }
     } catch (e) {
-      print("Network Error: $e");
       return null;
     }
   }
@@ -213,19 +197,12 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
     } else {
       if (userAnswer == null || userAnswer.isEmpty) return false;
 
-      // For short answers, let's rely on the AI feedback instead of basic string matching
-      // Since AI provides more nuanced analysis, we can use a simpler check here
-      // or rely entirely on AI feedback for accuracy assessment
-
-      // Simple approach: check if user answer contains key terms from correct answer
       final correctWords = question.answer.toLowerCase().split(' ');
       final userWords = userAnswer.toLowerCase().split(' ');
 
-      // Check if at least 50% of the key content words match
       int matchCount = 0;
       for (String correctWord in correctWords) {
         if (correctWord.length > 2) {
-          // Skip small words like "a", "the", "is"
           for (String userWord in userWords) {
             if (userWord.contains(correctWord) ||
                 correctWord.contains(userWord)) {
@@ -236,7 +213,6 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
         }
       }
 
-      // Return true if significant content overlap exists
       final significantWords = correctWords.where((w) => w.length > 2).length;
       return significantWords > 0 && (matchCount / significantWords) >= 0.4;
     }
@@ -476,9 +452,6 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
   }
 }
 
-/// ---------------------
-/// Loading Widget
-/// ---------------------
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({super.key});
   @override
@@ -487,9 +460,6 @@ class LoadingWidget extends StatelessWidget {
   }
 }
 
-/// ---------------------
-/// Passage Card
-/// ---------------------
 class PassageCard extends StatelessWidget {
   final ReadingPassage passage;
   const PassageCard({super.key, required this.passage});
@@ -510,9 +480,6 @@ class PassageCard extends StatelessWidget {
   }
 }
 
-/// ---------------------
-/// Question Card - Updated to hide AI feedback for MCQ questions
-/// ---------------------
 class QuestionCard extends StatefulWidget {
   final Question question;
   final int currentPassage;
@@ -630,26 +597,78 @@ class _QuestionCardState extends State<QuestionCard> {
   }
 
   Widget _buildFeedback() {
-    // Check if answer is correct for basic feedback
-    final isCorrect = widget.question.type == 'mcq'
-        ? widget.selectedAnswer == widget.question.answer
-        : widget.selectedAnswer.toLowerCase().contains(
-            widget.question.answer.toLowerCase().split(' ')[0],
-          );
+    bool isCorrect;
+
+    if (widget.question.type == 'mcq') {
+      isCorrect = widget.selectedAnswer == widget.question.answer;
+    } else {
+      if (widget.selectedAnswer.isEmpty) {
+        isCorrect = false;
+      } else {
+        final correctWords = widget.question.answer.toLowerCase().split(' ');
+        final userWords = widget.selectedAnswer.toLowerCase().split(' ');
+
+        int matchCount = 0;
+        for (String correctWord in correctWords) {
+          if (correctWord.length > 2) {
+            for (String userWord in userWords) {
+              if (userWord.contains(correctWord) ||
+                  correctWord.contains(userWord)) {
+                matchCount++;
+                break;
+              }
+            }
+          }
+        }
+
+        final significantWords = correctWords.where((w) => w.length > 2).length;
+        isCorrect =
+            significantWords > 0 && (matchCount / significantWords) >= 0.4;
+      }
+    }
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 16),
 
-        // Basic Feedback - Always show this
+        if (widget.question.type == "short_answer") ...[
+          if (widget.isLoadingFeedback) ...[
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.blue.shade50,
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.blue.shade200),
+              ),
+              child: const Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  ),
+                  SizedBox(width: 12),
+                  Text(
+                    "Analyzing your answer...",
+                    style: TextStyle(fontStyle: FontStyle.italic),
+                  ),
+                ],
+              ),
+            ),
+          ] else if (widget.aiFeedback != null) ...[
+            _buildAIFeedbackCard(widget.aiFeedback!),
+            const SizedBox(height: 12),
+          ],
+        ],
+
         Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: isCorrect ? Colors.green.shade50 : Colors.red.shade50,
+            color: isCorrect ? Colors.green.shade50 : Colors.orange.shade50,
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
-              color: isCorrect ? Colors.green.shade200 : Colors.red.shade200,
+              color: isCorrect ? Colors.green.shade200 : Colors.orange.shade200,
             ),
           ),
           child: Column(
@@ -658,71 +677,64 @@ class _QuestionCardState extends State<QuestionCard> {
               Row(
                 children: [
                   Icon(
-                    isCorrect ? Icons.check_circle : Icons.cancel,
-                    color: isCorrect ? Colors.green : Colors.red,
+                    isCorrect ? Icons.check_circle : Icons.info_outline,
+                    color: isCorrect ? Colors.green : Colors.orange.shade700,
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    isCorrect ? "Correct!" : "Not quite right",
+                    widget.question.type == 'mcq'
+                        ? (isCorrect ? "Correct!" : "Not quite right")
+                        : "Expected Answer",
                     style: TextStyle(
                       color: isCorrect
                           ? Colors.green.shade700
-                          : Colors.red.shade700,
+                          : Colors.orange.shade800,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
-              if (!isCorrect) ...[
-                const SizedBox(height: 8),
-                Text(
-                  "Correct answer: ${widget.question.answer}",
-                  style: TextStyle(color: Colors.red.shade600),
+              const SizedBox(height: 8),
+              Text(
+                widget.question.type == 'mcq'
+                    ? "Correct answer: ${widget.question.answer}"
+                    : "Sample answer: ${widget.question.answer}",
+                style: TextStyle(
+                  color: isCorrect
+                      ? Colors.green.shade700
+                      : Colors.orange.shade800,
                 ),
-              ],
+              ),
             ],
           ),
         ),
+        SizedBox(height: 12),
 
-        // AI Feedback - Only show for short answer questions
-        if (widget.question.type == "short_answer") ...[
-          if (widget.isLoadingFeedback) ...[
-            const SizedBox(height: 16),
-            const Row(
+        // Show warning for short answer if AI feedback failed
+        if (widget.question.type == "short_answer" &&
+            !widget.isLoadingFeedback &&
+            widget.aiFeedback == null) ...[
+          const SizedBox(height: 12),
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.red.shade50,
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: Colors.red.shade200),
+            ),
+            child: Row(
               children: [
-                SizedBox(
-                  width: 20,
-                  height: 20,
-                  child: CircularProgressIndicator(strokeWidth: 2),
-                ),
-                SizedBox(width: 12),
-                Text(
-                  "Getting AI feedback...",
-                  style: TextStyle(fontStyle: FontStyle.italic),
+                Icon(Icons.warning, color: Colors.red.shade700),
+                const SizedBox(width: 8),
+                const Expanded(
+                  child: Text(
+                    "Unable to get detailed AI feedback. Your answer will be evaluated based on keyword matching.",
+                    style: TextStyle(fontSize: 13),
+                  ),
                 ),
               ],
             ),
-          ] else if (widget.aiFeedback != null) ...[
-            const SizedBox(height: 16),
-            _buildAIFeedbackCard(widget.aiFeedback!),
-          ] else ...[
-            const SizedBox(height: 16),
-            Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.orange.shade50,
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: Colors.orange.shade200),
-              ),
-              child: const Row(
-                children: [
-                  Icon(Icons.warning, color: Colors.orange),
-                  SizedBox(width: 8),
-                  Text("Unable to get detailed AI feedback"),
-                ],
-              ),
-            ),
-          ],
+          ),
         ],
       ],
     );
@@ -772,9 +784,6 @@ class _QuestionCardState extends State<QuestionCard> {
   }
 }
 
-/// ---------------------
-/// Results Card
-/// ---------------------
 class ResultsCard extends StatelessWidget {
   final ReadingPassage passage;
   final Map<String, String> userAnswers;

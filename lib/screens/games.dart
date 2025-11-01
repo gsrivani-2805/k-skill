@@ -5,6 +5,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+
 class GameScreen extends StatelessWidget {
   GameScreen({super.key});
 
@@ -21,7 +22,10 @@ class GameScreen extends StatelessWidget {
       "title": "Fill in the Blanks",
       "subtitle": "Fill in the missing pieces to complete the magical story!",
       "emoji": "✍🏼",
-      "gradient": [Color(0xFFFFF4E6), Color(0xFFFFE6CC)], // Light yellow/orange gradient
+      "gradient": [
+        Color(0xFFFFF4E6),
+        Color(0xFFFFE6CC),
+      ], // Light yellow/orange gradient
       "difficulty": "Easy",
       "route": FillInTheBlanks(jsonPath: "games/grammar_mistakes.json"),
     },
@@ -37,7 +41,10 @@ class GameScreen extends StatelessWidget {
       "title": "Picture Story",
       "subtitle": "Tell stories through amazing pictures!",
       "emoji": "📷",
-      "gradient": [Color(0xFFF0E6FF), Color(0xFFE6D9FF)], // Light purple gradient
+      "gradient": [
+        Color(0xFFF0E6FF),
+        Color(0xFFE6D9FF),
+      ], // Light purple gradient
       "difficulty": "Medium",
       "route": PictureSentenceScreen(jsonPath: "games/picture_sentence.json"),
     },
@@ -45,7 +52,10 @@ class GameScreen extends StatelessWidget {
       "title": "Sound Quest",
       "subtitle": "Listen carefully and solve the puzzle!",
       "emoji": "🗣️",
-      "gradient": [Color(0xFFE6FFE6), Color(0xFFCCFFCC)], // Light green gradient
+      "gradient": [
+        Color(0xFFE6FFE6),
+        Color(0xFFCCFFCC),
+      ], // Light green gradient
       "difficulty": "Hard",
       "route": ListeningPuzzleScreen(jsonPath: "games/listening_puzzle.json"),
     },
@@ -88,7 +98,9 @@ class GameScreen extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        backgroundColor: Color(0xFF7CB342), // Light green to match practice zone
+        backgroundColor: Color(
+          0xFF7CB342,
+        ), // Light green to match practice zone
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -263,12 +275,16 @@ class GameScreen extends StatelessWidget {
                   Text(
                     game['title'],
                     style: TextStyle(
-                      color: Color(0xFF424242), // Dark gray for better contrast on light backgrounds
+                      color: Color(
+                        0xFF424242,
+                      ), // Dark gray for better contrast on light backgrounds
                       fontSize: isTablet ? 24 : 20,
                       fontWeight: FontWeight.bold,
                       shadows: [
                         Shadow(
-                          color: Colors.white.withOpacity(0.8), // Light shadow for subtle effect
+                          color: Colors.white.withOpacity(
+                            0.8,
+                          ), // Light shadow for subtle effect
                           offset: Offset(0, 1),
                           blurRadius: 2,
                         ),
@@ -308,6 +324,7 @@ class GameScreen extends StatelessWidget {
     );
   }
 }
+
 class WordMatchScreen extends StatefulWidget {
   final String jsonPath;
   const WordMatchScreen({super.key, required this.jsonPath});
@@ -3653,7 +3670,7 @@ class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
   }
 
   void _initializeTts() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("en-IN");
     await flutterTts.setSpeechRate(0.5);
     await flutterTts.setVolume(1.0);
     await flutterTts.setPitch(1.0);
@@ -3683,7 +3700,6 @@ class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
         isLoading = false;
       });
     } catch (e) {
-      print('Error loading game data: $e');
       setState(() {
         isLoading = false;
       });
@@ -3693,13 +3709,14 @@ class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
   void _selectRandomQuestions() {
     selectedQuestions.clear();
 
+    // Create fresh copies and shuffle them each time
     List<Question> basicList = List.from(gameData['basic']!);
     List<Question> mediumList = List.from(gameData['medium']!);
     List<Question> hardList = List.from(gameData['hard']!);
 
-    basicList.shuffle();
-    mediumList.shuffle();
-    hardList.shuffle();
+    basicList.shuffle(Random());
+    mediumList.shuffle(Random());
+    hardList.shuffle(Random());
 
     selectedQuestions.addAll(basicList.take(basicQuestions));
     selectedQuestions.addAll(mediumList.take(mediumQuestions));
@@ -3713,6 +3730,7 @@ class _ListeningPuzzleScreenState extends State<ListeningPuzzleScreen>
         currentQuestionIndex < selectedQuestions.length) {
       currentQuestion = selectedQuestions[currentQuestionIndex];
       availableWords = List.from(currentQuestion!.words);
+      availableWords.shuffle(Random());
       arrangedWords.clear();
       showResult = false;
       gameCompleted = false;
