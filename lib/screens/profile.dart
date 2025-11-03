@@ -1,5 +1,7 @@
 import 'package:K_Skill/assessment/assessment_screen.dart';
 import 'package:K_Skill/screens/levels.dart';
+import 'package:K_Skill/services/app_usage_tracker.dart';
+import 'package:K_Skill/services/shared_prefs.dart';
 import 'package:flutter/material.dart';
 import 'package:K_Skill/config/api_config.dart';
 import 'dart:convert';
@@ -21,7 +23,7 @@ class UserProfile {
   final String currentLevel;
   final List<String> recentLessons;
   final Map<String, double> assessmentScores;
-  final List<Map<String, dynamic>> completedLessons; // ✅ NEW
+  final List<Map<String, dynamic>> completedLessons;
 
   UserProfile({
     required this.name,
@@ -33,7 +35,7 @@ class UserProfile {
     required this.currentLevel,
     required this.recentLessons,
     required this.assessmentScores,
-    required this.completedLessons, // ✅ NEW
+    required this.completedLessons, 
   });
 
   factory UserProfile.fromJson(Map<String, dynamic> json) {
@@ -164,36 +166,20 @@ class _ProfileScreenState extends State<ProfileScreen>
     return [profile, lessonsJson, extracted[1]];
   }
 
+  final usageTracker = AppUsageTracker();
+
   Future<void> _logout() async {
-    final prefs = await SharedPreferences.getInstance();
-    final userId = prefs.getString('userId');
-    final activeTime = prefs.getInt('activeTime') ?? 0;
+    // Stop tracking and finalize session duration
+    await usageTracker.stopTracking();
 
-    print("🕒 Logging out... Active time: $activeTime for user: $userId");
+    // Sync usage BEFORE clearing prefs (ensure userId still exists)
+    await AppUsageTracker.syncUsageToServer();
 
-    if (userId != null && activeTime > 0) {
-      try {
-        final response = await http.post(
-          Uri.parse('$baseUrl/$userId/active-time'),
-          headers: {'Content-Type': 'application/json'},
-          body: jsonEncode({'activeTime': activeTime}),
-        );
+    // Logout (clears SharedPreferences)
+    await SharedPrefsService.logout();
 
-        if (response.statusCode == 200) {
-          print("✅ Active time updated successfully!");
-        } else {
-          print("❌ Failed to update active time: ${response.body}");
-        }
-      } catch (e) {
-        print("⚠️ Error updating active time: $e");
-      }
-    } else {
-      print("⚠️ No userId or activeTime found");
-    }
-
-    await prefs.clear();
-
-    Navigator.pushReplacementNamed(context, '/login');
+    // Navigate out
+    Navigator.of(context).pushNamedAndRemoveUntil('/welcome', (route) => false);
   }
 
   @override

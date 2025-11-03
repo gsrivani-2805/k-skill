@@ -3,7 +3,8 @@ import 'package:K_Skill/screens/academics.dart';
 import 'package:K_Skill/screens/discourse.dart';
 import 'package:K_Skill/screens/games.dart';
 import 'package:K_Skill/screens/welcome.dart';
-import 'package:K_Skill/screens/splash_screen.dart'; // Add this import
+import 'package:K_Skill/screens/splash_screen.dart';
+import 'package:K_Skill/services/app_usage_tracker.dart';
 import 'package:flutter/material.dart';
 import 'package:K_Skill/assessment/assessment_screen.dart';
 import 'package:K_Skill/assessment/listening_screen.dart';
@@ -15,9 +16,14 @@ import 'package:K_Skill/screens/levels.dart';
 import 'package:K_Skill/screens/profile.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+final AppUsageTracker _usageTracker = AppUsageTracker(); // global tracker instance
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
+  // Start app usage tracking when app launches
+  _usageTracker.startTracking();
+
   // Always start with splash screen
   runApp(const MyKSkillApp());
 }
@@ -39,17 +45,27 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
+    // Stop and sync usage time when app fully closes
+    _usageTracker.stopTracking();
+    AppUsageTracker.syncUsageToServer();
     super.dispose();
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
+    // Forward lifecycle changes to usage tracker
+    _usageTracker.didChangeAppLifecycleState(state);
+
+    final prefs = await SharedPreferences.getInstance();
+
     if (state == AppLifecycleState.detached ||
         state == AppLifecycleState.inactive ||
         state == AppLifecycleState.paused) {
       // Clear last route when app closes or goes background
-      final prefs = await SharedPreferences.getInstance();
       await prefs.remove('lastRoute');
+
+      // Sync usage time to backend every time app is paused
+      await AppUsageTracker.syncUsageToServer();
     }
   }
 
@@ -58,38 +74,36 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
     return MaterialApp(
       title: 'K-Skill App',
       debugShowCheckedModeBanner: false,
-      initialRoute: '/', 
+      initialRoute: '/',
       onGenerateRoute: _generateRoute,
       routes: {
-        '/': (context) => const SplashScreen(), 
+        '/': (context) => const SplashScreen(),
         '/welcome': (context) => const WelcomePage(),
         '/login': (context) => LoginPage(),
         '/dashboard': (context) => const RouteAwareWrapper(
-          routeName: '/dashboard',
-          child: DashboardScreen(),
-        ),
+              routeName: '/dashboard',
+              child: DashboardScreen(),
+            ),
         '/profile': (context) =>
             RouteAwareWrapper(routeName: '/profile', child: ProfileScreen()),
         '/levels': (context) =>
             RouteAwareWrapper(routeName: '/levels', child: LevelsScreen()),
         '/reading': (context) => const RouteAwareWrapper(
-          routeName: '/reading',
-          child: ReadingScreen(),
-        ),
+              routeName: '/reading',
+              child: ReadingScreen(),
+            ),
         '/assessment': (context) => const RouteAwareWrapper(
-          routeName: '/assessment',
-          child: AssessmentScreen(),
-        ),
+              routeName: '/assessment',
+              child: AssessmentScreen(),
+            ),
         '/listening': (context) => const RouteAwareWrapper(
-          routeName: '/listening',
-          child: ListeningScreen(),
-        ),
+              routeName: '/listening',
+              child: ListeningScreen(),
+            ),
         '/quiz': (context) =>
             RouteAwareWrapper(routeName: '/quiz', child: QuizScreen()),
-
         '/discourse': (context) =>
             RouteAwareWrapper(routeName: '/discourse', child: Discourse()),
-
         '/games': (context) =>
             RouteAwareWrapper(routeName: '/games', child: GameScreen()),
       },
@@ -100,7 +114,7 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
     final String routeName = settings.name ?? '/';
 
     switch (routeName) {
-      case '/': // Splash screen
+      case '/':
         return MaterialPageRoute(
           builder: (_) => const SplashScreen(),
           settings: settings,
@@ -161,7 +175,7 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
       case '/quiz':
         return MaterialPageRoute(
           builder: (_) =>
-              const RouteAwareWrapper(routeName: '/quiz', child: QuizScreen()),
+              RouteAwareWrapper(routeName: '/quiz', child: QuizScreen()),
           settings: settings,
         );
       case '/discourse':
@@ -176,14 +190,6 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
         return MaterialPageRoute(
           builder: (_) =>
               RouteAwareWrapper(routeName: '/games', child: GameScreen()),
-          settings: settings,
-        );
-      case '/listening':
-        return MaterialPageRoute(
-          builder: (_) => const RouteAwareWrapper(
-            routeName: '/listening',
-            child: ListeningScreen(),
-          ),
           settings: settings,
         );
       case '/academic':

@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     _animationController.forward();
 
-    // ✅ Delay while animation plays, then check token
+    // Delay while animation plays, then check token
     Timer(const Duration(seconds: 3), _checkAuthStatus);
   }
 
@@ -49,10 +49,10 @@ class _SplashScreenState extends State<SplashScreen>
     final token = await SharedPrefsService.getToken();
 
     if (token != null && tokenValid) {
-      // ✅ Token exists & still valid → go to dashboard
+      // Token exists & still valid → go to dashboard
       Navigator.pushReplacementNamed(context, '/dashboard');
     } else {
-      // ❌ Token missing or expired → clear and go to welcome
+      // Token missing or expired → clear and go to welcome
       await SharedPrefsService.logout();
       Navigator.pushReplacementNamed(context, '/welcome');
     }

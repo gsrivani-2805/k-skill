@@ -1,7 +1,12 @@
+import 'dart:convert';
+import 'package:K_Skill/config/api_config.dart';
+import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPrefsService {
-  // 🔹 User ID
+  static const _baseUrl = ApiConfig.baseUrl;
+
+  // USER ID
   static Future<void> setUserId(String userId) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('userId', userId);
@@ -12,7 +17,7 @@ class SharedPrefsService {
     return prefs.getString('userId');
   }
 
-  // 🔹 User Name
+  // USER NAME
   static Future<void> setUserName(String userName) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('userName', userName);
@@ -23,11 +28,10 @@ class SharedPrefsService {
     return prefs.getString('userName');
   }
 
-  // 🔹 JWT Token + Login Time
+  // JWT TOKEN + LOGIN TIME
   static Future<void> setToken(String token) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('token', token);
-    // Also store login time when token is set
     await prefs.setString('loginTime', DateTime.now().toIso8601String());
   }
 
@@ -36,7 +40,7 @@ class SharedPrefsService {
     return prefs.getString('token');
   }
 
-  // 🔹 Check if token is expired (24 hours)
+  // Check token validity (24 hrs)
   static Future<bool> isTokenValid() async {
     final prefs = await SharedPreferences.getInstance();
     final loginTimeStr = prefs.getString('loginTime');
@@ -46,7 +50,6 @@ class SharedPrefsService {
     final loginTime = DateTime.parse(loginTimeStr);
     final now = DateTime.now();
 
-    // Expire after 24 hours
     if (now.difference(loginTime).inHours >= 24) {
       await logout();
       return false;
@@ -54,7 +57,53 @@ class SharedPrefsService {
     return true;
   }
 
-  // 🔹 User Streak
+  /// Add active time (in seconds)
+  static Future<void> addActiveTime(int seconds) async {
+    final prefs = await SharedPreferences.getInstance();
+    double current = prefs.getDouble('totalUsageSeconds') ?? 0;
+    current += seconds;
+    await prefs.setDouble('totalUsageSeconds', current);
+  }
+
+  /// Get total usage time (in seconds)
+  static Future<double> getActiveTime() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getDouble('totalUsageSeconds') ?? 0;
+  }
+
+  /// Reset total usage time
+  static Future<void> resetActiveTime() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setDouble('totalUsageSeconds', 0);
+  }
+
+  /// Sync usage time with server
+  static Future<void> syncActiveTimeWithServer() async {
+    final prefs = await SharedPreferences.getInstance();
+    final userId = prefs.getString('userId');
+    final totalSeconds = prefs.getDouble('totalUsageSeconds') ?? 0;
+
+    if (userId == null || totalSeconds <= 0) {
+      return;
+    }
+
+    try {
+
+      final response = await http.post(
+        Uri.parse("$_baseUrl/$userId/active-time"),
+        headers: {"Content-Type": "application/json"},
+        body: jsonEncode({"activeTime": totalSeconds.toInt()}),
+      );
+
+      if (response.statusCode == 200) {
+        await prefs.setDouble('totalUsageSeconds', 0); // reset after sync
+      } else {
+      }
+    } catch (e) {
+      print("🚨 Error syncing usage time: $e");
+    }
+  }
+
   static Future<void> setUserStreak(int streak) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('streak', streak);
@@ -65,7 +114,6 @@ class SharedPrefsService {
     return prefs.getInt('streak');
   }
 
-  // 🔹 Current Level
   static Future<void> setCurrentLevel(String level) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('level', level);
@@ -76,8 +124,10 @@ class SharedPrefsService {
     return prefs.getString('level');
   }
 
-  // 🔹 Completed Lessons
-  static Future<void> setCompletedLessons(String level, List<String> lessons) async {
+  static Future<void> setCompletedLessons(
+    String level,
+    List<String> lessons,
+  ) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setStringList('completed_$level', lessons);
   }
@@ -97,13 +147,12 @@ class SharedPrefsService {
     }
   }
 
-  // 🔹 Clear All or Logout
-  static Future<void> clearAll() async {
+  static Future<void> logout() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.clear();
   }
 
-  static Future<void> logout() async {
+  static Future<void> clearAll() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.clear();
   }
