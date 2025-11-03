@@ -157,13 +157,12 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
 
     _speech.listen(
       onResult: (val) {
-        setState(() {
-          _userSpeech = val.recognizedWords;
-        });
+        if (val.finalResult) {
+          setState(() => _userSpeech = val.recognizedWords);
+        } else {
+          setState(() => _userSpeech = val.recognizedWords); 
+        }
       },
-      partialResults: true,
-      localeId: 'en-US',
-      cancelOnError: true,
     );
   }
 

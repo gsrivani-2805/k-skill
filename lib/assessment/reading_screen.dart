@@ -88,7 +88,11 @@ class _ReadingScreenState extends State<ReadingScreen> {
 
     _speech.listen(
       onResult: (val) {
-        setState(() => _userSpeech = val.recognizedWords);
+        if (val.finalResult) {
+          setState(() => _userSpeech = val.recognizedWords);
+        } else {
+          setState(() => _userSpeech = val.recognizedWords); 
+        }
       },
     );
   }
@@ -132,7 +136,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
   void _submitScoreAndContinue() {
     // Return score to assessment screen
     Navigator.pop(context, (_finalScore * 100).toInt());
-    
+
     // Navigate to listening practice
     Future.delayed(Duration.zero, () {
       Navigator.pushNamed(context, '/listening');
@@ -161,12 +165,14 @@ class _ReadingScreenState extends State<ReadingScreen> {
         title: Text(_finished ? "Reading Completed" : "Reading Assessment"),
         backgroundColor: primaryColor,
         foregroundColor: Colors.white,
-        leading: _finished ? null : IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        leading: _finished
+            ? null
+            : IconButton(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
         automaticallyImplyLeading: !_finished,
       ),
 
@@ -271,9 +277,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
       child: Card(
         margin: const EdgeInsets.all(24),
         elevation: 6,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         child: Padding(
           padding: const EdgeInsets.all(32),
           child: Column(

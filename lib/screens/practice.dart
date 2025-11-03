@@ -429,8 +429,12 @@ class _PracticeScreenState extends State<PracticeScreen> {
     if (available) {
       setState(() => isListening = true);
       speech.listen(
-        onResult: (result) {
-          setState(() => spokenText = result.recognizedWords);
+        onResult: (val) {
+          if (val.finalResult) {
+            setState(() => spokenText = val.recognizedWords);
+          } else {
+            setState(() => spokenText = val.recognizedWords);
+          }
         },
       );
     }
@@ -719,8 +723,11 @@ class _PracticeScreenState extends State<PracticeScreen> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                icon: const Icon(Icons.refresh, size: 20, color: Colors.white,),
-                label: const Text("Next", style: TextStyle(fontSize: 14, color: Colors.white)),
+                icon: const Icon(Icons.refresh, size: 20, color: Colors.white),
+                label: const Text(
+                  "Next",
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                ),
               ),
             ),
           ],
@@ -778,7 +785,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
           Center(
             child: ElevatedButton.icon(
               onPressed: playSentence,
-              icon: const Icon(Icons.play_arrow, size: 24, color: Colors.white,),
+              icon: const Icon(Icons.play_arrow, size: 24, color: Colors.white),
               label: const Text("Play Audio"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.orange,
@@ -892,7 +899,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
               });
             },
 
-            icon: const Icon(Icons.refresh, color: Colors.white,),
+            icon: const Icon(Icons.refresh, color: Colors.white),
             label: const Text(
               "Practice Again",
               style: TextStyle(color: Colors.white),
