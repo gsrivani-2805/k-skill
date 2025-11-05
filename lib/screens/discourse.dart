@@ -215,10 +215,12 @@ class _DiscourseState extends State<Discourse> {
           return GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: crossAxisCount,
-              childAspectRatio: 0.85,
+              childAspectRatio:
+                  constraints.maxWidth > 600 ? 2.0 : 1.0, 
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
             ),
+
             itemCount: items.length,
             itemBuilder: (context, index) {
               return _buildDiscourseCard(items[index]);
@@ -265,32 +267,34 @@ class _DiscourseState extends State<Discourse> {
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min, // ✅ prevents stretching
             children: [
               Container(
-                padding: const EdgeInsets.all(12),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: type.color.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(12),
+                  color: type.color.withOpacity(0.15),
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                child: Icon(type.iconData, color: type.color, size: 28),
+                child: Icon(type.iconData, color: type.color, size: 26),
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 10),
               Text(
                 type.title,
                 style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
                 ),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 2),
               Text(
                 type.subtitle,
-                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                style: TextStyle(fontSize: 12.5, color: Colors.grey[600]),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
               ),

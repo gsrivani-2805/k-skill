@@ -1124,17 +1124,19 @@ class _LessonsScreenState extends State<LessonsScreen> {
   }
 
   String getSubmitButtonText(String lessonKey, bool isCompact) {
-    if (hasCompletedQuiz(lessonKey)) {
+    bool isCompleted = hasCompletedQuiz(lessonKey);
+
+    if (isCompleted && !hasPendingQuiz(lessonKey)) {
       return 'Completed';
     } else if (hasPendingQuiz(lessonKey)) {
-      return 'Submit Quiz';
+      return isCompleted ? 'Resubmit Quiz' : 'Submit Quiz';
     } else {
       return isCompact ? 'Take Quiz First' : 'Attempt Quiz to Mark Complete';
     }
   }
 
   Color getSubmitButtonColor(String lessonKey) {
-    if (hasCompletedQuiz(lessonKey)) {
+    if (hasCompletedQuiz(lessonKey) && !hasPendingQuiz(lessonKey)) {
       return Colors.green[300]!;
     } else if (hasPendingQuiz(lessonKey)) {
       return Colors.green[600]!;
@@ -1439,7 +1441,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
 
                                 Expanded(
                                   child: ElevatedButton.icon(
-                                    onPressed: (isCompleted || !isPending)
+                                    onPressed: !isPending
                                         ? null
                                         : () => submitQuizAndMarkComplete(
                                             lessonKey,

@@ -30,12 +30,35 @@ async function sendOTP(email, otp) {
 }
 
 router.post("/send-otp", async (req, res) => {
-  const { email } = req.body;
-  const otp = generateOTP();
-  otpStore.set(email, { otp, expires: Date.now() + 5 * 60 * 1000 });
-  await sendOTP(email, otp);
-  res.json({ message: "OTP sent successfully" });
+  try {
+    const { email } = req.body;
+
+    if (!email) {
+      return res.status(400).json({ message: "Email is required." });
+    }
+
+    // 🔹 Check if email exists in database
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(404).json({ message: "Email already registered." });
+    }
+
+    // 🔹 Generate OTP
+    const otp = generateOTP();
+    otpStore.set(email, { otp, expires: Date.now() + 5 * 60 * 1000 });
+
+    // 🔹 Send OTP
+    await sendOTP(email, otp);
+
+    res.json({ message: "OTP sent successfully." });
+  } catch (error) {
+    console.error("Error sending OTP:", error);
+    res
+      .status(500)
+      .json({ message: "Failed to send OTP.", error: error.message });
+  }
 });
+
 
 router.post("/verify-otp", (req, res) => {
   const { email, otp } = req.body;

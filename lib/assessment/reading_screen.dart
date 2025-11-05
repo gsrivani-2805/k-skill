@@ -15,6 +15,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
   late stt.SpeechToText _speech;
   bool _isListening = false;
   String _userSpeech = '';
+  String _lastFinalResult = ''; // Track last finalized result
   List<String> _passages = [];
   int _currentPassageIndex = 0;
   List<double> _scores = [];
@@ -84,16 +85,41 @@ class _ReadingScreenState extends State<ReadingScreen> {
     setState(() {
       _isListening = true;
       _userSpeech = '';
+      _lastFinalResult = '';
     });
 
     _speech.listen(
       onResult: (val) {
+        // Only update on final results to avoid duplication on web
         if (val.finalResult) {
-          setState(() => _userSpeech = val.recognizedWords);
+          final newText = val.recognizedWords;
+          // Prevent duplicate updates
+          if (newText != _lastFinalResult) {
+            setState(() {
+              // Append new text to existing speech
+              if (_userSpeech.isEmpty) {
+                _userSpeech = newText;
+              } else {
+                // Only append if it's actually new content
+                _userSpeech = newText;
+              }
+              _lastFinalResult = newText;
+            });
+          }
         } else {
-          setState(() => _userSpeech = val.recognizedWords); 
+          // For intermediate results, only update if significantly different
+          // This prevents rapid flickering on web
+          final newText = val.recognizedWords;
+          if (newText != _userSpeech && newText.length > _userSpeech.length) {
+            setState(() => _userSpeech = newText);
+          }
         }
       },
+      // Add these parameters for better web compatibility
+      listenMode: stt.ListenMode.confirmation,
+      cancelOnError: true,
+      partialResults: true,
+      onSoundLevelChange: null, // Disable to reduce callbacks
     );
   }
 
@@ -122,6 +148,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
       setState(() {
         _currentPassageIndex++;
         _userSpeech = '';
+        _lastFinalResult = '';
         _isListening = false;
       });
     } else {
@@ -178,95 +205,112 @@ class _ReadingScreenState extends State<ReadingScreen> {
 
       body: _finished
           ? _buildResultScreen()
-          : Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Passage ${_currentPassageIndex + 1} of ${_passages.length}',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: accentColor,
+          : SingleChildScrollView( // Wrap entire body in scrollable view
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Passage ${_currentPassageIndex + 1} of ${_passages.length}',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: accentColor,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 10),
-                  SizedBox(
-                    height: 200, // Set desired height
-                    child: SingleChildScrollView(
-                      padding: const EdgeInsets.all(8),
-                      child: Text(
-                        _passages[_currentPassageIndex],
-                        style: const TextStyle(
-                          fontSize: 16,
-                          height: 1.4, // Better line spacing
+                    const SizedBox(height: 10),
+                    Container(
+                      constraints: const BoxConstraints(
+                        maxHeight: 200,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.grey.shade300),
+                      ),
+                      child: SingleChildScrollView(
+                        padding: const EdgeInsets.all(12),
+                        child: Text(
+                          _passages[_currentPassageIndex],
+                          style: const TextStyle(
+                            fontSize: 16,
+                            height: 1.4,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 16),
-                  ElevatedButton.icon(
-                    onPressed: _isListening ? _stopListening : _startListening,
-                    icon: Icon(
-                      _isListening ? Icons.stop : Icons.mic,
-                      color: Colors.white,
+                    const SizedBox(height: 16),
+                    ElevatedButton.icon(
+                      onPressed: _isListening ? _stopListening : _startListening,
+                      icon: Icon(
+                        _isListening ? Icons.stop : Icons.mic,
+                        color: Colors.white,
+                      ),
+                      label: Text(
+                        _isListening ? "Stop Reading" : "Start Reading",
+                        style: const TextStyle(fontSize: 16),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: accentColor,
+                        foregroundColor: Colors.white,
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        minimumSize: const Size(double.infinity, 50),
+                      ),
                     ),
-                    label: Text(
-                      _isListening ? "Stop Reading" : "Start Reading",
-                      style: const TextStyle(fontSize: 16),
+                    const SizedBox(height: 16),
+                    Text(
+                      '🗣️ You said:',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: accentColor,
+                      ),
                     ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: accentColor,
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 14),
-                      minimumSize: const Size(double.infinity, 50),
+                    const SizedBox(height: 8),
+                    Container(
+                      constraints: const BoxConstraints(
+                        minHeight: 80,
+                        maxHeight: 150,
+                      ),
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.blueAccent),
+                      ),
+                      child: SingleChildScrollView(
+                        child: Text(
+                          _userSpeech.isNotEmpty
+                              ? _userSpeech
+                              : 'Waiting for input...',
+                          style: const TextStyle(fontSize: 15),
+                        ),
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    '🗣️ You said:',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: accentColor,
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: _userSpeech.isNotEmpty && !_isListening
+                          ? _submitCurrentPassage
+                          : null,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: primaryColor,
+                        foregroundColor: Colors.white,
+                        disabledBackgroundColor: Colors.grey.shade300,
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        minimumSize: const Size(double.infinity, 50),
+                      ),
+                      child: Text(
+                        _currentPassageIndex < _passages.length - 1
+                            ? 'Next Passage'
+                            : 'Finish Assessment',
+                        style: const TextStyle(fontSize: 16),
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 8),
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: Colors.blueAccent),
-                    ),
-                    child: Text(
-                      _userSpeech.isNotEmpty
-                          ? _userSpeech
-                          : 'Waiting for input...',
-                      style: const TextStyle(fontSize: 15),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: _userSpeech.isNotEmpty
-                        ? _submitCurrentPassage
-                        : null,
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: primaryColor,
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 14),
-                      minimumSize: const Size(double.infinity, 50),
-                    ),
-                    child: Text(
-                      _currentPassageIndex < _passages.length - 1
-                          ? 'Next Passage'
-                          : 'Finish Assessment',
-                      style: const TextStyle(fontSize: 16),
-                    ),
-                  ),
-                ],
+                    const SizedBox(height: 20), // Extra padding at bottom
+                  ],
+                ),
               ),
             ),
     );

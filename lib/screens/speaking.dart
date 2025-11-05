@@ -17,6 +17,10 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
   late FlutterTts _flutterTts;
   late AnimationController _pulseController;
   late Animation<double> _pulseAnimation;
+  
+  // Text editing controller for manual input
+  late TextEditingController _textController;
+  late FocusNode _textFocusNode;
 
   // State variables
   bool _isListening = false;
@@ -26,8 +30,11 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
   String _userSpeech = '';
   String _currentResponse = '';
   List<Map<String, String>> _conversationHistory = [];
+  
+  // For handling web speech recognition
+  String _lastFinalResult = '';
 
-  // Groq API configurationstatic
+  // Groq API configuration
   static final String _geminiApiKey = ApiConfig.geminiApiKey;
 
   @override
@@ -35,6 +42,8 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
     super.initState();
     _speech = stt.SpeechToText();
     _flutterTts = FlutterTts();
+    _textController = TextEditingController();
+    _textFocusNode = FocusNode();
     _initializeTts();
     _initializeAnimations();
   }
@@ -49,29 +58,10 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
     );
   }
 
-  // Future<void> setTtsSettings() async {
-  //   if (Platform.isAndroid) {
-  //     await _flutterTts.setSpeechRate(0.5); // Android is faster, so lower value
-  //   } else if (Platform.isIOS) {
-  //     await _flutterTts.setSpeechRate(0.4); // Tune as needed
-  //   } else {
-  //     await _flutterTts.setSpeechRate(0.8); // Web works fine
-  //   }
-
-  //   await _flutterTts.setPitch(1.0);
-  //   await _flutterTts.setVolume(1.0);
-  // }
-
   void _initializeTts() async {
     await _flutterTts.setLanguage("en-US");
     await _flutterTts.setPitch(1.0);
-    // await _flutterTts.setPitch(1.0);
-    // await _flutterTts.setSpeechRate(0.8);
-    // await _flutterTts.setVolume(1.0);
 
-    // setTtsSettings();
-
-    // Set completion handler to know when TTS is done
     _flutterTts.setCompletionHandler(() {
       setState(() {
         _isSpeaking = false;
@@ -84,7 +74,6 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
       });
     });
 
-    // Add error handler
     _flutterTts.setErrorHandler((msg) {
       print("TTS Error: $msg");
       setState(() {
@@ -109,7 +98,7 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
     }
   }
 
-  // Manual start listening
+  // Manual start listening - FIXED for web
   void _startListening() async {
     bool available = await _speech.initialize(
       onError: (error) {
@@ -132,7 +121,7 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
           _pulseController.stop();
           // Process the speech when listening stops
           if (_userSpeech.trim().isNotEmpty) {
-            _processUserInput(_userSpeech);
+            _textController.text = _userSpeech;
           }
         }
       },
@@ -151,18 +140,33 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
     setState(() {
       _isListening = true;
       _userSpeech = '';
+      _lastFinalResult = '';
     });
 
     _pulseController.repeat(reverse: true);
 
     _speech.listen(
       onResult: (val) {
+        // FIXED: Only update on final results to avoid repetition in web
         if (val.finalResult) {
-          setState(() => _userSpeech = val.recognizedWords);
+          setState(() {
+            _userSpeech = val.recognizedWords;
+            _lastFinalResult = val.recognizedWords;
+            _textController.text = val.recognizedWords;
+          });
         } else {
-          setState(() => _userSpeech = val.recognizedWords); 
+          // Show interim results only if no final result yet
+          if (_lastFinalResult.isEmpty) {
+            setState(() {
+              _userSpeech = val.recognizedWords;
+              _textController.text = val.recognizedWords;
+            });
+          }
         }
       },
+      // Add these parameters for better web support
+      pauseFor: Duration(seconds: 3),
+      listenFor: Duration(seconds: 30),
     );
   }
 
@@ -172,26 +176,45 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
     _speech.stop();
     _pulseController.stop();
 
+    // Update text controller with final speech
     if (_userSpeech.trim().isNotEmpty) {
-      _processUserInput(_userSpeech);
+      _textController.text = _userSpeech;
     }
   }
 
-  // Generate LLM response with focus on error correction and follow-up
-Future<String> _generateLLMResponse(String userInput) async {
-  try {
-    // Add user input to conversation history
-    _conversationHistory.add({'role': 'user', 'content': userInput});
-    
-    // Keep only last 6 messages to avoid token limits
-    if (_conversationHistory.length > 6) {
-      _conversationHistory = _conversationHistory.sublist(
-        _conversationHistory.length - 6,
+  // NEW: Submit text manually
+  void _submitText() {
+    String text = _textController.text.trim();
+    if (text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Please speak or type something first'),
+          backgroundColor: Colors.orange[400],
+        ),
       );
+      return;
     }
 
-    // Prepare the system instruction for Gemini
-    String systemInstruction = '''You are an English speaking tutor. Your job is to:
+    setState(() {
+      _userSpeech = text;
+    });
+    
+    _textFocusNode.unfocus();
+    _processUserInput(text);
+  }
+
+  // Generate LLM response
+  Future<String> _generateLLMResponse(String userInput) async {
+    try {
+      _conversationHistory.add({'role': 'user', 'content': userInput});
+      
+      if (_conversationHistory.length > 6) {
+        _conversationHistory = _conversationHistory.sublist(
+          _conversationHistory.length - 6,
+        );
+      }
+
+      String systemInstruction = '''You are an English speaking tutor. Your job is to:
 1. Analyze the user's speech for grammar, vocabulary, and pronunciation errors
 2. If there are errors, gently correct them by providing the correct version
 3. Always ask a follow-up question to continue the conversation
@@ -203,60 +226,59 @@ Format your response as:
 - Then, if needed, provide gentle corrections like "You could also say: [correct version]"
 - Finally, ask an engaging follow-up question''';
 
-    // Convert conversation history to Gemini format
-    List<Map<String, dynamic>> geminiContents = [];
-    
-    for (var message in _conversationHistory) {
-      String role = message['role'] == 'assistant' ? 'model' : 'user';
-      geminiContents.add({
-        'role': role,
-        'parts': [
-          {'text': message['content']}
-        ]
-      });
-    }
-
-    final response = await http.post(
-      Uri.parse('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$_geminiApiKey'),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: jsonEncode({
-        'system_instruction': {
-          'parts': [
-            {'text': systemInstruction}
-          ]
-        },
-        'contents': geminiContents,
-        'generationConfig': {
-          'maxOutputTokens': 100,
-          'temperature': 0.8,
-        },
-      }),
-    );
-
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
+      List<Map<String, dynamic>> geminiContents = [];
       
-      if (data['candidates'] != null && data['candidates'].isNotEmpty) {
-        String llmResponse = data['candidates'][0]['content']['parts'][0]['text'].trim();
-        
-        // Add LLM response to conversation history
-        _conversationHistory.add({'role': 'assistant', 'content': llmResponse});
-        
-        return llmResponse;
-      } else {
-        throw Exception('No response generated from Gemini API');
+      for (var message in _conversationHistory) {
+        String role = message['role'] == 'assistant' ? 'model' : 'user';
+        geminiContents.add({
+          'role': role,
+          'parts': [
+            {'text': message['content']}
+          ]
+        });
       }
-    } else {
-      throw Exception(
-        'Failed to get response from Gemini API: ${response.statusCode}',
+
+      final response = await http.post(
+        Uri.parse('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$_geminiApiKey'),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode({
+          'system_instruction': {
+            'parts': [
+              {'text': systemInstruction}
+            ]
+          },
+          'contents': geminiContents,
+          'generationConfig': {
+            'maxOutputTokens': 100,
+            'temperature': 0.8,
+          },
+        }),
       );
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        
+        if (data['candidates'] != null && data['candidates'].isNotEmpty) {
+          String llmResponse = data['candidates'][0]['content']['parts'][0]['text'].trim();
+          
+          _conversationHistory.add({'role': 'assistant', 'content': llmResponse});
+          
+          return llmResponse;
+        } else {
+          throw Exception('No response generated from Gemini API');
+        }
+      } else {
+        throw Exception(
+          'Failed to get response from Gemini API: ${response.statusCode}',
+        );
+      }
+    } catch (e) {
+      return 'Sorry, I encountered an error. Could you please repeat that?';
     }
-  } catch (e) {
-    return 'Sorry, I encountered an error. Could you please repeat that?';
   }
-}
+
   // Process user input and generate response
   void _processUserInput(String userInput) async {
     if (userInput.trim().isEmpty) return;
@@ -274,11 +296,15 @@ Format your response as:
         _isProcessing = false;
       });
 
-      // Small delay before speaking to ensure UI updates
       await Future.delayed(Duration(milliseconds: 500));
-
-      // Speak the LLM response
       await _speakText(llmResponse);
+      
+      // Clear text field for next input
+      _textController.clear();
+      setState(() {
+        _userSpeech = '';
+        _lastFinalResult = '';
+      });
     } catch (e) {
       setState(() {
         _currentResponse = 'Sorry, something went wrong. Please try again.';
@@ -296,9 +322,9 @@ Format your response as:
       _currentResponse =
           'Hello! I\'m your English tutor. Let\'s practice speaking together!';
       _userSpeech = '';
+      _textController.clear();
     });
 
-    // Speak the welcome message when session starts
     await _speakText(
       'Hello! I\'m your English tutor. Let\'s practice speaking together!',
     );
@@ -314,11 +340,13 @@ Format your response as:
       _currentResponse = 'Session ended. Tap "Start Session" to begin again.';
       _userSpeech = '';
       _conversationHistory.clear();
+      _textController.clear();
     });
 
     _speech.stop();
     _flutterTts.stop();
     _pulseController.stop();
+    _textFocusNode.unfocus();
   }
 
   @override
@@ -405,46 +433,77 @@ Format your response as:
                 padding: EdgeInsets.symmetric(horizontal: 12),
                 child: Column(
                   children: [
-                    // User Speech Display (Only show when active)
-                    if (_userSpeech.isNotEmpty)
-                      Container(
-                        width: double.infinity,
-                        padding: EdgeInsets.all(10),
-                        margin: EdgeInsets.only(bottom: 8),
-                        decoration: BoxDecoration(
-                          color: Colors.blue[50],
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: Colors.blue[200]!),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.person,
-                                  color: Colors.blue[700],
-                                  size: 14,
-                                ),
-                                SizedBox(width: 4),
-                                Text(
-                                  'You:',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.blue[700],
-                                    fontSize: 11,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 2),
-                            Text(
-                              _userSpeech,
-                              style: TextStyle(fontSize: 12, height: 1.2),
-                            ),
-                          ],
-                        ),
+                    // User Speech Input with TextField - SCROLLABLE
+                    Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.all(10),
+                      margin: EdgeInsets.only(bottom: 8),
+                      decoration: BoxDecoration(
+                        color: Colors.blue[50],
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.blue[200]!),
                       ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.person,
+                                color: Colors.blue[700],
+                                size: 14,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                'You:',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.blue[700],
+                                  fontSize: 11,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 6),
+                          TextField(
+                            controller: _textController,
+                            focusNode: _textFocusNode,
+                            enabled: _isSessionActive && !_isProcessing && !_isSpeaking,
+                            maxLines: 3,
+                            minLines: 1,
+                            style: TextStyle(fontSize: 12, height: 1.3),
+                            decoration: InputDecoration(
+                              hintText: 'Speak or type here...',
+                              hintStyle: TextStyle(fontSize: 12, color: Colors.grey[400]),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(6),
+                                borderSide: BorderSide(color: Colors.blue[300]!),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(6),
+                                borderSide: BorderSide(color: Colors.blue[300]!),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(6),
+                                borderSide: BorderSide(color: Colors.blue[500]!, width: 2),
+                              ),
+                              contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                              suffixIcon: _textController.text.isNotEmpty
+                                  ? IconButton(
+                                      icon: Icon(Icons.send, size: 18, color: Colors.blue[700]),
+                                      onPressed: _submitText,
+                                      padding: EdgeInsets.zero,
+                                    )
+                                  : null,
+                            ),
+                            onChanged: (value) {
+                              setState(() {}); // Rebuild to show/hide send button
+                            },
+                            onSubmitted: (value) => _submitText(),
+                          ),
+                        ],
+                      ),
+                    ),
 
                     // AI Response Display
                     Expanded(
@@ -553,7 +612,7 @@ Format your response as:
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        // Status indicators (more compact)
+        // Status indicators
         if (_isListening || _isProcessing || _isSpeaking)
           Container(
             margin: EdgeInsets.only(bottom: 8),
@@ -619,7 +678,7 @@ Format your response as:
             ),
           ),
 
-        // Main microphone button (smaller)
+        // Main microphone button
         GestureDetector(
           onTap: canTap
               ? (_isListening ? _stopListening : _startListening)
@@ -684,6 +743,8 @@ Format your response as:
     _speech.cancel();
     _flutterTts.stop();
     _pulseController.dispose();
+    _textController.dispose();
+    _textFocusNode.dispose();
     super.dispose();
   }
 }

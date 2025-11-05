@@ -18,6 +18,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
   int quizScore = 0;
   int readingScore = 0;
   int listeningScore = 0;
+  bool isSubmitted = false; // Add flag to track submission
   late String userId;
 
   static const String baseUrl = ApiConfig.baseUrl;
@@ -39,6 +40,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
       if (mounted && result != null && result is int) {
         setState(() {
           setter(true, result);
+          isSubmitted = false; // Reset submission flag when taking new assessment
         });
       }
     } catch (e) {
@@ -56,33 +58,62 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
   Future<void> submitAssessment() async {
     final overallScore = _calculateOverallProgress();
 
-    final response = await http.post(
-      Uri.parse("$baseUrl/$userId/submit-assessment"),
-      headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({
-        'userId': userId,
-        'quizScore': quizScore * 4,
-        'readingScore': readingScore,
-        'listeningScore': listeningScore,
-        'overallScore': overallScore,
-      }),
-    );
-    final snackText = response.statusCode == 200
-        ? 'Assessment submitted successfully!'
-        : 'Failed to submit assessment';
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text(snackText)));
+    try {
+      final response = await http.post(
+        Uri.parse("$baseUrl/$userId/submit-assessment"),
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({
+          'userId': userId,
+          'quizScore': quizScore * 4,
+          'readingScore': readingScore,
+          'listeningScore': listeningScore,
+          'overallScore': overallScore,
+          'replaceExisting': true, // Add flag to replace existing scores
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        setState(() {
+          isSubmitted = true; // Mark as submitted
+        });
+        
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Assessment submitted successfully!'),
+              backgroundColor: Colors.green,
+            ),
+          );
+        }
+      } else {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Failed to submit assessment: ${response.body}'),
+              backgroundColor: Colors.red,
+            ),
+          );
+        }
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Error submitting assessment: $e'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    }
   }
 
   Future<bool> _onWillPop() async {
-    // Check if any assessment is completed
-    bool hasProgress = quizDone || readingDone || listeningDone;
-    bool allDone = quizDone && readingDone && listeningDone;
-
-    if (!hasProgress) {
-      return true; // Allow back navigation if no progress
+    // Allow back navigation if submitted or no progress
+    if (isSubmitted || (!quizDone && !readingDone && !listeningDone)) {
+      return true;
     }
+
+    bool allDone = quizDone && readingDone && listeningDone;
 
     // Build the completed assessments list with scores
     List<Map<String, dynamic>> completedAssessments = [];
@@ -428,7 +459,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                     SizedBox(height: isDesktop ? 32 : 24),
 
                     // Completion Section
-                    if (allDone)
+                    if (allDone && !isSubmitted)
                       Column(
                         children: [
                           Text(
@@ -463,6 +494,37 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                               fontSize: isDesktop ? 18 : 16,
                               fontWeight: FontWeight.w500,
                             ),
+                          ),
+                        ],
+                      ),
+                    
+                    // Show success message after submission
+                    if (isSubmitted)
+                      Column(
+                        children: [
+                          Icon(
+                            Icons.check_circle,
+                            size: isDesktop ? 80 : 60,
+                            color: Colors.green[600],
+                          ),
+                          SizedBox(height: isDesktop ? 16 : 12),
+                          Text(
+                            "✅ Assessment Submitted Successfully!",
+                            style: TextStyle(
+                              fontSize: isDesktop ? 20 : 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green[800],
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: isDesktop ? 12 : 8),
+                          Text(
+                            "Your scores have been saved. You can now go back.",
+                            style: TextStyle(
+                              fontSize: isDesktop ? 16 : 14,
+                              color: Colors.black54,
+                            ),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
