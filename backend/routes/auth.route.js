@@ -1,28 +1,21 @@
 const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
-const User = require("../models/user.model");
-const nodemailer = require("nodemailer");
 const crypto = require("crypto");
+const { Resend } = require("resend");
+const User = require("../models/user.model");
 
-const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret";
-const otpStore = new Map(); // Temporary store
+const resend = new Resend(process.env.RESEND_API_KEY);
+const JWT_SECRET = process.env.JWT_SECRET || "kskill_super_secret_2025";
+const otpStore = new Map();
 
 function generateOTP() {
   return crypto.randomInt(100000, 999999).toString();
 }
 
 async function sendOTP(email, otp) {
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "kskill2025@gmail.com",
-      pass: "gaqk urkk ubxo rkvt ", // Use Gmail App Password
-    },
-  });
-
-  await transporter.sendMail({
-    from: "kskill2025@gmail.com",
+  await resend.emails.send({
+    from: "K-Skill <onboarding@resend.dev>", 
     to: email,
     subject: "OTP for K-Skill verification",
     text: `Your OTP code is ${otp}. It is valid for 5 minutes.`,
@@ -37,57 +30,81 @@ router.post("/send-otp", async (req, res) => {
       return res.status(400).json({ message: "Email is required." });
     }
 
-    // 🔹 Check if email exists in database
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(404).json({ message: "Email already registered." });
     }
 
-    // 🔹 Generate OTP
     const otp = generateOTP();
-    otpStore.set(email, { otp, expires: Date.now() + 5 * 60 * 1000 });
+    otpStore.set(email, { otp, expires: Date.now() + 5 * 60 * 1000 }); // expires in 5 minutes
 
-    // 🔹 Send OTP
     await sendOTP(email, otp);
 
-    res.json({ message: "OTP sent successfully." });
+    res.status(200).json({ message: "OTP sent successfully." });
   } catch (error) {
-    console.error("Error sending OTP:", error);
-    res
-      .status(500)
-      .json({ message: "Failed to send OTP.", error: error.message });
+    console.error("Resend error:", error);
+    res.status(500).json({
+      message: "Failed to send OTP.",
+      error: error.message || "Unknown error",
+    });
   }
 });
-
 
 router.post("/verify-otp", (req, res) => {
   const { email, otp } = req.body;
+
   const record = otpStore.get(email);
-  if (!record || Date.now() > record.expires || record.otp !== otp) {
+  if (!record) {
+    return res.status(400).json({ success: false, message: "OTP not found." });
+  }
+
+  if (Date.now() > record.expires) {
+    otpStore.delete(email);
     return res
       .status(400)
-      .json({ success: false, message: "Invalid or expired OTP" });
+      .json({ success: false, message: "OTP has expired." });
   }
+
+  if (record.otp !== otp) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Invalid OTP provided." });
+  }
+
   otpStore.delete(email);
-  res.json({ success: true, message: "Email verified" });
+  res.status(200).json({ success: true, message: "Email verified successfully." });
 });
 
 router.post("/reset-password", async (req, res) => {
-  const { email, newPassword } = req.body;
+  try {
+    const { email, newPassword } = req.body;
 
-  await User.findOneAndUpdate(
-    { email },
-    {
-      password: newPassword,
-      otp: null,
-      otpExpires: null,
+    if (!email || !newPassword) {
+      return res
+        .status(400)
+        .json({ message: "Email and new password are required." });
     }
-  );
 
-  res.status(200).json({ message: "Password updated successfully" });
+    const updatedUser = await User.findOneAndUpdate(
+      { email },
+      {
+        password: newPassword,
+        otp: null,
+        otpExpires: null,
+      }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found." });
+    }
+
+    res.status(200).json({ message: "Password updated successfully." });
+  } catch (error) {
+    console.error("Reset password error:", error);
+    res.status(500).json({ message: "Failed to reset password." });
+  }
 });
 
-// ✅ Signup Route (no hashing)
 router.post("/signup", async (req, res) => {
   try {
     const {
@@ -99,6 +116,12 @@ router.post("/signup", async (req, res) => {
       school,
       address,
     } = req.body;
+
+    if (!email || !password || !name) {
+      return res
+        .status(400)
+        .json({ message: "Name, email, and password are required." });
+    }
 
     const existingUser = await User.findOne({ email });
     if (existingUser)
@@ -121,48 +144,50 @@ router.post("/signup", async (req, res) => {
     });
 
     await user.save();
-    res
-      .status(201)
-      .json({ message: "User registered successfully.", userId: user._id });
+    res.status(201).json({
+      message: "User registered successfully.",
+      userId: user._id,
+    });
   } catch (err) {
+    console.error("Signup error:", err);
     res.status(500).json({ error: err.message });
   }
 });
 
-// Login route
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Find user
+    if (!email || !password) {
+      return res.status(400).json({ message: "Email and password required." });
+    }
+
     const user = await User.findOne({ email });
     if (!user || user.password !== password) {
       return res.status(400).json({ message: "Invalid email or password." });
     }
 
-    // Streak calculation
     const today = new Date();
     const lastLogin = user.lastLogin;
 
     if (lastLogin) {
       const last = new Date(lastLogin);
-      const diffTime = today.setHours(0, 0, 0, 0) - last.setHours(0, 0, 0, 0);
-      const diffDays = diffTime / (1000 * 60 * 60 * 24);
+      const diffDays =
+        (today.setHours(0, 0, 0, 0) - last.setHours(0, 0, 0, 0)) /
+        (1000 * 60 * 60 * 24);
 
       if (diffDays === 1) {
-        user.currentStreak += 1; // ✅ yesterday
+        user.currentStreak += 1;
       } else if (diffDays > 1) {
-        user.currentStreak = 1; // ✅ missed a day
-      } // else: same day → do nothing
+        user.currentStreak = 1;
+      }
     } else {
-      user.currentStreak = 1; // ✅ first login
+      user.currentStreak = 1;
     }
 
-    // Update lastLogin
     user.lastLogin = new Date();
     await user.save();
 
-    // Generate JWT token
     const token = jwt.sign(
       { userId: user._id, email: user.email },
       JWT_SECRET,
@@ -180,6 +205,7 @@ router.post("/login", async (req, res) => {
       },
     });
   } catch (err) {
+    console.error("Login error:", err);
     res.status(500).json({ error: err.message });
   }
 });
