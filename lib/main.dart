@@ -4,6 +4,7 @@ import 'package:K_Skill/screens/discourse.dart';
 import 'package:K_Skill/screens/games.dart';
 import 'package:K_Skill/screens/welcome.dart';
 import 'package:K_Skill/screens/splash_screen.dart';
+import 'package:K_Skill/screens/widgets/help.dart';
 import 'package:K_Skill/services/app_usage_tracker.dart';
 import 'package:flutter/material.dart';
 import 'package:K_Skill/assessment/assessment_screen.dart';
@@ -16,8 +17,7 @@ import 'package:K_Skill/screens/levels.dart';
 import 'package:K_Skill/screens/profile.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final AppUsageTracker _usageTracker = AppUsageTracker(); // global tracker instance
-
+final AppUsageTracker _usageTracker = AppUsageTracker(); 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -106,6 +106,8 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
             RouteAwareWrapper(routeName: '/discourse', child: Discourse()),
         '/games': (context) =>
             RouteAwareWrapper(routeName: '/games', child: GameScreen()),
+        '/help': (context) =>
+            RouteAwareWrapper(routeName: '/help', child: HelpScreen()),
       },
     );
   }
@@ -197,6 +199,14 @@ class _MyKSkillAppState extends State<MyKSkillApp> with WidgetsBindingObserver {
           builder: (_) => RouteAwareWrapper(
             routeName: '/academic',
             child: AcademicsScreen(),
+          ),
+          settings: settings,
+        );
+        case '/help':
+        return MaterialPageRoute(
+          builder: (_) => RouteAwareWrapper(
+            routeName: '/help',
+            child: HelpScreen(),
           ),
           settings: settings,
         );

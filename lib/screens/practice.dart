@@ -424,18 +424,42 @@ class _PracticeScreenState extends State<PracticeScreen> {
     });
   }
 
+  String _accumulatedSpeech = '';
+
   Future<void> startListening() async {
     bool available = await speech.initialize();
     if (available) {
-      setState(() => isListening = true);
+      setState(() {
+        isListening = true;
+        spokenText = '';
+        _accumulatedSpeech = '';
+      });
+
       speech.listen(
         onResult: (val) {
-          if (val.finalResult) {
-            setState(() => spokenText = val.recognizedWords);
-          } else {
-            setState(() => spokenText = val.recognizedWords);
-          }
+          setState(() {
+            if (val.finalResult) {
+              final newText = val.recognizedWords;
+              if (newText.isNotEmpty) {
+                if (_accumulatedSpeech.isEmpty) {
+                  _accumulatedSpeech = newText;
+                } else {
+                  _accumulatedSpeech = '$_accumulatedSpeech $newText';
+                }
+                spokenText = _accumulatedSpeech;
+              }
+            } else {
+              if (_accumulatedSpeech.isEmpty) {
+                spokenText = val.recognizedWords;
+              } else {
+                spokenText = '$_accumulatedSpeech ${val.recognizedWords}';
+              }
+            }
+          });
         },
+        listenMode: stt.ListenMode.confirmation,
+        cancelOnError: true,
+        partialResults: true,
       );
     }
   }
@@ -463,8 +487,6 @@ class _PracticeScreenState extends State<PracticeScreen> {
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 16),
-
-          // Reading passage container
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(16),
@@ -483,10 +505,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
               textAlign: TextAlign.left,
             ),
           ),
-
           const SizedBox(height: 24),
-
-          // Listening status indicator
           Container(
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
             decoration: BoxDecoration(
@@ -519,10 +538,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
               ],
             ),
           ),
-
           const SizedBox(height: 20),
-
-          // Microphone button with clear labeling
           Column(
             children: [
               GestureDetector(
@@ -559,10 +575,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
               ),
             ],
           ),
-
           const SizedBox(height: 20),
-
-          // Live transcription while listening
           if (isListening && spokenText.isNotEmpty)
             Container(
               width: double.infinity,
@@ -601,8 +614,6 @@ class _PracticeScreenState extends State<PracticeScreen> {
                 ],
               ),
             ),
-
-          // Pulsing animation while listening (without text)
           if (isListening && spokenText.isEmpty)
             Container(
               width: double.infinity,
@@ -635,13 +646,8 @@ class _PracticeScreenState extends State<PracticeScreen> {
                 ],
               ),
             ),
-
           const SizedBox(height: 20),
-
-          // Reading result card - always visible when there's content and not listening
           if (!isListening && spokenText.isNotEmpty) _buildReadingResultCard(),
-
-          // Extra padding at bottom to ensure submit button is always visible
           const SizedBox(height: 40),
         ],
       ),

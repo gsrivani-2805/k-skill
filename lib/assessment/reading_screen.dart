@@ -15,19 +15,19 @@ class _ReadingScreenState extends State<ReadingScreen> {
   late stt.SpeechToText _speech;
   bool _isListening = false;
   String _userSpeech = '';
-  String _lastFinalResult = ''; // Track last finalized result
+  String _lastFinalResult = '';
   List<String> _passages = [];
   int _currentPassageIndex = 0;
-  List<double> _scores = [];
+  final List<double> _scores = [];
   bool _loading = true;
   String? _loadError;
   bool _finished = false;
   double _finalScore = 0.0;
+  String _accumulatedSpeech = '';
 
-  // UI Theme Colors (matched to your reference image)
-  final Color primaryColor = Color(0xFF2196F3); // AppBar blue
-  final Color accentColor = Color(0xFF1565C0); // Dark blue
-  final Color lightBlue = Color(0xFFE3F2FD); // Light background
+  final Color primaryColor = Color(0xFF2196F3);
+  final Color accentColor = Color(0xFF1565C0);
+  final Color lightBlue = Color(0xFFE3F2FD);
 
   @override
   void initState() {
@@ -85,41 +85,37 @@ class _ReadingScreenState extends State<ReadingScreen> {
     setState(() {
       _isListening = true;
       _userSpeech = '';
+      _accumulatedSpeech = '';
       _lastFinalResult = '';
     });
 
     _speech.listen(
       onResult: (val) {
-        // Only update on final results to avoid duplication on web
-        if (val.finalResult) {
-          final newText = val.recognizedWords;
-          // Prevent duplicate updates
-          if (newText != _lastFinalResult) {
-            setState(() {
-              // Append new text to existing speech
-              if (_userSpeech.isEmpty) {
-                _userSpeech = newText;
+        setState(() {
+          if (val.finalResult) {
+            final newText = val.recognizedWords;
+            if (newText.isNotEmpty && newText != _lastFinalResult) {
+              if (_accumulatedSpeech.isEmpty) {
+                _accumulatedSpeech = newText;
               } else {
-                // Only append if it's actually new content
-                _userSpeech = newText;
+                _accumulatedSpeech = '$_accumulatedSpeech $newText';
               }
+              _userSpeech = _accumulatedSpeech;
               _lastFinalResult = newText;
-            });
+            }
+          } else {
+            if (_accumulatedSpeech.isEmpty) {
+              _userSpeech = val.recognizedWords;
+            } else {
+              _userSpeech = '$_accumulatedSpeech ${val.recognizedWords}';
+            }
           }
-        } else {
-          // For intermediate results, only update if significantly different
-          // This prevents rapid flickering on web
-          final newText = val.recognizedWords;
-          if (newText != _userSpeech && newText.length > _userSpeech.length) {
-            setState(() => _userSpeech = newText);
-          }
-        }
+        });
       },
-      // Add these parameters for better web compatibility
       listenMode: stt.ListenMode.confirmation,
       cancelOnError: true,
       partialResults: true,
-      onSoundLevelChange: null, // Disable to reduce callbacks
+      onSoundLevelChange: null,
     );
   }
 
@@ -139,7 +135,6 @@ class _ReadingScreenState extends State<ReadingScreen> {
         .trim()
         .toLowerCase();
 
-    // Use string similarity (returns value from 0 to 1)
     double similarity = StringSimilarity.compareTwoStrings(original, spoken);
     double score = similarity;
     _scores.add(score);
@@ -148,6 +143,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
       setState(() {
         _currentPassageIndex++;
         _userSpeech = '';
+        _accumulatedSpeech = '';
         _lastFinalResult = '';
         _isListening = false;
       });
@@ -161,10 +157,8 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   void _submitScoreAndContinue() {
-    // Return score to assessment screen
     Navigator.pop(context, (_finalScore * 100).toInt());
 
-    // Navigate to listening practice
     Future.delayed(Duration.zero, () {
       Navigator.pushNamed(context, '/listening');
     });
@@ -205,7 +199,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
 
       body: _finished
           ? _buildResultScreen()
-          : SingleChildScrollView( // Wrap entire body in scrollable view
+          : SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
@@ -221,9 +215,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
                     ),
                     const SizedBox(height: 10),
                     Container(
-                      constraints: const BoxConstraints(
-                        maxHeight: 200,
-                      ),
+                      constraints: const BoxConstraints(maxHeight: 200),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
@@ -233,16 +225,15 @@ class _ReadingScreenState extends State<ReadingScreen> {
                         padding: const EdgeInsets.all(12),
                         child: Text(
                           _passages[_currentPassageIndex],
-                          style: const TextStyle(
-                            fontSize: 16,
-                            height: 1.4,
-                          ),
+                          style: const TextStyle(fontSize: 16, height: 1.4),
                         ),
                       ),
                     ),
                     const SizedBox(height: 16),
                     ElevatedButton.icon(
-                      onPressed: _isListening ? _stopListening : _startListening,
+                      onPressed: _isListening
+                          ? _stopListening
+                          : _startListening,
                       icon: Icon(
                         _isListening ? Icons.stop : Icons.mic,
                         color: Colors.white,
@@ -308,7 +299,7 @@ class _ReadingScreenState extends State<ReadingScreen> {
                         style: const TextStyle(fontSize: 16),
                       ),
                     ),
-                    const SizedBox(height: 20), // Extra padding at bottom
+                    const SizedBox(height: 20),
                   ],
                 ),
               ),

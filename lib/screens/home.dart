@@ -1,4 +1,5 @@
 import 'package:K_Skill/screens/widgets/reading_comprehension.dart';
+import 'package:K_Skill/services/app_usage_tracker.dart';
 import 'package:flutter/material.dart';
 import 'package:K_Skill/assessment/assessment_screen.dart';
 import 'package:K_Skill/screens/widgets/dictionary_widget.dart';
@@ -16,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   String? userName;
   int? currentStreak;
   int currentBottomNavIndex = 0;
+  final usageTracker = AppUsageTracker();
 
   @override
   void initState() {
@@ -40,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
         automaticallyImplyLeading: false,
         title: Container(child: _buildHeader()),
       ),
-      // rest of your code remains the same...
+      drawer: _buildDrawer(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -50,15 +52,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Main Headline and Learning Modules Section - Responsive Layout
                     _buildResponsiveMainSection(),
                     const SizedBox(height: 32),
 
-                    // Dictionary Widget (Existing)
                     const DictionaryWidget(),
                     const SizedBox(height: 24),
 
-                    // Vocabulary Section Title
                     const Text(
                       'Vocabulary Topics',
                       style: TextStyle(
@@ -88,15 +87,13 @@ class _HomeScreenState extends State<HomeScreen> {
         bool isSmallScreen = constraints.maxWidth < 400;
         double avatarSize = isSmallScreen ? 40 : 45;
         double welcomeTextSize = isSmallScreen ? 20 : 22;
-
         return Container(
           padding: EdgeInsets.symmetric(vertical: 12),
           child: Row(
             children: [
-              // Profile Avatar
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/profile');
+                  Scaffold.of(context).openDrawer();
                 },
                 child: Container(
                   width: avatarSize,
@@ -117,16 +114,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   child: Icon(
-                    Icons.person,
+                    Icons.menu,
                     color: Colors.white,
                     size: isSmallScreen ? 20 : 24,
                   ),
                 ),
               ),
-
               const SizedBox(width: 12),
-
-              // Welcome message - takes up available space
               Expanded(
                 child: Text(
                   '${_getTimeBasedGreeting()}, ${userName ?? "User"}!',
@@ -139,8 +133,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
-
-              // Streak Counter
               Container(
                 padding: EdgeInsets.symmetric(
                   horizontal: isSmallScreen ? 8 : 12,
@@ -178,6 +170,266 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  Widget _buildDrawer() {
+    return Drawer(
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.blue.shade50, Colors.white],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+        child: SafeArea(
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+                child: Column(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset(
+                        'images/kskill_logo.png',
+                        height: 150,
+                        width: 150,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    // const SizedBox(height: 10),
+                    // Text(
+                    //   userName ?? 'Student',
+                    //   style: TextStyle(
+                    //     fontSize: 16,
+                    //     color: Colors.white.withOpacity(0.9),
+                    //   ),
+                    // ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: ListView(
+                  padding: EdgeInsets.symmetric(vertical: 8),
+                  children: [
+                    _buildDrawerItem(
+                      icon: Icons.home,
+                      title: 'Home',
+                      color: Colors.blue,
+                      onTap: () {
+                        //Navigator.pop(context);
+                        Navigator.pushNamed(context, '/home');
+                      },
+                    ),
+                    _buildDrawerItem(
+                      icon: Icons.book,
+                      title: 'Learn',
+                      color: Colors.green,
+                      onTap: () {
+                        //Navigator.pop(context);
+                        Navigator.pushNamed(context, '/levels');
+                      },
+                    ),
+                    _buildDrawerItem(
+                      icon: Icons.mic,
+                      title: 'Practice',
+                      color: Colors.purple,
+                      onTap: () {
+                        //Navigator.pop(context);
+                        Navigator.pushNamed(context, '/practice');
+                      },
+                    ),
+                    _buildDrawerItem(
+                      icon: Icons.play_circle_outline,
+                      title: 'Games',
+                      color: Colors.orange,
+                      onTap: () {
+                        //Navigator.pop(context);
+                        Navigator.pushNamed(context, '/games');
+                      },
+                    ),
+                    _buildDrawerItem(
+                      icon: Icons.person,
+                      title: 'Profile',
+                      color: Colors.indigo,
+                      onTap: () {
+                        //Navigator.pop(context);
+                        Navigator.pushNamed(context, '/profile');
+                      },
+                    ),
+                    // Divider(
+                    //   height: 32,
+                    //   thickness: 1,
+                    //   indent: 16,
+                    //   endIndent: 16,
+                    // ),
+                    // _buildDrawerItem(
+                    //   icon: Icons.emoji_events_rounded,
+                    //   title: 'Achievements',
+                    //   color: Colors.amber,
+                    //   onTap: () {
+                    //     Navigator.pop(context);
+                    //     Navigator.pushNamed(context, '/achievements');
+                    //   },
+                    // ),
+                    // _buildDrawerItem(
+                    //   icon: Icons.leaderboard_rounded,
+                    //   title: 'Leaderboard',
+                    //   color: Colors.red,
+                    //   onTap: () {
+                    //     Navigator.pop(context);
+                    //     Navigator.pushNamed(context, '/leaderboard');
+                    //   },
+                    // ),
+                    // _buildDrawerItem(
+                    //   icon: Icons.calendar_today_rounded,
+                    //   title: 'My Schedule',
+                    //   color: Colors.teal,
+                    //   onTap: () {
+                    //     Navigator.pop(context);
+                    //     Navigator.pushNamed(context, '/schedule');
+                    //   },
+                    // ),
+                    // _buildDrawerItem(
+                    //   icon: Icons.school_rounded,
+                    //   title: 'My Courses',
+                    //   color: Colors.deepPurple,
+                    //   onTap: () {
+                    //     Navigator.pop(context);
+                    //     Navigator.pushNamed(context, '/courses');
+                    //   },
+                    // ),
+                    Divider(
+                      height: 32,
+                      thickness: 1,
+                      indent: 16,
+                      endIndent: 16,
+                    ),
+                    // _buildDrawerItem(
+                    //   icon: Icons.settings_rounded,
+                    //   title: 'Settings',
+                    //   color: Colors.grey,
+                    //   onTap: () {
+                    //     Navigator.pop(context);
+                    //     Navigator.pushNamed(context, '/settings');
+                    //   },
+                    // ),
+                    _buildDrawerItem(
+                      icon: Icons.help_outline_rounded,
+                      title: 'Help',
+                      color: Colors.blueGrey,
+                      onTap: () {
+                        Navigator.pop(context);
+                        Navigator.pushNamed(context, '/help');
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              // Logout Button
+              Padding(
+                padding: EdgeInsets.all(16),
+                child: ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.pop(context);
+                    _showLogoutDialog();
+                  },
+                  icon: Icon(Icons.logout_rounded),
+                  label: Text('Logout'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red.shade400,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    elevation: 2,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDrawerItem({
+    required IconData icon,
+    required String title,
+    required Color color,
+    required VoidCallback onTap,
+  }) {
+    return ListTile(
+      leading: Container(
+        padding: EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          color: color.withOpacity(0.1),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Icon(icon, color: color, size: 24),
+      ),
+      title: Text(
+        title,
+        style: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+          color: Colors.grey[800],
+        ),
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios,
+        size: 16,
+        color: Colors.grey[400],
+      ),
+      onTap: onTap,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+    );
+  }
+
+  void _showLogoutDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          title: Row(
+            children: [
+              Icon(Icons.logout_rounded, color: Colors.red),
+              SizedBox(width: 8),
+              Text('Logout'),
+            ],
+          ),
+          content: Text('Are you sure you want to logout?'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text('Cancel'),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                Navigator.pop(context);
+                await usageTracker.stopTracking();
+                await AppUsageTracker.syncUsageToServer();
+                await SharedPrefsService.logout();
+                Navigator.of(
+                  context,
+                ).pushNamedAndRemoveUntil('/welcome', (route) => false);
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+                foregroundColor: Colors.white,
+              ),
+              child: Text('Logout'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   String _getTimeBasedGreeting() {
     final hour = DateTime.now().hour;
     if (hour < 12) {
@@ -199,16 +451,10 @@ class _HomeScreenState extends State<HomeScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Welcome Banner Image
-          Expanded(
-            flex: 1,
-            child: _buildMainHeadline(),
-          ),
+          Expanded(flex: 1, child: _buildMainHeadline()),
           const SizedBox(width: 24),
           // Practice Modules
-          Expanded(
-            flex: 1,
-            child: _buildLearningModules(),
-          ),
+          Expanded(flex: 1, child: _buildLearningModules()),
         ],
       );
     } else {

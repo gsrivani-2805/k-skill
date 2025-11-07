@@ -46,7 +46,6 @@ class UserProfile {
 
     final scores = json['assessmentScores'] as Map<String, dynamic>? ?? {};
 
-    // ✅ Safely parse completedLessons with score data
     final completedLessonList = lessons.map((lesson) {
       return {
         'lessonId': lesson['lessonId'] ?? '',
@@ -86,6 +85,7 @@ class _ProfileScreenState extends State<ProfileScreen>
   final Color lightBackground = Colors.grey[200]!;
 
   static String baseUrl = ApiConfig.baseUrl;
+  final usageTracker = AppUsageTracker();
 
   @override
   void initState() {
@@ -166,19 +166,10 @@ class _ProfileScreenState extends State<ProfileScreen>
     return [profile, lessonsJson, extracted[1]];
   }
 
-  final usageTracker = AppUsageTracker();
-
   Future<void> _logout() async {
-    // Stop tracking and finalize session duration
     await usageTracker.stopTracking();
-
-    // Sync usage BEFORE clearing prefs (ensure userId still exists)
     await AppUsageTracker.syncUsageToServer();
-
-    // Logout (clears SharedPreferences)
     await SharedPrefsService.logout();
-
-    // Navigate out
     Navigator.of(context).pushNamedAndRemoveUntil('/welcome', (route) => false);
   }
 
