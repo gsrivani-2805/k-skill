@@ -315,7 +315,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     // ),
                     _buildDrawerItem(
                       icon: Icons.help_outline_rounded,
-                      title: 'Help',
+                      title: 'Help & Guide',
                       color: Colors.blueGrey,
                       onTap: () {
                         Navigator.pop(context);

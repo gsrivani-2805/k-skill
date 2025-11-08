@@ -196,8 +196,7 @@
               "text": "A diphthong is a single vowel sound that begins as one vowel sound and glides into another within the same syllable. It's often described as a 'gliding vowel' or a 'double vowel sound'.",
               "examples": [],
               "usage_examples": [],
-              "media": {
-              },
+              "media": {},
               "table": {
                 "title": "Common Diphthongs",
                 "headers": ["Diphthong Sound", "Examples", "Sound Moves From"],
@@ -247,8 +246,7 @@
               "text": "Short vowels are quick, relaxed sounds made by a single vowel, typically found in closed syllables (syllables ending in a consonant). They do not 'say their name'.",
               "examples": [],
               "usage_examples": [],
-              "media": {
-              },
+              "media": {},
               "table": {
                 "title": "Short Vowel Sounds",
                 "headers": ["Vowel", "Sound", "Example Words"],
@@ -270,8 +268,7 @@
               "text": "Long vowels 'say their name' (e.g., the 'a' in 'cake' sounds like the letter 'A'). They are often found in open syllables (syllables ending in a vowel) or with a silent 'e' at the end of the word (e.g., 'kite').",
               "examples": [],
               "usage_examples": [],
-              "media": {
-              },
+              "media": {},
               "table": {
                 "title": "Long Vowel Sounds",
                 "headers": ["Vowel", "Sound", "Example Words"],
@@ -328,12 +325,33 @@
                 "bang, fang, hang, rang, sang",
                 "bath, math, path, with, cloth"
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
       ]
+    }
+  ],
+  "youtube_resources": [
+    {
+      "title": "26-44 Sounds Phonics",
+      "url": "https://youtu.be/41m-igTNUkE?si=FzBS0W_U9P2twZUO"
+    },
+    {
+      "title": "Pronounciation of Letters",
+      "url": "https://youtu.be/ChqnN3cKzXQ?si=PduWJTc1NyuFTxja"
+    },
+    {
+      "title": "Digraphs",
+      "url": "https://youtu.be/d4PKjUFyyoM?si=p5RVAaQCpc3W_B-O"
+    },
+    {
+      "title": "Diphthongs",
+      "url": "https://youtu.be/PluqmHMSqZk?si=dyYJV2EAqYcGgGf2"
+    },
+    {
+      "title": "R-Controlled Sounds",
+      "url": "https://youtu.be/iak7h6kLZKs?si=uNPZYpiGwg9WrqqX"
     }
   ]
 }
