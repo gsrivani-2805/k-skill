@@ -310,5 +310,19 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Interaction with Teacher and Student",
+      "url": "https://youtu.be/fcTbOjd7cNc?si=i_XdZkRc7mzhCDrS"
+    },
+    {
+      "title": "Self Introduction",
+      "url": "https://youtu.be/VNGZYThinYM?si=8_-ucAZnHZAv9MYi"
+    },
+    {
+      "title": "Telugu to english translation",
+      "url": "https://youtu.be/w_aRBWg7Eeo?si=Su2Xp9fzD-aDK6_j"
+    }
   ]
 }

@@ -424,7 +424,12 @@
               },
               "table": {
                 "title": "Quick Comparison",
-                "headers": ["Type", "Same Spelling?", "Same Sound?", "Different Meaning?"],
+                "headers": [
+                  "Type",
+                  "Same Spelling?",
+                  "Same Sound?",
+                  "Different Meaning?"
+                ],
                 "rows": [
                   ["Homophone", "No", "Yes", "Yes"],
                   ["Homograph", "Yes", "Maybe", "Yes"],
@@ -436,6 +441,11 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Structure of the three types: Homophones, Homographes, Homonyms",
+      "url": "https://youtu.be/f_7FR59AKmQ?si=7A4cGPrWBS3H5PoT"
+    }
   ]
 }
-

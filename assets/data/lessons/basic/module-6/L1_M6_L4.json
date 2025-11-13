@@ -306,12 +306,36 @@
                 "rows": [
                   ["Diwali", "Lights", "Lighting diyas, fireworks, praying"],
                   ["Holi", "Colors", "Playing with colors, eating sweets"],
-                  ["Eid", "Joy & Sharing", "Praying, wearing new clothes, feasting"],
-                  ["Makar Sankranti", "Harvest/Kites", "Kite flying, eating special sweets"],
-                  ["Pongal", "Harvest/Sun", "Cooking special rice, worshipping the sun"],
-                  ["Baisakhi", "Harvest/Dance", "Folk dances like Bhangra, fairs"],
-                  ["Christmas", "Birth of Jesus", "Decorating trees, exchanging gifts, singing carols"],
-                  ["Raksha Bandhan", "Brother-Sister Bond", "Sister ties a rakhi on brother's wrist"]
+                  [
+                    "Eid",
+                    "Joy & Sharing",
+                    "Praying, wearing new clothes, feasting"
+                  ],
+                  [
+                    "Makar Sankranti",
+                    "Harvest/Kites",
+                    "Kite flying, eating special sweets"
+                  ],
+                  [
+                    "Pongal",
+                    "Harvest/Sun",
+                    "Cooking special rice, worshipping the sun"
+                  ],
+                  [
+                    "Baisakhi",
+                    "Harvest/Dance",
+                    "Folk dances like Bhangra, fairs"
+                  ],
+                  [
+                    "Christmas",
+                    "Birth of Jesus",
+                    "Decorating trees, exchanging gifts, singing carols"
+                  ],
+                  [
+                    "Raksha Bandhan",
+                    "Brother-Sister Bond",
+                    "Sister ties a rakhi on brother's wrist"
+                  ]
                 ]
               }
             }
@@ -647,6 +671,27 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Festivals",
+      "url": "https://youtu.be/omcGccw6c58?si=rJWBkc9b9VHt2VLv"
+    },
+    {
+      "title": "Diwali",
+      "url": "https://youtu.be/cvCv7kTcRXI?si=hOvavXSg6O6K84FK"
+    },
+    {
+      "title": "Holi",
+      "url": "https://youtu.be/YJktClBzP10?si=_srA2o9KLx5N7J9w"
+    },
+    {
+      "title": "Eid",
+      "url": "https://youtu.be/6OF4HEGNBRQ?si=oJj-sdjR_DmXxSm4"
+    },
+    {
+      "title": "Sankranthi",
+      "url": "https://youtu.be/G2lawotkn1U?si=tNXi6KXGHQpRKZvE"
+    }
   ]
 }
-

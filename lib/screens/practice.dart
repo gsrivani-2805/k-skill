@@ -425,43 +425,59 @@ class _PracticeScreenState extends State<PracticeScreen> {
   }
 
   String _accumulatedSpeech = '';
+  late String _lastFinalResult = '';
 
   Future<void> startListening() async {
-    bool available = await speech.initialize();
-    if (available) {
-      setState(() {
-        isListening = true;
-        spokenText = '';
-        _accumulatedSpeech = '';
-      });
+    bool available = await speech.initialize(
+      onStatus: (status) {
+        debugPrint('Speech status: $status');
+        if (status == 'notListening' && isListening) {
+          setState(() => isListening = false);
+        }
+      },
+      onError: (error) {
+        debugPrint('Speech error: $error');
+        setState(() => isListening = false);
+      },
+    );
 
-      speech.listen(
-        onResult: (val) {
-          setState(() {
-            if (val.finalResult) {
-              final newText = val.recognizedWords;
-              if (newText.isNotEmpty) {
-                if (_accumulatedSpeech.isEmpty) {
-                  _accumulatedSpeech = newText;
-                } else {
-                  _accumulatedSpeech = '$_accumulatedSpeech $newText';
-                }
-                spokenText = _accumulatedSpeech;
-              }
-            } else {
-              if (_accumulatedSpeech.isEmpty) {
-                spokenText = val.recognizedWords;
-              } else {
-                spokenText = '$_accumulatedSpeech ${val.recognizedWords}';
-              }
-            }
-          });
-        },
-        listenMode: stt.ListenMode.confirmation,
-        cancelOnError: true,
-        partialResults: true,
+    if (!available) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Speech recognition not available')),
       );
+      return;
     }
+
+    setState(() {
+      isListening = true;
+      spokenText = '';
+      _accumulatedSpeech = '';
+      _lastFinalResult = '';
+    });
+
+    await speech.listen(
+      onResult: (val) {
+        setState(() {
+          if (val.finalResult) {
+            final newText = val.recognizedWords.trim();
+            if (newText.isNotEmpty && newText != _lastFinalResult) {
+              _lastFinalResult = newText;
+              _accumulatedSpeech = _accumulatedSpeech.isEmpty
+                  ? newText
+                  : '$_accumulatedSpeech $newText';
+              spokenText = _accumulatedSpeech;
+            }
+          } else {
+            spokenText = val.recognizedWords.trim();
+          }
+        });
+      },
+      pauseFor: const Duration(seconds: 5),
+      partialResults: true,
+      cancelOnError: true,
+      listenMode: stt.ListenMode.confirmation,
+      localeId: 'en_US',
+    );
   }
 
   void stopListening() {

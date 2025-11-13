@@ -119,11 +119,23 @@
                 "title": "Summary of Greetings",
                 "headers": ["Time of Day", "Greeting", "Purpose"],
                 "rows": [
-                  ["Morning (sunrise-12 PM)", "Good Morning", "Starting the day"],
-                  ["Afternoon (12 PM-5 PM)", "Good Afternoon", "Midday greeting"],
+                  [
+                    "Morning (sunrise-12 PM)",
+                    "Good Morning",
+                    "Starting the day"
+                  ],
+                  [
+                    "Afternoon (12 PM-5 PM)",
+                    "Good Afternoon",
+                    "Midday greeting"
+                  ],
                   ["Evening (5 PM-night)", "Good Evening", "Late day greeting"],
                   ["Any time", "Hello / Hi", "General greeting"],
-                  ["Leaving / Before Sleep", "Goodbye / Good night", "Saying farewell / Before rest"]
+                  [
+                    "Leaving / Before Sleep",
+                    "Goodbye / Good night",
+                    "Saying farewell / Before rest"
+                  ]
                 ]
               }
             }
@@ -347,15 +359,41 @@
                 "headers": ["Situation", "Formal Example", "Informal Example"],
                 "rows": [
                   ["Greeting", "Good morning, Sir.", "Hi, Rohan!"],
-                  ["Asking permission", "May I leave now, Ma'am?", "Can I go now?"],
+                  [
+                    "Asking permission",
+                    "May I leave now, Ma'am?",
+                    "Can I go now?"
+                  ],
                   ["Saying goodbye", "Goodbye, Mr. Sharma.", "Bye, see ya!"],
-                  ["Asking for help", "Could you please assist me?", "Help me out!"]
+                  [
+                    "Asking for help",
+                    "Could you please assist me?",
+                    "Help me out!"
+                  ]
                 ]
               }
             }
           ]
         }
       ]
+    }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Greetings",
+      "url": "https://youtu.be/Eo3hw4Ey7qg?si=B7wTkc3cAAdv2ilB"
+    },
+    {
+      "title": "Phrases",
+      "url": "https://youtu.be/umr59o2Qkqg?si=bjjYY8857b3MFjSO"
+    },
+    {
+      "title": "Goodbye",
+      "url": "https://youtu.be/wk4rccFsEls?si=nWgrCzuD_GWZoCNl"
+    },
+    {
+      "title": "Kind words",
+      "url": "https://youtu.be/IaGEZ1YcCXo?si=Fg2RvxiLSaTQ-Srd"
     }
   ]
 }

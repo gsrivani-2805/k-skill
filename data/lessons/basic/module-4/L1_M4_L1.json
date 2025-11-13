@@ -52,8 +52,7 @@
                 "We buy **vegetables** from the **market**.",
                 "The **river** flows near our **house**."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -265,7 +264,10 @@
               },
               "table": {
                 "title": "Concrete Nouns vs. Abstract Nouns",
-                "headers": ["Concrete Noun (Physical)", "Abstract Noun (Idea/Feeling)"],
+                "headers": [
+                  "Concrete Noun (Physical)",
+                  "Abstract Noun (Idea/Feeling)"
+                ],
                 "rows": [
                   ["stone", "love"],
                   ["school", "knowledge"],
@@ -350,8 +352,7 @@
                 "The **water tank** for our village is huge.",
                 "My brother goes to **high school**."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -400,8 +401,7 @@
                 "The **dog** is a faithful **animal**.",
                 "A **boy** is reading a **book**."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         },
@@ -449,16 +449,30 @@
                 "Big **cities** have many tall buildings.",
                 "The dentist cleaned my **teeth**."
               ],
-              "media": {
-              },
+              "media": {},
               "table": {
                 "title": "Singular to Plural Noun Rules",
-                "headers": ["Rule", "Singular", "Plural", "Example in Sentence"],
+                "headers": [
+                  "Rule",
+                  "Singular",
+                  "Plural",
+                  "Example in Sentence"
+                ],
                 "rows": [
                   ["Add -s", "dog", "dogs", "I saw three dogs."],
                   ["Add -es", "bush", "bushes", "There are many bushes."],
-                  ["Change y to ies", "city", "cities", "Big cities have tall buildings."],
-                  ["Change f/fe to ves", "wolf", "wolves", "Wolves live in forests."],
+                  [
+                    "Change y to ies",
+                    "city",
+                    "cities",
+                    "Big cities have tall buildings."
+                  ],
+                  [
+                    "Change f/fe to ves",
+                    "wolf",
+                    "wolves",
+                    "Wolves live in forests."
+                  ],
                   ["Irregular", "man", "men", "Two men are talking."],
                   ["Irregular", "child", "children", "The children are happy."],
                   ["Irregular", "foot", "feet", "Wash your feet."],
@@ -479,8 +493,7 @@
             {
               "text": "Possessive nouns show that something belongs to a person, animal, or thing. We usually use an apostrophe (') and an 's' to show this ownership.",
               "usage_examples": [],
-              "media": {
-              }
+              "media": {}
             }
           ]
         },
@@ -515,8 +528,7 @@
                 "I borrowed **Priya's** notebook.",
                 "The **sun's** light is very bright."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         },
@@ -555,8 +567,7 @@
                 "You can hear the **birds'** songs in the morning.",
                 "The **horses'** stables are behind the house."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -609,13 +620,29 @@
                 "The **postman** (S) delivered a **letter** (O).",
                 "The **students** (S) are reading their **books** (O)."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Nouns and types of nouns",
+      "url": "https://youtu.be/aolmjyuViO8?si=7byyfNYPwXBr2o5n"
+    },
+    {
+      "title": "Compound Nouns",
+      "url": "https://youtu.be/53L3xrR5TkU?si=xc4Y5MulR2ei_FIA"
+    },
+    {
+      "title": "Collective Nouns",
+      "url": "https://youtu.be/RYR8hGy6RIM?si=Is_C35FVKNDnJxY_"
+    },
+    {
+      "title": "Plural Nouns",
+      "url": "https://youtu.be/KFKtLfZTrdA?si=Zky7Q1yKOXqvPMRW"
+    }
   ]
 }
-

@@ -38,8 +38,7 @@
                 "We need **an** umbrella for the rain.",
                 "Did you see **the** farmer in the field?"
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -123,13 +122,19 @@
               },
               "table": {
                 "title": "When to Use 'A' vs. 'An'",
-                "headers": ["Starts with Consonant Sound (Use 'A')", "Starts with Vowel Sound (Use 'An')"],
+                "headers": [
+                  "Starts with Consonant Sound (Use 'A')",
+                  "Starts with Vowel Sound (Use 'An')"
+                ],
                 "rows": [
                   ["a book", "an apple"],
                   ["a cow", "an elephant"],
                   ["a chair", "an orange"],
                   ["a house", "an hour (silent 'h')"],
-                  ["a uniform (sounds like 'yoo')", "an honest person (silent 'h')"]
+                  [
+                    "a uniform (sounds like 'yoo')",
+                    "an honest person (silent 'h')"
+                  ]
                 ]
               }
             }
@@ -172,8 +177,7 @@
                 "Pass me **the** salt, please.",
                 "**The** Ganga River is very long."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         },
@@ -239,8 +243,7 @@
                 "He crossed **the** largest river in the area.",
                 "**The** head of our village is very wise."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -290,6 +293,12 @@
           ]
         }
       ]
+    }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Articles",
+      "url": "https://youtu.be/NRtbvYp9z_w?si=OestWlpN1xqKAzHK"
     }
   ]
 }

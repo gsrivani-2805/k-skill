@@ -707,5 +707,15 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Syllables",
+      "url": "https://youtu.be/9Ojv7ilNtMA?si=mEBwkRX_afx9ZuVU"
+    },
+    {
+      "title": "Counting Syllables",
+      "url": "https://youtu.be/smYxcxXg6xI?si=BYlwNVsVWT2wRH06"
+    }
   ]
 }

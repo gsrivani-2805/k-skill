@@ -1,9 +1,9 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:K_Skill/config/api_config.dart';
 import 'package:K_Skill/services/shared_prefs.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AssessmentScreen extends StatefulWidget {
   const AssessmentScreen({super.key});
@@ -18,7 +18,8 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
   int quizScore = 0;
   int readingScore = 0;
   int listeningScore = 0;
-  bool isSubmitted = false; // Add flag to track submission
+  bool isSubmitted = false;
+  bool isLoading = true;
   late String userId;
 
   static const String baseUrl = ApiConfig.baseUrl;
@@ -31,6 +32,48 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
 
   Future<void> loadData() async {
     userId = (await SharedPrefsService.getUserId())!;
+    await _loadAssessmentState();
+    setState(() {
+      isLoading = false;
+    });
+  }
+
+  // Load assessment state from SharedPreferences
+  Future<void> _loadAssessmentState() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      quizDone = prefs.getBool('assessment_quiz_done') ?? false;
+      readingDone = prefs.getBool('assessment_reading_done') ?? false;
+      listeningDone = prefs.getBool('assessment_listening_done') ?? false;
+      quizScore = prefs.getInt('assessment_quiz_score') ?? 0;
+      readingScore = prefs.getInt('assessment_reading_score') ?? 0;
+      listeningScore = prefs.getInt('assessment_listening_score') ?? 0;
+      isSubmitted = prefs.getBool('assessment_submitted') ?? false;
+    });
+  }
+
+  // Save assessment state to SharedPreferences
+  Future<void> _saveAssessmentState() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('assessment_quiz_done', quizDone);
+    await prefs.setBool('assessment_reading_done', readingDone);
+    await prefs.setBool('assessment_listening_done', listeningDone);
+    await prefs.setInt('assessment_quiz_score', quizScore);
+    await prefs.setInt('assessment_reading_score', readingScore);
+    await prefs.setInt('assessment_listening_score', listeningScore);
+    await prefs.setBool('assessment_submitted', isSubmitted);
+  }
+
+  // Clear assessment state from SharedPreferences
+  Future<void> _clearAssessmentState() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('assessment_quiz_done');
+    await prefs.remove('assessment_reading_done');
+    await prefs.remove('assessment_listening_done');
+    await prefs.remove('assessment_quiz_score');
+    await prefs.remove('assessment_reading_score');
+    await prefs.remove('assessment_listening_score');
+    await prefs.remove('assessment_submitted');
   }
 
   void _navigateAndSet(String route, Function(bool, int) setter) async {
@@ -40,8 +83,9 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
       if (mounted && result != null && result is int) {
         setState(() {
           setter(true, result);
-          isSubmitted = false; // Reset submission flag when taking new assessment
+          isSubmitted = false;
         });
+        await _saveAssessmentState();
       }
     } catch (e) {
       debugPrint('Navigation error: $e');
@@ -68,15 +112,16 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
           'readingScore': readingScore,
           'listeningScore': listeningScore,
           'overallScore': overallScore,
-          'replaceExisting': true, // Add flag to replace existing scores
+          'replaceExisting': true,
         }),
       );
 
       if (response.statusCode == 200) {
         setState(() {
-          isSubmitted = true; // Mark as submitted
+          isSubmitted = true;
         });
-        
+        await _saveAssessmentState();
+
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
@@ -85,6 +130,9 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
             ),
           );
         }
+
+        // Clear the saved state after successful submission
+        await _clearAssessmentState();
       } else {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -117,24 +165,27 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
 
     // Build the completed assessments list with scores
     List<Map<String, dynamic>> completedAssessments = [];
-    if (quizDone)
+    if (quizDone) {
       completedAssessments.add({
         'name': 'Grammar & Vocabulary',
         'score': quizScore * 4,
         'maxScore': 100,
       });
-    if (readingDone)
+    }
+    if (readingDone) {
       completedAssessments.add({
         'name': 'Reading Skills',
         'score': readingScore,
         'maxScore': 100,
       });
-    if (listeningDone)
+    }
+    if (listeningDone) {
       completedAssessments.add({
         'name': 'Listening Skills',
         'score': listeningScore,
         'maxScore': 100,
       });
+    }
 
     // Show alert dialog
     final shouldPop = await showDialog<bool>(
@@ -158,7 +209,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
           children: [
             Text(
               allDone
-                  ? 'You have completed all assessments. Here are your scores:'
+                  ? 'You have completed all sections. Here are your scores:'
                   : 'You have completed the following assessments:',
               style: const TextStyle(fontWeight: FontWeight.w500),
             ),
@@ -232,7 +283,13 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
         ),
         actions: [
           TextButton(
-            onPressed: () => Navigator.of(context).pop(true),
+            onPressed: () async {
+              // Clear state if user decides to leave
+              await _clearAssessmentState();
+              if (context.mounted) {
+                Navigator.of(context).pop(true);
+              }
+            },
             child: const Text('Leave', style: TextStyle(color: Colors.red)),
           ),
           ElevatedButton(
@@ -260,6 +317,17 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (isLoading) {
+      return Scaffold(
+        backgroundColor: const Color(0xFFEFF5FF),
+        appBar: AppBar(
+          title: const Text("K-Skill English Proficiency Assessment"),
+          backgroundColor: Colors.blue,
+        ),
+        body: const Center(child: CircularProgressIndicator()),
+      );
+    }
+
     bool allDone = quizDone && readingDone && listeningDone;
     final screenWidth = MediaQuery.of(context).size.width;
     final isDesktop = screenWidth >= 768;
@@ -353,6 +421,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                               questions: 25,
                               color: Colors.orange,
                               done: quizDone,
+                              score: quizScore * 4,
                               onTap: () => _navigateAndSet('/quiz', (v, score) {
                                 quizDone = v;
                                 quizScore = score;
@@ -371,6 +440,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                               questions: 3,
                               color: Colors.blue,
                               done: readingDone,
+                              score: readingScore,
                               onTap: () =>
                                   _navigateAndSet('/reading', (v, score) {
                                     readingDone = v;
@@ -390,6 +460,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                               questions: 3,
                               color: Colors.green,
                               done: listeningDone,
+                              score: listeningScore,
                               onTap: () =>
                                   _navigateAndSet('/listening', (v, score) {
                                     listeningDone = v;
@@ -413,6 +484,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                             questions: 25,
                             color: Colors.orange,
                             done: quizDone,
+                            score: quizScore * 4,
                             onTap: () => _navigateAndSet('/quiz', (v, score) {
                               quizDone = v;
                               quizScore = score;
@@ -429,6 +501,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                             questions: 3,
                             color: Colors.blue,
                             done: readingDone,
+                            score: readingScore,
                             onTap: () =>
                                 _navigateAndSet('/reading', (v, score) {
                                   readingDone = v;
@@ -446,6 +519,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                             questions: 3,
                             color: Colors.green,
                             done: listeningDone,
+                            score: listeningScore,
                             onTap: () =>
                                 _navigateAndSet('/listening', (v, score) {
                                   listeningDone = v;
@@ -497,7 +571,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                           ),
                         ],
                       ),
-                    
+
                     // Show success message after submission
                     if (isSubmitted)
                       Column(
@@ -546,6 +620,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
     required int questions,
     required Color color,
     required bool done,
+    required int score,
     required VoidCallback onTap,
     required bool isDesktop,
   }) {
@@ -623,23 +698,36 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
               ),
               SizedBox(height: isDesktop ? 12 : 8),
               if (done)
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 4,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.green.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Text(
-                    "Completed ✅",
-                    style: TextStyle(
-                      color: Colors.green[700],
-                      fontWeight: FontWeight.w500,
-                      fontSize: isDesktop ? 14 : 12,
+                Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 4,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.green.withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Text(
+                        "Completed ✅",
+                        style: TextStyle(
+                          color: Colors.green[700],
+                          fontWeight: FontWeight.w500,
+                          fontSize: isDesktop ? 14 : 12,
+                        ),
+                      ),
                     ),
-                  ),
+                    const SizedBox(height: 4),
+                    Text(
+                      'Score: $score/100',
+                      style: TextStyle(
+                        color: Colors.blue[700],
+                        fontWeight: FontWeight.w600,
+                        fontSize: isDesktop ? 13 : 12,
+                      ),
+                    ),
+                  ],
                 ),
             ],
           ),

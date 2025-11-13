@@ -298,5 +298,15 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Ask permission",
+      "url": "https://youtu.be/IY7Y-GNhYxs?si=pvdNCmBXrMgH_CeE"
+    },
+    {
+      "title": "Listening tips",
+      "url": "https://youtu.be/HRlwd4Wz32A?si=vFvCAx0LwieqBkHM"
+    }
   ]
 }

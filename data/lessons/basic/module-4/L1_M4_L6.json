@@ -285,8 +285,7 @@
                 "Always start your sentence with a capital letter and end with a full stop (.).",
                 "Let's practice arranging these words to make a good sentence."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         },
@@ -320,12 +319,25 @@
                 "If you are talking about 'my book', say 'my book', not 'book my'.",
                 "Try to speak in full sentences to build good habits."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
       ]
+    }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Sentence Structure",
+      "url": "https://youtu.be/umr59o2Qkqg?si=bjjYY8857b3MFjSO"
+    },
+    {
+      "title": "How to write sentence",
+      "url": "https://youtu.be/DuubQG3gFb8?si=9e3ug3XF99jEzo5R"
+    },
+    {
+      "title": "Subject+Verb+object",
+      "url": "https://youtu.be/3a8H6JDI_aE?si=r2gIBPwA5RmtjdzA"
     }
   ]
 }

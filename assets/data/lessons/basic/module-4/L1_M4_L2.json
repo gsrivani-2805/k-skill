@@ -45,8 +45,7 @@
                 "The **well** is deep. **It** provides water.",
                 "The **flowers** are beautiful. **They** smell sweet."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -154,11 +153,14 @@
                 "Come with **me** to the market.",
                 "Can you help **him** carry the water?"
               ],
-              "media": {
-              },
+              "media": {},
               "table": {
                 "title": "Subject vs. Object Pronouns",
-                "headers": ["Subject Pronoun", "Object Pronoun", "Example Sentence"],
+                "headers": [
+                  "Subject Pronoun",
+                  "Object Pronoun",
+                  "Example Sentence"
+                ],
                 "rows": [
                   ["I", "Me", "**I** saw **him**."],
                   ["You", "You", "**You** help **me**."],
@@ -231,7 +233,10 @@
               },
               "table": {
                 "title": "Personal Pronouns and Possessive Adjectives",
-                "headers": ["Personal Pronoun (Subject)", "Possessive Adjective"],
+                "headers": [
+                  "Personal Pronoun (Subject)",
+                  "Possessive Adjective"
+                ],
                 "rows": [
                   ["I", "My"],
                   ["You", "Your"],
@@ -425,8 +430,7 @@
                 "**What** is your name?",
                 "**Who** told you that story?"
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -512,8 +516,7 @@
                 "Is **anybody** home?",
                 "She knows **everything** about farming."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -541,12 +544,17 @@
                 "My friend and I share our books with **each other**.",
                 "The players in the team support **one another** during the match."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
       ]
+    }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Pronouns and types of pronouns",
+      "url": "https://youtu.be/4vOIYm9iTaU?si=8u_qM55JkxNjQxOT"
     }
   ]
 }

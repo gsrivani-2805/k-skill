@@ -394,8 +394,7 @@
                 "Tomorrow is my sister's birthday.",
                 "We had a holiday yesterday."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -581,8 +580,7 @@
                 "It was an era of peace and prosperity.",
                 "The Stone Age was a very early period of human history."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         },
@@ -670,8 +668,7 @@
                 "There has been a gradual improvement in his health.",
                 "The sudden rain surprised everyone."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -774,8 +771,7 @@
                 "The sky was a beautiful orange during twilight.",
                 "The street was empty at midnight."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -828,8 +824,7 @@
                 "Pink is a tint of red.",
                 "The wall is painted in a soft tone of grey."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         },
@@ -917,8 +912,7 @@
                 "The deer has a spotted coat.",
                 "Water is transparent."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -966,8 +960,7 @@
                 "We start wearing light sweaters in the pre-winter season.",
                 "People sit around a fire to keep warm in winter."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         },
@@ -1055,8 +1048,7 @@
                 "The summer sun can be very harsh.",
                 "The winter in our village is usually mild."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -1149,8 +1141,7 @@
                 "The previous owner sold the house.",
                 "Are you prepared for the upcoming exam?"
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         },
@@ -1238,13 +1229,45 @@
                 "You set the table. Meanwhile, I'll finish cooking.",
                 "After trying many times, he eventually succeeded."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Colour vocabulary",
+      "url": "https://youtu.be/wmsjmTUVHmc?si=4HJBo5I85DpvC4vz"
+    },
+    {
+      "title": "The Days of the Week",
+      "url": "https://youtu.be/pt3aWGmWjxA?si=nNwnnQwXuKRZBcSG"
+    },
+    {
+      "title": "Different times of the day",
+      "url": "https://youtube.com/shorts/6cvdc0mtCbM?si=yNrh9sHErO4VAABL"
+    },
+    {
+      "title": "Months of the year",
+      "url": "https://youtu.be/dU47ZJhw4AM?si=o-R0-wqbXN4_mq-c"
+    },
+    {
+      "title": "Units of Time",
+      "url": "https://youtu.be/Tz1ol0lgxWA?si=OQVo76aDGqOUoDQY"
+    },
+    {
+      "title": "Frequency words: always, etc",
+      "url": "https://youtu.be/Sn-F4qPKWyw?si=esUL1nNOIQmxk7r2"
+    },
+    {
+      "title": "Seasons",
+      "url": "https://youtu.be/VfoIIV5ZXYc?si=eVOvvMuJXYb-TQ3t"
+    },
+    {
+      "title": "Describing the weather",
+      "url": "https://youtu.be/B3oFkwCmNu0?si=ePSY_ygJ8F6pVu2c"
+    }
   ]
 }
-

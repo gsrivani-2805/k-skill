@@ -640,7 +640,11 @@
                 "headers": ["Type", "Expression", "Example"],
                 "rows": [
                   ["Specific Time", "at + time", "at 7 AM, at noon, at night"],
-                  ["Part of Day", "in the + part of day", "in the morning, in the afternoon, in the evening"],
+                  [
+                    "Part of Day",
+                    "in the + part of day",
+                    "in the morning, in the afternoon, in the evening"
+                  ],
                   ["Sequence", "before", "before school, before dinner"],
                   ["Sequence", "after", "after school, after dinner"],
                   ["Frequency", "every day", "I study every day."],
@@ -658,6 +662,23 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Activites in the school",
+      "url": "https://youtu.be/OD6ztdD0HkU?si=USBWtqU_ljiT2DP0"
+    },
+    {
+      "title": "Lunch time conversation",
+      "url": "https://youtu.be/cs2TKofizQg?si=X5jHXkCpSUKrucAo"
+    },
+    {
+      "title": "Conversation for three times: Morning, Afternoon, Night",
+      "url": "https://youtu.be/ju-Z9Hv0mT8?si=9x_DPZLKL1zB3Nkz"
+    },
+    {
+      "title": "Time experssions",
+      "url": "https://youtu.be/DCl2KySea_M?si=VJXXVc1ZXOedyi15"
+    }
   ]
 }
-

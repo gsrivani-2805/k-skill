@@ -75,13 +75,23 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   void _startListening() async {
-    bool available = await _speech.initialize();
+    bool available = await _speech.initialize(
+      onStatus: (status) {
+        debugPrint('Speech status: $status');
+        if (status == 'notListening' && _isListening) {
+          setState(() => _isListening = false);
+        }
+      },
+      onError: (val) => debugPrint('Speech error: $val'),
+    );
+
     if (!available) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Speech recognition not available')),
       );
       return;
     }
+
     setState(() {
       _isListening = true;
       _userSpeech = '';
@@ -89,33 +99,28 @@ class _ReadingScreenState extends State<ReadingScreen> {
       _lastFinalResult = '';
     });
 
-    _speech.listen(
+    await _speech.listen(
       onResult: (val) {
         setState(() {
           if (val.finalResult) {
-            final newText = val.recognizedWords;
+            final newText = val.recognizedWords.trim();
             if (newText.isNotEmpty && newText != _lastFinalResult) {
-              if (_accumulatedSpeech.isEmpty) {
-                _accumulatedSpeech = newText;
-              } else {
-                _accumulatedSpeech = '$_accumulatedSpeech $newText';
-              }
-              _userSpeech = _accumulatedSpeech;
               _lastFinalResult = newText;
+              _accumulatedSpeech = _accumulatedSpeech.isEmpty
+                  ? newText
+                  : '$_accumulatedSpeech $newText';
+              _userSpeech = _accumulatedSpeech;
             }
           } else {
-            if (_accumulatedSpeech.isEmpty) {
-              _userSpeech = val.recognizedWords;
-            } else {
-              _userSpeech = '$_accumulatedSpeech ${val.recognizedWords}';
-            }
+            _userSpeech = val.recognizedWords.trim();
           }
         });
       },
-      listenMode: stt.ListenMode.confirmation,
-      cancelOnError: true,
+      pauseFor: const Duration(seconds: 5),
       partialResults: true,
-      onSoundLevelChange: null,
+      cancelOnError: true,
+      listenMode: stt.ListenMode.confirmation,
+      localeId: 'en_US',
     );
   }
 

@@ -192,8 +192,7 @@
                 "The monitor cleaned the blackboard with a duster.",
                 "All students must come to school in a clean uniform."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -500,8 +499,7 @@
                 "A visitor came to our class to give a talk on cleanliness.",
                 "The school prefects helped manage the crowd during the event."
               ],
-              "media": {
-              }
+              "media": {}
             }
           ]
         }
@@ -674,6 +672,11 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Classroom Objects",
+      "url": "https://youtu.be/OhPaHLN5bfA?si=dfvkI-UqS2-wyHHo"
+    }
   ]
 }
-

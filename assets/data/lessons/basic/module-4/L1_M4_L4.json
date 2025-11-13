@@ -1,4 +1,3 @@
-
 {
   "level": "Beginner",
   "module": "GRAMMAR BASICS",
@@ -150,17 +149,40 @@
                 "We **have** seen that movie.",
                 "What **did** you do yesterday?"
               ],
-              "media": {
-              },
+              "media": {},
               "table": {
                 "title": "Common Helping Verbs",
-                "headers": ["Helping Verb Family", "Forms", "Example with Main Verb"],
+                "headers": [
+                  "Helping Verb Family",
+                  "Forms",
+                  "Example with Main Verb"
+                ],
                 "rows": [
-                  ["Be", "am, is, are", "I am reading; He is going; They are playing"],
-                  ["Be (Past)", "was, were", "I was cooking; They were running"],
-                  ["Do", "do, does, did", "I do not know; She does not eat; We did not go"],
-                  ["Have", "has, have, had", "He has seen; I have studied; They had finished"],
-                  ["Modals", "will, should, can", "She will come; You should rest; I can help"]
+                  [
+                    "Be",
+                    "am, is, are",
+                    "I am reading; He is going; They are playing"
+                  ],
+                  [
+                    "Be (Past)",
+                    "was, were",
+                    "I was cooking; They were running"
+                  ],
+                  [
+                    "Do",
+                    "do, does, did",
+                    "I do not know; She does not eat; We did not go"
+                  ],
+                  [
+                    "Have",
+                    "has, have, had",
+                    "He has seen; I have studied; They had finished"
+                  ],
+                  [
+                    "Modals",
+                    "will, should, can",
+                    "She will come; You should rest; I can help"
+                  ]
                 ]
               }
             }
@@ -190,8 +212,8 @@
                   "value": "She **became** a doctor. ('became' links 'she' to her new identity 'a doctor')"
                 },
                 {
-                    "label": "Example 4",
-                    "value": "The food **tastes** delicious. ('tastes' links 'food' to its quality 'delicious')"
+                  "label": "Example 4",
+                  "value": "The food **tastes** delicious. ('tastes' links 'food' to its quality 'delicious')"
                 }
               ],
               "usage_examples": [
@@ -272,13 +294,13 @@
                   "value": "eat -> **ate**"
                 },
                 {
-                    "label": "Regular Verb Example",
-                    "value": "talk -> **talked**"
-                  },
-                  {
-                    "label": "Irregular Verb Example",
-                    "value": "begin -> **began**"
-                  }
+                  "label": "Regular Verb Example",
+                  "value": "talk -> **talked**"
+                },
+                {
+                  "label": "Irregular Verb Example",
+                  "value": "begin -> **began**"
+                }
               ],
               "usage_examples": [
                 "Yesterday, we **played** in the park. (Regular)",
@@ -295,7 +317,11 @@
               },
               "table": {
                 "title": "Common Irregular Verbs (Present vs. Past)",
-                "headers": ["Present Form", "Past Form", "Example Sentence (Past)"],
+                "headers": [
+                  "Present Form",
+                  "Past Form",
+                  "Example Sentence (Past)"
+                ],
                 "rows": [
                   ["go", "went", "I **went** to school."],
                   ["eat", "ate", "We **ate** lunch."],
@@ -361,6 +387,35 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Verbs and types",
+      "url": "https://youtu.be/8kUyDtk0Yjw?si=0pnrEr8D5OeoPK-k"
+    },
+    {
+      "title": "Action verbs",
+      "url": "https://youtu.be/dCxcG9RQBec?si=9H_ORoXri7JyNxt5"
+    },
+    {
+      "title": "Helping verbs",
+      "url": "https://youtu.be/Ryrb3iYLu88?si=i3JXObf84PlHEm5X"
+    },
+    {
+      "title": "Modal verbs",
+      "url": "https://youtu.be/q2rKXa3FOZ4?si=XxkuwmIZ-t_nUf90"
+    },
+    {
+      "title": "Transitive and Intransitive Verbs",
+      "url": "https://youtu.be/xUFo94TXwqc?si=1B5xJgwIPbPx6W4H"
+    },
+    {
+      "title": "Linking verbs",
+      "url": "https://youtu.be/AQ2kPuQOT7Q?si=5m3DGztzjWtfbEKg"
+    },
+    {
+      "title": "Regular and Irregular Verbs",
+      "url": "https://youtu.be/8kUyDtk0Yjw?si=-iSBYcAE-Gt1d1Oo"
+    }
   ]
 }
-

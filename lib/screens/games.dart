@@ -156,10 +156,10 @@ class GameScreen extends StatelessWidget {
 
                     if (constraints.maxWidth > 800) {
                       crossAxisCount = 3;
-                      childAspectRatio = 0.85;
+                      childAspectRatio = 1.5;
                     } else if (constraints.maxWidth > 600) {
                       crossAxisCount = 2;
-                      childAspectRatio = 0.9;
+                      childAspectRatio = 1.0;
                     } else {
                       crossAxisCount = 1;
                       childAspectRatio = 1.8;

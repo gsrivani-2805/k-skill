@@ -90,37 +90,18 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
 
   void _startListening() async {
     bool available = await _speech.initialize(
-      onError: (error) {
-        setState(() {
-          _isListening = false;
-        });
-        _pulseController.stop();
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Speech error: ${error.errorMsg}'),
-            backgroundColor: Colors.red[400],
-          ),
-        );
-      },
       onStatus: (status) {
+        debugPrint('Speech status: $status');
         if (status == 'notListening' && _isListening) {
-          setState(() {
-            _isListening = false;
-          });
-          _pulseController.stop();
-          if (_userSpeech.trim().isNotEmpty) {
-            _processUserInput(_userSpeech);
-          }
+          setState(() => _isListening = false);
         }
       },
+      onError: (val) => debugPrint('Speech error: $val'),
     );
 
     if (!available) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Speech recognition not available'),
-          backgroundColor: Colors.red[400],
-        ),
+        const SnackBar(content: Text('Speech recognition not available')),
       );
       return;
     }
@@ -132,35 +113,28 @@ class _SpeakingPracticeState extends State<SpeakingPractice>
       _lastFinalResult = '';
     });
 
-    _pulseController.repeat(reverse: true);
-
-    _speech.listen(
+    await _speech.listen(
       onResult: (val) {
         setState(() {
           if (val.finalResult) {
-            final newText = val.recognizedWords;
+            final newText = val.recognizedWords.trim();
             if (newText.isNotEmpty && newText != _lastFinalResult) {
-              if (_accumulatedSpeech.isEmpty) {
-                _accumulatedSpeech = newText;
-              } else {
-                _accumulatedSpeech = '$_accumulatedSpeech $newText';
-              }
-              _userSpeech = _accumulatedSpeech;
               _lastFinalResult = newText;
+              _accumulatedSpeech = _accumulatedSpeech.isEmpty
+                  ? newText
+                  : '$_accumulatedSpeech $newText';
+              _userSpeech = _accumulatedSpeech;
             }
           } else {
-            if (_accumulatedSpeech.isEmpty) {
-              _userSpeech = val.recognizedWords;
-            } else {
-              _userSpeech = '$_accumulatedSpeech ${val.recognizedWords}';
-            }
+            _userSpeech = val.recognizedWords.trim();
           }
         });
       },
-      listenMode: stt.ListenMode.confirmation,
+      pauseFor: const Duration(seconds: 5),
       partialResults: true,
-      localeId: 'en-US',
       cancelOnError: true,
+      listenMode: stt.ListenMode.confirmation,
+      localeId: 'en_US',
     );
   }
 

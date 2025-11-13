@@ -602,6 +602,32 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Food We Eat",
+      "url": "https://youtu.be/SuU3zyDUqHQ?si=8WsL6a8t9cxS2FzO"
+    },
+    {
+      "title": "Animals around us",
+      "url": "https://youtu.be/DKkFOS9nHY8?si=G_hEJA91NPY4GT5N"
+    },
+    {
+      "title": "Clothings",
+      "url": "https://youtu.be/Q_EwuVHDb5U?si=M4N_pgOs2GXU8mWc"
+    },
+    {
+      "title": "Cooking verbs",
+      "url": "https://youtu.be/o0-kSRwnJj0?si=XovbHpGEo8mo-GTc"
+    },
+    {
+      "title": "Animal sounds",
+      "url": "https://youtu.be/9DudksqYoWw?si=-VAt-tBcno6vVk_t"
+    },
+    {
+      "title": "Pharsal words for Wearing",
+      "url": "https://youtu.be/ENPx5Z0HTA0?si=NKCzcV37xiGeLACa"
+    }
   ]
 }
 

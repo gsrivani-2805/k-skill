@@ -256,7 +256,11 @@
               },
               "table": {
                 "title": "List of Irregular Adjectives",
-                "headers": ["Positive (V1)", "Comparative (V2)", "Superlative (V3)"],
+                "headers": [
+                  "Positive (V1)",
+                  "Comparative (V2)",
+                  "Superlative (V3)"
+                ],
                 "rows": [
                   ["good", "better", "best"],
                   ["bad", "worse", "worst"],
@@ -296,6 +300,15 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Examples words",
+      "url": "https://youtu.be/aA0TThPDq0I?si=OfCSWTXhFc2A7y2r"
+    },
+    {
+      "title": "Structure of the degrees of comparision",
+      "url": "https://youtu.be/BkKfbE9M2RI?si=iBQH2qje-t_vBPlB"
+    }
   ]
 }
-

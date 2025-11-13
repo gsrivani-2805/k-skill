@@ -418,5 +418,47 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Names of vegetables",
+      "url": "https://youtu.be/SdIfXWAKioI?si=P00ZFsYHwkW0mtuJ"
+    },
+    {
+      "title": "Names of fruits",
+      "url": "https://youtu.be/KVOjbXe6_Fs?si=yBFM8VRXSbRdBOnn"
+    },
+    {
+      "title": "Names of the leafy vegetables",
+      "url": "https://youtu.be/hvtBIls2VTE?si=QD8fYYsGbuNAe9yX"
+    },
+    {
+      "title": "Names of the grains and milk products",
+      "url": "https://youtu.be/PZhsCXtggFM?si=SgcsMxnj3yHlWwFT"
+    },
+    {
+      "title": "How much is it?",
+      "url": "https://youtu.be/P5Vi4j1F4sE?si=oZH4N-oHqC4QFWHW"
+    },
+    {
+      "title": "Grams",
+      "url": "https://youtu.be/ss4TEbiro6s?si=gB6tDFK-RBnr4kaz"
+    },
+    {
+      "title": "Litres",
+      "url": "https://youtu.be/ss4TEbiro6s?si=gB6tDFK-RBnr4kaz"
+    },
+    {
+      "title": "Conversation for the bargain",
+      "url": "https://youtu.be/Eg-BZKWW5HA?si=9M7iJiaU1qvk24b2"
+    },
+    {
+      "title": "Asking for change",
+      "url": "https://youtu.be/NJCl__Y7JY0?si=TDtHP51fFlXofKKP"
+    },
+    {
+      "title": "Types of stalls",
+      "url": "https://youtu.be/UjJ7y9fGx2A?si=vty1BwZqfDOXl5j5"
+    }
   ]
 }

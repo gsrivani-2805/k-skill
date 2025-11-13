@@ -261,7 +261,11 @@
               },
               "table": {
                 "title": "Common Irregular Verbs",
-                "headers": ["V1 (Base)", "V2 (Past Simple)", "V3 (Past Participle)"],
+                "headers": [
+                  "V1 (Base)",
+                  "V2 (Past Simple)",
+                  "V3 (Past Participle)"
+                ],
                 "rows": [
                   ["be (is/am/are)", "was/were", "been"],
                   ["begin", "began", "begun"],
@@ -350,6 +354,11 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Telugu and english translation of the verbs",
+      "url": "https://youtu.be/M0coXqLE49g?si=inZeZ0LnNNEmFom-"
+    }
   ]
 }
-

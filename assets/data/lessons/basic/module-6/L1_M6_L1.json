@@ -231,17 +231,41 @@
                 "headers": ["Item", "Purpose", "Example Use"],
                 "rows": [
                   ["Pen", "Writing with ink", "Write with a pen."],
-                  ["Pencil", "Writing/drawing (erasable)", "Draw with a pencil."],
-                  ["Notebook", "Writing notes/exercises", "Write in your notebook."],
+                  [
+                    "Pencil",
+                    "Writing/drawing (erasable)",
+                    "Draw with a pencil."
+                  ],
+                  [
+                    "Notebook",
+                    "Writing notes/exercises",
+                    "Write in your notebook."
+                  ],
                   ["Eraser", "Removing pencil marks", "Erase your mistake."],
-                  ["Ruler", "Measuring, drawing lines", "Draw a line with a ruler."],
+                  [
+                    "Ruler",
+                    "Measuring, drawing lines",
+                    "Draw a line with a ruler."
+                  ],
                   ["Sharpener", "Sharpening pencils", "Sharpen your pencil."],
                   ["Scissors", "Cutting paper", "Cut paper with scissors."],
                   ["Glue", "Joining paper", "Glue the picture here."],
-                  ["Crayons", "Coloring pictures", "Color the drawing with crayons."],
+                  [
+                    "Crayons",
+                    "Coloring pictures",
+                    "Color the drawing with crayons."
+                  ],
                   ["Chalk", "Writing on blackboard", "The teacher uses chalk."],
-                  ["Duster", "Cleaning the blackboard", "Clean the board with a duster."],
-                  ["School bag", "Carrying books", "Put the book in your school bag."]
+                  [
+                    "Duster",
+                    "Cleaning the blackboard",
+                    "Clean the board with a duster."
+                  ],
+                  [
+                    "School bag",
+                    "Carrying books",
+                    "Put the book in your school bag."
+                  ]
                 ]
               }
             }
@@ -312,12 +336,24 @@
                 "rows": [
                   ["Desk", "For studying/writing", "Sit at your desk."],
                   ["Chair", "For sitting", "Sit on the chair."],
-                  ["Blackboard", "Writing with chalk", "Write on the blackboard."],
-                  ["Whiteboard", "Writing with markers", "Clean the whiteboard."],
+                  [
+                    "Blackboard",
+                    "Writing with chalk",
+                    "Write on the blackboard."
+                  ],
+                  [
+                    "Whiteboard",
+                    "Writing with markers",
+                    "Clean the whiteboard."
+                  ],
                   ["Window", "For light/air", "Open the window."],
                   ["Door", "For entering/exiting", "Close the door."],
                   ["Bookshelf", "Storing books", "Books are on the bookshelf."],
-                  ["Cupboard", "Storing supplies", "The chalk is in the cupboard."],
+                  [
+                    "Cupboard",
+                    "Storing supplies",
+                    "The chalk is in the cupboard."
+                  ],
                   ["Fan", "For air circulation", "Switch on the fan."],
                   ["Light", "For illumination", "Switch on the light."],
                   ["Dustbin", "For waste", "Throw paper in the dustbin."]
@@ -566,6 +602,35 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "School Conversation",
+      "url": "https://youtu.be/7isSwerYaQc?si=BWx1UYwDoIdrO5Wd"
+    },
+    {
+      "title": "Classroom Accessories",
+      "url": "https://youtu.be/sh8J4JTy-RU?si=VTHqpsMiOJQ8kDY5"
+    },
+    {
+      "title": "Sports-I",
+      "url": "https://youtu.be/11e9IzV2cCQ?si=YIhb4WBU7tV7V351"
+    },
+    {
+      "title": "Sports-II",
+      "url": "https://youtu.be/a-TYgrWKkT8?si=2c0I9Z7Zc0UEcbNb"
+    },
+    {
+      "title": "Names of the places in School",
+      "url": "https://youtu.be/dpVF7NHjs-o?si=GmYtJaMVqjwGfUWG"
+    },
+    {
+      "title": "Technology words - 1",
+      "url": "https://youtu.be/XEdVOls5bC0?si=ENThZBr5s0rhnJRb"
+    },
+    {
+      "title": "Technology words - 2",
+      "url": "https://youtu.be/NNQWZf1FQyE?si=h5Jy9C6okBODQZ4v"
+    }
   ]
 }
-

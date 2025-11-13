@@ -87,14 +87,26 @@
                   ["Mother", "Female parent", "My mother manages the home."],
                   ["Brother", "Male sibling", "I play with my brother."],
                   ["Sister", "Female sibling", "My sister helps me."],
-                  ["Grandfather", "Parent's father", "Grandfather tells stories."],
-                  ["Grandmother", "Parent's mother", "Grandmother sings songs."],
+                  [
+                    "Grandfather",
+                    "Parent's father",
+                    "Grandfather tells stories."
+                  ],
+                  [
+                    "Grandmother",
+                    "Parent's mother",
+                    "Grandmother sings songs."
+                  ],
                   ["Uncle", "Parent's brother", "My uncle owns a shop."],
                   ["Aunt", "Parent's sister", "My aunt visits often."],
                   ["Cousin", "Uncle/Aunt's child", "My cousin is my friend."],
                   ["Parents", "Father and mother", "My parents love me."],
                   ["Son", "A male child", "I am my father's son."],
-                  ["Daughter", "A female child", "She is her mother's daughter."]
+                  [
+                    "Daughter",
+                    "A female child",
+                    "She is her mother's daughter."
+                  ]
                 ]
               }
             }
@@ -529,6 +541,23 @@
         }
       ]
     }
+  ],
+  "youtube_resources": [
+    {
+      "title": "Family members",
+      "url": "https://youtu.be/FHaObkHEkHQ?si=pGUrk4IVoLVj5Z35"
+    },
+    {
+      "title": "Roles of the family",
+      "url": "https://youtu.be/gwXKtM0N-EY?si=GoPZcvEU8azoYQtH"
+    },
+    {
+      "title": "Daily activity vocabulary",
+      "url": "https://youtu.be/qD1pnquN_DM?si=Do_re3Uw7YLHWJpk"
+    },
+    {
+      "title": "Household works",
+      "url": "https://youtu.be/p1WG8VdZuKo?si=X9U9-883HiC64NY2"
+    }
   ]
 }
-

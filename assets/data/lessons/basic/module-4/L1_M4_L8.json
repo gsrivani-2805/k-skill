@@ -294,5 +294,16 @@
         }
       ]
     }
-  ]
+  ],
+  "youtube_resources": [
+    {
+      "title": "Synonyms",
+      "url": "https://youtu.be/uYVem2B-a90?si=7SVpNTQUSTveOy1N"
+    },
+    {
+      "title": "Genders",
+      "url": "https://youtu.be/W43rkm2zSjs?si=EB2Sb2yNb_A6PDXN"
+    }
+  ]	
+	
 }
