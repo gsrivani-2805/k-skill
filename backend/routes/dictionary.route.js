@@ -41,7 +41,7 @@ Don't add any extra explanation or text. If the word is not found or invalid, re
 
 Now, give me the dictionary entry for the word: "${word}"`;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
     const result = await model.generateContent(prompt);
     const response = result.response;
     const rawText = response.text();
