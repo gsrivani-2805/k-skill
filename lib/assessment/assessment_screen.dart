@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:K_Skill/config/api_config.dart';
-import 'package:K_Skill/services/shared_prefs.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -20,7 +19,8 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
   int listeningScore = 0;
   bool isSubmitted = false;
   bool isLoading = true;
-  late String userId;
+  String? userId;
+  String? token;
 
   static const String baseUrl = ApiConfig.baseUrl;
 
@@ -31,7 +31,9 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
   }
 
   Future<void> loadData() async {
-    userId = (await SharedPrefsService.getUserId())!;
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    userId = prefs.getString('userId');
+    token = prefs.getString('token');
     await _loadAssessmentState();
     setState(() {
       isLoading = false;
@@ -104,15 +106,16 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse("$baseUrl/$userId/submit-assessment"),
-        headers: {'Content-Type': 'application/json'},
+        Uri.parse("$baseUrl/api/$userId/submit-assessment"),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer $token',
+        },
         body: jsonEncode({
-          'userId': userId,
           'quizScore': quizScore * 4,
           'readingScore': readingScore,
           'listeningScore': listeningScore,
           'overallScore': overallScore,
-          'replaceExisting': true,
         }),
       );
 
@@ -131,13 +134,17 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
           );
         }
 
-        // Clear the saved state after successful submission
         await _clearAssessmentState();
       } else {
+        final jsonResponse = jsonDecode(response.body);
+
+        final errorMessage =
+            jsonResponse['error']?['message'] ?? 'Something went wrong';
+
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text('Failed to submit assessment: ${response.body}'),
+              content: Text('Failed to submit assessment: $errorMessage'),
               backgroundColor: Colors.red,
             ),
           );

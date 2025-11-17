@@ -925,29 +925,33 @@ class _LessonsScreenState extends State<LessonsScreen> {
   Future<void> fetchCompletedLessons() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? userId = prefs.getString('userId');
+    String? token = prefs.getString('token');
 
     if (userId == null) return;
 
-    final url = Uri.parse('$baseUrl/$userId/profile');
-    final response = await http.get(url);
+    final response = await http.get(
+      Uri.parse('$baseUrl/api/$userId/profile'),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $token',
+      },
+    );
 
     if (response.statusCode == 200) {
-      final data = json.decode(response.body);
-      final completed = data['completedLessons'];
+      final jsonRes = json.decode(response.body);
+
+      final completed = jsonRes['data']?['completedLessons'];
 
       if (completed is List) {
         setState(() {
           completedLessons = completed
+              .where((item) => item['lessonId'] != null)
               .map<String>((item) => item['lessonId'].toString())
               .toSet();
         });
-      } else if (completed is Map) {
-        setState(() {
-          completedLessons = completed.keys
-              .map<String>((key) => key.toString())
-              .toSet();
-        });
       }
+    } else {
+      print("Failed to fetch profile. Response: ${response.body}");
     }
   }
 
@@ -1018,6 +1022,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
 
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? userId = prefs.getString('userId');
+    String? token = prefs.getString('token');
 
     if (userId == null) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -1029,7 +1034,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
       return;
     }
 
-    final url = Uri.parse('$baseUrl/$userId/mark-complete');
+    final url = Uri.parse('$baseUrl/api/$userId/mark-complete');
     final percentage = ((score / total) * 100).round();
 
     final requestBody = {
@@ -1042,7 +1047,10 @@ class _LessonsScreenState extends State<LessonsScreen> {
     try {
       final response = await http.post(
         url,
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer $token',
+        },
         body: json.encode(requestBody),
       );
 

@@ -79,11 +79,12 @@ class _DictionaryWidgetState extends State<DictionaryWidget>
       );
 
       if (res.statusCode == 200) {
-        final json = jsonDecode(res.body);
-        if (json['error'] != null) {
-          setState(() => _error = json['error']);
+        final body = json.decode(res.body);
+        final responseData = body['data'];
+        if (responseData['error'] != null) {
+          setState(() => _error = responseData['error']);
         } else {
-          setState(() => _data = json);
+          setState(() => _data = responseData);
         }
       } else {
         setState(() => _error = "Failed to fetch data");

@@ -35,7 +35,7 @@ class UserProfile {
     required this.currentLevel,
     required this.recentLessons,
     required this.assessmentScores,
-    required this.completedLessons, 
+    required this.completedLessons,
   });
 
   factory UserProfile.fromJson(Map<String, dynamic> json) {
@@ -75,6 +75,7 @@ class UserProfile {
 class _ProfileScreenState extends State<ProfileScreen>
     with SingleTickerProviderStateMixin {
   String? userId;
+  String? token;
   late Future<List<dynamic>> profileFuture;
   late TabController _tabController;
 
@@ -97,6 +98,7 @@ class _ProfileScreenState extends State<ProfileScreen>
   Future<void> _loadUserIdAndFetchProfile() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     userId = prefs.getString('userId');
+    token = prefs.getString('token');
     if (userId != null) {
       setState(() {
         profileFuture = _loadProfileWithLessons();
@@ -104,10 +106,20 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
 
-  Future<UserProfile> fetchUserProfile(String userId) async {
-    final response = await http.get(Uri.parse('$baseUrl/$userId/profile'));
+  Future<UserProfile> fetchUserProfile(String userId, String token) async {
+    final response = await http.get(
+      Uri.parse('$baseUrl/api/$userId/profile'),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $token',
+      },
+    );
+
     if (response.statusCode == 200) {
-      return UserProfile.fromJson(json.decode(response.body));
+      final body = json.decode(response.body);
+      final data = body['data'];
+
+      return UserProfile.fromJson(data);
     } else {
       throw Exception('Failed to load user profile');
     }
@@ -160,7 +172,7 @@ class _ProfileScreenState extends State<ProfileScreen>
   }
 
   Future<List<dynamic>> _loadProfileWithLessons() async {
-    final profile = await fetchUserProfile(userId!);
+    final profile = await fetchUserProfile(userId!, token!);
     final lessonsJson = await loadLessonsJson();
     final extracted = extractAllLessonIdsAndTitles(lessonsJson);
     return [profile, lessonsJson, extracted[1]];
@@ -282,8 +294,11 @@ class _ProfileScreenState extends State<ProfileScreen>
   ) async {
     try {
       final response = await http.put(
-        Uri.parse('$baseUrl/$userId/profile'),
-        headers: {'Content-Type': 'application/json'},
+        Uri.parse('$baseUrl/api/$userId/profile'),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer $token',
+        },
         body: json.encode({'name': name, 'class': className, 'school': school}),
       );
 
@@ -300,7 +315,10 @@ class _ProfileScreenState extends State<ProfileScreen>
           profileFuture = _loadProfileWithLessons();
         });
       } else {
-        throw Exception('Failed to update profile: ${response.body}');
+        final body = jsonDecode(response.body);
+        final errorMessage = body['error']?['message'] ?? response.body;
+
+        throw Exception('Failed to update profile: $errorMessage');
       }
     } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(

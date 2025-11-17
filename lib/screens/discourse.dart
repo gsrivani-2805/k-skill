@@ -21,6 +21,7 @@ class _DiscourseState extends State<Discourse> {
   String searchQuery = '';
 
   String? _userId;
+  String? token;
   bool _isUserIdLoading = true;
 
   @override
@@ -34,6 +35,7 @@ class _DiscourseState extends State<Discourse> {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
       _userId = prefs.getString('userId');
+      token = prefs.getString('token');
       _isUserIdLoading = false;
     });
   }
@@ -215,8 +217,7 @@ class _DiscourseState extends State<Discourse> {
           return GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: crossAxisCount,
-              childAspectRatio:
-                  constraints.maxWidth > 600 ? 2.0 : 1.0, 
+              childAspectRatio: constraints.maxWidth > 600 ? 2.0 : 1.0,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
             ),
@@ -792,11 +793,11 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
   }
 
   Future<List<dynamic>> _fetchWritingSubmissions() async {
-    final url = Uri.parse('${ApiConfig.baseUrl}/${widget.userId}/submissions');
-    final headers = {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-    };
+    final url = Uri.parse(
+      '${ApiConfig.baseUrl}/api/${widget.userId}/submissions?limit=50&offset=0',
+    );
+
+    final headers = {'Accept': 'application/json'};
 
     try {
       final response = await http.get(url, headers: headers);
@@ -804,54 +805,30 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
       if (response.statusCode == 200) {
         final jsonResponse = jsonDecode(response.body);
 
-        List<dynamic> submissions = [];
-
+        // Expecting: { success, message, data: { submissions: [...] } }
         if (jsonResponse is Map<String, dynamic>) {
-          if (jsonResponse.containsKey('submissions') &&
-              jsonResponse['submissions'] is List) {
-            submissions = jsonResponse['submissions'];
-          } else if (jsonResponse.containsKey('user') &&
-              jsonResponse['user'] is Map) {
-            if (jsonResponse['user']['writingSubmissions'] is List) {
-              submissions = jsonResponse['user']['writingSubmissions'];
-            } else if (jsonResponse['user']['submissions'] is List) {
-              submissions = jsonResponse['user']['submissions'];
-            }
-          } else if (jsonResponse.containsKey('writingSubmissions') &&
-              jsonResponse['writingSubmissions'] is List) {
-            submissions = jsonResponse['writingSubmissions'];
-          } else if (jsonResponse.containsKey('data')) {
-            if (jsonResponse['data'] is List) {
-              submissions = jsonResponse['data'];
-            } else if (jsonResponse['data'] is Map) {
-              if (jsonResponse['data']['submissions'] is List) {
-                submissions = jsonResponse['data']['submissions'];
-              } else if (jsonResponse['data']['writingSubmissions'] is List) {
-                submissions = jsonResponse['data']['writingSubmissions'];
-              }
-            }
-          } else if (jsonResponse.containsKey('discourseType')) {
-            submissions = [jsonResponse];
-          } else if (jsonResponse.containsKey('_id') ||
-              jsonResponse.containsKey('id')) {
-            if (jsonResponse['submissions'] is List) {
-              submissions = jsonResponse['submissions'];
-            } else if (jsonResponse['writingSubmissions'] is List) {
-              submissions = jsonResponse['writingSubmissions'];
+          final data = jsonResponse['data'];
+
+          if (data is Map<String, dynamic>) {
+            final submissions = data['submissions'];
+
+            if (submissions is List) {
+              return submissions;
             }
           }
-        } else if (jsonResponse is List) {
-          submissions = jsonResponse;
         }
 
-        return submissions;
-      } else if (response.statusCode == 404) {
+        // If structure is unexpected, return empty list
         return [];
-      } else {
-        throw Exception(
-          'Failed to load writing submissions: ${response.statusCode}. Body: ${response.body}',
-        );
       }
+
+      if (response.statusCode == 404) {
+        return [];
+      }
+
+      throw Exception(
+        'Failed to load writing submissions: ${response.statusCode}. Body: ${response.body}',
+      );
     } catch (e) {
       throw Exception('Failed to load writing submissions: $e');
     }
@@ -1569,7 +1546,6 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
       return;
     }
 
-    // Show a loading indicator
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -1577,9 +1553,11 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
     );
 
     var baseUrl = ApiConfig.baseUrl;
-    final feedbackUrl = Uri.parse('$baseUrl/check-writing');
+    final feedbackUrl = Uri.parse(
+      '$baseUrl/api/${widget.userId}/check-writing',
+    );
     final saveSubmissionUrl = Uri.parse(
-      '$baseUrl/${widget.userId}/submissions',
+      '$baseUrl/api/${widget.userId}/submit-writing',
     );
 
     final headers = {'Content-Type': 'application/json'};
@@ -1591,53 +1569,43 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
     };
 
     try {
-      // 1. Send text for AI feedback
-      print("Sending request to feedback URL: $feedbackUrl");
       final feedbackResponse = await http.post(
         feedbackUrl,
         headers: headers,
         body: jsonEncode(submissionDataForFeedback),
       );
 
-      print("Feedback response status: ${feedbackResponse.statusCode}");
-
       if (feedbackResponse.statusCode == 200) {
         final jsonFeedbackResponse = jsonDecode(feedbackResponse.body);
+
+        /// UPDATED MODEL HERE
         final feedback = WritingFeedback.fromJson(jsonFeedbackResponse);
 
-        // 2. Prepare data to save to user's profile
         final dataToSave = {
-          'discourseType': widget.discourseType.id.toLowerCase(),
+          'type': widget.discourseType.id.toLowerCase(),
+          'content': _textController.text.trim(),
           'question': widget.practiceItem.prompt,
-          'submittedText': _textController.text.trim(),
-          'exerciseTitle': widget.practiceItem.title, // Add exercise title
+          'exerciseTitle': widget.practiceItem.title,
           'feedback': jsonFeedbackResponse,
         };
 
-        // 3. Send data to save as a submission for the current user
         final saveResponse = await http.post(
           saveSubmissionUrl,
           headers: headers,
           body: jsonEncode(dataToSave),
         );
 
-        // Close the loading indicator dialog
-        Navigator.of(context).pop();
+        Navigator.of(context).pop(); // close loader
 
         if (saveResponse.statusCode == 201 || saveResponse.statusCode == 200) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text('Submission saved successfully!'),
               backgroundColor: Colors.green,
-              duration: Duration(seconds: 3),
             ),
           );
 
-          // Show feedback dialog
           await _showFeedbackDialog(feedback);
-
-          // Return true to indicate successful submission
-          // This will trigger refresh in the parent screen
           Navigator.of(context).pop(true);
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -1646,43 +1614,34 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
                 'Feedback received, but failed to save submission. Status: ${saveResponse.statusCode}',
               ),
               backgroundColor: Colors.orange,
-              duration: const Duration(seconds: 5),
             ),
           );
 
-          // Show feedback even if save failed
           await _showFeedbackDialog(feedback);
-
-          // Return false since save failed
           Navigator.of(context).pop(false);
         }
       } else {
-        // Failed to get feedback
-        Navigator.of(context).pop(); // Close loading dialog
+        Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-              'Error getting feedback: ${feedbackResponse.statusCode}. Please try again.',
+              'Error getting feedback: ${feedbackResponse.statusCode}.',
             ),
             backgroundColor: Colors.red,
-            duration: const Duration(seconds: 5),
           ),
         );
       }
     } catch (e) {
-      Navigator.of(context).pop(); // Close loading dialog
-
+      Navigator.of(context).pop();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Network error: ${e.toString()}. Please try again.'),
+          content: Text('Network error: ${e.toString()}'),
           backgroundColor: Colors.red,
-          duration: const Duration(seconds: 5),
         ),
       );
     }
   }
 
-  // Make this method async and return Future<void>
   Future<void> _showFeedbackDialog(WritingFeedback feedback) async {
     return showDialog<void>(
       context: context,
@@ -1694,7 +1653,7 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                'Overall Score: ${feedback.overallScore ?? 0}/100',
+                'Overall Score: ${feedback.data.overallScore}/100',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -1702,55 +1661,59 @@ class _WritingEditorScreenState extends State<WritingEditorScreen> {
                 ),
               ),
               const SizedBox(height: 8),
+
               Text(
-                'Summary: ${feedback.feedbackSummary ?? 'No summary available'}',
+                'Summary: ${feedback.data.feedbackSummary}',
                 style: const TextStyle(fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: 16),
+
               const Text(
                 'Detailed Analysis:',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
+
               Text(
-                feedback.discourseSpecificAnalysis ??
-                    'No detailed analysis available',
+                feedback.data.discourseSpecificAnalysis,
                 style: const TextStyle(fontStyle: FontStyle.italic),
               ),
               const SizedBox(height: 16),
+
               const Text(
                 'Detected Errors:',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
-              if (feedback.errors == null || feedback.errors!.isEmpty)
+
+              if (feedback.data.errors.isEmpty)
                 const Text('No major errors found. Great job!')
               else
-                ...feedback.errors!.map((error) {
+                ...feedback.data.errors.map((error) {
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Type: ${error['type'] ?? 'Unknown'}',
+                          'Type: ${error.type}',
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
+                        Text('Description: ${error.description}'),
                         Text(
-                          'Description: ${error['description'] ?? 'No description'}',
-                        ),
-                        Text(
-                          'Suggestion: ${error['suggestion'] ?? 'No suggestion'}',
+                          'Suggestion: ${error.suggestion}',
                           style: const TextStyle(color: Colors.green),
                         ),
                       ],
                     ),
                   );
                 }),
+
               const SizedBox(height: 16),
               const Divider(),
+
               Text(
-                'Final Tip: ${feedback.finalSuggestion ?? 'Keep practicing!'}',
+                'Final Tip: ${feedback.data.finalSuggestion}',
                 style: const TextStyle(
                   fontSize: 14,
                   fontStyle: FontStyle.italic,
@@ -2185,129 +2148,77 @@ class PracticeItem {
   }
 }
 
-// writing_feedback.dart - Updated model class
-
 class WritingFeedback {
-  final int? overallScore;
-  final String? feedbackSummary;
-  final String? discourseSpecificAnalysis;
-  final String? finalSuggestion;
-  final List<Map<String, dynamic>>? errors;
+  final bool success;
+  final int statusCode;
+  final String message;
+  final WritingData data;
+  final String timestamp;
 
   WritingFeedback({
-    this.overallScore,
-    this.feedbackSummary,
-    this.discourseSpecificAnalysis,
-    this.finalSuggestion,
-    this.errors,
+    required this.success,
+    required this.statusCode,
+    required this.message,
+    required this.data,
+    required this.timestamp,
   });
 
   factory WritingFeedback.fromJson(Map<String, dynamic> json) {
-    // Handle different possible field names from AI response
-    final overallScore = _extractScore(json);
-    final feedbackSummary = _extractFeedbackSummary(json);
-    final discourseSpecificAnalysis = _extractDiscourseAnalysis(json);
-    final finalSuggestion = _extractFinalSuggestion(json);
-    final errors = _extractErrors(json);
-
-    final feedback = WritingFeedback(
-      overallScore: overallScore,
-      feedbackSummary: feedbackSummary,
-      discourseSpecificAnalysis: discourseSpecificAnalysis,
-      finalSuggestion: finalSuggestion,
-      errors: errors,
+    return WritingFeedback(
+      success: json['success'],
+      statusCode: json['statusCode'],
+      message: json['message'],
+      data: WritingData.fromJson(json['data']),
+      timestamp: json['timestamp'],
     );
-    return feedback;
   }
+}
 
-  // Helper methods to extract fields with fallbacks
-  static int _extractScore(Map<String, dynamic> json) {
-    final possibleKeys = [
-      'overallScore',
-      'overall_score',
-      'score',
-      'totalScore',
-    ];
-    for (String key in possibleKeys) {
-      if (json.containsKey(key) && json[key] != null) {
-        if (json[key] is int) return json[key];
-        if (json[key] is double) return json[key].round();
-        if (json[key] is String) return int.tryParse(json[key]) ?? 0;
-      }
-    }
-    return 0;
+class WritingData {
+  final int overallScore;
+  final String feedbackSummary;
+  final List<WritingError> errors;
+  final String discourseSpecificAnalysis;
+  final String finalSuggestion;
+
+  WritingData({
+    required this.overallScore,
+    required this.feedbackSummary,
+    required this.errors,
+    required this.discourseSpecificAnalysis,
+    required this.finalSuggestion,
+  });
+
+  factory WritingData.fromJson(Map<String, dynamic> json) {
+    return WritingData(
+      overallScore: json['overall_score'],
+      feedbackSummary: json['feedback_summary'],
+      errors: (json['errors'] as List)
+          .map((e) => WritingError.fromJson(e))
+          .toList(),
+      discourseSpecificAnalysis: json['discourse_specific_analysis'],
+      finalSuggestion: json['final_suggestion'],
+    );
   }
+}
 
-  static String _extractFeedbackSummary(Map<String, dynamic> json) {
-    final possibleKeys = [
-      'feedbackSummary',
-      'feedback_summary',
-      'summary',
-      'feedback',
-    ];
-    for (String key in possibleKeys) {
-      if (json.containsKey(key) && json[key] != null) {
-        return json[key].toString();
-      }
-    }
-    return 'No feedback summary available';
-  }
+class WritingError {
+  final String type;
+  final String description;
+  final String suggestion;
 
-  static String _extractDiscourseAnalysis(Map<String, dynamic> json) {
-    final possibleKeys = [
-      'discourseSpecificAnalysis',
-      'discourse_specific_analysis',
-      'analysis',
-      'detailedAnalysis',
-      'detailed_analysis',
-    ];
-    for (String key in possibleKeys) {
-      if (json.containsKey(key) && json[key] != null) {
-        return json[key].toString();
-      }
-    }
-    return 'No detailed analysis available';
-  }
+  WritingError({
+    required this.type,
+    required this.description,
+    required this.suggestion,
+  });
 
-  static String _extractFinalSuggestion(Map<String, dynamic> json) {
-    final possibleKeys = [
-      'finalSuggestion',
-      'final_suggestion',
-      'suggestion',
-      'recommendations',
-      'tip',
-    ];
-    for (String key in possibleKeys) {
-      if (json.containsKey(key) && json[key] != null) {
-        return json[key].toString();
-      }
-    }
-    return 'Keep practicing to improve your writing skills!';
-  }
-
-  static List<Map<String, dynamic>> _extractErrors(Map<String, dynamic> json) {
-    final possibleKeys = ['errors', 'mistakes', 'issues', 'problems'];
-    for (String key in possibleKeys) {
-      if (json.containsKey(key) && json[key] != null && json[key] is List) {
-        return List<Map<String, dynamic>>.from(json[key]);
-      }
-    }
-    return [];
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'overallScore': overallScore,
-      'feedbackSummary': feedbackSummary,
-      'discourseSpecificAnalysis': discourseSpecificAnalysis,
-      'finalSuggestion': finalSuggestion,
-      'errors': errors,
-    };
-  }
-
-  @override
-  String toString() {
-    return 'WritingFeedback(overallScore: $overallScore, feedbackSummary: $feedbackSummary, discourseSpecificAnalysis: $discourseSpecificAnalysis, finalSuggestion: $finalSuggestion, errors: $errors)';
+  factory WritingError.fromJson(Map<String, dynamic> json) {
+    return WritingError(
+      type: json['type'],
+      description: json['description'],
+      suggestion: json['suggestion'],
+    );
   }
 }
 

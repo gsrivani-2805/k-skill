@@ -21,6 +21,8 @@ class PracticeScreen extends StatefulWidget {
 class _PracticeScreenState extends State<PracticeScreen> {
   FlutterTts flutterTts = FlutterTts();
 
+  String? token;
+
   String practiceMode = 'speaking';
   bool isRecording = false;
   bool isPlaying = false;
@@ -368,13 +370,14 @@ class _PracticeScreenState extends State<PracticeScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse("$baseUrl/chat"),
-        headers: {"Content-Type": "application/json"},
+        Uri.parse("$baseUrl/api/chat"),
+        headers: {'Content-Type': 'application/json'},
         body: json.encode({"message": userMessage}),
       );
 
       if (response.statusCode == 200) {
-        final responseData = json.decode(response.body);
+        final body = json.decode(response.body);
+        final responseData = body['data'];
         final aiReply = responseData["response"];
 
         setState(() {

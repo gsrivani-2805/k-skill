@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPrefsService {
-  static const _baseUrl = ApiConfig.baseUrl;
+  static const baseUrl = ApiConfig.baseUrl;
 
   // USER ID
   static Future<void> setUserId(String userId) async {
@@ -57,7 +57,7 @@ class SharedPrefsService {
     return true;
   }
 
-  /// Add active time (in seconds)
+  // Add active time (in seconds)
   static Future<void> addActiveTime(int seconds) async {
     final prefs = await SharedPreferences.getInstance();
     double current = prefs.getDouble('totalUsageSeconds') ?? 0;
@@ -65,22 +65,23 @@ class SharedPrefsService {
     await prefs.setDouble('totalUsageSeconds', current);
   }
 
-  /// Get total usage time (in seconds)
+  // Get total usage time (in seconds)
   static Future<double> getActiveTime() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getDouble('totalUsageSeconds') ?? 0;
   }
 
-  /// Reset total usage time
+  // Reset total usage time
   static Future<void> resetActiveTime() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setDouble('totalUsageSeconds', 0);
   }
 
-  /// Sync usage time with server
+  // Sync usage time with server
   static Future<void> syncActiveTimeWithServer() async {
     final prefs = await SharedPreferences.getInstance();
     final userId = prefs.getString('userId');
+    final token = prefs.getString('token');
     final totalSeconds = prefs.getDouble('totalUsageSeconds') ?? 0;
 
     if (userId == null || totalSeconds <= 0) {
@@ -88,17 +89,18 @@ class SharedPrefsService {
     }
 
     try {
-
       final response = await http.post(
-        Uri.parse("$_baseUrl/$userId/active-time"),
-        headers: {"Content-Type": "application/json"},
+        Uri.parse("$baseUrl/api/$userId/active-time"),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer $token',
+        },
         body: jsonEncode({"activeTime": totalSeconds.toInt()}),
       );
 
       if (response.statusCode == 200) {
-        await prefs.setDouble('totalUsageSeconds', 0); // reset after sync
-      } else {
-      }
+        await prefs.setDouble('totalUsageSeconds', 0);
+      } else {}
     } catch (e) {
       print("🚨 Error syncing usage time: $e");
     }

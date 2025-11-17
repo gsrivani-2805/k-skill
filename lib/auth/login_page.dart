@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
     super.dispose();
   }
 
-  // ✅ LOGIN FUNCTION
+  // LOGIN FUNCTION
   Future<void> _login() async {
     if (!_formKey.currentState!.validate()) return;
 
@@ -51,22 +51,24 @@ class _LoginPageState extends State<LoginPage> {
       setState(() => _isLoading = false);
 
       if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        final userData = data['user'];
-        final token = data['token'];
+        final body = jsonDecode(response.body);
+        final data = body['data'];
 
-        // ✅ Store user data and token
+        final token = data['token'];
+        final userData = data['user'];
+
+        // Store user data and token
         await SharedPrefsService.setUserId(userData['userId']);
         await SharedPrefsService.setUserName(userData['name']);
         await SharedPrefsService.setUserStreak(userData['currentStreak']);
-        await SharedPrefsService.setToken(token); // includes login timestamp
+        await SharedPrefsService.setToken(token); 
 
-        // ✅ Mark user as logged in
+        // Mark user as logged in
         final prefs = await SharedPreferences.getInstance();
         await prefs.setBool('isLoggedIn', true);
         await prefs.setString('lastRoute', '/profile');
 
-        // ✅ Navigate to dashboard
+        // Navigate to dashboard
         Navigator.pushNamedAndRemoveUntil(
           context,
           '/dashboard',

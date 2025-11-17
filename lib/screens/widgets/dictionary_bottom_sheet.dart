@@ -49,7 +49,8 @@ class _DictionaryBottomSheetState extends State<DictionaryBottomSheet> {
       );
 
       if (response.statusCode == 200) {
-        final data = json.decode(response.body);
+        final body = json.decode(response.body);
+        final data = body['data'];
         if (data.containsKey('error')) {
           setState(() {
             _errorMessage = data['error'];

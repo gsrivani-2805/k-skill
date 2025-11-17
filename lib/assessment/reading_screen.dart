@@ -191,15 +191,12 @@ class _ReadingScreenState extends State<ReadingScreen> {
         title: Text(_finished ? "Reading Completed" : "Reading Assessment"),
         backgroundColor: primaryColor,
         foregroundColor: Colors.white,
-        leading: _finished
-            ? null
-            : IconButton(
-                icon: const Icon(Icons.arrow_back),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-        automaticallyImplyLeading: !_finished,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
 
       body: _finished

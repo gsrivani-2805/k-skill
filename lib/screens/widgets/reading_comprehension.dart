@@ -3,6 +3,7 @@ import 'package:K_Skill/config/api_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Question {
   final int id;
@@ -76,8 +77,8 @@ class AIFeedback {
 
   AIFeedback({required this.feedback});
 
-  factory AIFeedback.fromJson(Map<String, dynamic> json) {
-    return AIFeedback(feedback: json['feedback'] ?? 'No feedback available.');
+  factory AIFeedback.fromJson(dynamic json) {
+    return AIFeedback(feedback: json);
   }
 }
 
@@ -116,6 +117,8 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
   bool isLoading = true;
   bool isLoadingFeedback = false;
   String? error;
+  String? userId;
+  String? token;
 
   String baseUrl = ApiConfig.baseUrl;
 
@@ -123,6 +126,7 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
   void initState() {
     super.initState();
     loadData();
+    _loadUserIdAndFetchProfile();
   }
 
   Future<void> loadData() async {
@@ -150,6 +154,12 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
     }
   }
 
+  Future<void> _loadUserIdAndFetchProfile() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    userId = prefs.getString('userId');
+    token = prefs.getString('token');
+  }
+
   Future<AIFeedback?> fetchAIAnalysis({
     required String passage,
     required String question,
@@ -157,7 +167,7 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
     required String correctAnswer,
   }) async {
     try {
-      final url = Uri.parse("$baseUrl/check-comprehension");
+      final url = Uri.parse("$baseUrl/api/$userId/check-comprehension");
 
       final response = await http.post(
         url,
@@ -171,8 +181,8 @@ class _ReadingComprehensionState extends State<ReadingComprehension> {
       );
 
       if (response.statusCode == 200) {
-        final jsonResponse = jsonDecode(response.body);
-        return AIFeedback.fromJson(jsonResponse);
+        final body = json.decode(response.body);
+        return AIFeedback.fromJson(body['data']); 
       } else {
         return null;
       }

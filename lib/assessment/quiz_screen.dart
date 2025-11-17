@@ -137,7 +137,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void _submitScoreAndContinue() {
     Navigator.pop(context, score);
-    
+
     Future.delayed(Duration.zero, () {
       Navigator.pushNamed(context, '/reading');
     });
@@ -167,6 +167,12 @@ class _QuizScreenState extends State<QuizScreen> {
         title: const Text("Quiz Result", style: TextStyle(color: Colors.white)),
         backgroundColor: const Color(0xFFFFA500), // Orange
         automaticallyImplyLeading: false,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Center(
         child: Card(
