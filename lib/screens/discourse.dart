@@ -666,10 +666,10 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
           const SizedBox(height: 12),
           Expanded(
             child: FutureBuilder<List<dynamic>>(
-              // Use the refresh key to force rebuild
               key: ValueKey(_refreshKey),
               future: _fetchWritingSubmissions(),
               builder: (context, snapshot) {
+                // Loading
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const Center(
                     child: Column(
@@ -681,30 +681,29 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
                       ],
                     ),
                   );
-                } else if (snapshot.hasError) {
+                }
+
+                // Error
+                if (snapshot.hasError) {
                   return Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(
-                          Icons.error_outline,
-                          size: 64,
-                          color: Colors.red[300],
-                        ),
+                        Icon(Icons.error_outline, size: 64, color: Colors.red),
                         const SizedBox(height: 16),
-                        Text(
+                        const Text(
                           'Error loading submissions',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Colors.red[700],
+                            color: Colors.red,
                           ),
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          '${snapshot.error}',
-                          style: TextStyle(color: Colors.red[600]),
+                          snapshot.error.toString(),
                           textAlign: TextAlign.center,
+                          style: const TextStyle(color: Colors.red),
                         ),
                         const SizedBox(height: 16),
                         ElevatedButton.icon(
@@ -715,75 +714,39 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
                       ],
                     ),
                   );
-                } else if (snapshot.hasData && snapshot.data!.isNotEmpty) {
-                  final allSubmissions = snapshot.data!;
+                }
 
-                  final filteredSubmissions = allSubmissions.where((
-                    submission,
-                  ) {
-                    if (submission is Map<String, dynamic>) {
-                      final discourseType = submission['discourseType']
-                          ?.toString()
-                          .toLowerCase()
-                          .trim();
-                      final currentType = widget.discourseType.id
-                          .toLowerCase()
-                          .trim();
-                      final hasQuestion = submission.containsKey('question');
-                      final hasSubmittedText = submission.containsKey(
-                        'submittedText',
-                      );
+                final submissions = snapshot.data ?? [];
 
-                      return discourseType == currentType &&
-                          hasQuestion &&
-                          hasSubmittedText;
-                    }
-                    return false;
-                  }).toList();
-
-                  if (filteredSubmissions.isEmpty) {
-                    return _buildEmptyStateWithDebugInfo(allSubmissions);
-                  }
-
-                  // Sort by submission date/time (most recent first)
-                  filteredSubmissions.sort((a, b) {
-                    final aDate =
-                        a['submissionDate']?.toString() ??
-                        a['submittedAt']?.toString() ??
-                        a['createdAt']?.toString() ??
-                        '';
-                    final bDate =
-                        b['submissionDate']?.toString() ??
-                        b['submittedAt']?.toString() ??
-                        b['createdAt']?.toString() ??
-                        '';
-                    return bDate.compareTo(aDate);
-                  });
-
-                  return RefreshIndicator(
-                    onRefresh: () async {
-                      _refreshReviewData();
-                      // Wait a bit to ensure the rebuild happens
-                      await Future.delayed(const Duration(milliseconds: 500));
-                    },
-                    child: ListView.builder(
-                      physics: const AlwaysScrollableScrollPhysics(),
-                      itemCount: filteredSubmissions.length,
-                      itemBuilder: (context, index) {
-                        final submission = filteredSubmissions[index];
-                        // Fix numbering: most recent should be highest number
-                        final submissionNumber =
-                            filteredSubmissions.length - index;
-                        return _buildSubmissionCard(
-                          submission,
-                          submissionNumber,
-                        );
-                      },
-                    ),
-                  );
-                } else {
+                // Empty state
+                if (submissions.isEmpty) {
                   return _buildEmptyStateWithDebugInfo([]);
                 }
+
+                // Sort (backend already sorted, but just in case)
+                submissions.sort((a, b) {
+                  final aDate = a['submissionDate']?.toString() ?? '';
+                  final bDate = b['submissionDate']?.toString() ?? '';
+                  return bDate.compareTo(aDate);
+                });
+
+                return RefreshIndicator(
+                  onRefresh: () async {
+                    _refreshReviewData();
+                    await Future.delayed(const Duration(milliseconds: 300));
+                  },
+                  child: ListView.builder(
+                    physics: const AlwaysScrollableScrollPhysics(),
+                    itemCount: submissions.length,
+                    itemBuilder: (context, index) {
+                      final submission = submissions[index];
+
+                      final submissionNumber = submissions.length - index;
+
+                      return _buildSubmissionCard(submission, submissionNumber);
+                    },
+                  ),
+                );
               },
             ),
           ),
@@ -793,32 +756,32 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
   }
 
   Future<List<dynamic>> _fetchWritingSubmissions() async {
-    final url = Uri.parse(
-      '${ApiConfig.baseUrl}/api/${widget.userId}/submissions?limit=50&offset=0',
-    );
-
-    final headers = {'Accept': 'application/json'};
-
     try {
-      final response = await http.get(url, headers: headers);
+      final rawType = widget.discourseType.id;
+      final discourseType = (rawType).toString().toLowerCase().trim();
+
+      final url =
+          Uri.parse(
+            '${ApiConfig.baseUrl}/api/${widget.userId}/submissions',
+          ).replace(
+            queryParameters: discourseType.isNotEmpty
+                ? {'discourseType': discourseType}
+                : null,
+          );
+
+      final response = await http.get(
+        url,
+        headers: {'Accept': 'application/json'},
+      );
 
       if (response.statusCode == 200) {
-        final jsonResponse = jsonDecode(response.body);
+        final decoded = jsonDecode(response.body);
 
-        // Expecting: { success, message, data: { submissions: [...] } }
-        if (jsonResponse is Map<String, dynamic>) {
-          final data = jsonResponse['data'];
-
-          if (data is Map<String, dynamic>) {
-            final submissions = data['submissions'];
-
-            if (submissions is List) {
-              return submissions;
-            }
-          }
+        if (decoded is Map && decoded['success'] == true) {
+          final data = decoded['data'];
+          if (data is List) return data;
         }
 
-        // If structure is unexpected, return empty list
         return [];
       }
 
@@ -827,10 +790,10 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
       }
 
       throw Exception(
-        'Failed to load writing submissions: ${response.statusCode}. Body: ${response.body}',
+        "Failed to load submissions: ${response.statusCode}, Body: ${response.body}",
       );
     } catch (e) {
-      throw Exception('Failed to load writing submissions: $e');
+      throw Exception("Failed to load writing submissions: $e");
     }
   }
 
@@ -993,7 +956,7 @@ class _DiscourseDetailScreenState extends State<DiscourseDetailScreen>
     final submittedAt =
         submission['submissionDate']?.toString() ??
         submission['submittedAt']?.toString() ??
-        submission['createdAt']?.toString();
+        submission['submissionDate']?.toString();
     final exerciseTitle =
         submission['exerciseTitle']?.toString() ?? 'Exercise $index';
 

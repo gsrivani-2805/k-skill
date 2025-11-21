@@ -78,19 +78,35 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
     await prefs.remove('assessment_submitted');
   }
 
-  void _navigateAndSet(String route, Function(bool, int) setter) async {
+  void _navigateAndSet(String route) async {
     try {
       final result = await Navigator.pushNamed(context, route);
-      debugPrint('Route $route returned: $result');
-      if (mounted && result != null && result is int) {
+
+      if (!mounted || result == null) return;
+
+      if (result is Map) {
+        final type = result["type"];
+        final done = result["done"] == true;
+        final score = result["score"] ?? 0;
+
         setState(() {
-          setter(true, result);
+          if (type == "quiz") {
+            quizDone = done;
+            quizScore = score;
+          } else if (type == "reading") {
+            readingDone = done;
+            readingScore = score;
+          } else if (type == "listening") {
+            listeningDone = done;
+            listeningScore = score;
+          }
           isSubmitted = false;
         });
+
         await _saveAssessmentState();
       }
     } catch (e) {
-      debugPrint('Navigation error: $e');
+      debugPrint("Navigation error: $e");
     }
   }
 
@@ -429,10 +445,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                               color: Colors.orange,
                               done: quizDone,
                               score: quizScore * 4,
-                              onTap: () => _navigateAndSet('/quiz', (v, score) {
-                                quizDone = v;
-                                quizScore = score;
-                              }),
+                              onTap: () => _navigateAndSet('/quiz'),
                               isDesktop: true,
                             ),
                           ),
@@ -448,11 +461,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                               color: Colors.blue,
                               done: readingDone,
                               score: readingScore,
-                              onTap: () =>
-                                  _navigateAndSet('/reading', (v, score) {
-                                    readingDone = v;
-                                    readingScore = score;
-                                  }),
+                              onTap: () => _navigateAndSet('/reading'),
                               isDesktop: true,
                             ),
                           ),
@@ -468,11 +477,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                               color: Colors.green,
                               done: listeningDone,
                               score: listeningScore,
-                              onTap: () =>
-                                  _navigateAndSet('/listening', (v, score) {
-                                    listeningDone = v;
-                                    listeningScore = score;
-                                  }),
+                              onTap: () => _navigateAndSet('/listening'),
                               isDesktop: true,
                             ),
                           ),
@@ -492,10 +497,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                             color: Colors.orange,
                             done: quizDone,
                             score: quizScore * 4,
-                            onTap: () => _navigateAndSet('/quiz', (v, score) {
-                              quizDone = v;
-                              quizScore = score;
-                            }),
+                            onTap: () => _navigateAndSet('/quiz'),
                             isDesktop: false,
                           ),
                           const SizedBox(height: 16),
@@ -509,11 +511,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                             color: Colors.blue,
                             done: readingDone,
                             score: readingScore,
-                            onTap: () =>
-                                _navigateAndSet('/reading', (v, score) {
-                                  readingDone = v;
-                                  readingScore = score;
-                                }),
+                            onTap: () => _navigateAndSet('/reading'),
                             isDesktop: false,
                           ),
                           const SizedBox(height: 16),
@@ -527,11 +525,7 @@ class _AssessmentScreenState extends State<AssessmentScreen> {
                             color: Colors.green,
                             done: listeningDone,
                             score: listeningScore,
-                            onTap: () =>
-                                _navigateAndSet('/listening', (v, score) {
-                                  listeningDone = v;
-                                  listeningScore = score;
-                                }),
+                            onTap: () => _navigateAndSet('/listening'),
                             isDesktop: false,
                           ),
                         ],

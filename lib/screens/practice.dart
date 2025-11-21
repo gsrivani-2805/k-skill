@@ -8,6 +8,7 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:K_Skill/config/api_config.dart';
 import 'package:K_Skill/screens/speaking.dart';
 import 'package:http/http.dart' as http;
+import 'package:permission_handler/permission_handler.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:string_similarity/string_similarity.dart';
 
@@ -427,10 +428,20 @@ class _PracticeScreenState extends State<PracticeScreen> {
     });
   }
 
-  String _accumulatedSpeech = '';
-  late String _lastFinalResult = '';
+  // String _accumulatedSpeech = '';
+  // late String _lastFinalResult = '';
 
   Future<void> startListening() async {
+    // 1. Check mic permission
+    var status = await Permission.microphone.request();
+    if (!status.isGranted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Microphone permission required')),
+      );
+      return;
+    }
+
+    // 2. Initialize speech service
     bool available = await speech.initialize(
       onStatus: (status) {
         debugPrint('Speech status: $status');
@@ -444,6 +455,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
       },
     );
 
+    // 3. If not available – show message
     if (!available) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Speech recognition not available')),
@@ -451,37 +463,67 @@ class _PracticeScreenState extends State<PracticeScreen> {
       return;
     }
 
-    setState(() {
-      isListening = true;
-      spokenText = '';
-      _accumulatedSpeech = '';
-      _lastFinalResult = '';
-    });
-
-    await speech.listen(
-      onResult: (val) {
-        setState(() {
-          if (val.finalResult) {
-            final newText = val.recognizedWords.trim();
-            if (newText.isNotEmpty && newText != _lastFinalResult) {
-              _lastFinalResult = newText;
-              _accumulatedSpeech = _accumulatedSpeech.isEmpty
-                  ? newText
-                  : '$_accumulatedSpeech $newText';
-              spokenText = _accumulatedSpeech;
-            }
-          } else {
-            spokenText = val.recognizedWords.trim();
-          }
-        });
+    // 4. Start listening
+    setState(() => isListening = true);
+    speech.listen(
+      onResult: (result) {
+        setState(() => spokenText = result.recognizedWords);
       },
-      pauseFor: const Duration(seconds: 5),
-      partialResults: true,
-      cancelOnError: true,
-      listenMode: stt.ListenMode.confirmation,
-      localeId: 'en_US',
     );
   }
+
+  // Future<void> startListening() async {
+  //   bool available = await speech.initialize(
+  //     onStatus: (status) {
+  //       debugPrint('Speech status: $status');
+  //       if (status == 'notListening' && isListening) {
+  //         setState(() => isListening = false);
+  //       }
+  //     },
+  //     onError: (error) {
+  //       debugPrint('Speech error: $error');
+  //       setState(() => isListening = false);
+  //     },
+  //   );
+
+  //   if (!available) {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       const SnackBar(content: Text('Speech recognition not available')),
+  //     );
+  //     return;
+  //   }
+
+  //   setState(() {
+  //     isListening = true;
+  //     spokenText = '';
+  //     _accumulatedSpeech = '';
+  //     _lastFinalResult = '';
+  //   });
+
+  //   await speech.listen(
+  //     onResult: (val) {
+  //       setState(() {
+  //         if (val.finalResult) {
+  //           final newText = val.recognizedWords.trim();
+  //           if (newText.isNotEmpty && newText != _lastFinalResult) {
+  //             _lastFinalResult = newText;
+  //             _accumulatedSpeech = _accumulatedSpeech.isEmpty
+  //                 ? newText
+  //                 : '$_accumulatedSpeech $newText';
+  //             spokenText = _accumulatedSpeech;
+  //           }
+  //         } else {
+  //           spokenText = val.recognizedWords.trim();
+  //         }
+  //       });
+  //     },
+  //     pauseFor: const Duration(seconds: 5),
+  //     partialResults: true,
+  //     cancelOnError: true,
+  //     listenMode: stt.ListenMode.confirmation,
+  //     localeId: 'en_US',
+  //   );
+  // }
 
   void stopListening() {
     setState(() => isListening = false);

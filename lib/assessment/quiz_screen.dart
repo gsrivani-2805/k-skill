@@ -136,7 +136,7 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _submitScoreAndContinue() {
-    Navigator.pop(context, score);
+    Navigator.pop(context, {"type": "quiz", "done": true, "score": score});
 
     Future.delayed(Duration.zero, () {
       Navigator.pushNamed(context, '/reading');

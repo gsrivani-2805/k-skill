@@ -156,8 +156,12 @@ class _ListeningScreenState extends State<ListeningScreen> {
                   ),
                   const SizedBox(height: 30),
                   ElevatedButton(
-                    onPressed: () =>
-                        Navigator.pop(context, _finalScore.toInt()),
+                    onPressed: () => Navigator.pop(context, {
+                      "type": "listening",
+                      "done": true,
+                      "score": (_finalScore * 100).toInt(),
+                    }),
+
                     style: ElevatedButton.styleFrom(
                       backgroundColor: primaryColor,
                       foregroundColor: Colors.white,

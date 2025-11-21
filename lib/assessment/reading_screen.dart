@@ -162,7 +162,11 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   void _submitScoreAndContinue() {
-    Navigator.pop(context, (_finalScore * 100).toInt());
+    Navigator.pop(context, {
+      "type": "reading",
+      "done": true,
+      "score": (_finalScore * 100).toInt(),
+    });
 
     Future.delayed(Duration.zero, () {
       Navigator.pushNamed(context, '/listening');
